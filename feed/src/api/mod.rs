@@ -1,6 +1,6 @@
-//! Read-only HTTP API (plan §5.5), versioned under `/v1`. M1 exposes items,
-//! snapshots, outlets and stats; clusters arrive with M3.
+//! Read-only HTTP API (plan §5.5), versioned under `/v1`, plus `/debug`.
 
+pub mod debug;
 pub mod routes;
 
 use std::path::PathBuf;
@@ -14,6 +14,8 @@ pub struct AppState {
     pub reader: Reader,
     pub stats: Arc<Stats>,
     pub snapshot_dir: PathBuf,
+    /// Simhash distance for syndication grouping.
+    pub hamming_threshold: u32,
 }
 
 pub fn router(state: AppState) -> axum::Router {

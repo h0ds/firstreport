@@ -3,7 +3,7 @@
 //! and hands new items to the store. Emits `Item`s to `out` for the
 //! embedder (M2); until then the receiver is simply dropped.
 
-use std::collections::{HashSet, VecDeque};
+use std::collections::{HashMap, HashSet, VecDeque};
 use std::path::PathBuf;
 use std::sync::Arc;
 use std::time::Duration;
@@ -42,6 +42,8 @@ pub struct Poller {
     recent: HashSet<u64>,
     recent_order: VecDeque<u64>,
     snapshot_dir: PathBuf,
+    /// Per feed: hash and archived path of the last body written.
+    last_body: HashMap<String, (u64, String)>,
 }
 
 struct FetchDone {
@@ -78,6 +80,7 @@ impl Poller {
             recent: HashSet::with_capacity(RECENT_IDS),
             recent_order: VecDeque::with_capacity(RECENT_IDS),
             snapshot_dir,
+            last_body: HashMap::new(),
         })
     }
 
@@ -220,8 +223,17 @@ impl Poller {
         };
 
         // Snapshot first, parse second: a parse failure still keeps evidence.
+        // A body identical to this feed's previous one gets a row but no
+        // second file: the row points at the existing file. Feeds without
+        // ETags return identical bodies constantly.
         let snap_id = snapshot::snapshot_id(&feed.url, fetched_at);
-        let path = if self.cfg.snapshots.enabled {
+        let hash = snapshot::body_hash(&body);
+        let path = if !self.cfg.snapshots.enabled {
+            String::new()
+        } else if let Some((_, p)) = self.last_body.get(&feed.url).filter(|(h, _)| *h == hash) {
+            debug!(url = %feed.url, "body unchanged; reusing snapshot {p}");
+            p.clone()
+        } else {
             match snapshot::write(
                 &self.snapshot_dir,
                 snap_id,
@@ -229,14 +241,16 @@ impl Poller {
                 &body,
                 self.cfg.snapshots.zstd_level,
             ) {
-                Ok(p) => p.to_string_lossy().into_owned(),
+                Ok(p) => {
+                    let p = p.to_string_lossy().into_owned();
+                    self.last_body.insert(feed.url.clone(), (hash, p.clone()));
+                    p
+                }
                 Err(e) => {
                     warn!(url = %feed.url, "snapshot write failed: {e}");
                     String::new()
                 }
             }
-        } else {
-            String::new()
         };
 
         let parsed = match feedparse::parse(&body, &feed.url) {

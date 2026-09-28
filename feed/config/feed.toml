@@ -5,12 +5,16 @@ per_host_concurrency = 2
 max_backoff_secs = 21600
 
 [embed]
+backend = "onnx"                 # onnx | hash (deterministic, model-free, for replay and CI)
 model_path = "models/minilm-l6-int8.onnx"
 vocab_path = "models/vocab.txt"
-runtime_lib = "models/libonnxruntime.so"   # populated by `feed fetch-model`
+# runtime_lib defaults to models/libonnxruntime.so (.dylib on macOS); populated by `feed fetch-model`
 max_tokens = 128
 batch_size = 64
 batch_wait_ms = 200
+pooling = "mean"                 # mean (MiniLM, gte, e5) | cls (bge)
+input_template = "{title} . {summary}"
+# model_url / runtime_url: leave unset to pick by target triple
 
 [cluster]
 join_threshold = 0.72

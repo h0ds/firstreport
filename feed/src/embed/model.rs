@@ -1,4 +1,4 @@
-//! ONNX Runtime session wrapper: tokenized batch in, mean-pooled and
+//! ONNX Runtime session wrapper: tokenized batch in, pooled and
 //! L2-normalized sentence embeddings out. The runtime library is loaded
 //! at startup from a configured path (`load-dynamic`); nothing is fetched
 //! at build time.
@@ -10,6 +10,7 @@ use ort::session::Session;
 use ort::value::Tensor;
 
 use super::tokenizer::{Encoded, Tokenizer};
+use crate::config::Pooling;
 
 static RUNTIME: OnceLock<Result<(), String>> = OnceLock::new();
 
@@ -28,6 +29,7 @@ pub struct Model {
     session: Session,
     tokenizer: Tokenizer,
     max_tokens: usize,
+    pooling: Pooling,
     dim: Option<usize>,
 }
 
@@ -52,6 +54,7 @@ impl Model {
         model: &Path,
         vocab: &Path,
         max_tokens: usize,
+        pooling: Pooling,
         threads: usize,
     ) -> Result<Self, ModelError> {
         init_runtime(runtime_lib).map_err(ModelError)?;
@@ -66,6 +69,7 @@ impl Model {
             session,
             tokenizer,
             max_tokens,
+            pooling,
             dim: None,
         })
     }
@@ -124,14 +128,25 @@ impl Model {
 
         Ok((0..batch)
             .map(|b| {
-                mean_pool_normalize(
-                    &data[b * seq * dim..(b + 1) * seq * dim],
-                    &mask[b * seq..(b + 1) * seq],
-                    dim,
-                )
+                let hidden = &data[b * seq * dim..(b + 1) * seq * dim];
+                let m = &mask[b * seq..(b + 1) * seq];
+                match self.pooling {
+                    Pooling::Mean => mean_pool_normalize(hidden, m, dim),
+                    Pooling::Cls => cls_pool_normalize(hidden, dim),
+                }
             })
             .collect())
     }
+}
+
+pub fn normalize(mut v: Vec<f32>) -> Vec<f32> {
+    let norm = v.iter().map(|x| x * x).sum::<f32>().sqrt();
+    if norm > 0.0 {
+        for o in &mut v {
+            *o /= norm;
+        }
+    }
+    v
 }
 
 /// Masked mean over the sequence axis, then L2 normalize.
@@ -153,13 +168,12 @@ pub fn mean_pool_normalize(hidden: &[f32], mask: &[i64], dim: usize) -> Vec<f32>
             *o /= n;
         }
     }
-    let norm = out.iter().map(|x| x * x).sum::<f32>().sqrt();
-    if norm > 0.0 {
-        for o in &mut out {
-            *o /= norm;
-        }
-    }
-    out
+    normalize(out)
+}
+
+/// First token ([CLS]) vector, L2 normalized. What bge models expect.
+pub fn cls_pool_normalize(hidden: &[f32], dim: usize) -> Vec<f32> {
+    normalize(hidden[..dim].to_vec())
 }
 
 #[cfg(test)]
@@ -174,6 +188,8 @@ mod tests {
         let r = 1.0 / 2f32.sqrt();
         assert!((v[0] - r).abs() < 1e-6 && (v[1] - r).abs() < 1e-6);
         assert_eq!(mean_pool_normalize(&[0.0, 0.0], &[1], 2), vec![0.0, 0.0]);
+        let c = cls_pool_normalize(&[3.0, 4.0, 9.0, 9.0], 2);
+        assert!((c[0] - 0.6).abs() < 1e-6 && (c[1] - 0.8).abs() < 1e-6);
     }
 
     /// Runs only when an ONNX Runtime library is available, e.g.
@@ -190,6 +206,7 @@ mod tests {
             &root.join("tiny.onnx"),
             &root.join("tiny-vocab.txt"),
             16,
+            Pooling::Mean,
             1,
         )
         .unwrap();

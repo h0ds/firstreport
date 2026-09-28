@@ -19,8 +19,169 @@ pub fn router() -> Router<AppState> {
         .route("/v1/snapshots", get(list_snapshots))
         .route("/v1/snapshots/{id}", get(get_snapshot))
         .route("/v1/snapshots/{id}/body", get(snapshot_body))
+        .route("/v1/clusters", get(list_clusters))
+        .route("/v1/clusters/{id}", get(get_cluster))
+        .route("/v1/clusters/{id}/timeline", get(cluster_timeline))
+        .route("/v1/events", get(events))
         .route("/v1/outlets", get(outlets))
         .route("/v1/stats", get(stats))
+        .route("/debug", get(debug_page))
+}
+
+async fn debug_page() -> Response {
+    (
+        [(header::CONTENT_TYPE, "text/html; charset=utf-8")],
+        super::debug::PAGE,
+    )
+        .into_response()
+}
+
+#[derive(Deserialize)]
+struct ListClustersQ {
+    since: Option<i64>,
+    limit: Option<usize>,
+    min_outlets: Option<u32>,
+    sort: Option<String>,
+    cursor: Option<String>,
+    /// `items` to inline each cluster's items (used by the debug page).
+    include: Option<String>,
+}
+
+/// Cluster plus, optionally, its items. The contract `Cluster` carries the
+/// timeline; `items` is an addition, never a removal.
+#[derive(Serialize)]
+struct ClusterOut {
+    #[serde(flatten)]
+    cluster: crate::types::Cluster,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    items: Option<Vec<crate::types::Item>>,
+}
+
+async fn assemble(
+    s: &AppState,
+    row: reader::ClusterRow,
+    with_items: bool,
+    now: i64,
+) -> Result<ClusterOut, Response> {
+    let id = row.id;
+    let items = s
+        .reader
+        .call(move |c| reader::cluster_items(c, id))
+        .await
+        .map_err(db_err)?;
+    let cluster = crate::cluster::propagation::assemble(&row, &items, now, s.hamming_threshold);
+    Ok(ClusterOut {
+        cluster,
+        items: with_items.then_some(items),
+    })
+}
+
+async fn list_clusters(State(s): State<AppState>, Query(q): Query<ListClustersQ>) -> Response {
+    let cursor = match parse_cursor(q.cursor.as_deref()) {
+        Ok(c) => c,
+        Err(r) => return r,
+    };
+    let sort = match q.sort.as_deref().unwrap_or("recent") {
+        "recent" => reader::ClusterSort::Recent,
+        "velocity_1h" => reader::ClusterSort::Velocity1h,
+        "outlets_6h" => reader::ClusterSort::Outlets6h,
+        _ => {
+            return err(
+                StatusCode::BAD_REQUEST,
+                "sort must be recent, velocity_1h or outlets_6h",
+            )
+        }
+    };
+    let limit = clamp_limit(q.limit);
+    let since = q.since.unwrap_or(0);
+    let min_outlets = q.min_outlets.unwrap_or(1);
+    let t = now();
+    let rows = match s
+        .reader
+        .call(move |c| reader::list_clusters(c, since, min_outlets, sort, cursor, limit, t))
+        .await
+    {
+        Ok(r) => r,
+        Err(e) => return db_err(e),
+    };
+    let next = (sort == reader::ClusterSort::Recent && rows.len() == limit)
+        .then(|| {
+            rows.last()
+                .map(|r| format!("{}:{}", r.last_active_at, r.id))
+        })
+        .flatten();
+    let with_items = q.include.as_deref() == Some("items");
+    let mut out = Vec::with_capacity(rows.len());
+    for row in rows {
+        match assemble(&s, row, with_items, t).await {
+            Ok(c) => out.push(c),
+            Err(r) => return r,
+        }
+    }
+    Json(Page { items: out, next }).into_response()
+}
+
+async fn get_cluster(State(s): State<AppState>, Path(id): Path<String>) -> Response {
+    let id = match parse_id(&id) {
+        Ok(i) => i,
+        Err(r) => return r,
+    };
+    let row = match s.reader.call(move |c| reader::get_cluster(c, id)).await {
+        Ok(Some(r)) => r,
+        Ok(None) => return err(StatusCode::NOT_FOUND, "no such cluster"),
+        Err(e) => return db_err(e),
+    };
+    match assemble(&s, row, true, now()).await {
+        Ok(c) => Json(c).into_response(),
+        Err(r) => r,
+    }
+}
+
+async fn cluster_timeline(State(s): State<AppState>, Path(id): Path<String>) -> Response {
+    let id = match parse_id(&id) {
+        Ok(i) => i,
+        Err(r) => return r,
+    };
+    let exists = match s.reader.call(move |c| reader::get_cluster(c, id)).await {
+        Ok(r) => r.is_some(),
+        Err(e) => return db_err(e),
+    };
+    if !exists {
+        return err(StatusCode::NOT_FOUND, "no such cluster");
+    }
+    match s.reader.call(move |c| reader::cluster_items(c, id)).await {
+        Ok(items) => Json(crate::cluster::propagation::timeline(&items)).into_response(),
+        Err(e) => db_err(e),
+    }
+}
+
+#[derive(Deserialize)]
+struct EventsQ {
+    after_seq: Option<i64>,
+    limit: Option<usize>,
+}
+
+#[derive(Serialize)]
+struct EventsPage {
+    items: Vec<reader::EventRow>,
+    /// Pass back as `after_seq` for the next page.
+    last_seq: Option<i64>,
+}
+
+async fn events(State(s): State<AppState>, Query(q): Query<EventsQ>) -> Response {
+    let after = q.after_seq.unwrap_or(0);
+    let limit = clamp_limit(q.limit);
+    match s
+        .reader
+        .call(move |c| reader::events_after(c, after, limit))
+        .await
+    {
+        Ok(items) => {
+            let last_seq = items.last().map(|e| e.seq);
+            Json(EventsPage { items, last_seq }).into_response()
+        }
+        Err(e) => db_err(e),
+    }
 }
 
 #[derive(Serialize)]

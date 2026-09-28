@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Herald</title>
+  <link>https://herald.example/</link>
+  <item>
+    <title>Central bank holds rates steady and signals cuts later this year</title>
+    <link>https://herald.example/economy/central-bank-holds-rates-steady</link>
+    <description>Policymakers at the central bank held interest rates steady on Monday, signalling that rate cuts could come later this year.</description>
+    <pubDate>Mon, 01 Jan 2024 09:45:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Regional airline announces three new winter routes</title>
+    <link>https://herald.example/travel/regional-airline-winter-routes</link>
+    <description>A regional airline announced three new winter routes from the city airport starting in February.</description>
+    <pubDate>Mon, 01 Jan 2024 09:20:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

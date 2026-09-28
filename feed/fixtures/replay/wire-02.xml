@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Example Wire</title>
+  <link>https://wire.example/</link>
+  <language>en</language>
+  <item>
+    <title>Finance minister welcomes central bank decision to hold rates</title>
+    <link>https://wire.example/2024/01/01/finance-minister-welcomes-rates-decision</link>
+    <description>The finance minister welcomed the central bank decision to hold interest rates steady, saying it gave businesses certainty for the year ahead.</description>
+    <pubDate>Mon, 01 Jan 2024 10:50:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Central bank holds interest rates steady, signals cuts later this year</title>
+    <link>https://wire.example/2024/01/01/central-bank-holds-rates</link>
+    <description>The central bank kept its benchmark interest rate unchanged on Monday and signalled that cuts could follow later this year as inflation cools.</description>
+    <pubDate>Mon, 01 Jan 2024 08:40:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Coastal flooding closes two highways after overnight storm</title>
+    <link>https://wire.example/2024/01/01/coastal-flooding-highways</link>
+    <description>Two coastal highways were closed early Monday after an overnight storm brought flooding to low-lying stretches of the coast road.</description>
+    <pubDate>Mon, 01 Jan 2024 07:15:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>City council approves funding for new stadium roof</title>
+    <link>https://wire.example/2024/01/01/stadium-roof-funding</link>
+    <description>The city council voted to approve funding for a retractable roof on the municipal stadium after months of debate.</description>
+    <pubDate>Mon, 01 Jan 2024 06:30:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

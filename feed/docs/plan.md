@@ -188,6 +188,8 @@ Online, incremental, single-threaded over an in-memory active set. No batch recl
 - Centroid = L2-normalized `sum / n`.
 - Clusters leave the active set after `expiry_secs` (default 48h) of no new items → `expired` event, persisted, dropped from memory.
 
+**Clock.** Assignment, window checks and expiry run on the item clock (the latest `fetched_at` seen), never the wall clock. A fixture replay therefore expires clusters exactly where a live run would have, and the golden test never depends on when it ran.
+
 **Assignment (per item)**
 1. Compute cosine similarity against every active centroid. Flat SIMD dot product (`std::simd` or hand-unrolled AVX2/NEON via `std::arch` with a scalar fallback). At ≤ 10k active clusters this is ~1–3 ms and beats any index; revisit only if active set exceeds ~100k.
 2. Restrict candidates to clusters whose `last_active_at` is within `window_secs` (default 72h) of the item's `published_at`. Prevents old stories re-absorbing new ones with similar phrasing.
@@ -199,7 +201,7 @@ Online, incremental, single-threaded over an in-memory active set. No batch recl
 **Propagation record** (maintained on every assignment)
 - Append `Join { item_id, outlet_id, published_at, joined_at }` to the cluster's ordered timeline. `cluster_rank` is the item's index in that timeline.
 - Origin = timeline entry with the earliest `published_at` (tie-break earliest `fetched_at`). Note that origin can change if a late-fetched item has an earlier `published_at`; emit an `origin_changed` event when it does. Feeds lie about publish dates, so `lens` should treat origin as evidence, not proof.
-- Velocity counters are recomputed lazily on read from the timeline; they are not stored.
+- Velocity counters, the timeline, origin and syndication groups are all recomputed on read from the item table (`cluster_rank`, `joined_at`, `text_hash`); the cluster row stores only counts, the primary title and the centroid.
 - Syndication groups: on join, compare the item's `text_hash` against those of existing cluster members (Hamming ≤ 3). Match → add to that `SynGroup`; else start a new one. `spread_secs` = last − first `published_at` within the group.
 
 **Merge pass** (every `merge_interval_secs`, default 600)
@@ -542,4 +544,5 @@ Total: roughly 9–11 working days to a usable v0.1.
 - **Multilingual.** MiniLM-L6 is English-only. A multilingual model (e.g. paraphrase-multilingual-MiniLM-L12) is ~3× slower and 118 MB. Recommend English-only for v0.1 with the model path configurable so swapping is trivial.
 - **Coverage counting.** With syndication groups in the contract, `lens` can count either raw items or distinct syndication groups per cluster. `feed` emits both and takes no position.
 - **Publish-date trust.** Feeds misreport `published_at` routinely. Should origin use `published_at` (what the outlet claims) or `fetched_at` (what we observed)? Current design: `published_at` with `fetched_at` tie-break, and both are in the timeline so `lens` can choose. Revisit once real data shows how often they disagree badly.
-- **Checkpoint format vs. just rebuilding from SQLite.** Rebuild-on-boot is simpler and 60 s may be acceptable in dev. Decide at M3 based on measured boot time.
+- **Checkpoint format vs. just rebuilding from SQLite.** Resolved at M3: both. The checkpoint is the fast path (custom binary, checksummed, atomic write); rebuild from embedded items in the window is the fallback when it is missing, corrupt, empty beside a backlog, or from a different embedding width.
+- **Embedding backend for tests.** Resolved at M3: `embed.backend = "hash"` is a deterministic lexical stand-in so the replay golden test runs without a model or network. Production always uses `onnx`.

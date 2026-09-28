@@ -3,12 +3,14 @@
 mod api;
 mod bloom;
 mod cli;
+mod cluster;
 mod config;
 mod embed;
 mod fetch;
 mod lang;
 mod parse;
 mod poller;
+mod replay;
 mod snapshot;
 mod stats;
 mod store;
@@ -74,8 +76,13 @@ async fn main() {
             Ok(())
         }
         cli::Command::Replay { fixtures } => {
-            info!(fixtures = %fixtures.display(), "replay: not implemented (M3)");
-            Ok(())
+            let scratch = replay::default_scratch();
+            let out = replay::run(cfg, &fixtures, &scratch).await;
+            let _ = std::fs::remove_dir_all(&scratch);
+            out.and_then(|r| {
+                println!("{}", serde_json::to_string_pretty(&r)?);
+                Ok(())
+            })
         }
     };
     if let Err(e) = result {
@@ -125,15 +132,37 @@ async fn run(
 
     let (shutdown_tx, shutdown_rx) = tokio::sync::watch::channel(false);
     let (item_tx, item_rx) = tokio::sync::mpsc::channel::<types::Item>(4096);
-    // Embedded items destined for the clusterer (M3). Drained for now.
-    let (emb_tx, mut emb_rx) = tokio::sync::mpsc::channel::<embed::Embedded>(4096);
-    tokio::spawn(async move { while emb_rx.recv().await.is_some() {} });
+    let (emb_tx, emb_rx) = tokio::sync::mpsc::channel::<embed::Embedded>(4096);
+
+    // Clusterer: restore the checkpoint or rebuild from embedded items in
+    // the window, then consume the embedder's output.
+    let ckpt_path = cfg.store.path.with_file_name("clusterer.ckpt");
+    let backlog = reader
+        .with(|c| store::reader::embedded_items_since(c, boot_now - cfg.cluster.window_secs))?;
+    let dim = backlog.first().map(|(_, v)| v.len());
+    let (clusterer, rebuild_writes) = cluster::boot(&cfg, &ckpt_path, dim, backlog);
+    for w in rebuild_writes {
+        writer.send(w).await;
+    }
+    stats
+        .active_clusters
+        .store(clusterer.len() as u64, std::sync::atomic::Ordering::Relaxed);
+    let cluster_task = tokio::spawn(
+        cluster::Task {
+            cfg: cfg.clone(),
+            clusterer,
+            writer: writer.clone(),
+            stats: stats.clone(),
+            ckpt_path,
+        }
+        .run(emb_rx, shutdown_rx.clone()),
+    );
 
     // The embedder is optional at runtime: without a model, feed still
     // ingests and the backlog is picked up once `fetch-model` has run.
     let mut item_rx = Some(item_rx);
-    let embed_task = if cfg.embed.model_path.exists() && cfg.embed.runtime_lib.exists() {
-        match embed::load_from_config(&cfg) {
+    let embed_task = if embed::available(&cfg) {
+        match embed::load_from_config(&cfg, None) {
             Ok(model) => {
                 let rx = item_rx.take().expect("receiver taken once");
                 let backlog = reader.with(|c| {
@@ -182,6 +211,7 @@ async fn run(
         reader: reader.clone(),
         stats: stats.clone(),
         snapshot_dir: cfg.snapshots.dir.clone(),
+        hamming_threshold: cfg.syndication.hamming_threshold,
     });
     let listener = tokio::net::TcpListener::bind(&cfg.api.bind).await?;
     info!(bind = %cfg.api.bind, "api listening");
@@ -201,6 +231,7 @@ async fn run(
     if let Some(t) = embed_task {
         let _ = t.await;
     }
+    let _ = cluster_task.await;
     let _ = api_task.await;
     writer.flush().await;
     drop(writer);
@@ -229,8 +260,13 @@ async fn fetch_model(cfg: &config::Config) -> Result<(), Box<dyn std::error::Err
         Ok::<_, std::io::Error>(())
     };
 
+    let (os, arch) = (std::env::consts::OS, std::env::consts::ARCH);
+    let model_url = cfg.embed.model_url_for(os, arch);
+    let runtime_url = cfg.embed.runtime_url_for(os, arch)?;
+    info!(os, arch, %model_url, %runtime_url, "sources for this machine");
+
     for (path, url) in [
-        (&cfg.embed.model_path, &cfg.embed.model_url),
+        (&cfg.embed.model_path, &model_url),
         (&cfg.embed.vocab_path, &cfg.embed.vocab_url),
     ] {
         if path.exists() {
@@ -249,23 +285,32 @@ async fn fetch_model(cfg: &config::Config) -> Result<(), Box<dyn std::error::Err
         return Ok(());
     }
     ensure(lib)?;
-    let bytes = get(cfg.embed.runtime_url.clone()).await?;
+    let bytes = get(runtime_url).await?;
     let dir = lib.parent().unwrap_or(std::path::Path::new("."));
     let tgz = dir.join("onnxruntime.tgz");
     std::fs::write(&tgz, &bytes)?;
-    // The release tarball is `<name>/lib/libonnxruntime.so.<ver>` plus a
-    // symlink. Extract just the versioned library and place it at `lib`.
-    let status = std::process::Command::new("tar")
-        .args([
-            "-xzf",
-            &tgz.to_string_lossy(),
-            "-C",
-            &dir.to_string_lossy(),
-            "--wildcards",
-            "--strip-components=2",
-            "*/lib/libonnxruntime.so.*",
-        ])
-        .status()?;
+    // The release tarball holds `<name>/lib/libonnxruntime.so.<ver>` on
+    // Linux or `<name>/lib/libonnxruntime.<ver>.dylib` on macOS, plus
+    // symlinks. Extract just the versioned library and place it at `lib`.
+    let pattern = if os == "macos" {
+        "*/lib/libonnxruntime.*.dylib"
+    } else {
+        "*/lib/libonnxruntime.so.*"
+    };
+    let tgz_s = tgz.to_string_lossy().into_owned();
+    let dir_s = dir.to_string_lossy().into_owned();
+    let mut args = vec![
+        "-xzf",
+        tgz_s.as_str(),
+        "-C",
+        dir_s.as_str(),
+        "--strip-components=2",
+    ];
+    if os != "macos" {
+        args.push("--wildcards"); // GNU tar needs it; bsdtar globs by default
+    }
+    args.push(pattern);
+    let status = std::process::Command::new("tar").args(&args).status()?;
     if !status.success() {
         return Err(format!("tar failed extracting {}", tgz.display()).into());
     }
@@ -275,11 +320,15 @@ async fn fetch_model(cfg: &config::Config) -> Result<(), Box<dyn std::error::Err
         .filter(|p| {
             p.file_name()
                 .and_then(|n| n.to_str())
-                .map(|n| n.starts_with("libonnxruntime.so.") && !n.ends_with(".tgz"))
+                .map(|n| {
+                    n.starts_with("libonnxruntime.")
+                        && (n.contains(".so.") || n.ends_with(".dylib"))
+                })
                 .unwrap_or(false)
+                && p != lib
         })
         .max_by_key(|p| std::fs::metadata(p).map(|m| m.len()).unwrap_or(0))
-        .ok_or("no libonnxruntime.so.* in the tarball")?;
+        .ok_or("no versioned libonnxruntime in the tarball")?;
     std::fs::rename(&versioned, lib)?;
     let _ = std::fs::remove_file(&tgz);
     info!(path = %lib.display(), "runtime installed");

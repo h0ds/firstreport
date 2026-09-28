@@ -8,8 +8,9 @@ use rusqlite::{params, Connection};
 use tokio::sync::{mpsc, oneshot};
 use tracing::{error, info};
 
+use super::reader::ClusterRow;
 use super::to_i64;
-use crate::types::Item;
+use crate::types::{ClusterEvent, Item};
 
 pub const BATCH_ROWS: usize = 256;
 pub const BATCH_WAIT: Duration = Duration::from_millis(500);
@@ -46,6 +47,15 @@ pub enum WriteMsg {
     FeedState(FeedState),
     /// (item id, L2-normalized vector) pairs from the embedder.
     Embeddings(Vec<(u64, Vec<f32>)>),
+    /// Item joined a cluster (or seeded one at rank 0).
+    ItemAssigned {
+        item_id: u64,
+        cluster_id: u64,
+        rank: u32,
+        joined_at: i64,
+    },
+    ClusterUpsert(ClusterRow),
+    Event(ClusterEvent),
     /// Commit everything pending, then signal.
     Flush(oneshot::Sender<()>),
 }
@@ -157,6 +167,22 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
              VALUES (?1,?2,?3,?4,?5,?6,?7)",
         )?;
         let mut up_emb = tx.prepare_cached("UPDATE item SET embedding=?2 WHERE id=?1")?;
+        let mut up_assign = tx.prepare_cached(
+            "UPDATE item SET cluster_id=?2, cluster_rank=?3, joined_at=?4 WHERE id=?1",
+        )?;
+        let mut up_cluster = tx.prepare_cached(
+            "INSERT INTO cluster (id, created_at, last_active_at, item_count, outlet_count,
+                                  primary_title, centroid, expired)
+             VALUES (?1,?2,?3,?4,?5,?6,?7,?8)
+             ON CONFLICT(id) DO UPDATE SET
+               last_active_at=excluded.last_active_at, item_count=excluded.item_count,
+               outlet_count=excluded.outlet_count, primary_title=excluded.primary_title,
+               centroid=excluded.centroid, expired=excluded.expired",
+        )?;
+        let mut ins_event = tx.prepare_cached(
+            "INSERT INTO cluster_event (ts, kind, cluster_id, item_id, merged_into, snapshot_id)
+             VALUES (?1,?2,?3,?4,?5,?6)",
+        )?;
         let mut up_feed = tx.prepare_cached(
             "INSERT INTO feed (url, outlet_id, kind, interval_secs, etag, last_modified, next_fetch_at,
                                fail_count, last_ok_at, dead)
@@ -203,6 +229,45 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                     for (id, v) in rows {
                         up_emb.execute(params![to_i64(id), embedding_blob(&v)])?;
                     }
+                }
+                WriteMsg::ItemAssigned {
+                    item_id,
+                    cluster_id,
+                    rank,
+                    joined_at,
+                } => {
+                    up_assign.execute(params![
+                        to_i64(item_id),
+                        to_i64(cluster_id),
+                        rank,
+                        joined_at
+                    ])?;
+                }
+                WriteMsg::ClusterUpsert(c) => {
+                    up_cluster.execute(params![
+                        to_i64(c.id),
+                        c.created_at,
+                        c.last_active_at,
+                        c.item_count,
+                        c.outlet_count,
+                        c.primary_title,
+                        embedding_blob(&c.centroid),
+                        c.expired as i32
+                    ])?;
+                }
+                WriteMsg::Event(e) => {
+                    let kind = serde_json::to_value(e.kind)
+                        .ok()
+                        .and_then(|v| v.as_str().map(str::to_string))
+                        .unwrap_or_default();
+                    ins_event.execute(params![
+                        e.ts,
+                        kind,
+                        e.cluster_id.map(to_i64),
+                        e.item_id.map(to_i64),
+                        e.merged_into.map(to_i64),
+                        e.snapshot_id.map(to_i64)
+                    ])?;
                 }
                 WriteMsg::FeedState(f) => {
                     up_feed.execute(params![

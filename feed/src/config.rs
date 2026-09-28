@@ -44,33 +44,104 @@ impl Default for Poll {
 #[derive(Debug, Clone, Deserialize)]
 #[serde(default, deny_unknown_fields)]
 pub struct Embed {
+    /// `onnx` runs the configured model; `hash` is a deterministic
+    /// feature-hashing embedder with no model, for offline replay and CI.
+    pub backend: EmbedBackend,
     pub model_path: PathBuf,
     pub vocab_path: PathBuf,
-    /// ONNX Runtime shared library, loaded at startup. Never fetched at build time.
+    /// ONNX Runtime shared library, loaded at startup. Never fetched at
+    /// build time. Default depends on the OS (`.so` or `.dylib`).
     pub runtime_lib: PathBuf,
     pub max_tokens: usize,
     pub batch_size: usize,
     pub batch_wait_ms: u64,
-    /// Sources for `feed fetch-model`.
+    /// `mean` (MiniLM, gte, e5) or `cls` (bge).
+    pub pooling: Pooling,
+    /// Text handed to the model. `{title}` and `{summary}` are substituted;
+    /// a summary-only segment is dropped when the summary is empty.
+    pub input_template: String,
+    /// Width of the `hash` backend's vectors.
+    pub hash_dim: usize,
+    /// Sources for `feed fetch-model`. Empty means "pick by target triple".
     pub model_url: String,
     pub vocab_url: String,
-    /// Tarball containing `lib/libonnxruntime.so*`.
+    /// Tarball containing the runtime library under `lib/`.
     pub runtime_url: String,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum EmbedBackend {
+    Onnx,
+    Hash,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Pooling {
+    Mean,
+    Cls,
 }
 
 impl Default for Embed {
     fn default() -> Self {
+        let lib = if cfg!(target_os = "macos") {
+            "models/libonnxruntime.dylib"
+        } else {
+            "models/libonnxruntime.so"
+        };
         Self {
+            backend: EmbedBackend::Onnx,
             model_path: "models/minilm-l6-int8.onnx".into(),
             vocab_path: "models/vocab.txt".into(),
-            runtime_lib: "models/libonnxruntime.so".into(),
+            runtime_lib: lib.into(),
             max_tokens: 128,
             batch_size: 64,
             batch_wait_ms: 200,
-            model_url: "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/onnx/model_quint8_avx2.onnx".into(),
+            pooling: Pooling::Mean,
+            input_template: "{title} . {summary}".into(),
+            hash_dim: 256,
+            model_url: String::new(),
             vocab_url: "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt".into(),
-            runtime_url: "https://github.com/microsoft/onnxruntime/releases/download/v1.22.0/onnxruntime-linux-x64-1.22.0.tgz".into(),
+            runtime_url: String::new(),
         }
+    }
+}
+
+/// ONNX Runtime release used by `fetch-model` when no URL is configured.
+pub const ORT_VERSION: &str = "1.22.0";
+const MINILM: &str =
+    "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/onnx/";
+
+impl Embed {
+    /// Model export for this machine: int8 AVX2 on x86_64, int8 ARM64 on
+    /// aarch64, the f32 export anywhere else.
+    pub fn model_url_for(&self, os: &str, arch: &str) -> String {
+        if !self.model_url.is_empty() {
+            return self.model_url.clone();
+        }
+        let file = match arch {
+            "x86_64" => "model_quint8_avx2.onnx",
+            "aarch64" => "model_qint8_arm64.onnx",
+            _ => "model.onnx",
+        };
+        let _ = os;
+        format!("{MINILM}{file}")
+    }
+
+    /// Runtime tarball for this machine, or an error naming the triple.
+    pub fn runtime_url_for(&self, os: &str, arch: &str) -> Result<String, String> {
+        if !self.runtime_url.is_empty() {
+            return Ok(self.runtime_url.clone());
+        }
+        let name = match (os, arch) {
+            ("linux", "x86_64") => "linux-x64",
+            ("linux", "aarch64") => "linux-aarch64",
+            ("macos", "x86_64") => "osx-x86_64",
+            ("macos", "aarch64") => "osx-arm64",
+            _ => return Err(format!("no prebuilt ONNX Runtime for {os}/{arch}; set embed.runtime_url and embed.runtime_lib by hand")),
+        };
+        Ok(format!("https://github.com/microsoft/onnxruntime/releases/download/v{ORT_VERSION}/onnxruntime-{name}-{ORT_VERSION}.tgz"))
     }
 }
 
@@ -301,6 +372,35 @@ mod tests {
         let loaded = load(&dir).expect("shipped config must load");
         assert!(!loaded.feeds.feeds.is_empty());
         assert!(!loaded.outlets.outlets.is_empty());
+    }
+
+    #[test]
+    fn fetch_sources_follow_target_triple() {
+        let e = Embed::default();
+        assert!(e
+            .model_url_for("linux", "x86_64")
+            .ends_with("model_quint8_avx2.onnx"));
+        assert!(e
+            .model_url_for("macos", "aarch64")
+            .ends_with("model_qint8_arm64.onnx"));
+        assert!(e.model_url_for("linux", "riscv64").ends_with("/model.onnx"));
+        assert!(e
+            .runtime_url_for("linux", "aarch64")
+            .unwrap()
+            .contains("onnxruntime-linux-aarch64-"));
+        assert!(e
+            .runtime_url_for("macos", "aarch64")
+            .unwrap()
+            .contains("osx-arm64"));
+        assert!(e.runtime_url_for("windows", "x86_64").is_err());
+        let e = Embed {
+            runtime_url: "file:///x.tgz".into(),
+            ..Default::default()
+        };
+        assert_eq!(
+            e.runtime_url_for("windows", "x86_64").unwrap(),
+            "file:///x.tgz"
+        );
     }
 
     #[test]

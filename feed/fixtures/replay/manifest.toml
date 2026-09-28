@@ -1,0 +1,39 @@
+# Recorded feed snapshots for offline replay (plan §9). Times are unix
+# seconds; the item clock drives clustering and expiry, so wall time never
+# matters. Window: 2024-01-01 09:00 UTC to 2024-01-04 12:00 UTC.
+#
+# Story A (rates decision) is carried by all three outlets; wire and
+# gazette publish a near-identical copy. Story B (flooding) is carried by
+# two. Story C (stadium) and D (election, three days later) are single.
+# The gap before the final snapshot is longer than expiry_secs (48 h), so
+# clusters A, B and C expire before D arrives.
+
+[[snapshot]]
+file = "wire-01.xml"
+feed_url = "https://wire.example/rss"
+outlet = "wire"
+fetched_at = 1704099600   # 2024-01-01 09:00
+
+[[snapshot]]
+file = "gazette-01.xml"
+feed_url = "https://gazette.example/feed"
+outlet = "gazette"
+fetched_at = 1704101400   # 09:30
+
+[[snapshot]]
+file = "herald-01.xml"
+feed_url = "https://herald.example/rss.xml"
+outlet = "herald"
+fetched_at = 1704103200   # 10:00
+
+[[snapshot]]
+file = "wire-02.xml"
+feed_url = "https://wire.example/rss"
+outlet = "wire"
+fetched_at = 1704106800   # 11:00, repeats wire-01 plus one new item
+
+[[snapshot]]
+file = "herald-02.xml"
+feed_url = "https://herald.example/rss.xml"
+outlet = "herald"
+fetched_at = 1704369600   # 2024-01-04 12:00, after everything above has expired

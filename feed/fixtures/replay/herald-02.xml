@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Herald</title>
+  <link>https://herald.example/</link>
+  <item>
+    <title>Election commission sets date for regional assembly vote</title>
+    <link>https://herald.example/politics/election-commission-sets-assembly-vote-date</link>
+    <description>The election commission announced the date for the regional assembly vote, with polling to take place in early March.</description>
+    <pubDate>Thu, 04 Jan 2024 11:30:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Central bank holds rates steady and signals cuts later this year</title>
+    <link>https://herald.example/economy/central-bank-holds-rates-steady</link>
+    <description>Policymakers at the central bank held interest rates steady on Monday, signalling that rate cuts could come later this year.</description>
+    <pubDate>Mon, 01 Jan 2024 09:45:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

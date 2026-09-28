@@ -1,0 +1,14 @@
+[[outlet]]
+id = "wire"
+name = "Example Wire"
+domains = ["wire.example"]
+
+[[outlet]]
+id = "gazette"
+name = "The Gazette"
+domains = ["gazette.example"]
+
+[[outlet]]
+id = "herald"
+name = "Herald"
+domains = ["herald.example"]

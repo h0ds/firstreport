@@ -107,7 +107,8 @@ async fn fixture_through_store_and_api() {
         "outlet resolved from item host, not feed"
     );
 
-    // Second fetch of the same body: everything deduped, snapshot still archived.
+    // Second fetch of the same body: everything deduped; a snapshot row is
+    // recorded but it points at the first file rather than writing a copy.
     let p2 = poller.process(&feed, 1_704_100_900, Ok(fetched())).await;
     assert_eq!(p2.new_items.len(), 0);
 
@@ -152,6 +153,7 @@ async fn fixture_through_store_and_api() {
         reader: reader.clone(),
         stats: stats.clone(),
         snapshot_dir: cfg.snapshots.dir.clone(),
+        hamming_threshold: 3,
     });
     let get = |uri: &str| Request::builder().uri(uri).body(Body::empty()).unwrap();
 
@@ -260,7 +262,7 @@ async fn fixture_through_store_and_api() {
         ecfg.embed.vocab_path = root.join("tiny-vocab.txt");
         ecfg.embed.batch_size = 2;
         ecfg.embed.batch_wait_ms = 20;
-        let model = crate::embed::load_from_config(&ecfg).unwrap();
+        let model = crate::embed::load_from_config(&ecfg, Some(1)).unwrap();
         let (tx, rx) = tokio::sync::mpsc::channel(16);
         let (out_tx, mut out_rx) = tokio::sync::mpsc::channel(16);
         let task = tokio::spawn(crate::embed::run(

@@ -1,0 +1,105 @@
+{
+  "items_seen": 13,
+  "items_new": 9,
+  "clusters": [
+    {
+      "id": 930959639124626650,
+      "origin_item_id": 930959639124626650,
+      "origin_outlet_id": "wire",
+      "outlet_count": 2,
+      "expired": true,
+      "items": [
+        [
+          930959639124626650,
+          "wire",
+          "Coastal flooding closes two highways after overnight storm"
+        ],
+        [
+          2614643861195887904,
+          "gazette",
+          "Storm flooding closes coastal highways overnight"
+        ]
+      ]
+    },
+    {
+      "id": 2896877164004461710,
+      "origin_item_id": 2896877164004461710,
+      "origin_outlet_id": "wire",
+      "outlet_count": 1,
+      "expired": true,
+      "items": [
+        [
+          2896877164004461710,
+          "wire",
+          "City council approves funding for new stadium roof"
+        ]
+      ]
+    },
+    {
+      "id": 7193293005762006814,
+      "origin_item_id": 7193293005762006814,
+      "origin_outlet_id": "herald",
+      "outlet_count": 1,
+      "expired": true,
+      "items": [
+        [
+          7193293005762006814,
+          "herald",
+          "Regional airline announces three new winter routes"
+        ]
+      ]
+    },
+    {
+      "id": 12594389104738019282,
+      "origin_item_id": 12594389104738019282,
+      "origin_outlet_id": "wire",
+      "outlet_count": 1,
+      "expired": true,
+      "items": [
+        [
+          12594389104738019282,
+          "wire",
+          "Finance minister welcomes central bank decision to hold rates"
+        ]
+      ]
+    },
+    {
+      "id": 14403304384095645629,
+      "origin_item_id": 14403304384095645629,
+      "origin_outlet_id": "herald",
+      "outlet_count": 1,
+      "expired": false,
+      "items": [
+        [
+          14403304384095645629,
+          "herald",
+          "Election commission sets date for regional assembly vote"
+        ]
+      ]
+    },
+    {
+      "id": 14623171176967558549,
+      "origin_item_id": 14623171176967558549,
+      "origin_outlet_id": "wire",
+      "outlet_count": 3,
+      "expired": true,
+      "items": [
+        [
+          14623171176967558549,
+          "wire",
+          "Central bank holds interest rates steady, signals cuts later this year"
+        ],
+        [
+          124067246807116879,
+          "gazette",
+          "Central bank holds interest rates steady, signals cuts later this year"
+        ],
+        [
+          9676264122735658276,
+          "herald",
+          "Central bank holds rates steady and signals cuts later this year"
+        ]
+      ]
+    }
+  ]
+}

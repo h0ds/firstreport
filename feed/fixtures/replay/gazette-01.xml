@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>The Gazette</title>
+  <link>https://www.gazette.example/</link>
+  <language>en-gb</language>
+  <item>
+    <title>Central bank holds interest rates steady, signals cuts later this year</title>
+    <link>https://www.gazette.example/business/central-bank-holds-rates?utm_source=rss</link>
+    <description><![CDATA[<p>The central bank kept its benchmark interest rate unchanged on Monday and signalled that cuts could follow later this year as inflation cools.</p>]]></description>
+    <pubDate>Mon, 01 Jan 2024 09:10:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Storm flooding closes coastal highways overnight</title>
+    <link>https://www.gazette.example/news/storm-flooding-coastal-highways</link>
+    <description>Overnight storm flooding closed two coastal highways, with low-lying stretches of the coast road under water on Monday morning.</description>
+    <pubDate>Mon, 01 Jan 2024 08:55:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

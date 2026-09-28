@@ -36,9 +36,12 @@ Requires a Rust toolchain. No Docker, no managed database, no cloud APIs.
 
 ## Status
 
-M2 embed. `feed run` polls the seed feeds, archives every non-304 body as a
-zstd snapshot, parses and canonicalizes items, dedupes them, fills the
-SQLite store, and embeds each item with a MiniLM sentence transformer once
-`feed fetch-model` has provisioned the model and ONNX Runtime. `/v1/items`,
-`/v1/snapshots`, `/v1/outlets` and `/v1/stats` are live. Clustering (M3) is
-next. See `feed/docs/plan.md` §11 for milestones.
+M3 cluster. `feed run` polls the seed feeds, archives every non-304 body
+as a zstd snapshot, parses and canonicalizes items, dedupes them, fills
+the SQLite store, embeds each item (MiniLM via ONNX Runtime once
+`feed fetch-model` has run), and clusters embedded items into stories
+with an incremental cosine assignment over an in-memory active set that
+is checkpointed to disk. `/v1/clusters`, `/v1/events` and `/debug` are
+live alongside the M1 routes, and `feed replay` runs recorded fixtures
+through the whole pipeline offline. Propagation extras (revisions,
+syndication endpoint) are M4. See `feed/docs/plan.md` §11.
