@@ -639,6 +639,7 @@ dependencies = [
  "parquet",
  "reqwest",
  "rusqlite",
+ "schemars",
  "serde",
  "serde_json",
  "tokio",

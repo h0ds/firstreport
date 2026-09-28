@@ -1,6 +1,7 @@
 //! Single writer task. Owns the only writing connection; batches everything
 //! it receives into transactions of up to `BATCH_ROWS` rows or `BATCH_WAIT`.
 
+use schemars::JsonSchema;
 use std::path::Path;
 use std::time::{Duration, Instant};
 
@@ -26,7 +27,7 @@ pub struct SnapshotRow {
     pub item_count: u32,
 }
 
-#[derive(Debug, Clone, serde::Serialize)]
+#[derive(Debug, Clone, serde::Serialize, JsonSchema)]
 pub struct FeedState {
     pub url: String,
     pub outlet_id: String,

@@ -3,6 +3,7 @@ use axum::http::{header, HeaderMap, StatusCode};
 use axum::response::{IntoResponse, Response};
 use axum::routing::get;
 use axum::{Json, Router};
+use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
 use super::AppState;
@@ -35,8 +36,8 @@ pub fn router() -> Router<AppState> {
         .route("/robots.txt", get(robots_txt))
 }
 
-#[derive(Serialize)]
-struct RevisionsOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct RevisionsOut {
     item_id: u64,
     /// Current text, as `/v1/items/{id}` returns it.
     current: crate::types::Item,
@@ -76,8 +77,8 @@ struct SyndicationQ {
 /// Default window for the syndication scan: 30 days.
 const SYNDICATION_WINDOW_SECS: i64 = 30 * 86_400;
 
-#[derive(Serialize)]
-struct SyndicationOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct SyndicationOut {
     text_hash: u64,
     hamming_threshold: u32,
     /// In `published_at` order, so the first entry is the earliest copy.
@@ -128,8 +129,8 @@ struct ListClustersQ {
 
 /// Cluster plus, optionally, its items. The contract `Cluster` carries the
 /// timeline; `items` is an addition, never a removal.
-#[derive(Serialize)]
-struct ClusterOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct ClusterOut {
     #[serde(flatten)]
     cluster: crate::types::Cluster,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -287,8 +288,8 @@ struct EventsQ {
     limit: Option<usize>,
 }
 
-#[derive(Serialize)]
-struct EventsPage {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct EventsPage {
     items: Vec<reader::EventRow>,
     /// Pass back as `after_seq` for the next page.
     last_seq: Option<i64>,
@@ -310,14 +311,14 @@ async fn events(State(s): State<AppState>, Query(q): Query<EventsQ>) -> Response
     }
 }
 
-#[derive(Serialize)]
-struct Page<T> {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct Page<T> {
     items: Vec<T>,
     next: Option<String>,
 }
 
-#[derive(Serialize)]
-struct ApiError {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct ApiError {
     error: String,
 }
 
@@ -480,8 +481,8 @@ struct FeedsQ {
     filter: Option<String>,
 }
 
-#[derive(Serialize)]
-struct FeedOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct FeedOut {
     #[serde(flatten)]
     state: crate::store::writer::FeedState,
     /// Seconds since the last successful fetch, if any.
@@ -523,8 +524,8 @@ async fn feeds(State(s): State<AppState>, Query(q): Query<FeedsQ>) -> Response {
 /// about an outlet beyond its feeds; the link is how a reader gets
 /// from a story to who owns the outlet without knowing two servers
 /// exist.
-#[derive(Serialize)]
-struct OutletOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct OutletOut {
     #[serde(flatten)]
     outlet: reader::OutletRow,
     /// Ledger record for this outlet id (JSON; `Accept: text/markdown` works there too).
@@ -588,8 +589,8 @@ async fn get_outlet(State(s): State<AppState>, Path(id): Path<String>) -> Respon
     }
 }
 
-#[derive(Serialize)]
-struct StatsOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct StatsOut {
     contract_version: u32,
     process: crate::stats::StatsSnapshot,
     store: reader::StoreStats,

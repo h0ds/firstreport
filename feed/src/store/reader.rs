@@ -1,6 +1,7 @@
 //! Read side. One connection behind a mutex; callers hop to a blocking
 //! thread via `Reader::call`. WAL mode lets this run beside the writer.
 
+use schemars::JsonSchema;
 use std::path::Path;
 use std::sync::{Arc, Mutex};
 
@@ -16,7 +17,7 @@ pub struct Reader {
     conn: Arc<Mutex<Connection>>,
 }
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct SnapshotMeta {
     pub id: u64,
     pub feed_url: String,
@@ -28,7 +29,7 @@ pub struct SnapshotMeta {
     pub path: String,
 }
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct OutletRow {
     pub id: String,
     pub name: String,
@@ -59,14 +60,14 @@ pub enum ClusterSort {
     Outlets6h,
 }
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct EventRow {
     pub seq: i64,
     #[serde(flatten)]
     pub event: crate::types::ClusterEvent,
 }
 
-#[derive(Debug, Clone, Default, Serialize)]
+#[derive(Debug, Clone, Default, Serialize, JsonSchema)]
 pub struct StoreStats {
     pub items_total: u64,
     pub items_last_hour: u64,
@@ -249,7 +250,7 @@ pub fn list_snapshots(
     rows.collect()
 }
 
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, JsonSchema)]
 pub struct RevisionRow {
     pub snapshot_id: u64,
     pub seen_at: i64,

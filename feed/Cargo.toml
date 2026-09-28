@@ -29,6 +29,7 @@ bytes = "1.12.1"
 ort = { version = "2.0.0-rc.13", default-features = false, features = ["std", "load-dynamic", "api-27"] }
 arrow = { version = "60.0.0", default-features = false, optional = true }
 parquet = { version = "60.0.0", default-features = false, features = ["arrow", "snap"], optional = true }
+schemars = "1"
 
 [dev-dependencies]
 tower = { version = "0.5.3", features = ["util"] }

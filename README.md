@@ -33,7 +33,7 @@ publishes `/llms.txt` describing itself and its rules of use, allows
 everything in `/robots.txt`, serves JSON by default, and answers
 `Accept: text/markdown` on its main object with a rendering that keeps
 every source, licence and date. Each server also serves an OpenAPI 3.1
-document at `/v1/openapi.json`, built from the same code as its routes,
+document at `/v1/openapi.json`, with schemas generated from its types,
 so a tool-using agent can call it correctly the first time. Every page
 for people links its JSON twin from `<head>`. `design/DESIGN.md` §11 has the rules.
 
