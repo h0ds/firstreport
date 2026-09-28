@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kagami components</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  main { max-width: var(--kg-measure-wide); margin: 0 auto; padding: var(--kg-s7) var(--kg-s4) var(--kg-s9); }
+  section { margin-top: var(--kg-s7); }
+  section > h2 { margin-bottom: var(--kg-s4); }
+  .row { display: flex; gap: var(--kg-s3); align-items: center; flex-wrap: wrap; }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: var(--kg-s3); }
+  .swatch { height: 56px; border: 1px solid var(--kg-line); border-radius: var(--kg-radius-card); display: flex; align-items: flex-end; padding: var(--kg-s2); font-family: var(--kg-font-mono); font-size: 11px; }
+  .type-sample > * { margin-bottom: var(--kg-s3); }
+  .prose { max-width: var(--kg-measure); }
+</style>
+</head>
+<body>
+<main>
+  <header class="row" style="justify-content: space-between;">
+    <span class="kg-lockup" style="font-size: 40px;">
+      <span class="kg-wordmark">Kagami<span class="kanji">鏡</span></span>
+      <span class="rule"></span>
+      <span class="tool">feed</span>
+    </span>
+    <img src="mark.svg" width="32" height="32" alt="Kagami mark">
+  </header>
+  <p class="kg-muted" style="margin-top: var(--kg-s2);">Component reference. Everything a person looks at in feed, ledger or lens should be checkable against this page.</p>
+
+  <section>
+    <h2>Colour</h2>
+    <div class="swatches">
+      <div class="swatch" style="background: var(--kg-blue); color: #fff">blue</div>
+      <div class="swatch" style="background: var(--kg-blue-hover); color: #fff">blue-hover</div>
+      <div class="swatch" style="background: var(--kg-blue-soft); color: var(--kg-blue-ink)">blue-soft</div>
+      <div class="swatch" style="background: var(--kg-blue-ink); color: #fff">blue-ink</div>
+      <div class="swatch" style="background: var(--kg-bg)">bg</div>
+      <div class="swatch" style="background: var(--kg-bg-subtle)">bg-subtle</div>
+      <div class="swatch" style="background: var(--kg-line)">line</div>
+      <div class="swatch" style="background: var(--kg-line-strong)">line-strong</div>
+      <div class="swatch" style="background: var(--kg-text-muted); color: #fff">text-muted</div>
+      <div class="swatch" style="background: var(--kg-text-secondary); color: #fff">text-secondary</div>
+      <div class="swatch" style="background: var(--kg-text); color: #fff">text</div>
+    </div>
+    <p class="kg-muted" style="margin-top: var(--kg-s3);">Semantic colours are for system status only. A story is never red.</p>
+  </section>
+
+  <section>
+    <h2>Type</h2>
+    <div class="type-sample">
+      <div style="font-family: var(--kg-font-serif); font-size: var(--kg-fs-display); line-height: 1.05; letter-spacing: -0.02em;">Where did it start</div>
+      <h1>Story clusters forming over 72 hours</h1>
+      <h2>Syndication and origin</h2>
+      <h3>Velocity counters are recomputed on read</h3>
+      <p class="prose kg-secondary">Body, 15 on 1.6. The interface reflects the data without editorializing. Timeline entries carry both <a class="kg-prose" href="#">published_at</a> and fetched_at, so a downstream tool can choose which to trust.</p>
+      <p class="kg-muted">Small metadata, 12px, muted. first seen 14:02 UTC</p>
+      <pre class="kg-mono">cluster 0x9f3a1c2e7b0d4f61  origin=reuters  n=27  outlets=19</pre>
+    </div>
+  </section>
+
+  <section>
+    <h2>Buttons and inputs</h2>
+    <div class="row">
+      <button class="kg-btn kg-btn-primary">Export clusters</button>
+      <button class="kg-btn kg-btn-secondary">Refresh</button>
+      <button class="kg-btn kg-btn-ghost">Reset filters</button>
+      <input class="kg-input" placeholder="Filter by outlet" style="width: 220px;">
+    </div>
+  </section>
+
+  <section>
+    <h2>Status</h2>
+    <div class="row" style="gap: var(--kg-s5);">
+      <span class="kg-status ok"><span>feed healthy</span></span>
+      <span class="kg-status warn"><span>backoff, retry in 30 min</span></span>
+      <span class="kg-status err"><span>parse error</span></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cluster cards</h2>
+    <article class="kg-cluster">
+      <p class="title">Central bank holds rates, signals cuts may come later in the year</p>
+      <div class="meta kg-muted">
+        <span>19 outlets</span><span class="sep">·</span>
+        <span>27 items</span><span class="sep">·</span>
+        <span>6 in the last hour</span><span class="sep">·</span>
+        <span>first seen 14:02 UTC</span><span class="sep">·</span>
+        <span class="origin">reuters</span>
+        <svg class="kg-spark" viewBox="0 0 80 20" preserveAspectRatio="none" aria-hidden="true">
+          <path class="area" d="M0,20 L0,19 L10,18 L20,17 L30,14 L40,9 L50,6 L60,4 L70,3 L80,2 L80,20 Z"/>
+          <path d="M0,19 L10,18 L20,17 L30,14 L40,9 L50,6 L60,4 L70,3 L80,2"/>
+        </svg>
+      </div>
+    </article>
+    <article class="kg-cluster kg-enter">
+      <p class="title">Coastal flooding closes two highways after overnight storm</p>
+      <div class="meta kg-muted">
+        <span>4 outlets</span><span class="sep">·</span>
+        <span>5 items</span><span class="sep">·</span>
+        <span>2 syndication groups</span><span class="sep">·</span>
+        <span>first seen 09:41 UTC</span><span class="sep">·</span>
+        <span class="origin">ap</span>
+        <svg class="kg-spark" viewBox="0 0 80 20" preserveAspectRatio="none" aria-hidden="true">
+          <path class="area" d="M0,20 L0,19 L20,19 L40,17 L60,12 L80,10 L80,20 Z"/>
+          <path d="M0,19 L20,19 L40,17 L60,12 L80,10"/>
+        </svg>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Table</h2>
+    <table class="kg-table">
+      <thead><tr><th>Cluster</th><th>Primary title</th><th>Origin</th><th class="num">Outlets</th><th class="num">Items</th><th>First seen</th></tr></thead>
+      <tbody>
+        <tr class="is-selected"><td class="id">9f3a1c2e</td><td>Central bank holds rates, signals cuts may come later</td><td class="id">reuters</td><td class="num">19</td><td class="num">27</td><td class="id">14:02:11</td></tr>
+        <tr><td class="id">04b7e9d1</td><td>Coastal flooding closes two highways after overnight storm</td><td class="id">ap</td><td class="num">4</td><td class="num">5</td><td class="id">09:41:36</td></tr>
+        <tr><td class="id">c2d8f005</td><td>Parliament vote on data retention bill postponed</td><td class="id">guardian</td><td class="num">3</td><td class="num">3</td><td class="id">08:15:02</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Floating</h2>
+    <div class="kg-float" style="display: inline-block; padding: var(--kg-s3) var(--kg-s4); min-width: 200px;">
+      <div class="kg-muted" style="margin-bottom: var(--kg-s2);">Sort by</div>
+      <div><a href="#">Newest</a></div>
+      <div style="margin-top: var(--kg-s1);"><a href="#">Outlets, 6h</a></div>
+      <div style="margin-top: var(--kg-s1);"><a href="#">Items, 1h</a></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

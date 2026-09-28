@@ -1,0 +1,52 @@
+# Outlet registry: the single seam shared with `ledger`. IDs and domains only.
+# No ratings, no characterization.
+
+[[outlet]]
+id = "bbc"
+name = "BBC"
+domains = ["bbc.co.uk", "bbc.com"]
+
+[[outlet]]
+id = "nytimes"
+name = "The New York Times"
+domains = ["nytimes.com"]
+
+[[outlet]]
+id = "guardian"
+name = "The Guardian"
+domains = ["theguardian.com"]
+
+[[outlet]]
+id = "washingtonpost"
+name = "The Washington Post"
+domains = ["washingtonpost.com"]
+
+[[outlet]]
+id = "foxnews"
+name = "Fox News"
+domains = ["foxnews.com"]
+
+[[outlet]]
+id = "aljazeera"
+name = "Al Jazeera"
+domains = ["aljazeera.com"]
+
+[[outlet]]
+id = "npr"
+name = "NPR"
+domains = ["npr.org"]
+
+[[outlet]]
+id = "breitbart"
+name = "Breitbart"
+domains = ["breitbart.com"]
+
+[[outlet]]
+id = "rt"
+name = "RT"
+domains = ["rt.com"]
+
+[[outlet]]
+id = "ap"
+name = "Associated Press"
+domains = ["apnews.com"]

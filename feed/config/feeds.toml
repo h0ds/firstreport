@@ -1,0 +1,43 @@
+# Seed feed list for development. Spans wire services to partisan and fringe
+# outlets deliberately; no outlet is excluded on quality grounds (see plan §6).
+
+[[feed]]
+url = "https://feeds.bbci.co.uk/news/world/rss.xml"
+outlet = "bbc"
+interval_secs = 600
+
+[[feed]]
+url = "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+outlet = "nytimes"
+
+[[feed]]
+url = "https://www.theguardian.com/world/rss"
+outlet = "guardian"
+
+[[feed]]
+url = "https://feeds.washingtonpost.com/rss/world"
+outlet = "washingtonpost"
+
+[[feed]]
+url = "https://moxie.foxnews.com/google-publisher/world.xml"
+outlet = "foxnews"
+
+[[feed]]
+url = "https://www.aljazeera.com/xml/rss/all.xml"
+outlet = "aljazeera"
+
+[[feed]]
+url = "https://feeds.npr.org/1004/rss.xml"
+outlet = "npr"
+
+[[feed]]
+url = "https://www.breitbart.com/feed/"
+outlet = "breitbart"
+
+[[feed]]
+url = "https://www.rt.com/rss/news/"
+outlet = "rt"
+
+[[feed]]
+url = "https://apnews.com/hub/world-news.rss"
+outlet = "ap"

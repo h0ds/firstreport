@@ -1,0 +1,42 @@
+[poll]
+default_interval_secs = 900
+global_concurrency = 64
+per_host_concurrency = 2
+max_backoff_secs = 21600
+
+[embed]
+model_path = "models/minilm-l6-int8.onnx"
+vocab_path = "models/vocab.txt"
+max_tokens = 128
+batch_size = 64
+batch_wait_ms = 200
+
+[cluster]
+join_threshold = 0.72
+merge_threshold = 0.80
+window_secs = 259200
+expiry_secs = 172800
+merge_interval_secs = 600
+max_cluster_size = 500
+same_outlet_guard = true
+languages = ["en"]
+
+[store]
+path = "data/feed.db"
+checkpoint_secs = 60
+
+[snapshots]
+enabled = true
+dir = "data/snapshots"
+zstd_level = 3
+retention_days = 180
+
+[syndication]
+hamming_threshold = 3
+
+[api]
+bind = "127.0.0.1:8080"
+
+[export]
+nightly = false
+out_dir = "data/export"
