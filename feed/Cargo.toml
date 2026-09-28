@@ -30,3 +30,7 @@ ort = { version = "2.0.0-rc.13", default-features = false, features = ["std", "l
 
 [dev-dependencies]
 tower = { version = "0.5.3", features = ["util"] }
+
+[features]
+# Parquet export pulls in arrow; off by default.
+parquet = []

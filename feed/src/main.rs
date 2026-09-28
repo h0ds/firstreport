@@ -7,6 +7,7 @@ mod cluster;
 mod config;
 mod embed;
 mod eval;
+mod export;
 mod fetch;
 mod lang;
 mod parse;
@@ -69,10 +70,19 @@ async fn main() {
     let result = match args.command {
         cli::Command::Run => run(cfg, loaded.feeds, loaded.outlets).await,
         cli::Command::FetchModel => fetch_model(&cfg).await,
-        cli::Command::Export { format, out } => {
-            info!(%format, out = %out.display(), "export: not implemented (M6)");
+        cli::Command::Export { format, out } => (|| {
+            let format: export::Format = format.parse()?;
+            let reader = store::Reader::open(&cfg.store.path)?;
+            let s = export::run(
+                &reader,
+                format,
+                &out,
+                stats::now(),
+                cfg.syndication.hamming_threshold,
+            )?;
+            info!(items = s.items, clusters = s.clusters, events = s.events, outlets = s.outlets, out = %out.display(), "export complete");
             Ok(())
-        }
+        })(),
         cli::Command::Prune { older_than } => {
             info!(%older_than, "prune: not implemented (M6)");
             Ok(())
