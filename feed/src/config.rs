@@ -8,7 +8,7 @@ use std::path::{Path, PathBuf};
 
 use serde::Deserialize;
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Default, Deserialize)]
 #[serde(default, deny_unknown_fields)]
 pub struct Config {
     pub poll: Poll,
@@ -19,21 +19,6 @@ pub struct Config {
     pub syndication: Syndication,
     pub api: Api,
     pub export: Export,
-}
-
-impl Default for Config {
-    fn default() -> Self {
-        Self {
-            poll: Poll::default(),
-            embed: Embed::default(),
-            cluster: Cluster::default(),
-            store: Store::default(),
-            snapshots: Snapshots::default(),
-            syndication: Syndication::default(),
-            api: Api::default(),
-            export: Export::default(),
-        }
-    }
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -225,7 +210,10 @@ pub enum ConfigError {
     Io(PathBuf, std::io::Error),
     Parse(PathBuf, toml::de::Error),
     /// A feed references an outlet id that is not in `outlets.toml`.
-    UnknownOutlet { feed_url: String, outlet: String },
+    UnknownOutlet {
+        feed_url: String,
+        outlet: String,
+    },
 }
 
 impl std::fmt::Display for ConfigError {

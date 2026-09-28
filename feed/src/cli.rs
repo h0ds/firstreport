@@ -90,7 +90,10 @@ mod tests {
     use super::*;
 
     fn argv(s: &str) -> Vec<String> {
-        std::iter::once("feed").chain(s.split_whitespace()).map(String::from).collect()
+        std::iter::once("feed")
+            .chain(s.split_whitespace())
+            .map(String::from)
+            .collect()
     }
 
     #[test]
@@ -103,10 +106,18 @@ mod tests {
 
     #[test]
     fn global_flags_then_command() {
-        let a = parse(argv("--config /etc/feed --bind 0.0.0.0:80 replay --fixtures fx")).unwrap();
+        let a = parse(argv(
+            "--config /etc/feed --bind 0.0.0.0:80 replay --fixtures fx",
+        ))
+        .unwrap();
         assert_eq!(a.config_dir, PathBuf::from("/etc/feed"));
         assert_eq!(a.bind.as_deref(), Some("0.0.0.0:80"));
-        assert_eq!(a.command, Command::Replay { fixtures: "fx".into() });
+        assert_eq!(
+            a.command,
+            Command::Replay {
+                fixtures: "fx".into()
+            }
+        );
     }
 
     #[test]

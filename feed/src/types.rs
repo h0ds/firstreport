@@ -143,12 +143,21 @@ mod tests {
 
     #[test]
     fn item_id_is_stable() {
-        assert_eq!(item_id("https://example.com/a"), item_id("https://example.com/a"));
-        assert_ne!(item_id("https://example.com/a"), item_id("https://example.com/b"));
+        assert_eq!(
+            item_id("https://example.com/a"),
+            item_id("https://example.com/a")
+        );
+        assert_ne!(
+            item_id("https://example.com/a"),
+            item_id("https://example.com/b")
+        );
     }
 
     #[test]
     fn event_kind_serializes_snake_case() {
-        assert_eq!(serde_json::to_string(&EventKind::ItemAdded).unwrap(), "\"item_added\"");
+        assert_eq!(
+            serde_json::to_string(&EventKind::ItemAdded).unwrap(),
+            "\"item_added\""
+        );
     }
 }
