@@ -3,6 +3,10 @@ default_interval_secs = 900
 global_concurrency = 64
 per_host_concurrency = 2
 max_backoff_secs = 21600
+adaptive = true                  # speed up feeds that yield items, slow down quiet ones
+min_interval_secs = 300
+max_interval_secs = 3600
+jitter = 0.1                     # ±10% so feeds don't poll in lockstep
 
 [embed]
 backend = "onnx"                 # onnx | hash (deterministic, model-free, for replay and CI)

@@ -26,18 +26,30 @@ pub struct SnapshotRow {
     pub item_count: u32,
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, serde::Serialize)]
 pub struct FeedState {
     pub url: String,
     pub outlet_id: String,
     pub kind: Option<String>,
+    /// Configured interval.
+    pub base_interval_secs: u64,
+    /// Current interval after adaptation.
     pub interval_secs: u64,
+    #[serde(skip)]
     pub etag: Option<String>,
+    #[serde(skip)]
     pub last_modified: Option<String>,
     pub next_fetch_at: i64,
     pub fail_count: u32,
     pub last_ok_at: Option<i64>,
     pub dead: bool,
+    /// Where the feed permanently moved, if a 301/308 was seen.
+    pub resolved_url: Option<String>,
+    pub last_fetch_at: Option<i64>,
+    pub last_status: Option<u16>,
+    pub last_error: Option<String>,
+    /// New items from the most recent fetch.
+    pub last_items: u32,
 }
 
 #[derive(Debug)]
@@ -202,13 +214,17 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
         )?;
         let mut up_feed = tx.prepare_cached(
             "INSERT INTO feed (url, outlet_id, kind, interval_secs, etag, last_modified, next_fetch_at,
-                               fail_count, last_ok_at, dead)
-             VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10)
+                               fail_count, last_ok_at, dead, base_interval_secs, resolved_url,
+                               last_fetch_at, last_status, last_error, last_items)
+             VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16)
              ON CONFLICT(url) DO UPDATE SET
                outlet_id=excluded.outlet_id, kind=excluded.kind, interval_secs=excluded.interval_secs,
                etag=excluded.etag, last_modified=excluded.last_modified,
                next_fetch_at=excluded.next_fetch_at, fail_count=excluded.fail_count,
-               last_ok_at=excluded.last_ok_at, dead=excluded.dead",
+               last_ok_at=excluded.last_ok_at, dead=excluded.dead,
+               base_interval_secs=excluded.base_interval_secs, resolved_url=excluded.resolved_url,
+               last_fetch_at=excluded.last_fetch_at, last_status=excluded.last_status,
+               last_error=excluded.last_error, last_items=excluded.last_items",
         )?;
         for m in batch {
             match m {
@@ -316,7 +332,13 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                         f.next_fetch_at,
                         f.fail_count,
                         f.last_ok_at,
-                        f.dead as i32
+                        f.dead as i32,
+                        f.base_interval_secs as i64,
+                        f.resolved_url,
+                        f.last_fetch_at,
+                        f.last_status.map(|s| s as i64),
+                        f.last_error,
+                        f.last_items as i64
                     ])?;
                 }
                 WriteMsg::Flush(_) => unreachable!("flushes are taken out before commit"),

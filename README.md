@@ -45,5 +45,8 @@ is checkpointed to disk. `/v1/clusters`, `/v1/events` and `/debug` are
 live alongside the M1 routes, and `feed replay` runs recorded fixtures
 through the whole pipeline offline. M4 added revision and withdrawal
 tracking from snapshot diffs, `/v1/items/{id}/revisions`,
-`/v1/syndication`, and spread curves on the debug page. Merge pass and
-threshold tuning (M5) are next. See `feed/docs/plan.md` §11.
+`/v1/syndication`, and spread curves on the debug page. The ingress
+hardening pass added adaptive polling with jitter, Retry-After and
+permanent-redirect handling, a User-Agent fallback, `/v1/feeds` health,
+OPML import and feed autodiscovery. Merge pass and threshold tuning
+(M5) are next. See `feed/docs/plan.md` §11.

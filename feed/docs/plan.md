@@ -155,12 +155,15 @@ Embeddings are never emitted over the JSON API (size). They are included in the 
 - Feed list from `config/feeds.toml`. Each entry: `url`, `outlet`, optional `interval_secs` (default 900), optional `kind` override.
 - Scheduler: min-heap keyed on `next_fetch_at`. One task pops due feeds and dispatches fetches into a semaphore-bounded pool (global cap ~64, per-host cap 2).
 - Conditional requests: store `etag` and `last_modified` per feed; send `If-None-Match` / `If-Modified-Since`. 304 → reschedule, no parse.
-- Backoff: on error, `interval * 2^n` capped at 6h. On success, reset. Feeds failing continuously for 7 days are flagged `dead` in the store and skipped until manually re-enabled.
+- Backoff: on error, `interval * 2^n` capped at 6h. On success, reset. `Retry-After` on 429/503 is honoured when longer. Feeds failing continuously for 7 days are flagged `dead` in the store and skipped until manually re-enabled.
+- Adaptive intervals (hardening pass): new items shorten a feed's interval by a third, an unchanged body or 304 lengthens it by a third, bounded by `min_interval_secs`/`max_interval_secs`. This is the main lever on `joined_at` precision and therefore on velocity and time-to-N-outlets. Every wait carries deterministic jitter (hash of feed and time) so feeds sharing an interval drift apart.
+- Permanent redirects are followed and recorded as `resolved_url`; the configured URL remains the feed's identity. A host answering 403 to the product User-Agent is retried once with the `Mozilla/5.0 (compatible; kagami-feed/…)` form and remembered.
+- Per-feed health (last status, last error, adapted interval, moves) is persisted on the feed table and served at `/v1/feeds`.
 - **Snapshot archival:** every non-304 response body is written to `data/snapshots/<yyyy>/<mm>/<dd>/<snapshot_id>.zst` (zstd level 3) before parsing, with a row in the `snapshot` table. Parse failures still keep the snapshot. If an item later disappears from a feed or its title changes between snapshots, a `revised` / `withdrawn` event is emitted (§5.3a). Storage cost: ~3k feeds × 96 polls/day × ~5 KB compressed ≈ 1.5 GB/day worst case; in practice most polls are 304s and the real figure is a fraction of that. Retention configurable, default 180 days.
 - Parse with `feed-rs`. Extract title, link, summary/description (HTML stripped to text, truncated to 512 chars), published date, language hint.
 - **Text hash:** compute a 64-bit simhash over the normalized title+summary (lowercased, punctuation and stopwords stripped, word 2-shingles). Items whose hashes are within Hamming distance ≤ 3 are treated as syndicated copies of the same text. This is independent of the embedding and much stricter: it detects *same copy*, not *same story*.
 - Canonicalize URL:
-  - lowercase scheme + host, strip `www.`
+  - lowercase scheme + host, strip `www.`, `amp.`, `m.`, `mobile.`; strip `/amp` path suffixes and AMP query toggles
   - strip fragment
   - strip known tracking params (`utm_*`, `fbclid`, `gclid`, `ref`, `source`, and a maintained list)
   - sort remaining query params
@@ -168,6 +171,8 @@ Embeddings are never emitted over the JSON API (size). They are included in the 
 - Item ID = xxhash64(canonical_url). Dedupe against a bloom filter of recent IDs (rebuilt from store on boot, ~7 days window) then confirmed against the store on hit.
 - Resolve `outlet_id` from host via `config/outlets.toml` (exact host match, then suffix match). Unknown host → outlet `unknown:<host>`, logged, still ingested.
 - Detect language with `whatlang` (small, no network). Non-target languages are still stored but can be excluded from clustering via config.
+- Publish dates more than an hour after the fetch are replaced with the fetch time (feeds do emit them, and a future date would fall outside every cluster window). Counted in `/v1/stats`.
+- Feed list growth: `feed import --opml` and `feed discover <url>` print `feeds.toml`/`outlets.toml` entries and append them with `--write`.
 
 ### 5.2 Embedder
 

@@ -15,7 +15,7 @@ use tracing::{debug, info, warn};
 use crate::bloom::Bloom;
 use crate::config::{Config, Feeds};
 use crate::fetch::client::{Client, Fetched};
-use crate::fetch::scheduler::{Outcome, Scheduler};
+use crate::fetch::scheduler::{Outcome, Report, Scheduler, SchedulerCfg};
 use crate::parse::revision::{self, Change, Seen};
 use crate::parse::{feed as feedparse, outlet::Resolver};
 use crate::snapshot;
@@ -55,18 +55,32 @@ pub struct Poller {
     prev_seen: HashMap<String, Vec<Seen>>,
 }
 
+struct FetchFailure {
+    status: Option<u16>,
+    retry_after_secs: Option<u64>,
+    message: String,
+}
+
 struct FetchDone {
     idx: usize,
     fetched_at: i64,
-    result: Result<Fetched, String>,
+    result: Result<Fetched, FetchFailure>,
 }
 
+#[derive(Debug, Default)]
 pub struct Processed {
     pub outcome: Outcome,
     pub etag: Option<String>,
     pub last_modified: Option<String>,
+    pub resolved_url: Option<String>,
+    /// Set for failures that happen after the fetch (parse errors).
+    pub error: Option<String>,
     pub new_items: Vec<Item>,
 }
+
+/// Publish dates further ahead of the fetch than this are treated as
+/// broken and replaced with the fetch time.
+pub const MAX_FUTURE_SECS: i64 = 3600;
 
 impl Poller {
     pub fn new(
@@ -105,11 +119,17 @@ impl Poller {
         for (i, f) in feeds.feeds.iter().enumerate() {
             let prev = persisted.iter().find(|p| p.url == f.url);
             let interval = f.interval_secs.unwrap_or(default_interval);
+            // A changed configured interval resets the adapted one.
+            let adapted = prev
+                .filter(|p| p.base_interval_secs == interval)
+                .map(|p| p.interval_secs)
+                .unwrap_or(interval);
             out.push(FeedState {
                 url: f.url.clone(),
                 outlet_id: f.outlet.clone(),
                 kind: f.kind.map(|k| format!("{k:?}").to_lowercase()),
-                interval_secs: interval,
+                base_interval_secs: interval,
+                interval_secs: adapted,
                 etag: prev.and_then(|p| p.etag.clone()),
                 last_modified: prev.and_then(|p| p.last_modified.clone()),
                 // Stagger first fetches so boot doesn't burst every host at once.
@@ -119,6 +139,11 @@ impl Poller {
                 fail_count: prev.map(|p| p.fail_count).unwrap_or(0),
                 last_ok_at: prev.and_then(|p| p.last_ok_at),
                 dead: prev.map(|p| p.dead).unwrap_or(false),
+                resolved_url: prev.and_then(|p| p.resolved_url.clone()),
+                last_fetch_at: prev.and_then(|p| p.last_fetch_at),
+                last_status: prev.and_then(|p| p.last_status),
+                last_error: prev.and_then(|p| p.last_error.clone()),
+                last_items: prev.map(|p| p.last_items).unwrap_or(0),
             });
         }
         out
@@ -137,7 +162,7 @@ impl Poller {
         out: mpsc::Sender<Item>,
         mut shutdown: tokio::sync::watch::Receiver<bool>,
     ) {
-        let mut sched = Scheduler::new(feeds, self.cfg.poll.max_backoff_secs);
+        let mut sched = Scheduler::new(feeds, SchedulerCfg::from(&self.cfg.poll));
         let mut inflight: JoinSet<FetchDone> = JoinSet::new();
         info!(feeds = sched.len(), "poller started");
 
@@ -148,10 +173,17 @@ impl Poller {
                 let f = sched.feed(idx).clone();
                 let client = self.client.clone();
                 inflight.spawn(async move {
+                    // A permanently moved feed is fetched from its new home
+                    // while keeping its configured URL as identity.
+                    let target = f.resolved_url.clone().unwrap_or_else(|| f.url.clone());
                     let result = client
-                        .fetch(&f.url, f.etag.as_deref(), f.last_modified.as_deref())
+                        .fetch(&target, f.etag.as_deref(), f.last_modified.as_deref())
                         .await
-                        .map_err(|e| e.to_string());
+                        .map_err(|e| FetchFailure {
+                            status: e.status(),
+                            retry_after_secs: e.retry_after(),
+                            message: e.to_string(),
+                        });
                     FetchDone {
                         idx,
                         fetched_at: now(),
@@ -171,11 +203,29 @@ impl Poller {
                 Some(done) = inflight.join_next(), if !inflight.is_empty() => {
                     let Ok(done) = done else { continue };
                     let feed = sched.feed(done.idx).clone();
-                    let p = self.process(&feed, done.fetched_at, done.result).await;
+                    let (retry_after, status, error) = match &done.result {
+                        Ok(f) => (None, Some(f.status), None),
+                        Err(e) => (e.retry_after_secs, e.status, Some(e.message.clone())),
+                    };
+                    let p = self.process(&feed, done.fetched_at, done.result.map_err(|e| e.message)).await;
                     for it in &p.new_items {
                         let _ = out.try_send(it.clone());
                     }
-                    let st = sched.complete(done.idx, done.fetched_at, p.outcome, p.etag, p.last_modified).clone();
+                    let report = Report {
+                        outcome: Some(p.outcome),
+                        status,
+                        error: error.or(p.error),
+                        etag: p.etag,
+                        last_modified: p.last_modified,
+                        retry_after_secs: retry_after,
+                        resolved_url: p.resolved_url,
+                        new_items: p.new_items.len() as u32,
+                    };
+                    let had_move = feed.resolved_url.is_none() && report.resolved_url.is_some();
+                    let st = sched.complete(done.idx, done.fetched_at, report).clone();
+                    if had_move {
+                        info!(url = %st.url, moved_to = ?st.resolved_url, "feed permanently moved; update feeds.toml");
+                    }
                     if st.dead {
                         warn!(url = %st.url, "feed marked dead after 7 days of failures");
                     }
@@ -350,9 +400,8 @@ impl Poller {
                 warn!(url = %feed.url, fail_count = feed.fail_count + 1, "fetch failed: {e}");
                 return Processed {
                     outcome: Outcome::Err,
-                    etag: None,
-                    last_modified: None,
-                    new_items: vec![],
+                    error: Some(e),
+                    ..Default::default()
                 };
             }
         };
@@ -360,10 +409,11 @@ impl Poller {
             st.inc(&st.fetch_304);
             debug!(url = %feed.url, "304 not modified");
             return Processed {
-                outcome: Outcome::Ok,
+                outcome: Outcome::Unchanged,
                 etag: fetched.etag,
                 last_modified: fetched.last_modified,
-                new_items: vec![],
+                resolved_url: fetched.resolved_url,
+                ..Default::default()
             };
         };
 
@@ -418,7 +468,9 @@ impl Poller {
                     outcome: Outcome::Err,
                     etag: fetched.etag,
                     last_modified: fetched.last_modified,
-                    new_items: vec![],
+                    resolved_url: fetched.resolved_url,
+                    error: Some(format!("parse: {e}")),
+                    ..Default::default()
                 };
             }
         };
@@ -472,13 +524,22 @@ impl Poller {
                 e.lang_hint.as_deref(),
                 &format!("{} {}", e.title, e.summary),
             );
+            // Feeds emit dates in the future (wrong timezone math, embargo
+            // slips). A future date would push the item outside every
+            // cluster's window, so clamp it to when we saw it.
+            let published_at = if e.published_at > fetched_at + MAX_FUTURE_SECS {
+                st.inc(&st.future_dates);
+                fetched_at
+            } else {
+                e.published_at
+            };
             new_items.push(Item {
                 id,
                 outlet_id,
                 canonical_url: e.canonical_url,
                 title: e.title,
                 summary: e.summary,
-                published_at: e.published_at,
+                published_at,
                 fetched_at,
                 lang,
                 text_hash: e.text_hash,
@@ -506,9 +567,15 @@ impl Poller {
             self.writer.send(WriteMsg::Items(new_items.clone())).await;
         }
         Processed {
-            outcome: Outcome::Ok,
+            outcome: if new_items.is_empty() {
+                Outcome::Unchanged
+            } else {
+                Outcome::Ok
+            },
             etag: fetched.etag,
             last_modified: fetched.last_modified,
+            resolved_url: fetched.resolved_url,
+            error: None,
             new_items,
         }
     }

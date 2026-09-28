@@ -14,6 +14,10 @@ pub enum Command {
     Prune { older_than: String },
     /// Run the pipeline offline over recorded fixtures.
     Replay { fixtures: PathBuf },
+    /// Turn an OPML subscription list into feeds.toml / outlets.toml entries.
+    Import { opml: PathBuf, write: bool },
+    /// Find the feeds an outlet's page advertises.
+    Discover { url: String, write: bool },
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -32,6 +36,8 @@ commands:
   export --format <f> --out <dir>
   prune --older-than <dur>
   replay --fixtures <dir>
+  import --opml <file> [--write]   print (or append) feeds/outlets from an OPML list
+  discover <url> [--write]         print (or append) feeds advertised by a page
 ";
 
 pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
@@ -74,6 +80,18 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         },
         "replay" => Command::Replay {
             fixtures: flag("--fixtures")?.into(),
+        },
+        "import" => Command::Import {
+            opml: flag("--opml")?.into(),
+            write: rest.iter().any(|x| x == "--write"),
+        },
+        "discover" => Command::Discover {
+            url: rest
+                .iter()
+                .find(|x| !x.starts_with("--"))
+                .cloned()
+                .ok_or("discover requires a page URL")?,
+            write: rest.iter().any(|x| x == "--write"),
         },
         other => return Err(format!("unknown command {other:?}\n\n{USAGE}")),
     };
@@ -123,5 +141,26 @@ mod tests {
     #[test]
     fn missing_required_flag_errors() {
         assert!(parse(argv("export --format ndjson")).is_err());
+        assert!(parse(argv("discover --write")).is_err());
+    }
+
+    #[test]
+    fn import_and_discover() {
+        assert_eq!(
+            parse(argv("import --opml subs.opml --write"))
+                .unwrap()
+                .command,
+            Command::Import {
+                opml: "subs.opml".into(),
+                write: true
+            }
+        );
+        assert_eq!(
+            parse(argv("discover https://example.com")).unwrap().command,
+            Command::Discover {
+                url: "https://example.com".into(),
+                write: false
+            }
+        );
     }
 }

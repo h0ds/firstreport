@@ -28,6 +28,14 @@ pub struct Poll {
     pub global_concurrency: usize,
     pub per_host_concurrency: usize,
     pub max_backoff_secs: u64,
+    /// Shorten a feed's interval when it yields new items, lengthen it
+    /// when it doesn't, within the bounds below.
+    pub adaptive: bool,
+    pub min_interval_secs: u64,
+    pub max_interval_secs: u64,
+    /// Fraction of each wait randomized (deterministically) so feeds on
+    /// the same interval don't burst together. 0 disables.
+    pub jitter: f64,
 }
 
 impl Default for Poll {
@@ -37,6 +45,10 @@ impl Default for Poll {
             global_concurrency: 64,
             per_host_concurrency: 2,
             max_backoff_secs: 21_600,
+            adaptive: true,
+            min_interval_secs: 300,
+            max_interval_secs: 3_600,
+            jitter: 0.1,
         }
     }
 }

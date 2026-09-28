@@ -121,6 +121,7 @@ pub async fn run(
             body: Some(Bytes::from(body)),
             etag: None,
             last_modified: None,
+            resolved_url: None,
         };
         let p = poller.process(state, s.fetched_at, Ok(fetched)).await;
         if p.new_items.is_empty() {

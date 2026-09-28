@@ -43,11 +43,49 @@ Embed latency (amortized per item, p50 and p99) is reported in `/v1/stats`.
 | `GET /v1/clusters/{id}` | contract `Cluster` plus its items |
 | `GET /v1/clusters/{id}/timeline` | ordered joins only |
 | `GET /v1/events?after_seq=&limit=` | cluster event log for incremental sync |
+| `GET /v1/feeds?filter=all\|failing\|dead\|stale` | per-feed health: last status and error, adapted interval, fail count, permanent moves |
 | `GET /v1/outlets` | registry with domains and feeds |
 | `GET /v1/stats` | process counters, store totals, embed and assign latency |
 | `GET /debug` | live page showing clusters form, styled from `design/tokens.css` |
 
 Ids are u64 and accepted as decimal or `0x`-prefixed hex.
+
+## Ingress behaviour
+
+- **Conditional requests** with ETag and Last-Modified; gzip and brotli.
+- **Adaptive polling.** A fetch that yields new items shortens the feed's
+  interval by a third, an unchanged one lengthens it by a third, bounded
+  by `poll.min_interval_secs` and `poll.max_interval_secs`. Every wait
+  carries deterministic ±`poll.jitter` so feeds on the same interval
+  drift apart instead of bursting.
+- **Backoff** doubles from the configured interval on each failure, capped
+  at `poll.max_backoff_secs`; `Retry-After` on 429/503 is honoured when it
+  is longer. Seven days of continuous failure marks a feed dead.
+- **Permanent moves.** 301/308 chains are followed and the final URL is
+  recorded as `resolved_url`, which is fetched from then on while the
+  configured URL stays the feed's identity. The log says when to update
+  `feeds.toml`. Temporary redirects are followed silently.
+- **User-Agent fallback.** The product token is sent first. A host that
+  answers 403 is retried once with the `Mozilla/5.0 (compatible; …)` form,
+  which still names the project, and remembered if that worked.
+- **Canonicalization** strips `www.`, `amp.`, `m.` and `mobile.` hosts,
+  `/amp` path suffixes, AMP query toggles and tracking parameters, so one
+  article is one item however a feed links it.
+- **Date sanity.** A publish date more than an hour in the future is
+  replaced with the fetch time and counted in `/v1/stats`.
+
+## Growing the feed list
+
+```
+cargo run -- import --opml subscriptions.opml          # print TOML for feeds and new outlets
+cargo run -- import --opml subscriptions.opml --write  # append it to config/
+cargo run -- discover https://www.example.com          # feeds the page advertises (or conventional paths)
+cargo run -- discover https://www.example.com --write
+```
+
+Outlet ids for unknown hosts are guessed from the registrable domain
+(`news.bbc.co.uk` → `bbc`); edit the appended entries if the guess is
+wrong. Nothing is written without `--write`.
 
 ## Revision tracking
 

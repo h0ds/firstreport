@@ -25,6 +25,7 @@ pub fn router() -> Router<AppState> {
         .route("/v1/clusters/{id}", get(get_cluster))
         .route("/v1/clusters/{id}/timeline", get(cluster_timeline))
         .route("/v1/events", get(events))
+        .route("/v1/feeds", get(feeds))
         .route("/v1/outlets", get(outlets))
         .route("/v1/stats", get(stats))
         .route("/debug", get(debug_page))
@@ -420,6 +421,51 @@ async fn snapshot_body(State(s): State<AppState>, Path(id): Path<String>) -> Res
         }
         Err(_) => err(StatusCode::INTERNAL_SERVER_ERROR, "read task failed"),
     }
+}
+
+#[derive(Deserialize)]
+struct FeedsQ {
+    /// `failing`, `dead`, `stale` (no success in 24 h), or `all` (default).
+    filter: Option<String>,
+}
+
+#[derive(Serialize)]
+struct FeedOut {
+    #[serde(flatten)]
+    state: crate::store::writer::FeedState,
+    /// Seconds since the last successful fetch, if any.
+    ok_age_secs: Option<i64>,
+}
+
+/// Per-feed health, newest failures first.
+async fn feeds(State(s): State<AppState>, Query(q): Query<FeedsQ>) -> Response {
+    let t = now();
+    let rows = match s.reader.call(reader::feed_states).await {
+        Ok(r) => r,
+        Err(e) => return db_err(e),
+    };
+    let filter = q.filter.unwrap_or_else(|| "all".into());
+    let mut out: Vec<FeedOut> = rows
+        .into_iter()
+        .filter(|f| match filter.as_str() {
+            "failing" => f.fail_count > 0 && !f.dead,
+            "dead" => f.dead,
+            "stale" => f.last_ok_at.map(|o| t - o > 86_400).unwrap_or(true),
+            _ => true,
+        })
+        .map(|f| FeedOut {
+            ok_age_secs: f.last_ok_at.map(|o| t - o),
+            state: f,
+        })
+        .collect();
+    out.sort_by(|a, b| {
+        (b.state.dead, b.state.fail_count, a.state.url.clone()).cmp(&(
+            a.state.dead,
+            a.state.fail_count,
+            b.state.url.clone(),
+        ))
+    });
+    Json(out).into_response()
 }
 
 async fn outlets(State(s): State<AppState>) -> Response {

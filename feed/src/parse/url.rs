@@ -58,6 +58,17 @@ fn is_tracking(name: &str) -> bool {
     n.starts_with("utm_") || TRACKING_PARAMS.contains(&n.as_str())
 }
 
+/// AMP toggles carried as query parameters.
+fn is_amp_param(name: &str, value: &str) -> bool {
+    let n = name.to_ascii_lowercase();
+    let v = value.to_ascii_lowercase();
+    n == "amp"
+        || n == "amp_js_v"
+        || n == "usqp"
+        || (n == "output" && v == "amp")
+        || (n == "outputtype" && v == "amp")
+}
+
 /// Canonicalize `raw`, resolving it against `base` (the feed URL) when it is
 /// relative. Returns `None` for anything that is not an http(s) URL with a host.
 pub fn canonicalize(raw: &str, base: Option<&Url>) -> Option<String> {
@@ -71,12 +82,32 @@ pub fn canonicalize(raw: &str, base: Option<&Url>) -> Option<String> {
         return None;
     }
     let host = u.host_str()?.to_ascii_lowercase();
-    let host = host.strip_prefix("www.").unwrap_or(&host).to_string();
+    // `www.`, AMP and mobile mirrors all serve the same article.
+    let host = ["www.", "amp.", "m.", "mobile."]
+        .iter()
+        .find_map(|p| host.strip_prefix(p))
+        .unwrap_or(&host)
+        .to_string();
     if host.is_empty() {
         return None;
     }
     u.set_host(Some(&host)).ok()?;
     u.set_fragment(None);
+
+    // `/amp` suffix variants of an article path.
+    let path = u.path().to_string();
+    let trimmed = path
+        .strip_suffix("/amp/")
+        .or_else(|| path.strip_suffix("/amp"))
+        .or_else(|| path.strip_suffix(".amp"))
+        .or_else(|| {
+            path.strip_suffix("/amp.html")
+                .map(|p| p.trim_end_matches('/'))
+        });
+    if let Some(t) = trimmed {
+        let t = if t.is_empty() { "/" } else { t };
+        u.set_path(t);
+    }
 
     // Drop default ports.
     if matches!(
@@ -88,7 +119,7 @@ pub fn canonicalize(raw: &str, base: Option<&Url>) -> Option<String> {
 
     let mut params: Vec<(String, String)> = u
         .query_pairs()
-        .filter(|(k, _)| !is_tracking(k))
+        .filter(|(k, v)| !is_tracking(k) && !is_amp_param(k, v))
         .map(|(k, v)| (k.into_owned(), v.into_owned()))
         .collect();
     if params.is_empty() {
@@ -136,6 +167,24 @@ mod tests {
             ("https://example.com:443/x", "https://example.com/x"),
             ("/relative/path", "https://example.com/relative/path"),
             ("https://example.com/a?ref=tw", "https://example.com/a"),
+            (
+                "https://amp.example.com/story/amp",
+                "https://example.com/story",
+            ),
+            (
+                "https://m.example.com/story/amp/",
+                "https://example.com/story",
+            ),
+            (
+                "https://example.com/story?amp=1&id=3",
+                "https://example.com/story?id=3",
+            ),
+            (
+                "https://example.com/story?output=amp",
+                "https://example.com/story",
+            ),
+            ("https://example.com/story.amp", "https://example.com/story"),
+            ("https://mobile.example.com/amp", "https://example.com"),
         ];
         for (input, want) in cases {
             assert_eq!(

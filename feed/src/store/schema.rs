@@ -2,7 +2,7 @@
 
 use rusqlite::Connection;
 
-pub const SCHEMA_VERSION: i32 = 1;
+pub const SCHEMA_VERSION: i32 = 2;
 
 const V1: &str = "
 CREATE TABLE IF NOT EXISTS outlet (
@@ -55,10 +55,27 @@ CREATE TABLE IF NOT EXISTS cluster_event (
 );
 ";
 
+/// v2: per-feed health and adaptive polling state on the feed table.
+const V2: &str = "
+ALTER TABLE feed ADD COLUMN base_interval_secs INTEGER;
+ALTER TABLE feed ADD COLUMN resolved_url TEXT;
+ALTER TABLE feed ADD COLUMN last_fetch_at INTEGER;
+ALTER TABLE feed ADD COLUMN last_status INTEGER;
+ALTER TABLE feed ADD COLUMN last_error TEXT;
+ALTER TABLE feed ADD COLUMN last_items INTEGER NOT NULL DEFAULT 0;
+";
+
 pub fn migrate(conn: &Connection) -> rusqlite::Result<()> {
     let v: i32 = conn.query_row("PRAGMA user_version", [], |r| r.get(0))?;
     if v < 1 {
         conn.execute_batch(V1)?;
+    }
+    if v < 2 {
+        // A fresh V1 already lacks these columns, so this applies in both
+        // the fresh and the upgrade case.
+        conn.execute_batch(V2)?;
+    }
+    if v < SCHEMA_VERSION {
         conn.pragma_update(None, "user_version", SCHEMA_VERSION)?;
     }
     Ok(())

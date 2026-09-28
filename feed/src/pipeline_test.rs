@@ -81,6 +81,7 @@ async fn fixture_through_store_and_api() {
         body: Some(Bytes::from_static(FIXTURE)),
         etag: Some("W/\"abc\"".into()),
         last_modified: None,
+        resolved_url: None,
     };
 
     // First fetch: three entries, all new.
@@ -122,6 +123,7 @@ async fn fixture_through_store_and_api() {
         body: Some(Bytes::from_static(REVISED)),
         etag: None,
         last_modified: None,
+        resolved_url: None,
     };
     // A fresh poller has no in-memory listing, so this also exercises the
     // restart path: the previous listing is parsed from the archived
@@ -151,10 +153,16 @@ async fn fixture_through_store_and_api() {
                 body: None,
                 etag: None,
                 last_modified: None,
+                resolved_url: None,
             }),
         )
         .await;
-    assert_eq!(p3.outcome, Outcome::Ok);
+    assert_eq!(p3.outcome, Outcome::Unchanged);
+    assert_eq!(
+        p2.outcome,
+        Outcome::Unchanged,
+        "identical body counts as unchanged for adaptive polling"
+    );
     let p4 = poller
         .process(&feed, 1_704_102_700, Err("boom".into()))
         .await;
@@ -169,6 +177,7 @@ async fn fixture_through_store_and_api() {
                 body: Some(Bytes::from_static(b"<html>nope</html>")),
                 etag: None,
                 last_modified: None,
+                resolved_url: None,
             }),
         )
         .await;
@@ -266,6 +275,20 @@ async fn fixture_through_store_and_api() {
         FIXTURE,
         "archived body round-trips byte for byte"
     );
+
+    let v = body_json(app.clone().oneshot(get("/v1/feeds")).await.unwrap()).await;
+    assert_eq!(v.as_array().unwrap().len(), 1);
+    assert_eq!(v[0]["url"], "https://www.example.com/feed.xml");
+    assert_eq!(v[0]["base_interval_secs"], 900);
+    assert!(v[0].get("etag").is_none(), "validators are not exposed");
+    let v = body_json(
+        app.clone()
+            .oneshot(get("/v1/feeds?filter=dead"))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert!(v.as_array().unwrap().is_empty());
 
     let v = body_json(app.clone().oneshot(get("/v1/outlets")).await.unwrap()).await;
     assert_eq!(v.as_array().unwrap().len(), 2);

@@ -451,20 +451,31 @@ pub fn events_after(
 pub fn feed_states(c: &Connection) -> rusqlite::Result<Vec<FeedState>> {
     let mut st = c.prepare(
         "SELECT url, outlet_id, kind, interval_secs, etag, last_modified, next_fetch_at,
-                fail_count, last_ok_at, dead FROM feed",
+                fail_count, last_ok_at, dead, base_interval_secs, resolved_url, last_fetch_at,
+                last_status, last_error, last_items FROM feed ORDER BY url",
     )?;
     let rows = st.query_map([], |r| {
+        let interval = r.get::<_, i64>(3)? as u64;
         Ok(FeedState {
             url: r.get(0)?,
             outlet_id: r.get(1)?,
             kind: r.get(2)?,
-            interval_secs: r.get::<_, i64>(3)? as u64,
+            interval_secs: interval,
             etag: r.get(4)?,
             last_modified: r.get(5)?,
             next_fetch_at: r.get(6)?,
             fail_count: r.get::<_, i64>(7)? as u32,
             last_ok_at: r.get(8)?,
             dead: r.get::<_, i64>(9)? != 0,
+            base_interval_secs: r
+                .get::<_, Option<i64>>(10)?
+                .map(|v| v as u64)
+                .unwrap_or(interval),
+            resolved_url: r.get(11)?,
+            last_fetch_at: r.get(12)?,
+            last_status: r.get::<_, Option<i64>>(13)?.map(|v| v as u16),
+            last_error: r.get(14)?,
+            last_items: r.get::<_, Option<i64>>(15)?.unwrap_or(0) as u32,
         })
     })?;
     rows.collect()

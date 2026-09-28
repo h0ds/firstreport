@@ -14,6 +14,7 @@ mod replay;
 mod snapshot;
 mod stats;
 mod store;
+mod tooling;
 mod types;
 
 #[cfg(test)]
@@ -74,6 +75,23 @@ async fn main() {
         cli::Command::Prune { older_than } => {
             info!(%older_than, "prune: not implemented (M6)");
             Ok(())
+        }
+        cli::Command::Import { opml, write } => tooling::import_opml(
+            &args.config_dir,
+            &opml,
+            &loaded.feeds,
+            &loaded.outlets,
+            write,
+        ),
+        cli::Command::Discover { url, write } => {
+            tooling::discover(
+                &args.config_dir,
+                &url,
+                &loaded.feeds,
+                &loaded.outlets,
+                write,
+            )
+            .await
         }
         cli::Command::Replay { fixtures } => {
             let scratch = replay::default_scratch();
