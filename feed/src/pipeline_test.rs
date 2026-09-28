@@ -192,6 +192,7 @@ async fn fixture_through_store_and_api() {
         stats: stats.clone(),
         snapshot_dir: cfg.snapshots.dir.clone(),
         hamming_threshold: 3,
+        ledger_url: "http://ledger.test".into(),
     });
     let get = |uri: &str| Request::builder().uri(uri).body(Body::empty()).unwrap();
 
@@ -293,6 +294,25 @@ async fn fixture_through_store_and_api() {
     let v = body_json(app.clone().oneshot(get("/v1/outlets")).await.unwrap()).await;
     assert_eq!(v.as_array().unwrap().len(), 2);
     assert_eq!(v[1]["feeds"][0], "https://www.example.com/feed.xml");
+    let id = v[1]["id"].as_str().unwrap().to_string();
+    assert_eq!(
+        v[1]["ledger"],
+        format!("http://ledger.test/v1/outlets/{id}")
+    );
+    let one = body_json(
+        app.clone()
+            .oneshot(get(&format!("/v1/outlets/{id}")))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert_eq!(one["id"], id);
+    assert_eq!(
+        one["ledger_lookup"],
+        format!("http://ledger.test/lookup?q={id}")
+    );
+    let r = app.clone().oneshot(get("/v1/outlets/nope")).await.unwrap();
+    assert_eq!(r.status(), 404);
 
     // Revisions: the rates item carries its original text and the new one;
     // the item itself now reads the new title. The flooding item was

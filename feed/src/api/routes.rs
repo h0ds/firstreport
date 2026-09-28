@@ -27,6 +27,7 @@ pub fn router() -> Router<AppState> {
         .route("/v1/events", get(events))
         .route("/v1/feeds", get(feeds))
         .route("/v1/outlets", get(outlets))
+        .route("/v1/outlets/{id}", get(get_outlet))
         .route("/v1/stats", get(stats))
         .route("/debug", get(debug_page))
         .route("/llms.txt", get(llms_txt))
@@ -512,9 +513,71 @@ async fn feeds(State(s): State<AppState>, Query(q): Query<FeedsQ>) -> Response {
     Json(out).into_response()
 }
 
+/// An outlet plus where its sourced facts live. `feed` holds no fact
+/// about an outlet beyond its feeds; the link is how a reader gets
+/// from a story to who owns the outlet without knowing two servers
+/// exist.
+#[derive(Serialize)]
+struct OutletOut {
+    #[serde(flatten)]
+    outlet: reader::OutletRow,
+    /// Ledger record for this outlet id (JSON; `Accept: text/markdown` works there too).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    ledger: Option<String>,
+    /// The ledger's page for people.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    ledger_lookup: Option<String>,
+}
+
+pub fn ledger_links(base: &str, id: &str) -> (Option<String>, Option<String>) {
+    let base = base.trim_end_matches('/');
+    if base.is_empty() {
+        return (None, None);
+    }
+    (
+        Some(format!("{base}/v1/outlets/{id}")),
+        Some(format!("{base}/lookup?q={id}")),
+    )
+}
+
+#[cfg(test)]
+mod ledger_link_tests {
+    #[test]
+    fn empty_base_means_no_links() {
+        assert_eq!(super::ledger_links("", "bbc"), (None, None));
+        let (a, b) = super::ledger_links("http://x/", "bbc");
+        assert_eq!(a.as_deref(), Some("http://x/v1/outlets/bbc"));
+        assert_eq!(b.as_deref(), Some("http://x/lookup?q=bbc"));
+    }
+}
+
+fn outlet_out(base: &str, o: reader::OutletRow) -> OutletOut {
+    let (ledger, ledger_lookup) = ledger_links(base, &o.id);
+    OutletOut {
+        outlet: o,
+        ledger,
+        ledger_lookup,
+    }
+}
+
 async fn outlets(State(s): State<AppState>) -> Response {
     match s.reader.call(reader::outlets).await {
-        Ok(v) => Json(v).into_response(),
+        Ok(v) => Json(
+            v.into_iter()
+                .map(|o| outlet_out(&s.ledger_url, o))
+                .collect::<Vec<_>>(),
+        )
+        .into_response(),
+        Err(e) => db_err(e),
+    }
+}
+
+async fn get_outlet(State(s): State<AppState>, Path(id): Path<String>) -> Response {
+    match s.reader.call(reader::outlets).await {
+        Ok(v) => match v.into_iter().find(|o| o.id == id) {
+            Some(o) => Json(outlet_out(&s.ledger_url, o)).into_response(),
+            None => err(StatusCode::NOT_FOUND, "no such outlet"),
+        },
         Err(e) => db_err(e),
     }
 }

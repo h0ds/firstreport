@@ -17,6 +17,8 @@ pub struct AppState {
     pub snapshot_dir: PathBuf,
     /// Simhash distance for syndication grouping.
     pub hamming_threshold: u32,
+    /// Ledger base URL for outlet links; empty for none.
+    pub ledger_url: String,
 }
 
 pub fn router(state: AppState) -> axum::Router {

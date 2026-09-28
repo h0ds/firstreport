@@ -78,7 +78,8 @@ Poll with `after_seq=<last_seq>` for incremental sync.
 
 | route | query | returns |
 |---|---|---|
-| `GET /v1/outlets` | | outlets with domains and feeds |
+| `GET /v1/outlets` | | outlets with domains, feeds and their ledger links |
+| `GET /v1/outlets/{id}` | | one outlet with `ledger` and `ledger_lookup` URLs, from `api.ledger_url` |
 | `GET /v1/feeds` | `filter=all\|failing\|dead\|stale` | per-feed poller state, failures first |
 | `GET /v1/stats` | | `{ contract_version, process: {...}, store: {...} }` |
 

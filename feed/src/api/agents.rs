@@ -34,7 +34,8 @@ sourced facts about each outlet.
 - `GET /v1/syndication?since=` - groups of items that share the same text across outlets
 - `GET /v1/events?after_seq=` - the cluster event log, a cursor for followers
 - `GET /v1/snapshots`, `GET /v1/snapshots/{{id}}/body` - the raw feed fetches
-- `GET /v1/outlets`, `GET /v1/feeds`, `GET /v1/stats`
+- `GET /v1/outlets` and `GET /v1/outlets/{{id}}` - outlets with `ledger` and `ledger_lookup` links to the sourced facts about them
+- `GET /v1/feeds`, `GET /v1/stats`
 - `GET /debug` - the same data as a page for people
 
 ## Rules of use

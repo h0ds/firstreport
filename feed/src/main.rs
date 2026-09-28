@@ -284,6 +284,7 @@ async fn run(
         stats: stats.clone(),
         snapshot_dir: cfg.snapshots.dir.clone(),
         hamming_threshold: cfg.syndication.hamming_threshold,
+        ledger_url: cfg.api.ledger_url.clone(),
     });
     let listener = tokio::net::TcpListener::bind(&cfg.api.bind).await?;
     info!(bind = %cfg.api.bind, "api listening");
