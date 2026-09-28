@@ -2,6 +2,7 @@
 
 pub mod agents;
 pub mod debug;
+pub mod openapi;
 pub mod routes;
 
 use std::path::PathBuf;

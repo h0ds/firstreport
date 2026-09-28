@@ -31,6 +31,7 @@ pub fn router() -> Router<AppState> {
         .route("/v1/stats", get(stats))
         .route("/debug", get(debug_page))
         .route("/llms.txt", get(llms_txt))
+        .route("/v1/openapi.json", get(openapi))
         .route("/robots.txt", get(robots_txt))
 }
 
@@ -240,6 +241,10 @@ fn wants_markdown(headers: &HeaderMap) -> bool {
         .get(header::ACCEPT)
         .and_then(|v| v.to_str().ok())
         .is_some_and(|a| a.contains("text/markdown"))
+}
+
+async fn openapi() -> Response {
+    Json(super::openapi::spec()).into_response()
 }
 
 async fn llms_txt() -> Response {

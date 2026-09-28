@@ -15,6 +15,8 @@ Ids in paths accept decimal or `0x`-prefixed hex.
 
 ## Machine readers
 
+`GET /v1/openapi.json` is an OpenAPI 3.1 description of every route,
+parameter and response schema, built from the same code as the routes.
 `GET /llms.txt` describes the server, its routes and rules of use for
 agents; `GET /robots.txt` allows everything. `GET /v1/clusters/{id}`
 with `Accept: text/markdown` returns a Markdown rendering of the
