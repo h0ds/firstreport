@@ -404,6 +404,30 @@ pub fn cluster_items(c: &Connection, cluster_id: u64) -> rusqlite::Result<Vec<It
     rows.collect()
 }
 
+/// Every item with its embedding if present, newest first, paged by
+/// `(fetched_at, id)` cursor. For the Parquet export.
+#[cfg_attr(not(feature = "parquet"), allow(dead_code))]
+pub fn list_items_with_embeddings(
+    c: &Connection,
+    cursor: Option<(i64, u64)>,
+    limit: usize,
+) -> rusqlite::Result<Vec<(Item, Option<Vec<f32>>)>> {
+    let (cf, ci) = cursor
+        .map(|(f, i)| (f, to_i64(i)))
+        .unwrap_or((i64::MAX, i64::MAX));
+    let mut st = c.prepare_cached(&format!(
+        "SELECT {ITEM_COLS}, embedding FROM item
+         WHERE (fetched_at < ?1 OR (fetched_at = ?1 AND id < ?2))
+         ORDER BY fetched_at DESC, id DESC LIMIT ?3"
+    ))?;
+    let rows = st.query_map(params![cf, ci, limit as i64], |r| {
+        let item = row_item(r)?;
+        let blob: Option<Vec<u8>> = r.get(13)?;
+        Ok((item, blob.map(|b| super::writer::embedding_from_blob(&b))))
+    })?;
+    rows.collect()
+}
+
 /// Items with embeddings fetched since `since`, oldest first, for
 /// rebuilding the active set when there is no usable checkpoint.
 pub fn embedded_items_since(c: &Connection, since: i64) -> rusqlite::Result<Vec<(Item, Vec<f32>)>> {
