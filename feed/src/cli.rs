@@ -10,8 +10,12 @@ pub enum Command {
     FetchModel,
     /// Bulk export.
     Export { format: String, out: PathBuf },
-    /// Delete items and clusters older than a duration like `90d`.
-    Prune { older_than: String },
+    /// Delete rows older than a duration like `90d`, clear embeddings
+    /// outside the clustering window, apply snapshot retention.
+    Prune {
+        older_than: Option<String>,
+        embeddings: bool,
+    },
     /// Run the pipeline offline over recorded fixtures.
     Replay { fixtures: PathBuf },
     /// Turn an OPML subscription list into feeds.toml / outlets.toml entries.
@@ -36,7 +40,7 @@ commands:
   run                          poll, embed, cluster, serve
   fetch-model                  download the embedding model
   export --format <f> --out <dir>
-  prune --older-than <dur>
+  prune [--older-than <dur>] [--embeddings]   delete old rows; clear embeddings past the window; snapshot retention
   replay --fixtures <dir>
   import --opml <file> [--write]   print (or append) feeds/outlets from an OPML list
   discover <url> [--write]         print (or append) feeds advertised by a page
@@ -79,7 +83,8 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
             out: flag("--out")?.into(),
         },
         "prune" => Command::Prune {
-            older_than: flag("--older-than")?,
+            older_than: flag("--older-than").ok(),
+            embeddings: rest.iter().any(|x| x == "--embeddings"),
         },
         "replay" => Command::Replay {
             fixtures: flag("--fixtures")?.into(),

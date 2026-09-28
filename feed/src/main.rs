@@ -12,6 +12,7 @@ mod fetch;
 mod lang;
 mod parse;
 mod poller;
+mod prune;
 mod replay;
 mod snapshot;
 mod stats;
@@ -83,10 +84,20 @@ async fn main() {
             info!(items = s.items, clusters = s.clusters, events = s.events, outlets = s.outlets, out = %out.display(), "export complete");
             Ok(())
         })(),
-        cli::Command::Prune { older_than } => {
-            info!(%older_than, "prune: not implemented (M6)");
-            Ok(())
-        }
+        cli::Command::Prune {
+            older_than,
+            embeddings,
+        } => prune::run(&cfg, older_than.as_deref(), embeddings, stats::now()).map(|p| {
+            info!(
+                items = p.items,
+                revisions = p.revisions,
+                clusters = p.clusters,
+                events = p.events,
+                embeddings_cleared = p.embeddings_cleared,
+                snapshot_files = p.snapshot_files,
+                "prune complete"
+            );
+        }),
         cli::Command::Eval { pairs, json } => eval::run(&cfg, &pairs, json),
         cli::Command::Import { opml, write } => tooling::import_opml(
             &args.config_dir,
