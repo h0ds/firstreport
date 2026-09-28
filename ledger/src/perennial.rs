@@ -6,9 +6,6 @@
 //! is `perennial::claims`. Content is CC BY-SA 4.0; every claim links the
 //! row it came from.
 
-// Wired into `ledger import` in the next commit.
-#![allow(dead_code)]
-
 use serde::Serialize;
 
 pub const SOURCE_ID: &str = "wikipedia_rsp";

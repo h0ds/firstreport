@@ -11,6 +11,7 @@ for one; `ledger check` rejects any. The plan is in `docs/plan.md`.
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml check
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikidata          # print proposal
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikidata --write  # store it
+cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikipedia_rsp --write  # reliability verdicts
 cargo run -p ledger -- serve                                                           # 127.0.0.1:8081
 cargo run -p ledger -- export --out out/
 ```
@@ -24,9 +25,10 @@ Run from `ledger/` so `data/` resolves; or pass `--data`.
 - `data/claims/<outlet_id>.toml`: one file per outlet, one `[[claim]]`
   per fact. Written by importers, editable by hand, reviewable in git.
 
-Current sources: Wikidata (CC0, imported), Wikipedia's perennial
-sources list (CC BY-SA, importer planned), AllSides (gated until reuse
-terms are confirmed).
+Current sources: Wikidata (CC0), Wikipedia's perennial sources list
+(CC BY-SA 4.0; one `reliability` claim per matching row, the list's own
+five-step status with scope, discussions and summary), AllSides (gated
+until reuse terms are confirmed).
 
 ## API (v1, read-only)
 
@@ -42,8 +44,8 @@ terms are confirmed).
 
 ## Status
 
-L1. The store, validation, API and export are done and tested offline.
-The Wikidata importer is tested against responses in the endpoint's
-format but has not run live: the endpoint was unreachable where this was
-built. First thing to do on a networked machine is the import for the
-seed outlets, then `check`.
+L2. Store, validation, API, export, and two importers (Wikidata,
+Wikipedia perennial sources), all tested offline against responses in
+each endpoint's format. Neither importer has run live: both endpoints
+were unreachable where this was built. First thing to do on a networked
+machine is `import wikidata`, then `import wikipedia_rsp`, then `check`.

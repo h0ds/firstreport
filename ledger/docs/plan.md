@@ -143,7 +143,7 @@ GET /v1/stats
 - **L0** crate, model, store, `check`, `serve`, `export`. Offline.
 - **L1** Wikidata importer against recorded fixtures; live run on a
   machine with network.
-- **L2** Wikipedia perennial sources importer.
+- **L2** Wikipedia perennial sources importer. Done: parses the rendered table, matches rows by article (from Wikidata), domain or name, one claim per row with scope. Not yet run live.
 - **L3** AllSides, once terms are confirmed; a `licence` gate in `check`
   refuses to serve claims from a source whose terms field says
   `no-redistribution`.

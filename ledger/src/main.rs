@@ -102,9 +102,6 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             only,
             write,
         } => {
-            if source != "wikidata" {
-                return Err(format!("no importer for {source:?}; available: wikidata").into());
-            }
             let outlets_path = args.outlets.as_ref().ok_or(
                 "import needs --outlets <feed outlets.toml> to know which outlets to look up",
             )?;
@@ -115,10 +112,24 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                     return Err(format!("outlet {id:?} not in {}", outlets_path.display()).into());
                 }
             }
-            if !ledger.sources.iter().any(|s| s.id == wikidata::SOURCE_ID) {
-                return Err("sources.toml has no \"wikidata\" entry".into());
+            let source_id = match source.as_str() {
+                "wikidata" => wikidata::SOURCE_ID,
+                "wikipedia_rsp" | "perennial" => perennial::SOURCE_ID,
+                other => {
+                    return Err(format!(
+                        "no importer for {other:?}; available: wikidata, wikipedia_rsp"
+                    )
+                    .into())
+                }
+            };
+            if !ledger.sources.iter().any(|s| s.id == source_id) {
+                return Err(format!("sources.toml has no {source_id:?} entry").into());
             }
-            import_wikidata(&args.data_dir, &ledger, &outlets, write).await
+            if source_id == wikidata::SOURCE_ID {
+                import_wikidata(&args.data_dir, &ledger, &outlets, write).await
+            } else {
+                import_perennial(&args.data_dir, &ledger, &outlets, write).await
+            }
         }
     }
 }
@@ -186,6 +197,88 @@ async fn import_wikidata(
         outlets = outlets.len(),
         written = write,
         "wikidata import done"
+    );
+    if !write {
+        println!("# re-run with --write to store these claims");
+    }
+    Ok(())
+}
+
+/// Wikipedia's perennial sources list: one page fetch, then match every
+/// outlet against its rows. Uses the outlet's `wikipedia` claims from a
+/// prior Wikidata import for the strongest match, so run that first.
+async fn import_perennial(
+    data_dir: &std::path::Path,
+    ledger: &store::Ledger,
+    outlets: &[store::FeedOutlet],
+    write: bool,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let client = perennial::client()?;
+    let html = perennial::fetch(&client).await?;
+    let rows = perennial::parse(&html)?;
+    info!(rows = rows.len(), "perennial sources table parsed");
+    let now = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_secs() as i64)
+        .unwrap_or(0);
+    let mut matched_outlets = 0;
+    let mut total = 0;
+    for o in outlets {
+        let existing = ledger.claims.get(&o.id).cloned().unwrap_or_default();
+        let articles: Vec<String> = existing
+            .iter()
+            .filter(|c| c.field == "wikipedia" && c.source_id == wikidata::SOURCE_ID)
+            .map(|c| c.value.clone())
+            .collect();
+        let m = perennial::matches(&rows, o, &articles);
+        if m.is_empty() {
+            continue;
+        }
+        let fresh = perennial::claims(&o.id, &m, now);
+        let problems: Vec<_> = fresh
+            .iter()
+            .flat_map(|c| model::validate_claim(c, &ledger.sources, None))
+            .filter(|f| f.is_error())
+            .collect();
+        if !problems.is_empty() {
+            for p in &problems {
+                error!(outlet = %o.id, "{p}");
+            }
+            continue;
+        }
+        matched_outlets += 1;
+        total += fresh.len();
+        if write {
+            let merged = store::merge_source(&existing, perennial::SOURCE_ID, fresh);
+            store::write_outlet(data_dir, &o.id, merged)?;
+            info!(outlet = %o.id, "written");
+        } else {
+            println!("# {}", o.id);
+            for c in &fresh {
+                let scope = c
+                    .data
+                    .as_ref()
+                    .and_then(|d| d.get("scope"))
+                    .and_then(|v| v.as_str())
+                    .unwrap_or("");
+                println!(
+                    "  reliability  {:<22} {}  [{}]",
+                    c.value,
+                    c.ref_url,
+                    scope.chars().take(60).collect::<String>()
+                );
+                if let Some(n) = &c.note {
+                    println!("    note: {n}");
+                }
+            }
+        }
+    }
+    info!(
+        matched_outlets,
+        claims = total,
+        outlets = outlets.len(),
+        written = write,
+        "perennial import done"
     );
     if !write {
         println!("# re-run with --write to store these claims");
