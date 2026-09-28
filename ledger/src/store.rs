@@ -45,7 +45,6 @@ pub fn claims_dir(data_dir: &Path) -> PathBuf {
     data_dir.join("claims")
 }
 
-#[allow(dead_code)] // importer (L1)
 pub fn outlet_file(data_dir: &Path, outlet_id: &str) -> PathBuf {
     claims_dir(data_dir).join(format!("{outlet_id}.toml"))
 }
@@ -97,7 +96,6 @@ pub fn load(data_dir: &Path) -> Result<Ledger, StoreError> {
 
 /// Write one outlet's claims, replacing the file. Sorted by field then
 /// source so diffs are stable.
-#[allow(dead_code)] // importer (L1)
 pub fn write_outlet(
     data_dir: &Path,
     outlet_id: &str,
@@ -117,7 +115,6 @@ pub fn write_outlet(
 
 /// Replace claims from `source_id` for one outlet with `fresh`, keeping
 /// claims from every other source. Returns the merged set.
-#[allow(dead_code)] // importer (L1)
 pub fn merge_source(existing: &[Claim], source_id: &str, fresh: Vec<Claim>) -> Vec<Claim> {
     let mut out: Vec<Claim> = existing
         .iter()
@@ -136,7 +133,6 @@ struct FeedOutlets {
 }
 
 #[derive(Debug, Clone, Deserialize)]
-#[allow(dead_code)] // name and domains drive the importer (L1)
 pub struct FeedOutlet {
     pub id: String,
     #[serde(default)]

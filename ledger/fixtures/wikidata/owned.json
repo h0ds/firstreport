@@ -1,0 +1,27 @@
+{
+  "head": { "vars": ["item", "itemLabel", "website", "country", "countryLabel", "inception", "owner", "ownerLabel", "parent", "parentLabel", "instance", "instanceLabel", "article"] },
+  "results": {
+    "bindings": [
+      {
+        "item": { "type": "uri", "value": "http://www.wikidata.org/entity/Q1000001" },
+        "itemLabel": { "type": "literal", "xml:lang": "en", "value": "Example Herald" },
+        "website": { "type": "uri", "value": "http://herald.example/" },
+        "country": { "type": "uri", "value": "http://www.wikidata.org/entity/Q30" },
+        "countryLabel": { "type": "literal", "xml:lang": "en", "value": "United States of America" },
+        "owner": { "type": "uri", "value": "http://www.wikidata.org/entity/Q1000002" },
+        "ownerLabel": { "type": "literal", "xml:lang": "en", "value": "Example Media Holdings" },
+        "parent": { "type": "uri", "value": "http://www.wikidata.org/entity/Q1000003" },
+        "parentLabel": { "type": "literal", "xml:lang": "en", "value": "Example Group" },
+        "instance": { "type": "uri", "value": "http://www.wikidata.org/entity/Q11032" },
+        "instanceLabel": { "type": "literal", "xml:lang": "en", "value": "newspaper" }
+      },
+      {
+        "item": { "type": "uri", "value": "http://www.wikidata.org/entity/Q1000009" },
+        "itemLabel": { "type": "literal", "xml:lang": "en", "value": "Example Herald (podcast)" },
+        "website": { "type": "uri", "value": "http://herald.example/podcast" },
+        "instance": { "type": "uri", "value": "http://www.wikidata.org/entity/Q24634210" },
+        "instanceLabel": { "type": "literal", "xml:lang": "en", "value": "podcast" }
+      }
+    ]
+  }
+}

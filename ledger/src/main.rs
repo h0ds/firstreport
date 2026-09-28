@@ -5,6 +5,7 @@ mod cli;
 mod export;
 mod model;
 mod store;
+mod wikidata;
 
 use std::sync::Arc;
 
@@ -95,8 +96,98 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             info!(claims = c, sources = s, outlets = o, out = %out.display(), "export complete");
             Ok(())
         }
-        cli::Command::Import { source, .. } => {
-            Err(format!("no importer for {source:?} yet (L1: wikidata)").into())
+        cli::Command::Import {
+            source,
+            only,
+            write,
+        } => {
+            if source != "wikidata" {
+                return Err(format!("no importer for {source:?}; available: wikidata").into());
+            }
+            let outlets_path = args.outlets.as_ref().ok_or(
+                "import needs --outlets <feed outlets.toml> to know which outlets to look up",
+            )?;
+            let mut outlets = store::load_feed_outlets(outlets_path)?;
+            if let Some(id) = &only {
+                outlets.retain(|o| &o.id == id);
+                if outlets.is_empty() {
+                    return Err(format!("outlet {id:?} not in {}", outlets_path.display()).into());
+                }
+            }
+            if !ledger.sources.iter().any(|s| s.id == wikidata::SOURCE_ID) {
+                return Err("sources.toml has no \"wikidata\" entry".into());
+            }
+            import_wikidata(&args.data_dir, &ledger, &outlets, write).await
         }
     }
+}
+
+async fn import_wikidata(
+    data_dir: &std::path::Path,
+    ledger: &store::Ledger,
+    outlets: &[store::FeedOutlet],
+    write: bool,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let client = wikidata::client()?;
+    let now = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_secs() as i64)
+        .unwrap_or(0);
+    let mut added = 0;
+    let mut matched = 0;
+    for o in outlets {
+        if o.domains.is_empty() {
+            warn!(outlet = %o.id, "no domains; skipped");
+            continue;
+        }
+        let body = match wikidata::fetch(&client, o).await {
+            Ok(b) => b,
+            Err(e) => {
+                warn!(outlet = %o.id, "wikidata query failed: {e}");
+                continue;
+            }
+        };
+        let fresh = wikidata::parse_response(&o.id, &body, now)?;
+        if fresh.is_empty() {
+            info!(outlet = %o.id, name = %o.name, domains = ?o.domains, "no wikidata item matches its domains");
+            continue;
+        }
+        matched += 1;
+        added += fresh.len();
+        let problems: Vec<_> = fresh
+            .iter()
+            .flat_map(|c| model::validate_claim(c, &ledger.sources, None))
+            .filter(|f| f.is_error())
+            .collect();
+        if !problems.is_empty() {
+            for p in &problems {
+                error!(outlet = %o.id, "{p}");
+            }
+            continue;
+        }
+        if write {
+            let existing = ledger.claims.get(&o.id).cloned().unwrap_or_default();
+            let merged = store::merge_source(&existing, wikidata::SOURCE_ID, fresh);
+            store::write_outlet(data_dir, &o.id, merged)?;
+            info!(outlet = %o.id, "written");
+        } else {
+            println!("# {}", o.id);
+            for c in &fresh {
+                println!("  {:<12} {}  ({})", c.field, c.value, c.ref_url);
+            }
+        }
+        // Be a polite SPARQL client: one query a second is plenty.
+        tokio::time::sleep(std::time::Duration::from_secs(1)).await;
+    }
+    info!(
+        matched,
+        claims = added,
+        outlets = outlets.len(),
+        written = write,
+        "wikidata import done"
+    );
+    if !write {
+        println!("# re-run with --write to store these claims");
+    }
+    Ok(())
 }

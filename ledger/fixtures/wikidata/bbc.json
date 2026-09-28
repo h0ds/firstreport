@@ -1,0 +1,29 @@
+{
+  "head": { "vars": ["item", "itemLabel", "website", "country", "countryLabel", "inception", "owner", "ownerLabel", "parent", "parentLabel", "instance", "instanceLabel", "article"] },
+  "results": {
+    "bindings": [
+      {
+        "item": { "type": "uri", "value": "http://www.wikidata.org/entity/Q9531" },
+        "itemLabel": { "type": "literal", "xml:lang": "en", "value": "BBC" },
+        "website": { "type": "uri", "value": "https://www.bbc.co.uk/" },
+        "country": { "type": "uri", "value": "http://www.wikidata.org/entity/Q145" },
+        "countryLabel": { "type": "literal", "xml:lang": "en", "value": "United Kingdom" },
+        "inception": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#dateTime", "value": "1922-10-18T00:00:00Z" },
+        "instance": { "type": "uri", "value": "http://www.wikidata.org/entity/Q1331793" },
+        "instanceLabel": { "type": "literal", "xml:lang": "en", "value": "media company" },
+        "article": { "type": "uri", "value": "https://en.wikipedia.org/wiki/BBC" }
+      },
+      {
+        "item": { "type": "uri", "value": "http://www.wikidata.org/entity/Q9531" },
+        "itemLabel": { "type": "literal", "xml:lang": "en", "value": "BBC" },
+        "website": { "type": "uri", "value": "https://www.bbc.co.uk/" },
+        "country": { "type": "uri", "value": "http://www.wikidata.org/entity/Q145" },
+        "countryLabel": { "type": "literal", "xml:lang": "en", "value": "United Kingdom" },
+        "inception": { "type": "literal", "datatype": "http://www.w3.org/2001/XMLSchema#dateTime", "value": "1922-10-18T00:00:00Z" },
+        "instance": { "type": "uri", "value": "http://www.wikidata.org/entity/Q1002697" },
+        "instanceLabel": { "type": "literal", "xml:lang": "en", "value": "public broadcaster" },
+        "article": { "type": "uri", "value": "https://en.wikipedia.org/wiki/BBC" }
+      }
+    ]
+  }
+}
