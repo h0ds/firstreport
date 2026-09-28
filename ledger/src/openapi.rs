@@ -12,6 +12,83 @@ use serde_json::{json, Map, Value};
 use crate::api::{ApiError, ClaimView, OutletSummary, OutletView, SearchHit, Stats};
 use crate::model::{Claim, Source, CONTRACT_VERSION};
 
+/// The `paths` section, built from the same route table the router is
+/// built from (`api::routes`), so a route cannot be served without an
+/// entry here: an undocumented one is marked `x-undocumented` and the
+/// test refuses it.
+fn paths() -> Map<String, Value> {
+    crate::api::routes()
+        .into_iter()
+        .map(|(path, _)| (path.to_string(), operation(path)))
+        .collect()
+}
+
+fn operation(path: &str) -> Value {
+    match path {
+        "/v1/outlets" => json!({"get": {
+            "operationId": "listOutlets",
+            "summary": "Outlets that have claims, with counts, fields and sources",
+            "responses": {"200": {"description": "OK", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/OutletSummary"}}}}}}
+        }}),
+        "/v1/outlets/{id}" => json!({"get": {
+            "operationId": "getOutlet",
+            "summary": "All claims for one outlet, grouped by field",
+            "description": "Send Accept: text/markdown for a Markdown rendering with one provenance line per claim.",
+            "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
+            "responses": {
+                "200": {"description": "OK", "content": {
+                    "application/json": {"schema": {"$ref": "#/components/schemas/OutletView"}},
+                    "text/markdown": {"schema": {"type": "string"}}
+                }},
+                "404": {"$ref": "#/components/responses/NotFound"}
+            }
+        }}),
+        "/v1/outlets/{id}/{field}" => json!({"get": {
+            "operationId": "getOutletField",
+            "summary": "Claims for one field of one outlet",
+            "parameters": [
+                {"name": "id", "in": "path", "required": true, "schema": {"type": "string"}},
+                {"name": "field", "in": "path", "required": true, "schema": {"type": "string"}}
+            ],
+            "responses": {
+                "200": {"description": "OK", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/ClaimView"}}}}},
+                "404": {"$ref": "#/components/responses/NotFound"}
+            }
+        }}),
+        "/v1/search" => json!({"get": {
+            "operationId": "searchOutlets",
+            "summary": "Find an outlet by id, name or domain",
+            "parameters": [
+                {"name": "q", "in": "query", "schema": {"type": "string"}},
+                {"name": "limit", "in": "query", "schema": {"type": "integer", "default": 20, "maximum": 100}}
+            ],
+            "responses": {"200": {"description": "OK", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/SearchHit"}}}}}}
+        }}),
+        "/v1/sources" => json!({"get": {
+            "operationId": "listSources",
+            "summary": "The source registry with licences and refresh intervals",
+            "responses": {"200": {"description": "OK", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/Source"}}}}}}
+        }}),
+        "/v1/stats" => json!({"get": {
+            "operationId": "stats",
+            "responses": {"200": {"description": "OK", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Stats"}}}}}
+        }}),
+        "/v1/openapi.json" => {
+            json!({"get": {"operationId": "openapi", "responses": {"200": {"description": "This document"}}}})
+        }
+        "/llms.txt" => {
+            json!({"get": {"operationId": "llms", "summary": "What this server is and its rules of use, for machine readers", "responses": {"200": {"description": "OK", "content": {"text/plain": {}}}}}})
+        }
+        "/lookup" => {
+            json!({"get": {"operationId": "lookupPage", "summary": "The same data as a page for people", "responses": {"200": {"description": "OK", "content": {"text/html": {}}}}}})
+        }
+        "/robots.txt" => {
+            json!({"get": {"operationId": "robots", "summary": "Allows everything", "responses": {"200": {"description": "OK", "content": {"text/plain": {}}}}}})
+        }
+        other => json!({"get": {"operationId": other, "x-undocumented": true}}),
+    }
+}
+
 /// `components.schemas`, generated. Each named type's root schema plus
 /// whatever it references, with `$ref`s pointing into this map.
 pub fn schemas() -> Map<String, Value> {
@@ -58,59 +135,7 @@ pub fn spec() -> Value {
             "license": {"name": "See /v1/sources for each source's licence"}
         },
         "servers": [{"url": "/"}],
-        "paths": {
-            "/v1/outlets": {"get": {
-                "operationId": "listOutlets",
-                "summary": "Outlets that have claims, with counts, fields and sources",
-                "responses": {"200": {"description": "OK", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/OutletSummary"}}}}}}
-            }},
-            "/v1/outlets/{id}": {"get": {
-                "operationId": "getOutlet",
-                "summary": "All claims for one outlet, grouped by field",
-                "description": "Send Accept: text/markdown for a Markdown rendering with one provenance line per claim.",
-                "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}],
-                "responses": {
-                    "200": {"description": "OK", "content": {
-                        "application/json": {"schema": {"$ref": "#/components/schemas/OutletView"}},
-                        "text/markdown": {"schema": {"type": "string"}}
-                    }},
-                    "404": {"$ref": "#/components/responses/NotFound"}
-                }
-            }},
-            "/v1/outlets/{id}/{field}": {"get": {
-                "operationId": "getOutletField",
-                "summary": "Claims for one field of one outlet",
-                "parameters": [
-                    {"name": "id", "in": "path", "required": true, "schema": {"type": "string"}},
-                    {"name": "field", "in": "path", "required": true, "schema": {"type": "string"}}
-                ],
-                "responses": {
-                    "200": {"description": "OK", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/ClaimView"}}}}},
-                    "404": {"$ref": "#/components/responses/NotFound"}
-                }
-            }},
-            "/v1/search": {"get": {
-                "operationId": "searchOutlets",
-                "summary": "Find an outlet by id, name or domain",
-                "parameters": [
-                    {"name": "q", "in": "query", "schema": {"type": "string"}},
-                    {"name": "limit", "in": "query", "schema": {"type": "integer", "default": 20, "maximum": 100}}
-                ],
-                "responses": {"200": {"description": "OK", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/SearchHit"}}}}}}
-            }},
-            "/v1/sources": {"get": {
-                "operationId": "listSources",
-                "summary": "The source registry with licences and refresh intervals",
-                "responses": {"200": {"description": "OK", "content": {"application/json": {"schema": {"type": "array", "items": {"$ref": "#/components/schemas/Source"}}}}}}
-            }},
-            "/v1/stats": {"get": {
-                "operationId": "stats",
-                "responses": {"200": {"description": "OK", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Stats"}}}}}
-            }},
-            "/v1/openapi.json": {"get": {"operationId": "openapi", "responses": {"200": {"description": "This document"}}}},
-            "/llms.txt": {"get": {"operationId": "llms", "summary": "What this server is and its rules of use, for machine readers", "responses": {"200": {"description": "OK", "content": {"text/plain": {}}}}}},
-            "/lookup": {"get": {"operationId": "lookupPage", "summary": "The same data as a page for people", "responses": {"200": {"description": "OK", "content": {"text/html": {}}}}}}
-        },
+        "paths": paths(),
         "components": {
             "responses": {
                 "NotFound": {"description": "Unknown outlet or field", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}}
@@ -148,6 +173,22 @@ mod tests {
             }
             Value::Array(a) => a.iter().for_each(|x| refs(x, out)),
             _ => {}
+        }
+    }
+
+    #[test]
+    fn every_route_is_documented_once() {
+        let routes = crate::api::routes();
+        let mut paths: Vec<&str> = routes.iter().map(|(p, _)| *p).collect();
+        paths.sort();
+        let n = paths.len();
+        paths.dedup();
+        assert_eq!(paths.len(), n, "duplicate route");
+        for (p, op) in spec()["paths"].as_object().unwrap() {
+            assert!(
+                op["get"]["x-undocumented"].is_null(),
+                "route {p} has no OpenAPI operation"
+            );
         }
     }
 

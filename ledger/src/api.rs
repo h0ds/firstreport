@@ -7,7 +7,7 @@ use std::sync::Arc;
 use axum::extract::{Path, Query, State};
 use axum::http::{header, HeaderMap, StatusCode};
 use axum::response::{IntoResponse, Response};
-use axum::routing::get;
+use axum::routing::{get, MethodRouter};
 use axum::{Json, Router};
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
@@ -23,18 +23,27 @@ pub struct AppState {
     pub outlets: Arc<Vec<FeedOutlet>>,
 }
 
+/// Every route, once. The router and the OpenAPI document are both
+/// built from this table.
+pub(crate) fn routes() -> Vec<(&'static str, MethodRouter<AppState>)> {
+    vec![
+        ("/v1/search", get(search)),
+        ("/lookup", get(lookup_page)),
+        ("/llms.txt", get(llms_txt)),
+        ("/v1/openapi.json", get(openapi)),
+        ("/robots.txt", get(robots_txt)),
+        ("/v1/outlets", get(outlets)),
+        ("/v1/outlets/{id}", get(outlet)),
+        ("/v1/outlets/{id}/{field}", get(outlet_field)),
+        ("/v1/sources", get(sources)),
+        ("/v1/stats", get(stats)),
+    ]
+}
+
 pub fn router(ledger: Arc<Ledger>, registry: Vec<FeedOutlet>) -> Router {
-    Router::new()
-        .route("/v1/search", get(search))
-        .route("/lookup", get(lookup_page))
-        .route("/llms.txt", get(llms_txt))
-        .route("/v1/openapi.json", get(openapi))
-        .route("/robots.txt", get(robots_txt))
-        .route("/v1/outlets", get(outlets))
-        .route("/v1/outlets/{id}", get(outlet))
-        .route("/v1/outlets/{id}/{field}", get(outlet_field))
-        .route("/v1/sources", get(sources))
-        .route("/v1/stats", get(stats))
+    routes()
+        .into_iter()
+        .fold(Router::new(), |r, (path, handler)| r.route(path, handler))
         .with_state(AppState {
             ledger,
             outlets: Arc::new(registry),
