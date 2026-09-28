@@ -12,7 +12,7 @@ jitter = 0.1                     # ±10% so feeds don't poll in lockstep
 backend = "onnx"                 # onnx | hash (deterministic, model-free, for replay and CI)
 model_path = "models/minilm-l6-int8.onnx"
 vocab_path = "models/vocab.txt"
-# runtime_lib defaults to models/libonnxruntime.so (.dylib on macOS); populated by `feed fetch-model`
+# runtime_lib defaults to models/libonnxruntime.so (.dylib on macOS, onnxruntime.dll on Windows); populated by `feed fetch-model`
 max_tokens = 128
 batch_size = 64
 batch_wait_ms = 200
