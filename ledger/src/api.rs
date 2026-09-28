@@ -9,6 +9,7 @@ use axum::http::{header, HeaderMap, StatusCode};
 use axum::response::{IntoResponse, Response};
 use axum::routing::get;
 use axum::{Json, Router};
+use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
 use crate::model::{Claim, Source, CONTRACT_VERSION};
@@ -76,8 +77,8 @@ fn wants_markdown(headers: &HeaderMap) -> bool {
         .is_some_and(|a| a.contains("text/markdown"))
 }
 
-#[derive(Serialize)]
-struct ApiError {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct ApiError {
     error: String,
 }
 
@@ -85,8 +86,9 @@ fn not_found(msg: &str) -> Response {
     (StatusCode::NOT_FOUND, Json(ApiError { error: msg.into() })).into_response()
 }
 
-#[derive(Serialize)]
-struct OutletSummary {
+/// An outlet that has claims.
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct OutletSummary {
     id: String,
     claims: usize,
     fields: Vec<String>,
@@ -117,20 +119,25 @@ async fn outlets(State(s): State<AppState>) -> Response {
 }
 
 /// A claim plus its freshness against the source's schedule.
-#[derive(Serialize)]
-struct ClaimView<'a> {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct ClaimView<'a> {
     #[serde(flatten)]
     claim: &'a Claim,
+    /// Days since retrieved.
     age_days: i64,
+    /// Older than the source's refresh interval; the value may have
+    /// changed since.
     stale: bool,
 }
 
-#[derive(Serialize)]
-struct OutletView<'a> {
+/// Every claim about one outlet.
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct OutletView<'a> {
     id: String,
     /// Grouped by field; every claim keeps its source. Nothing is merged.
     fields: BTreeMap<String, Vec<ClaimView<'a>>>,
     claims: usize,
+    /// How many are past their source's refresh interval.
     stale: usize,
 }
 
@@ -218,11 +225,13 @@ struct SearchQ {
     limit: Option<usize>,
 }
 
-#[derive(Serialize)]
-struct SearchHit {
+/// A registry outlet matching a search.
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct SearchHit {
     id: String,
     name: String,
     domains: Vec<String>,
+    /// 0 means in the registry but not assessed yet.
     claims: usize,
     stale: usize,
     /// Which of id, name or a domain matched.
@@ -346,8 +355,8 @@ async fn sources(State(s): State<AppState>) -> Response {
     Json(v).into_response()
 }
 
-#[derive(Serialize)]
-struct Stats {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct Stats {
     contract_version: u32,
     outlets: usize,
     claims: usize,

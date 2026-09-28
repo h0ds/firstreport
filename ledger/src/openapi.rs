@@ -1,28 +1,53 @@
 //! OpenAPI 3.1 description of the read-only API, served at
 //! `/v1/openapi.json` so tool-using agents can call it correctly the
-//! first time. Built in code next to the routes; the test checks every
-//! documented path is routed.
+//! first time. Paths are written here next to the routes; the schemas
+//! are generated from the serde types, so a struct change moves the
+//! document with it. Tests check every documented path is routed and
+//! every serialised field is in its schema.
 
-use serde_json::{json, Value};
+use schemars::generate::SchemaSettings;
+use schemars::JsonSchema;
+use serde_json::{json, Map, Value};
 
-use crate::model::CONTRACT_VERSION;
+use crate::api::{ApiError, ClaimView, OutletSummary, OutletView, SearchHit, Stats};
+use crate::model::{Claim, Source, CONTRACT_VERSION};
+
+/// `components.schemas`, generated. Each named type's root schema plus
+/// whatever it references, with `$ref`s pointing into this map.
+pub fn schemas() -> Map<String, Value> {
+    // OpenAPI 3.1 takes JSON Schema 2020-12 as is; `openapi3()` would
+    // emit 3.0's `nullable` instead of `type: [.., "null"]`.
+    let mut settings = SchemaSettings::draft2020_12();
+    settings.definitions_path = "/components/schemas".into();
+    let mut g = settings.into_generator();
+    let mut out = Map::new();
+    fn add<T: JsonSchema>(
+        g: &mut schemars::SchemaGenerator,
+        out: &mut Map<String, Value>,
+        name: &str,
+    ) {
+        let mut v = g.root_schema_for::<T>().to_value();
+        if let Some(o) = v.as_object_mut() {
+            o.remove("$schema");
+            o.remove("title");
+        }
+        out.insert(name.to_string(), v);
+    }
+    add::<ApiError>(&mut g, &mut out, "Error");
+    add::<Claim>(&mut g, &mut out, "Claim");
+    add::<ClaimView>(&mut g, &mut out, "ClaimView");
+    add::<OutletView>(&mut g, &mut out, "OutletView");
+    add::<OutletSummary>(&mut g, &mut out, "OutletSummary");
+    add::<SearchHit>(&mut g, &mut out, "SearchHit");
+    add::<Source>(&mut g, &mut out, "Source");
+    add::<Stats>(&mut g, &mut out, "Stats");
+    for (k, v) in g.take_definitions(true) {
+        out.entry(k).or_insert(v);
+    }
+    out
+}
 
 pub fn spec() -> Value {
-    let claim_props = json!({
-        "outlet_id": {"type": "string", "description": "Kagami outlet id, shared with feed."},
-        "field": {"type": "string", "description": "What the claim is about: owner, country, founded, bias, reliability, domain_registered, site_https, posting_cadence, … Open set; see ledger/docs/plan.md §3."},
-        "value": {"type": "string", "description": "The source's wording, never Kagami's."},
-        "data": {"type": "object", "additionalProperties": true, "description": "Structured form when one exists: qid, scope, window and counts for observed sources, page URLs for site checks."},
-        "source_id": {"type": "string"},
-        "ref_url": {"type": "string", "format": "uri", "description": "The page that states this."},
-        "retrieved_at": {"type": "integer", "description": "Unix seconds when Kagami read it."},
-        "as_of": {"type": "string", "description": "Date the source says the fact holds, if it says."},
-        "note": {"type": "string"}
-    });
-    let mut claim_view_props = claim_props.clone();
-    claim_view_props["age_days"] =
-        json!({"type": "integer", "description": "Days since retrieved."});
-    claim_view_props["stale"] = json!({"type": "boolean", "description": "Older than the source's refresh interval; the value may have changed since."});
     json!({
         "openapi": "3.1.0",
         "info": {
@@ -90,42 +115,7 @@ pub fn spec() -> Value {
             "responses": {
                 "NotFound": {"description": "Unknown outlet or field", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}}
             },
-            "schemas": {
-                "Error": {"type": "object", "properties": {"error": {"type": "string"}}, "required": ["error"]},
-                "Claim": {"type": "object", "properties": claim_props, "required": ["outlet_id", "field", "value", "source_id", "ref_url", "retrieved_at"]},
-                "ClaimView": {"type": "object", "description": "A claim plus its freshness.", "properties": claim_view_props, "required": ["outlet_id", "field", "value", "source_id", "ref_url", "retrieved_at", "age_days", "stale"]},
-                "OutletView": {"type": "object", "properties": {
-                    "id": {"type": "string"},
-                    "fields": {"type": "object", "additionalProperties": {"type": "array", "items": {"$ref": "#/components/schemas/ClaimView"}}, "description": "Field name to its claims from every source, side by side."},
-                    "claims": {"type": "integer"},
-                    "stale": {"type": "integer"}
-                }, "required": ["id", "fields", "claims", "stale"]},
-                "OutletSummary": {"type": "object", "properties": {
-                    "id": {"type": "string"}, "claims": {"type": "integer"},
-                    "fields": {"type": "array", "items": {"type": "string"}},
-                    "sources": {"type": "array", "items": {"type": "string"}}
-                }, "required": ["id", "claims", "fields", "sources"]},
-                "SearchHit": {"type": "object", "properties": {
-                    "id": {"type": "string"}, "name": {"type": "string"},
-                    "domains": {"type": "array", "items": {"type": "string"}},
-                    "claims": {"type": "integer", "description": "0 means in the registry but not assessed yet."},
-                    "stale": {"type": "integer"},
-                    "matched": {"type": "string", "enum": ["id", "name", "domain"]}
-                }, "required": ["id", "name", "domains", "claims", "stale", "matched"]},
-                "Source": {"type": "object", "properties": {
-                    "id": {"type": "string"}, "name": {"type": "string"}, "url": {"type": "string"},
-                    "licence": {"type": "string", "description": "SPDX id or a short name."},
-                    "kind": {"type": "string", "enum": ["database", "community", "rating", "observed"]},
-                    "notes": {"type": "string"},
-                    "no_redistribution": {"type": "boolean", "description": "Terms forbid redistribution; such claims are never served."},
-                    "refresh_days": {"type": "integer", "description": "0 means no schedule."}
-                }, "required": ["id", "name", "url", "licence", "kind"]},
-                "Stats": {"type": "object", "properties": {
-                    "contract_version": {"type": "integer"}, "outlets": {"type": "integer"}, "claims": {"type": "integer"}, "sources": {"type": "integer"},
-                    "claims_by_source": {"type": "object", "additionalProperties": {"type": "integer"}},
-                    "claims_by_field": {"type": "object", "additionalProperties": {"type": "integer"}}
-                }}
-            }
+            "schemas": schemas()
         }
     })
 }
@@ -140,4 +130,87 @@ pub fn sample_paths() -> Vec<String> {
         .keys()
         .map(|p| p.replace("{id}", "bbc").replace("{field}", "country"))
         .collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::collections::BTreeMap;
+
+    /// Every `$ref` in the document points at a schema that exists.
+    fn refs(v: &Value, out: &mut Vec<String>) {
+        match v {
+            Value::Object(o) => {
+                if let Some(Value::String(r)) = o.get("$ref") {
+                    out.push(r.clone());
+                }
+                o.values().for_each(|x| refs(x, out));
+            }
+            Value::Array(a) => a.iter().for_each(|x| refs(x, out)),
+            _ => {}
+        }
+    }
+
+    #[test]
+    fn schemas_match_the_serialised_types() {
+        let doc = spec();
+        let schemas = doc["components"]["schemas"].as_object().unwrap();
+        let mut r = Vec::new();
+        refs(&doc, &mut r);
+        for x in &r {
+            let name = x.strip_prefix("#/components/").unwrap_or(x);
+            let (kind, name) = name.split_once('/').unwrap();
+            let ok = match kind {
+                "schemas" => schemas.contains_key(name),
+                "responses" => doc["components"]["responses"].get(name).is_some(),
+                _ => false,
+            };
+            assert!(ok, "dangling reference {x}");
+        }
+        let claim = Claim {
+            outlet_id: "bbc".into(),
+            field: "owner".into(),
+            value: "BBC".into(),
+            data: Some(BTreeMap::new()),
+            source_id: "wikidata".into(),
+            ref_url: "https://x".into(),
+            retrieved_at: 1,
+            as_of: Some("2024".into()),
+            note: Some("n".into()),
+        };
+        let json = serde_json::to_value(&claim).unwrap();
+        let props = schemas["Claim"]["properties"].as_object().unwrap();
+        for k in json.as_object().unwrap().keys() {
+            assert!(
+                props.contains_key(k),
+                "serialised field {k} missing from schema"
+            );
+        }
+        assert_eq!(props.len(), json.as_object().unwrap().len());
+        let required: Vec<&str> = schemas["Claim"]["required"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|v| v.as_str().unwrap())
+            .collect();
+        assert!(required.contains(&"ref_url") && !required.contains(&"note"));
+        assert_eq!(
+            schemas["Claim"]["properties"]["note"]["type"],
+            json!(["string", "null"]),
+            "3.1 null union, not 3.0 nullable"
+        );
+        assert_eq!(
+            schemas["Claim"]["properties"]["ref_url"]["description"],
+            "The page that states this."
+        );
+        let view = schemas["ClaimView"]["properties"].as_object().unwrap();
+        assert!(
+            view.contains_key("value") && view.contains_key("stale"),
+            "flatten kept"
+        );
+        assert!(schemas["Source"]["properties"]["kind"]["$ref"]
+            .as_str()
+            .unwrap()
+            .starts_with("#/components/schemas/"));
+    }
 }

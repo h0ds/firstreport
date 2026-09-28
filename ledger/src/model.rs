@@ -2,6 +2,7 @@
 
 use std::collections::BTreeMap;
 
+use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
 pub const CONTRACT_VERSION: u32 = 1;
@@ -30,7 +31,7 @@ pub const KNOWN_FIELDS: &[&str] = &[
     "site_pages",
 ];
 
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
 #[serde(rename_all = "lowercase")]
 pub enum SourceKind {
     Database,
@@ -40,12 +41,15 @@ pub enum SourceKind {
     Observed,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+/// A source of claims: a database, a community process, a rater, or
+/// Kagami's own observation.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize, JsonSchema)]
 #[serde(deny_unknown_fields)]
 pub struct Source {
     pub id: String,
     pub name: String,
     pub url: String,
+    /// SPDX id or a short name.
     pub licence: String,
     pub kind: SourceKind,
     #[serde(default)]
@@ -74,17 +78,29 @@ pub fn is_stale(c: &Claim, source: &Source, now: i64) -> bool {
     source.refresh_days > 0 && age_days(c, now) > source.refresh_days as i64
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+/// One fact about one outlet as one source states it. Never Kagami's
+/// own wording, never a score.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize, JsonSchema)]
 #[serde(deny_unknown_fields)]
 pub struct Claim {
+    /// Kagami outlet id, shared with feed.
     pub outlet_id: String,
+    /// What the claim is about: owner, country, founded, bias,
+    /// reliability, domain_registered, site_https, posting_cadence, …
+    /// An open set; see ledger/docs/plan.md §3.
     pub field: String,
+    /// The source's wording.
     pub value: String,
+    /// Structured form when one exists: qid, scope, window and counts
+    /// for observed sources, page URLs for site checks.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub data: Option<BTreeMap<String, serde_json::Value>>,
     pub source_id: String,
+    /// The page that states this.
     pub ref_url: String,
+    /// Unix seconds when Kagami read it.
     pub retrieved_at: i64,
+    /// Date the source says the fact holds, if it says.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub as_of: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
