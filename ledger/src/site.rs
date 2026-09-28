@@ -10,9 +10,6 @@
 //! a page that does not exist look the same from here, and the claim
 //! says so.
 
-// Wired into `ledger import` in the next commit.
-#![allow(dead_code)]
-
 use std::collections::BTreeMap;
 
 use url::Url;
@@ -127,7 +124,17 @@ pub struct Observation {
     pub status: Option<u16>,
     /// `http://domain/` ended on an https URL; None when HTTP was unreachable.
     pub http_to_https: Option<bool>,
+    pub http_status: Option<u16>,
     pub home: Option<HomePage>,
+}
+
+impl Observation {
+    /// Something answered on at least one scheme. A domain that answers
+    /// nothing is an outage or a network problem on our side, not a
+    /// fact about the outlet, and gets no claim.
+    pub fn reachable(&self) -> bool {
+        self.status.is_some() || self.http_status.is_some_and(|s| s < 400)
+    }
 }
 
 pub fn claims(outlet_id: &str, obs: &Observation, retrieved_at: i64) -> Vec<Claim> {
@@ -145,6 +152,9 @@ pub fn claims(outlet_id: &str, obs: &Observation, retrieved_at: i64) -> Vec<Clai
     }
     if let Some(r) = obs.http_to_https {
         data.insert("http_redirects_to_https".into(), r.into());
+    }
+    if let Some(s) = obs.http_status {
+        data.insert("http_status".into(), s.into());
     }
     let value = match (obs.https_ok, obs.http_to_https) {
         (true, Some(true)) => "https; plain http redirects to it".to_string(),
@@ -246,7 +256,10 @@ pub async fn observe(client: &reqwest::Client, domain: &str) -> Observation {
         Err(e) => tracing::debug!(domain, "https: {e}"),
     }
     match client.get(format!("http://{domain}/")).send().await {
-        Ok(resp) => obs.http_to_https = Some(resp.url().scheme() == "https"),
+        Ok(resp) => {
+            obs.http_status = Some(resp.status().as_u16());
+            obs.http_to_https = Some(resp.url().scheme() == "https");
+        }
         Err(e) => tracing::debug!(domain, "http: {e}"),
     }
     obs
@@ -304,6 +317,7 @@ mod tests {
             final_url: Some(base.to_string()),
             status: Some(200),
             http_to_https: Some(true),
+            http_status: Some(200),
             home: Some(parse_home(&fixture(), &base)),
         };
         let c = claims("gazette", &obs, 1);
@@ -335,10 +349,21 @@ mod tests {
             domain: "dead.example".into(),
             ..Default::default()
         };
+        assert!(!obs.reachable(), "importer skips it");
         let c = claims("dead", &obs, 1);
         assert_eq!(c.len(), 1);
         assert_eq!(c[0].value, "https not served");
         assert_eq!(c[0].ref_url, "https://dead.example/");
+        let blocked = Observation {
+            domain: "blocked.example".into(),
+            http_to_https: Some(false),
+            http_status: Some(403),
+            ..Default::default()
+        };
+        assert!(
+            !blocked.reachable(),
+            "a refusal on plain http alone is not an answer"
+        );
         let obs = Observation {
             domain: "old.example".into(),
             https_ok: true,
@@ -346,6 +371,7 @@ mod tests {
             home: Some(HomePage::default()),
             ..Default::default()
         };
+        assert!(obs.reachable());
         let c = claims("old", &obs, 1);
         assert_eq!(c[0].value, "https; plain http is served separately");
         assert!(c[1].value.starts_with("none of the usual"));

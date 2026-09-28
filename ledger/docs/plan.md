@@ -80,6 +80,8 @@ with a link to the discussion. Consumers weigh them; `ledger` doesn't.
 | `withdrawal_rate` | share of items withdrawn | feed_behaviour |
 | `syndication_share` | share of items whose text first appeared elsewhere, and share carried by others | feed_behaviour |
 | `origin_share` | share of multi-outlet stories the outlet published first | feed_behaviour |
+| `site_https` | whether the site serves HTTPS and moves plain HTTP to it | site |
+| `site_pages` | which accountability pages the home page links: about, contact, privacy, corrections, ethics, masthead | site |
 
 The `feed_behaviour` fields are measurements Kagami makes itself. Each
 claim carries the window, the counts and the denominator, and no
@@ -112,6 +114,11 @@ schema change.
    Cadence, revision and withdrawal rates, syndication in both
    directions, origin share. No network; refresh weekly from a fresh
    export.
+7. **The outlet's own site** (Kagami's own observation). HTTPS, and
+   whether the home page links about, contact, privacy, corrections,
+   ethics and masthead pages. Two requests per domain, monthly.
+   Absence means "not linked from the home page", and the claim says
+   so; it is not a finding that the page does not exist.
 
 the aggregator's labels are an aggregation of 3 and 4 and are not a
 source; they remain a private answer key for checking `ledger`'s own
@@ -136,6 +143,8 @@ ledger/
     perennial.rs            perennial sources table → claims
     rdap.rs                 registry RDAP record → claims
     behaviour.rs            feed export → observed-behaviour claims
+    site.rs                 home page → site_https, site_pages claims
+    html.rs                 shared HTML helpers
     api.rs                  read-only HTTP
     export.rs               NDJSON
 ```
@@ -146,7 +155,7 @@ ledger/
 ledger check                       validate data/ against sources and feed's outlets.toml
 ledger serve [--bind]              read-only API on 127.0.0.1:8081
 ledger export --out <dir>          claims.ndjson, sources.ndjson, outlets.ndjson
-ledger import <wikidata|wikipedia_rsp|rdap|feed_behaviour> [--outlets <feed outlets.toml>] [--only <id>] [--write]
+ledger import <wikidata|wikipedia_rsp|rdap|site|feed_behaviour> [--outlets <feed outlets.toml>] [--only <id>] [--write]
               feed_behaviour also needs --feed-export <dir> [--feed-api <url>] [--window <days>]
 ```
 
@@ -173,6 +182,7 @@ GET /v1/stats
 - **L2b** Re-assessment (`refresh_days`, `check` stale report, `refresh`), `/v1/search`, and the `/lookup` page. Done.
 - **L2c** RDAP domain registration importer: one lookup per registrable domain through the rdap.org redirector, `domain_registered` and `registrar` claims linking the registry record. Done, tested against a recorded record; not yet run live.
 - **L2d** Feed-behaviour importer from `feed export`: cadence, revision and withdrawal rates, syndication share, origin share, with window and counts on every claim. Done and verified offline end to end, since it needs no network.
+- **L2e** Site checks importer: HTTPS behaviour and accountability-page links from the home page. Done, parser tested against a recorded page; not yet run live.
 - **L3** AllSides, once terms are confirmed; a `licence` gate in `check`
   refuses to serve claims from a source whose terms field says
   `no-redistribution`.

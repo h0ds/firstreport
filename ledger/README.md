@@ -13,6 +13,7 @@ cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikidata    
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikidata --write  # store it
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikipedia_rsp --write  # reliability verdicts
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import rdap --write           # domain registration dates
+cargo run -p ledger -- --outlets ../feed/config/outlets.toml import site --write           # https and accountability pages
 (cd ../feed && cargo run -- export --format ndjson --out ../export)
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml --feed-export ../export import feed_behaviour --write  # observed behaviour
 cargo run -p ledger -- refresh --write                                                 # re-import sources that are due
@@ -61,12 +62,13 @@ review surface.
 
 ## Status
 
-L2d. Store, validation, refresh tracking, API with search and `/lookup`,
-export, and four importers: Wikidata, Wikipedia perennial sources,
-domain registration via RDAP, and feed behaviour measured from `feed`'s
-own export. The first three are tested offline against responses in
+L2e. Store, validation, refresh tracking, API with search and `/lookup`,
+export, and five importers: Wikidata, Wikipedia perennial sources,
+domain registration via RDAP, the outlet's own site (HTTPS and
+accountability pages), and feed behaviour measured from `feed`'s own
+export. The network importers are tested offline against responses in
 each endpoint's format and have not run live, since the endpoints were
 unreachable where this was built; feed behaviour needs no network and
 is verified end to end. First thing to do on a networked
 machine is `import wikidata`, then `import wikipedia_rsp`, then
-`import rdap`, then `check`.
+`import rdap`, then `import site`, then `check`.

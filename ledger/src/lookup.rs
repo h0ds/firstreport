@@ -66,8 +66,8 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;
 const date = ts => new Date(ts*1000).toISOString().slice(0,10);
 const n = (k, w) => `${k} ${w}${k === 1 ? '' : 's'}`;
 let sources = {};
-const FIELD_ORDER = ['reliability','bias','owner','parent','legal_form','country','founded','website','domain_registered','registrar','posting_cadence','origin_share','syndication_share','revision_rate','withdrawal_rate','wikipedia','name','wikidata_id'];
-const FIELD_LABEL = {reliability:'Reliability', bias:'Bias', owner:'Owner', parent:'Parent organisation', legal_form:'Legal form', country:'Country', founded:'Founded', website:'Website', domain_registered:'Domain registered', registrar:'Registrar', posting_cadence:'Posting cadence', origin_share:'First to shared stories', syndication_share:'Syndication', revision_rate:'Revisions', withdrawal_rate:'Withdrawals', wikipedia:'Wikipedia', name:'Name in source', wikidata_id:'Wikidata'};
+const FIELD_ORDER = ['reliability','bias','owner','parent','legal_form','country','founded','website','domain_registered','registrar','site_https','site_pages','posting_cadence','origin_share','syndication_share','revision_rate','withdrawal_rate','wikipedia','name','wikidata_id'];
+const FIELD_LABEL = {reliability:'Reliability', bias:'Bias', owner:'Owner', parent:'Parent organisation', legal_form:'Legal form', country:'Country', founded:'Founded', website:'Website', domain_registered:'Domain registered', registrar:'Registrar', site_https:'HTTPS', site_pages:'Accountability pages', posting_cadence:'Posting cadence', origin_share:'First to shared stories', syndication_share:'Syndication', revision_rate:'Revisions', withdrawal_rate:'Withdrawals', wikipedia:'Wikipedia', name:'Name in source', wikidata_id:'Wikidata'};
 
 async function init(){
   const [src, st] = await Promise.all([fetch('/v1/sources').then(r=>r.json()), fetch('/v1/stats').then(r=>r.json())]);
@@ -116,6 +116,7 @@ async function show(id, name){
         ${d.summary ? `<div class="summary">${esc(d.summary)}</div>` : ''}
         ${d.window_days ? `<div class="summary">Measured over ${d.window_days} days to ${esc(d.window_end)}, ${n(d.items,'item')}. A measurement, not a verdict.</div>` : ''}
         ${d.domain ? `<div class="summary">${esc(d.domain)}${d.expires ? `, expires ${esc(d.expires)}` : ''}${Array.isArray(d.status) && d.status.length ? `, ${esc(d.status.join(', '))}` : ''}</div>` : ''}
+        ${c.field === 'site_pages' ? `<div class="summary">${['about','contact','privacy','corrections','ethics','masthead'].filter(k=>d[k]).map(k=>`<a href="${esc(d[k])}" rel="noopener">${k}</a>`).join(' · ') || 'none linked'}</div>` : ''}
         ${c.note ? `<div class="summary">Note: ${esc(c.note)}</div>` : ''}
         ${Array.isArray(d.discussions) && d.discussions.length ? `<div class="summary">Discussions: ${d.discussions.map((u,i)=>`<a href="${esc(u)}" rel="noopener">${i+1}</a>`).join(' ')}</div>` : ''}
       </div>`;

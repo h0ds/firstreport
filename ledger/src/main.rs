@@ -114,6 +114,7 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                         import_perennial(&args.data_dir, &ledger, &outlets, write).await?
                     }
                     "rdap" => import_rdap(&args.data_dir, &ledger, &outlets, write).await?,
+                    "site" => import_site(&args.data_dir, &ledger, &outlets, write).await?,
                     "feed_behaviour" if args.feed_export.is_some() => {
                         import_behaviour(&args, &ledger, &outlets, write)?
                     }
@@ -172,10 +173,11 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                 "wikidata" => wikidata::SOURCE_ID,
                 "wikipedia_rsp" | "perennial" => perennial::SOURCE_ID,
                 "rdap" => rdap::SOURCE_ID,
+                "site" => site::SOURCE_ID,
                 "feed_behaviour" | "behaviour" => behaviour::SOURCE_ID,
                 other => {
                     return Err(format!(
-                        "no importer for {other:?}; available: wikidata, wikipedia_rsp, rdap, feed_behaviour"
+                        "no importer for {other:?}; available: wikidata, wikipedia_rsp, rdap, site, feed_behaviour"
                     )
                     .into())
                 }
@@ -188,6 +190,7 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                     import_wikidata(&args.data_dir, &ledger, &outlets, write).await
                 }
                 rdap::SOURCE_ID => import_rdap(&args.data_dir, &ledger, &outlets, write).await,
+                site::SOURCE_ID => import_site(&args.data_dir, &ledger, &outlets, write).await,
                 behaviour::SOURCE_ID => import_behaviour(&args, &ledger, &outlets, write),
                 _ => import_perennial(&args.data_dir, &ledger, &outlets, write).await,
             }
@@ -498,6 +501,76 @@ fn import_behaviour(
         outlets = outlets.len(),
         written = write,
         "feed_behaviour import done"
+    );
+    if !write {
+        println!("# re-run with --write to store these claims");
+    }
+    Ok(())
+}
+
+/// Site checks: the outlet's first registrable domain, two requests
+/// (https then http), one domain a second. A site that does not answer
+/// is still an observation and still a claim.
+async fn import_site(
+    data_dir: &std::path::Path,
+    ledger: &store::Ledger,
+    outlets: &[store::FeedOutlet],
+    write: bool,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let client = site::client()?;
+    let now = now_secs();
+    let mut matched_outlets = 0;
+    let mut total = 0;
+    let mut first = true;
+    for o in outlets {
+        let Some(domain) = rdap::domains_for(o).into_iter().next() else {
+            warn!(outlet = %o.id, "no domain in the registry");
+            continue;
+        };
+        if !first {
+            tokio::time::sleep(std::time::Duration::from_secs(1)).await;
+        }
+        first = false;
+        let obs = site::observe(&client, &domain).await;
+        if !obs.reachable() {
+            warn!(outlet = %o.id, %domain, "no answer on https or http; skipped, not recorded");
+            continue;
+        }
+        if !obs.https_ok {
+            warn!(outlet = %o.id, %domain, status = ?obs.status, "https home page not served");
+        }
+        let fresh = site::claims(&o.id, &obs, now);
+        let problems: Vec<_> = fresh
+            .iter()
+            .flat_map(|c| model::validate_claim(c, &ledger.sources, None))
+            .filter(|f| f.is_error())
+            .collect();
+        if !problems.is_empty() {
+            for p in &problems {
+                error!(outlet = %o.id, "{p}");
+            }
+            continue;
+        }
+        matched_outlets += 1;
+        total += fresh.len();
+        if write {
+            let existing = ledger.claims.get(&o.id).cloned().unwrap_or_default();
+            let merged = store::merge_source(&existing, site::SOURCE_ID, fresh);
+            store::write_outlet(data_dir, &o.id, merged)?;
+            info!(outlet = %o.id, "written");
+        } else {
+            println!("# {}  ({domain})", o.id);
+            for c in &fresh {
+                println!("  {:<12} {}", c.field, c.value);
+            }
+        }
+    }
+    info!(
+        matched_outlets,
+        claims = total,
+        outlets = outlets.len(),
+        written = write,
+        "site import done"
     );
     if !write {
         println!("# re-run with --write to store these claims");
