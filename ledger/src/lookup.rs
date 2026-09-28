@@ -66,8 +66,8 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;
 const date = ts => new Date(ts*1000).toISOString().slice(0,10);
 const n = (k, w) => `${k} ${w}${k === 1 ? '' : 's'}`;
 let sources = {};
-const FIELD_ORDER = ['reliability','bias','owner','parent','legal_form','country','founded','website','wikipedia','name','wikidata_id'];
-const FIELD_LABEL = {reliability:'Reliability', bias:'Bias', owner:'Owner', parent:'Parent organisation', legal_form:'Legal form', country:'Country', founded:'Founded', website:'Website', wikipedia:'Wikipedia', name:'Name in source', wikidata_id:'Wikidata'};
+const FIELD_ORDER = ['reliability','bias','owner','parent','legal_form','country','founded','website','domain_registered','registrar','wikipedia','name','wikidata_id'];
+const FIELD_LABEL = {reliability:'Reliability', bias:'Bias', owner:'Owner', parent:'Parent organisation', legal_form:'Legal form', country:'Country', founded:'Founded', website:'Website', domain_registered:'Domain registered', registrar:'Registrar', wikipedia:'Wikipedia', name:'Name in source', wikidata_id:'Wikidata'};
 
 async function init(){
   const [src, st] = await Promise.all([fetch('/v1/sources').then(r=>r.json()), fetch('/v1/stats').then(r=>r.json())]);
@@ -114,6 +114,7 @@ async function show(id, name){
           <span class="status ${c.stale ? 'warn' : 'ok'}"><span>${c.stale ? `stale, ${c.age_days} days old` : `${c.age_days} days old`}</span></span>
         </div>
         ${d.summary ? `<div class="summary">${esc(d.summary)}</div>` : ''}
+        ${d.domain ? `<div class="summary">${esc(d.domain)}${d.expires ? `, expires ${esc(d.expires)}` : ''}${Array.isArray(d.status) && d.status.length ? `, ${esc(d.status.join(', '))}` : ''}</div>` : ''}
         ${c.note ? `<div class="summary">Note: ${esc(c.note)}</div>` : ''}
         ${Array.isArray(d.discussions) && d.discussions.length ? `<div class="summary">Discussions: ${d.discussions.map((u,i)=>`<a href="${esc(u)}" rel="noopener">${i+1}</a>`).join(' ')}</div>` : ''}
       </div>`;

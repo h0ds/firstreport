@@ -10,9 +10,6 @@
 //! a second. Parsing is separated from fetching so a saved response
 //! tests it offline.
 
-// Wired into `ledger import` in the next commit.
-#![allow(dead_code)]
-
 use std::collections::BTreeMap;
 
 use serde::Deserialize;
@@ -231,9 +228,9 @@ pub async fn fetch(client: &reqwest::Client, domain: &str) -> Result<String, Str
         )
         .send()
         .await
-        .map_err(|e| e.to_string())?;
+        .map_err(chain)?;
     let status = resp.status();
-    let body = resp.text().await.map_err(|e| e.to_string())?;
+    let body = resp.text().await.map_err(chain)?;
     if status.as_u16() == 404 {
         return Err(format!(
             "no RDAP record for {domain} (unregistered, or a registry without RDAP)"
@@ -243,6 +240,19 @@ pub async fn fetch(client: &reqwest::Client, domain: &str) -> Result<String, Str
         return Err(format!("rdap {status} for {domain}"));
     }
     Ok(body)
+}
+
+/// reqwest's Display stops at "error sending request"; the cause (proxy
+/// refusal, DNS, TLS) is down the source chain.
+fn chain(e: reqwest::Error) -> String {
+    let mut out = e.to_string();
+    let mut cur: Option<&(dyn std::error::Error + 'static)> = std::error::Error::source(&e);
+    while let Some(c) = cur {
+        out.push_str(": ");
+        out.push_str(&c.to_string());
+        cur = c.source();
+    }
+    out
 }
 
 pub fn client() -> reqwest::Result<reqwest::Client> {

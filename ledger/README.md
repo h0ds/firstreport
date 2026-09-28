@@ -12,6 +12,7 @@ cargo run -p ledger -- --outlets ../feed/config/outlets.toml check
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikidata          # print proposal
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikidata --write  # store it
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikipedia_rsp --write  # reliability verdicts
+cargo run -p ledger -- --outlets ../feed/config/outlets.toml import rdap --write           # domain registration dates
 cargo run -p ledger -- refresh --write                                                 # re-import sources that are due
 cargo run -p ledger -- serve                                                           # 127.0.0.1:8081, /lookup for the search page
 cargo run -p ledger -- export --out out/
@@ -58,8 +59,10 @@ review surface.
 
 ## Status
 
-L2. Store, validation, API, export, and two importers (Wikidata,
-Wikipedia perennial sources), all tested offline against responses in
-each endpoint's format. Neither importer has run live: both endpoints
-were unreachable where this was built. First thing to do on a networked
-machine is `import wikidata`, then `import wikipedia_rsp`, then `check`.
+L2c. Store, validation, refresh tracking, API with search and `/lookup`,
+export, and three importers (Wikidata, Wikipedia perennial sources,
+domain registration via RDAP), all tested offline against responses in
+each endpoint's format. No importer has run live: the endpoints were
+unreachable where this was built. First thing to do on a networked
+machine is `import wikidata`, then `import wikipedia_rsp`, then
+`import rdap`, then `check`.

@@ -73,6 +73,8 @@ with a link to the discussion. Consumers weigh them; `ledger` doesn't.
 | `wikipedia` | English article URL | wikidata |
 | `bias` | a rater's political-lean label, on that rater's scale | allsides, others |
 | `reliability` | a rater's or community's reliability verdict | wikipedia_rsp, others |
+| `domain_registered` | registration date of a registrable domain, per registry | rdap |
+| `registrar` | the domain's registrar of record | rdap |
 
 Fields are open: an importer may add one, and `ledger check` warns on
 unknown fields rather than failing, so a new source doesn't need a
@@ -90,6 +92,11 @@ schema change.
    before import). Left/right bias labels with published methodology.
 4. **Ad Fontes, MBFC, NewsGuard** (proprietary). Only via their APIs
    under their terms, if ever. Not scraped.
+5. **Domain registries via RDAP** (public registration data). Facts we
+   observe ourselves rather than license: when each of the outlet's
+   domains was registered, by which registrar, with what status. A
+   three-month-old domain is a different thing from one from 1995, and
+   the ledger says which without judging.
 
 the aggregator's labels are an aggregation of 3 and 4 and are not a
 source; they remain a private answer key for checking `ledger`'s own
@@ -111,6 +118,8 @@ ledger/
     model.rs                Source, Claim, validation
     store.rs                load data/, index by outlet, write claims
     wikidata.rs             SPARQL query and response → claims
+    perennial.rs            perennial sources table → claims
+    rdap.rs                 registry RDAP record → claims
     api.rs                  read-only HTTP
     export.rs               NDJSON
 ```
@@ -121,7 +130,7 @@ ledger/
 ledger check                       validate data/ against sources and feed's outlets.toml
 ledger serve [--bind]              read-only API on 127.0.0.1:8081
 ledger export --out <dir>          claims.ndjson, sources.ndjson, outlets.ndjson
-ledger import wikidata [--outlets <feed outlets.toml>] [--only <id>] [--write]
+ledger import <wikidata|wikipedia_rsp|rdap> [--outlets <feed outlets.toml>] [--only <id>] [--write]
 ```
 
 `import` prints what it would add and writes only with `--write`, like
@@ -145,6 +154,7 @@ GET /v1/stats
   machine with network.
 - **L2** Wikipedia perennial sources importer. Done: parses the rendered table, matches rows by article (from Wikidata), domain or name, one claim per row with scope. Not yet run live.
 - **L2b** Re-assessment (`refresh_days`, `check` stale report, `refresh`), `/v1/search`, and the `/lookup` page. Done.
+- **L2c** RDAP domain registration importer: one lookup per registrable domain through the rdap.org redirector, `domain_registered` and `registrar` claims linking the registry record. Done, tested against a recorded record; not yet run live.
 - **L3** AllSides, once terms are confirmed; a `licence` gate in `check`
   refuses to serve claims from a source whose terms field says
   `no-redistribution`.

@@ -110,6 +110,7 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                     "wikipedia_rsp" => {
                         import_perennial(&args.data_dir, &ledger, &outlets, write).await?
                     }
+                    "rdap" => import_rdap(&args.data_dir, &ledger, &outlets, write).await?,
                     other => warn!(source = other, "due but has no importer; refresh by hand"),
                 }
             }
@@ -161,9 +162,10 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             let source_id = match source.as_str() {
                 "wikidata" => wikidata::SOURCE_ID,
                 "wikipedia_rsp" | "perennial" => perennial::SOURCE_ID,
+                "rdap" => rdap::SOURCE_ID,
                 other => {
                     return Err(format!(
-                        "no importer for {other:?}; available: wikidata, wikipedia_rsp"
+                        "no importer for {other:?}; available: wikidata, wikipedia_rsp, rdap"
                     )
                     .into())
                 }
@@ -171,10 +173,12 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             if !ledger.sources.iter().any(|s| s.id == source_id) {
                 return Err(format!("sources.toml has no {source_id:?} entry").into());
             }
-            if source_id == wikidata::SOURCE_ID {
-                import_wikidata(&args.data_dir, &ledger, &outlets, write).await
-            } else {
-                import_perennial(&args.data_dir, &ledger, &outlets, write).await
+            match source_id {
+                wikidata::SOURCE_ID => {
+                    import_wikidata(&args.data_dir, &ledger, &outlets, write).await
+                }
+                rdap::SOURCE_ID => import_rdap(&args.data_dir, &ledger, &outlets, write).await,
+                _ => import_perennial(&args.data_dir, &ledger, &outlets, write).await,
             }
         }
     }
@@ -332,6 +336,86 @@ async fn import_perennial(
         outlets = outlets.len(),
         written = write,
         "perennial import done"
+    );
+    if !write {
+        println!("# re-run with --write to store these claims");
+    }
+    Ok(())
+}
+
+/// RDAP: one registry lookup per registrable domain of each outlet, one
+/// a second. Domain age and registrar are facts we observe ourselves,
+/// so no licence question; each claim links the registry's record.
+async fn import_rdap(
+    data_dir: &std::path::Path,
+    ledger: &store::Ledger,
+    outlets: &[store::FeedOutlet],
+    write: bool,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let client = rdap::client()?;
+    let now = now_secs();
+    let mut matched_outlets = 0;
+    let mut total = 0;
+    let mut first = true;
+    for o in outlets {
+        let mut fresh = Vec::new();
+        for domain in rdap::domains_for(o) {
+            if !first {
+                tokio::time::sleep(std::time::Duration::from_secs(1)).await;
+            }
+            first = false;
+            let body = match rdap::fetch(&client, &domain).await {
+                Ok(b) => b,
+                Err(e) => {
+                    warn!(outlet = %o.id, %domain, "{e}");
+                    continue;
+                }
+            };
+            match rdap::parse_response(&body) {
+                Ok(reg) => fresh.extend(rdap::claims(&o.id, &reg, now)),
+                Err(e) => warn!(outlet = %o.id, %domain, "{e}"),
+            }
+        }
+        if fresh.is_empty() {
+            continue;
+        }
+        let problems: Vec<_> = fresh
+            .iter()
+            .flat_map(|c| model::validate_claim(c, &ledger.sources, None))
+            .filter(|f| f.is_error())
+            .collect();
+        if !problems.is_empty() {
+            for p in &problems {
+                error!(outlet = %o.id, "{p}");
+            }
+            continue;
+        }
+        matched_outlets += 1;
+        total += fresh.len();
+        if write {
+            let existing = ledger.claims.get(&o.id).cloned().unwrap_or_default();
+            let merged = store::merge_source(&existing, rdap::SOURCE_ID, fresh);
+            store::write_outlet(data_dir, &o.id, merged)?;
+            info!(outlet = %o.id, "written");
+        } else {
+            println!("# {}", o.id);
+            for c in &fresh {
+                let domain = c
+                    .data
+                    .as_ref()
+                    .and_then(|d| d.get("domain"))
+                    .and_then(|v| v.as_str())
+                    .unwrap_or("");
+                println!("  {:<18} {:<12} {domain}  {}", c.field, c.value, c.ref_url);
+            }
+        }
+    }
+    info!(
+        matched_outlets,
+        claims = total,
+        outlets = outlets.len(),
+        written = write,
+        "rdap import done"
     );
     if !write {
         println!("# re-run with --write to store these claims");
