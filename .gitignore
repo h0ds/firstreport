@@ -2,6 +2,7 @@
 **/data/
 **/models/*
 !**/models/README.md
+!feed/fixtures/models/*
 design/fonts/*.woff2
 
 # local planning notes, never committed
