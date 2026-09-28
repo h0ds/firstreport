@@ -3,3 +3,6 @@
 **/models/*
 !**/models/README.md
 design/fonts/*.woff2
+
+# local planning notes, never committed
+INFRA-PLAN.md
