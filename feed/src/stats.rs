@@ -27,6 +27,7 @@ pub struct Stats {
     pub revisions: AtomicU64,
     pub withdrawals: AtomicU64,
     pub future_dates: AtomicU64,
+    pub merges: AtomicU64,
     embed_latency_us: Mutex<Vec<u64>>,
     assign_latency_us: Mutex<Vec<u64>>,
 }
@@ -87,6 +88,7 @@ pub struct StatsSnapshot {
     pub withdrawals: u64,
     /// Items whose feed-supplied date was clamped to the fetch time.
     pub future_dates: u64,
+    pub merges: u64,
 }
 
 impl Stats {
@@ -133,6 +135,7 @@ impl Stats {
             revisions: self.revisions.load(Relaxed),
             withdrawals: self.withdrawals.load(Relaxed),
             future_dates: self.future_dates.load(Relaxed),
+            merges: self.merges.load(Relaxed),
         }
     }
 }

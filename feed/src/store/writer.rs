@@ -67,6 +67,12 @@ pub enum WriteMsg {
         joined_at: i64,
     },
     ClusterUpsert(ClusterRow),
+    /// A cluster was merged away: its row stays for history but is
+    /// expired with no items; the items now carry the survivor's id.
+    ClusterAbsorbed {
+        id: u64,
+        into: u64,
+    },
     Event(ClusterEvent),
     /// An item's text as seen in a snapshot. The item row is updated to the
     /// latest text; the embedding is left alone (cluster stability).
@@ -306,6 +312,13 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                     if apply {
                         up_text.execute(params![to_i64(item_id), title, summary])?;
                     }
+                }
+                WriteMsg::ClusterAbsorbed { id, into } => {
+                    let _ = into; // recorded on the merged event
+                    tx.execute(
+                        "UPDATE cluster SET expired=1, item_count=0, outlet_count=0 WHERE id=?1",
+                        [to_i64(id)],
+                    )?;
                 }
                 WriteMsg::Event(e) => {
                     let kind = serde_json::to_value(e.kind)

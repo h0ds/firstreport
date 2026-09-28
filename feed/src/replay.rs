@@ -110,6 +110,7 @@ pub async fn run(
     let states = Poller::build_states(&feeds, vec![], cfg.poll.default_interval_secs, 0);
 
     let mut clock = 0;
+    let mut last_merge = 0;
     for s in snaps {
         let state = states
             .iter()
@@ -163,10 +164,14 @@ pub async fn run(
             }
         }
         writer.send(WriteMsg::Embeddings(rows)).await;
+        // Merge on the item clock, exactly as the live task does.
+        if clock - last_merge >= cfg.cluster.merge_interval_secs as i64 {
+            last_merge = clock;
+            let merges = clusterer.merge_pass(clock);
+            cluster::persist_merges(&writer, &stats, &clusterer, merges).await;
+        }
     }
-    let mut expired_ids = std::collections::HashSet::new();
     for (c, ev) in clusterer.expire(clock) {
-        expired_ids.insert(c.id);
         writer
             .send(WriteMsg::ClusterUpsert(cluster::row_for(&c, true)))
             .await;
@@ -177,6 +182,8 @@ pub async fn run(
     // Read back through the store so the golden file covers persistence too.
     let mut rows = reader.with(store::reader::all_clusters)?;
     rows.sort_by_key(|r| r.id);
+    // Clusters merged away keep a row for history but hold no items.
+    rows.retain(|r| r.item_count > 0);
     let mut clusters = Vec::with_capacity(rows.len());
     for r in rows {
         let items = reader.with(|c| store::reader::cluster_items(c, r.id))?;

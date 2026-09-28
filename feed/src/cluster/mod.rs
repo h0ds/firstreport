@@ -124,11 +124,54 @@ pub struct Task {
     pub ckpt_path: PathBuf,
 }
 
+/// Item-clock bookkeeping for the periodic passes.
+#[derive(Default)]
+pub struct Clocks {
+    pub now: i64,
+    pub last_expiry: i64,
+    pub last_merge: i64,
+}
+
+/// Persist the outcome of a merge pass: moved items, the survivor's row,
+/// the absorbed cluster's row, and the event.
+pub async fn persist_merges(
+    writer: &Writer,
+    stats: &Stats,
+    clusterer: &Clusterer,
+    merges: Vec<assign::Merged>,
+) {
+    for m in merges {
+        stats.inc(&stats.merges);
+        for (item_id, rank) in m.moved {
+            writer
+                .send(WriteMsg::ItemAssigned {
+                    item_id,
+                    cluster_id: m.survivor,
+                    rank,
+                    joined_at: m.event.ts,
+                })
+                .await;
+        }
+        if let Some(c) = clusterer.get(m.survivor) {
+            writer
+                .send(WriteMsg::ClusterUpsert(row_for(c, false)))
+                .await;
+        }
+        writer
+            .send(WriteMsg::ClusterAbsorbed {
+                id: m.absorbed,
+                into: m.survivor,
+            })
+            .await;
+        writer.send(WriteMsg::Event(m.event)).await;
+    }
+}
+
 impl Task {
     /// Assign one embedded item and persist everything it changed.
-    pub async fn handle(&mut self, e: Embedded, clock: &mut i64, last_expiry: &mut i64) {
-        let now = e.item.fetched_at.max(*clock);
-        *clock = now;
+    pub async fn handle(&mut self, e: Embedded, clocks: &mut Clocks) {
+        let now = e.item.fetched_at.max(clocks.now);
+        clocks.now = now;
         let started = Instant::now();
         let a = self.clusterer.assign(&e.item, &e.vector, now);
         self.stats
@@ -151,10 +194,26 @@ impl Task {
                 self.writer.send(WriteMsg::Event(ev)).await;
             }
         }
-        if now - *last_expiry >= EXPIRY_PASS_SECS {
-            *last_expiry = now;
+        if now - clocks.last_expiry >= EXPIRY_PASS_SECS {
+            clocks.last_expiry = now;
             self.expire(now).await;
         }
+        if now - clocks.last_merge >= self.cfg.cluster.merge_interval_secs as i64 {
+            clocks.last_merge = now;
+            self.merge(now).await;
+        }
+    }
+
+    pub async fn merge(&mut self, now: i64) {
+        let merges = self.clusterer.merge_pass(now);
+        if !merges.is_empty() {
+            info!(
+                merges = merges.len(),
+                active = self.clusterer.len(),
+                "merge pass"
+            );
+        }
+        persist_merges(&self.writer, &self.stats, &self.clusterer, merges).await;
     }
 
     pub async fn expire(&mut self, now: i64) {
@@ -186,8 +245,7 @@ impl Task {
         let every = Duration::from_secs(self.cfg.store.checkpoint_secs.max(5));
         let mut tick = tokio::time::interval(every);
         tick.set_missed_tick_behavior(tokio::time::MissedTickBehavior::Delay);
-        let mut clock = 0i64;
-        let mut last_expiry = 0i64;
+        let mut clocks = Clocks::default();
         info!(
             active = self.clusterer.len(),
             checkpoint_secs = every.as_secs(),
@@ -198,7 +256,7 @@ impl Task {
                 _ = shutdown.changed() => break,
                 _ = tick.tick() => self.checkpoint(),
                 next = rx.recv() => match next {
-                    Some(e) => self.handle(e, &mut clock, &mut last_expiry).await,
+                    Some(e) => self.handle(e, &mut clocks).await,
                     None => break,
                 },
             }
