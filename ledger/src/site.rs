@@ -367,6 +367,7 @@ mod tests {
         let obs = Observation {
             domain: "old.example".into(),
             https_ok: true,
+            status: Some(200),
             http_to_https: Some(false),
             home: Some(HomePage::default()),
             ..Default::default()
