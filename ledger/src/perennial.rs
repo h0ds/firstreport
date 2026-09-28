@@ -346,6 +346,150 @@ pub fn parse(html: &str) -> Result<Vec<Row>, String> {
     Ok(rows)
 }
 
+// ---- matching rows to outlets and turning them into claims
+
+use std::collections::BTreeMap;
+
+use crate::model::Claim;
+use crate::store::FeedOutlet;
+
+/// How a row was matched to an outlet, recorded in the claim's note so a
+/// reviewer can judge the weaker matches.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum MatchKind {
+    /// The row links the same Wikipedia article that Wikidata gives for the outlet.
+    Article,
+    /// A domain listed in the row equals one of the outlet's domains.
+    Domain,
+    /// The row's link text equals the outlet's name, case-insensitively.
+    Name,
+}
+
+fn norm_host(h: &str) -> String {
+    let h = h.trim().to_ascii_lowercase();
+    h.strip_prefix("www.").unwrap_or(&h).to_string()
+}
+
+fn norm_name(n: &str) -> String {
+    n.to_ascii_lowercase()
+        .replace("the ", "")
+        .chars()
+        .filter(|c| c.is_ascii_alphanumeric())
+        .collect()
+}
+
+/// Rows that describe `outlet`, with how each matched. `article_urls` are
+/// the outlet's `wikipedia` claims from Wikidata, if any.
+pub fn matches<'a>(
+    rows: &'a [Row],
+    outlet: &FeedOutlet,
+    article_urls: &[String],
+) -> Vec<(&'a Row, MatchKind)> {
+    let domains: Vec<String> = outlet.domains.iter().map(|d| norm_host(d)).collect();
+    let articles: Vec<String> = article_urls
+        .iter()
+        .map(|u| u.trim_end_matches('/').to_string())
+        .collect();
+    let name = norm_name(&outlet.name);
+    let mut out = Vec::new();
+    for r in rows {
+        let kind = if r
+            .articles
+            .iter()
+            .any(|a| articles.iter().any(|x| x == a.trim_end_matches('/')))
+        {
+            Some(MatchKind::Article)
+        } else if r.domains.iter().any(|d| domains.contains(d)) {
+            Some(MatchKind::Domain)
+        } else if !name.is_empty() && r.names.iter().any(|n| norm_name(n) == name) {
+            Some(MatchKind::Name)
+        } else {
+            None
+        };
+        if let Some(k) = kind {
+            out.push((r, k));
+        }
+    }
+    out
+}
+
+/// One `reliability` claim per matching row. A source with several rows
+/// (Fox News: news vs politics) yields several claims; the row's own text
+/// carries the scope, so nothing is merged.
+pub fn claims(outlet_id: &str, matched: &[(&Row, MatchKind)], retrieved_at: i64) -> Vec<Claim> {
+    matched
+        .iter()
+        .map(|(r, kind)| {
+            let mut data: BTreeMap<String, serde_json::Value> = BTreeMap::new();
+            data.insert(
+                "status".into(),
+                serde_json::to_value(r.status).unwrap_or_default(),
+            );
+            data.insert(
+                "scale".into(),
+                serde_json::Value::String("wikipedia_rsp".into()),
+            );
+            if !r.discussions.is_empty() {
+                data.insert("discussions".into(), serde_json::json!(r.discussions));
+            }
+            if !r.summary.is_empty() {
+                let summary: String = r.summary.chars().take(400).collect();
+                data.insert("summary".into(), serde_json::Value::String(summary));
+            }
+            data.insert(
+                "scope".into(),
+                serde_json::Value::String(r.source_text.clone()),
+            );
+            let ref_url = if r.anchor.is_empty() {
+                PAGE_URL.to_string()
+            } else {
+                format!("{PAGE_URL}#{}", r.anchor)
+            };
+            let note = match kind {
+                MatchKind::Article => None,
+                MatchKind::Domain => Some("matched by domain listed in the row".to_string()),
+                MatchKind::Name => {
+                    Some("matched by name only; verify the row is this outlet".to_string())
+                }
+            };
+            Claim {
+                outlet_id: outlet_id.to_string(),
+                field: "reliability".into(),
+                value: r.status.label().to_string(),
+                data: Some(data),
+                source_id: SOURCE_ID.to_string(),
+                ref_url,
+                retrieved_at,
+                as_of: r.last.map(|y| y.to_string()),
+                note,
+            }
+        })
+        .collect()
+}
+
+/// Fetch the rendered page.
+pub async fn fetch(client: &reqwest::Client) -> Result<String, String> {
+    let resp = client
+        .get(RENDER_URL)
+        .send()
+        .await
+        .map_err(|e| e.to_string())?;
+    let status = resp.status();
+    let body = resp.text().await.map_err(|e| e.to_string())?;
+    if !status.is_success() {
+        return Err(format!("wikipedia {status}"));
+    }
+    Ok(body)
+}
+
+pub fn client() -> reqwest::Result<reqwest::Client> {
+    reqwest::Client::builder()
+        .user_agent(USER_AGENT)
+        .timeout(std::time::Duration::from_secs(60))
+        .gzip(true)
+        .build()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -427,6 +571,85 @@ mod tests {
         );
         assert_eq!(Status::from_text("Blacklisted"), Some(Status::Blacklisted));
         assert_eq!(Status::from_text("Legend"), None);
+    }
+
+    fn outlet(id: &str, name: &str, domains: &[&str]) -> FeedOutlet {
+        FeedOutlet {
+            id: id.into(),
+            name: name.into(),
+            domains: domains.iter().map(|d| d.to_string()).collect(),
+        }
+    }
+
+    #[test]
+    fn matching_by_article_domain_and_name() {
+        let rows = parse(&fixture()).unwrap();
+        let m = matches(
+            &rows,
+            &outlet("bbc", "BBC", &["bbc.co.uk", "bbc.com"]),
+            &["https://en.wikipedia.org/wiki/BBC".into()],
+        );
+        assert_eq!(m.len(), 1);
+        assert_eq!(m[0].1, MatchKind::Article);
+
+        let m = matches(&rows, &outlet("foxnews", "Fox News", &["foxnews.com"]), &[]);
+        assert_eq!(m.len(), 2, "both Fox rows, by domain");
+        assert!(m.iter().all(|(_, k)| *k == MatchKind::Domain));
+
+        let m = matches(
+            &rows,
+            &outlet("wire", "The Example Wire", &["wire.example"]),
+            &[],
+        );
+        assert_eq!(m.len(), 1);
+        assert_eq!(
+            m[0].1,
+            MatchKind::Name,
+            "no domain listed in the row, name still matches"
+        );
+
+        assert!(matches(&rows, &outlet("npr", "NPR", &["npr.org"]), &[]).is_empty());
+    }
+
+    #[test]
+    fn claims_carry_status_scope_and_provenance() {
+        let rows = parse(&fixture()).unwrap();
+        let m = matches(&rows, &outlet("foxnews", "Fox News", &["foxnews.com"]), &[]);
+        let c = claims("foxnews", &m, 1_700_000_000);
+        assert_eq!(c.len(), 2);
+        assert!(c
+            .iter()
+            .all(|x| x.field == "reliability" && x.source_id == "wikipedia_rsp"));
+        let politics = c
+            .iter()
+            .find(|x| x.value == "Generally unreliable")
+            .unwrap();
+        assert_eq!(politics.ref_url, format!("{PAGE_URL}#Fox_News_politics"));
+        assert_eq!(politics.as_of.as_deref(), Some("2020"));
+        let d = politics.data.as_ref().unwrap();
+        assert_eq!(d["status"], "generally_unreliable");
+        assert!(d["scope"]
+            .as_str()
+            .unwrap()
+            .contains("politics and science"));
+        assert!(d["discussions"].as_array().unwrap().len() == 1);
+        assert!(politics.note.as_deref().unwrap().contains("domain"));
+        for x in &c {
+            assert!(crate::model::validate_claim(
+                x,
+                &[crate::model::Source {
+                    id: "wikipedia_rsp".into(),
+                    name: String::new(),
+                    url: String::new(),
+                    licence: "CC-BY-SA-4.0".into(),
+                    kind: crate::model::SourceKind::Community,
+                    notes: String::new(),
+                    no_redistribution: false,
+                }],
+                None
+            )
+            .is_empty());
+        }
     }
 
     #[test]
