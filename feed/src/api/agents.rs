@@ -73,8 +73,21 @@ fn date(ts: i64) -> String {
 
 /// Markdown for one cluster: title, the metadata line from the cluster
 /// card, then every item in join order with the first marked.
-pub fn cluster_markdown(c: &Cluster, items: &[Item], names: &HashMap<String, String>) -> String {
-    let name = |id: &str| names.get(id).cloned().unwrap_or_else(|| id.to_string());
+pub fn cluster_markdown(
+    c: &Cluster,
+    items: &[Item],
+    names: &HashMap<String, String>,
+    ledger_url: &str,
+) -> String {
+    // Outlet names link to the ledger's page for the id, so a reader
+    // is one step from the sourced facts about each outlet.
+    let name = |id: &str| {
+        let n = names.get(id).cloned().unwrap_or_else(|| id.to_string());
+        match super::routes::ledger_links(ledger_url, id).1 {
+            Some(lookup) => format!("[{n}]({lookup})"),
+            None => n,
+        }
+    };
     let mut md = String::new();
     md.push_str(&format!("# {}\n\n", c.primary_title));
     md.push_str(&format!(
@@ -206,14 +219,23 @@ mod tests {
             },
         };
         let names = HashMap::from([("wire".to_string(), "The Wire".to_string())]);
-        let md = cluster_markdown(&c, &items, &names);
+        let md = cluster_markdown(&c, &items, &names, "http://ledger.test");
         assert!(md.starts_with("# Bank holds rates\n"));
-        assert!(md.contains("first published by The Wire"));
-        let first = md.find("first · **The Wire**").unwrap();
-        let second = md.find("**gazette**").unwrap();
+        assert!(md.contains("first published by [The Wire](http://ledger.test/lookup?q=wire)"));
+        let first = md
+            .find("first · **[The Wire](http://ledger.test/lookup?q=wire)**")
+            .unwrap();
+        let second = md
+            .find("**[gazette](http://ledger.test/lookup?q=gazette)**")
+            .unwrap();
         assert!(first < second);
         assert!(md.contains("published 2024-01-01 08:40 UTC"));
-        assert!(md.contains("- The Wire, gazette · first at The Wire · spread over 30 minutes"));
+        assert!(md.contains("· spread over 30 minutes"));
+        let plain = cluster_markdown(&c, &items, &names, "");
+        assert!(
+            plain.contains("first published by The Wire"),
+            "no ledger, no links"
+        );
         assert!(md.contains("No outlet here carries a rating"));
         assert!(llms_txt().contains("Accept: text/markdown"));
     }

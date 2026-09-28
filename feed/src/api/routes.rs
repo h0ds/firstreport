@@ -227,6 +227,7 @@ async fn get_cluster(
             &out.cluster,
             out.items.as_deref().unwrap_or_default(),
             &names,
+            &s.ledger_url,
         );
         return ([(header::CONTENT_TYPE, "text/markdown; charset=utf-8")], md).into_response();
     }
