@@ -1,5 +1,6 @@
 //! `ledger`: Kagami pillar 2. See `docs/plan.md`.
 
+mod agents;
 mod api;
 mod behaviour;
 mod cli;
