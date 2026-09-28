@@ -25,13 +25,17 @@ Frozen at v1 with the v0.1.0 tag.
   "id": "bbc",
   "name": "BBC",
   "domains": ["bbc.co.uk", "bbc.com"],
-  "feeds": ["https://feeds.bbci.co.uk/news/world/rss.xml"]
+  "feeds": ["https://feeds.bbci.co.uk/news/world/rss.xml"],
+  "ledger": "http://127.0.0.1:8081/v1/outlets/bbc",
+  "ledger_lookup": "http://127.0.0.1:8081/lookup?q=bbc"
 }
 ```
 
 `id` is the seam with `ledger`: stable, hand-assigned, never derived
 from content. `feed` attaches no rating, lean or quality signal to it,
-and never will.
+and never will. `ledger` and `ledger_lookup` (added after v1, over the
+API only) point at the ledger's record and page for the id, built from
+`api.ledger_url`; both are absent when that is empty.
 
 ## Item
 

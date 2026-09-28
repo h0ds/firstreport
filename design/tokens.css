@@ -205,6 +205,26 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 .kg-spark path { fill: none; stroke: var(--kg-blue); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
 .kg-spark .area { fill: var(--kg-blue-soft); fill-opacity: 0.4; stroke: none; }
 
+/* claim card and provenance line (ledger's core object) */
+.kg-claim { padding: var(--kg-s3) 0; border-bottom: 1px solid var(--kg-line); }
+.kg-claim .value { font-size: var(--kg-fs-body-lg); font-weight: 600; line-height: 1.35; }
+.kg-claim .scope { color: var(--kg-text-secondary); font-size: var(--kg-fs-ui); margin-top: 2px; }
+.kg-claim .note { color: var(--kg-text-secondary); font-size: var(--kg-fs-ui); margin-top: var(--kg-s2); }
+.kg-provenance {
+  display: flex; gap: var(--kg-s2); flex-wrap: wrap; align-items: center;
+  margin-top: var(--kg-s1);
+  color: var(--kg-text-muted); font-size: var(--kg-fs-small); letter-spacing: 0.01em;
+}
+.kg-provenance .sep { color: var(--kg-line-strong); }
+.kg-tag {
+  font-family: var(--kg-font-mono);
+  font-size: var(--kg-fs-small);
+  padding: 1px 6px;
+  border: 1px solid var(--kg-line);
+  border-radius: var(--kg-radius-input);
+  color: var(--kg-text-secondary);
+}
+
 /* status dots */
 .kg-status { display: inline-flex; align-items: center; gap: var(--kg-s2); font-size: var(--kg-fs-ui); }
 .kg-status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }

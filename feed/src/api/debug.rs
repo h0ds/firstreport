@@ -9,6 +9,9 @@ pub const PAGE: &str = r##"<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kagami feed debug</title>
+<meta name="description" content="Stories forming from news feeds: which outlet published first, who joined when, what was syndicated. No outlet is rated.">
+<link rel="alternate" type="application/json" href="/v1/clusters" title="Clusters (JSON)">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this server">
 <style>
 :root{--kg-blue:#2563EB;--kg-blue-hover:#1D4ED8;--kg-blue-soft:#DBEAFE;--kg-blue-ink:#1E3A8A;--kg-bg:#FFFFFF;--kg-bg-subtle:#F8FAFC;--kg-line:#E2E8F0;--kg-line-strong:#CBD5E1;--kg-text-muted:#64748B;--kg-text-secondary:#334155;--kg-text:#0F172A;--kg-ok:#059669;--kg-warn:#D97706;--kg-err:#DC2626;--kg-font-serif:"Instrument Serif","Iowan Old Style","Times New Roman",serif;--kg-font-sans:Inter,-apple-system,"Segoe UI",system-ui,sans-serif;--kg-font-mono:"JetBrains Mono","SF Mono",Menlo,Consolas,monospace;--kg-t-base:200ms;--kg-ease:cubic-bezier(0.2,0,0,1)}
 html{background:var(--kg-bg);color:var(--kg-text)}
@@ -43,6 +46,7 @@ a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{te
 .stack img.first{box-shadow:0 0 0 2px var(--kg-bg),0 0 0 3.5px var(--kg-blue);position:relative;z-index:1;margin-right:3px}
 .broke{color:var(--kg-text);font-weight:600}.first-label{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--kg-blue);margin-right:2px}
 .outlet{display:inline-flex;align-items:center;gap:6px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.outlet a{color:inherit}
 .spark{width:80px;height:20px;display:block}
 .spark path{fill:none;stroke:var(--kg-blue);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
 .spark .area{fill:var(--kg-blue-soft);fill-opacity:.4;stroke:none}
@@ -74,6 +78,7 @@ a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{te
   <select id="tz" title="Time zone for all times on this page"><option value="local">Local time</option><option value="utc">UTC</option></select>
 </div>
 <div id="clusters"><div class="empty">No clusters yet.</div></div>
+<p class="muted" style="margin-top:48px">Machine readers: the same data is at <a href="/v1/clusters">/v1/clusters</a>, and each cluster answers <span class="mono">Accept: text/markdown</span>. See <a href="/llms.txt">/llms.txt</a>.</p>
 </main>
 <script>
 const $ = s => document.querySelector(s);
@@ -152,11 +157,14 @@ function render(list, now){
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 // Outlet id -> {name, domain}, from the registry; ids fall back to themselves.
 let outlets = {};
-fetch('/v1/outlets').then(r=>r.json()).then(v => { for (const o of v) outlets[o.id] = {name: o.name, domain: (o.domains||[])[0]}; }).catch(()=>{});
+fetch('/v1/outlets').then(r=>r.json()).then(v => { for (const o of v) outlets[o.id] = {name: o.name, domain: (o.domains||[])[0], ledger: o.ledger_lookup}; }).catch(()=>{});
+// Outlet name links to the ledger's page for it: the facts about an outlet
+// are one click from any story it is in, and never shown here as a colour.
 const outletTag = (id, cls) => {
   const o = outlets[id] || {};
   const icon = o.domain ? `<img src="https://icons.duckduckgo.com/ip3/${encodeURIComponent(o.domain)}.ico" alt="" loading="lazy" onerror="this.remove()">` : '';
-  return `<span class="${cls}" title="${esc(o.domain || id)}">${icon}${esc(o.name || id)}</span>`;
+  const nm = o.ledger ? `<a href="${esc(o.ledger)}" title="Sourced facts about ${esc(o.name || id)} in the ledger">${esc(o.name || id)}</a>` : esc(o.name || id);
+  return `<span class="${cls}" title="${esc(o.domain || id)}" data-outlet="${esc(id)}">${icon}${nm}</span>`;
 };
 // Every outlet in the cluster, origin first: icons overlap, first two named, rest as +N.
 const outletStack = c => {

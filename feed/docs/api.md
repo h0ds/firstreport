@@ -13,6 +13,15 @@ Pass `next` back as `cursor=` for the following page. Cursors are
 
 Ids in paths accept decimal or `0x`-prefixed hex.
 
+## Machine readers
+
+`GET /llms.txt` describes the server, its routes and rules of use for
+agents; `GET /robots.txt` allows everything. `GET /v1/clusters/{id}`
+with `Accept: text/markdown` returns a Markdown rendering of the
+cluster with the same facts in the same order as the debug page. The
+debug page links `/v1/clusters` and `/llms.txt` as alternates from its
+`<head>`. See `design/DESIGN.md` §11.
+
 ## Errors
 
 `{ "error": "message" }` with 400 for bad input, 404 for unknown ids,
@@ -69,7 +78,8 @@ Poll with `after_seq=<last_seq>` for incremental sync.
 
 | route | query | returns |
 |---|---|---|
-| `GET /v1/outlets` | | outlets with domains and feeds |
+| `GET /v1/outlets` | | outlets with domains, feeds and their ledger links |
+| `GET /v1/outlets/{id}` | | one outlet with `ledger` and `ledger_lookup` URLs, from `api.ledger_url` |
 | `GET /v1/feeds` | `filter=all\|failing\|dead\|stale` | per-feed poller state, failures first |
 | `GET /v1/stats` | | `{ contract_version, process: {...}, store: {...} }` |
 

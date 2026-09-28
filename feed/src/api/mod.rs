@@ -1,5 +1,6 @@
 //! Read-only HTTP API (plan §5.5), versioned under `/v1`, plus `/debug`.
 
+pub mod agents;
 pub mod debug;
 pub mod routes;
 
@@ -16,6 +17,8 @@ pub struct AppState {
     pub snapshot_dir: PathBuf,
     /// Simhash distance for syndication grouping.
     pub hamming_threshold: u32,
+    /// Ledger base URL for outlet links; empty for none.
+    pub ledger_url: String,
 }
 
 pub fn router(state: AppState) -> axum::Router {

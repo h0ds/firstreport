@@ -5,7 +5,7 @@ use std::collections::BTreeMap;
 use std::sync::Arc;
 
 use axum::extract::{Path, Query, State};
-use axum::http::StatusCode;
+use axum::http::{header, HeaderMap, StatusCode};
 use axum::response::{IntoResponse, Response};
 use axum::routing::get;
 use axum::{Json, Router};
@@ -26,6 +26,8 @@ pub fn router(ledger: Arc<Ledger>, registry: Vec<FeedOutlet>) -> Router {
     Router::new()
         .route("/v1/search", get(search))
         .route("/lookup", get(lookup_page))
+        .route("/llms.txt", get(llms_txt))
+        .route("/robots.txt", get(robots_txt))
         .route("/v1/outlets", get(outlets))
         .route("/v1/outlets/{id}", get(outlet))
         .route("/v1/outlets/{id}/{field}", get(outlet_field))
@@ -43,6 +45,30 @@ async fn lookup_page() -> Response {
         crate::lookup::PAGE,
     )
         .into_response()
+}
+
+async fn llms_txt() -> Response {
+    (
+        [(header::CONTENT_TYPE, "text/plain; charset=utf-8")],
+        crate::agents::llms_txt(),
+    )
+        .into_response()
+}
+
+async fn robots_txt() -> Response {
+    (
+        [(header::CONTENT_TYPE, "text/plain; charset=utf-8")],
+        crate::agents::ROBOTS_TXT,
+    )
+        .into_response()
+}
+
+/// `Accept: text/markdown` asks for the Markdown twin (design §11).
+fn wants_markdown(headers: &HeaderMap) -> bool {
+    headers
+        .get(header::ACCEPT)
+        .and_then(|v| v.to_str().ok())
+        .is_some_and(|a| a.contains("text/markdown"))
 }
 
 #[derive(Serialize)]
@@ -139,8 +165,21 @@ fn now_secs() -> i64 {
         .unwrap_or(0)
 }
 
-async fn outlet(State(s): State<AppState>, Path(id): Path<String>) -> Response {
+async fn outlet(State(s): State<AppState>, Path(id): Path<String>, headers: HeaderMap) -> Response {
     match s.ledger.claims.get(&id) {
+        Some(c) if wants_markdown(&headers) => {
+            let name = s
+                .outlets
+                .iter()
+                .find(|o| o.id == id)
+                .map(|o| o.name.as_str())
+                .filter(|n| !n.is_empty());
+            (
+                [(header::CONTENT_TYPE, "text/markdown; charset=utf-8")],
+                crate::agents::outlet_markdown(&id, name, c, &s.ledger.sources, now_secs()),
+            )
+                .into_response()
+        }
         Some(c) => Json(view(&id, c, &s.ledger.sources, now_secs())).into_response(),
         None => not_found("no claims for that outlet"),
     }
@@ -408,6 +447,42 @@ mod tests {
         assert_eq!(st, 200);
         assert_eq!(v[0]["id"], "bbc");
         assert_eq!(v[0]["claims"], 3);
+        let r = app
+            .clone()
+            .oneshot(
+                Request::builder()
+                    .uri("/v1/outlets/bbc")
+                    .header("accept", "text/markdown")
+                    .body(Body::empty())
+                    .unwrap(),
+            )
+            .await
+            .unwrap();
+        assert_eq!(r.status(), 200);
+        assert!(r.headers()["content-type"]
+            .to_str()
+            .unwrap()
+            .starts_with("text/markdown"));
+        let md = String::from_utf8(
+            axum::body::to_bytes(r.into_body(), 1 << 20)
+                .await
+                .unwrap()
+                .to_vec(),
+        )
+        .unwrap();
+        assert!(md.starts_with("# BBC\n"), "{md}");
+        assert!(md.contains("Source: [Wikidata](https://x)"));
+        let r = app
+            .clone()
+            .oneshot(
+                Request::builder()
+                    .uri("/llms.txt")
+                    .body(Body::empty())
+                    .unwrap(),
+            )
+            .await
+            .unwrap();
+        assert_eq!(r.status(), 200);
         let (_, v) = json(&app, "/v1/outlets/bbc").await;
         assert_eq!(
             v["fields"]["bias"].as_array().unwrap().len(),

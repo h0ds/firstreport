@@ -245,12 +245,16 @@ impl Default for Syndication {
 #[serde(default, deny_unknown_fields)]
 pub struct Api {
     pub bind: String,
+    /// Base URL of the Kagami ledger that holds sourced facts about the
+    /// same outlet ids. Empty disables the links.
+    pub ledger_url: String,
 }
 
 impl Default for Api {
     fn default() -> Self {
         Self {
             bind: "127.0.0.1:8080".into(),
+            ledger_url: "http://127.0.0.1:8081".into(),
         }
     }
 }
@@ -388,6 +392,7 @@ mod tests {
         assert_eq!(c.cluster.merge_threshold, 0.80);
         assert_eq!(c.poll.default_interval_secs, 900);
         assert_eq!(c.api.bind, "127.0.0.1:8080");
+        assert_eq!(c.api.ledger_url, "http://127.0.0.1:8081");
     }
 
     #[test]

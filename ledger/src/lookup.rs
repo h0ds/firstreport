@@ -10,6 +10,9 @@ pub const PAGE: &str = r##"<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kagami ledger lookup</title>
+<meta name="description" content="Sourced facts about news outlets, each with its source, licence and date. Never a score.">
+<link rel="alternate" type="application/json" href="/v1/outlets" title="Outlets with claims (JSON)">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this server">
 <style>
 :root{--kg-blue:#2563EB;--kg-blue-hover:#1D4ED8;--kg-blue-soft:#DBEAFE;--kg-blue-ink:#1E3A8A;--kg-bg:#FFFFFF;--kg-bg-subtle:#F8FAFC;--kg-line:#E2E8F0;--kg-line-strong:#CBD5E1;--kg-text-muted:#64748B;--kg-text-secondary:#334155;--kg-text:#0F172A;--kg-ok:#059669;--kg-warn:#D97706;--kg-err:#DC2626;--kg-font-serif:"Instrument Serif","Iowan Old Style","Times New Roman",serif;--kg-font-sans:Inter,-apple-system,"Segoe UI",system-ui,sans-serif;--kg-font-mono:"JetBrains Mono","SF Mono",Menlo,Consolas,monospace;--kg-t-base:200ms;--kg-ease:cubic-bezier(0.2,0,0,1)}
 html{background:var(--kg-bg);color:var(--kg-text)}
@@ -36,7 +39,7 @@ a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{te
 .claim{padding:12px 0;border-bottom:1px solid var(--kg-line)}
 .claim .value{font-size:17px;font-weight:600;line-height:1.35}
 .claim .scope{color:var(--kg-text-secondary);font-size:13px;margin-top:2px}
-.claim .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.claim .provenance{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:4px}
 .claim .sep{color:var(--kg-line-strong)}
 .tag{font-family:var(--kg-font-mono);font-size:12px;padding:1px 6px;border:1px solid var(--kg-line);border-radius:4px;color:var(--kg-text-secondary)}
 .status{display:inline-flex;align-items:center;gap:8px;font-size:12px}
@@ -59,6 +62,7 @@ a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{te
 <input id="q" type="search" placeholder="Outlet name, id or domain" autocomplete="off" autofocus>
 <div id="hits"></div>
 <div id="outlet"></div>
+<p class="muted" style="margin-top:48px">Machine readers: the same data is at <a href="/v1/outlets">/v1/outlets</a>, and each outlet answers <span class="mono">Accept: text/markdown</span>. See <a href="/llms.txt">/llms.txt</a>.</p>
 </main>
 <script>
 const $ = s => document.querySelector(s);
@@ -96,19 +100,19 @@ async function show(id, name){
   if (r.status === 404) { $('#outlet').innerHTML = `<h2>${esc(name)}</h2><div class="empty">No claims yet. Run <span class="mono">ledger import wikidata</span> and <span class="mono">ledger import wikipedia_rsp</span> with this outlet in the registry.</div>`; return; }
   const o = await r.json();
   const fields = Object.keys(o.fields).sort((a,b) => (FIELD_ORDER.indexOf(a)+1||99) - (FIELD_ORDER.indexOf(b)+1||99));
-  let html = `<h2>${esc(name)}</h2><div class="muted">${n(o.claims,'claim')}${o.stale ? ` · ${o.stale} past their source's refresh interval` : ' · all within their refresh intervals'} · every value is a source's, never ours</div>`;
+  let html = `<h2 data-id="${esc(id)}">${esc(name)}</h2><div class="muted">${n(o.claims,'claim')}${o.stale ? ` · ${o.stale} past their source's refresh interval` : ' · all within their refresh intervals'} · every value is a source's, never ours</div>`;
   for (const f of fields) {
     html += `<h3>${esc(FIELD_LABEL[f] || f)}</h3>`;
     for (const c of o.fields[f]) {
       const s = sources[c.source_id] || {name: c.source_id, licence: ''};
       const d = c.data || {};
-      html += `<div class="claim enter">
+      html += `<article class="claim enter" data-outlet="${esc(id)}" data-field="${esc(f)}" data-source="${esc(c.source_id)}">
         <div class="value">${esc(c.value)}</div>
         ${d.scope && d.scope !== c.value ? `<div class="scope">${esc(d.scope)}</div>` : ''}
-        <div class="meta muted">
+        <div class="provenance muted">
           <a href="${esc(c.ref_url)}" rel="noopener">${esc(s.name)}</a><span class="sep">·</span>
           <span class="tag">${esc(s.licence)}</span><span class="sep">·</span>
-          <span>retrieved ${date(c.retrieved_at)}</span>
+          <span>retrieved <time datetime="${date(c.retrieved_at)}">${date(c.retrieved_at)}</time></span>
           ${c.as_of ? `<span class="sep">·</span><span>as of ${esc(c.as_of)}</span>` : ''}
           <span class="sep">·</span>
           <span class="status ${c.stale ? 'warn' : 'ok'}"><span>${c.stale ? `stale, ${c.age_days} days old` : `${c.age_days} days old`}</span></span>
@@ -119,7 +123,7 @@ async function show(id, name){
         ${c.field === 'site_pages' ? `<div class="summary">${['about','contact','privacy','corrections','ethics','masthead'].filter(k=>d[k]).map(k=>`<a href="${esc(d[k])}" rel="noopener">${k}</a>`).join(' · ') || 'none linked'}</div>` : ''}
         ${c.note ? `<div class="summary">Note: ${esc(c.note)}</div>` : ''}
         ${Array.isArray(d.discussions) && d.discussions.length ? `<div class="summary">Discussions: ${d.discussions.map((u,i)=>`<a href="${esc(u)}" rel="noopener">${i+1}</a>`).join(' ')}</div>` : ''}
-      </div>`;
+      </article>`;
     }
   }
   $('#outlet').innerHTML = html;

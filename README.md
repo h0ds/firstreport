@@ -26,6 +26,16 @@ that apply to every pillar. `ledger/docs/plan.md` is pillar 2's, and `reply/docs
 component preview page. Each tool copies `tokens.css` rather than depending
 on it at runtime. The `feed` debug page is the first consumer.
 
+## For agents and bots
+
+Kagami is built to be read by machines as easily as by people, because
+the disinformation it documents is spread by machines. Every server
+publishes `/llms.txt` describing itself and its rules of use, allows
+everything in `/robots.txt`, serves JSON by default, and answers
+`Accept: text/markdown` on its main object with a rendering that keeps
+every source, licence and date. Every page for people links its JSON
+twin from `<head>`. `design/DESIGN.md` §11 has the rules.
+
 ## Getting started
 
 ```
