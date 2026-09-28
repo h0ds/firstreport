@@ -21,6 +21,11 @@ pub const KNOWN_FIELDS: &[&str] = &[
     "reliability",
     "domain_registered",
     "registrar",
+    "posting_cadence",
+    "revision_rate",
+    "withdrawal_rate",
+    "syndication_share",
+    "origin_share",
 ];
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -29,6 +34,8 @@ pub enum SourceKind {
     Database,
     Community,
     Rating,
+    /// Measured by Kagami itself from what outlets publish.
+    Observed,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]

@@ -1,0 +1,3 @@
+{"id": "wire", "name": "Wire", "domains": ["wire.example"], "feeds": []}
+{"id": "gazette", "name": "Gazette", "domains": ["gazette.example"], "feeds": []}
+{"id": "blog", "name": "Blog", "domains": ["blog.example"], "feeds": []}
