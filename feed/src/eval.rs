@@ -283,6 +283,16 @@ mod tests {
     /// a stand-in, and the point here is that the harness runs on the real
     /// fixture and produces a coherent report.
     #[test]
+    fn aggregator_pairs_parse_and_are_balanced() {
+        let path = Path::new(env!("CARGO_MANIFEST_DIR")).join("fixtures/golden/aggregator/aggregator-pairs.tsv");
+        let pairs = parse_pairs(&std::fs::read_to_string(path).unwrap()).unwrap();
+        let pos = pairs.iter().filter(|p| p.same).count();
+        assert!(pairs.len() >= 900, "{}", pairs.len());
+        assert!(pos >= 300 && pos * 2 <= pairs.len() + 100, "positives {pos} of {}", pairs.len());
+        assert!(pairs.iter().all(|p| p.a != p.b), "no pair compares a text with itself");
+    }
+
+    #[test]
     fn golden_pairs_evaluate_with_hash_backend() {
         let path = Path::new(env!("CARGO_MANIFEST_DIR")).join("fixtures/golden/pairs.tsv");
         let pairs = parse_pairs(&std::fs::read_to_string(path).unwrap()).unwrap();

@@ -48,12 +48,19 @@ What the pair set must contain to be useful:
   threshold is tuned to it.
 - **Unrelated** stories (easy negatives), a handful, as a sanity floor.
 
-`fixtures/golden/pairs.tsv` has sixty hand-written pairs covering all
-four. It is a smoke set. The real one should be built from `feed`'s own
-output once it has run on live feeds for a day: sample pairs from the
-same cluster and from adjacent clusters, label them by hand, and grow
-the file to a few hundred rows. Pairs pulled from real headlines are
-worth far more than invented ones.
+Two pair sets ship:
+
+- `fixtures/golden/pairs.tsv`: sixty hand-written pairs covering all
+  four cases. A smoke set.
+- `fixtures/golden/aggregator/aggregator-pairs.tsv`: about a thousand
+  pairs derived from 61 real stories that a news aggregator grouped by hand,
+  1,800 distinct outlet headlines, with negatives weighted toward
+  lexically similar cross-story pairs. This is the set to tune on. See
+  the README there for provenance and what was deliberately left out.
+
+Once `feed` has run live for a day, a third set sampled from its own
+clusters and labelled by hand will catch whatever the seed feeds do
+that the aggregator's mix does not.
 
 ## Current numbers
 
@@ -73,6 +80,12 @@ why the replay golden test uses 0.5 with this backend. The misclassified
 list is all paraphrases the lexical embedder can't see through, as
 expected.
 
+On the a news aggregator set (985 pairs) the hash backend manages F1 0.60
+at the bottom of the sweep (0.30) and 0.08 at the configured 0.72: real
+paraphrases across outlets share far fewer words than invented ones,
+which is the whole reason the model exists. Any threshold this backend
+suggests is meaningless for production.
+
 ### MiniLM-L6 (production backend)
 
 Not yet measured here: the model weights could not be fetched in the
@@ -80,7 +93,7 @@ environment where this was written. Run
 
 ```
 cargo run -- fetch-model
-cargo run -- eval --pairs fixtures/golden/pairs.tsv
+cargo run -- eval --pairs fixtures/golden/aggregator/aggregator-pairs.tsv
 ```
 
 and record the table in this section. Expectations from the model's

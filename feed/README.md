@@ -138,7 +138,9 @@ cargo run -- eval --pairs fixtures/golden/pairs.tsv
 
 reports precision, recall and F1 of the assignment step across
 thresholds on a labelled pair set, plus the pairs the configured
-`cluster.join_threshold` gets wrong. `docs/clustering.md` explains what
+`cluster.join_threshold` gets wrong. `fixtures/golden/aggregator/`
+holds a thousand-pair set derived from real a news aggregator story groupings
+and a spectrum-spanning list of 888 outlet hosts for `feed discover`. `docs/clustering.md` explains what
 the pair set needs to contain, records the current numbers, and lists
 the model and input-template alternatives to compare.
 
