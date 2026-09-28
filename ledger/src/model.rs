@@ -26,6 +26,8 @@ pub const KNOWN_FIELDS: &[&str] = &[
     "withdrawal_rate",
     "syndication_share",
     "origin_share",
+    "site_https",
+    "site_pages",
 ];
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]

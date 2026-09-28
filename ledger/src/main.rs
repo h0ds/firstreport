@@ -9,6 +9,7 @@ mod lookup;
 mod model;
 mod perennial;
 mod rdap;
+mod site;
 mod store;
 mod wikidata;
 

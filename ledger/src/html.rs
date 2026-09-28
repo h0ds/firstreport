@@ -154,6 +154,26 @@ pub fn attr(attrs: &str, name: &str) -> Option<String> {
     None
 }
 
+/// Attribute strings of every `<tag …>` that has no body (`meta`, `link`).
+pub fn void_tags<'a>(html: &'a str, tag: &str) -> Vec<&'a str> {
+    let lower = html.to_ascii_lowercase();
+    let open = format!("<{tag}");
+    let mut out = Vec::new();
+    let mut i = 0;
+    while let Some(p) = lower[i..].find(&open) {
+        let start = i + p;
+        let after = lower.as_bytes().get(start + open.len()).copied();
+        let Some(gt) = lower[start..].find('>') else {
+            break;
+        };
+        if matches!(after, Some(b' ') | Some(b'\n') | Some(b'\t') | Some(b'/')) {
+            out.push(html[start + open.len()..start + gt].trim_end_matches('/'));
+        }
+        i = start + gt + 1;
+    }
+    out
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -173,5 +193,11 @@ mod tests {
         let e = elements("<td>a<td>b</td></td><td>c</td>", "td");
         assert_eq!(e.len(), 2);
         assert_eq!(e[1].1, "c");
+        let m = void_tags(
+            "<meta charset=utf-8><metadata>x</metadata><meta name=a content=\"b\"/>",
+            "meta",
+        );
+        assert_eq!(m.len(), 2);
+        assert_eq!(attr(m[1], "content").as_deref(), Some("b"));
     }
 }
