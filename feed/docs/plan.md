@@ -494,7 +494,7 @@ Explicitly **not** used: `tokenizers`, `hnsw`/`faiss` bindings, any ORM, any web
 ## 9. Testing & tuning
 
 - **Fixture replay**: `fixtures/feeds/` holds ~200 recorded feed snapshots over a simulated 3-day window. `feed replay --fixtures fixtures/feeds` runs the full pipeline offline (no network) and writes clusters. `tests/replay.rs` diffs against `fixtures/expected/`. This is the determinism guarantee and the tuning harness.
-- **Golden set**: ~300 hand-labelled item pairs (same story / different story). Report precision/recall of the assignment step at the configured threshold. Track in `docs/clustering.md`.
+- **Golden set**: hand-labelled item pairs (same story / different story) in `fixtures/golden/pairs.tsv`; `feed eval --pairs` reports precision/recall/F1 across thresholds and at the configured one. Sixty written pairs ship as a smoke set; grow it to a few hundred from real clusters once feed has run live. Tracked in `docs/clustering.md`.
 - **Unit tests**: URL canonicalization table-driven; tokenizer against reference outputs from the Python tokenizer; SIMD kernels against scalar.
 - **Benchmarks** (`cargo bench`): embed throughput, assignment latency vs active set size, store write throughput.
 

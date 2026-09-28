@@ -109,6 +109,18 @@ clusters expire on the item clock. The active set is checkpointed to
 a missing or corrupt checkpoint triggers a rebuild from embedded items
 in the window.
 
+## Tuning
+
+```
+cargo run -- eval --pairs fixtures/golden/pairs.tsv
+```
+
+reports precision, recall and F1 of the assignment step across
+thresholds on a labelled pair set, plus the pairs the configured
+`cluster.join_threshold` gets wrong. `docs/clustering.md` explains what
+the pair set needs to contain, records the current numbers, and lists
+the model and input-template alternatives to compare.
+
 ## Offline replay
 
 ```
