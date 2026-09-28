@@ -25,6 +25,7 @@ pub struct AppState {
 pub fn router(ledger: Arc<Ledger>, registry: Vec<FeedOutlet>) -> Router {
     Router::new()
         .route("/v1/search", get(search))
+        .route("/lookup", get(lookup_page))
         .route("/v1/outlets", get(outlets))
         .route("/v1/outlets/{id}", get(outlet))
         .route("/v1/outlets/{id}/{field}", get(outlet_field))
@@ -34,6 +35,14 @@ pub fn router(ledger: Arc<Ledger>, registry: Vec<FeedOutlet>) -> Router {
             ledger,
             outlets: Arc::new(registry),
         })
+}
+
+async fn lookup_page() -> Response {
+    (
+        [(axum::http::header::CONTENT_TYPE, "text/html; charset=utf-8")],
+        crate::lookup::PAGE,
+    )
+        .into_response()
 }
 
 #[derive(Serialize)]
@@ -179,13 +188,13 @@ struct SearchHit {
 /// Case-insensitive substring search over outlet id, name and domains.
 /// Covers every outlet in feed's registry, claims or not, so "no claims
 /// yet" is a real answer; registry-less ledgers search claim ids only.
-pub fn search_outlets(
+fn search_outlets(
     q: &str,
     outlets: &[FeedOutlet],
     ledger: &Ledger,
     now: i64,
     limit: usize,
-) -> Vec<SearchHitOwned> {
+) -> Vec<SearchHit> {
     let q = q.trim().to_ascii_lowercase();
     if q.is_empty() {
         return vec![];
@@ -195,7 +204,7 @@ pub fn search_outlets(
         .trim_start_matches("http://")
         .trim_start_matches("www.")
         .trim_end_matches('/');
-    let mut hits: Vec<(u8, SearchHitOwned)> = Vec::new();
+    let mut hits: Vec<(u8, SearchHit)> = Vec::new();
     let mut seen = std::collections::HashSet::new();
     let counts = |id: &str| -> (usize, usize) {
         ledger
@@ -246,7 +255,7 @@ pub fn search_outlets(
             seen.insert(o.id.clone());
             hits.push((
                 rank,
-                SearchHitOwned {
+                SearchHit {
                     id: o.id.clone(),
                     name: o.name.clone(),
                     domains: o.domains.clone(),
@@ -262,7 +271,7 @@ pub fn search_outlets(
             let (claims, stale) = counts(id);
             hits.push((
                 1,
-                SearchHitOwned {
+                SearchHit {
                     id: id.clone(),
                     name: String::new(),
                     domains: vec![],
@@ -276,8 +285,6 @@ pub fn search_outlets(
     hits.sort_by(|a, b| (a.0, &a.1.id).cmp(&(b.0, &b.1.id)));
     hits.into_iter().map(|(_, h)| h).take(limit).collect()
 }
-
-pub type SearchHitOwned = SearchHit;
 
 async fn search(State(s): State<AppState>, Query(q): Query<SearchQ>) -> Response {
     let hits = search_outlets(
@@ -430,6 +437,21 @@ mod tests {
         assert!(v.as_array().unwrap().is_empty());
         let (_, v) = json(&app, "/v1/search").await;
         assert!(v.as_array().unwrap().is_empty());
+        let r = app
+            .clone()
+            .oneshot(
+                Request::builder()
+                    .uri("/lookup")
+                    .body(Body::empty())
+                    .unwrap(),
+            )
+            .await
+            .unwrap();
+        assert_eq!(r.status(), 200);
+        assert!(r.headers()["content-type"]
+            .to_str()
+            .unwrap()
+            .starts_with("text/html"));
         let (_, v) = json(&app, "/v1/stats").await;
         assert_eq!(v["claims"], 3);
         assert_eq!(v["claims_by_field"]["bias"], 2);

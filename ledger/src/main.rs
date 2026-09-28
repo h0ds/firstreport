@@ -3,6 +3,7 @@
 mod api;
 mod cli;
 mod export;
+mod lookup;
 mod model;
 mod perennial;
 mod store;

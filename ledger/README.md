@@ -12,7 +12,8 @@ cargo run -p ledger -- --outlets ../feed/config/outlets.toml check
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikidata          # print proposal
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikidata --write  # store it
 cargo run -p ledger -- --outlets ../feed/config/outlets.toml import wikipedia_rsp --write  # reliability verdicts
-cargo run -p ledger -- serve                                                           # 127.0.0.1:8081
+cargo run -p ledger -- refresh --write                                                 # re-import sources that are due
+cargo run -p ledger -- serve                                                           # 127.0.0.1:8081, /lookup for the search page
 cargo run -p ledger -- export --out out/
 ```
 
@@ -37,10 +38,23 @@ until reuse terms are confirmed).
 | `GET /v1/outlets` | ids with claim counts, fields and sources |
 | `GET /v1/outlets/{id}` | all claims grouped by field |
 | `GET /v1/outlets/{id}/{field}` | claims for one field, every source |
+| `GET /v1/search?q=` | outlets by id, name or domain, with claim and stale counts; covers the whole registry so "not assessed yet" is an answer |
 | `GET /v1/sources` | the registry |
 | `GET /v1/stats` | counts by source and field |
 
-`serve` refuses to start on a ledger with errors.
+Every claim in a response carries `age_days` and `stale` against its
+source's `refresh_days`. `serve` refuses to start on a ledger with
+errors. `/lookup` is a search page over the same API: type an outlet,
+see every claim grouped by field with its source, licence, retrieval
+date and a stale marker.
+
+## Re-assessment
+
+Each source in `sources.toml` has `refresh_days`. `ledger check` lists
+claims older than that and the sources due; `ledger refresh --write`
+re-imports them. Put it on a schedule (weekly is plenty; the sources
+move slowly) and review the diff before merging: the files are the
+review surface.
 
 ## Status
 
