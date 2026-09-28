@@ -4,6 +4,7 @@ mod api;
 mod behaviour;
 mod cli;
 mod export;
+mod html;
 mod lookup;
 mod model;
 mod perennial;
