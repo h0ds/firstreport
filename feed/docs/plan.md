@@ -542,6 +542,17 @@ NDJSON/Parquet export, `prune`, `README`, docs finalized. Tag `v0.1.0`. Data con
 
 Total: roughly 9–11 working days to a usable v0.1.
 
+### Status at v0.1.0
+
+All six milestones plus an ingress hardening pass are implemented and
+covered by 82 tests, including an offline end-to-end replay with a
+golden output. What has not happened yet is a run against live feeds
+with the real model: the environment this was built in could not reach
+the feed hosts or the model download. The first live run decides the
+tuning (`docs/clustering.md`) and will surface ingress failure modes
+that only real feeds produce. Treat v0.1.0 as "complete and verified
+offline", not "proven in production".
+
 ---
 
 ## 12. Open questions

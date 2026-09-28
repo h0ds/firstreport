@@ -109,6 +109,27 @@ clusters expire on the item clock. The active set is checkpointed to
 a missing or corrupt checkpoint triggers a rebuild from embedded items
 in the window.
 
+## Export, prune, nightly
+
+```
+cargo run -- export --format ndjson --out data/export/today
+cargo run --features parquet -- export --format parquet --out data/export/today
+cargo run -- prune --older-than 90d --embeddings
+```
+
+Export writes `items`, `clusters`, `events` and `outlets`. NDJSON omits
+embeddings and centroids; Parquet includes them as `list<float32>`.
+This is the bulk interface for `ledger` and `lens`; the live API is for
+incremental updates. `prune --older-than` deletes rows past the cutoff
+(active clusters excepted), `--embeddings` nulls embeddings outside the
+clustering window, and snapshot retention is applied on every run.
+With `export.nightly = true`, `feed run` does an export into
+`out_dir/<yyyy-mm-dd>` at `export.hour_utc` daily and applies snapshot
+retention.
+
+Docs: `docs/data-contract.md` (the v1 schema, frozen), `docs/api.md`,
+`docs/clustering.md`, `docs/plan.md`.
+
 ## Tuning
 
 ```

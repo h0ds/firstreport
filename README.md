@@ -50,4 +50,7 @@ hardening pass added adaptive polling with jitter, Retry-After and
 permanent-redirect handling, a User-Agent fallback, `/v1/feeds` health,
 OPML import and feed autodiscovery. M5 added the merge pass, a golden
 pair set with `feed eval`, and `feed/docs/clustering.md` for tuning.
-Export and pruning (M6) are next. See `feed/docs/plan.md` §11.
+M6 added NDJSON and Parquet export, `prune`, the nightly job, and the
+contract and API docs. `feed` is at v0.1.0 with the data contract
+frozen at v1; it is complete and verified offline, and has not yet run
+against live feeds. See `feed/docs/plan.md` §11.
