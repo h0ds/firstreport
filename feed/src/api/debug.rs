@@ -37,14 +37,22 @@ a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{te
 .cluster .title{font-size:17px;font-weight:600;line-height:1.35;margin:0 0 4px}
 .cluster .meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .cluster .sep{color:var(--kg-line-strong)}
-.origin{font-family:var(--kg-font-mono);font-size:12px;padding:1px 6px;border:1px solid var(--kg-line);border-radius:4px;color:var(--kg-text-secondary)}
+.origin{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;padding:1px 8px 1px 6px;border:1px solid var(--kg-line);border-radius:999px;color:var(--kg-text-secondary)}
+.origin img,.outlet img{width:14px;height:14px;border-radius:3px;flex:none}
+.stack{display:inline-flex}.stack:empty{display:none}.stack img{box-shadow:0 0 0 2px var(--kg-bg);background:var(--kg-bg)}.stack img+img{margin-left:-4px}
+.stack img.first{box-shadow:0 0 0 2px var(--kg-bg),0 0 0 3.5px var(--kg-blue);position:relative;z-index:1;margin-right:3px}
+.broke{color:var(--kg-text);font-weight:600}.first-label{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--kg-blue);margin-right:2px}
+.outlet{display:inline-flex;align-items:center;gap:6px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .spark{width:80px;height:20px;display:block}
 .spark path{fill:none;stroke:var(--kg-blue);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
 .spark .area{fill:var(--kg-blue-soft);fill-opacity:.4;stroke:none}
 .items{margin:8px 0 0;padding:0;list-style:none;display:none}
 .curve{display:none;margin:12px 0 4px;font-family:var(--kg-font-sans)}
 .cluster.open .items,.cluster.open .curve{display:block}
-.items li{display:grid;grid-template-columns:72px 110px 1fr;gap:12px;padding:4px 0;color:var(--kg-text-secondary);font-size:13px;border-top:1px solid var(--kg-bg-subtle)}
+.items li{display:grid;grid-template-columns:56px 160px 1fr;gap:12px;padding:8px 0;color:var(--kg-text-secondary);font-size:13px;border-top:1px solid var(--kg-bg-subtle);align-items:baseline}
+.items .hl{color:var(--kg-text);font-size:14px;line-height:1.4}.items .hl a{color:inherit}
+.items .alt{display:block;font-size:12px;color:var(--kg-text-muted);margin-top:2px}.items .alt a{color:inherit}
+.items li.first .when{color:var(--kg-blue)}
 .empty{color:var(--kg-text-muted);padding:24px 0}
 @keyframes kg-fade-in{from{opacity:0}to{opacity:1}}
 .enter{animation:kg-fade-in var(--kg-t-base) var(--kg-ease)}
@@ -61,15 +69,30 @@ a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{te
 <h2>Clusters</h2>
 <div class="controls">
   <select id="sort"><option value="recent">Most recent</option><option value="velocity_1h">Items, 1h</option><option value="outlets_6h">Outlets, 6h</option></select>
-  <input id="min" type="number" min="1" value="1" style="width:80px" title="Minimum outlets">
-  <span class="muted">min outlets · refreshes every 5 s · times in UTC</span>
+  <input id="min" type="number" min="1" value="2" style="width:80px" title="Minimum outlets">
+  <span class="muted">min outlets · refreshes every 5 s ·</span>
+  <select id="tz" title="Time zone for all times on this page"><option value="local">Local time</option><option value="utc">UTC</option></select>
 </div>
 <div id="clusters"><div class="empty">No clusters yet.</div></div>
 </main>
 <script>
 const $ = s => document.querySelector(s);
 const seen = new Set();
-const fmtT = ts => ts ? new Date(ts*1000).toISOString().slice(11,16) + ' UTC' : '—';
+// Times: one zone for the whole page (local by default, UTC on request, remembered
+// per browser). Short form carries the zone label and a date when not today;
+// tooltips always give the full timestamp in both zones.
+let tz = 'local';
+try { tz = localStorage.getItem('kg-tz') || 'local'; } catch {}
+const tzOpt = () => tz === 'utc' ? {timeZone: 'UTC'} : {};
+const fmtT = ts => {
+  if (!ts) return '—';
+  const d = new Date(ts*1000), o = tzOpt();
+  const day = x => x.toLocaleDateString('en-CA', o);
+  const hm = d.toLocaleTimeString([], {...o, hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZoneName: 'short'});
+  return day(d) === day(new Date()) ? hm : d.toLocaleDateString([], {...o, month: 'short', day: 'numeric'}) + ' ' + hm;
+};
+const fullT = ts => ts ? `${new Date(ts*1000).toLocaleString([], {dateStyle: 'medium', timeStyle: 'long'})} · ${new Date(ts*1000).toISOString().replace('.000Z','Z')}` : '';
+const tsSpan = ts => `<time datetime="${ts ? new Date(ts*1000).toISOString() : ''}" title="${esc(fullT(ts))}">${fmtT(ts)}</time>`;
 const age = (ts, now) => { const s = Math.max(0, now - ts); return s < 3600 ? Math.round(s/60)+' min' : s < 86400 ? Math.round(s/3600)+' h' : Math.round(s/86400)+' d'; };
 function spark(tl, now){
   if (!tl || tl.length < 2) return '';
@@ -108,17 +131,17 @@ function render(list, now){
     const v = c.velocity || {};
     const fresh = !seen.has(c.id);
     seen.add(c.id);
-    const items = (c.items||[]).map(i=>`<li><span class="mono">${fmtT(i.published_at)}</span><span class="mono">${i.outlet_id}</span><span>${esc(i.title)}</span></li>`).join('');
+    const items = compare(c);
     return `<article class="cluster${fresh?' enter':''}${open.has(String(c.id))?' open':''}" data-id="${c.id}">
       <p class="title"><a href="/v1/clusters/${c.id}" onclick="this.closest('.cluster').classList.toggle('open');return false">${esc(c.primary_title)}</a></p>
       <div class="meta muted">
-        <span>${n(c.outlet_count,'outlet')}</span><span class="sep">·</span>
-        <span>${n(c.item_count,'item')}</span><span class="sep">·</span>
-        <span>${v.items_1h||0} in the last hour</span><span class="sep">·</span>
-        ${c.syndication && c.syndication.length ? `<span>${c.syndication.length} syndication groups</span><span class="sep">·</span>` : ''}
-        <span>first seen ${fmtT(c.created_at)}</span><span class="sep">·</span>
-        <span>active ${age(c.last_active_at, now)} ago</span><span class="sep">·</span>
-        <span class="origin">${esc(c.origin_outlet_id)}</span>
+        ${outletStack(c)}
+        ${[
+          c.item_count > c.outlet_count ? n(c.item_count,'item') : '',
+          v.items_1h && v.items_1h < c.item_count ? `${v.items_1h} new in the last hour` : '',
+          c.syndication && c.syndication.length ? n(c.syndication.length,'syndication group') : '',
+          c.last_active_at - c.created_at > 60 ? `since ${tsSpan(c.created_at)}, updated <span title="${esc(fullT(c.last_active_at))}">${age(c.last_active_at, now)} ago</span>` : tsSpan(c.created_at),
+        ].filter(Boolean).map(t=>`<span class="sep">·</span><span>${t}</span>`).join('')}
         ${spark(c.timeline, now)}
       </div>
       ${curve(c.timeline, now)}
@@ -127,10 +150,49 @@ function render(list, now){
   }).join('');
 }
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// Outlet id -> {name, domain}, from the registry; ids fall back to themselves.
+let outlets = {};
+fetch('/v1/outlets').then(r=>r.json()).then(v => { for (const o of v) outlets[o.id] = {name: o.name, domain: (o.domains||[])[0]}; }).catch(()=>{});
+const outletTag = (id, cls) => {
+  const o = outlets[id] || {};
+  const icon = o.domain ? `<img src="https://icons.duckduckgo.com/ip3/${encodeURIComponent(o.domain)}.ico" alt="" loading="lazy" onerror="this.remove()">` : '';
+  return `<span class="${cls}" title="${esc(o.domain || id)}">${icon}${esc(o.name || id)}</span>`;
+};
+// Every outlet in the cluster, origin first: icons overlap, first two named, rest as +N.
+const outletStack = c => {
+  const ids = [...new Set([c.origin_outlet_id, ...[...(c.items||[])].sort((a,b)=>at(a)-at(b)).map(i=>i.outlet_id)])];
+  const icons = ids.slice(0, 8).map((id, k) => { const o = outlets[id] || {};
+    return o.domain ? `<img${k ? '' : ' class="first"'} src="https://icons.duckduckgo.com/ip3/${encodeURIComponent(o.domain)}.ico" alt="" title="${esc(o.name||id)}${k ? '' : ' · broke the story'}" loading="lazy" onerror="this.remove()">` : ''; }).join('');
+  const names = ids.slice(0, 2).map((id, k) => { const nm = esc((outlets[id]||{}).name || id);
+    return k ? nm : `<b class="broke">${nm}</b> <span class="first-label">first</span>`; }).join('<span class="sep">·</span>');
+  const total = Math.max(c.outlet_count || 0, ids.length);
+  const more = total > 2 ? ` <span class="muted">+${total - 2}</span>` : '';
+  return `<span class="origin" title="${esc(ids.map(id => (outlets[id]||{}).name || id).join(', '))}"><span class="stack">${icons}</span>${names}${more}</span>`;
+};
+// Expanded view: one row per outlet in the order it picked the story up, with
+// its headline so framings can be compared side by side. Later rewrites from
+// the same outlet sit underneath.
+const link = i => /^https?:/.test(i.canonical_url) ? `<a href="${esc(i.canonical_url)}" target="_blank" rel="noopener">${esc(i.title)}</a>` : esc(i.title);
+// Ordered by when Kagami saw each item join (matches the backend's origin outlet).
+const at = i => i.joined_at ?? i.fetched_at ?? i.published_at;
+const compare = c => {
+  const by = new Map();
+  for (const i of [...(c.items||[])].sort((a,b)=>at(a)-at(b))) {
+    if (!by.has(i.outlet_id)) by.set(i.outlet_id, []);
+    by.get(i.outlet_id).push(i);
+  }
+  const t0 = Math.min(...[...by.values()].map(v=>at(v[0])));
+  return [...by].map(([id, v], k) => {
+    const d = at(v[0]) - t0;
+    const when = k === 0 ? 'first' : '+' + (d < 3600 ? Math.round(d/60) + 'm' : (d/3600).toFixed(1) + 'h');
+    const alts = v.slice(1).filter(i => i.title !== v[0].title).map(i => `<span class="alt">also: ${link(i)}</span>`).join('');
+    return `<li${k ? '' : ' class="first"'}><span class="mono when" title="${esc(`Picked up ${fullT(at(v[0]))}` + (v[0].published_at ? `\nOutlet says published ${fullT(v[0].published_at)}` : ''))}">${when}</span>${outletTag(id,'outlet')}<span class="hl">${link(v[0])}${alts}</span></li>`;
+  }).join('');
+};
 const n = (k, word) => `${k} ${word}${k === 1 ? '' : 's'}`;
 async function tick(){
   try {
-    const sort = $('#sort').value, min = $('#min').value || 1;
+    const sort = $('#sort').value, min = $('#min').value || 2;
     const [cs, st] = await Promise.all([
       fetch(`/v1/clusters?limit=100&min_outlets=${min}&sort=${sort}&include=items`).then(r=>r.json()),
       fetch('/v1/stats').then(r=>r.json())]);
@@ -154,6 +216,7 @@ async function tick(){
 }
 tick(); setInterval(tick, 5000);
 $('#sort').onchange = tick; $('#min').onchange = tick;
+$('#tz').value = tz; $('#tz').onchange = e => { tz = e.target.value; try { localStorage.setItem('kg-tz', tz); } catch {} tick(); };
 </script>
 </body>
 </html>
