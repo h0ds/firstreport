@@ -1,5 +1,6 @@
 //! Read-only HTTP API (plan §5.5), versioned under `/v1`, plus `/debug`.
 
+pub mod agents;
 pub mod debug;
 pub mod routes;
 

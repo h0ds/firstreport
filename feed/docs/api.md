@@ -13,6 +13,15 @@ Pass `next` back as `cursor=` for the following page. Cursors are
 
 Ids in paths accept decimal or `0x`-prefixed hex.
 
+## Machine readers
+
+`GET /llms.txt` describes the server, its routes and rules of use for
+agents; `GET /robots.txt` allows everything. `GET /v1/clusters/{id}`
+with `Accept: text/markdown` returns a Markdown rendering of the
+cluster with the same facts in the same order as the debug page. The
+debug page links `/v1/clusters` and `/llms.txt` as alternates from its
+`<head>`. See `design/DESIGN.md` §11.
+
 ## Errors
 
 `{ "error": "message" }` with 400 for bad input, 404 for unknown ids,

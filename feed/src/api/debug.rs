@@ -9,6 +9,9 @@ pub const PAGE: &str = r##"<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kagami feed debug</title>
+<meta name="description" content="Stories forming from news feeds: which outlet published first, who joined when, what was syndicated. No outlet is rated.">
+<link rel="alternate" type="application/json" href="/v1/clusters" title="Clusters (JSON)">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this server">
 <style>
 :root{--kg-blue:#2563EB;--kg-blue-hover:#1D4ED8;--kg-blue-soft:#DBEAFE;--kg-blue-ink:#1E3A8A;--kg-bg:#FFFFFF;--kg-bg-subtle:#F8FAFC;--kg-line:#E2E8F0;--kg-line-strong:#CBD5E1;--kg-text-muted:#64748B;--kg-text-secondary:#334155;--kg-text:#0F172A;--kg-ok:#059669;--kg-warn:#D97706;--kg-err:#DC2626;--kg-font-serif:"Instrument Serif","Iowan Old Style","Times New Roman",serif;--kg-font-sans:Inter,-apple-system,"Segoe UI",system-ui,sans-serif;--kg-font-mono:"JetBrains Mono","SF Mono",Menlo,Consolas,monospace;--kg-t-base:200ms;--kg-ease:cubic-bezier(0.2,0,0,1)}
 html{background:var(--kg-bg);color:var(--kg-text)}
@@ -74,6 +77,7 @@ a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{te
   <select id="tz" title="Time zone for all times on this page"><option value="local">Local time</option><option value="utc">UTC</option></select>
 </div>
 <div id="clusters"><div class="empty">No clusters yet.</div></div>
+<p class="muted" style="margin-top:48px">Machine readers: the same data is at <a href="/v1/clusters">/v1/clusters</a>, and each cluster answers <span class="mono">Accept: text/markdown</span>. See <a href="/llms.txt">/llms.txt</a>.</p>
 </main>
 <script>
 const $ = s => document.querySelector(s);
