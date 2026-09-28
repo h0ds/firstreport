@@ -6,6 +6,7 @@ mod export;
 mod lookup;
 mod model;
 mod perennial;
+mod rdap;
 mod store;
 mod wikidata;
 

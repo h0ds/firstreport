@@ -19,6 +19,8 @@ pub const KNOWN_FIELDS: &[&str] = &[
     "wikipedia",
     "bias",
     "reliability",
+    "domain_registered",
+    "registrar",
 ];
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
