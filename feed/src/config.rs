@@ -253,8 +253,13 @@ impl Default for Api {
 #[derive(Debug, Clone, Deserialize)]
 #[serde(default, deny_unknown_fields)]
 pub struct Export {
+    /// Run the export once a day inside `feed run`.
     pub nightly: bool,
     pub out_dir: PathBuf,
+    /// `ndjson`, or `parquet` when built with that feature.
+    pub format: String,
+    /// UTC hour (0-23) the nightly job runs at.
+    pub hour_utc: u8,
 }
 
 impl Default for Export {
@@ -262,6 +267,8 @@ impl Default for Export {
         Self {
             nightly: false,
             out_dir: "data/export".into(),
+            format: "ndjson".into(),
+            hour_utc: 2,
         }
     }
 }

@@ -10,6 +10,7 @@ mod eval;
 mod export;
 mod fetch;
 mod lang;
+mod nightly;
 mod parse;
 mod poller;
 mod prune;
@@ -247,6 +248,13 @@ async fn run(
         tokio::spawn(async move { while rx.recv().await.is_some() {} });
     }
     let poller_task = tokio::spawn(poller.run(states, item_tx, shutdown_rx.clone()));
+    let nightly_task = cfg.export.nightly.then(|| {
+        tokio::spawn(nightly::run(
+            cfg.clone(),
+            reader.clone(),
+            shutdown_rx.clone(),
+        ))
+    });
 
     let app = api::router(api::AppState {
         reader: reader.clone(),
@@ -273,6 +281,9 @@ async fn run(
         let _ = t.await;
     }
     let _ = cluster_task.await;
+    if let Some(t) = nightly_task {
+        let _ = t.await;
+    }
     let _ = api_task.await;
     writer.flush().await;
     drop(writer);

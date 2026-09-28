@@ -47,5 +47,7 @@ hamming_threshold = 3
 bind = "127.0.0.1:8080"
 
 [export]
-nightly = false
+nightly = false                  # daily export into out_dir/<yyyy-mm-dd> plus snapshot retention
 out_dir = "data/export"
+format = "ndjson"                # parquet needs `--features parquet`
+hour_utc = 2
