@@ -36,6 +36,7 @@ Embed latency (amortized per item, p50 and p99) is reported in `/v1/stats`.
 | `GET /v1/items/{id}` | latest text |
 | `GET /v1/items/{id}/revisions` | text history from snapshot diffs; empty until the first change |
 | `GET /v1/syndication?text_hash=&since=&limit=` | items across all clusters within the simhash threshold of `text_hash`, scanned over the last 30 days by default |
+| `GET /v1/lookup?url=&text=&since=` | everything known about one URL or text in one call: item, cluster, origin, outlet with ledger links, or near-copies by simhash; `matched` and `checked` say how far it got |
 | `GET /v1/snapshots?feed=&since=&limit=&cursor=` | raw feed fetch log |
 | `GET /v1/snapshots/{id}` | |
 | `GET /v1/snapshots/{id}/body` | decompressed feed body as fetched |

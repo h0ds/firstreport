@@ -246,6 +246,70 @@ async fn fixture_through_store_and_api() {
         400
     );
 
+    // Lookup: a URL feed holds, in any of the forms the canonicalizer folds.
+    let v = body_json(
+        app.clone()
+            .oneshot(get(
+                "/v1/lookup?url=https://www.example.com/world/2024/01/01/rates?utm_source=x",
+            ))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert_eq!(v["matched"], "item", "{v}");
+    assert_eq!(v["item"]["id"], rates.id);
+    assert_eq!(v["host"], "example.com");
+    assert_eq!(v["outlet"]["id"], "example");
+    assert_eq!(
+        v["outlet"]["ledger"],
+        "http://ledger.test/v1/outlets/example"
+    );
+    assert_eq!(v["checked"].as_array().unwrap().len(), 2);
+    // A URL feed has never seen on a host it follows, including a subdomain.
+    let v = body_json(
+        app.clone()
+            .oneshot(get("/v1/lookup?url=https://news.bbc.co.uk/never/seen"))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert_eq!(v["matched"], "outlet", "{v}");
+    assert!(v["item"].is_null());
+    assert_eq!(v["outlet"]["id"], "bbc");
+    // A host feed knows nothing about.
+    let v = body_json(
+        app.clone()
+            .oneshot(get("/v1/lookup?url=https://nowhere.invalid/x"))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert_eq!(v["matched"], "none", "{v}");
+    assert_eq!(v["host"], "nowhere.invalid");
+    assert!(v["outlet"].is_null());
+    // Quoted text with a near copy in the store; the fixture is dated 2024,
+    // so the window is opened explicitly.
+    let v = body_json(
+        app.clone()
+            .oneshot(get("/v1/lookup?since=0&text=Syndicated:%20agency%20wire%20story%20Agency%20wire%20copy%20republished%20by%20a%20different%20outlet."))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert_eq!(v["matched"], "text", "{v}");
+    assert!(!v["text_matches"]["items"].as_array().unwrap().is_empty());
+    for bad in [
+        "/v1/lookup",
+        "/v1/lookup?url=not%20a%20url",
+        "/v1/lookup?url=ftp://x/y",
+    ] {
+        assert_eq!(
+            app.clone().oneshot(get(bad)).await.unwrap().status(),
+            400,
+            "{bad}"
+        );
+    }
+
     let v = body_json(
         app.clone()
             .oneshot(get("/v1/snapshots?feed=https://www.example.com/feed.xml"))

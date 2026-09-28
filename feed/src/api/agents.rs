@@ -32,6 +32,7 @@ sourced facts about each outlet.
 - `GET /v1/items?since=&outlet=&limit=&cursor=` and `GET /v1/items/{{id}}` - headlines
 - `GET /v1/items/{{id}}/revisions` - earlier versions of an item's text
 - `GET /v1/syndication?since=` - groups of items that share the same text across outlets
+- `GET /v1/lookup?url=&text=` - everything known about one URL or one piece of text: the item, its story, whether it was first, the outlet and its ledger links; `matched` and `checked` say how far the lookup got
 - `GET /v1/events?after_seq=` - the cluster event log, a cursor for followers
 - `GET /v1/snapshots`, `GET /v1/snapshots/{{id}}/body` - the raw feed fetches
 - `GET /v1/outlets` and `GET /v1/outlets/{{id}}` - outlets with `ledger` and `ledger_lookup` links to the sourced facts about them

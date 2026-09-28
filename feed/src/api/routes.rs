@@ -18,6 +18,7 @@ pub fn router() -> Router<AppState> {
         .route("/v1/items/{id}", get(get_item))
         .route("/v1/items/{id}/revisions", get(item_revisions))
         .route("/v1/syndication", get(syndication))
+        .route("/v1/lookup", get(lookup))
         .route("/v1/snapshots", get(list_snapshots))
         .route("/v1/snapshots/{id}", get(get_snapshot))
         .route("/v1/snapshots/{id}/body", get(snapshot_body))
@@ -104,6 +105,172 @@ async fn syndication(State(s): State<AppState>, Query(q): Query<SyndicationQ>) -
         .into_response(),
         Err(e) => db_err(e),
     }
+}
+
+#[derive(Deserialize)]
+struct LookupQ {
+    url: Option<String>,
+    text: Option<String>,
+    /// Lower bound on `fetched_at` for the text scan; default 30 days ago.
+    since: Option<i64>,
+}
+
+#[derive(Serialize)]
+struct TextMatches {
+    text_hash: u64,
+    hamming_threshold: u32,
+    /// Earliest published first.
+    items: Vec<crate::types::Item>,
+}
+
+/// Everything `feed` knows about one URL or one piece of text, in one
+/// call: the reply layer's whole backend (reply plan §3). `matched` says
+/// how far the lookup got, and `checked` lists what was looked for so a
+/// miss can be reported as honestly as a hit.
+#[derive(Serialize)]
+struct LookupOut {
+    /// `item`: the URL is an item `feed` holds. `text`: no item, but the
+    /// text has near-copies in the store. `outlet`: no item, but the host
+    /// belongs to an outlet `feed` follows. `none`: nothing.
+    matched: &'static str,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    canonical_url: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    host: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    item: Option<crate::types::Item>,
+    /// Whether `item` is the first published member of its cluster.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    is_origin: Option<bool>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    cluster: Option<ClusterOut>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    outlet: Option<OutletOut>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    text_matches: Option<TextMatches>,
+    /// What was searched, in order, in words a reply can quote.
+    checked: Vec<String>,
+}
+
+async fn cluster_for(
+    s: &AppState,
+    cluster_id: Option<u64>,
+) -> Result<Option<ClusterOut>, Response> {
+    let Some(cid) = cluster_id else {
+        return Ok(None);
+    };
+    let row = s
+        .reader
+        .call(move |c| reader::get_cluster(c, cid))
+        .await
+        .map_err(db_err)?;
+    match row {
+        Some(row) => assemble(s, row, true, now()).await.map(Some),
+        None => Ok(None),
+    }
+}
+
+async fn outlet_for(s: &AppState, host: &str) -> Result<Option<OutletOut>, Response> {
+    let h = host.to_string();
+    let row = s
+        .reader
+        .call(move |c| reader::outlet_for_host(c, &h))
+        .await
+        .map_err(db_err)?;
+    Ok(row.map(|o| outlet_out(&s.ledger_url, o)))
+}
+
+async fn lookup(State(s): State<AppState>, Query(q): Query<LookupQ>) -> Response {
+    let url = q.url.as_deref().map(str::trim).filter(|u| !u.is_empty());
+    let text = q.text.as_deref().map(str::trim).filter(|t| !t.is_empty());
+    if url.is_none() && text.is_none() {
+        return err(StatusCode::BAD_REQUEST, "url or text is required");
+    }
+    let mut out = LookupOut {
+        matched: "none",
+        canonical_url: None,
+        host: None,
+        item: None,
+        is_origin: None,
+        cluster: None,
+        outlet: None,
+        text_matches: None,
+        checked: Vec::new(),
+    };
+
+    if let Some(raw) = url {
+        let Some(canon) = crate::parse::url::canonicalize(raw, None) else {
+            return err(
+                StatusCode::BAD_REQUEST,
+                "url must be an absolute http(s) URL",
+            );
+        };
+        let host = url::Url::parse(&canon)
+            .ok()
+            .and_then(|u| u.host_str().map(str::to_string));
+        let id = crate::types::item_id(&canon);
+        out.canonical_url = Some(canon.clone());
+        out.host = host.clone();
+        out.checked.push(format!("item by canonical url {canon}"));
+        let item = match s.reader.call(move |c| reader::get_item(c, id)).await {
+            Ok(i) => i,
+            Err(e) => return db_err(e),
+        };
+        if let Some(host) = host.as_deref() {
+            out.checked.push(format!("outlet by host {host}"));
+            out.outlet = match outlet_for(&s, host).await {
+                Ok(o) => o,
+                Err(r) => return r,
+            };
+        }
+        if let Some(item) = item {
+            out.cluster = match cluster_for(&s, item.cluster_id).await {
+                Ok(c) => c,
+                Err(r) => return r,
+            };
+            out.is_origin = out
+                .cluster
+                .as_ref()
+                .map(|c| c.cluster.origin_item_id == item.id);
+            out.item = Some(item);
+            out.matched = "item";
+            return Json(out).into_response();
+        }
+        if out.outlet.is_some() {
+            out.matched = "outlet";
+        }
+    }
+
+    if let Some(text) = text {
+        let hash = crate::parse::simhash::simhash(text);
+        let threshold = s.hamming_threshold;
+        let since = q.since.unwrap_or_else(|| now() - SYNDICATION_WINDOW_SECS);
+        out.checked.push(format!(
+            "items with near-identical title and summary fetched since {since}"
+        ));
+        let items = match s
+            .reader
+            .call(move |c| reader::syndication_matches(c, hash, threshold, since, DEFAULT_LIMIT))
+            .await
+        {
+            Ok(v) => v,
+            Err(e) => return db_err(e),
+        };
+        if let Some(first) = items.first() {
+            out.cluster = match cluster_for(&s, first.cluster_id).await {
+                Ok(c) => c,
+                Err(r) => return r,
+            };
+            out.matched = "text";
+        }
+        out.text_matches = Some(TextMatches {
+            text_hash: hash,
+            hamming_threshold: threshold,
+            items,
+        });
+    }
+
+    Json(out).into_response()
 }
 
 async fn debug_page() -> Response {

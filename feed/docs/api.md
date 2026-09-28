@@ -58,6 +58,23 @@ top-N, no cursor). `since` filters on `last_active_at`.
 Scans items fetched since `since` (default 30 days). Not indexed; keep
 `since` tight when calling often.
 
+### Lookup
+
+| route | query | returns |
+|---|---|---|
+| `GET /v1/lookup` | `url` and/or `text`, `since` | everything known about one URL or one piece of text |
+
+`url` is canonicalized the way the poller does it, so tracking
+parameters, `www.`, AMP and mobile forms all find the same item.
+`matched` says how far the lookup got: `item` (the URL is an item, with
+its `cluster`, `is_origin` and `outlet`), `text` (no item, but `text`
+has near-copies by simhash over title and summary, fetched since
+`since` (default 30 days ago), in `text_matches`,
+and the earliest copy's cluster), `outlet` (no item, but the host
+belongs to an outlet feed follows), or `none`. `checked` lists what was
+searched in words, so a miss can be quoted as honestly as a hit. This
+is the one call the reply layer builds on (`reply/docs/plan.md` §3).
+
 ### Snapshots
 
 | route | query | returns |
@@ -100,4 +117,5 @@ curl 'localhost:8080/v1/clusters?min_outlets=3&sort=outlets_6h&limit=10'
 curl 'localhost:8080/v1/clusters/0xcaf0a1b2c3d4e5f6/timeline'
 curl 'localhost:8080/v1/events?after_seq=0&limit=500'
 curl 'localhost:8080/v1/feeds?filter=failing'
+curl 'localhost:8080/v1/lookup?url=https://www.example.com/story?utm_source=x'
 ```

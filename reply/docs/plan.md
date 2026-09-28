@@ -407,8 +407,10 @@ salt_env = "REPLY_SALT"
 ## 16. Milestones
 
 - **R0** crate, contract, templates, `render`, `check`, the cite check. Offline.
-- **R1** `feed` gains `/v1/lookup`; resolver works end to end against a
-  local `feed` and `ledger` from recorded mentions.
+- **R1** `feed` gains `/v1/lookup`. Done: `url` and `text` lookups
+  with `matched` and `checked`, cluster, origin and outlet with ledger
+  links. Next: the resolver, working end to end against a local `feed`
+  and `ledger` from recorded mentions.
 - **R2** Bluesky listener in `--dry-run`: mentions in, drafts to the
   queue, nothing posted. Run it for weeks and read what people ask.
 - **R3** Review page and poster. First replies, all human-approved.

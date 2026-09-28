@@ -530,6 +530,19 @@ pub fn outlets(c: &Connection) -> rusqlite::Result<Vec<OutletRow>> {
     Ok(out)
 }
 
+/// The outlet whose registered domain is `host` or a parent of it, so
+/// `news.example.com` finds an outlet registered as `example.com`. The
+/// longest matching domain wins when several are registered.
+pub fn outlet_for_host(c: &Connection, host: &str) -> rusqlite::Result<Option<OutletRow>> {
+    let mut st = c.prepare_cached(
+        "SELECT outlet_id, host FROM outlet_domain WHERE host = ?1 OR ?1 LIKE '%.' || host \
+         ORDER BY length(host) DESC LIMIT 1",
+    )?;
+    let id: Option<String> = st.query_row([host], |r| r.get(0)).optional()?;
+    let Some(id) = id else { return Ok(None) };
+    Ok(outlets(c)?.into_iter().find(|o| o.id == id))
+}
+
 pub fn stats(c: &Connection, now: i64) -> rusqlite::Result<StoreStats> {
     let one = |sql: &str, p: &[&dyn rusqlite::ToSql]| -> rusqlite::Result<u64> {
         c.query_row(sql, p, |r| r.get::<_, i64>(0))
