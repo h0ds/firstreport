@@ -99,6 +99,8 @@ impl Default for Embed {
     fn default() -> Self {
         let lib = if cfg!(target_os = "macos") {
             "models/libonnxruntime.dylib"
+        } else if cfg!(windows) {
+            "models/onnxruntime.dll"
         } else {
             "models/libonnxruntime.so"
         };
@@ -121,7 +123,7 @@ impl Default for Embed {
 }
 
 /// ONNX Runtime release used by `fetch-model` when no URL is configured.
-pub const ORT_VERSION: &str = "1.22.0";
+pub const ORT_VERSION: &str = "1.27.1";
 const MINILM: &str =
     "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/onnx/";
 
@@ -151,9 +153,12 @@ impl Embed {
             ("linux", "aarch64") => "linux-aarch64",
             ("macos", "x86_64") => "osx-x86_64",
             ("macos", "aarch64") => "osx-arm64",
+            ("windows", "x86_64") => "win-x64",
+            ("windows", "aarch64") => "win-arm64",
             _ => return Err(format!("no prebuilt ONNX Runtime for {os}/{arch}; set embed.runtime_url and embed.runtime_lib by hand")),
         };
-        Ok(format!("https://github.com/microsoft/onnxruntime/releases/download/v{ORT_VERSION}/onnxruntime-{name}-{ORT_VERSION}.tgz"))
+        let ext = if os == "windows" { "zip" } else { "tgz" };
+        Ok(format!("https://github.com/microsoft/onnxruntime/releases/download/v{ORT_VERSION}/onnxruntime-{name}-{ORT_VERSION}.{ext}"))
     }
 }
 
@@ -411,13 +416,17 @@ mod tests {
             .runtime_url_for("macos", "aarch64")
             .unwrap()
             .contains("osx-arm64"));
-        assert!(e.runtime_url_for("windows", "x86_64").is_err());
+        assert!(e
+            .runtime_url_for("windows", "x86_64")
+            .unwrap()
+            .ends_with("onnxruntime-win-x64-1.27.1.zip"));
+        assert!(e.runtime_url_for("freebsd", "x86_64").is_err());
         let e = Embed {
             runtime_url: "file:///x.tgz".into(),
             ..Default::default()
         };
         assert_eq!(
-            e.runtime_url_for("windows", "x86_64").unwrap(),
+            e.runtime_url_for("freebsd", "x86_64").unwrap(),
             "file:///x.tgz"
         );
     }

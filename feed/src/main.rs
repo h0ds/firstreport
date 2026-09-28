@@ -339,8 +339,37 @@ async fn fetch_model(cfg: &config::Config) -> Result<(), Box<dyn std::error::Err
     ensure(lib)?;
     let bytes = get(runtime_url).await?;
     let dir = lib.parent().unwrap_or(std::path::Path::new("."));
-    let tgz = dir.join("onnxruntime.tgz");
+    let tgz = dir.join(if os == "windows" {
+        "onnxruntime.zip"
+    } else {
+        "onnxruntime.tgz"
+    });
     std::fs::write(&tgz, &bytes)?;
+    if os == "windows" {
+        // The release zip holds `<name>/lib/onnxruntime.dll`. Windows 10+
+        // ships bsdtar as System32\tar.exe, which reads zip; name it
+        // explicitly so a GNU tar earlier on PATH (Git Bash) is not used.
+        let tar = std::env::var("SystemRoot")
+            .map(|r| std::path::Path::new(&r).join("System32").join("tar.exe"))
+            .unwrap_or_else(|_| "tar".into());
+        let status = std::process::Command::new(tar)
+            .arg("-xf")
+            .arg(&tgz)
+            .arg("-C")
+            .arg(dir)
+            .args(["--strip-components=2", "*/lib/onnxruntime.dll"])
+            .status()?;
+        let extracted = dir.join("onnxruntime.dll");
+        if !status.success() || !extracted.exists() {
+            return Err(format!("tar failed extracting {}", tgz.display()).into());
+        }
+        if extracted != *lib {
+            std::fs::rename(&extracted, lib)?;
+        }
+        let _ = std::fs::remove_file(&tgz);
+        info!(path = %lib.display(), "runtime installed");
+        return Ok(());
+    }
     // The release tarball holds `<name>/lib/libonnxruntime.so.<ver>` on
     // Linux or `<name>/lib/libonnxruntime.<ver>.dylib` on macOS, plus
     // symlinks. Extract just the versioned library and place it at `lib`.
