@@ -18,6 +18,8 @@ pub enum Command {
     Import { opml: PathBuf, write: bool },
     /// Find the feeds an outlet's page advertises.
     Discover { url: String, write: bool },
+    /// Precision/recall of the assignment step on a labelled pair set.
+    Eval { pairs: PathBuf, json: bool },
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -38,6 +40,7 @@ commands:
   replay --fixtures <dir>
   import --opml <file> [--write]   print (or append) feeds/outlets from an OPML list
   discover <url> [--write]         print (or append) feeds advertised by a page
+  eval --pairs <tsv> [--json]      precision/recall sweep on labelled pairs
 ";
 
 pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
@@ -84,6 +87,10 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         "import" => Command::Import {
             opml: flag("--opml")?.into(),
             write: rest.iter().any(|x| x == "--write"),
+        },
+        "eval" => Command::Eval {
+            pairs: flag("--pairs")?.into(),
+            json: rest.iter().any(|x| x == "--json"),
         },
         "discover" => Command::Discover {
             url: rest

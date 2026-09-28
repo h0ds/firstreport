@@ -6,6 +6,7 @@ mod cli;
 mod cluster;
 mod config;
 mod embed;
+mod eval;
 mod fetch;
 mod lang;
 mod parse;
@@ -76,6 +77,7 @@ async fn main() {
             info!(%older_than, "prune: not implemented (M6)");
             Ok(())
         }
+        cli::Command::Eval { pairs, json } => eval::run(&cfg, &pairs, json),
         cli::Command::Import { opml, write } => tooling::import_opml(
             &args.config_dir,
             &opml,
