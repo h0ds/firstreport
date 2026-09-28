@@ -27,6 +27,7 @@ Contract version {CONTRACT_VERSION}. Outlet ids are the same as in Kagami feed.
 - `GET /v1/search?q=` - find an outlet by name, id or domain
 - `GET /v1/sources` - the source registry with licences and refresh intervals
 - `GET /v1/stats`
+- `GET /v1/openapi.json` - OpenAPI 3.1 description of all of the above
 - `GET /lookup` - the same data as a page for people
 
 ## Rules of use

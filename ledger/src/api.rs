@@ -27,6 +27,7 @@ pub fn router(ledger: Arc<Ledger>, registry: Vec<FeedOutlet>) -> Router {
         .route("/v1/search", get(search))
         .route("/lookup", get(lookup_page))
         .route("/llms.txt", get(llms_txt))
+        .route("/v1/openapi.json", get(openapi))
         .route("/robots.txt", get(robots_txt))
         .route("/v1/outlets", get(outlets))
         .route("/v1/outlets/{id}", get(outlet))
@@ -53,6 +54,10 @@ async fn llms_txt() -> Response {
         crate::agents::llms_txt(),
     )
         .into_response()
+}
+
+async fn openapi() -> Response {
+    Json(crate::openapi::spec()).into_response()
 }
 
 async fn robots_txt() -> Response {
@@ -483,6 +488,17 @@ mod tests {
             .await
             .unwrap();
         assert_eq!(r.status(), 200);
+        let (st, spec) = json(&app, "/v1/openapi.json").await;
+        assert_eq!(st, 200);
+        assert_eq!(spec["openapi"], "3.1.0");
+        for p in crate::openapi::sample_paths() {
+            let r = app
+                .clone()
+                .oneshot(Request::builder().uri(&p).body(Body::empty()).unwrap())
+                .await
+                .unwrap();
+            assert_ne!(r.status(), 404, "documented path {p} is not routed");
+        }
         let (_, v) = json(&app, "/v1/outlets/bbc").await;
         assert_eq!(
             v["fields"]["bias"].as_array().unwrap().len(),

@@ -171,6 +171,8 @@ GET /v1/outlets/{id}                  all claims for one outlet
 GET /v1/outlets/{id}/{field}          claims for one field
 GET /v1/sources                       the source registry
 GET /v1/stats
+GET /v1/openapi.json                  OpenAPI 3.1 for the routes above
+GET /llms.txt, /robots.txt            for machine readers (design §11)
 ```
 
 ## 8. Milestones
