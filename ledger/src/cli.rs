@@ -26,11 +26,18 @@ pub struct Args {
     /// feed's outlets.toml; enables outlet-id validation and drives import.
     pub outlets: Option<PathBuf>,
     pub bind: Option<String>,
+    /// Directory of a `feed export --format ndjson`; drives `import feed_behaviour`.
+    pub feed_export: Option<PathBuf>,
+    /// feed API base, used as the ref_url of observed claims.
+    pub feed_api: String,
+    /// Window in days for observed behaviour.
+    pub window_days: i64,
     pub command: Command,
 }
 
 pub const USAGE: &str = "\
-usage: ledger [--data <dir>] [--outlets <feed outlets.toml>] [--bind <addr>] <command>
+usage: ledger [--data <dir>] [--outlets <feed outlets.toml>] [--bind <addr>]
+              [--feed-export <dir>] [--feed-api <url>] [--window <days>] <command>
 
 commands:
   check                              validate sources and claims
@@ -38,7 +45,9 @@ commands:
   export --out <dir>                 claims.ndjson, sources.ndjson, outlets.ndjson
   refresh [--write]                  re-import scheduled sources that are due (list unless --write)
   import <source> [--only <id>] [--write]
-                                     pull claims from a source (wikidata); print unless --write
+                                     pull claims from a source; print unless --write
+                                     sources: wikidata, wikipedia_rsp, rdap,
+                                     feed_behaviour (needs --feed-export; --window default 90)
 ";
 
 pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
@@ -46,6 +55,9 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let mut data_dir = PathBuf::from("data");
     let mut outlets = None;
     let mut bind = None;
+    let mut feed_export = None;
+    let mut feed_api = String::from("http://127.0.0.1:8080");
+    let mut window_days = crate::behaviour::DEFAULT_WINDOW_DAYS;
     while let Some(a) = it.peek() {
         match a.as_str() {
             "--data" => {
@@ -59,6 +71,22 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
             "--bind" => {
                 it.next();
                 bind = Some(it.next().ok_or("--bind needs a value")?);
+            }
+            "--feed-export" => {
+                it.next();
+                feed_export = Some(it.next().ok_or("--feed-export needs a value")?.into());
+            }
+            "--feed-api" => {
+                it.next();
+                feed_api = it.next().ok_or("--feed-api needs a value")?;
+            }
+            "--window" => {
+                it.next();
+                window_days = it
+                    .next()
+                    .and_then(|v| v.parse().ok())
+                    .filter(|d: &i64| *d > 0)
+                    .ok_or("--window needs a positive number of days")?;
             }
             _ => break,
         }
@@ -94,6 +122,9 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         data_dir,
         outlets,
         bind,
+        feed_export,
+        feed_api,
+        window_days,
         command,
     })
 }
@@ -130,6 +161,11 @@ mod tests {
             parse(argv("refresh --write")).unwrap().command,
             Command::Refresh { write: true }
         );
+        let a = parse(argv("--feed-export out --window 30 import feed_behaviour")).unwrap();
+        assert_eq!(a.feed_export, Some(PathBuf::from("out")));
+        assert_eq!(a.window_days, 30);
+        assert_eq!(a.feed_api, "http://127.0.0.1:8080");
+        assert!(parse(argv("--window 0 check")).is_err());
         assert!(parse(argv("export")).is_err());
         assert!(parse(argv("import --write")).is_err());
     }

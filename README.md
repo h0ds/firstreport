@@ -55,8 +55,9 @@ contract and API docs. `feed` is at v0.1.0 with the data contract
 frozen at v1; it is complete and verified offline, and has not yet run
 against live feeds. See `feed/docs/plan.md` §11.
 
-`ledger` is at L2c: file-backed claim store with validation, refresh
+`ledger` is at L2d: file-backed claim store with validation, refresh
 tracking, read-only API with search and a `/lookup` page, export, and
 importers for Wikidata, Wikipedia's perennial sources list and domain
-registration data via RDAP, tested offline. See
+registration data via RDAP, plus feed behaviour measured from `feed`'s
+own export. See
 `ledger/docs/plan.md` §8.

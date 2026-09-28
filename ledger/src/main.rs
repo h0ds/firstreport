@@ -57,7 +57,7 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
         "ledger loaded"
     );
 
-    match args.command {
+    match args.command.clone() {
         cli::Command::Check => {
             let findings = store::check(&ledger, outlet_ids.as_deref());
             let errors = findings.iter().filter(|f| f.is_error()).count();
@@ -112,6 +112,12 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                         import_perennial(&args.data_dir, &ledger, &outlets, write).await?
                     }
                     "rdap" => import_rdap(&args.data_dir, &ledger, &outlets, write).await?,
+                    "feed_behaviour" if args.feed_export.is_some() => {
+                        import_behaviour(&args, &ledger, &outlets, write)?
+                    }
+                    "feed_behaviour" => {
+                        warn!("feed_behaviour due; pass --feed-export <dir> to refresh it")
+                    }
                     other => warn!(source = other, "due but has no importer; refresh by hand"),
                 }
             }
@@ -164,9 +170,10 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                 "wikidata" => wikidata::SOURCE_ID,
                 "wikipedia_rsp" | "perennial" => perennial::SOURCE_ID,
                 "rdap" => rdap::SOURCE_ID,
+                "feed_behaviour" | "behaviour" => behaviour::SOURCE_ID,
                 other => {
                     return Err(format!(
-                        "no importer for {other:?}; available: wikidata, wikipedia_rsp, rdap"
+                        "no importer for {other:?}; available: wikidata, wikipedia_rsp, rdap, feed_behaviour"
                     )
                     .into())
                 }
@@ -179,6 +186,7 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                     import_wikidata(&args.data_dir, &ledger, &outlets, write).await
                 }
                 rdap::SOURCE_ID => import_rdap(&args.data_dir, &ledger, &outlets, write).await,
+                behaviour::SOURCE_ID => import_behaviour(&args, &ledger, &outlets, write),
                 _ => import_perennial(&args.data_dir, &ledger, &outlets, write).await,
             }
         }
@@ -417,6 +425,77 @@ async fn import_rdap(
         outlets = outlets.len(),
         written = write,
         "rdap import done"
+    );
+    if !write {
+        println!("# re-run with --write to store these claims");
+    }
+    Ok(())
+}
+
+/// Observed behaviour from feed's export: no network, one pass over
+/// the NDJSON files, claims only for outlets with enough items.
+fn import_behaviour(
+    args: &cli::Args,
+    ledger: &store::Ledger,
+    outlets: &[store::FeedOutlet],
+    write: bool,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let export_dir = args
+        .feed_export
+        .as_ref()
+        .ok_or("import feed_behaviour needs --feed-export <dir of feed export --format ndjson>")?;
+    let report = behaviour::measure(export_dir, args.window_days)?;
+    info!(
+        outlets_in_export = report.outlets.len(),
+        window_days = report.window.days(),
+        window_end = %behaviour::date(report.window.end),
+        "feed export measured"
+    );
+    let now = now_secs();
+    let mut matched_outlets = 0;
+    let mut thin = 0;
+    let mut total = 0;
+    for o in outlets {
+        let Some(counts) = report.outlets.get(&o.id) else {
+            continue;
+        };
+        let fresh = behaviour::claims(&o.id, counts, &report.window, &args.feed_api, now);
+        if fresh.is_empty() {
+            thin += 1;
+            continue;
+        }
+        let problems: Vec<_> = fresh
+            .iter()
+            .flat_map(|c| model::validate_claim(c, &ledger.sources, None))
+            .filter(|f| f.is_error())
+            .collect();
+        if !problems.is_empty() {
+            for p in &problems {
+                error!(outlet = %o.id, "{p}");
+            }
+            continue;
+        }
+        matched_outlets += 1;
+        total += fresh.len();
+        if write {
+            let existing = ledger.claims.get(&o.id).cloned().unwrap_or_default();
+            let merged = store::merge_source(&existing, behaviour::SOURCE_ID, fresh);
+            store::write_outlet(&args.data_dir, &o.id, merged)?;
+            info!(outlet = %o.id, "written");
+        } else {
+            println!("# {}  ({} items in window)", o.id, counts.items);
+            for c in &fresh {
+                println!("  {:<18} {}", c.field, c.value);
+            }
+        }
+    }
+    info!(
+        matched_outlets,
+        too_few_items = thin,
+        claims = total,
+        outlets = outlets.len(),
+        written = write,
+        "feed_behaviour import done"
     );
     if !write {
         println!("# re-run with --write to store these claims");

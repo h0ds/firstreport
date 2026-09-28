@@ -31,7 +31,7 @@ Source {
   name:     string
   url:      string
   licence:  string    // SPDX id or a short name: "CC0-1.0", "CC-BY-SA-4.0", "proprietary"
-  kind:     "database" | "community" | "rating"
+  kind:     "database" | "community" | "rating" | "observed"
   notes:    string    // how it is used, what its terms allow
 }
 
@@ -75,6 +75,17 @@ with a link to the discussion. Consumers weigh them; `ledger` doesn't.
 | `reliability` | a rater's or community's reliability verdict | wikipedia_rsp, others |
 | `domain_registered` | registration date of a registrable domain, per registry | rdap |
 | `registrar` | the domain's registrar of record | rdap |
+| `posting_cadence` | items per day over the window | feed_behaviour |
+| `revision_rate` | share of items revised after publication | feed_behaviour |
+| `withdrawal_rate` | share of items withdrawn | feed_behaviour |
+| `syndication_share` | share of items whose text first appeared elsewhere, and share carried by others | feed_behaviour |
+| `origin_share` | share of multi-outlet stories the outlet published first | feed_behaviour |
+
+The `feed_behaviour` fields are measurements Kagami makes itself. Each
+claim carries the window, the counts and the denominator, and no
+outlet with fewer than ten items in the window gets one. They describe
+what a feed does, not whether that is good: a wire service is meant to
+be copied, a live blog is meant to be revised.
 
 Fields are open: an importer may add one, and `ledger check` warns on
 unknown fields rather than failing, so a new source doesn't need a
@@ -97,6 +108,10 @@ schema change.
    domains was registered, by which registrar, with what status. A
    three-month-old domain is a different thing from one from 1995, and
    the ledger says which without judging.
+6. **Feed behaviour** (Kagami's own measurement, from `feed`'s export).
+   Cadence, revision and withdrawal rates, syndication in both
+   directions, origin share. No network; refresh weekly from a fresh
+   export.
 
 the aggregator's labels are an aggregation of 3 and 4 and are not a
 source; they remain a private answer key for checking `ledger`'s own
@@ -120,6 +135,7 @@ ledger/
     wikidata.rs             SPARQL query and response → claims
     perennial.rs            perennial sources table → claims
     rdap.rs                 registry RDAP record → claims
+    behaviour.rs            feed export → observed-behaviour claims
     api.rs                  read-only HTTP
     export.rs               NDJSON
 ```
@@ -130,7 +146,8 @@ ledger/
 ledger check                       validate data/ against sources and feed's outlets.toml
 ledger serve [--bind]              read-only API on 127.0.0.1:8081
 ledger export --out <dir>          claims.ndjson, sources.ndjson, outlets.ndjson
-ledger import <wikidata|wikipedia_rsp|rdap> [--outlets <feed outlets.toml>] [--only <id>] [--write]
+ledger import <wikidata|wikipedia_rsp|rdap|feed_behaviour> [--outlets <feed outlets.toml>] [--only <id>] [--write]
+              feed_behaviour also needs --feed-export <dir> [--feed-api <url>] [--window <days>]
 ```
 
 `import` prints what it would add and writes only with `--write`, like
@@ -155,6 +172,7 @@ GET /v1/stats
 - **L2** Wikipedia perennial sources importer. Done: parses the rendered table, matches rows by article (from Wikidata), domain or name, one claim per row with scope. Not yet run live.
 - **L2b** Re-assessment (`refresh_days`, `check` stale report, `refresh`), `/v1/search`, and the `/lookup` page. Done.
 - **L2c** RDAP domain registration importer: one lookup per registrable domain through the rdap.org redirector, `domain_registered` and `registrar` claims linking the registry record. Done, tested against a recorded record; not yet run live.
+- **L2d** Feed-behaviour importer from `feed export`: cadence, revision and withdrawal rates, syndication share, origin share, with window and counts on every claim. Done and verified offline end to end, since it needs no network.
 - **L3** AllSides, once terms are confirmed; a `licence` gate in `check`
   refuses to serve claims from a source whose terms field says
   `no-redistribution`.

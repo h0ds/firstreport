@@ -14,9 +14,6 @@
 //! Reads the NDJSON export (`feed export --format ndjson`), which is
 //! the frozen data contract, rather than feed's database.
 
-// Wired into `ledger import` in the next commit.
-#![allow(dead_code)]
-
 use std::collections::{BTreeMap, HashMap, HashSet};
 use std::io::BufRead;
 use std::path::Path;
