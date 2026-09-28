@@ -4,29 +4,36 @@
 use std::collections::BTreeMap;
 use std::sync::Arc;
 
-use axum::extract::{Path, State};
+use axum::extract::{Path, Query, State};
 use axum::http::StatusCode;
 use axum::response::{IntoResponse, Response};
 use axum::routing::get;
 use axum::{Json, Router};
-use serde::Serialize;
+use serde::{Deserialize, Serialize};
 
 use crate::model::{Claim, Source, CONTRACT_VERSION};
-use crate::store::Ledger;
+use crate::store::{FeedOutlet, Ledger};
 
 #[derive(Clone)]
 pub struct AppState {
     pub ledger: Arc<Ledger>,
+    /// feed's outlet registry, so outlets without claims are still
+    /// findable and the answer "not assessed yet" can be given.
+    pub outlets: Arc<Vec<FeedOutlet>>,
 }
 
-pub fn router(ledger: Arc<Ledger>) -> Router {
+pub fn router(ledger: Arc<Ledger>, registry: Vec<FeedOutlet>) -> Router {
     Router::new()
+        .route("/v1/search", get(search))
         .route("/v1/outlets", get(outlets))
         .route("/v1/outlets/{id}", get(outlet))
         .route("/v1/outlets/{id}/{field}", get(outlet_field))
         .route("/v1/sources", get(sources))
         .route("/v1/stats", get(stats))
-        .with_state(AppState { ledger })
+        .with_state(AppState {
+            ledger,
+            outlets: Arc::new(registry),
+        })
 }
 
 #[derive(Serialize)]
@@ -152,6 +159,137 @@ async fn outlet_field(
     }
 }
 
+#[derive(Deserialize)]
+struct SearchQ {
+    q: Option<String>,
+    limit: Option<usize>,
+}
+
+#[derive(Serialize)]
+struct SearchHit {
+    id: String,
+    name: String,
+    domains: Vec<String>,
+    claims: usize,
+    stale: usize,
+    /// Which of id, name or a domain matched.
+    matched: &'static str,
+}
+
+/// Case-insensitive substring search over outlet id, name and domains.
+/// Covers every outlet in feed's registry, claims or not, so "no claims
+/// yet" is a real answer; registry-less ledgers search claim ids only.
+pub fn search_outlets(
+    q: &str,
+    outlets: &[FeedOutlet],
+    ledger: &Ledger,
+    now: i64,
+    limit: usize,
+) -> Vec<SearchHitOwned> {
+    let q = q.trim().to_ascii_lowercase();
+    if q.is_empty() {
+        return vec![];
+    }
+    let q_host = q
+        .trim_start_matches("https://")
+        .trim_start_matches("http://")
+        .trim_start_matches("www.")
+        .trim_end_matches('/');
+    let mut hits: Vec<(u8, SearchHitOwned)> = Vec::new();
+    let mut seen = std::collections::HashSet::new();
+    let counts = |id: &str| -> (usize, usize) {
+        ledger
+            .claims
+            .get(id)
+            .map(|cs| {
+                let stale = cs
+                    .iter()
+                    .filter(|c| {
+                        ledger
+                            .sources
+                            .iter()
+                            .find(|s| s.id == c.source_id)
+                            .map(|s| crate::model::is_stale(c, s, now))
+                            .unwrap_or(false)
+                    })
+                    .count();
+                (cs.len(), stale)
+            })
+            .unwrap_or((0, 0))
+    };
+    for o in outlets {
+        let id = o.id.to_ascii_lowercase();
+        let name = o.name.to_ascii_lowercase();
+        let rank_match = if id == q || name == q {
+            Some((0, if id == q { "id" } else { "name" }))
+        } else if o
+            .domains
+            .iter()
+            .any(|d| d.trim_start_matches("www.").eq_ignore_ascii_case(q_host))
+        {
+            Some((0, "domain"))
+        } else if id.contains(&q) {
+            Some((1, "id"))
+        } else if name.contains(&q) {
+            Some((1, "name"))
+        } else if o
+            .domains
+            .iter()
+            .any(|d| d.to_ascii_lowercase().contains(q_host))
+        {
+            Some((2, "domain"))
+        } else {
+            None
+        };
+        if let Some((rank, matched)) = rank_match {
+            let (claims, stale) = counts(&o.id);
+            seen.insert(o.id.clone());
+            hits.push((
+                rank,
+                SearchHitOwned {
+                    id: o.id.clone(),
+                    name: o.name.clone(),
+                    domains: o.domains.clone(),
+                    claims,
+                    stale,
+                    matched,
+                },
+            ));
+        }
+    }
+    for id in ledger.claims.keys() {
+        if !seen.contains(id) && id.to_ascii_lowercase().contains(&q) {
+            let (claims, stale) = counts(id);
+            hits.push((
+                1,
+                SearchHitOwned {
+                    id: id.clone(),
+                    name: String::new(),
+                    domains: vec![],
+                    claims,
+                    stale,
+                    matched: "id",
+                },
+            ));
+        }
+    }
+    hits.sort_by(|a, b| (a.0, &a.1.id).cmp(&(b.0, &b.1.id)));
+    hits.into_iter().map(|(_, h)| h).take(limit).collect()
+}
+
+pub type SearchHitOwned = SearchHit;
+
+async fn search(State(s): State<AppState>, Query(q): Query<SearchQ>) -> Response {
+    let hits = search_outlets(
+        q.q.as_deref().unwrap_or(""),
+        &s.outlets,
+        &s.ledger,
+        now_secs(),
+        q.limit.unwrap_or(20).clamp(1, 100),
+    );
+    Json(hits).into_response()
+}
+
 async fn sources(State(s): State<AppState>) -> Response {
     let v: Vec<&Source> = s.ledger.sources.iter().collect();
     Json(v).into_response()
@@ -246,7 +384,19 @@ mod tests {
 
     #[tokio::test]
     async fn routes() {
-        let app = router(Arc::new(ledger()));
+        let outlets = vec![
+            FeedOutlet {
+                id: "bbc".into(),
+                name: "BBC".into(),
+                domains: vec!["bbc.co.uk".into(), "bbc.com".into()],
+            },
+            FeedOutlet {
+                id: "npr".into(),
+                name: "NPR".into(),
+                domains: vec!["npr.org".into()],
+            },
+        ];
+        let app = router(Arc::new(ledger()), outlets);
         let (st, v) = json(&app, "/v1/outlets").await;
         assert_eq!(st, 200);
         assert_eq!(v[0]["id"], "bbc");
@@ -268,6 +418,18 @@ mod tests {
         assert_eq!(v.as_array().unwrap().len(), 2);
         assert_eq!(json(&app, "/v1/outlets/cnn").await.0, 404);
         assert_eq!(json(&app, "/v1/outlets/bbc/owner").await.0, 404);
+        let (_, v) = json(&app, "/v1/search?q=bbc").await;
+        assert_eq!(v.as_array().unwrap().len(), 1);
+        assert_eq!(v[0]["claims"], 3);
+        assert_eq!(v[0]["matched"], "id");
+        let (_, v) = json(&app, "/v1/search?q=https://www.npr.org/").await;
+        assert_eq!(v[0]["id"], "npr");
+        assert_eq!(v[0]["claims"], 0, "in the registry, not assessed yet");
+        assert_eq!(v[0]["matched"], "domain");
+        let (_, v) = json(&app, "/v1/search?q=zzz").await;
+        assert!(v.as_array().unwrap().is_empty());
+        let (_, v) = json(&app, "/v1/search").await;
+        assert!(v.as_array().unwrap().is_empty());
         let (_, v) = json(&app, "/v1/stats").await;
         assert_eq!(v["claims"], 3);
         assert_eq!(v["claims_by_field"]["bias"], 2);

@@ -39,15 +39,13 @@ async fn main() {
 
 async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
     let ledger = store::load(&args.data_dir)?;
-    let outlet_ids: Option<Vec<String>> = match &args.outlets {
-        Some(p) => Some(
-            store::load_feed_outlets(p)?
-                .into_iter()
-                .map(|o| o.id)
-                .collect(),
-        ),
+    let feed_outlets: Option<Vec<store::FeedOutlet>> = match &args.outlets {
+        Some(p) => Some(store::load_feed_outlets(p)?),
         None => None,
     };
+    let outlet_ids: Option<Vec<String>> = feed_outlets
+        .as_ref()
+        .map(|v| v.iter().map(|o| o.id.clone()).collect());
     info!(
         contract = model::CONTRACT_VERSION,
         sources = ledger.sources.len(),
@@ -128,7 +126,7 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                 return Err("refusing to serve a ledger with errors; run `ledger check`".into());
             }
             let bind = args.bind.unwrap_or_else(|| "127.0.0.1:8081".into());
-            let app = api::router(Arc::new(ledger));
+            let app = api::router(Arc::new(ledger), feed_outlets.unwrap_or_default());
             let listener = tokio::net::TcpListener::bind(&bind).await?;
             info!(%bind, "ledger api listening");
             axum::serve(listener, app)
