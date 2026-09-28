@@ -115,6 +115,22 @@ impl ActiveCluster {
         self.members.len() as u32
     }
 
+    /// Take every member of `other` into this cluster, appending them in
+    /// their existing join order. Returns `(item_id, new_rank)` for each
+    /// moved member so the store can be updated.
+    pub fn absorb(&mut self, other: ActiveCluster, now: i64) -> Vec<(u64, u32)> {
+        let mut moved = Vec::with_capacity(other.members.len());
+        let last_active = other.last_active_at;
+        for (m, v) in other.members.into_iter().zip(other.vectors) {
+            let id = m.item_id;
+            let rank = self.add(m, v, now);
+            moved.push((id, rank));
+        }
+        self.last_active_at = self.last_active_at.max(last_active);
+        self.created_at = self.created_at.min(other.created_at);
+        moved
+    }
+
     pub fn outlet_count(&self) -> u32 {
         self.outlet_counts.len() as u32
     }
@@ -183,5 +199,27 @@ mod tests {
         assert!((n - 1.0).abs() < 1e-6);
         assert!(c.centroid[0] > c.centroid[1]);
         assert_eq!(c.primary_title(), "t1");
+    }
+
+    #[test]
+    fn absorb_appends_members_and_reranks_them() {
+        let mut a = ActiveCluster::new(m(1, "a", 100), vec![1.0, 0.0], 120);
+        a.add(m(2, "b", 110), vec![1.0, 0.0], 130);
+        let mut b = ActiveCluster::new(m(3, "c", 50), vec![0.0, 1.0], 60);
+        b.add(m(4, "a", 55), vec![0.0, 1.0], 65);
+        let moved = a.absorb(b, 200);
+        assert_eq!(moved, vec![(3, 2), (4, 3)]);
+        assert_eq!(a.n(), 4);
+        assert_eq!(a.outlet_count(), 3);
+        assert_eq!(a.items_from_outlet("a"), 2);
+        assert_eq!(a.origin().item_id, 3, "origin recomputed over the union");
+        assert_eq!(a.created_at, 60, "created_at is the earlier of the two");
+        assert_eq!(a.last_active_at, 200);
+        let n = (a.centroid[0].powi(2) + a.centroid[1].powi(2)).sqrt();
+        assert!((n - 1.0).abs() < 1e-6);
+        assert!(
+            (a.centroid[0] - a.centroid[1]).abs() < 1e-6,
+            "two of each direction"
+        );
     }
 }

@@ -39,6 +39,16 @@ pub struct Assigned {
     pub events: Vec<ClusterEvent>,
 }
 
+/// One merge from a pass: `absorbed` no longer exists; its items now
+/// belong to `survivor` at the ranks in `moved`.
+#[derive(Debug)]
+pub struct Merged {
+    pub survivor: u64,
+    pub absorbed: u64,
+    pub moved: Vec<(u64, u32)>,
+    pub event: ClusterEvent,
+}
+
 fn event(ts: i64, kind: EventKind, cluster_id: u64, item_id: Option<u64>) -> ClusterEvent {
     ClusterEvent {
         ts,
@@ -147,6 +157,112 @@ impl Clusterer {
             outcome: Outcome::Created { cluster_id: id },
             events: vec![event(now, EventKind::Created, id, Some(item.id))],
         }
+    }
+
+    /// Periodic merge pass (plan §5.3): pairwise cosine over active
+    /// centroids; any pair at or above `merge_threshold` with overlapping
+    /// time windows is merged, smaller into larger, unless the union would
+    /// exceed `max_cluster_size`. Pairs are taken in descending similarity
+    /// with id tie-breaks, so the result is deterministic. A cluster takes
+    /// part in at most one merge per pass; the next pass catches the rest.
+    pub fn merge_pass(&mut self, now: i64) -> Vec<Merged> {
+        let n = self.active.len();
+        if n < 2 {
+            return vec![];
+        }
+        let threshold = self.cfg.merge_threshold;
+        let window = self.cfg.window_secs;
+        let max_size = self.cfg.max_cluster_size;
+        let mut pairs: Vec<(f32, usize, usize)> = Vec::new();
+        for i in 0..n {
+            for j in i + 1..n {
+                let (a, b) = (&self.active[i], &self.active[j]);
+                if (a.last_active_at - b.last_active_at).abs() > window || a.n() + b.n() > max_size
+                {
+                    continue;
+                }
+                let s = dot(&a.centroid, &b.centroid);
+                if s >= threshold {
+                    pairs.push((s, i, j));
+                }
+            }
+        }
+        if pairs.is_empty() {
+            return vec![];
+        }
+        pairs.sort_by(|x, y| {
+            y.0.partial_cmp(&x.0)
+                .unwrap_or(std::cmp::Ordering::Equal)
+                .then_with(|| {
+                    (self.active[x.1].id, self.active[x.2].id)
+                        .cmp(&(self.active[y.1].id, self.active[y.2].id))
+                })
+        });
+
+        let mut taken = vec![false; n];
+        let mut plan: Vec<(usize, usize)> = Vec::new(); // (survivor, absorbed)
+        for (_, i, j) in pairs {
+            if taken[i] || taken[j] {
+                continue;
+            }
+            taken[i] = true;
+            taken[j] = true;
+            let (a, b) = (&self.active[i], &self.active[j]);
+            // Larger survives; on a tie the older cluster (then lower id) does.
+            let a_survives = (
+                a.n(),
+                std::cmp::Reverse(a.created_at),
+                std::cmp::Reverse(a.id),
+            ) > (
+                b.n(),
+                std::cmp::Reverse(b.created_at),
+                std::cmp::Reverse(b.id),
+            );
+            plan.push(if a_survives { (i, j) } else { (j, i) });
+        }
+
+        // Apply from the highest index down so removals don't shift the
+        // indices still to be processed... except survivors can sit above
+        // absorbed ones, so take the absorbed clusters out by id instead.
+        let mut out = Vec::with_capacity(plan.len());
+        let absorbed_ids: Vec<(u64, u64)> = plan
+            .iter()
+            .map(|&(s, a)| (self.active[s].id, self.active[a].id))
+            .collect();
+        for (survivor_id, absorbed_id) in absorbed_ids {
+            let pos = self
+                .active
+                .iter()
+                .position(|c| c.id == absorbed_id)
+                .expect("absorbed cluster present");
+            let absorbed = self.active.remove(pos);
+            let s = self
+                .active
+                .iter()
+                .position(|c| c.id == survivor_id)
+                .expect("survivor present");
+            let moved = self.active[s].absorb(absorbed, now);
+            out.push(Merged {
+                survivor: survivor_id,
+                absorbed: absorbed_id,
+                moved,
+                event: ClusterEvent {
+                    ts: now,
+                    kind: EventKind::Merged,
+                    cluster_id: Some(absorbed_id),
+                    item_id: None,
+                    merged_into: Some(survivor_id),
+                    snapshot_id: None,
+                },
+            });
+        }
+        self.index = self
+            .active
+            .iter()
+            .enumerate()
+            .map(|(i, c)| (c.id, i))
+            .collect();
+        out
     }
 
     /// Drop clusters idle for longer than `expiry_secs`. Returns them with
@@ -281,5 +397,74 @@ mod tests {
         assert_eq!(a.events.len(), 2);
         assert_eq!(a.events[1].kind, EventKind::OriginChanged);
         assert_eq!(a.events[1].item_id, Some(2));
+    }
+
+    #[test]
+    fn merge_pass_joins_near_centroids_smaller_into_larger() {
+        // Unreachable join threshold so the seeds stay separate; merge at 0.9.
+        let mut c = Clusterer::new(ClusterCfg {
+            join_threshold: 1.01,
+            merge_threshold: 0.9,
+            ..cfg()
+        });
+        c.assign(&item(1, "x", 100, "en"), &unit(1.0, 0.0), 100);
+        c.assign(&item(2, "y", 101, "en"), &unit(1.0, 0.0), 101); // identical vector, still separate
+        c.assign(&item(3, "z", 102, "en"), &unit(1.0, 0.05), 102); // near 1 and 2
+        c.assign(&item(4, "w", 103, "en"), &unit(0.0, 1.0), 103); // far away
+        c.assign(&item(5, "v", 104, "en"), &unit(0.0, 1.0), 104); // twin of 4, but outside window below
+        assert_eq!(c.len(), 5);
+
+        let merges = c.merge_pass(200);
+        // Pairs at or above 0.9: (1,2)=1.0, (1,3),(2,3)≈0.999, (4,5)=1.0.
+        // Greedy by similarity: (1,2) and (4,5) first; 3 is left for the next pass.
+        assert_eq!(merges.len(), 2);
+        let survivors: Vec<u64> = merges.iter().map(|m| m.survivor).collect();
+        let absorbed: Vec<u64> = merges.iter().map(|m| m.absorbed).collect();
+        assert_eq!(
+            survivors,
+            vec![1, 4],
+            "equal size: the older cluster survives"
+        );
+        assert_eq!(absorbed, vec![2, 5]);
+        assert_eq!(merges[0].moved, vec![(2, 1)]);
+        assert_eq!(merges[0].event.kind, EventKind::Merged);
+        assert_eq!(merges[0].event.merged_into, Some(1));
+        assert_eq!(c.len(), 3);
+        assert!(c.get(2).is_none() && c.get(5).is_none());
+        assert_eq!(c.get(1).unwrap().n(), 2);
+
+        let second = c.merge_pass(201);
+        assert_eq!(second.len(), 1);
+        assert_eq!(
+            (second[0].survivor, second[0].absorbed),
+            (1, 3),
+            "larger survives"
+        );
+        assert_eq!(second[0].moved, vec![(3, 2)]);
+        assert_eq!(c.len(), 2);
+        assert!(c.merge_pass(202).is_empty());
+    }
+
+    #[test]
+    fn merge_pass_respects_window_and_size() {
+        let mut c = Clusterer::new(ClusterCfg {
+            join_threshold: 1.01,
+            merge_threshold: 0.9,
+            max_cluster_size: 2,
+            ..cfg()
+        });
+        c.assign(&item(1, "x", 100, "en"), &unit(1.0, 0.0), 100);
+        c.assign(&item(2, "y", 5000, "en"), &unit(1.0, 0.0), 5000); // outside the 1000 s window of 1
+        assert!(c.merge_pass(5000).is_empty(), "window blocks the merge");
+        c.assign(&item(3, "z", 5001, "en"), &unit(1.0, 0.0), 5001);
+        c.assign(&item(4, "w", 5002, "en"), &unit(1.0, 0.0), 5002);
+        // 2, 3, 4 are all mergeable pairwise; with max size 2 only one pair merges.
+        let m = c.merge_pass(5003);
+        assert_eq!(m.len(), 1);
+        assert_eq!(c.get(m[0].survivor).unwrap().n(), 2);
+        assert!(
+            c.merge_pass(5004).is_empty(),
+            "union would exceed max_cluster_size"
+        );
     }
 }
