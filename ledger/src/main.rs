@@ -66,9 +66,55 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             if outlet_ids.is_none() {
                 warn!("no --outlets given; outlet ids were not checked against feed");
             }
-            println!("{} findings, {} errors", findings.len(), errors);
+            let now = now_secs();
+            let stale = store::stale(&ledger, now);
+            for (id, c, days) in &stale {
+                println!(
+                    "stale: {id}/{} from {} is {days} days old",
+                    c.field, c.source_id
+                );
+            }
+            let due = store::due_sources(&ledger, now);
+            println!(
+                "{} findings, {} errors, {} stale claims; sources due for refresh: {}",
+                findings.len(),
+                errors,
+                stale.len(),
+                if due.is_empty() {
+                    "none".to_string()
+                } else {
+                    due.join(", ")
+                }
+            );
             if errors > 0 {
                 return Err(format!("{errors} errors").into());
+            }
+            Ok(())
+        }
+        cli::Command::Refresh { write } => {
+            let now = now_secs();
+            let due = store::due_sources(&ledger, now);
+            if due.is_empty() {
+                println!("nothing due");
+                return Ok(());
+            }
+            let outlets_path = args
+                .outlets
+                .as_ref()
+                .ok_or("refresh needs --outlets <feed outlets.toml>")?;
+            let outlets = store::load_feed_outlets(outlets_path)?;
+            for source_id in &due {
+                info!(source = %source_id, "due for refresh");
+                match source_id.as_str() {
+                    "wikidata" => import_wikidata(&args.data_dir, &ledger, &outlets, write).await?,
+                    "wikipedia_rsp" => {
+                        import_perennial(&args.data_dir, &ledger, &outlets, write).await?
+                    }
+                    other => warn!(source = other, "due but has no importer; refresh by hand"),
+                }
+            }
+            if !write {
+                println!("# re-run with --write to store refreshed claims");
             }
             Ok(())
         }
@@ -132,6 +178,13 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             }
         }
     }
+}
+
+fn now_secs() -> i64 {
+    std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_secs() as i64)
+        .unwrap_or(0)
 }
 
 async fn import_wikidata(

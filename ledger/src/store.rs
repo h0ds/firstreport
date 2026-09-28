@@ -147,6 +147,41 @@ pub fn load_feed_outlets(path: &Path) -> Result<Vec<FeedOutlet>, StoreError> {
     Ok(f.outlets)
 }
 
+/// Claims past their source's refresh interval: `(outlet, claim, age_days)`.
+pub fn stale(ledger: &Ledger, now: i64) -> Vec<(String, Claim, i64)> {
+    let mut out = Vec::new();
+    for (id, claims) in &ledger.claims {
+        for c in claims {
+            if let Some(s) = ledger.sources.iter().find(|s| s.id == c.source_id) {
+                if crate::model::is_stale(c, s, now) {
+                    out.push((id.clone(), c.clone(), crate::model::age_days(c, now)));
+                }
+            }
+        }
+    }
+    out
+}
+
+/// Sources that are due for re-import: scheduled, and either never
+/// imported or holding at least one stale claim.
+pub fn due_sources(ledger: &Ledger, now: i64) -> Vec<String> {
+    ledger
+        .sources
+        .iter()
+        .filter(|s| s.refresh_days > 0)
+        .filter(|s| {
+            let mine: Vec<&Claim> = ledger
+                .claims
+                .values()
+                .flatten()
+                .filter(|c| c.source_id == s.id)
+                .collect();
+            mine.is_empty() || mine.iter().any(|c| crate::model::is_stale(c, s, now))
+        })
+        .map(|s| s.id.clone())
+        .collect()
+}
+
 /// Every finding across the ledger.
 pub fn check(ledger: &Ledger, outlet_ids: Option<&[String]>) -> Vec<Finding> {
     let mut out = Vec::new();
@@ -250,6 +285,44 @@ mod tests {
             .iter()
             .any(|f| f.to_string().contains("unknown source \"allsides\"")));
         let _ = std::fs::remove_dir_all(&d);
+    }
+
+    #[test]
+    fn stale_and_due_follow_schedules() {
+        let mut l = Ledger::default();
+        l.sources.push(crate::model::Source {
+            id: "wikidata".into(),
+            name: "W".into(),
+            url: String::new(),
+            licence: "CC0-1.0".into(),
+            kind: SourceKind::Database,
+            notes: String::new(),
+            no_redistribution: false,
+            refresh_days: 0,
+        });
+        l.claims.insert(
+            "bbc".into(),
+            vec![claim("bbc", "country", "wikidata", "UK")],
+        ); // retrieved 1_700_000_000
+        let day = crate::model::SECS_PER_DAY;
+        let now = 1_700_000_000 + 400 * day;
+        assert!(stale(&l, now).is_empty(), "no schedule");
+        assert!(due_sources(&l, now).is_empty());
+        l.sources[0].refresh_days = 90;
+        let st = stale(&l, now);
+        assert_eq!(st.len(), 1);
+        assert_eq!(st[0].2, 400);
+        assert_eq!(due_sources(&l, now), vec!["wikidata"]);
+        assert!(
+            due_sources(&l, 1_700_000_000 + 10 * day).is_empty(),
+            "fresh claims: not due"
+        );
+        l.claims.clear();
+        assert_eq!(
+            due_sources(&l, 1_700_000_000),
+            vec!["wikidata"],
+            "never imported: due"
+        );
     }
 
     #[test]

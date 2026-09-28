@@ -10,6 +10,8 @@ pub enum Command {
     Serve,
     /// NDJSON export.
     Export { out: PathBuf },
+    /// Re-import every scheduled source that is due. `write` false lists them.
+    Refresh { write: bool },
     /// Pull claims from a source. `write` false prints the proposal.
     Import {
         source: String,
@@ -34,6 +36,7 @@ commands:
   check                              validate sources and claims
   serve                              read-only API (default 127.0.0.1:8081)
   export --out <dir>                 claims.ndjson, sources.ndjson, outlets.ndjson
+  refresh [--write]                  re-import scheduled sources that are due (list unless --write)
   import <source> [--only <id>] [--write]
                                      pull claims from a source (wikidata); print unless --write
 ";
@@ -70,6 +73,9 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let command = match cmd.as_str() {
         "check" => Command::Check,
         "serve" => Command::Serve,
+        "refresh" => Command::Refresh {
+            write: rest.iter().any(|x| x == "--write"),
+        },
         "export" => Command::Export {
             out: flag("--out").ok_or("export requires --out <dir>")?.into(),
         },
@@ -120,6 +126,10 @@ mod tests {
             }
         );
         assert_eq!(parse(argv("check")).unwrap().command, Command::Check);
+        assert_eq!(
+            parse(argv("refresh --write")).unwrap().command,
+            Command::Refresh { write: true }
+        );
         assert!(parse(argv("export")).is_err());
         assert!(parse(argv("import --write")).is_err());
     }

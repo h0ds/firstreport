@@ -43,6 +43,24 @@ pub struct Source {
     /// refuses to serve such claims (plan §8, L3).
     #[serde(default)]
     pub no_redistribution: bool,
+    /// How often this source's claims should be re-imported. 0 means no
+    /// schedule (hand-entered sources). `check` reports claims older than
+    /// this; `refresh` re-imports sources that are due.
+    #[serde(default)]
+    pub refresh_days: u32,
+}
+
+pub const SECS_PER_DAY: i64 = 86_400;
+
+/// Days since the claim was retrieved.
+pub fn age_days(c: &Claim, now: i64) -> i64 {
+    (now - c.retrieved_at).max(0) / SECS_PER_DAY
+}
+
+/// Older than the source's refresh interval. Never stale for sources
+/// without a schedule.
+pub fn is_stale(c: &Claim, source: &Source, now: i64) -> bool {
+    source.refresh_days > 0 && age_days(c, now) > source.refresh_days as i64
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -156,6 +174,7 @@ mod tests {
             kind: SourceKind::Database,
             notes: String::new(),
             no_redistribution: no_redist,
+            refresh_days: 0,
         }
     }
 
@@ -171,6 +190,18 @@ mod tests {
             as_of: None,
             note: None,
         }
+    }
+
+    #[test]
+    fn staleness_follows_the_source_schedule() {
+        let mut s = src("wikidata", false);
+        let c = claim("country", "wikidata"); // retrieved at 1_700_000_000
+        let now = 1_700_000_000 + 100 * SECS_PER_DAY;
+        assert_eq!(age_days(&c, now), 100);
+        assert!(!is_stale(&c, &s, now), "no schedule, never stale");
+        s.refresh_days = 90;
+        assert!(is_stale(&c, &s, now));
+        assert!(!is_stale(&c, &s, 1_700_000_000 + 90 * SECS_PER_DAY));
     }
 
     #[test]

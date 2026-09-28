@@ -69,29 +69,63 @@ async fn outlets(State(s): State<AppState>) -> Response {
     Json(out).into_response()
 }
 
+/// A claim plus its freshness against the source's schedule.
+#[derive(Serialize)]
+struct ClaimView<'a> {
+    #[serde(flatten)]
+    claim: &'a Claim,
+    age_days: i64,
+    stale: bool,
+}
+
 #[derive(Serialize)]
 struct OutletView<'a> {
     id: String,
     /// Grouped by field; every claim keeps its source. Nothing is merged.
-    fields: BTreeMap<String, Vec<&'a Claim>>,
+    fields: BTreeMap<String, Vec<ClaimView<'a>>>,
     claims: usize,
+    stale: usize,
 }
 
-fn view<'a>(id: &str, claims: &'a [Claim]) -> OutletView<'a> {
-    let mut fields: BTreeMap<String, Vec<&Claim>> = BTreeMap::new();
+fn claim_view<'a>(c: &'a Claim, sources: &[Source], now: i64) -> ClaimView<'a> {
+    let stale = sources
+        .iter()
+        .find(|s| s.id == c.source_id)
+        .map(|s| crate::model::is_stale(c, s, now))
+        .unwrap_or(false);
+    ClaimView {
+        claim: c,
+        age_days: crate::model::age_days(c, now),
+        stale,
+    }
+}
+
+fn view<'a>(id: &str, claims: &'a [Claim], sources: &[Source], now: i64) -> OutletView<'a> {
+    let mut fields: BTreeMap<String, Vec<ClaimView<'a>>> = BTreeMap::new();
+    let mut stale = 0;
     for c in claims {
-        fields.entry(c.field.clone()).or_default().push(c);
+        let v = claim_view(c, sources, now);
+        stale += v.stale as usize;
+        fields.entry(c.field.clone()).or_default().push(v);
     }
     OutletView {
         id: id.to_string(),
         fields,
         claims: claims.len(),
+        stale,
     }
+}
+
+fn now_secs() -> i64 {
+    std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_secs() as i64)
+        .unwrap_or(0)
 }
 
 async fn outlet(State(s): State<AppState>, Path(id): Path<String>) -> Response {
     match s.ledger.claims.get(&id) {
-        Some(c) => Json(view(&id, c)).into_response(),
+        Some(c) => Json(view(&id, c, &s.ledger.sources, now_secs())).into_response(),
         None => not_found("no claims for that outlet"),
     }
 }
@@ -102,7 +136,12 @@ async fn outlet_field(
 ) -> Response {
     match s.ledger.claims.get(&id) {
         Some(c) => {
-            let v: Vec<&Claim> = c.iter().filter(|x| x.field == field).collect();
+            let now = now_secs();
+            let v: Vec<ClaimView> = c
+                .iter()
+                .filter(|x| x.field == field)
+                .map(|x| claim_view(x, &s.ledger.sources, now))
+                .collect();
             if v.is_empty() {
                 not_found("no claims for that field")
             } else {
@@ -170,6 +209,16 @@ mod tests {
             as_of: None,
             note: None,
         };
+        l.sources.push(Source {
+            id: "wikidata".into(),
+            name: "Wikidata".into(),
+            url: String::new(),
+            licence: "CC0-1.0".into(),
+            kind: crate::model::SourceKind::Database,
+            notes: String::new(),
+            no_redistribution: false,
+            refresh_days: 90,
+        });
         l.claims.insert(
             "bbc".into(),
             vec![
@@ -209,6 +258,12 @@ mod tests {
             "disagreeing sources side by side"
         );
         assert_eq!(v["fields"]["country"][0]["value"], "United Kingdom");
+        assert_eq!(
+            v["fields"]["country"][0]["stale"], true,
+            "retrieved at t=1 on a 90-day schedule"
+        );
+        assert_eq!(v["fields"]["bias"][0]["stale"], false, "unscheduled source");
+        assert_eq!(v["stale"], 1);
         let (_, v) = json(&app, "/v1/outlets/bbc/bias").await;
         assert_eq!(v.as_array().unwrap().len(), 2);
         assert_eq!(json(&app, "/v1/outlets/cnn").await.0, 404);

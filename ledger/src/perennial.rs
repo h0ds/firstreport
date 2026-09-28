@@ -642,6 +642,7 @@ mod tests {
                     kind: crate::model::SourceKind::Community,
                     notes: String::new(),
                     no_redistribution: false,
+                    refresh_days: 0,
                 }],
                 None
             )
