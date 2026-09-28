@@ -58,6 +58,7 @@ pub fn simhash(text: &str) -> u64 {
 }
 
 #[inline]
+#[allow(dead_code)] // syndication grouping (M4)
 pub fn hamming(a: u64, b: u64) -> u32 {
     (a ^ b).count_ones()
 }

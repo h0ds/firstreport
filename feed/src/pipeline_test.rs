@@ -251,6 +251,67 @@ async fn fixture_through_store_and_api() {
     assert_eq!(v["process"]["items_seen"], 6);
     assert_eq!(v["process"]["items_new"], 3);
 
+    // Embedder: only when an ONNX Runtime library is available.
+    if let Ok(lib) = std::env::var("KAGAMI_ORT_LIB") {
+        let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("fixtures/models");
+        let mut ecfg = Config::default();
+        ecfg.embed.runtime_lib = lib.into();
+        ecfg.embed.model_path = root.join("tiny.onnx");
+        ecfg.embed.vocab_path = root.join("tiny-vocab.txt");
+        ecfg.embed.batch_size = 2;
+        ecfg.embed.batch_wait_ms = 20;
+        let model = crate::embed::load_from_config(&ecfg).unwrap();
+        let (tx, rx) = tokio::sync::mpsc::channel(16);
+        let (out_tx, mut out_rx) = tokio::sync::mpsc::channel(16);
+        let task = tokio::spawn(crate::embed::run(
+            Arc::new(ecfg),
+            model,
+            rx,
+            out_tx,
+            writer.clone(),
+            stats.clone(),
+        ));
+        let backlog = reader
+            .with(|c| store::reader::unembedded_since(c, 0, 10))
+            .unwrap();
+        assert_eq!(backlog.len(), 3);
+        for it in backlog {
+            tx.send(it).await.unwrap();
+        }
+        drop(tx);
+        let mut got = 0;
+        while let Some(e) = out_rx.recv().await {
+            assert_eq!(e.vector.len(), 16);
+            got += 1;
+        }
+        assert_eq!(got, 3);
+        task.await.unwrap();
+        writer.flush().await;
+        assert_eq!(
+            reader
+                .with(|c| store::reader::unembedded_since(c, 0, 10))
+                .unwrap()
+                .len(),
+            0
+        );
+        let v = reader
+            .with(|c| store::reader::get_embedding(c, rates.id))
+            .unwrap()
+            .unwrap();
+        let norm: f32 = v.iter().map(|x| x * x).sum::<f32>().sqrt();
+        assert!((norm - 1.0).abs() < 1e-5);
+        let v = body_json(app.clone().oneshot(get("/v1/stats")).await.unwrap()).await;
+        assert_eq!(v["store"]["items_embedded"], 3);
+        assert_eq!(v["process"]["items_embedded"], 3);
+        assert_eq!(
+            v["process"]["embed_batches"], 2,
+            "batch_size 2 over 3 items"
+        );
+        assert!(v["process"]["embed_latency"]["samples"].as_u64().unwrap() >= 1);
+    } else {
+        eprintln!("KAGAMI_ORT_LIB unset; embedder stage skipped");
+    }
+
     drop(writer);
     drop(poller); // holds a writer clone; the channel must close for the thread to exit
     thread.join().unwrap();

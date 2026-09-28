@@ -23,6 +23,8 @@ pub struct ParsedEntry {
 
 #[derive(Debug, Clone)]
 pub struct ParsedFeed {
+    /// Recorded for the feed table; not otherwise consumed yet.
+    #[allow(dead_code)]
     pub kind: FeedKind,
     pub entries: Vec<ParsedEntry>,
 }

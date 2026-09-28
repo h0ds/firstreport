@@ -1,6 +1,9 @@
 //! Data contract v1 (plan §4). This is the product: field additions are
 //! non-breaking, removals or type changes bump `CONTRACT_VERSION`.
 
+// Contract types land ahead of their consumers (clusters arrive at M3).
+#![allow(dead_code)]
+
 use serde::{Deserialize, Serialize};
 
 pub const CONTRACT_VERSION: u32 = 1;

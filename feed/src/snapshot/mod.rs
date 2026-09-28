@@ -47,6 +47,7 @@ pub fn read(dir: &Path, rel: &Path) -> std::io::Result<Vec<u8>> {
 }
 
 /// Delete day directories older than `retention_days`. Returns files removed.
+#[allow(dead_code)] // wired to `feed prune` and the nightly job (M6)
 pub fn prune(dir: &Path, now: i64, retention_days: u32) -> std::io::Result<usize> {
     let cutoff = now - retention_days as i64 * 86_400;
     let mut removed = 0;
@@ -86,6 +87,7 @@ pub fn civil_from_unix(ts: i64) -> (i64, u32, u32) {
     (if m <= 2 { y + 1 } else { y }, m, d)
 }
 
+#[allow(dead_code)] // used by prune
 pub fn unix_from_civil(y: i64, m: u32, d: u32) -> i64 {
     let y = if m <= 2 { y - 1 } else { y };
     let era = y.div_euclid(400);

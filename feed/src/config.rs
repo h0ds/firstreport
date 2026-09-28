@@ -46,9 +46,16 @@ impl Default for Poll {
 pub struct Embed {
     pub model_path: PathBuf,
     pub vocab_path: PathBuf,
+    /// ONNX Runtime shared library, loaded at startup. Never fetched at build time.
+    pub runtime_lib: PathBuf,
     pub max_tokens: usize,
     pub batch_size: usize,
     pub batch_wait_ms: u64,
+    /// Sources for `feed fetch-model`.
+    pub model_url: String,
+    pub vocab_url: String,
+    /// Tarball containing `lib/libonnxruntime.so*`.
+    pub runtime_url: String,
 }
 
 impl Default for Embed {
@@ -56,9 +63,13 @@ impl Default for Embed {
         Self {
             model_path: "models/minilm-l6-int8.onnx".into(),
             vocab_path: "models/vocab.txt".into(),
+            runtime_lib: "models/libonnxruntime.so".into(),
             max_tokens: 128,
             batch_size: 64,
             batch_wait_ms: 200,
+            model_url: "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/onnx/model_quint8_avx2.onnx".into(),
+            vocab_url: "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt".into(),
+            runtime_url: "https://github.com/microsoft/onnxruntime/releases/download/v1.22.0/onnxruntime-linux-x64-1.22.0.tgz".into(),
         }
     }
 }

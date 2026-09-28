@@ -172,10 +172,11 @@ Embeddings are never emitted over the JSON API (size). They are included in the 
 ### 5.2 Embedder
 
 - Model: quantized MiniLM-L6-class sentence transformer, ONNX, int8, ~22 MB. Stored under `models/`. Downloaded once by `cargo run -- fetch-model` if absent; never at build time.
-- Runtime: `ort` (ONNX Runtime) CPU execution provider, intra-op threads = physical cores.
+- Runtime: `ort` (ONNX Runtime) CPU execution provider, intra-op threads = physical cores. The `ort` crate's default feature downloads the runtime library during `cargo build`, which violates rule 2; we use `load-dynamic` instead and `fetch-model` provisions the shared library next to the model. Loaded at startup from `embed.runtime_lib`.
 - Custom WordPiece tokenizer implemented in-repo (vocab file ships with model). Avoids pulling in the full `tokenizers` crate and its dependencies.
 - Input text: `title + " . " + summary`, truncated to 128 tokens.
-- Batching: collect up to 64 items or 200 ms, whichever first. Mean-pool, L2-normalize. Output is `[f32; 384]`.
+- Batching: collect up to 64 items or 200 ms, whichever first. Mean-pool, L2-normalize. Output width is read from the model (384 for MiniLM-L6) rather than assumed, so swapping models is a config change.
+- The embedder is optional at runtime: without a model, `feed run` ingests and warns. On boot, items inside `cluster.window_secs` with no embedding are queued first, so a restart or a late-installed model catches up. `item.embedding` is therefore nullable.
 - Target: < 2 ms per item amortized on a modern laptop CPU.
 
 ### 5.3 Clusterer
@@ -244,7 +245,7 @@ CREATE TABLE item (
   lang TEXT NOT NULL, text_hash INTEGER NOT NULL,
   cluster_id INTEGER, cluster_rank INTEGER, joined_at INTEGER,
   snapshot_id INTEGER NOT NULL,
-  embedding BLOB NOT NULL           -- 384 × f32 little-endian = 1536 bytes
+  embedding BLOB                    -- dim × f32 little-endian; NULL until embedded
 );
 CREATE INDEX item_cluster ON item(cluster_id, cluster_rank);
 CREATE INDEX item_published ON item(published_at);

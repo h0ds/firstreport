@@ -44,6 +44,8 @@ pub enum WriteMsg {
     Items(Vec<Item>),
     Snapshot(SnapshotRow),
     FeedState(FeedState),
+    /// (item id, L2-normalized vector) pairs from the embedder.
+    Embeddings(Vec<(u64, Vec<f32>)>),
     /// Commit everything pending, then signal.
     Flush(oneshot::Sender<()>),
 }
@@ -126,6 +128,11 @@ fn push(batch: &mut Vec<WriteMsg>, flushes: &mut Vec<oneshot::Sender<()>>, m: Wr
             batch.push(m);
             n
         }
+        WriteMsg::Embeddings(ref v) => {
+            let n = v.len();
+            batch.push(m);
+            n
+        }
         other => {
             batch.push(other);
             1
@@ -149,6 +156,7 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
             "INSERT OR REPLACE INTO snapshot (id, feed_url, fetched_at, status, body_hash, path, item_count)
              VALUES (?1,?2,?3,?4,?5,?6,?7)",
         )?;
+        let mut up_emb = tx.prepare_cached("UPDATE item SET embedding=?2 WHERE id=?1")?;
         let mut up_feed = tx.prepare_cached(
             "INSERT INTO feed (url, outlet_id, kind, interval_secs, etag, last_modified, next_fetch_at,
                                fail_count, last_ok_at, dead)
@@ -191,6 +199,11 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                         s.item_count
                     ])?;
                 }
+                WriteMsg::Embeddings(rows) => {
+                    for (id, v) in rows {
+                        up_emb.execute(params![to_i64(id), embedding_blob(&v)])?;
+                    }
+                }
                 WriteMsg::FeedState(f) => {
                     up_feed.execute(params![
                         f.url,
@@ -210,6 +223,21 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
         }
     }
     tx.commit()
+}
+
+/// f32 little-endian, as the data contract specifies for the blob.
+pub fn embedding_blob(v: &[f32]) -> Vec<u8> {
+    let mut out = Vec::with_capacity(v.len() * 4);
+    for x in v {
+        out.extend_from_slice(&x.to_le_bytes());
+    }
+    out
+}
+
+pub fn embedding_from_blob(b: &[u8]) -> Vec<f32> {
+    b.chunks_exact(4)
+        .map(|c| f32::from_le_bytes([c[0], c[1], c[2], c[3]]))
+        .collect()
 }
 
 /// Upsert the outlet registry. Called once at boot, synchronously.

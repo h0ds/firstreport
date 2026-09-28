@@ -12,6 +12,22 @@ cargo test
 
 Runtime state lives in `data/` (gitignored): `feed.db` and `snapshots/`.
 
+## Embedding model
+
+```
+cargo run -- fetch-model
+```
+
+downloads three files into `models/` (gitignored): the int8 ONNX export of
+`all-MiniLM-L6-v2`, its WordPiece vocab, and the ONNX Runtime shared
+library. Nothing is fetched at build time; the runtime is loaded at startup
+from `embed.runtime_lib`. Without these files `feed run` still ingests and
+logs a warning; items are embedded from the backlog once they appear. Sources
+are configurable under `[embed]` in `config/feed.toml`, and the embedding
+width is taken from the model, not hardcoded.
+
+Embed latency (amortized per item, p50 and p99) is reported in `/v1/stats`.
+
 ## API (v1, read-only)
 
 | Route | Notes |

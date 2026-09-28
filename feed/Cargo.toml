@@ -26,6 +26,7 @@ whatlang = "0.18.0"
 zstd = "0.14.0"
 url = "2.5.8"
 bytes = "1.12.1"
+ort = { version = "2.0.0-rc.13", default-features = false, features = ["std", "load-dynamic", "api-27"] }
 
 [dev-dependencies]
 tower = { version = "0.5.3", features = ["util"] }

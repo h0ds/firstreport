@@ -45,6 +45,7 @@ pub struct StoreStats {
     pub feeds_total: u64,
     pub feeds_dead: u64,
     pub outlets_total: u64,
+    pub items_embedded: u64,
 }
 
 impl Reader {
@@ -112,6 +113,27 @@ pub fn has_item(c: &Connection, id: u64) -> rusqlite::Result<bool> {
     c.query_row("SELECT 1 FROM item WHERE id=?1", [to_i64(id)], |_| Ok(()))
         .optional()
         .map(|o| o.is_some())
+}
+
+#[allow(dead_code)] // clusterer rebuild-from-store (M3)
+pub fn get_embedding(c: &Connection, id: u64) -> rusqlite::Result<Option<Vec<f32>>> {
+    c.query_row(
+        "SELECT embedding FROM item WHERE id=?1",
+        [to_i64(id)],
+        |r| r.get::<_, Option<Vec<u8>>>(0),
+    )
+    .optional()
+    .map(|o| o.flatten().map(|b| super::writer::embedding_from_blob(&b)))
+}
+
+/// Items fetched since `since` that have no embedding yet, oldest first.
+/// Used on boot so a restart or a late-installed model catches up.
+pub fn unembedded_since(c: &Connection, since: i64, limit: usize) -> rusqlite::Result<Vec<Item>> {
+    let mut st = c.prepare_cached(&format!(
+        "SELECT {ITEM_COLS} FROM item WHERE embedding IS NULL AND fetched_at >= ?1 ORDER BY fetched_at ASC, id ASC LIMIT ?2"
+    ))?;
+    let rows = st.query_map(params![since, limit as i64], row_item)?;
+    rows.collect()
 }
 
 pub fn get_item(c: &Connection, id: u64) -> rusqlite::Result<Option<Item>> {
@@ -196,6 +218,7 @@ pub fn list_snapshots(
 }
 
 /// Latest snapshot for a feed, if any (used for revision diffing later).
+#[allow(dead_code)] // revision tracking (M4)
 pub fn latest_snapshot(c: &Connection, feed: &str) -> rusqlite::Result<Option<SnapshotMeta>> {
     c.query_row(
         &format!("SELECT {SNAP_COLS} FROM snapshot WHERE feed_url=?1 ORDER BY fetched_at DESC, id DESC LIMIT 1"),
@@ -271,6 +294,7 @@ pub fn stats(c: &Connection, now: i64) -> rusqlite::Result<StoreStats> {
         feeds_total: one("SELECT COUNT(*) FROM feed", &[])?,
         feeds_dead: one("SELECT COUNT(*) FROM feed WHERE dead=1", &[])?,
         outlets_total: one("SELECT COUNT(*) FROM outlet", &[])?,
+        items_embedded: one("SELECT COUNT(*) FROM item WHERE embedding IS NOT NULL", &[])?,
     })
 }
 
@@ -320,6 +344,32 @@ mod tests {
         let s = stats(&c, 105).unwrap();
         assert_eq!(s.items_total, 5);
         assert_eq!(s.items_last_hour, 5);
+    }
+
+    #[test]
+    fn embeddings_roundtrip_and_backlog() {
+        let mut c = crate::store::open_memory().unwrap();
+        commit(
+            &mut c,
+            vec![WriteMsg::Items(
+                (1..=3).map(|i| item(i, 100 + i as i64)).collect(),
+            )],
+        )
+        .unwrap();
+        assert_eq!(unembedded_since(&c, 0, 10).unwrap().len(), 3);
+        commit(
+            &mut c,
+            vec![WriteMsg::Embeddings(vec![(2, vec![0.5, -1.25, 3.0])])],
+        )
+        .unwrap();
+        assert_eq!(
+            get_embedding(&c, 2).unwrap().unwrap(),
+            vec![0.5, -1.25, 3.0]
+        );
+        assert_eq!(get_embedding(&c, 1).unwrap(), None);
+        let backlog = unembedded_since(&c, 0, 10).unwrap();
+        assert_eq!(backlog.iter().map(|i| i.id).collect::<Vec<_>>(), vec![1, 3]);
+        assert_eq!(stats(&c, 200).unwrap().items_embedded, 1);
     }
 
     #[test]
