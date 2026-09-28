@@ -4,6 +4,7 @@ mod api;
 mod cli;
 mod export;
 mod model;
+mod perennial;
 mod store;
 mod wikidata;
 
