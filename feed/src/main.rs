@@ -107,7 +107,11 @@ async fn main() {
             &loaded.outlets,
             write,
         ),
-        cli::Command::Discover { url, write } => {
+        cli::Command::Discover {
+            url: Some(url),
+            write,
+            ..
+        } => {
             tooling::discover(
                 &args.config_dir,
                 &url,
@@ -117,6 +121,25 @@ async fn main() {
             )
             .await
         }
+        cli::Command::Discover {
+            hosts: Some(hosts),
+            write,
+            limit,
+            max_per_host,
+            ..
+        } => {
+            tooling::discover_hosts(
+                &args.config_dir,
+                &hosts,
+                &loaded.feeds,
+                &loaded.outlets,
+                write,
+                limit,
+                max_per_host,
+            )
+            .await
+        }
+        cli::Command::Discover { .. } => Err("discover needs a page URL or --hosts <file>".into()),
         cli::Command::Replay { fixtures } => {
             let scratch = replay::default_scratch();
             let out = replay::run(cfg, &fixtures, &scratch).await;

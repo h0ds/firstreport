@@ -81,7 +81,14 @@ cargo run -- import --opml subscriptions.opml          # print TOML for feeds an
 cargo run -- import --opml subscriptions.opml --write  # append it to config/
 cargo run -- discover https://www.example.com          # feeds the page advertises (or conventional paths)
 cargo run -- discover https://www.example.com --write
+cargo run -- discover --hosts fixtures/golden/aggregator/aggregator-domains.txt --limit 100
+cargo run -- discover --hosts hosts.txt --max-per-host 2 --write
 ```
+
+`--hosts` walks a host list (one per line; the a news aggregator domains file
+works as is) with bounded concurrency, keeps up to `--max-per-host`
+feeds per site preferring RSS and Atom and skipping comment feeds, and
+lists the hosts that advertised nothing so they can be handled by hand.
 
 Outlet ids for unknown hosts are guessed from the registrable domain
 (`news.bbc.co.uk` → `bbc`); edit the appended entries if the guess is
