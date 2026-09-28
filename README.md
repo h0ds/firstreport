@@ -13,11 +13,11 @@ Rust, single binary per tool, runs entirely locally. Three pillars, built in ord
 | Tool | Pillar | Job |
 |---|---|---|
 | [`feed/`](feed/) | 1 | Ingest headlines, cluster them into stories, record propagation. Neutral by construction. |
-| `ledger/` | 2 | Bias, factuality, ownership data keyed by outlet id. Not started. |
+| [`ledger/`](ledger/) | 2 | Sourced facts about outlets keyed by outlet id: ownership, country, founding, third-party ratings, each with its source and licence. Never a score. |
 | `lens/` | 3 | Presentation over `feed` and `ledger`. Not started. |
 
 `feed/docs/plan.md` is the full plan for pillar 1, including the project rules
-that apply to every pillar.
+that apply to every pillar. `ledger/docs/plan.md` is pillar 2's.
 
 ## Visual layer
 
@@ -54,3 +54,7 @@ M6 added NDJSON and Parquet export, `prune`, the nightly job, and the
 contract and API docs. `feed` is at v0.1.0 with the data contract
 frozen at v1; it is complete and verified offline, and has not yet run
 against live feeds. See `feed/docs/plan.md` §11.
+
+`ledger` is at L1: file-backed claim store with validation, read-only
+API, export, and a Wikidata importer tested offline. See
+`ledger/docs/plan.md` §8.
