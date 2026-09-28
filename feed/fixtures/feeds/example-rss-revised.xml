@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Example World</title>
+  <link>https://www.example.com/</link>
+  <language>en-gb</language>
+  <item>
+    <title>Central bank holds rates, drops hint of cuts after data surprise</title>
+    <link>https://www.example.com/world/2024/01/01/rates?utm_source=rss&amp;utm_medium=feed</link>
+    <description><![CDATA[<p>The central bank kept its benchmark rate unchanged on Monday, while <b>hinting</b> that cuts could follow later this year.</p>]]></description>
+    <pubDate>Mon, 01 Jan 2024 09:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Syndicated: agency wire story</title>
+    <link>https://news.bbc.co.uk/wire/123</link>
+    <description>Agency wire copy republished by a different outlet.</description>
+    <pubDate>Mon, 01 Jan 2024 06:00:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

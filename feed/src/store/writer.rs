@@ -56,6 +56,18 @@ pub enum WriteMsg {
     },
     ClusterUpsert(ClusterRow),
     Event(ClusterEvent),
+    /// An item's text as seen in a snapshot. The item row is updated to the
+    /// latest text; the embedding is left alone (cluster stability).
+    Revision {
+        item_id: u64,
+        snapshot_id: u64,
+        seen_at: i64,
+        title: String,
+        summary: String,
+        /// Whether to overwrite `item.title` / `item.summary`. False when
+        /// recording the original text retroactively.
+        apply: bool,
+    },
     /// Commit everything pending, then signal.
     Flush(oneshot::Sender<()>),
 }
@@ -179,6 +191,11 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                outlet_count=excluded.outlet_count, primary_title=excluded.primary_title,
                centroid=excluded.centroid, expired=excluded.expired",
         )?;
+        let mut ins_rev = tx.prepare_cached(
+            "INSERT OR IGNORE INTO item_revision (item_id, snapshot_id, seen_at, title, summary)
+             VALUES (?1,?2,?3,?4,?5)",
+        )?;
+        let mut up_text = tx.prepare_cached("UPDATE item SET title=?2, summary=?3 WHERE id=?1")?;
         let mut ins_event = tx.prepare_cached(
             "INSERT INTO cluster_event (ts, kind, cluster_id, item_id, merged_into, snapshot_id)
              VALUES (?1,?2,?3,?4,?5,?6)",
@@ -254,6 +271,25 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                         embedding_blob(&c.centroid),
                         c.expired as i32
                     ])?;
+                }
+                WriteMsg::Revision {
+                    item_id,
+                    snapshot_id,
+                    seen_at,
+                    title,
+                    summary,
+                    apply,
+                } => {
+                    ins_rev.execute(params![
+                        to_i64(item_id),
+                        to_i64(snapshot_id),
+                        seen_at,
+                        title,
+                        summary
+                    ])?;
+                    if apply {
+                        up_text.execute(params![to_i64(item_id), title, summary])?;
+                    }
                 }
                 WriteMsg::Event(e) => {
                     let kind = serde_json::to_value(e.kind)

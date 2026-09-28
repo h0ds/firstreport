@@ -42,7 +42,8 @@ a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{te
 .spark path{fill:none;stroke:var(--kg-blue);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
 .spark .area{fill:var(--kg-blue-soft);fill-opacity:.4;stroke:none}
 .items{margin:8px 0 0;padding:0;list-style:none;display:none}
-.cluster.open .items{display:block}
+.curve{display:none;margin:12px 0 4px;font-family:var(--kg-font-sans)}
+.cluster.open .items,.cluster.open .curve{display:block}
 .items li{display:grid;grid-template-columns:72px 110px 1fr;gap:12px;padding:4px 0;color:var(--kg-text-secondary);font-size:13px;border-top:1px solid var(--kg-bg-subtle)}
 .empty{color:var(--kg-text-muted);padding:24px 0}
 @keyframes kg-fade-in{from{opacity:0}to{opacity:1}}
@@ -77,6 +78,28 @@ function spark(tl, now){
   const line = pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+','+p[1].toFixed(1)).join(' ');
   return `<svg class="spark" viewBox="0 0 80 20" preserveAspectRatio="none" aria-hidden="true"><path class="area" d="${line} L80,20 L0,20 Z"/><path d="${line}"/></svg>`;
 }
+// Spread curve for an expanded cluster: cumulative outlets (blue) and
+// items (grey) against time since the first join. Axes are the baseline
+// and the left edge; labels are the span and the final counts.
+function curve(tl, now){
+  if (!tl || tl.length < 2) return '';
+  const W = 320, H = 80, L = 28, B = 16;
+  const t0 = tl[0].joined_at, span = Math.max(60, tl[tl.length-1].joined_at - t0);
+  const seen = new Set(); let o = 0;
+  const pts = tl.map((j, i) => { if (!seen.has(j.outlet_id)) { seen.add(j.outlet_id); o++; } return [L + (W-L) * (j.joined_at - t0) / span, i + 1, o]; });
+  const maxI = tl.length, sy = v => H - B - (H - B - 4) * v / maxI;
+  const step = (idx) => pts.map((p, k) => (k ? `L${p[0].toFixed(1)},${sy(pts[k-1][idx]).toFixed(1)} ` : `M${p[0].toFixed(1)},${sy(0).toFixed(1)} `) + `L${p[0].toFixed(1)},${sy(p[idx]).toFixed(1)}`).join(' ');
+  const label = span < 3600 ? Math.round(span/60) + ' min' : span < 86400 ? (span/3600).toFixed(1) + ' h' : (span/86400).toFixed(1) + ' d';
+  return `<svg class="curve" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-label="spread curve">
+    <line x1="${L}" y1="${H-B}" x2="${W}" y2="${H-B}" stroke="var(--kg-line)"/>
+    <line x1="${L}" y1="4" x2="${L}" y2="${H-B}" stroke="var(--kg-line)"/>
+    <path d="${step(1)}" fill="none" stroke="var(--kg-line-strong)" stroke-width="1.5"/>
+    <path d="${step(2)}" fill="none" stroke="var(--kg-blue)" stroke-width="1.5"/>
+    <text x="${L-4}" y="8" text-anchor="end" font-size="11" fill="var(--kg-text-muted)">${maxI}</text>
+    <text x="${L-4}" y="${H-B}" text-anchor="end" font-size="11" fill="var(--kg-text-muted)">0</text>
+    <text x="${W}" y="${H-2}" text-anchor="end" font-size="11" fill="var(--kg-text-muted)">${label} · ${o} outlets, ${maxI} items</text>
+  </svg>`;
+}
 function render(list, now){
   const root = $('#clusters');
   if (!list.length) { root.innerHTML = '<div class="empty">No clusters yet.</div>'; return; }
@@ -98,6 +121,7 @@ function render(list, now){
         <span class="origin">${esc(c.origin_outlet_id)}</span>
         ${spark(c.timeline, now)}
       </div>
+      ${curve(c.timeline, now)}
       <ul class="items">${items}</ul>
     </article>`;
   }).join('');

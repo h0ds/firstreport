@@ -16,6 +16,8 @@ pub fn router() -> Router<AppState> {
     Router::new()
         .route("/v1/items", get(list_items))
         .route("/v1/items/{id}", get(get_item))
+        .route("/v1/items/{id}/revisions", get(item_revisions))
+        .route("/v1/syndication", get(syndication))
         .route("/v1/snapshots", get(list_snapshots))
         .route("/v1/snapshots/{id}", get(get_snapshot))
         .route("/v1/snapshots/{id}/body", get(snapshot_body))
@@ -26,6 +28,78 @@ pub fn router() -> Router<AppState> {
         .route("/v1/outlets", get(outlets))
         .route("/v1/stats", get(stats))
         .route("/debug", get(debug_page))
+}
+
+#[derive(Serialize)]
+struct RevisionsOut {
+    item_id: u64,
+    /// Current text, as `/v1/items/{id}` returns it.
+    current: crate::types::Item,
+    /// Oldest first; the first entry is the original text once any change
+    /// has been recorded. Empty means the text has never changed.
+    revisions: Vec<reader::RevisionRow>,
+}
+
+async fn item_revisions(State(s): State<AppState>, Path(id): Path<String>) -> Response {
+    let id = match parse_id(&id) {
+        Ok(i) => i,
+        Err(r) => return r,
+    };
+    let current = match s.reader.call(move |c| reader::get_item(c, id)).await {
+        Ok(Some(i)) => i,
+        Ok(None) => return err(StatusCode::NOT_FOUND, "no such item"),
+        Err(e) => return db_err(e),
+    };
+    match s.reader.call(move |c| reader::item_revisions(c, id)).await {
+        Ok(revisions) => Json(RevisionsOut {
+            item_id: id,
+            current,
+            revisions,
+        })
+        .into_response(),
+        Err(e) => db_err(e),
+    }
+}
+
+#[derive(Deserialize)]
+struct SyndicationQ {
+    text_hash: String,
+    since: Option<i64>,
+    limit: Option<usize>,
+}
+
+/// Default window for the syndication scan: 30 days.
+const SYNDICATION_WINDOW_SECS: i64 = 30 * 86_400;
+
+#[derive(Serialize)]
+struct SyndicationOut {
+    text_hash: u64,
+    hamming_threshold: u32,
+    /// In `published_at` order, so the first entry is the earliest copy.
+    items: Vec<crate::types::Item>,
+}
+
+async fn syndication(State(s): State<AppState>, Query(q): Query<SyndicationQ>) -> Response {
+    let hash = match parse_id(&q.text_hash) {
+        Ok(h) => h,
+        Err(r) => return r,
+    };
+    let since = q.since.unwrap_or_else(|| now() - SYNDICATION_WINDOW_SECS);
+    let limit = clamp_limit(q.limit);
+    let threshold = s.hamming_threshold;
+    match s
+        .reader
+        .call(move |c| reader::syndication_matches(c, hash, threshold, since, limit))
+        .await
+    {
+        Ok(items) => Json(SyndicationOut {
+            text_hash: hash,
+            hamming_threshold: threshold,
+            items,
+        })
+        .into_response(),
+        Err(e) => db_err(e),
+    }
 }
 
 async fn debug_page() -> Response {

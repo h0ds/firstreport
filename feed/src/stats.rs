@@ -24,6 +24,8 @@ pub struct Stats {
     pub embed_batches: AtomicU64,
     pub assigns: AtomicU64,
     pub active_clusters: AtomicU64,
+    pub revisions: AtomicU64,
+    pub withdrawals: AtomicU64,
     embed_latency_us: Mutex<Vec<u64>>,
     assign_latency_us: Mutex<Vec<u64>>,
 }
@@ -80,6 +82,8 @@ pub struct StatsSnapshot {
     pub active_clusters: u64,
     /// Per-item assignment latency (flat cosine scan over the active set).
     pub assign_latency: Latency,
+    pub revisions: u64,
+    pub withdrawals: u64,
 }
 
 impl Stats {
@@ -123,6 +127,8 @@ impl Stats {
             assigns: self.assigns.load(Relaxed),
             active_clusters: self.active_clusters.load(Relaxed),
             assign_latency: percentiles(&self.assign_latency_us),
+            revisions: self.revisions.load(Relaxed),
+            withdrawals: self.withdrawals.load(Relaxed),
         }
     }
 }

@@ -249,8 +249,60 @@ pub fn list_snapshots(
     rows.collect()
 }
 
-/// Latest snapshot for a feed, if any (used for revision diffing later).
-#[allow(dead_code)] // revision tracking (M4)
+#[derive(Debug, Clone, Serialize)]
+pub struct RevisionRow {
+    pub snapshot_id: u64,
+    pub seen_at: i64,
+    pub title: String,
+    pub summary: String,
+}
+
+/// Text history of an item, oldest first. Empty until the first change.
+pub fn item_revisions(c: &Connection, item_id: u64) -> rusqlite::Result<Vec<RevisionRow>> {
+    let mut st = c.prepare_cached(
+        "SELECT snapshot_id, seen_at, title, summary FROM item_revision
+         WHERE item_id=?1 ORDER BY seen_at ASC, snapshot_id ASC",
+    )?;
+    let rows = st.query_map([to_i64(item_id)], |r| {
+        Ok(RevisionRow {
+            snapshot_id: to_u64(r.get(0)?),
+            seen_at: r.get(1)?,
+            title: r.get(2)?,
+            summary: r.get(3)?,
+        })
+    })?;
+    rows.collect()
+}
+
+/// Items whose simhash is within `threshold` bits of `hash`, across all
+/// clusters, fetched since `since`. Hamming distance can't use the index,
+/// so this scans the window; `since` bounds the cost.
+pub fn syndication_matches(
+    c: &Connection,
+    hash: u64,
+    threshold: u32,
+    since: i64,
+    limit: usize,
+) -> rusqlite::Result<Vec<Item>> {
+    let mut st = c.prepare_cached(&format!(
+        "SELECT {ITEM_COLS} FROM item WHERE fetched_at >= ?1 ORDER BY published_at ASC, id ASC"
+    ))?;
+    let rows = st.query_map([since], row_item)?;
+    let mut out = Vec::new();
+    for r in rows {
+        let it = r?;
+        if crate::parse::simhash::hamming(it.text_hash, hash) <= threshold {
+            out.push(it);
+            if out.len() >= limit {
+                break;
+            }
+        }
+    }
+    Ok(out)
+}
+
+/// Latest snapshot for a feed, if any; the previous item set for revision
+/// diffing is rebuilt from its body on boot.
 pub fn latest_snapshot(c: &Connection, feed: &str) -> rusqlite::Result<Option<SnapshotMeta>> {
     c.query_row(
         &format!("SELECT {SNAP_COLS} FROM snapshot WHERE feed_url=?1 ORDER BY fetched_at DESC, id DESC LIMIT 1"),

@@ -16,12 +16,18 @@ use crate::bloom::Bloom;
 use crate::config::{Config, Feeds};
 use crate::fetch::client::{Client, Fetched};
 use crate::fetch::scheduler::{Outcome, Scheduler};
+use crate::parse::revision::{self, Change, Seen};
 use crate::parse::{feed as feedparse, outlet::Resolver};
 use crate::snapshot;
 use crate::stats::{now, Stats};
 use crate::store::reader::{self, Reader};
 use crate::store::writer::{FeedState, SnapshotRow, WriteMsg, Writer};
 use crate::types::Item;
+use crate::types::{ClusterEvent, EventKind};
+
+fn st_inc(stats: &Stats, c: &std::sync::atomic::AtomicU64) {
+    stats.inc(c);
+}
 
 /// Window for the dedupe bloom filter rebuilt on boot.
 pub const BLOOM_WINDOW_SECS: i64 = 7 * 86_400;
@@ -44,6 +50,9 @@ pub struct Poller {
     snapshot_dir: PathBuf,
     /// Per feed: hash and archived path of the last body written.
     last_body: HashMap<String, (u64, String)>,
+    /// Per feed: the entries it listed last time, for revision diffing.
+    /// Loaded lazily from the latest archived snapshot after a restart.
+    prev_seen: HashMap<String, Vec<Seen>>,
 }
 
 struct FetchDone {
@@ -81,6 +90,7 @@ impl Poller {
             recent_order: VecDeque::with_capacity(RECENT_IDS),
             snapshot_dir,
             last_body: HashMap::new(),
+            prev_seen: HashMap::new(),
         })
     }
 
@@ -188,6 +198,141 @@ impl Poller {
         }
     }
 
+    /// The feed's previous listing: in memory after the first fetch this
+    /// process, otherwise parsed from the latest archived snapshot.
+    async fn previous_listing(&mut self, feed_url: &str) -> Vec<Seen> {
+        if let Some(prev) = self.prev_seen.get(feed_url) {
+            return prev.clone();
+        }
+        let url = feed_url.to_string();
+        let Ok(Some(meta)) = self
+            .reader
+            .call(move |c| reader::latest_snapshot(c, &url))
+            .await
+        else {
+            return vec![];
+        };
+        if meta.path.is_empty() {
+            return vec![];
+        }
+        let body = match snapshot::read(&self.snapshot_dir, std::path::Path::new(&meta.path)) {
+            Ok(b) => b,
+            Err(e) => {
+                debug!(url = feed_url, "previous snapshot unreadable: {e}");
+                return vec![];
+            }
+        };
+        match feedparse::parse(&body, feed_url) {
+            Ok(p) => p
+                .entries
+                .iter()
+                .map(|e| Seen {
+                    id: crate::types::item_id(&e.canonical_url),
+                    title: e.title.clone(),
+                    summary: e.summary.clone(),
+                    published_at: e.published_at,
+                })
+                .collect(),
+            Err(_) => vec![],
+        }
+    }
+
+    async fn track_revisions(&mut self, feed: &FeedState, snap_id: u64, now: i64, cur: Vec<Seen>) {
+        let prev = self.previous_listing(&feed.url).await;
+        let changes = revision::diff(&prev, &cur);
+        for ch in changes {
+            match ch {
+                Change::Revised { id, title, summary } => {
+                    // Only items we hold can be revised; anything else is
+                    // just new to us and lands through the normal path.
+                    let known = self
+                        .reader
+                        .call(move |c| reader::has_item(c, id))
+                        .await
+                        .unwrap_or(false);
+                    if !known {
+                        continue;
+                    }
+                    // Record the original text once, keyed by the previous
+                    // snapshot, so history starts from what was first seen.
+                    let first_change = self
+                        .reader
+                        .call(move |c| reader::item_revisions(c, id).map(|v| v.is_empty()))
+                        .await
+                        .unwrap_or(false);
+                    if first_change {
+                        if let Some(p) = prev.iter().find(|p| p.id == id) {
+                            let prev_snap = self
+                                .reader
+                                .call({
+                                    let url = feed.url.clone();
+                                    move |c| reader::latest_snapshot(c, &url)
+                                })
+                                .await
+                                .ok()
+                                .flatten()
+                                .map(|m| m.id)
+                                .unwrap_or(0);
+                            self.writer
+                                .send(WriteMsg::Revision {
+                                    item_id: id,
+                                    snapshot_id: prev_snap,
+                                    seen_at: now - 1,
+                                    title: p.title.clone(),
+                                    summary: p.summary.clone(),
+                                    apply: false,
+                                })
+                                .await;
+                        }
+                    }
+                    st_inc(&self.stats, &self.stats.revisions);
+                    self.writer
+                        .send(WriteMsg::Revision {
+                            item_id: id,
+                            snapshot_id: snap_id,
+                            seen_at: now,
+                            title,
+                            summary,
+                            apply: true,
+                        })
+                        .await;
+                    self.writer
+                        .send(WriteMsg::Event(ClusterEvent {
+                            ts: now,
+                            kind: EventKind::Revised,
+                            cluster_id: None,
+                            item_id: Some(id),
+                            merged_into: None,
+                            snapshot_id: Some(snap_id),
+                        }))
+                        .await;
+                }
+                Change::Withdrawn { id } => {
+                    let known = self
+                        .reader
+                        .call(move |c| reader::has_item(c, id))
+                        .await
+                        .unwrap_or(false);
+                    if !known {
+                        continue;
+                    }
+                    st_inc(&self.stats, &self.stats.withdrawals);
+                    self.writer
+                        .send(WriteMsg::Event(ClusterEvent {
+                            ts: now,
+                            kind: EventKind::Withdrawn,
+                            cluster_id: None,
+                            item_id: Some(id),
+                            merged_into: None,
+                            snapshot_id: Some(snap_id),
+                        }))
+                        .await;
+                }
+            }
+        }
+        self.prev_seen.insert(feed.url.clone(), cur);
+    }
+
     /// Everything between a fetch result and the store. Public so the
     /// fixture replay harness (M3) can drive it without a network.
     pub async fn process(
@@ -279,6 +424,22 @@ impl Poller {
         };
 
         st.add(&st.items_seen, parsed.entries.len() as u64);
+
+        // Revision tracking (plan §5.3a): diff this listing against the
+        // feed's previous one before dedupe drops the items we already
+        // have, since those are exactly the ones that can have changed.
+        let cur: Vec<Seen> = parsed
+            .entries
+            .iter()
+            .map(|e| Seen {
+                id: crate::types::item_id(&e.canonical_url),
+                title: e.title.clone(),
+                summary: e.summary.clone(),
+                published_at: e.published_at,
+            })
+            .collect();
+        self.track_revisions(feed, snap_id, fetched_at, cur).await;
+
         let mut new_items = Vec::new();
         let mut seen_in_feed = HashSet::new();
         for e in parsed.entries {

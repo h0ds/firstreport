@@ -33,7 +33,9 @@ Embed latency (amortized per item, p50 and p99) is reported in `/v1/stats`.
 | Route | Notes |
 |---|---|
 | `GET /v1/items?since=&outlet=&limit=&cursor=` | newest first; `next` carries the cursor |
-| `GET /v1/items/{id}` | |
+| `GET /v1/items/{id}` | latest text |
+| `GET /v1/items/{id}/revisions` | text history from snapshot diffs; empty until the first change |
+| `GET /v1/syndication?text_hash=&since=&limit=` | items across all clusters within the simhash threshold of `text_hash`, scanned over the last 30 days by default |
 | `GET /v1/snapshots?feed=&since=&limit=&cursor=` | raw feed fetch log |
 | `GET /v1/snapshots/{id}` | |
 | `GET /v1/snapshots/{id}/body` | decompressed feed body as fetched |
@@ -46,6 +48,16 @@ Embed latency (amortized per item, p50 and p99) is reported in `/v1/stats`.
 | `GET /debug` | live page showing clusters form, styled from `design/tokens.css` |
 
 Ids are u64 and accepted as decimal or `0x`-prefixed hex.
+
+## Revision tracking
+
+After each parse the feed's listing is diffed against its previous one
+(kept in memory, or rebuilt from the latest archived snapshot after a
+restart). A changed title or summary records both the original and the
+new text in `item_revision`, updates the item to the latest text, and
+emits a `revised` event; the embedding is deliberately not recomputed.
+An item that disappears while older items are still listed emits a
+`withdrawn` event. Both counts appear in `/v1/stats`.
 
 ## Clustering
 

@@ -18,6 +18,7 @@ use crate::stats::Stats;
 use crate::store::{self, Reader};
 
 const FIXTURE: &[u8] = include_bytes!("../fixtures/feeds/example-rss.xml");
+const REVISED: &[u8] = include_bytes!("../fixtures/feeds/example-rss-revised.xml");
 
 async fn body_json(resp: axum::response::Response) -> serde_json::Value {
     let bytes = axum::body::to_bytes(resp.into_body(), 1 << 20)
@@ -111,6 +112,34 @@ async fn fixture_through_store_and_api() {
     // recorded but it points at the first file rather than writing a copy.
     let p2 = poller.process(&feed, 1_704_100_900, Ok(fetched())).await;
     assert_eq!(p2.new_items.len(), 0);
+
+    // Revised listing: the rates headline changed and the flooding item
+    // vanished while an older item (the wire story) is still listed, so it
+    // was withdrawn rather than aged out.
+    writer.flush().await;
+    let revised = Fetched {
+        status: 200,
+        body: Some(Bytes::from_static(REVISED)),
+        etag: None,
+        last_modified: None,
+    };
+    // A fresh poller has no in-memory listing, so this also exercises the
+    // restart path: the previous listing is parsed from the archived
+    // snapshot on disk.
+    let mut poller_after_restart = Poller::new(
+        cfg.clone(),
+        Arc::new(Resolver::from_config(&outlets)),
+        reader.clone(),
+        writer.clone(),
+        stats.clone(),
+    )
+    .unwrap();
+    poller_after_restart.seed_bloom(&p.new_items.iter().map(|i| i.id).collect::<Vec<_>>());
+    let pr = poller_after_restart
+        .process(&feed, 1_704_101_000, Ok(revised))
+        .await;
+    assert_eq!(pr.new_items.len(), 0, "revised and known items are not new");
+    drop(poller_after_restart);
 
     // 304 and error paths.
     let p3 = poller
@@ -217,8 +246,8 @@ async fn fixture_through_store_and_api() {
     let snaps = v["items"].as_array().unwrap();
     assert_eq!(
         snaps.len(),
-        3,
-        "two good bodies and one unparseable; 304 and error produce none"
+        4,
+        "three good bodies and one unparseable; 304 and error produce none"
     );
     assert_eq!(snaps[0]["item_count"], 0);
     let first_snap = snaps.iter().find(|s| s["item_count"] == 3).unwrap();
@@ -242,16 +271,108 @@ async fn fixture_through_store_and_api() {
     assert_eq!(v.as_array().unwrap().len(), 2);
     assert_eq!(v[1]["feeds"][0], "https://www.example.com/feed.xml");
 
+    // Revisions: the rates item carries its original text and the new one;
+    // the item itself now reads the new title. The flooding item was
+    // withdrawn. Both show up in the event log.
+    let v = body_json(
+        app.clone()
+            .oneshot(get(&format!("/v1/items/{}/revisions", rates.id)))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert_eq!(
+        v["current"]["title"],
+        "Central bank holds rates, drops hint of cuts after data surprise"
+    );
+    let revs = v["revisions"].as_array().unwrap();
+    assert_eq!(revs.len(), 2);
+    assert_eq!(
+        revs[0]["title"],
+        "Central bank holds rates, signals cuts may come later in the year"
+    );
+    assert_eq!(
+        revs[1]["title"],
+        "Central bank holds rates, drops hint of cuts after data surprise"
+    );
+    assert!(revs[0]["seen_at"].as_i64().unwrap() < revs[1]["seen_at"].as_i64().unwrap());
+    let flooding_id = p.new_items[1].id;
+    let v = body_json(
+        app.clone()
+            .oneshot(get(&format!("/v1/items/{flooding_id}/revisions")))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert!(
+        v["revisions"].as_array().unwrap().is_empty(),
+        "unchanged text has no history"
+    );
+    let v = body_json(
+        app.clone()
+            .oneshot(get("/v1/events?limit=50"))
+            .await
+            .unwrap(),
+    )
+    .await;
+    let kinds: Vec<(String, u64)> = v["items"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .map(|e| {
+            (
+                e["kind"].as_str().unwrap().to_string(),
+                e["item_id"].as_u64().unwrap(),
+            )
+        })
+        .collect();
+    assert!(kinds.contains(&("revised".into(), rates.id)), "{kinds:?}");
+    assert!(
+        kinds.contains(&("withdrawn".into(), flooding_id)),
+        "{kinds:?}"
+    );
+    assert!(
+        !kinds
+            .iter()
+            .any(|(k, id)| k == "withdrawn" && *id == p.new_items[2].id),
+        "still listed"
+    );
+
+    // Syndication: the wire story's simhash finds itself; an unrelated hash finds nothing.
+    let wire = &p.new_items[2];
+    let v = body_json(
+        app.clone()
+            .oneshot(get(&format!(
+                "/v1/syndication?text_hash={}&since=0",
+                wire.text_hash
+            )))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert_eq!(v["items"].as_array().unwrap().len(), 1);
+    assert_eq!(v["items"][0]["id"], wire.id);
+    let v = body_json(
+        app.clone()
+            .oneshot(get("/v1/syndication?text_hash=0x5555555555555555&since=0"))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert!(v["items"].as_array().unwrap().is_empty());
+
     let v = body_json(app.clone().oneshot(get("/v1/stats")).await.unwrap()).await;
     assert_eq!(v["contract_version"], 1);
     assert_eq!(v["store"]["items_total"], 3);
-    assert_eq!(v["store"]["snapshots_total"], 3);
-    assert_eq!(v["process"]["fetches"], 5);
+    assert_eq!(v["store"]["snapshots_total"], 4);
+    assert_eq!(v["process"]["fetches"], 6);
     assert_eq!(v["process"]["fetch_304"], 1);
     assert_eq!(v["process"]["fetch_errors"], 1);
     assert_eq!(v["process"]["parse_errors"], 1);
-    assert_eq!(v["process"]["items_seen"], 6);
+    assert_eq!(v["process"]["items_seen"], 8);
     assert_eq!(v["process"]["items_new"], 3);
+    assert_eq!(v["process"]["revisions"], 1);
+    assert_eq!(v["process"]["withdrawals"], 1);
 
     // Embedder: only when an ONNX Runtime library is available.
     if let Ok(lib) = std::env::var("KAGAMI_ORT_LIB") {

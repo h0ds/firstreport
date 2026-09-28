@@ -214,8 +214,9 @@ Online, incremental, single-threaded over an in-memory active set. No batch recl
 
 Runs inside the poller after parsing. For each feed, diff the parsed item set against the previous snapshot's item set (by canonical URL):
 
-- Title or summary changed → emit `ClusterEvent { kind: "revised", item_id, snapshot_id }` and store the new text in `item_revision`. The item's embedding is **not** recomputed (cluster stability), but the latest text is what the API returns, with revision history available.
-- Item present in previous snapshot, absent now, and not simply aged out of the feed's window (heuristic: it is newer than the oldest item still present) → emit `withdrawn`.
+- Title or summary changed → emit `ClusterEvent { kind: "revised", item_id, snapshot_id }` and store the new text in `item_revision`. On the first change the original text is also recorded, keyed by the previous snapshot, so history starts from what was first seen. The item's embedding and `text_hash` are **not** recomputed (cluster stability, and the syndication signal should reflect the copy as first published), but the latest text is what the API returns, with revision history available.
+- Item present in previous snapshot, absent now, and not simply aged out of the feed's window (heuristic: it is newer than the oldest item still present; undated items are never called withdrawn) → emit `withdrawn`. An empty listing emits nothing: that is a feed failure, not a hundred withdrawals.
+- The previous listing lives in memory per feed; after a restart it is parsed from the latest archived snapshot on the feed's first fetch, so a restart never masks a revision.
 
 Cheap, and it's the kind of evidence that is impossible to recover after the fact.
 
