@@ -1,6 +1,6 @@
 # Kagami — Design Aesthetics
 
-Visual language for the Kagami project and its tools (`feed`, `ledger`, `lens`). This document governs anything a person looks at: the debug page, the wiki, the frontend, the README badges, the docs site.
+Visual language for the Kagami project and its tools (`feed`, `ledger`, `lens`). This document governs anything a person looks at: the debug page, the lookup page, the frontend, the README badges, the docs site. It also governs what a machine reads (§11): Kagami exists to counter disinformation campaigns that are increasingly run by bots, and its answer is to make sourced, provenance-carrying data as cheap for an agent to consume as it is for a person.
 
 ---
 
@@ -161,6 +161,18 @@ Based on 15px, ratio ~1.25.
 **Status dots**
 - 8px circle, semantic colour, always paired with a text label. Never colour alone.
 
+**Claim card** (the core object of `ledger`, and of any surface that shows a fact about an outlet)
+- Value in Inter 600 17px. The value is the source's wording, not ours.
+- Scope line (where the source's row covers more or less than the outlet) in Inter 13px `--kg-text-secondary`.
+- Provenance line beneath, always. A value without its provenance line is a bug.
+- A note, if the source or importer has one, in 13px `--kg-text-secondary`, prefixed "Note:".
+- Claims from different sources for the same field sit one above the other, same weight, in source order. Never merged, never one shown as the answer.
+
+**Provenance line** (under every fact on every surface, one form everywhere)
+- Inter 12px muted, items separated by `·`: source name as a link to the page that states it · licence in a mono tag · "retrieved YYYY-MM-DD" · "as of YYYY-MM-DD" when the source says · status dot with "N days old" or "stale, N days old".
+- Order is fixed so a reader learns it once. Nothing is dropped when space is short; the line wraps.
+- For observed sources (feed behaviour, site checks) the line also states the window and counts and ends with "a measurement, not a verdict".
+
 ---
 
 ## 6. Wordmark & mark
@@ -206,7 +218,29 @@ Based on 15px, ratio ~1.25.
 
 ---
 
-## 10. Implementation notes
+## 10. One language across surfaces
+
+Every page any tool serves is a view of the same mirror, so they share:
+
+- **Chrome.** The lockup top left (`Kagami` │ tool), one health or count line top right, a hairline under the header. No navigation bar; each tool is one page deep and links to the others' pages by URL.
+- **Objects.** The cluster card and the claim card are the two objects. A story is always a cluster card; a fact is always a claim card with its provenance line. `lens` composes them; it does not invent a third.
+- **Outlets.** Shown by name with the domain muted beside it, never with a colour, badge or icon that carries a rating. The origin outlet of a story gets the mono tag and the word "first"; that is the only distinction.
+- **Time.** UTC by default, local on hover or by a control in the chrome, same control on every page. Ages as "N days old", "6 in the last hour", never relative words like "recently".
+- **Absence.** Empty and not-found states are one sentence naming what would fill them ("No claims yet. Run `ledger import wikidata`."). The same sentence shape everywhere.
+- **Copy, don't share.** Each tool carries its own copy of the tokens and component CSS, verified against `preview.html`. A change to a component is made here first, then copied.
+
+## 11. Machine readers
+
+Agents and bots are first-class readers, not scrapers to tolerate. Disinformation is spread by automation; the counter is sourced data that automation can pick up with provenance attached, so that a bot quoting Kagami carries the source, licence and date along whether it means to or not.
+
+- **Every page has a data twin.** Any HTML page is a rendering of a JSON route, linked from its `<head>` with `<link rel="alternate" type="application/json">`. Nothing is shown to a person that a machine cannot get from the API.
+- **Negotiate, don't guess.** Data routes answer `Accept: text/markdown` with a Markdown rendering that keeps every provenance line, so a language model reading the page gets the same facts in the same order as a person. JSON remains the default.
+- **Announce yourself.** Every server serves `/llms.txt` describing what it is, the routes, the contract version and the rules of use, and `/robots.txt` that allows everything. The rules of use are the project's: quote the source, not Kagami; carry the licence; never turn claims into a score.
+- **Stable addresses.** Outlet ids, item ids and cluster ids are the contract; a URL that worked keeps working. Ids are also in the page as `data-id` so an agent driving a browser can read them without parsing prose.
+- **Plain structure.** Semantic HTML (`article`, `header`, `time`), text labels for every status, `aria-label` on charts giving the numbers. No fact lives only in colour, an icon or a sparkline.
+- **Provenance is not optional in any format.** Markdown, JSON, HTML and export all carry source, licence, retrieved date and ref URL on each claim. A format that drops them is not a Kagami format.
+
+## 12. Implementation notes
 
 - Tokens live in one `tokens.css` shared across tools; each tool copies it, no shared runtime dependency (project rule: bespoke, no framework).
 - Fonts: download variable Inter, static Instrument Serif (Regular + Italic), variable JetBrains Mono; subset to Latin + Latin Extended with `pyftsubset`; serve as `woff2` with `font-display: swap`. Noto JP loaded on demand.
