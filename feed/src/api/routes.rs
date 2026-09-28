@@ -1,7 +1,7 @@
 use axum::extract::{Path, Query, State};
 use axum::http::{header, HeaderMap, StatusCode};
 use axum::response::{IntoResponse, Response};
-use axum::routing::get;
+use axum::routing::{get, MethodRouter};
 use axum::{Json, Router};
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
@@ -13,27 +13,36 @@ use crate::store::reader;
 pub const DEFAULT_LIMIT: usize = 50;
 pub const MAX_LIMIT: usize = 500;
 
+/// Every route, once. The router and the OpenAPI document are both
+/// built from this table.
+pub(crate) fn routes() -> Vec<(&'static str, MethodRouter<AppState>)> {
+    vec![
+        ("/v1/items", get(list_items)),
+        ("/v1/items/{id}", get(get_item)),
+        ("/v1/items/{id}/revisions", get(item_revisions)),
+        ("/v1/syndication", get(syndication)),
+        ("/v1/snapshots", get(list_snapshots)),
+        ("/v1/snapshots/{id}", get(get_snapshot)),
+        ("/v1/snapshots/{id}/body", get(snapshot_body)),
+        ("/v1/clusters", get(list_clusters)),
+        ("/v1/clusters/{id}", get(get_cluster)),
+        ("/v1/clusters/{id}/timeline", get(cluster_timeline)),
+        ("/v1/events", get(events)),
+        ("/v1/feeds", get(feeds)),
+        ("/v1/outlets", get(outlets)),
+        ("/v1/outlets/{id}", get(get_outlet)),
+        ("/v1/stats", get(stats)),
+        ("/debug", get(debug_page)),
+        ("/llms.txt", get(llms_txt)),
+        ("/v1/openapi.json", get(openapi)),
+        ("/robots.txt", get(robots_txt)),
+    ]
+}
+
 pub fn router() -> Router<AppState> {
-    Router::new()
-        .route("/v1/items", get(list_items))
-        .route("/v1/items/{id}", get(get_item))
-        .route("/v1/items/{id}/revisions", get(item_revisions))
-        .route("/v1/syndication", get(syndication))
-        .route("/v1/snapshots", get(list_snapshots))
-        .route("/v1/snapshots/{id}", get(get_snapshot))
-        .route("/v1/snapshots/{id}/body", get(snapshot_body))
-        .route("/v1/clusters", get(list_clusters))
-        .route("/v1/clusters/{id}", get(get_cluster))
-        .route("/v1/clusters/{id}/timeline", get(cluster_timeline))
-        .route("/v1/events", get(events))
-        .route("/v1/feeds", get(feeds))
-        .route("/v1/outlets", get(outlets))
-        .route("/v1/outlets/{id}", get(get_outlet))
-        .route("/v1/stats", get(stats))
-        .route("/debug", get(debug_page))
-        .route("/llms.txt", get(llms_txt))
-        .route("/v1/openapi.json", get(openapi))
-        .route("/robots.txt", get(robots_txt))
+    routes()
+        .into_iter()
+        .fold(Router::new(), |r, (path, handler)| r.route(path, handler))
 }
 
 #[derive(Serialize, JsonSchema)]

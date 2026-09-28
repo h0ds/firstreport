@@ -18,6 +18,122 @@ use super::routes::{
 use crate::store::reader::SnapshotMeta;
 use crate::types::{Cluster, ClusterEvent, Item, Join, SynGroup, Velocity, CONTRACT_VERSION};
 
+/// The `paths` section, built from the same route table the router is
+/// built from (`routes::routes`), so a route cannot be served without
+/// an entry here: an undocumented one is marked `x-undocumented` and
+/// the test refuses it.
+fn paths() -> Map<String, Value> {
+    super::routes::routes()
+        .into_iter()
+        .map(|(path, _)| (path.to_string(), operation(path)))
+        .collect()
+}
+
+fn operation(path: &str) -> Value {
+    let limit = q(
+        "limit",
+        json!({"type": "integer", "default": 50, "maximum": 500}),
+        "Page size.",
+    );
+    let cursor = q(
+        "cursor",
+        json!({"type": "string"}),
+        "From the previous page's next.",
+    );
+    let since = q(
+        "since",
+        json!({"type": "integer"}),
+        "Unix seconds; only newer.",
+    );
+    match path {
+        "/v1/items" => {
+            json!({"get": {"operationId": "listItems", "summary": "Headlines, newest fetched first",
+                "parameters": [since.clone(), q("outlet", json!({"type": "string"}), "Outlet id."), limit.clone(), cursor.clone()],
+                "responses": ok(page_of("ItemPage"))}})
+        }
+        "/v1/items/{id}" => {
+            json!({"get": {"operationId": "getItem", "summary": "One item, latest text", "parameters": [id_param()],
+                "responses": ok_or_404(json!({"$ref": "#/components/schemas/Item"}))}})
+        }
+        "/v1/items/{id}/revisions" => {
+            json!({"get": {"operationId": "itemRevisions", "summary": "Earlier versions of an item's text, oldest first", "parameters": [id_param()],
+                "responses": ok_or_404(json!({"$ref": "#/components/schemas/Revisions"}))}})
+        }
+        "/v1/syndication" => {
+            json!({"get": {"operationId": "syndication", "summary": "Items sharing one text hash across outlets, earliest published first",
+                "parameters": [q("text_hash", json!({"type": "string"}), "Required. The simhash from an item, decimal or hex."), since.clone(), limit.clone()],
+                "responses": ok(json!({"$ref": "#/components/schemas/Syndication"}))}})
+        }
+        "/v1/snapshots" => {
+            json!({"get": {"operationId": "listSnapshots", "summary": "Raw feed fetches",
+                "parameters": [q("feed", json!({"type": "string"}), "Feed URL."), since.clone(), limit.clone(), cursor.clone()],
+                "responses": ok(page_of("SnapshotPage"))}})
+        }
+        "/v1/snapshots/{id}" => {
+            json!({"get": {"operationId": "getSnapshot", "parameters": [id_param()],
+                "responses": ok_or_404(json!({"$ref": "#/components/schemas/Snapshot"}))}})
+        }
+        "/v1/snapshots/{id}/body" => {
+            json!({"get": {"operationId": "snapshotBody", "summary": "The fetched feed body, decompressed", "parameters": [id_param()],
+                "responses": {"200": {"description": "OK", "content": {"application/xml": {}, "text/plain": {}}}, "404": {"$ref": "#/components/responses/NotFound"}}}})
+        }
+        "/v1/clusters" => json!({"get": {"operationId": "listClusters", "summary": "Stories",
+                "parameters": [since.clone(),
+                    q("min_outlets", json!({"type": "integer", "default": 1}), "Only clusters with at least this many outlets."),
+                    q("sort", json!({"type": "string", "enum": ["recent", "velocity_1h", "outlets_6h"], "default": "recent"}), "recent is cursor-paged by last_active_at; the others rank by joins in the trailing window and have no next."),
+                    limit.clone(), cursor.clone(),
+                    q("include", json!({"type": "string", "enum": ["items"]}), "Inline each cluster's items.")],
+                "responses": ok(page_of("ClusterPage"))}}),
+        "/v1/clusters/{id}" => {
+            json!({"get": {"operationId": "getCluster", "summary": "One story with its items",
+                "description": "Send Accept: text/markdown for a Markdown rendering: title, metadata, items in join order with the first marked, syndication, velocity.",
+                "parameters": [id_param()],
+                "responses": {
+                    "200": {"description": "OK", "content": {
+                        "application/json": {"schema": {"$ref": "#/components/schemas/Cluster"}},
+                        "text/markdown": {"schema": {"type": "string"}}}},
+                    "404": {"$ref": "#/components/responses/NotFound"}}}})
+        }
+        "/v1/clusters/{id}/timeline" => {
+            json!({"get": {"operationId": "clusterTimeline", "summary": "Who joined when; cheap for spread curves", "parameters": [id_param()],
+                "responses": ok_or_404(json!({"type": "array", "items": {"$ref": "#/components/schemas/Join"}}))}})
+        }
+        "/v1/events" => {
+            json!({"get": {"operationId": "events", "summary": "The cluster event log; a cursor for followers",
+                "parameters": [q("after_seq", json!({"type": "integer"}), "Return events with seq greater than this."), limit.clone()],
+                "responses": ok(json!({"$ref": "#/components/schemas/Events"}))}})
+        }
+        "/v1/feeds" => {
+            json!({"get": {"operationId": "feeds", "summary": "Per-feed poller state, failures first. Operational; not part of the analytic contract.",
+                "parameters": [q("filter", json!({"type": "string", "enum": ["all", "failing", "dead", "stale"], "default": "all"}), "stale means no success in 24 h.")],
+                "responses": ok(json!({"type": "array", "items": {"$ref": "#/components/schemas/Feed"}}))}})
+        }
+        "/v1/outlets" => {
+            json!({"get": {"operationId": "listOutlets", "summary": "Outlets with domains, feeds and their ledger links",
+                "responses": ok(json!({"type": "array", "items": {"$ref": "#/components/schemas/Outlet"}}))}})
+        }
+        "/v1/outlets/{id}" => {
+            json!({"get": {"operationId": "getOutlet", "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}, "description": "Outlet id, shared with Kagami ledger."}],
+                "responses": ok_or_404(json!({"$ref": "#/components/schemas/Outlet"}))}})
+        }
+        "/v1/stats" => json!({"get": {"operationId": "stats",
+                "responses": ok(json!({"$ref": "#/components/schemas/Stats"}))}}),
+        "/v1/openapi.json" => {
+            json!({"get": {"operationId": "openapi", "responses": {"200": {"description": "This document"}}}})
+        }
+        "/llms.txt" => {
+            json!({"get": {"operationId": "llms", "summary": "What this server is and its rules of use, for machine readers", "responses": {"200": {"description": "OK", "content": {"text/plain": {}}}}}})
+        }
+        "/debug" => {
+            json!({"get": {"operationId": "debugPage", "summary": "The same data as a page for people", "responses": {"200": {"description": "OK", "content": {"text/html": {}}}}}})
+        }
+        "/robots.txt" => {
+            json!({"get": {"operationId": "robots", "summary": "Allows everything", "responses": {"200": {"description": "OK", "content": {"text/plain": {}}}}}})
+        }
+        other => json!({"get": {"operationId": other, "x-undocumented": true}}),
+    }
+}
+
 /// `components.schemas`, generated. Each named type's root schema plus
 /// whatever it references, with `$ref`s pointing into this map.
 pub fn schemas() -> Map<String, Value> {
@@ -85,21 +201,6 @@ fn ok_or_404(schema: Value) -> Value {
 }
 
 pub fn spec() -> Value {
-    let limit = q(
-        "limit",
-        json!({"type": "integer", "default": 50, "maximum": 500}),
-        "Page size.",
-    );
-    let cursor = q(
-        "cursor",
-        json!({"type": "string"}),
-        "From the previous page's next.",
-    );
-    let since = q(
-        "since",
-        json!({"type": "integer"}),
-        "Unix seconds; only newer.",
-    );
     json!({
         "openapi": "3.1.0",
         "info": {
@@ -109,57 +210,7 @@ pub fn spec() -> Value {
             "description": "A cluster is a claim that its items are about the same story, made by a similarity threshold, not a person; treat membership as evidence. origin_outlet_id is the earliest published member as the feeds reported it; feeds lie about times, joined_at is what Kagami saw. Syndication groups mean the same copy, not the same story. Sourced facts about each outlet are in Kagami ledger under the same outlet id; see the ledger links on outlets. Rules of use are in /llms.txt; object shapes in feed/docs/data-contract.md."
         },
         "servers": [{"url": "/"}],
-        "paths": {
-            "/v1/items": {"get": {"operationId": "listItems", "summary": "Headlines, newest fetched first",
-                "parameters": [since.clone(), q("outlet", json!({"type": "string"}), "Outlet id."), limit.clone(), cursor.clone()],
-                "responses": ok(page_of("ItemPage"))}},
-            "/v1/items/{id}": {"get": {"operationId": "getItem", "summary": "One item, latest text", "parameters": [id_param()],
-                "responses": ok_or_404(json!({"$ref": "#/components/schemas/Item"}))}},
-            "/v1/items/{id}/revisions": {"get": {"operationId": "itemRevisions", "summary": "Earlier versions of an item's text, oldest first", "parameters": [id_param()],
-                "responses": ok_or_404(json!({"$ref": "#/components/schemas/Revisions"}))}},
-            "/v1/syndication": {"get": {"operationId": "syndication", "summary": "Items sharing one text hash across outlets, earliest published first",
-                "parameters": [q("text_hash", json!({"type": "string"}), "Required. The simhash from an item, decimal or hex."), since.clone(), limit.clone()],
-                "responses": ok(json!({"$ref": "#/components/schemas/Syndication"}))}},
-            "/v1/snapshots": {"get": {"operationId": "listSnapshots", "summary": "Raw feed fetches",
-                "parameters": [q("feed", json!({"type": "string"}), "Feed URL."), since.clone(), limit.clone(), cursor.clone()],
-                "responses": ok(page_of("SnapshotPage"))}},
-            "/v1/snapshots/{id}": {"get": {"operationId": "getSnapshot", "parameters": [id_param()],
-                "responses": ok_or_404(json!({"$ref": "#/components/schemas/Snapshot"}))}},
-            "/v1/snapshots/{id}/body": {"get": {"operationId": "snapshotBody", "summary": "The fetched feed body, decompressed", "parameters": [id_param()],
-                "responses": {"200": {"description": "OK", "content": {"application/xml": {}, "text/plain": {}}}, "404": {"$ref": "#/components/responses/NotFound"}}}},
-            "/v1/clusters": {"get": {"operationId": "listClusters", "summary": "Stories",
-                "parameters": [since.clone(),
-                    q("min_outlets", json!({"type": "integer", "default": 1}), "Only clusters with at least this many outlets."),
-                    q("sort", json!({"type": "string", "enum": ["recent", "velocity_1h", "outlets_6h"], "default": "recent"}), "recent is cursor-paged by last_active_at; the others rank by joins in the trailing window and have no next."),
-                    limit.clone(), cursor.clone(),
-                    q("include", json!({"type": "string", "enum": ["items"]}), "Inline each cluster's items.")],
-                "responses": ok(page_of("ClusterPage"))}},
-            "/v1/clusters/{id}": {"get": {"operationId": "getCluster", "summary": "One story with its items",
-                "description": "Send Accept: text/markdown for a Markdown rendering: title, metadata, items in join order with the first marked, syndication, velocity.",
-                "parameters": [id_param()],
-                "responses": {
-                    "200": {"description": "OK", "content": {
-                        "application/json": {"schema": {"$ref": "#/components/schemas/Cluster"}},
-                        "text/markdown": {"schema": {"type": "string"}}}},
-                    "404": {"$ref": "#/components/responses/NotFound"}}}},
-            "/v1/clusters/{id}/timeline": {"get": {"operationId": "clusterTimeline", "summary": "Who joined when; cheap for spread curves", "parameters": [id_param()],
-                "responses": ok_or_404(json!({"type": "array", "items": {"$ref": "#/components/schemas/Join"}}))}},
-            "/v1/events": {"get": {"operationId": "events", "summary": "The cluster event log; a cursor for followers",
-                "parameters": [q("after_seq", json!({"type": "integer"}), "Return events with seq greater than this."), limit.clone()],
-                "responses": ok(json!({"$ref": "#/components/schemas/Events"}))}},
-            "/v1/feeds": {"get": {"operationId": "feeds", "summary": "Per-feed poller state, failures first. Operational; not part of the analytic contract.",
-                "parameters": [q("filter", json!({"type": "string", "enum": ["all", "failing", "dead", "stale"], "default": "all"}), "stale means no success in 24 h.")],
-                "responses": ok(json!({"type": "array", "items": {"$ref": "#/components/schemas/Feed"}}))}},
-            "/v1/outlets": {"get": {"operationId": "listOutlets", "summary": "Outlets with domains, feeds and their ledger links",
-                "responses": ok(json!({"type": "array", "items": {"$ref": "#/components/schemas/Outlet"}}))}},
-            "/v1/outlets/{id}": {"get": {"operationId": "getOutlet", "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}, "description": "Outlet id, shared with Kagami ledger."}],
-                "responses": ok_or_404(json!({"$ref": "#/components/schemas/Outlet"}))}},
-            "/v1/stats": {"get": {"operationId": "stats",
-                "responses": ok(json!({"$ref": "#/components/schemas/Stats"}))}},
-            "/v1/openapi.json": {"get": {"operationId": "openapi", "responses": {"200": {"description": "This document"}}}},
-            "/llms.txt": {"get": {"operationId": "llms", "summary": "What this server is and its rules of use, for machine readers", "responses": {"200": {"description": "OK", "content": {"text/plain": {}}}}}},
-            "/debug": {"get": {"operationId": "debugPage", "summary": "The same data as a page for people", "responses": {"200": {"description": "OK", "content": {"text/html": {}}}}}}
-        },
+        "paths": paths(),
         "components": {
             "responses": {"NotFound": {"description": "Unknown id", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}}},
             "schemas": schemas()
@@ -193,6 +244,22 @@ mod tests {
             }
             Value::Array(a) => a.iter().for_each(|x| refs(x, out)),
             _ => {}
+        }
+    }
+
+    #[test]
+    fn every_route_is_documented_once() {
+        let routes = super::super::routes::routes();
+        let mut paths: Vec<&str> = routes.iter().map(|(p, _)| *p).collect();
+        paths.sort();
+        let n = paths.len();
+        paths.dedup();
+        assert_eq!(paths.len(), n, "duplicate route");
+        for (p, op) in spec()["paths"].as_object().unwrap() {
+            assert!(
+                op["get"]["x-undocumented"].is_null(),
+                "route {p} has no OpenAPI operation"
+            );
         }
     }
 
