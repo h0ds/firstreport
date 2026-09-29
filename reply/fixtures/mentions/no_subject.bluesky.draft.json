@@ -1,0 +1,31 @@
+{
+  "contract_version": 1,
+  "mention_id": "at://did:plc:heidi/app.bsky.feed.post/7d4",
+  "platform": "bluesky",
+  "template_ids": [
+    "nothing_to_check",
+    "trailer"
+  ],
+  "sentences": [
+    "Nothing to check: no link, quoted text or parent post to look up.",
+    "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aheidi%2Fapp.bsky.feed.post%2F7d4"
+  ],
+  "posts": [
+    "Nothing to check: no link, quoted text or parent post to look up. Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aheidi%2Fapp.bsky.feed.post%2F7d4"
+  ],
+  "cites": [
+    {
+      "sentence": 0,
+      "reference": "reply:lookup:at://did:plc:heidi/app.bsky.feed.post/7d4",
+      "url": "http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aheidi%2Fapp.bsky.feed.post%2F7d4",
+      "kind": "log"
+    },
+    {
+      "sentence": 1,
+      "reference": "reply:lookup:at://did:plc:heidi/app.bsky.feed.post/7d4",
+      "url": "http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aheidi%2Fapp.bsky.feed.post%2F7d4",
+      "kind": "log"
+    }
+  ],
+  "autonomous": false
+}

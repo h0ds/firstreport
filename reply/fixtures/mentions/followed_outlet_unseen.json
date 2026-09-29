@@ -1,0 +1,68 @@
+{
+  "mention": {
+    "id": "at://did:plc:grace/app.bsky.feed.post/6c3",
+    "platform": "bluesky",
+    "author": "grace.example",
+    "at": 1704500000,
+    "text": "@kagami https://bbc.co.uk/news/not-in-any-feed",
+    "urls": [
+      "https://bbc.co.uk/news/not-in-any-feed"
+    ]
+  },
+  "subject": {
+    "urls": [
+      "https://bbc.co.uk/news/not-in-any-feed"
+    ],
+    "from": "mention"
+  },
+  "lookup": {
+    "matched": "outlet",
+    "canonical_url": "https://bbc.co.uk/news/not-in-any-feed",
+    "host": "bbc.co.uk",
+    "outlet": {
+      "id": "bbc",
+      "name": "BBC",
+      "domains": [
+        "bbc.co.uk"
+      ],
+      "feeds": [],
+      "ledger": "http://127.0.0.1:8081/v1/outlets/bbc",
+      "ledger_lookup": "http://127.0.0.1:8081/lookup?q=bbc"
+    },
+    "checked": [
+      "item by canonical url https://bbc.co.uk/news/not-in-any-feed",
+      "outlet by host bbc.co.uk"
+    ]
+  },
+  "names": {
+    "outlets": {
+      "example": "Example",
+      "wire": "Wire Agency",
+      "bbc": "BBC",
+      "paper-a": "The Paper A",
+      "paper-b": "Paper B Daily",
+      "paper-c": "C Tribune"
+    },
+    "sources": {
+      "wikidata": "Wikidata",
+      "rdap": "the domain registry (RDAP)"
+    }
+  },
+  "outlets": [
+    {
+      "outlet_id": "bbc",
+      "claims": [
+        {
+          "outlet_id": "bbc",
+          "field": "owner",
+          "value": "British Broadcasting Corporation",
+          "source_id": "wikidata",
+          "ref_url": "https://www.wikidata.org/wiki/Q9531",
+          "retrieved_at": 1704000000
+        }
+      ]
+    }
+  ],
+  "observations": [],
+  "gaps": []
+}

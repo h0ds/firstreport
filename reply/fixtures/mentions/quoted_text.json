@@ -1,0 +1,82 @@
+{
+  "mention": {
+    "id": "https://mastodon.example/@frank/112",
+    "platform": "mastodon",
+    "author": "frank@mastodon.example",
+    "at": 1704400000,
+    "text": "@kagami \"Central bank holds rates, signals cuts may come later in the year\" source??",
+    "urls": []
+  },
+  "subject": {
+    "text": "Central bank holds rates, signals cuts may come later in the year",
+    "from": "mention"
+  },
+  "lookup": {
+    "matched": "text",
+    "cluster": {
+      "id": 1234567890123,
+      "created_at": 1704100200,
+      "last_active_at": 1704120000,
+      "item_count": 8,
+      "outlet_count": 6,
+      "primary_title": "Central bank holds rates, signals cuts may come later in the year",
+      "origin_item_id": 1234567890123,
+      "origin_outlet_id": "example",
+      "timeline": [
+        {
+          "item_id": 1234567890123,
+          "outlet_id": "example",
+          "published_at": 1704099600,
+          "joined_at": 1704100200
+        }
+      ],
+      "syndication": [],
+      "velocity": {
+        "items_1h": 0,
+        "items_6h": 3,
+        "items_24h": 8,
+        "outlets_1h": 0,
+        "outlets_6h": 3,
+        "outlets_24h": 6,
+        "time_to_5_outlets_secs": 5400,
+        "time_to_20_outlets_secs": null
+      },
+      "items": [
+        {
+          "id": 1234567890123,
+          "outlet_id": "example"
+        }
+      ]
+    },
+    "text_matches": {
+      "text_hash": 1,
+      "hamming_threshold": 3,
+      "items": [
+        {
+          "id": 1234567890123,
+          "outlet_id": "example"
+        }
+      ]
+    },
+    "checked": [
+      "items with near-identical title and summary fetched since 1701800000"
+    ]
+  },
+  "names": {
+    "outlets": {
+      "example": "Example",
+      "wire": "Wire Agency",
+      "bbc": "BBC",
+      "paper-a": "The Paper A",
+      "paper-b": "Paper B Daily",
+      "paper-c": "C Tribune"
+    },
+    "sources": {
+      "wikidata": "Wikidata",
+      "rdap": "the domain registry (RDAP)"
+    }
+  },
+  "outlets": [],
+  "observations": [],
+  "gaps": []
+}

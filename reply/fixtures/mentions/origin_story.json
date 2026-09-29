@@ -1,0 +1,180 @@
+{
+  "mention": {
+    "id": "at://did:plc:alice/app.bsky.feed.post/3k1",
+    "platform": "bluesky",
+    "author": "alice.example",
+    "at": 1704110400,
+    "text": "@kagami prove it",
+    "parent_id": "at://did:plc:bob/app.bsky.feed.post/3k0",
+    "urls": [
+      "https://www.example.com/world/2024/01/01/rates?utm_source=x"
+    ]
+  },
+  "subject": {
+    "urls": [
+      "https://example.com/world/2024/01/01/rates"
+    ],
+    "from": "parent"
+  },
+  "lookup": {
+    "matched": "item",
+    "canonical_url": "https://example.com/world/2024/01/01/rates",
+    "host": "example.com",
+    "item": {
+      "id": 1234567890123,
+      "outlet_id": "example",
+      "canonical_url": "https://example.com/world/2024/01/01/rates",
+      "title": "Central bank holds rates, signals cuts may come later in the year",
+      "summary": "",
+      "published_at": 1704099600,
+      "fetched_at": 1704100200,
+      "lang": "en",
+      "text_hash": 1,
+      "cluster_id": 1234567890123,
+      "cluster_rank": 0,
+      "joined_at": 1704100200,
+      "snapshot_id": 9
+    },
+    "is_origin": true,
+    "cluster": {
+      "id": 1234567890123,
+      "created_at": 1704100200,
+      "last_active_at": 1704120000,
+      "item_count": 8,
+      "outlet_count": 6,
+      "primary_title": "Central bank holds rates, signals cuts may come later in the year",
+      "origin_item_id": 1234567890123,
+      "origin_outlet_id": "example",
+      "timeline": [
+        {
+          "item_id": 1234567890123,
+          "outlet_id": "example",
+          "published_at": 1704099600,
+          "joined_at": 1704100200
+        },
+        {
+          "item_id": 2,
+          "outlet_id": "wire",
+          "published_at": 1704101400,
+          "joined_at": 1704101700
+        },
+        {
+          "item_id": 3,
+          "outlet_id": "bbc",
+          "published_at": 1704103200,
+          "joined_at": 1704103500
+        },
+        {
+          "item_id": 4,
+          "outlet_id": "paper-a",
+          "published_at": 1704104100,
+          "joined_at": 1704104400
+        },
+        {
+          "item_id": 5,
+          "outlet_id": "paper-b",
+          "published_at": 1704105000,
+          "joined_at": 1704105300
+        },
+        {
+          "item_id": 6,
+          "outlet_id": "paper-c",
+          "published_at": 1704106800,
+          "joined_at": 1704107100
+        },
+        {
+          "item_id": 7,
+          "outlet_id": "paper-a",
+          "published_at": 1704110000,
+          "joined_at": 1704110300
+        },
+        {
+          "item_id": 8,
+          "outlet_id": "paper-b",
+          "published_at": 1704118000,
+          "joined_at": 1704118300
+        }
+      ],
+      "syndication": [
+        {
+          "text_hash": 77,
+          "item_ids": [
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "first_outlet_id": "wire",
+          "spread_secs": 8600
+        }
+      ],
+      "velocity": {
+        "items_1h": 0,
+        "items_6h": 3,
+        "items_24h": 8,
+        "outlets_1h": 0,
+        "outlets_6h": 3,
+        "outlets_24h": 6,
+        "time_to_5_outlets_secs": 5400,
+        "time_to_20_outlets_secs": null
+      },
+      "items": []
+    },
+    "outlet": {
+      "id": "example",
+      "name": "Example",
+      "domains": [
+        "example.com"
+      ],
+      "feeds": [
+        "https://www.example.com/feed.xml"
+      ],
+      "ledger": "http://127.0.0.1:8081/v1/outlets/example",
+      "ledger_lookup": "http://127.0.0.1:8081/lookup?q=example"
+    },
+    "checked": [
+      "item by canonical url https://example.com/world/2024/01/01/rates",
+      "outlet by host example.com"
+    ]
+  },
+  "names": {
+    "outlets": {
+      "example": "Example",
+      "wire": "Wire Agency",
+      "bbc": "BBC",
+      "paper-a": "The Paper A",
+      "paper-b": "Paper B Daily",
+      "paper-c": "C Tribune"
+    },
+    "sources": {
+      "wikidata": "Wikidata",
+      "rdap": "the domain registry (RDAP)"
+    }
+  },
+  "outlets": [
+    {
+      "outlet_id": "example",
+      "claims": [
+        {
+          "outlet_id": "example",
+          "field": "owner",
+          "value": "Example Media Group",
+          "source_id": "wikidata",
+          "ref_url": "https://www.wikidata.org/wiki/Q1",
+          "retrieved_at": 1704000000
+        },
+        {
+          "outlet_id": "example",
+          "field": "domain_registered",
+          "value": "1995-08-14",
+          "source_id": "rdap",
+          "ref_url": "https://rdap.org/domain/example.com",
+          "retrieved_at": 1704000000
+        }
+      ]
+    }
+  ],
+  "observations": [],
+  "gaps": []
+}

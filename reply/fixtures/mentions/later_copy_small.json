@@ -1,0 +1,132 @@
+{
+  "mention": {
+    "id": "at://did:plc:carol/app.bsky.feed.post/4a1",
+    "platform": "bluesky",
+    "author": "carol.example",
+    "at": 1704200000,
+    "text": "@kagami is this real? https://news.bbc.co.uk/wire/123",
+    "urls": [
+      "https://news.bbc.co.uk/wire/123"
+    ]
+  },
+  "subject": {
+    "urls": [
+      "https://news.bbc.co.uk/wire/123"
+    ],
+    "from": "mention"
+  },
+  "lookup": {
+    "matched": "item",
+    "canonical_url": "https://news.bbc.co.uk/wire/123",
+    "host": "news.bbc.co.uk",
+    "item": {
+      "id": 555,
+      "outlet_id": "bbc",
+      "canonical_url": "https://news.bbc.co.uk/wire/123",
+      "title": "Syndicated: agency wire story",
+      "summary": "Agency wire copy republished by a different outlet.",
+      "published_at": 1704088800,
+      "fetched_at": 1704100200,
+      "lang": "en",
+      "text_hash": 77,
+      "cluster_id": 500,
+      "cluster_rank": 1,
+      "joined_at": 1704100200,
+      "snapshot_id": 9
+    },
+    "is_origin": false,
+    "cluster": {
+      "id": 500,
+      "created_at": 1704086000,
+      "last_active_at": 1704100200,
+      "item_count": 2,
+      "outlet_count": 2,
+      "primary_title": "Syndicated: agency wire story",
+      "origin_item_id": 500,
+      "origin_outlet_id": "wire",
+      "timeline": [
+        {
+          "item_id": 500,
+          "outlet_id": "wire",
+          "published_at": 1704085200,
+          "joined_at": 1704086000
+        },
+        {
+          "item_id": 555,
+          "outlet_id": "bbc",
+          "published_at": 1704088800,
+          "joined_at": 1704100200
+        }
+      ],
+      "syndication": [
+        {
+          "text_hash": 77,
+          "item_ids": [
+            500,
+            555
+          ],
+          "first_outlet_id": "wire",
+          "spread_secs": 3600
+        }
+      ],
+      "velocity": {
+        "items_1h": 0,
+        "items_6h": 0,
+        "items_24h": 2,
+        "outlets_1h": 0,
+        "outlets_6h": 0,
+        "outlets_24h": 2,
+        "time_to_5_outlets_secs": null,
+        "time_to_20_outlets_secs": null
+      },
+      "items": [
+        {
+          "id": 500,
+          "outlet_id": "wire"
+        },
+        {
+          "id": 555,
+          "outlet_id": "bbc"
+        }
+      ]
+    },
+    "outlet": {
+      "id": "bbc",
+      "name": "BBC",
+      "domains": [
+        "bbc.co.uk"
+      ],
+      "feeds": [],
+      "ledger": "http://127.0.0.1:8081/v1/outlets/bbc",
+      "ledger_lookup": "http://127.0.0.1:8081/lookup?q=bbc"
+    },
+    "checked": [
+      "item by canonical url https://news.bbc.co.uk/wire/123",
+      "outlet by host news.bbc.co.uk"
+    ]
+  },
+  "names": {
+    "outlets": {
+      "example": "Example",
+      "wire": "Wire Agency",
+      "bbc": "BBC",
+      "paper-a": "The Paper A",
+      "paper-b": "Paper B Daily",
+      "paper-c": "C Tribune"
+    },
+    "sources": {
+      "wikidata": "Wikidata",
+      "rdap": "the domain registry (RDAP)"
+    }
+  },
+  "outlets": [
+    {
+      "outlet_id": "bbc",
+      "claims": []
+    }
+  ],
+  "observations": [],
+  "gaps": [
+    "ledger has no claims for bbc"
+  ]
+}

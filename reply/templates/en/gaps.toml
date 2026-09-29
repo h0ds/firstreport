@@ -1,0 +1,20 @@
+# What to say when there is little or nothing. A miss is reported as
+# exactly what was checked, never dressed up.
+
+[text_match]
+needs = ["d.origin_outlet", "d.origin_time", "lookup.cluster.id"]
+when = "lookup.matched == text"
+text = "No link to check, but this wording matches a story first published by {d.origin_outlet} at {d.origin_time}."
+cite = "feed:cluster:{lookup.cluster.id}"
+
+[no_story]
+needs = ["d.checked"]
+when = "lookup.matched == none"
+text = "Kagami has no story for this. Checked: {d.checked}."
+cite = "reply:lookup:{mention.id}"
+
+[nothing_to_check]
+needs = ["d.gaps"]
+when = "d.has_lookup == false"
+text = "Nothing to check: {d.gaps}."
+cite = "reply:lookup:{mention.id}"

@@ -15,7 +15,7 @@ Rust, single binary per tool, runs entirely locally. Three pillars, built in ord
 | [`feed/`](feed/) | 1 | Ingest headlines, cluster them into stories, record propagation. Neutral by construction. |
 | [`ledger/`](ledger/) | 2 | Sourced facts about outlets keyed by outlet id: ownership, country, founding, third-party ratings, each with its source and licence. Never a score. |
 | `lens/` | 3 | Presentation over `feed` and `ledger`. Not started. |
-| [`reply/`](reply/) | 4 | A social account that answers "prove it" with sourced provenance from `feed` and `ledger`. Planned. |
+| [`reply/`](reply/) | 4 | A social account that answers "prove it" with sourced provenance from `feed` and `ledger`. Templates and composer only so far. |
 
 `feed/docs/plan.md` is the full plan for pillar 1, including the project rules
 that apply to every pillar. `ledger/docs/plan.md` is pillar 2's, and `reply/docs/plan.md` is pillar 4's.
@@ -65,6 +65,10 @@ M6 added NDJSON and Parquet export, `prune`, the nightly job, and the
 contract and API docs. `feed` is at v0.1.0 with the data contract
 frozen at v1; it is complete and verified offline, and has not yet run
 against live feeds. See `feed/docs/plan.md` §11.
+
+`reply` is at R0: contract, templates, composer with the cite check,
+`render` and `check` over golden fixtures. Nothing listens or posts yet.
+`feed` gained `/v1/lookup` for it. See `reply/docs/plan.md` §16.
 
 `ledger` is at L2e: file-backed claim store with validation, refresh
 tracking, read-only API with search and a `/lookup` page, export, and

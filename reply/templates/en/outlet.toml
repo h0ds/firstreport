@@ -1,0 +1,24 @@
+# Sentences about the outlet behind a URL. Facts come from feed's registry
+# and from ledger claims, each with the claim's own source.
+
+[outlet_unseen]
+needs = ["d.outlet_name", "lookup.outlet.id"]
+when = "lookup.matched == outlet"
+text = "Kagami follows {d.outlet_name} but has not seen this link in its feeds."
+cite = "feed:outlet:{lookup.outlet.id}"
+
+[not_followed]
+needs = ["lookup.host"]
+when = "lookup.matched == none"
+text = "{lookup.host} is not an outlet Kagami follows."
+cite = "reply:lookup:{mention.id}"
+
+[domain_age]
+needs = ["d.ledger.domain_registered.value", "d.ledger.domain_registered.source", "d.ledger_outlet"]
+text = "Its domain was registered {d.ledger.domain_registered.value}, per {d.ledger.domain_registered.source}."
+cite = "ledger:{d.ledger_outlet}:domain_registered"
+
+[owner]
+needs = ["d.ledger.owner.value", "d.ledger.owner.source", "d.ledger_outlet"]
+text = "Owner of record: {d.ledger.owner.value}, per {d.ledger.owner.source}."
+cite = "ledger:{d.ledger_outlet}:owner"

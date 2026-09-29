@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["feed", "ledger"]
+members = ["feed", "ledger", "reply"]
 
 [workspace.package]
 version = "0.1.0"

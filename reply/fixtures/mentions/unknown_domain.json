@@ -1,0 +1,45 @@
+{
+  "mention": {
+    "id": "at://did:plc:dave/app.bsky.feed.post/5b2",
+    "platform": "bluesky",
+    "author": "dave.example",
+    "at": 1704300000,
+    "text": "@kagami prove it",
+    "parent_id": "at://did:plc:eve/app.bsky.feed.post/5b1",
+    "urls": [
+      "https://truth-wire.example/breaking/999"
+    ]
+  },
+  "subject": {
+    "urls": [
+      "https://truth-wire.example/breaking/999"
+    ],
+    "from": "parent"
+  },
+  "lookup": {
+    "matched": "none",
+    "canonical_url": "https://truth-wire.example/breaking/999",
+    "host": "truth-wire.example",
+    "checked": [
+      "item by canonical url https://truth-wire.example/breaking/999",
+      "outlet by host truth-wire.example"
+    ]
+  },
+  "names": {
+    "outlets": {
+      "example": "Example",
+      "wire": "Wire Agency",
+      "bbc": "BBC",
+      "paper-a": "The Paper A",
+      "paper-b": "Paper B Daily",
+      "paper-c": "C Tribune"
+    },
+    "sources": {
+      "wikidata": "Wikidata",
+      "rdap": "the domain registry (RDAP)"
+    }
+  },
+  "outlets": [],
+  "observations": [],
+  "gaps": []
+}

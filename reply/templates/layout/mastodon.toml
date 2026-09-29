@@ -1,0 +1,9 @@
+max_chars = 500
+order = [
+  "text_match",
+  "origin", "this_is_origin", "this_is_later", "spread", "spread_small", "syndication",
+  "outlet_unseen", "not_followed", "domain_age", "owner",
+  "no_story", "nothing_to_check",
+]
+trailer = "Every fact above links its source; full record: {d.log_url}"
+trailer_cite = "reply:lookup:{mention.id}"

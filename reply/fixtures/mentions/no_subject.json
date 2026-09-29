@@ -1,0 +1,33 @@
+{
+  "mention": {
+    "id": "at://did:plc:heidi/app.bsky.feed.post/7d4",
+    "platform": "bluesky",
+    "author": "heidi.example",
+    "at": 1704600000,
+    "text": "@kagami thoughts?",
+    "urls": []
+  },
+  "subject": {
+    "from": "mention"
+  },
+  "lookup": null,
+  "names": {
+    "outlets": {
+      "example": "Example",
+      "wire": "Wire Agency",
+      "bbc": "BBC",
+      "paper-a": "The Paper A",
+      "paper-b": "Paper B Daily",
+      "paper-c": "C Tribune"
+    },
+    "sources": {
+      "wikidata": "Wikidata",
+      "rdap": "the domain registry (RDAP)"
+    }
+  },
+  "outlets": [],
+  "observations": [],
+  "gaps": [
+    "no link, quoted text or parent post to look up"
+  ]
+}

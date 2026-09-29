@@ -322,10 +322,14 @@ reply/
     layout/<platform>.toml  sentence order and length rules
   fixtures/
     mentions/*.json         recorded mentions with the FactSet they resolved to
+    mentions/*.<platform>.draft.json
+                            golden drafts, rewritten by `check --update`
     firehose/*.ndjson       recorded platform streams for the observer
   src/
-    main.rs                 CLI: listen | render | review | serve | observe | export
+    main.rs                 CLI: listen | render | review | serve | observe | export | check
+    cli.rs                  argument parsing
     model.rs                contract types, validation, the cite check
+    facts.rs                FactSet → the view templates read, with derived values under d.
     platform/mod.rs         adapter trait
     platform/bluesky.rs
     platform/mastodon.rs
@@ -406,7 +410,9 @@ salt_env = "REPLY_SALT"
 
 ## 16. Milestones
 
-- **R0** crate, contract, templates, `render`, `check`, the cite check. Offline.
+- **R0** crate, contract, templates, `render`, `check`, the cite check.
+  Done, offline: 13 English templates over two layouts, six fixture
+  mentions with golden drafts, and the cite check on every draft.
 - **R1** `feed` gains `/v1/lookup`. Done: `url` and `text` lookups
   with `matched` and `checked`, cluster, origin and outlet with ledger
   links. Next: the resolver, working end to end against a local `feed`
