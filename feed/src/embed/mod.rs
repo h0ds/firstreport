@@ -6,6 +6,7 @@
 pub mod hash;
 pub mod model;
 pub mod tokenizer;
+pub mod unigram;
 
 use std::sync::Arc;
 use std::time::{Duration, Instant};
