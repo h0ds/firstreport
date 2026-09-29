@@ -66,6 +66,7 @@ API only) point at the ledger's record and page for the id, built from
 | `lang` | ISO 639-1 or `und`. Feed hint first, detection second. |
 | `text_hash` | 64-bit simhash of the normalized text as first seen. Not updated on revision, so syndication reflects first publication. |
 | `cluster_id`, `cluster_rank`, `joined_at` | null until clustered. `cluster_rank` 0 is the cluster's seed. |
+| `join_similarity` | added (non-breaking): cosine similarity to the cluster centroid at the moment the item joined. Absent for a seed, for an item moved by a merge, and for rows clustered before it was recorded. |
 | `snapshot_id` | the raw feed fetch this item was parsed from; its body is at `/v1/snapshots/{id}/body`. |
 
 ## Cluster
@@ -104,6 +105,7 @@ API only) point at the ledger's record and page for the id, built from
 | `timeline` | every member in join order. Both timestamps are present so consumers can choose what to trust. |
 | `syndication` | groups of members within `syndication.hamming_threshold` bits of simhash: the same copy, not the same story. Groups of one are omitted. |
 | `velocity` | computed at read time from the timeline against the current clock. Never stored. |
+| `confidence` | added (non-breaking), `docs/steward.md` §3: `join_threshold` in force, `weakest_join`, `join_margin` (`weakest_join − join_threshold`; absent when no member is scored), `unscored` members, `merged` (a merge pass folded another cluster in), `languages` (distinct item languages, sorted). Facts about the method, never about an outlet. Timeline entries carry `join_similarity` where the item has one. |
 
 Exports add `expired: bool`. `GET /v1/clusters/{id}` and
 `?include=items` add `items: [Item]`.

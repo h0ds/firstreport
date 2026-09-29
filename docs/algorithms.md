@@ -21,8 +21,11 @@ or above `join_threshold` (0.72, tuned on the golden pair sets) and
 the cluster was active within the window. Two clusters merge when
 their centroids are at or above `merge_threshold` (0.80). The
 thresholds are in `config/feed.toml`; the precision and recall they
-give are printed by `feed eval`. Each story will carry `join_margin`
-(steward S2) so a story held together by one borderline join says so.
+give are printed by `feed eval`. Each story carries `confidence`: the
+threshold in force, its weakest join and the margin over the threshold,
+how many members are unscored, whether a merge formed it, and the
+languages present; the story page's Method section states the same in
+words, so a story held together by one borderline join says so.
 
 ## 2. Same text: syndication
 

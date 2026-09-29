@@ -97,6 +97,9 @@ The cluster card, then:
   headed with the source's name and licence. Outlets the source has no
   label for are listed as "not rated by <source>". This is the
   blindspot view done honestly: it is the source's map, and we say so.
+- **Method.** `feed`'s own judgement of the story as counts
+  (`docs/steward.md` §3): threshold, weakest join and margin, unscored
+  members, merged, languages. Absent confidence is said, not zeroed.
 - **About the outlets.** One claim card per outlet for its most useful
   facts (owner, country, founded, domain registered), each with its
   provenance line, linking to the outlet page.

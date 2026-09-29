@@ -82,10 +82,16 @@ the feed belongs to.
 Each story carries, in its JSON and Markdown twins:
 
 - `join_margin`: the smallest margin over the join threshold among its
-  members, so a story held together by one borderline join says so.
+  members, so a story held together by one borderline join says so
+  (with `weakest_join`, the threshold, and how many members are
+  unscored: the seed, and items moved by a merge).
 - `merged`: whether a merge pass produced it.
 - `languages`: the set of item languages, so a mixed-language story is
   visible as such once the multilingual model runs.
+
+Done: `confidence` on the contract `Cluster`, `join_similarity` on
+each item and timeline entry, a Method section on every lens story
+page and its twins. An export from before it was recorded says so.
 
 These are facts about the method, shown as counts, never as a badge on
 an outlet. Per-language thresholds are a tuning decision taken from the
@@ -135,7 +141,7 @@ page states it.
   poller; the recorded-feed fixtures (a lying feed, a duplicating feed,
   a flood) wait on live data to record.
 - **S2** Clustering confidence in the contract as an addition, shown
-  in lens twins.
+  in lens twins. Done.
 - **S3** Ledger change guard and conflict list.
 - **S4** Budgets and the opt-out list.
 
