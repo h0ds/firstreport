@@ -107,6 +107,21 @@ pub fn write_site(
         pages.push(format!("/story/{}/", c.id));
         n += 1;
     }
+    // Absorbed clusters keep their address as a stub to the survivor.
+    let mut stubs = 0;
+    for (absorbed, survivor) in crate::pages::stub::merges(input) {
+        let has_page = input
+            .clusters
+            .get(&absorbed)
+            .is_some_and(|c| !c.timeline.is_empty());
+        if has_page || !input.clusters.contains_key(&survivor) {
+            continue;
+        }
+        let t = crate::pages::stub::stub(input, absorbed, survivor);
+        write_twins(&tmp.join("story").join(absorbed.to_string()), &t)?;
+        pages.push(format!("/story/{absorbed}/"));
+        stubs += 1;
+    }
     let facts = crate::derive::outlet_facts(input, OUTLET_WINDOW_DAYS * crate::derive::DAY);
     let mut m = 0;
     // Every registry outlet gets a page, and so does any outlet ledger
@@ -135,7 +150,7 @@ pub fn write_site(
         std::fs::remove_dir_all(out).map_err(|e| format!("{}: {e}", out.display()))?;
     }
     std::fs::rename(&tmp, out).map_err(|e| format!("rename to {}: {e}", out.display()))?;
-    Ok((n, m))
+    Ok((n + stubs, m))
 }
 
 #[cfg(test)]
@@ -148,7 +163,11 @@ mod tests {
         let i = fixture_input();
         let out = std::env::temp_dir().join(format!("lens-site-{}", std::process::id()));
         let (n, m) = write_site(&i, &out, 24, "https://kagami.example").unwrap();
-        assert_eq!((n, m), (61, 3));
+        assert_eq!((n, m), (63, 3), "61 stories and two merge stubs");
+        assert!(out.join("story/900/index.html").exists());
+        assert!(std::fs::read_to_string(out.join("story/900/index.json"))
+            .unwrap()
+            .contains("\"merged_into\": 1001"));
         assert!(out.join("tokens.css").exists());
         assert!(
             out.join("index.html").exists()

@@ -220,7 +220,8 @@ fallbacks apply.
 - **N3** Coverage by source label. The label bar is built and shows
   Wikipedia's reliability verdicts on any story where the list labels
   at least two outlets; AllSides bias slots into the same bar once its
-  terms are settled. Merged-cluster stubs still to do.
+  terms are settled. Merged-cluster stubs done: an absorbed id keeps
+  its address with a canonical link and refresh to the survivor.
 - **N4** Live mode, only if the daily cadence is a problem in
   practice.
 

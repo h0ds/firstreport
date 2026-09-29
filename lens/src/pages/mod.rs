@@ -7,6 +7,7 @@ pub mod home;
 pub mod outlet;
 pub mod search;
 pub mod story;
+pub mod stub;
 
 pub struct Twins {
     pub html: String,

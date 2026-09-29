@@ -39,3 +39,5 @@
 {"seq": 39, "ts": 1758380000, "kind": "revised", "cluster_id": null, "item_id": 1056, "merged_into": null, "snapshot_id": 3}
 {"seq": 40, "ts": 1758423400, "kind": "item_added", "cluster_id": 1057, "item_id": 51057, "merged_into": null, "snapshot_id": null}
 {"seq": 41, "ts": 1758509800, "kind": "item_added", "cluster_id": 1059, "item_id": 51059, "merged_into": null, "snapshot_id": null}
+{"seq": 42, "ts": 1758510000, "kind": "merged", "cluster_id": 900, "item_id": null, "merged_into": 901, "snapshot_id": null}
+{"seq": 43, "ts": 1758510100, "kind": "merged", "cluster_id": 901, "item_id": null, "merged_into": 1001, "snapshot_id": null}
