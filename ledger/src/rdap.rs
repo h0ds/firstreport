@@ -183,7 +183,7 @@ pub fn claims(outlet_id: &str, reg: &Registration, retrieved_at: i64) -> Vec<Cla
         source_id: SOURCE_ID.to_string(),
         ref_url: ref_url.clone(),
         retrieved_at,
-        as_of: reg.last_changed.clone(),
+        as_of: None,
         note: None,
     }];
     if let Some(r) = &reg.registrar {
@@ -198,7 +198,7 @@ pub fn claims(outlet_id: &str, reg: &Registration, retrieved_at: i64) -> Vec<Cla
             source_id: SOURCE_ID.to_string(),
             ref_url,
             retrieved_at,
-            as_of: reg.last_changed.clone(),
+            as_of: None,
             note: None,
         });
     }
@@ -327,7 +327,11 @@ mod tests {
             c[0].ref_url, "https://rdap.verisign.com/com/v1/domain/EXAMPLE.COM",
             "registry's own record, not the redirector"
         );
-        assert_eq!(c[0].as_of.as_deref(), Some("2025-08-14"));
+        assert_eq!(
+            c[0].as_of, None,
+            "last change is in data, not an as-of date"
+        );
+        assert_eq!(c[0].data.as_ref().unwrap()["last_changed"], "2025-08-14");
         let d = c[0].data.as_ref().unwrap();
         assert_eq!(d["domain"], "example.com");
         assert_eq!(

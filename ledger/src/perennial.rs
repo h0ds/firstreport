@@ -99,6 +99,38 @@ fn links(html: &str) -> Vec<(String, String)> {
         .collect()
 }
 
+/// Rendered-table debris out of a cell's text: the 📌 shortcut pins,
+/// `WP:` shortcut tokens when `scope` (they name the row, not the
+/// outlet), and the spaces the renderer leaves before punctuation.
+pub fn tidy(text: &str, scope: bool) -> String {
+    let mut words: Vec<&str> = text
+        .split_whitespace()
+        .filter(|w| *w != "📌" && !(scope && w.starts_with("WP:")))
+        .collect();
+    words.retain(|w| !w.is_empty());
+    let mut out = String::new();
+    let mut after_apostrophe = false;
+    for w in words {
+        let trimmed_pin = w.trim_end_matches('📌');
+        if trimmed_pin.is_empty() {
+            continue;
+        }
+        let w = trimmed_pin;
+        let attach = matches!(w, "," | "." | ";" | ":" | ")" | "?" | "!" | "'")
+            || w.starts_with("'s")
+            || w.starts_with(',')
+            || w.starts_with('.')
+            || w.starts_with(')')
+            || after_apostrophe;
+        if !out.is_empty() && !attach && !out.ends_with('(') {
+            out.push(' ');
+        }
+        out.push_str(w);
+        after_apostrophe = w == "'";
+    }
+    out
+}
+
 /// Domains mentioned in a source cell: tokens that look like hosts.
 pub fn domains_in(text: &str) -> Vec<String> {
     let mut out = Vec::new();
@@ -171,7 +203,7 @@ pub fn parse(html: &str) -> Result<Vec<Row>, String> {
             .map(|(h, _)| h.clone())
             .filter(|h| h.contains("/wiki/") && !h.contains("Wikipedia:") && !h.contains('#'))
             .collect();
-        let source_text = text_of(src);
+        let source_text = tidy(&text_of(src), true);
         let last = text_of(cells[3].1)
             .split_whitespace()
             .find_map(|t| t.parse::<u32>().ok())
@@ -185,7 +217,7 @@ pub fn parse(html: &str) -> Result<Vec<Row>, String> {
             status,
             discussions: links(cells[2].1).into_iter().map(|(h, _)| h).collect(),
             last,
-            summary: text_of(cells[4].1),
+            summary: tidy(&text_of(cells[4].1), false),
         });
     }
     if rows.is_empty() {
@@ -349,6 +381,22 @@ mod tests {
                 .join("fixtures/wikipedia_rsp/perennial-sample.html"),
         )
         .unwrap()
+    }
+
+    #[test]
+    fn tidy_strips_pins_shortcuts_and_renderer_spacing() {
+        assert_eq!(
+            tidy("The New York Times ( NYT ) WP:NYT 📌 WP:NYTIMES 📌", true),
+            "The New York Times (NYT)"
+        );
+        assert_eq!(
+            tidy("The Guardian ' s op-eds should be handled with WP:RSOPINION . See also: The Guardian blogs .", false),
+            "The Guardian's op-eds should be handled with WP:RSOPINION. See also: The Guardian blogs."
+        );
+        assert_eq!(
+            tidy("Fox News ( news excluding politics )", true),
+            "Fox News (news excluding politics)"
+        );
     }
 
     #[test]

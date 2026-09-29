@@ -91,7 +91,8 @@ struct Binding {
 /// Structured form attached to a claim (`{"qid": "Q145"}`).
 type Data = BTreeMap<String, serde_json::Value>;
 /// item qid → (label, field → distinct (value, data) pairs)
-type Items = BTreeMap<String, (String, BTreeMap<&'static str, Vec<(String, Option<Data>)>>)>;
+type Fields = BTreeMap<&'static str, Vec<(String, Option<Data>)>>;
+type Items = BTreeMap<String, (String, Fields)>;
 
 fn qid(uri: &str) -> Option<&str> {
     uri.rsplit('/').next().filter(|q| q.starts_with('Q'))
@@ -178,36 +179,72 @@ pub fn parse_response(
     for q in &skipped {
         items.remove(q);
     }
-    let multiple = items.len() > 1;
+    // Several items can share a domain (the paper and its company, say).
+    // Record one: the item with a Wikipedia article, then the one with
+    // more recorded fields, then the earliest inception, then the lowest
+    // id. The others are named in the note and in data.candidates so a
+    // reviewer can switch; nothing is emitted twice.
+    let rank = |q: &str, fields: &Fields| {
+        (
+            fields.contains_key("wikipedia"),
+            fields.len(),
+            std::cmp::Reverse(
+                fields
+                    .get("founded")
+                    .and_then(|v| v.first())
+                    .map(|(v, _)| v.clone())
+                    .unwrap_or_else(|| "9999".into()),
+            ),
+            std::cmp::Reverse(q[1..].parse::<u64>().unwrap_or(u64::MAX)),
+        )
+    };
+    let Some((q, (label, fields))) = items.iter().max_by_key(|(q, (_, fields))| rank(q, fields))
+    else {
+        return Ok(Vec::new());
+    };
+    let others: Vec<(&String, &String)> = items
+        .iter()
+        .filter(|(oq, _)| *oq != q)
+        .map(|(oq, (l, _))| (oq, l))
+        .collect();
+    let note = (!others.is_empty()).then(|| {
+        format!(
+            "{} Wikidata items match the domain; this is {q} ({label}); also {}",
+            items.len(),
+            others
+                .iter()
+                .map(|(oq, l)| format!("{oq} ({l})"))
+                .collect::<Vec<_>>()
+                .join(", ")
+        )
+    });
+    let ref_url = format!("https://www.wikidata.org/wiki/{q}");
     let mut out = Vec::new();
-    for (q, (label, fields)) in &items {
-        let ref_url = format!("https://www.wikidata.org/wiki/{q}");
-        let note = multiple.then(|| {
-            format!(
-                "one of {} items matching the domain; this is {q} ({label})",
-                items.len()
-            )
-        });
-        let mut claim =
-            |field: &str, value: String, data: Option<BTreeMap<String, serde_json::Value>>| {
-                out.push(Claim {
-                    outlet_id: outlet_id.to_string(),
-                    field: field.to_string(),
-                    value,
-                    data,
-                    source_id: SOURCE_ID.to_string(),
-                    ref_url: ref_url.clone(),
-                    retrieved_at,
-                    as_of: None,
-                    note: note.clone(),
-                });
-            };
-        claim("wikidata_id", q.clone(), None);
-        claim("name", label.clone(), None);
-        for (field, values) in fields {
-            for (v, d) in values {
-                claim(field, v.clone(), d.clone());
-            }
+    let mut claim =
+        |field: &str, value: String, data: Option<BTreeMap<String, serde_json::Value>>| {
+            out.push(Claim {
+                outlet_id: outlet_id.to_string(),
+                field: field.to_string(),
+                value,
+                data,
+                source_id: SOURCE_ID.to_string(),
+                ref_url: ref_url.clone(),
+                retrieved_at,
+                as_of: None,
+                note: note.clone(),
+            });
+        };
+    let id_data = (!others.is_empty()).then(|| {
+        BTreeMap::from([(
+            "candidates".to_string(),
+            serde_json::json!(others.iter().map(|(oq, _)| oq.as_str()).collect::<Vec<_>>()),
+        )])
+    });
+    claim("wikidata_id", q.clone(), id_data);
+    claim("name", label.clone(), None);
+    for (field, values) in fields {
+        for (v, d) in values {
+            claim(field, v.clone(), d.clone());
         }
     }
     Ok(out)
@@ -331,5 +368,37 @@ mod tests {
             .unwrap()
             .is_empty());
         assert!(parse_response("x", "not json", 1).is_err());
+    }
+
+    #[test]
+    fn several_matching_items_yield_one_record_and_name_the_rest() {
+        let json = r#"{"results":{"bindings":[
+            {"item":{"value":"http://www.wikidata.org/entity/Q135925219"},"itemLabel":{"value":"nytimes.com"},"website":{"value":"https://www.nytimes.com/"},"countryLabel":{"value":"United States"},"country":{"value":"http://www.wikidata.org/entity/Q30"},"ownerLabel":{"value":"The New York Times Company"},"owner":{"value":"http://www.wikidata.org/entity/Q1"}},
+            {"item":{"value":"http://www.wikidata.org/entity/Q9684"},"itemLabel":{"value":"The New York Times"},"website":{"value":"https://www.nytimes.com/"},"countryLabel":{"value":"United States"},"country":{"value":"http://www.wikidata.org/entity/Q30"},"ownerLabel":{"value":"The New York Times Company"},"owner":{"value":"http://www.wikidata.org/entity/Q1"},"inception":{"value":"1851-09-18T00:00:00Z"},"article":{"value":"https://en.wikipedia.org/wiki/The_New_York_Times"}}
+        ]}}"#;
+        let claims = parse_response("nytimes", json, 1).unwrap();
+        let ids: Vec<&str> = claims
+            .iter()
+            .filter(|c| c.field == "wikidata_id")
+            .map(|c| c.value.as_str())
+            .collect();
+        assert_eq!(ids, vec!["Q9684"], "the item with the article wins");
+        assert_eq!(
+            claims.iter().filter(|c| c.field == "owner").count(),
+            1,
+            "no duplicate values"
+        );
+        assert_eq!(claims.iter().filter(|c| c.field == "country").count(), 1);
+        let id = claims.iter().find(|c| c.field == "wikidata_id").unwrap();
+        assert_eq!(
+            id.data.as_ref().unwrap()["candidates"],
+            serde_json::json!(["Q135925219"])
+        );
+        assert!(id
+            .note
+            .as_deref()
+            .unwrap()
+            .contains("also Q135925219 (nytimes.com)"));
+        assert!(claims.iter().all(|c| c.ref_url.ends_with("/Q9684")));
     }
 }
