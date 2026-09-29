@@ -18,6 +18,8 @@ Rust, single binary per tool, runs entirely locally. Three pillars, built in ord
 
 `feed/docs/plan.md` is the full plan for pillar 1, including the project rules
 that apply to every pillar. `ledger/docs/plan.md` is pillar 2's.
+`docs/local-runbook.md` lists everything that has not yet run outside the
+sandbox it was built in, with the commands to do it.
 
 ## Visual layer
 
