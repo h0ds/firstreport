@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://www.example-wire.com/world/central-bank-holds-rates-2025-08-24/</loc>
+    <lastmod>2025-08-24T12:55:00Z</lastmod>
+    <news:news>
+      <news:publication>
+        <news:name>Example Wire</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-24T12:53:10+00:00</news:publication_date>
+      <news:title>Central bank holds rates steady, signals cuts later this year</news:title>
+      <news:keywords>economy, rates</news:keywords>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://www.example-wire.com/world/coastal-flooding-highways-2025-08-24/?utm_source=sitemap</loc>
+    <news:news>
+      <news:publication><news:name>Example Wire</news:name><news:language>en</news:language></news:publication>
+      <news:publication_date>2025-08-24T14:05:00+02:00</news:publication_date>
+      <news:title><![CDATA[Coastal flooding closes two highways after overnight storm & high tide]]></news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://www.example-wire.com/jp/nichigin-2025-08-24/</loc>
+    <news:news>
+      <news:publication><news:name>Example Wire 日本</news:name><news:language>ja</news:language></news:publication>
+      <news:publication_date>2025-08-24</news:publication_date>
+      <news:title>日銀、政策金利を据え置き &amp; 年内の利下げを示唆</news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://www.example-wire.com/about/</loc>
+    <lastmod>2025-01-01</lastmod>
+  </url>
+</urlset>

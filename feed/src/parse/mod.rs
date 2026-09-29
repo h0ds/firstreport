@@ -6,4 +6,5 @@ pub mod html;
 pub mod outlet;
 pub mod revision;
 pub mod simhash;
+pub mod sitemap;
 pub mod url;

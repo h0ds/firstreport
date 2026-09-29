@@ -18,6 +18,8 @@ pub enum FeedKind {
     Rss,
     Atom,
     Json,
+    /// A Google News sitemap: the source for publishers with no feed.
+    Sitemap,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]

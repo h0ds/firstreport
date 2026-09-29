@@ -39,7 +39,16 @@ impl std::fmt::Display for ParseError {
 }
 impl std::error::Error for ParseError {}
 
+/// Dispatch by what the body is: a sitemap has its own parser,
+/// everything else goes to feed-rs.
 pub fn parse(body: &[u8], feed_url: &str) -> Result<ParsedFeed, ParseError> {
+    if super::sitemap::looks_like_sitemap(body) {
+        return super::sitemap::parse(body, feed_url);
+    }
+    parse_syndication(body, feed_url)
+}
+
+fn parse_syndication(body: &[u8], feed_url: &str) -> Result<ParsedFeed, ParseError> {
     let base = Url::parse(feed_url).ok();
     let parsed = feed_rs::parser::Builder::new()
         .base_uri(Some(feed_url))
