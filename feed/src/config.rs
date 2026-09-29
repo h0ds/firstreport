@@ -19,6 +19,9 @@ pub struct Config {
     pub syndication: Syndication,
     pub api: Api,
     pub export: Export,
+    /// From `config/opt-out.toml`, not `feed.toml`: hosts never requested.
+    #[serde(skip)]
+    pub opt_out_hosts: Vec<String>,
 }
 
 #[derive(Debug, Clone, Deserialize)]
@@ -393,6 +396,8 @@ pub enum ConfigError {
         feed_url: String,
         outlet: String,
     },
+    /// `opt-out.toml` present but unreadable or malformed.
+    OptOut(String),
 }
 
 impl std::fmt::Display for ConfigError {
@@ -403,6 +408,7 @@ impl std::fmt::Display for ConfigError {
             ConfigError::UnknownOutlet { feed_url, outlet } => {
                 write!(f, "feed {feed_url} references unknown outlet {outlet:?}")
             }
+            ConfigError::OptOut(e) => write!(f, "opt-out list: {e}"),
         }
     }
 }
@@ -433,6 +439,8 @@ pub fn load(dir: &Path) -> Result<Loaded, ConfigError> {
     };
     let feeds: Feeds = read_toml(&dir.join("feeds.toml"))?;
     let outlets: Outlets = read_toml(&dir.join("outlets.toml"))?;
+    let mut config = config;
+    config.opt_out_hosts = crate::fetch::opt_out::load(dir).map_err(ConfigError::OptOut)?;
 
     for f in &feeds.feeds {
         if !outlets.outlets.iter().any(|o| o.id == f.outlet) {

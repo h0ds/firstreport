@@ -25,6 +25,11 @@ output, not article pages. Retention is configurable and defaults to
 
 These are code, not policy; the tests in `feed/src/fetch/` check them.
 
+- **The opt-out list comes first.** A host in `feed/config/opt-out.toml`
+  is never requested at all: not its feeds, not its robots.txt, not its
+  home page, not by discovery, and the same for its subdomains. Every
+  entry carries the reason and the date, and entries are only added by
+  hand.
 - **robots.txt is honoured** (RFC 9309). The group addressed to
   `kagami-feed` wins, else `*`. A disallowed path is never requested;
   a feed under a disallowed path fails with that reason in `/v1/feeds`
@@ -42,6 +47,9 @@ These are code, not policy; the tests in `feed/src/fetch/` check them.
 - **Rate limits are respected.** 429 and 503 back the feed off
   exponentially and honour `Retry-After`. At most two requests to a
   host at a time, sixty-four in flight overall.
+- **Budgets, even when nothing asks for them.** At most 240 requests to
+  a host per hour and 20,000 overall by default; a request over budget
+  waits, and the waits are counted in `/v1/stats`.
 - **Permanent moves are followed and remembered**, so a publisher who
   moves a feed is not polled at the old address.
 - **No article fetching.** Nothing under a feed or sitemap entry's link
@@ -53,7 +61,9 @@ These are code, not policy; the tests in `feed/src/fetch/` check them.
 
 - A publisher who wants out edits their robots.txt, which we read
   daily, or opens an issue on the repository, which is the contact
-  address in every User-Agent. Either is honoured without argument.
+  address in every User-Agent. Either is honoured without argument; an
+  issue becomes a line in `feed/config/opt-out.toml`, which is checked
+  before anything else.
 - Terms of use that restrict automated access are read in that light:
   a feed exists to be polled and a sitemap to be crawled, and Kagami
   requests nothing else. Where a publisher's terms say otherwise for

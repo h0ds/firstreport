@@ -102,7 +102,8 @@ impl Poller {
             .with_budgets(crate::fetch::client::Budgets {
                 per_host: cfg.poll.per_host_requests_per_hour,
                 global: cfg.poll.global_requests_per_hour,
-            });
+            })
+            .with_opt_outs(cfg.opt_out_hosts.clone());
         let snapshot_dir = cfg.snapshots.dir.clone();
         Ok(Self {
             cfg,

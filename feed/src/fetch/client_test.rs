@@ -295,3 +295,25 @@ async fn request_budget_makes_the_third_request_wait() {
     // robots.txt plus three feed requests reached the server
     assert_eq!(hits.load(Ordering::SeqCst), 4);
 }
+
+#[tokio::test]
+async fn an_opted_out_host_is_never_requested() {
+    let (base, hits) = serve();
+    let c = Client::new(4, 2)
+        .unwrap()
+        .with_opt_outs(vec!["127.0.0.1".to_string()]);
+    let err = c
+        .fetch(&format!("{base}/feed"), None, None)
+        .await
+        .unwrap_err();
+    assert!(matches!(err, FetchError::OptedOut), "{err}");
+    assert!(matches!(
+        c.allowed(&format!("{base}/robots.txt")).await.unwrap_err(),
+        FetchError::OptedOut
+    ));
+    assert_eq!(hits.load(Ordering::SeqCst), 0, "not even robots.txt");
+    assert_eq!(
+        err.to_string(),
+        "host asked to be left alone (config/opt-out.toml)"
+    );
+}

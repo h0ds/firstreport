@@ -246,7 +246,7 @@ pub async fn discover(
     outlets: &Outlets,
     write: bool,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let client = Client::new(4, 2)?;
+    let client = Client::new(4, 2)?.with_opt_outs(crate::fetch::opt_out::load(config_dir)?);
     let found = discover_one(&client, page).await?;
     eprintln!("{} feeds found at {page}", found.len());
     for d in &found {
@@ -312,7 +312,7 @@ pub async fn discover_hosts(
     if let Some(n) = limit {
         hosts.truncate(n);
     }
-    let client = Client::new(8, 2)?;
+    let client = Client::new(8, 2)?.with_opt_outs(crate::fetch::opt_out::load(config_dir)?);
     let total = hosts.len();
     eprintln!("discovering feeds for {total} hosts");
 
@@ -716,7 +716,7 @@ pub async fn fix_feeds(
         println!("no failing feeds");
         return Ok(());
     }
-    let client = Client::new(4, 2)?;
+    let client = Client::new(4, 2)?.with_opt_outs(crate::fetch::opt_out::load(config_dir)?);
     let path = config_dir.join("feeds.toml");
     let mut text = std::fs::read_to_string(&path)?;
     let mut fixed = 0;

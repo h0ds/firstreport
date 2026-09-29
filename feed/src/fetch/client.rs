@@ -95,6 +95,8 @@ pub enum FetchError {
     Redirect(String),
     /// The host's robots.txt disallows this path for us.
     Disallowed,
+    /// The host is on the opt-out list (config/opt-out.toml).
+    OptedOut,
 }
 
 impl FetchError {
@@ -139,6 +141,7 @@ impl std::fmt::Display for FetchError {
             FetchError::TooLarge(n) => write!(f, "body {n} bytes exceeds cap"),
             FetchError::Redirect(m) => write!(f, "redirect: {m}"),
             FetchError::Disallowed => write!(f, "disallowed by the host's robots.txt"),
+            FetchError::OptedOut => write!(f, "host asked to be left alone (config/opt-out.toml)"),
         }
     }
 }
@@ -157,6 +160,8 @@ pub struct Client {
     robots: Arc<Mutex<HashMap<String, RobotsEntry>>>,
     /// Per host: when the last request was sent, for Crawl-delay.
     last_request: Arc<Mutex<HashMap<String, Instant>>>,
+    /// Hosts that asked to be left alone; checked before anything else.
+    opt_out: Arc<Vec<String>>,
     budgets: Budgets,
     budget_window: Duration,
     budget: Arc<Mutex<BudgetState>>,
@@ -202,11 +207,18 @@ impl Client {
             compat_hosts: Arc::new(Mutex::new(HashSet::new())),
             robots: Arc::new(Mutex::new(HashMap::new())),
             last_request: Arc::new(Mutex::new(HashMap::new())),
+            opt_out: Arc::new(vec![]),
             budgets: Budgets::default(),
             budget_window: BUDGET_WINDOW,
             budget: Arc::new(Mutex::new(BudgetState::default())),
             budget_waits: Arc::new(AtomicU64::new(0)),
         })
+    }
+
+    /// Set the opt-out list (docs/steward.md §5): hosts never requested.
+    pub fn with_opt_outs(mut self, hosts: Vec<String>) -> Self {
+        self.opt_out = Arc::new(hosts);
+        self
     }
 
     /// Set the request budgets (docs/steward.md §5).
@@ -363,6 +375,10 @@ impl Client {
     pub async fn allowed(&self, url: &str) -> Result<robots::Decision, FetchError> {
         let parsed =
             url::Url::parse(url).map_err(|e| FetchError::Redirect(format!("bad url: {e}")))?;
+        // Before robots.txt is even read: an opted-out host gets no request.
+        if super::opt_out::covers(&self.opt_out, parsed.host_str().unwrap_or_default()) {
+            return Err(FetchError::OptedOut);
+        }
         let rules = self.robots_for(&parsed).await;
         let path = match parsed.query() {
             Some(q) => format!("{}?{q}", parsed.path()),

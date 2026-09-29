@@ -1,0 +1,15 @@
+# Hosts that asked to be left alone (docs/publisher-rules.md, docs/steward.md §5).
+#
+# A host listed here is never requested by feed: not its feeds, not its
+# robots.txt, not its home page, not by discovery. The check runs before
+# anything else and applies to the host and every subdomain of it. An
+# entry needs a reason and a date, so the list is its own record.
+#
+# To be listed, a publisher opens an issue on the repository (the
+# address in every User-Agent) or edits their robots.txt, which is
+# honoured anyway. Entries are only ever added by hand.
+#
+# [[host]]
+# host = "example.com"
+# reason = "asked by email, issue #123"
+# since = "2026-01-31"
