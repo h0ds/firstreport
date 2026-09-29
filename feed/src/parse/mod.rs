@@ -6,5 +6,4 @@ pub mod html;
 pub mod outlet;
 pub mod revision;
 pub mod simhash;
-pub mod telegram;
 pub mod url;

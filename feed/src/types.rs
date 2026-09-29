@@ -18,8 +18,6 @@ pub enum FeedKind {
     Rss,
     Atom,
     Json,
-    /// A public Telegram channel's preview page, `https://t.me/s/<channel>`.
-    Telegram,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
