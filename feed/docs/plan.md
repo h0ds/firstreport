@@ -323,7 +323,7 @@ Cursor pagination everywhere (`next` field). No auth in v1; bind to loopback by 
 
 ### 5.6 Export
 
-`feed export --format ndjson|parquet --out <dir>` and a built-in nightly job (config-gated). Emits `items`, `clusters`, `events`, `outlets`, and (NDJSON) `revisions`. Parquet includes embeddings and centroids; NDJSON omits them. This is the interface `ledger` and `lens` are expected to consume in bulk; the live API is for incremental updates.
+`feed export --format ndjson|parquet --out <dir>` and a built-in nightly job (config-gated). Emits `items`, `clusters`, `events`, `outlets` and `revisions` in both formats. Parquet includes embeddings and centroids; NDJSON omits them. This is the interface `ledger` and `lens` are expected to consume in bulk; the live API is for incremental updates.
 
 ---
 

@@ -17,7 +17,7 @@ use parquet::arrow::ArrowWriter;
 use parquet::basic::Compression;
 use parquet::file::properties::WriterProperties;
 
-use super::{for_each_cluster, for_each_event, Summary};
+use super::{for_each_cluster, for_each_event, for_each_revision, Summary};
 use crate::store::reader::{self, Reader};
 
 const PAGE: usize = 1000;
@@ -318,6 +318,41 @@ fn write_events(reader: &Reader, path: &Path) -> Result<usize, Box<dyn std::erro
     Ok(n)
 }
 
+/// Earlier texts of items, in per-item chronological order (plan §5.3a).
+fn write_revisions(reader: &Reader, path: &Path) -> Result<usize, Box<dyn std::error::Error>> {
+    let schema = Arc::new(Schema::new(vec![
+        Field::new("item_id", DataType::UInt64, false),
+        Field::new("snapshot_id", DataType::UInt64, false),
+        Field::new("seen_at", DataType::Int64, false),
+        Field::new("title", DataType::Utf8, false),
+        Field::new("summary", DataType::Utf8, false),
+    ]));
+    let mut w = writer(path, schema.clone())?;
+    let mut item = UInt64Builder::new();
+    let mut snap = UInt64Builder::new();
+    let mut seen = Int64Builder::new();
+    let mut title = StringBuilder::new();
+    let mut summary = StringBuilder::new();
+    let n = for_each_revision(reader, |r| {
+        item.append_value(r.item_id);
+        snap.append_value(r.snapshot_id);
+        seen.append_value(r.seen_at);
+        title.append_value(&r.title);
+        summary.append_value(&r.summary);
+        Ok(())
+    })?;
+    let cols: Vec<ArrayRef> = vec![
+        Arc::new(item.finish()),
+        Arc::new(snap.finish()),
+        Arc::new(seen.finish()),
+        Arc::new(title.finish()),
+        Arc::new(summary.finish()),
+    ];
+    w.write(&RecordBatch::try_new(schema, cols)?)?;
+    w.close()?;
+    Ok(n)
+}
+
 fn write_outlets(reader: &Reader, path: &Path) -> Result<usize, Box<dyn std::error::Error>> {
     let schema = Arc::new(Schema::new(vec![
         Field::new("id", DataType::Utf8, false),
@@ -367,7 +402,8 @@ pub fn write(
         clusters: write_clusters(reader, &file("clusters"), now, th)?,
         events: write_events(reader, &file("events"))?,
         outlets: write_outlets(reader, &file("outlets"))?,
-        files: ["items", "clusters", "events", "outlets"]
+        revisions: write_revisions(reader, &file("revisions"))?,
+        files: ["items", "clusters", "events", "outlets", "revisions"]
             .iter()
             .map(|n| file(n))
             .collect(),
@@ -398,6 +434,8 @@ mod tests {
         )
         .unwrap();
         assert_eq!((s.items, s.clusters, s.events, s.outlets), (3, 1, 3, 1));
+        assert_eq!(s.revisions, 1);
+        assert!(out.join("revisions.parquet").is_file());
 
         let f = std::fs::File::open(out.join("items.parquet")).unwrap();
         let mut r = ParquetRecordBatchReaderBuilder::try_new(f)
