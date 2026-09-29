@@ -294,16 +294,12 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         for (c, f) in &spreading {
             let _ = write!(
                 b,
-                "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\"><span class=\"kg-count\">{} in 6 h</span>{} · {}</span></li>",
+                // Headline, then its chip and first outlet on the line below.
+                "<li class=\"spread\" data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\"><span class=\"kg-count\">{} in 6 h</span><span class=\"sep\">·</span>{}</span></li>",
                 c.id,
                 c.id,
                 esc(&c.primary_title),
                 n(f.outlets_6h as usize, "outlet"),
-                if c.outlet_count != f.outlets_6h {
-                    format!(" · {} in all", n(c.outlet_count as usize, "outlet"))
-                } else {
-                    String::new()
-                },
                 crate::render::origin_link(input, &c.origin_outlet_id)
             );
         }
@@ -476,7 +472,7 @@ mod tests {
         assert_eq!(t.json["single_reports"][0]["reports"], 1);
         assert!(
             t.html
-                .contains("<span class=\"kg-count\">1 outlet in 6 h</span> · <span class=\"kg-origin-name\">"),
+                .contains("<span class=\"kg-count\">1 outlet in 6 h</span><span class=\"sep\">·</span><span class=\"kg-origin-name\">"),
             "equal counts shown once"
         );
         assert!(t.md.contains("## Spreading now"));
