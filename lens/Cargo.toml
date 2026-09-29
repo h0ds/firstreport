@@ -1,0 +1,15 @@
+[package]
+name = "lens"
+description = "Kagami pillar 3: a static site over feed and ledger exports, arranging and never judging"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "lens"
+path = "src/main.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
