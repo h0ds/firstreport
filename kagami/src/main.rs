@@ -438,7 +438,9 @@ mod tests {
         let p = plan_site(Path::new("/w"), Path::new("/o"));
         assert_eq!(p.len(), 4);
         assert_eq!(p[0].0, "feed");
-        assert!(p[2].1.contains(&"/w/feed".to_string()) && p[2].1.contains(&"/o".to_string()));
+        // Built with Path::join, so the separator is the platform's.
+        let feed_export = Path::new("/w").join("feed").to_string_lossy().to_string();
+        assert!(p[2].1.contains(&feed_export) && p[2].1.contains(&"/o".to_string()));
         assert_eq!(p[3].1, vec!["check", "--out", "/o"]);
         assert_eq!(plan_run()[1].1[1], "../feed/config/outlets.toml");
         let ts = tools(Path::new("/r")).unwrap();
