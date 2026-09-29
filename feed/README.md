@@ -81,6 +81,11 @@ Ids are u64 and accepted as decimal or `0x`-prefixed hex.
   by `poll.min_interval_secs` and `poll.max_interval_secs`. Every wait
   carries deterministic ±`poll.jitter` so feeds on the same interval
   drift apart instead of bursting.
+- **Unreachable is retried soon.** A fetch that makes no connection (DNS or
+  connect failure) is retried after 2, 4 and 8 minutes before normal
+  backoff applies, so a blip in the machine's own DNS or network does not
+  leave healthy feeds backed off for half an hour. It still counts as a
+  failure.
 - **Backoff** doubles from the configured interval on each failure, capped
   at `poll.max_backoff_secs`; `Retry-After` on 429/503 is honoured when it
   is longer. Seven days of continuous failure marks a feed dead.

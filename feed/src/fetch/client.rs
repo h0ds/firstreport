@@ -107,6 +107,13 @@ impl FetchError {
             _ => None,
         }
     }
+    /// No connection was made: the name did not resolve or the connect
+    /// failed or timed out. Often a blip on our side (the machine's DNS or
+    /// network) rather than the feed's, so it is retried soon.
+    pub fn is_unreachable(&self) -> bool {
+        matches!(self, FetchError::Http(e) if e.is_connect())
+    }
+
     pub fn retry_after(&self) -> Option<u64> {
         match self {
             FetchError::RateLimited {

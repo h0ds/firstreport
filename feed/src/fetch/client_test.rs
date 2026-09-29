@@ -317,3 +317,22 @@ async fn an_opted_out_host_is_never_requested() {
         "host asked to be left alone (config/opt-out.toml)"
     );
 }
+
+#[tokio::test]
+async fn no_connection_is_unreachable_an_answer_is_not() {
+    // A port nothing listens on: the connect is refused, nothing answered.
+    let closed = {
+        let l = TcpListener::bind("127.0.0.1:0").unwrap();
+        l.local_addr().unwrap().port()
+    };
+    let c = Client::new(4, 2).unwrap();
+    let e = c
+        .fetch(&format!("http://127.0.0.1:{closed}/feed.xml"), None, None)
+        .await
+        .unwrap_err();
+    assert!(e.is_unreachable(), "refused connect is unreachable: {e}");
+
+    let (base, _) = serve();
+    let e = c.fetch(&format!("{base}/missing"), None, None).await.unwrap_err();
+    assert!(!e.is_unreachable(), "a 404 is an answer: {e}");
+}

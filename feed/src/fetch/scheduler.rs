@@ -17,6 +17,15 @@ use crate::store::writer::FeedState;
 /// A feed is declared dead after failing continuously this long.
 pub const DEAD_AFTER_SECS: i64 = 7 * 86_400;
 
+/// First retry after a fetch that made no connection (DNS or connect
+/// failure); doubles on each further one.
+pub const UNREACHABLE_RETRY_SECS: u64 = 120;
+/// Consecutive unreachable fetches retried on the short clock before the
+/// feed falls back to normal backoff: 2, 4 and 8 min, about 14 min in all.
+/// Long enough to ride out a local DNS or network blip, short enough that
+/// a host that is really gone backs off like any other failure.
+pub const UNREACHABLE_QUICK_TRIES: u32 = 3;
+
 #[derive(Debug, Clone)]
 pub struct SchedulerCfg {
     pub max_backoff_secs: u64,
@@ -51,9 +60,15 @@ pub enum Outcome {
     Ok,
     /// 304, or a body identical to last time.
     Unchanged,
-    /// Network error, 4xx/5xx, parse failure: anything worth backing off for.
+    /// 4xx/5xx, parse failure, timeout after connecting: anything worth
+    /// backing off for.
     #[default]
     Err,
+    /// No connection was made (DNS or connect failure). Counts as a
+    /// failure but is retried soon at first: when many feeds fail this way
+    /// at once it is our network, and a full backoff would leave healthy
+    /// feeds looking dead for half an hour.
+    Unreachable,
 }
 
 /// Everything the poller learned from one fetch.
@@ -162,7 +177,7 @@ impl Scheduler {
                     };
                 }
             }
-            Outcome::Err => {
+            Outcome::Err | Outcome::Unreachable => {
                 f.fail_count = f.fail_count.saturating_add(1);
                 let failing_since = f.last_ok_at.unwrap_or(now);
                 if f.last_ok_at.is_some() && now - failing_since >= DEAD_AFTER_SECS {
@@ -171,7 +186,10 @@ impl Scheduler {
             }
         }
         let wait = match outcome {
-            Outcome::Err => {
+            Outcome::Unreachable if f.fail_count <= UNREACHABLE_QUICK_TRIES => {
+                (UNREACHABLE_RETRY_SECS << (f.fail_count.max(1) - 1)).max(retry_after.unwrap_or(0))
+            }
+            Outcome::Err | Outcome::Unreachable => {
                 let backoff = f
                     .base_interval_secs
                     .saturating_mul(1u64 << f.fail_count.min(20))
@@ -403,5 +421,39 @@ mod tests {
         }
         assert!(s.feed(0).dead);
         assert_eq!(s.next_due_at(), None);
+    }
+
+    #[test]
+    fn unreachable_retries_soon_then_backs_off() {
+        let unreachable = || Report {
+            outcome: Some(Outcome::Unreachable),
+            error: Some("dns error".into()),
+            ..Default::default()
+        };
+        let mut s = Scheduler::new(vec![fs("a", 0)], cfg(false, 0.0));
+        // 2, 4, 8 minutes: a local DNS blip is ridden out in minutes.
+        let mut now = 0;
+        for want in [120, 240, 480] {
+            let f = s.complete(0, now, unreachable());
+            assert_eq!(f.next_fetch_at - now, want);
+            now = f.next_fetch_at;
+        }
+        assert_eq!(s.feed(0).fail_count, 3, "still counted as failures");
+        // Then normal backoff: base 600 * 2^4.
+        let next = s.complete(0, now, unreachable()).next_fetch_at;
+        assert_eq!(next - now, 600 * 16);
+        // A success clears it.
+        assert_eq!(s.complete(0, next, ok(1)).fail_count, 0);
+    }
+
+    #[test]
+    fn answered_errors_still_back_off_fully() {
+        let err = Report {
+            outcome: Some(Outcome::Err),
+            status: Some(404),
+            ..Default::default()
+        };
+        let mut s = Scheduler::new(vec![fs("a", 0)], cfg(false, 0.0));
+        assert_eq!(s.complete(0, 0, err).next_fetch_at, 1200);
     }
 }

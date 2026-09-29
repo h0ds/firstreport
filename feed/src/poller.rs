@@ -60,6 +60,8 @@ struct FetchFailure {
     status: Option<u16>,
     retry_after_secs: Option<u64>,
     message: String,
+    /// No connection was made (DNS or connect); see `Outcome::Unreachable`.
+    unreachable: bool,
 }
 
 struct FetchDone {
@@ -197,6 +199,7 @@ impl Poller {
                             status: e.status(),
                             retry_after_secs: e.retry_after(),
                             message: e.to_string(),
+                            unreachable: e.is_unreachable(),
                         });
                     FetchDone {
                         idx,
@@ -220,16 +223,16 @@ impl Poller {
                         .budget_waits
                         .store(self.client.budget_waits(), std::sync::atomic::Ordering::Relaxed);
                     let feed = sched.feed(done.idx).clone();
-                    let (retry_after, status, error) = match &done.result {
-                        Ok(f) => (None, Some(f.status), None),
-                        Err(e) => (e.retry_after_secs, e.status, Some(e.message.clone())),
+                    let (retry_after, status, error, unreachable) = match &done.result {
+                        Ok(f) => (None, Some(f.status), None, false),
+                        Err(e) => (e.retry_after_secs, e.status, Some(e.message.clone()), e.unreachable),
                     };
                     let p = self.process(&feed, done.fetched_at, done.result.map_err(|e| e.message)).await;
                     for it in &p.new_items {
                         let _ = out.try_send(it.clone());
                     }
                     let report = Report {
-                        outcome: Some(p.outcome),
+                        outcome: Some(if unreachable { Outcome::Unreachable } else { p.outcome }),
                         status,
                         error: error.or(p.error),
                         etag: p.etag,
