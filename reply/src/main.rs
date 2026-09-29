@@ -64,45 +64,46 @@ async fn run(args: cli::Args) -> Result<(), String> {
             Ok(())
         }
         cli::Command::Listen { platform, once } => {
-            if platform != "bluesky" {
-                return Err(format!("no listener for platform {platform}"));
-            }
-            if args.handle.is_empty() {
-                return Err("listen needs --handle <the bot's account>".into());
-            }
-            let password = std::env::var(platform::bluesky::PASSWORD_ENV).map_err(|_| {
-                format!(
-                    "listen needs {} in the environment",
-                    platform::bluesky::PASSWORD_ENV
-                )
-            })?;
-            let listener = platform::bluesky::Bluesky::new(&args.pds, &args.handle, &password)?;
             let layout = set.layout(&platform)?.clone();
             let api = client::Http::new()?;
             let mut q = queue::Queue::open(&args.data)?;
-            listen(listener, &api, &set, &layout, &args, &mut q, once).await
+            match platform.as_str() {
+                "bluesky" => {
+                    let listener = bluesky_from_args(&args)?;
+                    listen(listener, &api, &set, &layout, &args, &mut q, once).await
+                }
+                "x" => {
+                    let listener = platform::x::X::from_env(&args.pds_or_default("x"), &args.data)?;
+                    listen(listener, &api, &set, &layout, &args, &mut q, once).await
+                }
+                other => Err(format!("no listener for platform {other}")),
+            }
         }
         cli::Command::Serve => {
-            let poster: Option<std::sync::Arc<tokio::sync::Mutex<Box<dyn platform::Poster>>>> =
-                match (
-                    args.handle.is_empty(),
-                    std::env::var(platform::bluesky::PASSWORD_ENV),
-                ) {
-                    (false, Ok(pw)) => {
-                        let b = platform::bluesky::Bluesky::new(&args.pds, &args.handle, &pw)?;
-                        Some(std::sync::Arc::new(tokio::sync::Mutex::new(Box::new(b))))
-                    }
-                    _ => None,
-                };
+            let boxed: Option<Box<dyn platform::Poster>> = match args.platform.as_str() {
+                "bluesky"
+                    if !args.handle.is_empty()
+                        && std::env::var(platform::bluesky::PASSWORD_ENV).is_ok() =>
+                {
+                    Some(Box::new(bluesky_from_args(&args)?))
+                }
+                "x" if std::env::var(platform::x::ACCESS_TOKEN_ENV).is_ok()
+                    || args.data.join("x_token.json").exists() =>
+                {
+                    Some(Box::new(platform::x::X::from_env(
+                        &args.pds_or_default("x"),
+                        &args.data,
+                    )?))
+                }
+                _ => None,
+            };
+            let poster_name = boxed.as_ref().map(|p| p.name().to_string());
+            let poster = boxed.map(|b| std::sync::Arc::new(tokio::sync::Mutex::new(b)));
             eprintln!(
                 "review page on http://{} ; data in {} ; poster: {}",
                 args.bind,
                 args.data.display(),
-                if poster.is_some() {
-                    "bluesky"
-                } else {
-                    "none (approving is off)"
-                }
+                poster_name.as_deref().unwrap_or("none (approving is off)")
             );
             let app = api::router(api::AppState {
                 data: args.data.clone(),
@@ -223,6 +224,19 @@ async fn listen<L: platform::Listener, A: client::Api>(
         }
         tokio::time::sleep(std::time::Duration::from_secs(args.interval_secs)).await;
     }
+}
+
+fn bluesky_from_args(args: &cli::Args) -> Result<platform::bluesky::Bluesky, String> {
+    if args.handle.is_empty() {
+        return Err("bluesky needs --handle <the bot's account>".into());
+    }
+    let password = std::env::var(platform::bluesky::PASSWORD_ENV).map_err(|_| {
+        format!(
+            "bluesky needs {} in the environment",
+            platform::bluesky::PASSWORD_ENV
+        )
+    })?;
+    platform::bluesky::Bluesky::new(&args.pds_or_default("bluesky"), &args.handle, &password)
 }
 
 fn now() -> i64 {

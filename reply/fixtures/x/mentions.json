@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "id": "1003",
+      "author_id": "u3",
+      "conversation_id": "900",
+      "created_at": "2024-01-01T12:30:00.000Z",
+      "text": "@kagami is this real? https://t.co/quote",
+      "entities": { "urls": [ { "url": "https://t.co/quote", "expanded_url": "https://x.com/carol/status/995" } ] },
+      "referenced_tweets": [ { "type": "quoted", "id": "995" }, { "type": "replied_to", "id": "900" } ]
+    },
+    {
+      "id": "1002",
+      "author_id": "u2",
+      "conversation_id": "990",
+      "created_at": "2024-01-01T11:05:00.000Z",
+      "text": "@kagami prove it",
+      "referenced_tweets": [ { "type": "replied_to", "id": "990" } ]
+    },
+    {
+      "id": "1001",
+      "author_id": "u1",
+      "conversation_id": "1001",
+      "created_at": "2024-01-01T10:00:00.000Z",
+      "text": "@kagami source for this? https://t.co/abc",
+      "entities": { "urls": [ { "url": "https://t.co/abc", "expanded_url": "https://www.example.com/story?utm_source=x", "unwound_url": "https://www.example.com/story?utm_source=x" } ] }
+    }
+  ],
+  "includes": {
+    "users": [
+      { "id": "u1", "username": "alice" },
+      { "id": "u2", "username": "bob" },
+      { "id": "u3", "username": "dave" },
+      { "id": "uc", "username": "carol" }
+    ],
+    "tweets": [
+      {
+        "id": "990", "author_id": "uc", "created_at": "2024-01-01T11:00:00.000Z",
+        "text": "BREAKING: the bank did the thing https://t.co/tw",
+        "entities": { "urls": [ { "url": "https://t.co/tw", "expanded_url": "https://truth-wire.example/x" } ] }
+      },
+      {
+        "id": "995", "author_id": "uc", "created_at": "2024-01-01T12:00:00.000Z",
+        "text": "wire says so https://t.co/bbc",
+        "entities": { "urls": [ { "url": "https://t.co/bbc", "expanded_url": "https://news.bbc.co.uk/wire/123" } ] }
+      }
+    ]
+  },
+  "meta": { "newest_id": "1003", "oldest_id": "1001", "result_count": 3 }
+}

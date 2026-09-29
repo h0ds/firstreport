@@ -10,10 +10,11 @@ cargo run -- check --update                          # rewrite the goldens; revi
 cargo run -- render fixtures/mentions/origin_story.json --platform bluesky
 cargo run -- resolve mention.json                    # ask a running feed and ledger; print the FactSet
 cargo run -- resolve mention.json --render           # ...and the draft it renders to
-REPLY_BSKY_PASSWORD=... cargo run -- --handle kagami.example listen   # dry run: mentions in, drafts to data/queue/
+REPLY_X_ACCESS_TOKEN=... cargo run -- listen         # dry run on X: mentions in, drafts to data/queue/
+REPLY_BSKY_PASSWORD=... cargo run -- --platform bluesky --handle kagami.example listen   # same, on Bluesky
 cargo run -- queue                                   # print the queued drafts
 cargo run -- serve                                   # review page and public log on 127.0.0.1:8082
-REPLY_BSKY_PASSWORD=... cargo run -- --handle kagami.example serve   # ...with posting on approval
+REPLY_X_ACCESS_TOKEN=... cargo run -- serve          # ...with posting to X on approval
 cargo test
 ```
 
@@ -23,19 +24,36 @@ at `--feed-url` and `--ledger-url` (default: the local servers) and
 `--log-url` is where the reply log will live; cites resolve against all
 three. A `resolve` output saved under `fixtures/mentions/` is a fixture.
 
+## Platforms
+
+X is the primary platform and the default for `--platform`; Bluesky is
+the live testbed, since it needs no paid tier or automation approval.
+Both implement the same two traits, so every other part of `reply` is
+platform-neutral.
+
+- **X** needs `REPLY_X_ACCESS_TOKEN`, an OAuth 2.0 user token for the
+  bot's account with `tweet.read tweet.write users.read offline.access`.
+  For refresh, also `REPLY_X_REFRESH_TOKEN` and `REPLY_X_CLIENT_ID` (and
+  `REPLY_X_CLIENT_SECRET` for a confidential client). X rotates the
+  refresh token on each use, so the current pair is kept in
+  `data/x_token.json` after the first refresh and read from there. The
+  mentions endpoint needs a paid API tier.
+- **Bluesky** needs `--handle` and `REPLY_BSKY_PASSWORD`, an app
+  password. `--api` overrides the PDS, default `https://bsky.social`.
+
 ## Listening (dry run)
 
-`listen` polls Bluesky's notifications for mentions of `--handle` every
-`--interval` seconds (default 30), fetches the parent and quoted posts,
-resolves and drafts each mention, and writes the draft with its
-FactSet to `data/queue/<hash>.json` as `pending`. `data/seen.txt` holds
-every mention id handled, so a restart drafts nothing twice. Nothing is
-posted, and there is no code path that could: the poster is R3. The app
-password comes from `REPLY_BSKY_PASSWORD`; `--pds` defaults to
-`https://bsky.social`. `--once` polls a single time, for cron.
+`listen` polls the platform for mentions of the bot every `--interval`
+seconds (default 30), with the parent and quoted posts, resolves and
+drafts each mention, and writes the draft with its FactSet to
+`data/queue/<hash>.json` as `pending`. `data/seen.txt` holds every
+mention id handled, so a restart drafts nothing twice. Nothing is
+posted. `--once` polls a single time, for cron.
 
-Only `reason == "mention"` notifications count. Replies to the bot's own
-posts and quotes of them are not summonses.
+On X, links are taken expanded past t.co, and a quoted tweet's own
+status link is not a subject. On Bluesky only `reason == "mention"`
+notifications count. Replies to the bot's own posts and quotes of them
+are not summonses on either.
 
 ## Reviewing and posting
 
@@ -49,7 +67,7 @@ facets so URLs are clickable. Both decisions move the entry from
 `data/queue/` to `data/log/` with the decision, the draft as posted and
 the platform post ids.
 
-Without `--handle` and `REPLY_BSKY_PASSWORD`, `serve` still reviews and
+Without credentials for `--platform`, `serve` still reviews and
 declines, but approving answers 409: nothing can post. Limits are
 `--per-account-per-day` (default 3) and `--global-per-hour` (default
 60), counted over the log; a post past either answers 429.

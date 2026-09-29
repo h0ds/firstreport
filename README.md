@@ -69,9 +69,10 @@ against live feeds. See `feed/docs/plan.md` §11.
 `reply` is at R3: contract, templates, composer with the cite check,
 `render` and `check` over golden fixtures, `resolve`, which asks a
 running `feed` and `ledger` about a mention, `listen`, which drafts
-every Bluesky mention into a local queue, and `serve`, the review page
-where a person keeps or drops sentences and posts or declines, with a
-public log of every decision. Not yet run against a live account.
+every mention into a local queue, and `serve`, the review page where a
+person keeps or drops sentences and posts or declines, with a public
+log of every decision. X is the primary platform and Bluesky the live
+testbed; neither has been run against a live account yet.
 `feed` gained `/v1/lookup` for it. See `reply/docs/plan.md` §16.
 
 `ledger` is at L2e: file-backed claim store with validation, refresh

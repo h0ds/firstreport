@@ -17,7 +17,7 @@ pub enum Command {
         platform: String,
         render: bool,
     },
-    /// Poll a platform for mentions, resolve and draft each, write it to
+    /// Poll the platform for mentions, resolve and draft each, write it to
     /// the queue. Nothing is posted. `once` polls a single time.
     Listen { platform: String, once: bool },
     /// Print the queue.
@@ -33,9 +33,11 @@ pub struct Args {
     pub urls: Urls,
     /// Queue and seen set.
     pub data: PathBuf,
-    /// The bot's own account on the platform.
+    /// The platform `serve` posts to: `x` or `bluesky`.
+    pub platform: String,
+    /// The bot's own account on the platform (Bluesky handle).
     pub handle: String,
-    /// Bluesky PDS base URL.
+    /// API base URL; empty means the platform's default.
     pub pds: String,
     pub interval_secs: u64,
     pub bind: String,
@@ -45,8 +47,8 @@ pub struct Args {
 
 pub const USAGE: &str = "\
 usage: reply [--templates <dir>] [--data <dir>] [--feed-url <url>] [--ledger-url <url>] [--log-url <url>]
-             [--handle <bot account>] [--pds <url>] [--interval <secs>] [--bind <addr>]
-             [--per-account-per-day <n>] [--global-per-hour <n>] <command>
+             [--platform x|bluesky] [--handle <bot account>] [--api <url>] [--interval <secs>]
+             [--bind <addr>] [--per-account-per-day <n>] [--global-per-hour <n>] <command>
 
 commands:
   render <fixture.json> [--platform <name>]   render a recorded mention; print the draft and its cites
@@ -55,12 +57,30 @@ commands:
   resolve <mention.json> [--render] [--platform <name>]
                                               ask feed and ledger about a mention; print the FactSet
                                               (a fixture for check) or, with --render, the draft
-  listen [--platform bluesky] [--once]        poll for mentions, draft a reply for each, queue it;
-                                              nothing is posted. Needs --handle and REPLY_BSKY_PASSWORD
+  listen [--once]                             poll for mentions, draft a reply for each, queue it;
+                                              nothing is posted
   queue                                       print the queued drafts
   serve                                       review page and public log on 127.0.0.1:8082; with
-                                              --handle and REPLY_BSKY_PASSWORD, approving posts
+                                              credentials for --platform, approving posts
+
+credentials, from the environment:
+  x        REPLY_X_ACCESS_TOKEN, and for refresh REPLY_X_REFRESH_TOKEN, REPLY_X_CLIENT_ID,
+           REPLY_X_CLIENT_SECRET (confidential clients); the rotated token is kept in data/x_token.json
+  bluesky  --handle and REPLY_BSKY_PASSWORD (an app password)
 ";
+
+impl Args {
+    /// `--api` if given, else the platform's own default.
+    pub fn pds_or_default(&self, platform: &str) -> String {
+        if !self.pds.is_empty() {
+            return self.pds.clone();
+        }
+        match platform {
+            "bluesky" => crate::platform::bluesky::DEFAULT_PDS.into(),
+            _ => crate::platform::x::DEFAULT_API.into(),
+        }
+    }
+}
 
 pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let mut it = argv.into_iter().skip(1).peekable();
@@ -68,14 +88,14 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let mut urls = Urls::default();
     let mut command = None;
     let mut fixture = None;
-    let mut platform = String::from("bluesky");
+    let mut platform = String::from("x");
     let mut fixtures = PathBuf::from("fixtures/mentions");
     let mut update = false;
     let mut do_render = false;
     let mut once = false;
     let mut data = PathBuf::from("data");
     let mut handle = String::new();
-    let mut pds = String::from(crate::platform::bluesky::DEFAULT_PDS);
+    let mut pds = String::new();
     let mut interval_secs = 30;
     let mut bind = String::from("127.0.0.1:8082");
     let mut limits = crate::api::Limits::default();
@@ -96,7 +116,7 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
             "--once" => once = true,
             "--data" => data = val("--data")?.into(),
             "--handle" => handle = val("--handle")?,
-            "--pds" => pds = val("--pds")?,
+            "--pds" | "--api" => pds = val("--api")?,
             "--interval" => {
                 interval_secs = val("--interval")?
                     .parse()
@@ -127,15 +147,18 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let command = match command.as_deref() {
         Some("render") => Command::Render {
             fixture: fixture.ok_or_else(|| format!("render needs a fixture\n{USAGE}"))?,
-            platform,
+            platform: platform.clone(),
         },
         Some("check") => Command::Check { fixtures, update },
-        Some("listen") => Command::Listen { platform, once },
+        Some("listen") => Command::Listen {
+            platform: platform.clone(),
+            once,
+        },
         Some("queue") => Command::Queue,
         Some("serve") => Command::Serve,
         Some("resolve") => Command::Resolve {
             mention: fixture.ok_or_else(|| format!("resolve needs a mention file\n{USAGE}"))?,
-            platform,
+            platform: platform.clone(),
             render: do_render,
         },
         _ => return Err(USAGE.into()),
@@ -144,6 +167,7 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         templates,
         urls,
         data,
+        platform,
         handle,
         pds,
         interval_secs,
@@ -185,11 +209,11 @@ mod tests {
             a.command,
             Command::Resolve {
                 mention: "m.json".into(),
-                platform: "bluesky".into(),
+                platform: "x".into(),
                 render: true
             }
         );
-        let a = p("--handle kagami.test --interval 5 listen --once").unwrap();
+        let a = p("--platform bluesky --handle kagami.test --interval 5 listen --once").unwrap();
         assert_eq!(
             a.command,
             Command::Listen {
@@ -197,7 +221,11 @@ mod tests {
                 once: true
             }
         );
+        assert_eq!(a.pds_or_default("bluesky"), "https://bsky.social");
         assert_eq!((a.handle.as_str(), a.interval_secs), ("kagami.test", 5));
+        let a = p("listen").unwrap();
+        assert_eq!(a.platform, "x");
+        assert_eq!(a.pds_or_default("x"), "https://api.x.com");
         let a = p("--bind 0.0.0.0:9000 --per-account-per-day 5 serve").unwrap();
         assert_eq!(a.command, Command::Serve);
         assert_eq!(

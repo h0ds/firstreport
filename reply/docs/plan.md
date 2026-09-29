@@ -69,7 +69,7 @@ and reports them as observations.
   windows, never as labels
 - A public log of every mention received and every reply posted, with
   the facts each reply was built from
-- Platform adapters: Bluesky first, Mastodon second, X when its terms and cost allow
+- Platform adapters: X as the primary platform, Bluesky as the live testbed, Mastodon later
 
 ### Out of scope (deliberately)
 - Judging whether a claim is true
@@ -189,18 +189,24 @@ whole enforcement of rule 6, and it is a unit test.
 
 ## 5. Platforms, in the order they are worth adding
 
-1. **Bluesky** (AT Protocol). Open, free, documented, no automation
-   approval needed. Mentions are polled from the account's notifications
-   with an app password; the firehose, which needs a websocket and CAR
-   decoding, is only worth it for the observer (R4). Replies go through
-   the same authenticated API as any client. First adapter.
-2. **Mastodon**. Streaming API per instance, open, well behaved. The bot
-   lives on one instance and receives mentions from any. Second.
-3. **X**. Where most campaigns run and where the bot is most wanted.
-   Mention listening needs a paid API tier, and automated replies are
-   allowed only to mentions under the automation rules, which is what
-   `reply` does anyway. Adapter written against the API terms as they
-   stand at the time; not scraped, ever.
+1. **X**, the primary platform: where most campaigns run and where the
+   bot is most wanted. Mentions are polled from `GET /2/users/:id/mentions`,
+   which needs a paid API tier; replies go through `POST /2/tweets`, in
+   reply to the mention, as a thread when needed. Auth is an OAuth 2.0
+   user token with `offline.access`, refreshed on 401 and the rotated
+   refresh token kept under `data/`. Automated replies are allowed only
+   to mentions under X's automation rules, which is what `reply` does
+   anyway. Written against the API terms as they stand; never scraped.
+   The observer (R4) is the hard part here: there is no free firehose,
+   and the filtered stream is a higher tier again.
+2. **Bluesky**, the testbed: open, free, documented, no automation
+   approval needed, so it is where every stage runs live first. Mentions
+   are polled from the account's notifications with an app password;
+   the firehose, which needs a websocket and CAR decoding, is only worth
+   it for the observer (R4). Replies go through the same authenticated
+   API as any client.
+3. **Mastodon**. Streaming API per instance, open, well behaved. The bot
+   lives on one instance and receives mentions from any. Later.
 
 An adapter implements `listen() -> Stream<Mention | Sighting>` and
 `post(reply_to, text) -> post_id`. Everything else is platform-neutral.
@@ -324,7 +330,7 @@ reply/
   docs/voice.md             the tone guide every template is held to
   templates/
     en/*.toml               one file per fact kind
-    layout/<platform>.toml  sentence order and length rules
+    layout/<platform>.toml  sentence order and length rules (x: 280, bluesky: 300, mastodon: 500)
   fixtures/
     mentions/*.json         recorded mentions with the FactSet they resolved to
     mentions/*.<platform>.draft.json
@@ -336,6 +342,7 @@ reply/
     model.rs                contract types, validation, the cite check
     facts.rs                FactSet → the view templates read, with derived values under d.
     platform/mod.rs         Listener trait
+    platform/x.rs           API v2: mentions, tweets, token refresh; parsing is pure
     platform/bluesky.rs     XRPC: listNotifications, getPosts; parsing is pure
     queue.rs                data/queue/*.json, data/log/*.json and data/seen.txt
     platform/mastodon.rs
@@ -448,7 +455,7 @@ salt_env = "REPLY_SALT"
   any reply carries one.
 - **R5** Observations in replies, still reviewed. Autonomous posting for
   templates that have earned it.
-- **R6** Mastodon adapter. X adapter when terms and budget allow.
+- **R6** Mastodon adapter.
 
 ## 17. Open questions
 
