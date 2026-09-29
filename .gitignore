@@ -1,5 +1,7 @@
 /target
 **/data/
+# ledger data is the reviewed source of truth (ledger plan §1), not runtime state
+!ledger/data/
 **/models/*
 !**/models/README.md
 !feed/fixtures/models/*

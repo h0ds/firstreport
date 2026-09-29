@@ -1,0 +1,59 @@
+# Source registry (plan §2, §4). Every claim names one of these ids.
+# `refresh_days` drives `ledger check` staleness and `ledger refresh`;
+# 0 means no schedule. `no_redistribution = true` makes `check` refuse
+# the source's claims until its terms are confirmed.
+
+[[source]]
+id = "wikidata"
+name = "Wikidata"
+url = "https://www.wikidata.org"
+licence = "CC0-1.0"
+kind = "database"
+notes = "Ownership, parent, country, inception, legal form, website and Wikipedia link via SPARQL. Public domain; no restriction on reuse."
+refresh_days = 90
+
+[[source]]
+id = "wikipedia_rsp"
+name = "Wikipedia: Reliable sources/Perennial sources"
+url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+licence = "CC-BY-SA-4.0"
+kind = "community"
+notes = "Community consensus on reliability, one claim per matching row with the list's own status, scope, discussions and summary. Reuse requires attribution and share-alike."
+refresh_days = 30
+
+[[source]]
+id = "rdap"
+name = "Domain registries (RDAP)"
+url = "https://about.rdap.org"
+licence = "public registration data"
+kind = "observed"
+notes = "Registration date, registrar and status of each outlet's registrable domains, as reported by the registry's RDAP service. Facts observed by Kagami, not licensed content."
+refresh_days = 180
+
+[[source]]
+id = "site"
+name = "Outlet home page"
+url = "https://github.com/h0ds/kagami/tree/main/ledger"
+licence = "Kagami observation"
+kind = "observed"
+notes = "Whether the site serves HTTPS and redirects plain HTTP, and which accountability pages (about, contact, privacy, corrections, ethics, masthead) the home page links. Absence means not linked from the home page, not that the page does not exist."
+refresh_days = 30
+
+[[source]]
+id = "feed_behaviour"
+name = "Kagami feed behaviour"
+url = "https://github.com/h0ds/kagami/tree/main/feed"
+licence = "Kagami observation"
+kind = "observed"
+notes = "Posting cadence, revision and withdrawal rates, syndication share and origin share, measured from feed's own export. Each claim carries its window and counts; outlets with fewer than ten items in the window get none. Describes what a feed does, not whether that is good."
+refresh_days = 7
+
+[[source]]
+id = "allsides"
+name = "AllSides Media Bias Ratings"
+url = "https://www.allsides.com/media-bias/ratings"
+licence = "CC-BY-NC-ND-4.0 (chart); per-rating reuse unconfirmed"
+kind = "rating"
+notes = "Left/right bias labels on AllSides's own scale, with published methodology. Gated until per-rating redistribution terms are confirmed; no importer yet."
+no_redistribution = true
+refresh_days = 0
