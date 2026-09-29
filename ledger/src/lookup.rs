@@ -14,43 +14,53 @@ pub const PAGE: &str = r##"<!doctype html>
 <link rel="alternate" type="application/json" href="/v1/outlets" title="Outlets with claims (JSON)">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this server">
 <style>
-:root{--kg-blue:#2563EB;--kg-blue-hover:#1D4ED8;--kg-blue-soft:#DBEAFE;--kg-blue-ink:#1E3A8A;--kg-bg:#FFFFFF;--kg-bg-subtle:#F8FAFC;--kg-line:#E2E8F0;--kg-line-strong:#CBD5E1;--kg-text-muted:#64748B;--kg-text-secondary:#334155;--kg-text:#0F172A;--kg-ok:#059669;--kg-warn:#D97706;--kg-err:#DC2626;--kg-font-serif:"Instrument Serif","Iowan Old Style","Times New Roman",serif;--kg-font-sans:Inter,-apple-system,"Segoe UI",system-ui,sans-serif;--kg-font-mono:"JetBrains Mono","SF Mono",Menlo,Consolas,monospace;--kg-t-base:200ms;--kg-ease:cubic-bezier(0.2,0,0,1)}
+:root{--kg-blue:#2563EB;--kg-blue-hover:#1D4ED8;--kg-blue-soft:#DBEAFE;--kg-blue-ink:#1E3A8A;--kg-bg:#FFFFFF;--kg-bg-subtle:#F8FAFC;--kg-line:#E2E8F0;--kg-line-strong:#CBD5E1;--kg-text-muted:#64748B;--kg-text-secondary:#334155;--kg-text:#0F172A;--kg-ok:#059669;--kg-warn:#D97706;--kg-err:#DC2626;--kg-font-serif:"Instrument Serif", "Iowan Old Style", "Times New Roman", serif;--kg-font-sans:Inter, -apple-system, "Segoe UI", system-ui, sans-serif;--kg-font-mono:"JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;--kg-fs-small:12px;--kg-fs-ui:13px;--kg-fs-body:15px;--kg-fs-body-lg:17px;--kg-fs-h3:20px;--kg-fs-h2:28px;--kg-lh-small:16px;--kg-lh-ui:20px;--kg-lh-body:24px;--kg-lh-body-lg:24px;--kg-lh-h3:28px;--kg-lh-h2:32px;--kg-lockup-wordmark:28px;--kg-lockup-kanji:17px;--kg-s1:4px;--kg-s2:8px;--kg-s3:12px;--kg-s4:16px;--kg-s5:24px;--kg-s6:32px;--kg-s7:48px;--kg-s8:64px;--kg-s9:96px;--kg-radius-input:4px;--kg-t-fast:120ms;--kg-t-base:200ms;--kg-ease:cubic-bezier(0.2, 0, 0, 1)}
 html{background:var(--kg-bg);color:var(--kg-text)}
-body{margin:0;font:15px/1.6 var(--kg-font-sans);font-feature-settings:"tnum","cv11","ss01";-webkit-font-smoothing:antialiased}
-main{max-width:720px;margin:0 auto;padding:32px 16px 96px}
-header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--kg-line)}
-.lockup{display:inline-flex;align-items:baseline;gap:12px;font-size:32px}
-.wordmark{font-family:var(--kg-font-serif);font-style:italic;letter-spacing:-0.01em}
-.wordmark .kanji{font-family:"Noto Serif JP",serif;font-style:normal;font-size:.6em;color:var(--kg-text-muted);margin-left:.25em}
+body{margin:0;font:400 var(--kg-fs-body)/var(--kg-lh-body) var(--kg-font-sans);font-feature-settings:"tnum","cv11","ss01";-webkit-font-smoothing:antialiased}
+p,ul,ol{margin:0}
+main{max-width:720px;margin:0 auto;padding:var(--kg-s6) var(--kg-s5) var(--kg-s9)}
+header{display:flex;align-items:baseline;justify-content:space-between;gap:var(--kg-s4);flex-wrap:wrap;padding-bottom:var(--kg-s4);border-bottom:1px solid var(--kg-line)}
+.lockup{display:inline-flex;align-items:baseline;gap:var(--kg-s3);font-size:var(--kg-lockup-wordmark);line-height:var(--kg-lh-h2)}
+.wordmark{font-family:var(--kg-font-serif);font-style:italic;letter-spacing:-0.01em;color:var(--kg-text)}
+.wordmark .kanji{font-family:"Noto Serif JP",serif;font-style:normal;font-size:var(--kg-lockup-kanji);color:var(--kg-text-muted);margin-left:var(--kg-s1)}
 .rule{align-self:stretch;width:1px;background:var(--kg-line-strong)}
-.tool{font-weight:500;font-size:16px}
-.muted{color:var(--kg-text-muted);font-size:12px;letter-spacing:.01em}
-.mono{font-family:var(--kg-font-mono);font-size:13px}
-h2{font-family:var(--kg-font-serif);font-weight:400;font-size:28px;line-height:1.15;margin:32px 0 4px}
-h3{font-size:20px;font-weight:600;margin:24px 0 8px}
-input{font:400 14px var(--kg-font-sans);height:36px;padding:0 12px;border:1px solid var(--kg-line-strong);border-radius:4px;background:var(--kg-bg);color:var(--kg-text);width:100%;box-sizing:border-box;margin-top:24px}
-input:focus{outline:2px solid var(--kg-blue);outline-offset:0}
-a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{text-decoration:underline}
-.hits{list-style:none;margin:8px 0 0;padding:0}
-.hits li{display:flex;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--kg-line)}
-.hits li a{font-weight:600}
-.hits .dom{color:var(--kg-text-muted);font-size:13px}
-.hits .n{margin-left:auto;font-size:12px;color:var(--kg-text-muted);white-space:nowrap}
-.claim{padding:12px 0;border-bottom:1px solid var(--kg-line)}
-.claim .value{font-size:17px;font-weight:600;line-height:1.35}
-.claim .scope{color:var(--kg-text-secondary);font-size:13px;margin-top:2px}
-.claim .provenance{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:4px}
-.claim .sep{color:var(--kg-line-strong)}
-.tag{font-family:var(--kg-font-mono);font-size:12px;padding:1px 6px;border:1px solid var(--kg-line);border-radius:4px;color:var(--kg-text-secondary)}
-.status{display:inline-flex;align-items:center;gap:8px;font-size:12px}
+.tool{font-weight:500;font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui);color:var(--kg-text-secondary)}
+.muted{color:var(--kg-text-muted);font-size:var(--kg-fs-small);line-height:var(--kg-lh-small);letter-spacing:.01em}
+.mono{font-family:var(--kg-font-mono);font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui)}
+h2{font-family:var(--kg-font-serif);font-weight:400;font-size:var(--kg-fs-h2);line-height:var(--kg-lh-h2);letter-spacing:-0.01em;margin:var(--kg-s6) 0 var(--kg-s2)}
+h3{font-size:var(--kg-fs-h3);line-height:var(--kg-lh-h3);font-weight:600;letter-spacing:-0.01em;margin:var(--kg-s5) 0 var(--kg-s2)}
+a{color:var(--kg-blue);text-decoration:none;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-skip-ink:auto;transition:color var(--kg-t-fast) var(--kg-ease),text-decoration-color var(--kg-t-fast) var(--kg-ease)}
+a:hover{text-decoration-line:underline;color:var(--kg-blue-hover)}
+.title-link a,a.title-link{color:inherit}
+.title-link a:hover,a.title-link:hover{color:var(--kg-blue)}
+.quiet a,a.quiet{color:inherit;text-decoration-line:underline;text-decoration-color:var(--kg-line-strong)}
+.quiet a:hover,a.quiet:hover{color:var(--kg-blue);text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--kg-blue);outline-offset:2px}
+input[type=search],input[type=number],select{font:400 var(--kg-fs-ui)/var(--kg-lh-ui) var(--kg-font-sans);height:36px;padding:0 var(--kg-s3);border:1px solid var(--kg-line-strong);border-radius:var(--kg-radius-input);background:var(--kg-bg);color:var(--kg-text);box-sizing:border-box}
+input[type=search]:focus,input[type=number]:focus,select:focus{outline:2px solid var(--kg-blue);outline-offset:0}
+.tag{font-family:var(--kg-font-mono);font-size:var(--kg-fs-small);line-height:var(--kg-lh-small);padding:2px var(--kg-s2);border:1px solid var(--kg-line);border-radius:var(--kg-radius-input);color:var(--kg-text-secondary);white-space:nowrap}
+.sep{color:var(--kg-line-strong)}
+.status{display:inline-flex;align-items:center;gap:var(--kg-s2);font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui)}
 .status::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
-.status.ok{color:var(--kg-ok)}.status.warn{color:var(--kg-warn)}
+.status.ok{color:var(--kg-ok)}.status.warn{color:var(--kg-warn)}.status.err{color:var(--kg-err)}
 .status span{color:var(--kg-text-secondary)}
-.summary{color:var(--kg-text-secondary);font-size:13px;margin-top:6px}
-.empty{color:var(--kg-text-muted);padding:24px 0}
-.enter{animation:kg-fade-in var(--kg-t-base) var(--kg-ease)}
+.empty{color:var(--kg-text-muted);padding:var(--kg-s5) 0}
+.foot{margin-top:var(--kg-s7)}
 @keyframes kg-fade-in{from{opacity:0}to{opacity:1}}
-@media (prefers-reduced-motion:reduce){.enter{animation:none}}
+.enter{animation:kg-fade-in var(--kg-t-base) var(--kg-ease)}
+@media (prefers-reduced-motion:reduce){.enter{animation:none}a{transition:none}}
+@media (max-width:720px){main{padding:var(--kg-s5) var(--kg-s4) var(--kg-s8)}}
+#q{width:100%;margin-top:var(--kg-s5)}
+.hits{list-style:none;margin:var(--kg-s2) 0 0;padding:0}
+.hits li{display:flex;gap:var(--kg-s3);align-items:baseline;padding:var(--kg-s2) 0;border-bottom:1px solid var(--kg-line)}
+.hits li>a{font-weight:600;color:var(--kg-text)}.hits li>a:hover{color:var(--kg-blue)}
+.hits .dom{color:var(--kg-text-muted);font-size:var(--kg-fs-small);line-height:var(--kg-lh-small)}
+.hits .n{margin-left:auto;font-size:var(--kg-fs-small);line-height:var(--kg-lh-small);color:var(--kg-text-muted);white-space:nowrap}
+.claim{padding:var(--kg-s3) 0;border-bottom:1px solid var(--kg-line)}
+.claim .value{font-size:var(--kg-fs-body-lg);line-height:var(--kg-lh-body-lg);font-weight:600;letter-spacing:-0.005em}
+.claim .scope{color:var(--kg-text-secondary);font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui);margin-top:var(--kg-s1)}
+.claim .provenance{display:flex;gap:var(--kg-s2);flex-wrap:wrap;align-items:center;margin-top:var(--kg-s1)}
+.summary{color:var(--kg-text-secondary);font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui);margin-top:var(--kg-s2)}
 </style>
 </head>
 <body>
@@ -62,7 +72,7 @@ a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{te
 <input id="q" type="search" placeholder="Outlet name, id or domain" autocomplete="off" autofocus>
 <div id="hits"></div>
 <div id="outlet"></div>
-<p class="muted" style="margin-top:48px">Machine readers: the same data is at <a href="/v1/outlets">/v1/outlets</a>, and each outlet answers <span class="mono">Accept: text/markdown</span>. See <a href="/llms.txt">/llms.txt</a>.</p>
+<p class="muted quiet foot">Machine readers: the same data is at <a href="/v1/outlets">/v1/outlets</a>, and each outlet answers <span class="mono">Accept: text/markdown</span>. See <a href="/llms.txt">/llms.txt</a>.</p>
 </main>
 <script>
 const $ = s => document.querySelector(s);
@@ -109,7 +119,7 @@ async function show(id, name){
       html += `<article class="claim enter" data-outlet="${esc(id)}" data-field="${esc(f)}" data-source="${esc(c.source_id)}">
         <div class="value">${esc(c.value)}</div>
         ${d.scope && d.scope !== c.value ? `<div class="scope">${esc(d.scope)}</div>` : ''}
-        <div class="provenance muted">
+        <div class="provenance muted quiet">
           <a href="${esc(c.ref_url)}" rel="noopener">${esc(s.name)}</a><span class="sep">·</span>
           <span class="tag">${esc(s.licence)}</span><span class="sep">·</span>
           <span>retrieved <time datetime="${date(c.retrieved_at)}">${date(c.retrieved_at)}</time></span>
@@ -120,9 +130,9 @@ async function show(id, name){
         ${d.summary ? `<div class="summary">${esc(d.summary)}</div>` : ''}
         ${d.window_days ? `<div class="summary">Measured over ${d.window_days} days to ${esc(d.window_end)}, ${n(d.items,'item')}. A measurement, not a verdict.</div>` : ''}
         ${d.domain ? `<div class="summary">${esc(d.domain)}${d.expires ? `, expires ${esc(d.expires)}` : ''}${Array.isArray(d.status) && d.status.length ? `, ${esc(d.status.join(', '))}` : ''}</div>` : ''}
-        ${c.field === 'site_pages' ? `<div class="summary">${['about','contact','privacy','corrections','ethics','masthead'].filter(k=>d[k]).map(k=>`<a href="${esc(d[k])}" rel="noopener">${k}</a>`).join(' · ') || 'none linked'}</div>` : ''}
+        ${c.field === 'site_pages' ? `<div class="summary quiet">${['about','contact','privacy','corrections','ethics','masthead'].filter(k=>d[k]).map(k=>`<a href="${esc(d[k])}" rel="noopener">${k}</a>`).join(' · ') || 'none linked'}</div>` : ''}
         ${c.note ? `<div class="summary">Note: ${esc(c.note)}</div>` : ''}
-        ${Array.isArray(d.discussions) && d.discussions.length ? `<div class="summary">Discussions: ${d.discussions.map((u,i)=>`<a href="${esc(u)}" rel="noopener">${i+1}</a>`).join(' ')}</div>` : ''}
+        ${Array.isArray(d.discussions) && d.discussions.length ? `<div class="summary quiet">Discussions: ${d.discussions.map((u,i)=>`<a href="${esc(u)}" rel="noopener">${i+1}</a>`).join(' ')}</div>` : ''}
       </article>`;
     }
   }
@@ -133,3 +143,110 @@ init();
 </body>
 </html>
 "##;
+
+#[cfg(test)]
+mod design_tests {
+    //! Design conformance (design/DESIGN.md §3, §4, §12), modelled on lens's
+    //! `stylesheets_use_only_scale_values`. Copied per crate, not shared
+    //! (project rule).
+
+    const PAGE_HTML: &str = super::PAGE;
+
+    fn style_block() -> &'static str {
+        let a = PAGE_HTML.find("<style>").expect("<style>") + "<style>".len();
+        let b = PAGE_HTML.find("</style>").expect("</style>");
+        &PAGE_HTML[a..b]
+    }
+
+    /// `(selector, property, value)` for every declaration, including
+    /// inline `style=""` attributes (selector `style=`).
+    fn declarations() -> Vec<(String, String, String)> {
+        let mut out = Vec::new();
+        for block in style_block().split('}') {
+            let Some((sel, body)) = block.rsplit_once('{') else { continue };
+            let sel = sel.rsplit('{').next().unwrap_or(sel).trim().to_string();
+            for d in body.split(';') {
+                if let Some((p, v)) = d.split_once(':') {
+                    out.push((sel.clone(), p.trim().to_string(), v.trim().to_string()));
+                }
+            }
+        }
+        for part in PAGE_HTML.split("style=\"").skip(1) {
+            let body = part.split('"').next().unwrap_or("");
+            for d in body.split(';') {
+                if let Some((p, v)) = d.split_once(':') {
+                    out.push(("style=".into(), p.trim().to_string(), v.trim().to_string()));
+                }
+            }
+        }
+        out
+    }
+
+    #[test]
+    fn embedded_css_uses_only_scale_values() {
+        let spacing = ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px"];
+        for (sel, prop, val) in declarations() {
+            if sel == ":root" || prop.starts_with("--") {
+                continue; // token definitions, checked against design/ below
+            }
+            let at = format!("`{sel} {{ {prop}: {val} }}`");
+            if prop == "font-size" {
+                assert!(
+                    val.starts_with("var(--kg-fs-") || val.starts_with("var(--kg-lockup-"),
+                    "raw font size {at}"
+                );
+            }
+            if prop == "font" {
+                assert!(val.contains("var(--kg-fs-") && !val.contains("px"), "font shorthand off the scale {at}");
+            }
+            if prop == "line-height" {
+                assert!(val.starts_with("var(--kg-lh-"), "line height not a grid token {at}");
+            }
+            if prop.starts_with("margin") || prop.starts_with("padding") || prop == "gap" {
+                for tok in val.split_whitespace() {
+                    let ok = tok == "0"
+                        || tok == "auto"
+                        || tok.starts_with("var(--kg-s")
+                        || spacing.contains(&tok)
+                        || (tok == "2px" && sel == ".tag");
+                    assert!(ok, "spacing off the 4px scale {at}");
+                }
+            }
+        }
+        assert!(
+            !PAGE_HTML.contains("font-size=\""),
+            "SVG text sizes come from a class on the scale, not a font-size attribute"
+        );
+        assert!(
+            !PAGE_HTML.contains("preserveAspectRatio=\"none\""),
+            "charts are drawn at size, never stretched"
+        );
+    }
+
+    #[test]
+    fn embedded_tokens_match_design() {
+        let design = std::fs::read_to_string(
+            std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../design/tokens.css"),
+        )
+        .expect("design/tokens.css");
+        let defs = |css: &str| -> Vec<(String, String)> {
+            css.split(|c| c == ';' || c == '{' || c == '}' || c == '\n')
+                .filter_map(|d| {
+                    let d = d.trim();
+                    let d = d.split("/*").next().unwrap_or(d).trim();
+                    d.strip_prefix("--kg-").and_then(|r| r.split_once(':')).map(|(k, v)| {
+                        (k.trim().to_string(), v.trim().to_string())
+                    })
+                })
+                .collect()
+        };
+        let want: std::collections::HashMap<String, String> = defs(&design).into_iter().collect();
+        let root = style_block().split(":root{").nth(1).expect(":root").split('}').next().unwrap();
+        let have = defs(&format!("{{{root}}}"));
+        assert!(have.len() > 20, "tokens block present");
+        for (k, v) in have {
+            let w = want.get(&k).unwrap_or_else(|| panic!("--kg-{k} is not a design token"));
+            assert_eq!(&v, w, "--kg-{k} differs from design/tokens.css");
+        }
+    }
+}

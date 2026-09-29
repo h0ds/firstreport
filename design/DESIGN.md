@@ -230,7 +230,7 @@ step since it was first seen. Spec:
 
 **Charts**
 - Line and area only for spread curves; `--kg-blue` stroke 1.5px, `--kg-blue-soft` fill at 40%.
-- Axes `--kg-line`, labels Inter 11px muted. No gridlines except a baseline.
+- Axes `--kg-line`, labels Inter 12px (`small`) muted, set with a class, never a `font-size` attribute. No gridlines except a baseline. The chart has an `aria-label` giving its numbers.
 - When several series must be distinguished, use blue plus greys of different weight. Introduce a second hue only when unavoidable, and never a red/blue pairing.
 
 **Inputs**
