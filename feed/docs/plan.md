@@ -1,6 +1,6 @@
 # feed — Aggregation & Story Clustering Layer
 
-Pillar 1 of the open-source a news aggregator alternative. `feed` ingests headlines from many outlets, clusters them into stories, and exposes the result through a stable data contract. It knows nothing about bias, factuality, or ownership. Those belong to `ledger` (pillar 2). Presentation belongs to `lens` (pillar 3).
+Pillar 1 of an open-source news comparison site. `feed` ingests headlines from many outlets, clusters them into stories, and exposes the result through a stable data contract. It knows nothing about bias, factuality, or ownership. Those belong to `ledger` (pillar 2). Presentation belongs to `lens` (pillar 3).
 
 ---
 

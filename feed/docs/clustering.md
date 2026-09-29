@@ -94,7 +94,7 @@ why the replay golden test uses 0.5 with this backend. The misclassified
 list is all paraphrases the lexical embedder can't see through, as
 expected.
 
-On the a news aggregator set (985 pairs) the hash backend manages F1 0.60
+On the aggregator set (985 pairs) the hash backend manages F1 0.60
 at the bottom of the sweep (0.30) and 0.08 at the configured 0.72: real
 paraphrases across outlets share far fewer words than invented ones,
 which is the whole reason the model exists. Any threshold this backend

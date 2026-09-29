@@ -140,10 +140,10 @@ A feed it cannot fix is listed with the reason; `cargo run -- discover
 <homepage>` is the manual fallback. A host answering 403 or 404 to every UA has no
 public feed; drop it or find a mirror. For Japanese clustering add
 `"ja"` to `cluster.languages` and use the multilingual preset (step 8).
-Then widen further with discovery over the a news aggregator domains:
+Then widen further with discovery over the aggregator domains:
 
 `feed discover --hosts` batch mode was written to run over the 888
-domains extracted from the a news aggregator scrape, but it needs to fetch
+domains extracted from the aggregator scrape, but it needs to fetch
 each host.
 
 ```
@@ -154,7 +154,7 @@ cargo run -- discover --hosts fixtures/golden/aggregator/aggregator-domains.txt 
 
 Review the proposed feeds and outlets before `--write`; some hosts
 advertise comment feeds or per-section feeds that are not wanted. The
-raw a news aggregator scrape is not in the repository (only the extracted
+raw aggregator scrape is not in the repository (only the extracted
 pairs and domains are); if you want to re-extract, `extract.py` in that
 directory documents the input it expects.
 

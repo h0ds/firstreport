@@ -18,7 +18,7 @@
   --kg-text:           #0F172A;
 
   /* lean scale (§2, §5), owner's decision: red is left, blue is right,
-     as a news aggregator draws it; white/grey is centre. */
+     as comparison sites commonly draw it; white/grey is centre. */
   --kg-lean-1: #8B1E1E;
   --kg-lean-2: #C75A5A;
   --kg-lean-3: #94A3B8;

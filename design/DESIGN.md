@@ -61,7 +61,7 @@ Semantic colours are for **system status only** — never for characterizing con
 | `--kg-lean-4` | `#5B82C2` | lean right |
 | `--kg-lean-5` | `#1E4B8F` | right |
 
-Left-right placement is drawn red for left and blue for right, as a news aggregator draws it (the project owner's call, taken knowing that red means right in the US and left in much of Europe; the labels are always written out, so the colour never stands alone).
+Left-right placement is drawn red for left and blue for right, as news comparison sites commonly draw it (the project owner's call, taken knowing that red means right in the US and left in much of Europe; the labels are always written out, so the colour never stands alone).
 
 - **Outlet colour comes from AllSides only**: an outlet AllSides rates carries its label as a 2px border on its icon (origin ring outside it), with "AllSides: Lean Left" on hover. Outlets AllSides does not rate carry no border. Audience measures (Robertson et al.) never colour an outlet; they colour only the positions on their own strip.
 - **Designations** beside an outlet's name, each a named source's words, the source on hover:

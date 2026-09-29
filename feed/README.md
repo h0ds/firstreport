@@ -113,7 +113,7 @@ cargo run -- discover --hosts fixtures/golden/aggregator/aggregator-domains.txt 
 cargo run -- discover --hosts hosts.txt --max-per-host 2 --write
 ```
 
-`--hosts` walks a host list (one per line; the a news aggregator domains file
+`--hosts` walks a host list (one per line; the aggregator domains file
 works as is) with bounded concurrency, keeps up to `--max-per-host`
 feeds per site preferring RSS and Atom and skipping comment feeds, and
 lists the hosts that advertised nothing so they can be handled by hand.
@@ -176,7 +176,7 @@ cargo run -- eval --pairs fixtures/golden/ja-pairs.tsv     # Japanese and cross-
 reports precision, recall and F1 of the assignment step across
 thresholds on a labelled pair set, plus the pairs the configured
 `cluster.join_threshold` gets wrong. `fixtures/golden/aggregator/`
-holds a thousand-pair set derived from real a news aggregator story groupings
+holds a thousand-pair set derived from a news aggregator's real story groupings
 and a spectrum-spanning list of 888 outlet hosts for `feed discover`. `docs/clustering.md` explains what
 the pair set needs to contain, records the current numbers, and lists
 the model and input-template alternatives to compare.

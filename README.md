@@ -1,6 +1,6 @@
 # Kagami 鏡
 
-An open-source alternative to a news aggregator, built as a disinformation-analysis
+An open-source news comparison site, built as a disinformation-analysis
 network: where did a story originate, how fast did it spread, who amplified it,
 was it syndicated or independently reported.
 

@@ -1,11 +1,10 @@
-# a news aggregator derived evaluation data
+# Evaluation data from a news aggregator's story groupings
 
-a news aggregator groups outlet articles into stories by hand-curated
+A news aggregator groups outlet articles into stories by hand-curated
 process. That grouping is a ready-made answer key for `feed`'s
 clustering, and its article URLs are a spectrum-spanning outlet list.
 Both are derived here from the 72 stories in the `json/` directory of
-[a public news-aggregator scraper](https://github.com/a public news-aggregator scraper),
-scraped in August 2025.
+a public scraper of that aggregator, scraped in August 2025.
 
 What is here:
 

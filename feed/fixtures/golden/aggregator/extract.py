@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Turn a directory of the aggregator scrape JSON files into evaluation data.
 
-Source: https://github.com/a public news-aggregator scraper (MIT-licensed code;
-the json/ directory holds 72 stories scraped from a news aggregator in Aug 2025).
+Source: a public MIT-licensed scraper of a news aggregator; its json/
+directory holds 72 stories scraped in Aug 2025.
 The raw scrape is NOT in this repository. Run this once against a local
 checkout of it:
 

@@ -121,7 +121,7 @@ schema change.
    Absence means "not linked from the home page", and the claim says
    so; it is not a finding that the page does not exist.
 
-the aggregator's labels are an aggregation of 3 and 4 and are not a
+Aggregators' labels are an aggregation of 3 and 4 and are not a
 source; they remain a private answer key for checking `ledger`'s own
 sourced claims.
 

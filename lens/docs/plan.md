@@ -4,7 +4,7 @@ Pillar 3. `lens` is what a person or a bot visits. It composes what
 `feed` records (stories, who published first, who joined when, what
 was copied) with what `ledger` holds (sourced facts about each outlet)
 into pages. It adds nothing of its own: no score, no lean colour, no
-"trending". Where a news aggregator shows a story with coverage grouped by
+"trending". Where comparison sites show a story with coverage grouped by
 lean, `lens` shows the story with coverage grouped by what a named
 source says, and shows the source.
 
