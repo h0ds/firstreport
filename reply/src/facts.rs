@@ -32,26 +32,48 @@ pub fn text(v: &Value) -> String {
 
 /// The few connective words a derived value needs, per language. A new
 /// language adds a row here and a directory under `templates/`.
-struct Words {
-    and: &'static str,
-    others: &'static str,
+pub struct Words {
+    /// Between list items, and before the last one.
+    sep: &'static str,
+    last: &'static str,
+    /// Around the count when a list is cut: "and 3 others", "ほか3件".
+    more_before: &'static str,
+    more_after: &'static str,
     outlet: &'static str,
     outlets: &'static str,
+    /// Between sentences in a post.
+    pub sentence_sep: &'static str,
+    /// Duration units: "1 h 30 min", "1時間30分".
+    hour: &'static str,
+    min: &'static str,
+    sec: &'static str,
 }
 
-fn words(lang: &str) -> Words {
+pub fn words(lang: &str) -> Words {
     match lang {
-        "fr" => Words {
-            and: "et",
-            others: "autres",
-            outlet: "média",
-            outlets: "médias",
+        "ja" => Words {
+            sep: "、",
+            last: "、",
+            more_before: " ほか",
+            more_after: "件",
+            outlet: "媒体",
+            outlets: "媒体",
+            sentence_sep: "",
+            hour: "時間",
+            min: "分",
+            sec: "秒",
         },
         _ => Words {
-            and: "and",
-            others: "others",
+            sep: ", ",
+            last: " and ",
+            more_before: " and ",
+            more_after: " others",
             outlet: "outlet",
             outlets: "outlets",
+            sentence_sep: " ",
+            hour: " h",
+            min: " min",
+            sec: " s",
         },
     }
 }
@@ -104,7 +126,7 @@ pub fn view(fs: &FactSet, lang: &str) -> Value {
             );
         }
         if let Some(s) = get(c, "velocity.time_to_5_outlets_secs").and_then(Value::as_u64) {
-            d.insert("t5".into(), json!(duration(s)));
+            d.insert("t5".into(), json!(duration_in(s, &w)));
         }
         if let Some((share, first, size)) = biggest_syndication(c) {
             d.insert("syn_share".into(), json!(share));
@@ -154,7 +176,7 @@ pub fn view(fs: &FactSet, lang: &str) -> Value {
             let mut m = json!({
                 "count": o.count,
                 "denominator": o.denominator,
-                "window": duration(o.window_secs as u64),
+                "window": duration_in(o.window_secs as u64, &w),
                 "subject": o.subject,
                 "detail": o.detail,
                 "share_pct": if o.denominator > 0 {
@@ -217,14 +239,14 @@ fn list_of(names: &[String], max: usize, w: &Words) -> String {
         1 => names[0].clone(),
         n if n <= max => {
             let (last, rest) = names.split_last().unwrap();
-            format!("{} {} {last}", rest.join(", "), w.and)
+            format!("{}{}{last}", rest.join(w.sep), w.last)
         }
         n => format!(
-            "{} {} {} {}",
-            names[..max].join(", "),
-            w.and,
+            "{}{}{}{}",
+            names[..max].join(w.sep),
+            w.more_before,
             n - max,
-            w.others
+            w.more_after
         ),
     }
 }
@@ -244,12 +266,17 @@ pub fn encode(s: &str) -> String {
 }
 
 pub fn duration(secs: u64) -> String {
+    duration_in(secs, &words("en"))
+}
+
+fn duration_in(secs: u64, w: &Words) -> String {
     let (h, m) = (secs / 3600, (secs % 3600) / 60);
+    let join = if w.sentence_sep.is_empty() { "" } else { " " };
     match (h, m) {
-        (0, 0) => format!("{secs} s"),
-        (0, m) => format!("{m} min"),
-        (h, 0) => format!("{h} h"),
-        (h, m) => format!("{h} h {m} min"),
+        (0, 0) => format!("{secs}{}", w.sec),
+        (0, m) => format!("{m}{}", w.min),
+        (h, 0) => format!("{h}{}", w.hour),
+        (h, m) => format!("{h}{}{join}{m}{}", w.hour, w.min),
     }
 }
 
@@ -353,6 +380,8 @@ mod tests {
         assert_eq!(duration(45), "45 s");
         assert_eq!(duration(600), "10 min");
         assert_eq!(duration(7_800), "2 h 10 min");
+        assert_eq!(duration_in(7_800, &words("ja")), "2時間10分");
+        assert_eq!(duration_in(600, &words("ja")), "10分");
     }
 
     #[test]
@@ -377,7 +406,14 @@ mod tests {
         assert_eq!(s(&["A"]), "A");
         assert_eq!(s(&["A", "B"]), "A and B");
         assert_eq!(s(&["A", "B", "C"]), "A, B and 1 others");
-        let f = list_of(&["A".to_string(), "B".to_string()], 2, &words("fr"));
-        assert_eq!(f, "A et B");
+        let j = |v: &[&str]| {
+            list_of(
+                &v.iter().map(|s| s.to_string()).collect::<Vec<_>>(),
+                2,
+                &words("ja"),
+            )
+        };
+        assert_eq!(j(&["A", "B"]), "A、B");
+        assert_eq!(j(&["A", "B", "C", "D"]), "A、B ほか2件");
     }
 }

@@ -102,8 +102,8 @@ mod tests {
             Some("en")
         );
         assert_eq!(
-            detect("Est-ce que cette histoire est vraie, d'où vient-elle ?").as_deref(),
-            Some("fr")
+            detect("この話はどこから出てきたのか、本当のことなのか教えてほしい").as_deref(),
+            Some("ja")
         );
         assert_eq!(detect("prove it"), None);
         assert_eq!(detect(""), None);

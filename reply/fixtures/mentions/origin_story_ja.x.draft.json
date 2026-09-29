@@ -1,0 +1,75 @@
+{
+  "contract_version": 1,
+  "mention_id": "at://did:plc:haruka/app.bsky.feed.post/9f6",
+  "platform": "x",
+  "template_ids": [
+    "origin",
+    "this_is_origin",
+    "spread",
+    "syndication",
+    "domain_age",
+    "owner",
+    "trailer"
+  ],
+  "sentences": [
+    "Exampleが2024-01-01 09:00 UTCに最初に公開した。",
+    "このリンクがその最初の公開記事である。",
+    "6媒体に広がり、最初の公開から1時間30分で5媒体に達した。",
+    "そのうち63%は同じ本文で、最初にWire Agencyに載った。独立した取材ではなく、一つの原稿の転載である。",
+    "そのドメインは1995-08-14に登録された（出典：the domain registry (RDAP)）。",
+    "登録上の所有者はExample Media Group（出典：Wikidata）。",
+    "上記の各事実は出典にリンクしている。全記録: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aharuka%2Fapp.bsky.feed.post%2F9f6"
+  ],
+  "posts": [
+    "Exampleが2024-01-01 09:00 UTCに最初に公開した。このリンクがその最初の公開記事である。6媒体に広がり、最初の公開から1時間30分で5媒体に達した。そのうち63%は同じ本文で、最初にWire Agencyに載った。独立した取材ではなく、一つの原稿の転載である。そのドメインは1995-08-14に登録された（出典：the domain registry (RDAP)）。登録上の所有者はExample Media Group（出典：Wikidata）。",
+    "上記の各事実は出典にリンクしている。全記録: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aharuka%2Fapp.bsky.feed.post%2F9f6"
+  ],
+  "max_chars": 280,
+  "lang": "ja",
+  "lang_fallback": false,
+  "cites": [
+    {
+      "sentence": 0,
+      "reference": "feed:item:1234567890123",
+      "url": "http://127.0.0.1:8080/v1/items/1234567890123",
+      "kind": "feed"
+    },
+    {
+      "sentence": 1,
+      "reference": "feed:item:1234567890123",
+      "url": "http://127.0.0.1:8080/v1/items/1234567890123",
+      "kind": "feed"
+    },
+    {
+      "sentence": 2,
+      "reference": "feed:cluster:1234567890123",
+      "url": "http://127.0.0.1:8080/v1/clusters/1234567890123",
+      "kind": "feed"
+    },
+    {
+      "sentence": 3,
+      "reference": "feed:cluster:1234567890123/syndication",
+      "url": "http://127.0.0.1:8080/v1/clusters/1234567890123",
+      "kind": "feed"
+    },
+    {
+      "sentence": 4,
+      "reference": "ledger:example:domain_registered",
+      "url": "http://127.0.0.1:8081/v1/outlets/example/domain_registered",
+      "kind": "ledger"
+    },
+    {
+      "sentence": 5,
+      "reference": "ledger:example:owner",
+      "url": "http://127.0.0.1:8081/v1/outlets/example/owner",
+      "kind": "ledger"
+    },
+    {
+      "sentence": 6,
+      "reference": "reply:lookup:at://did:plc:haruka/app.bsky.feed.post/9f6",
+      "url": "http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aharuka%2Fapp.bsky.feed.post%2F9f6",
+      "kind": "log"
+    }
+  ],
+  "autonomous": false
+}

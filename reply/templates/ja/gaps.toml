@@ -1,0 +1,20 @@
+# 日本語。識別子、必要な事実、条件、出典は英語版と同じで、文だけが違う。
+# docs/voice.md に従う。
+
+[text_match]
+needs = ["d.origin_outlet", "d.origin_time", "lookup.cluster.id"]
+when = "lookup.matched == text"
+text = "確認できるリンクはないが、この文言は{d.origin_outlet}が{d.origin_time}に最初に公開した記事と一致する。"
+cite = "feed:cluster:{lookup.cluster.id}"
+
+[no_story]
+needs = ["d.checked"]
+when = "lookup.matched == none"
+text = "Kagamiにはこれに該当する記事がない。確認した範囲：{d.checked}。"
+cite = "reply:lookup:{mention.id}"
+
+[nothing_to_check]
+needs = ["d.gaps"]
+when = "d.has_lookup == false"
+text = "確認できるものがない：{d.gaps}。"
+cite = "reply:lookup:{mention.id}"

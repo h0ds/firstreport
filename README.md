@@ -74,7 +74,7 @@ person keeps or drops sentences and posts or declines, with a public
 log of every decision, on-demand observation of each mention's subject
 through platform search with salted sightings and the four coordination
 signals, and templates that say those observations, always reviewed. It answers
-in the language it was summoned in; English and French templates ship. Drafts whose template set
+in the language it was summoned in; English and Japanese templates ship. Drafts whose template set
 has earned it can post alone; that is off by default. X is the
 primary platform and Bluesky the live testbed; nothing has been run
 against a live account yet.

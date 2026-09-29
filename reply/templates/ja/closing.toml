@@ -1,0 +1,6 @@
+# 日本語。識別子、必要な事実、条件、出典は英語版と同じで、文だけが違う。
+# docs/voice.md に従う。
+
+[trailer]
+text = "上記の各事実は出典にリンクしている。全記録: {d.log_url}"
+cite = "reply:lookup:{mention.id}"

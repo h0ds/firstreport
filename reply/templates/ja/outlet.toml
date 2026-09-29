@@ -1,0 +1,24 @@
+# 日本語。識別子、必要な事実、条件、出典は英語版と同じで、文だけが違う。
+# docs/voice.md に従う。
+
+[outlet_unseen]
+needs = ["d.outlet_name", "lookup.outlet.id"]
+when = "lookup.matched == outlet"
+text = "Kagamiは{d.outlet_name}を追跡しているが、このリンクはフィードで確認していない。"
+cite = "feed:outlet:{lookup.outlet.id}"
+
+[not_followed]
+needs = ["lookup.host"]
+when = "lookup.matched == none"
+text = "{lookup.host}はKagamiが追跡している媒体ではない。"
+cite = "reply:lookup:{mention.id}"
+
+[domain_age]
+needs = ["d.ledger.domain_registered.value", "d.ledger.domain_registered.source", "d.ledger_outlet"]
+text = "そのドメインは{d.ledger.domain_registered.value}に登録された（出典：{d.ledger.domain_registered.source}）。"
+cite = "ledger:{d.ledger_outlet}:domain_registered"
+
+[owner]
+needs = ["d.ledger.owner.value", "d.ledger.owner.source", "d.ledger_outlet"]
+text = "登録上の所有者は{d.ledger.owner.value}（出典：{d.ledger.owner.source}）。"
+cite = "ledger:{d.ledger_outlet}:owner"

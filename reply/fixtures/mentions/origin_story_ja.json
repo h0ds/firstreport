@@ -1,10 +1,10 @@
 {
   "mention": {
-    "id": "at://did:plc:juliette/app.bsky.feed.post/9f6",
+    "id": "at://did:plc:haruka/app.bsky.feed.post/9f6",
     "platform": "bluesky",
-    "author": "juliette.example",
+    "author": "haruka.example",
     "at": 1704110400,
-    "text": "@kagami d'où vient cette histoire, c'est vrai ?",
+    "text": "@kagami この話はどこから出てきたの？本当？",
     "urls": [],
     "parent": {
       "id": "at://did:plc:bob/app.bsky.feed.post/3k0",
@@ -13,7 +13,7 @@
         "https://www.example.com/world/2024/01/01/rates?utm_source=x"
       ]
     },
-    "lang": "fr"
+    "lang": "ja"
   },
   "subject": {
     "urls": [

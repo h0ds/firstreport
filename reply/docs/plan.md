@@ -337,7 +337,7 @@ reply/
   docs/plan.md
   docs/voice.md             the tone guide every template is held to
   templates/
-    <lang>/*.toml           one file per fact kind, per language; en is the fallback, fr ships
+    <lang>/*.toml           one file per fact kind, per language; en is the fallback, ja ships
     layout/<platform>.toml  sentence order and length rules (x: 280, bluesky: 300)
   fixtures/
     mentions/*.json         recorded mentions with the FactSet they resolved to

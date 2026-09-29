@@ -1,38 +1,38 @@
-# Français. Mêmes identifiants, mêmes faits, mêmes citations que l'anglais ;
-# seule la phrase change. Tenu à docs/voice.md.
+# 日本語。識別子、必要な事実、条件、出典は英語版と同じで、文だけが違う。
+# docs/voice.md に従う。
 
 [origin]
 needs = ["d.origin_outlet", "d.origin_time", "lookup.cluster.id"]
 when = "lookup.matched == item"
-text = "Publié d'abord par {d.origin_outlet} le {d.origin_time}."
+text = "{d.origin_outlet}が{d.origin_time}に最初に公開した。"
 cite = "feed:item:{lookup.cluster.origin_item_id}"
 
 [this_is_origin]
 needs = ["lookup.is_origin", "lookup.item.id"]
 when = "lookup.is_origin == true"
-text = "Ce lien est cette première publication."
+text = "このリンクがその最初の公開記事である。"
 cite = "feed:item:{lookup.item.id}"
 
 [this_is_later]
 needs = ["lookup.is_origin", "lookup.item.id", "d.outlet_name"]
 when = "lookup.is_origin == false"
-text = "Ce lien est la copie de {d.outlet_name}, publiée plus tard."
+text = "このリンクは{d.outlet_name}の転載で、後から公開された。"
 cite = "feed:item:{lookup.item.id}"
 
 [spread]
 needs = ["d.outlet_count", "d.t5", "lookup.cluster.id"]
 when = "d.outlet_count >= 5"
-text = "Repris par {d.outlet_count} médias ; cinq en {d.t5} après le premier."
+text = "{d.outlet_count}媒体に広がり、最初の公開から{d.t5}で5媒体に達した。"
 cite = "feed:cluster:{lookup.cluster.id}"
 
 [spread_small]
 needs = ["d.outlet_count", "d.outlets_word", "d.carried_by", "lookup.cluster.id"]
 when = "d.outlet_count < 5"
-text = "Kagami l'a vu chez {d.outlet_count} {d.outlets_word} : {d.carried_by}."
+text = "Kagamiは{d.outlet_count}{d.outlets_word}で確認した：{d.carried_by}。"
 cite = "feed:cluster:{lookup.cluster.id}"
 
 [syndication]
 needs = ["d.syn_share_pct", "d.syn_first_outlet", "lookup.cluster.id"]
 when = "d.syn_share >= 0.5"
-text = "{d.syn_share_pct} de ces articles portent le même texte, vu d'abord chez {d.syn_first_outlet} ; c'est une seule copie, pas un travail indépendant."
+text = "そのうち{d.syn_share_pct}は同じ本文で、最初に{d.syn_first_outlet}に載った。独立した取材ではなく、一つの原稿の転載である。"
 cite = "feed:cluster:{lookup.cluster.id}/syndication"

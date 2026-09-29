@@ -532,9 +532,9 @@ mod tests {
             &("r".into(), "rc".into()),
             &("p".into(), "pc".into()),
             "2024-01-01T00:00:00Z",
-            "fr",
+            "ja",
         );
-        assert_eq!(r["langs"][0], "fr");
+        assert_eq!(r["langs"][0], "ja");
         assert_eq!(r["reply"]["root"]["cid"], "rc");
         assert_eq!(r["reply"]["parent"]["uri"], "p");
         assert!(now_rfc3339().ends_with('Z'));

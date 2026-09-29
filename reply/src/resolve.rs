@@ -113,6 +113,8 @@ const SUMMONS_STRIP: &[&str] = &[
     "source",
     "thoughts",
 ];
+/// Words that mark a short summons as Japanese: true?, source, fake, evidence, lie, citation.
+const SUMMONS_JA: &[&str] = &["本当", "ソース", "デマ", "証拠", "嘘", "出典"];
 /// Words that mark a short summons as English.
 const SUMMONS: &[&str] = &[
     "prove it",
@@ -146,6 +148,9 @@ pub fn language(m: &Mention) -> Option<String> {
     let lower = own.to_ascii_lowercase();
     if words(&own) > 0 && SUMMONS.iter().any(|p| lower.contains(p)) {
         return Some("en".into());
+    }
+    if SUMMONS_JA.iter().any(|p| own.contains(p)) {
+        return Some("ja".into());
     }
     for post in [&m.quoted, &m.parent].into_iter().flatten() {
         if let Some(l) = crate::lang::detect(&strip_summons(&post.text)) {
@@ -325,23 +330,27 @@ mod tests {
                 urls: vec![],
             })
         };
-        let fr = "C'est complètement faux, regardez la source de cette histoire";
+        let ja = "この記事は完全に間違っている。出典をよく見てほしい、どこから出た話なのか";
         assert_eq!(
-            language(&mention("@kagami prove it", &[], p(fr))).as_deref(),
+            language(&mention("@kagami prove it", &[], p(ja))).as_deref(),
             Some("en")
         );
         assert_eq!(
+            language(&mention("@kagami これは本当？", &[], None)).as_deref(),
+            Some("ja")
+        );
+        assert_eq!(
             language(&mention(
-                "@kagami est-ce que cette histoire est vraie ? d'où vient-elle",
+                "@kagami この話はどこから出てきたのか、本当のことなのか教えてほしい",
                 &[],
                 None
             ))
             .as_deref(),
-            Some("fr")
+            Some("ja")
         );
         assert_eq!(
-            language(&mention("@kagami ?", &[], p(fr))).as_deref(),
-            Some("fr")
+            language(&mention("@kagami ?", &[], p(ja))).as_deref(),
+            Some("ja")
         );
         assert_eq!(language(&mention("@kagami ?", &[], None)), None);
     }

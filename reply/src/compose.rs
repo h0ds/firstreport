@@ -100,7 +100,11 @@ pub fn compose(fs: &FactSet, set: &Set, layout: &Layout, urls: &Urls) -> Result<
         .get(TRAILER)
         .ok_or_else(|| format!("{lang}: no trailer template"))?;
     push(&mut draft, trailer, &view, urls)?;
-    draft.posts = split(&draft.sentences, layout.max_chars)?;
+    draft.posts = split(
+        &draft.sentences,
+        layout.max_chars,
+        facts::words(&lang).sentence_sep,
+    )?;
     check_cites(&draft)?;
     Ok(draft)
 }
@@ -140,7 +144,11 @@ pub fn keep_sentences(d: &Draft, keep: &[usize]) -> Result<Draft, String> {
             out.cites.push(c);
         }
     }
-    out.posts = split(&out.sentences, d.max_chars)?;
+    out.posts = split(
+        &out.sentences,
+        d.max_chars,
+        facts::words(&d.lang).sentence_sep,
+    )?;
     check_cites(&out)?;
     Ok(out)
 }
@@ -163,7 +171,8 @@ fn push(d: &mut Draft, t: &Template, view: &Value, urls: &Urls) -> Result<(), St
 /// Join sentences into posts of at most `max` chars, breaking only between
 /// sentences. A single sentence over the limit is an error, caught by
 /// `check` before it can reach a platform.
-fn split(sentences: &[String], max: usize) -> Result<Vec<String>, String> {
+fn split(sentences: &[String], max: usize, sep: &str) -> Result<Vec<String>, String> {
+    let sep_n = sep.chars().count();
     let mut posts: Vec<String> = Vec::new();
     for s in sentences {
         let n = s.chars().count();
@@ -173,8 +182,8 @@ fn split(sentences: &[String], max: usize) -> Result<Vec<String>, String> {
             ));
         }
         match posts.last_mut() {
-            Some(p) if p.chars().count() + 1 + n <= max => {
-                p.push(' ');
+            Some(p) if p.chars().count() + sep_n + n <= max => {
+                p.push_str(sep);
                 p.push_str(s);
             }
             _ => posts.push(s.clone()),
@@ -260,8 +269,9 @@ mod tests {
             .iter()
             .map(|x| x.to_string())
             .collect();
-        assert_eq!(split(&s, 9).unwrap(), vec!["aaaa bbbb", "cc"]);
-        assert_eq!(split(&s, 5).unwrap(), vec!["aaaa", "bbbb", "cc"]);
-        assert!(split(&s, 3).is_err());
+        assert_eq!(split(&s, 9, " ").unwrap(), vec!["aaaa bbbb", "cc"]);
+        assert_eq!(split(&s, 5, " ").unwrap(), vec!["aaaa", "bbbb", "cc"]);
+        assert_eq!(split(&s, 8, "").unwrap(), vec!["aaaabbbb", "cc"]);
+        assert!(split(&s, 3, " ").is_err());
     }
 }

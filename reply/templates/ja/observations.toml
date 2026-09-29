@@ -1,0 +1,17 @@
+# 日本語。識別子、必要な事実、条件、出典は英語版と同じで、文だけが違う。
+# docs/voice.md に従う。
+
+[burst]
+needs = ["d.obs.burst.count", "d.obs.burst.window", "d.obs.burst.subject"]
+text = "{d.obs.burst.count}のアカウントが{d.obs.burst.window}以内にこのリンクを投稿した。"
+cite = "observation:burst:{d.obs.burst.subject}"
+
+[syndicated_text]
+needs = ["d.obs.syndicated_text.count", "d.obs.syndicated_text.denominator", "d.obs.syndicated_text.subject"]
+text = "そのうち{d.obs.syndicated_text.denominator}件中{d.obs.syndicated_text.count}件は同じ文言である。"
+cite = "observation:syndicated_text:{d.obs.syndicated_text.subject}"
+
+[cohort]
+needs = ["d.obs.cohort.count", "d.obs.cohort.denominator", "d.obs.cohort.span_days", "d.obs.cohort.baseline_pct", "d.obs.cohort.subject"]
+text = "作成日が分かる{d.obs.cohort.denominator}アカウントのうち{d.obs.cohort.count}は互いに{d.obs.cohort.span_days}日以内に作成されたが、Kagamiが見た全アカウントではこの割合は{d.obs.cohort.baseline_pct}である。"
+cite = "observation:cohort:{d.obs.cohort.subject}"
