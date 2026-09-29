@@ -39,7 +39,16 @@ impl std::fmt::Display for ParseError {
 }
 impl std::error::Error for ParseError {}
 
+/// Dispatch by source: Telegram channel preview pages have their own
+/// parser; everything else is a feed for feed-rs.
 pub fn parse(body: &[u8], feed_url: &str) -> Result<ParsedFeed, ParseError> {
+    if super::telegram::is_channel_url(feed_url) {
+        return super::telegram::parse(body, feed_url);
+    }
+    parse_syndication(body, feed_url)
+}
+
+fn parse_syndication(body: &[u8], feed_url: &str) -> Result<ParsedFeed, ParseError> {
     let base = Url::parse(feed_url).ok();
     let parsed = feed_rs::parser::Builder::new()
         .base_uri(Some(feed_url))
