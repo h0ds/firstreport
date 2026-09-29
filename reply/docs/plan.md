@@ -279,7 +279,9 @@ per-platform layout file. Threads are split at sentence boundaries. A
 final sentence links the full `FactSet` on the public log so a reader
 can see everything, not only what fit in the post.
 
-Templates are the community's surface. A better sentence, a new fact
+`docs/voice.md` is the tone guide: what the bot sounds like, what it
+never says, and the tests a sentence has to pass before it becomes a
+template. Templates are the community's surface. A better sentence, a new fact
 kind, a translation: all are pull requests against `reply/templates/`,
 tested by `reply render` over the fixtures. There is no other place
 wording comes from. If an LLM is ever used, it is to choose among
@@ -317,6 +319,7 @@ bot had, where it fell short.
 reply/
   Cargo.toml
   docs/plan.md
+  docs/voice.md             the tone guide every template is held to
   templates/
     en/*.toml               one file per fact kind
     layout/<platform>.toml  sentence order and length rules
@@ -333,6 +336,7 @@ reply/
     platform/mod.rs         adapter trait
     platform/bluesky.rs
     platform/mastodon.rs
+    client.rs               the Api trait: HTTP, and recorded responses for tests
     resolve.rs              mention → Subject → FactSet, via feed and ledger
     compose.rs              templates → Draft
     template.rs             TOML template loading and rendering
@@ -413,10 +417,12 @@ salt_env = "REPLY_SALT"
 - **R0** crate, contract, templates, `render`, `check`, the cite check.
   Done, offline: 13 English templates over two layouts, six fixture
   mentions with golden drafts, and the cite check on every draft.
-- **R1** `feed` gains `/v1/lookup`. Done: `url` and `text` lookups
-  with `matched` and `checked`, cluster, origin and outlet with ledger
-  links. Next: the resolver, working end to end against a local `feed`
-  and `ledger` from recorded mentions.
+- **R1** `feed` gains `/v1/lookup`; the resolver works end to end.
+  Done: `url` and `text` lookups with `matched` and `checked`; the
+  resolver picks the subject, asks `feed` once and `ledger` once per
+  outlet, collects display names, and records every miss as a gap.
+  Verified against a `feed` serving the replay fixtures; `ledger` not
+  yet run alongside.
 - **R2** Bluesky listener in `--dry-run`: mentions in, drafts to the
   queue, nothing posted. Run it for weeks and read what people ask.
 - **R3** Review page and poster. First replies, all human-approved.
