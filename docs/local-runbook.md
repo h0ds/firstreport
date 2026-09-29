@@ -114,9 +114,18 @@ curl -s 'localhost:8080/v1/feeds?filter=failing' | python3 -m json.tool | grep -
 
 Reuters is in through its news sitemap; if `/v1/feeds` shows it as
 "disallowed by the host's robots.txt", Reuters has said no and the
-entry comes out. For each other failing feed, `cd feed && cargo run -- discover <homepage>`
-finds the feeds the site advertises; replace the URL in
-`config/feeds.toml`. A host answering 403 or 404 to every UA has no
+entry comes out. For the rest, one command does the discovery for every failing feed
+at once and edits the config for review:
+
+```
+cd feed
+cargo run -- feeds            # the failing list, from the store
+cargo run -- feeds --fix      # replacement URLs, confirmed to fetch as feeds
+cargo run -- feeds --write    # apply them to config/feeds.toml; git diff, then restart
+```
+
+A feed it cannot fix is listed with the reason; `cargo run -- discover
+<homepage>` is the manual fallback. A host answering 403 or 404 to every UA has no
 public feed; drop it or find a mirror. For Japanese clustering add
 `"ja"` to `cluster.languages` and use the multilingual preset (step 8).
 Then widen further with discovery over the a news aggregator domains:

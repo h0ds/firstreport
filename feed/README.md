@@ -21,6 +21,11 @@ conditional requests, identifies the project in its User-Agent, and
 never requests an article page. `../docs/publisher-rules.md` states
 exactly what is fetched and kept.
 
+After a live run, `cargo run -- feeds` lists the feeds that failed,
+`cargo run -- feeds --fix` asks each outlet's home page for a
+replacement and confirms it fetches as a feed, and `--write` rewrites
+that one line in `config/feeds.toml` for review.
+
 ## Embedding model
 
 ```
