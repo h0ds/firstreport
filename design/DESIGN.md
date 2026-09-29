@@ -276,7 +276,8 @@ step since it was first seen. Spec:
 - On a story card the bar is compact: 8px tall, 120px wide, the counts as text beside it ("3 Left · 2 Center (AllSides)"), no legend. Same threshold: two rated outlets or no bar.
 
 **Audience strip** (a numeric scale: Robertson et al. 2018's audience partisanship)
-- A hairline from -1 to +1 with a centre mark, "D" and "R" at the ends, one grey dot per scored outlet in the story (translucent, so overlaps darken), and "audience of N of M outlets (Robertson et al. 2018)" beside it. 120px on a card, 240px on the story page.
+- A hairline from -1 to +1 with a centre mark, "D" and "R" at the ends, one grey dot per scored outlet in the story (translucent, so overlaps darken). On a card it is dots only, beside the sparkline on the card's one picture row; the list's legend line names the source once and the hover title gives the counts. On the story page it is 240px with "N of M scored · K unknown (Robertson et al. 2018)" beside it.
+- **Country spread** on a card: "in N countries" in the metadata when the outlets span more than one, from ledger's Wikidata country claims, the countries on hover. Words, not flags or a map.
 - It says what it measures: who shared an outlet's links, not what the outlet or the story says. Never bucketed into Left/Right labels by Kagami, never coloured red or blue.
 - Unknown is shown, never hidden or averaged in: outlets the source does not score are hollow dashed dots in their own group after R, named on hover and in the aria-label, and counted in the text ("3 of 5 scored · 2 unknown"). A story with no scored outlet says "political lean unknown for N outlets" in place of the strip.
 

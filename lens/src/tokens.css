@@ -309,6 +309,14 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 .kg-labelbar.compact .seg { padding: 0; }
 .kg-labelbar.compact .seg.none { border: 1px dashed var(--kg-line-strong); }
 
+/* a card's picture row: sparkline, then the lean strip (§5) */
+.kg-visuals { display: flex; flex-wrap: wrap; align-items: center; gap: var(--kg-s2) var(--kg-s6); margin-top: var(--kg-s2); }
+/* the list's legend: the card pictures explained once */
+.kg-legend { margin: 0 0 var(--kg-s2); }
+.kg-legend .key { display: inline-block; vertical-align: middle; margin-right: var(--kg-s1); color: var(--kg-text-secondary); font-weight: 500; }
+.kg-legend .key.spark { width: 24px; height: 8px; border-bottom: 1.5px solid var(--kg-blue); border-left: 1px solid var(--kg-line); vertical-align: baseline; }
+.kg-legend .key.lean { letter-spacing: 0.1em; }
+
 /* lean line under a card, and the audience strip (§5): greys only */
 .kg-lean { display: flex; flex-wrap: wrap; gap: var(--kg-s2) var(--kg-s5); align-items: center; margin-top: var(--kg-s2); }
 .kg-lean .lbl, .kg-audience .lbl { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-secondary); }

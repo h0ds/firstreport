@@ -139,7 +139,8 @@ fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usi
             .map(|(_, f)| f.spark.as_slice()),
     );
     let start = (page.max(1) - 1) * PAGE_SIZE;
-    let mut b = String::new();
+    // The card's pictures, explained once rather than on every card.
+    let mut b = String::from("<p class=\"kg-muted kg-legend\"><span class=\"key spark\"></span>outlets carrying the story over its first day <span class=\"sep\">·</span> <span class=\"key lean\">D • R</span>where each outlet's audience sits, from links shared by Democrats to Republicans (<a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a>); hollow dots are outlets it does not score</p>");
     for (k, (c, f)) in recent
         .iter()
         .chain(single.iter())

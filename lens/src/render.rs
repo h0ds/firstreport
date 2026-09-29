@@ -304,7 +304,15 @@ pub fn audience_strip(input: &Input, outlets: &[&str], large: bool) -> String {
     if outlets.is_empty() {
         return String::new();
     }
-    // No outlet scored: say so rather than show nothing (design §5).
+    // No outlet scored: say so rather than show nothing (design §5). On a
+    // card that is two words; the story page says it in full.
+    if scored.is_empty() && !large {
+        return format!(
+            "<span class=\"kg-audience none\" data-scored=\"0\" data-unknown=\"{}\" title=\"Not scored by Robertson et al. 2018: {}\"><span class=\"lbl\">lean unknown</span></span>",
+            unknown.len(),
+            esc(&names(&unknown))
+        );
+    }
     if scored.is_empty() {
         return format!(
             "<span class=\"kg-audience none\" data-scored=\"0\" data-unknown=\"{}\" title=\"Not scored by Robertson et al. 2018: {}\"><span class=\"lbl\">political lean unknown for {}</span></span>",
@@ -356,10 +364,27 @@ pub fn audience_strip(input: &Input, outlets: &[&str], large: bool) -> String {
     } else {
         format!("; unknown: {}", names(&unknown))
     };
+    // Cards carry the dots only; the page's legend names the source once.
+    let text = if large {
+        format!(
+            "<span class=\"lbl\">{} of {} scored{} <span class=\"src\">(Robertson et al. 2018)</span></span>",
+            scored.len(),
+            outlets.len(),
+            if unknown.is_empty() {
+                String::new()
+            } else {
+                format!(" · <span title=\"Not scored by Robertson et al. 2018: {}\">{} unknown</span>", esc(&names(&unknown)), unknown.len())
+            }
+        )
+    } else {
+        String::new()
+    };
     format!(
-        "<span class=\"kg-audience\" data-scored=\"{}\" data-unknown=\"{}\"><span class=\"end\">D</span><svg width=\"{w}\" height=\"{h}\" viewBox=\"0 0 {w} {h}\" role=\"img\" aria-label=\"Audience of {} outlets on -1 (links shared by Democrats) to +1 (by Republicans), Robertson et al. 2018: {}{}\"><line class=\"axis\" x1=\"{pad}\" y1=\"{mid}\" x2=\"{:.1}\" y2=\"{mid}\"/><line class=\"zero\" x1=\"{:.1}\" y1=\"1\" x2=\"{:.1}\" y2=\"{:.1}\"/>{dots}</svg><span class=\"end\">R</span>{unknown_svg}<span class=\"lbl\">{} of {} scored{} <span class=\"src\">(Robertson et al. 2018)</span></span></span>",
+        "<span class=\"kg-audience\" data-scored=\"{}\" data-unknown=\"{}\" title=\"Where each outlet's audience sits, D to R (Robertson et al. 2018): {} of {} scored\"><span class=\"end\">D</span><svg width=\"{w}\" height=\"{h}\" viewBox=\"0 0 {w} {h}\" role=\"img\" aria-label=\"Audience of {} outlets on -1 (links shared by Democrats) to +1 (by Republicans), Robertson et al. 2018: {}{}\"><line class=\"axis\" x1=\"{pad}\" y1=\"{mid}\" x2=\"{:.1}\" y2=\"{mid}\"/><line class=\"zero\" x1=\"{:.1}\" y1=\"1\" x2=\"{:.1}\" y2=\"{:.1}\"/>{dots}</svg><span class=\"end\">R</span>{unknown_svg}{text}</span>",
         scored.len(),
         unknown.len(),
+        scored.len(),
+        outlets.len(),
         scored.len(),
         esc(&label),
         esc(&unknown_label),
@@ -367,14 +392,24 @@ pub fn audience_strip(input: &Input, outlets: &[&str], large: bool) -> String {
         x(0.0),
         x(0.0),
         h - 1.0,
-        scored.len(),
-        outlets.len(),
-        if unknown.is_empty() {
-            String::new()
-        } else {
-            format!(" · <span title=\"Not scored by Robertson et al. 2018: {}\">{} unknown</span>", esc(&names(&unknown)), unknown.len())
-        }
     )
+}
+
+/// Countries of the outlets in a story, from ledger's Wikidata country
+/// claims, most outlets first. An outlet with several counts each.
+pub fn story_countries(input: &Input, outlets: &[&str]) -> Vec<(String, usize)> {
+    let mut by: std::collections::BTreeMap<String, usize> = Default::default();
+    for id in outlets {
+        let mut seen = std::collections::BTreeSet::new();
+        for c in input.claims.get(*id).into_iter().flatten() {
+            if c.field == "country" && c.source_id == "wikidata" && seen.insert(c.value.clone()) {
+                *by.entry(c.value.clone()).or_default() += 1;
+            }
+        }
+    }
+    let mut v: Vec<(String, usize)> = by.into_iter().collect();
+    v.sort_by(|a, b| b.1.cmp(&a.1).then(a.0.cmp(&b.0)));
+    v
 }
 
 /// The label bar in one line for a card: thin grey segments in the
@@ -433,10 +468,7 @@ pub fn lean_line(input: &Input, c: &Cluster) -> String {
         .map(|b| label_bar_compact(input, &b))
         .unwrap_or_default();
     let strip = audience_strip(input, &ids, false);
-    if bar.is_empty() && strip.is_empty() {
-        return String::new();
-    }
-    format!("<div class=\"kg-lean\">{bar}{strip}</div>")
+    format!("{bar}{strip}")
 }
 
 /// Largest value across a page's sparklines: the shared y scale (design §5).
@@ -564,9 +596,24 @@ pub fn cluster_card(
             );
         }
     }
-    s.push_str(&spark(spark_points, scale_max, large));
+    // How far across the world: the outlets' countries (Wikidata), when
+    // more than one, listed on hover.
+    let countries = story_countries(input, &story_outlets(c));
+    if countries.len() > 1 {
+        let _ = write!(
+            s,
+            "<span class=\"sep\">·</span><span title=\"{}\">in {} countries</span>",
+            esc(&countries.iter().map(|(k, v)| format!("{k} {v}")).collect::<Vec<_>>().join(", ")),
+            countries.len()
+        );
+    }
     s.push_str("</div>");
-    s.push_str(&lean_line(input, c));
+    // One row of pictures: spread over the first day, then where the
+    // outlets' audiences sit (design §5).
+    let visuals = format!("{}{}", spark(spark_points, scale_max, large), lean_line(input, c));
+    if !visuals.is_empty() {
+        let _ = write!(s, "<div class=\"kg-visuals\">{visuals}</div>");
+    }
     s.push_str("</article>");
     s
 }
@@ -1092,12 +1139,15 @@ mod tests {
         }
         // Nothing scored: said, not hidden.
         let none = audience_strip(&i, &["blog"], false);
-        assert!(none.contains("political lean unknown for 1 outlet") && none.contains("data-unknown=\"1\""));
+        assert!(none.contains("lean unknown") && none.contains("data-unknown=\"1\""));
+        assert!(audience_strip(&i, &["blog"], true).contains("political lean unknown for 1 outlet"));
         // One scored outlet still draws, beside its unknowns.
         let one = audience_strip(&i, &["wire", "blog"], false);
-        assert!(one.contains("1 of 2 scored") && one.contains("1 unknown") && one.contains("class=\"unknown\""));
+        assert!(one.contains("data-unknown=\"1\"") && one.contains("class=\"unknown\""));
+        assert!(!one.contains("class=\"lbl\""), "cards carry dots, not text; the legend names the source");
+        assert!(audience_strip(&i, &["wire", "blog"], true).contains("1 of 2 scored · <span"));
         let two = audience_strip(&i, &["wire", "gazette", "blog"], false);
-        assert!(two.contains("2 of 3 scored") && two.contains("Robertson et al. 2018"));
+        assert!(two.contains("2 of 3 scored") && two.contains("Robertson et al. 2018"), "in the hover title");
         assert!(two.contains("unknown: Blog"), "unknown outlets are named in the aria-label");
         // -0.5 and +0.5 sit a quarter in from each end of the 120px strip.
         assert!(two.contains("cx=\"32.0\"") && two.contains("cx=\"88.0\""), "{two}");
