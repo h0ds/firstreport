@@ -10,6 +10,17 @@ use serde_json::Value;
 
 pub const CONTRACT_VERSION: u32 = 1;
 
+/// A post the mention points at: the one it replies to, or quotes.
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+pub struct Post {
+    pub id: String,
+    #[serde(default)]
+    pub text: String,
+    /// Links the post carries, as the platform gives them.
+    #[serde(default)]
+    pub urls: Vec<String>,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub struct Mention {
     pub id: String,
@@ -17,12 +28,13 @@ pub struct Mention {
     pub author: String,
     pub at: i64,
     pub text: String,
-    #[serde(default)]
-    pub parent_id: Option<String>,
-    #[serde(default)]
-    pub quoted_id: Option<String>,
+    /// Links in the mention's own text.
     #[serde(default)]
     pub urls: Vec<String>,
+    #[serde(default)]
+    pub parent: Option<Post>,
+    #[serde(default)]
+    pub quoted: Option<Post>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
@@ -141,6 +153,10 @@ pub fn check_cites(d: &Draft) -> Result<(), String> {
 }
 
 pub fn load_fixture(path: &Path) -> Result<FactSet, String> {
+    load_json(path)
+}
+
+pub fn load_json<T: serde::de::DeserializeOwned>(path: &Path) -> Result<T, String> {
     let s = std::fs::read_to_string(path).map_err(|e| format!("{}: {e}", path.display()))?;
     serde_json::from_str(&s).map_err(|e| format!("{}: {e}", path.display()))
 }

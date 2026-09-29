@@ -245,9 +245,13 @@ async fn lookup(State(s): State<AppState>, Query(q): Query<LookupQ>) -> Response
         let hash = crate::parse::simhash::simhash(text);
         let threshold = s.hamming_threshold;
         let since = q.since.unwrap_or_else(|| now() - SYNDICATION_WINDOW_SECS);
-        out.checked.push(format!(
-            "items with near-identical title and summary fetched since {since}"
-        ));
+        out.checked.push(match q.since {
+            None => format!(
+                "items with near-identical title and summary over the last {} days",
+                SYNDICATION_WINDOW_SECS / 86_400
+            ),
+            Some(_) => format!("items with near-identical title and summary fetched since {since}"),
+        });
         let items = match s
             .reader
             .call(move |c| reader::syndication_matches(c, hash, threshold, since, DEFAULT_LIMIT))

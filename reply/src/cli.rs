@@ -10,6 +10,13 @@ pub enum Command {
     Render { fixture: PathBuf, platform: String },
     /// Validate templates and layouts, render every fixture, compare goldens.
     Check { fixtures: PathBuf, update: bool },
+    /// Resolve one recorded mention against live feed and ledger; print
+    /// the FactSet, or the draft with `render`.
+    Resolve {
+        mention: PathBuf,
+        platform: String,
+        render: bool,
+    },
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -26,6 +33,9 @@ commands:
   render <fixture.json> [--platform <name>]   render a recorded mention; print the draft and its cites
   check [--fixtures <dir>] [--update]         validate templates and layouts, render every fixture,
                                               compare with the golden drafts (rewrite them with --update)
+  resolve <mention.json> [--render] [--platform <name>]
+                                              ask feed and ledger about a mention; print the FactSet
+                                              (a fixture for check) or, with --render, the draft
 ";
 
 pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
@@ -37,6 +47,7 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let mut platform = String::from("bluesky");
     let mut fixtures = PathBuf::from("fixtures/mentions");
     let mut update = false;
+    let mut do_render = false;
     while let Some(a) = it.next() {
         let mut val = |flag: &str| {
             it.next()
@@ -50,9 +61,13 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
             "--platform" => platform = val("--platform")?,
             "--fixtures" => fixtures = val("--fixtures")?.into(),
             "--update" => update = true,
-            "render" | "check" => command = Some(a),
+            "--render" => do_render = true,
+            "render" | "check" | "resolve" => command = Some(a),
             "-h" | "--help" => return Err(USAGE.into()),
-            other if command.as_deref() == Some("render") && fixture.is_none() => {
+            other
+                if matches!(command.as_deref(), Some("render" | "resolve"))
+                    && fixture.is_none() =>
+            {
                 fixture = Some(PathBuf::from(other))
             }
             other => return Err(format!("unknown argument {other}\n{USAGE}")),
@@ -64,6 +79,11 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
             platform,
         },
         Some("check") => Command::Check { fixtures, update },
+        Some("resolve") => Command::Resolve {
+            mention: fixture.ok_or_else(|| format!("resolve needs a mention file\n{USAGE}"))?,
+            platform,
+            render: do_render,
+        },
         _ => return Err(USAGE.into()),
     };
     Ok(Args {
@@ -98,6 +118,15 @@ mod tests {
             Command::Check {
                 fixtures: "fixtures/mentions".into(),
                 update: true
+            }
+        );
+        let a = p("resolve m.json --render").unwrap();
+        assert_eq!(
+            a.command,
+            Command::Resolve {
+                mention: "m.json".into(),
+                platform: "bluesky".into(),
+                render: true
             }
         );
         assert!(p("render").is_err());

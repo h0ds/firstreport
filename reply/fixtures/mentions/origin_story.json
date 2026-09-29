@@ -5,10 +5,14 @@
     "author": "alice.example",
     "at": 1704110400,
     "text": "@kagami prove it",
-    "parent_id": "at://did:plc:bob/app.bsky.feed.post/3k0",
-    "urls": [
-      "https://www.example.com/world/2024/01/01/rates?utm_source=x"
-    ]
+    "urls": [],
+    "parent": {
+      "id": "at://did:plc:bob/app.bsky.feed.post/3k0",
+      "text": "",
+      "urls": [
+        "https://www.example.com/world/2024/01/01/rates?utm_source=x"
+      ]
+    }
   },
   "subject": {
     "urls": [

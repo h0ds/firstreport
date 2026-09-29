@@ -2,14 +2,17 @@
 //! templates, `render` and `check`.
 
 mod cli;
+mod client;
 mod compose;
 mod facts;
 mod model;
+mod resolve;
 mod template;
 
 use std::path::Path;
 
-fn main() {
+#[tokio::main]
+async fn main() {
     let args = match cli::parse(std::env::args()) {
         Ok(a) => a,
         Err(msg) => {
@@ -17,13 +20,13 @@ fn main() {
             std::process::exit(2);
         }
     };
-    if let Err(e) = run(args) {
+    if let Err(e) = run(args).await {
         eprintln!("error: {e}");
         std::process::exit(1);
     }
 }
 
-fn run(args: cli::Args) -> Result<(), String> {
+async fn run(args: cli::Args) -> Result<(), String> {
     let set = template::load(&args.templates)?;
     match args.command {
         cli::Command::Render { fixture, platform } => {
@@ -33,6 +36,27 @@ fn run(args: cli::Args) -> Result<(), String> {
             println!(
                 "{}",
                 serde_json::to_string_pretty(&draft).map_err(|e| e.to_string())?
+            );
+            Ok(())
+        }
+        cli::Command::Resolve {
+            mention,
+            platform,
+            render,
+        } => {
+            let m: model::Mention = model::load_json(&mention)?;
+            let api = client::Http::new()?;
+            let fs = resolve::resolve(&api, &args.urls, &m).await?;
+            let out = if render {
+                let layout = set.layout(&platform)?;
+                serde_json::to_value(compose::compose(&fs, &set, layout, &args.urls)?)
+            } else {
+                serde_json::to_value(&fs)
+            };
+            println!(
+                "{}",
+                serde_json::to_string_pretty(&out.map_err(|e| e.to_string())?)
+                    .map_err(|e| e.to_string())?
             );
             Ok(())
         }

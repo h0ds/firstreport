@@ -5,10 +5,14 @@
     "author": "dave.example",
     "at": 1704300000,
     "text": "@kagami prove it",
-    "parent_id": "at://did:plc:eve/app.bsky.feed.post/5b1",
-    "urls": [
-      "https://truth-wire.example/breaking/999"
-    ]
+    "urls": [],
+    "parent": {
+      "id": "at://did:plc:eve/app.bsky.feed.post/5b1",
+      "text": "",
+      "urls": [
+        "https://truth-wire.example/breaking/999"
+      ]
+    }
   },
   "subject": {
     "urls": [

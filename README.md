@@ -66,8 +66,9 @@ contract and API docs. `feed` is at v0.1.0 with the data contract
 frozen at v1; it is complete and verified offline, and has not yet run
 against live feeds. See `feed/docs/plan.md` §11.
 
-`reply` is at R0: contract, templates, composer with the cite check,
-`render` and `check` over golden fixtures. Nothing listens or posts yet.
+`reply` is at R1: contract, templates, composer with the cite check,
+`render` and `check` over golden fixtures, and `resolve`, which asks a
+running `feed` and `ledger` about a mention. Nothing listens or posts yet.
 `feed` gained `/v1/lookup` for it. See `reply/docs/plan.md` §16.
 
 `ledger` is at L2e: file-backed claim store with validation, refresh

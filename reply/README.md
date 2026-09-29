@@ -8,12 +8,26 @@ story came from. Answers with sourced provenance and propagation from
 cargo run -- check                                   # validate templates, render every fixture, compare goldens
 cargo run -- check --update                          # rewrite the goldens; review the diff
 cargo run -- render fixtures/mentions/origin_story.json --platform bluesky
+cargo run -- resolve mention.json                    # ask a running feed and ledger; print the FactSet
+cargo run -- resolve mention.json --render           # ...and the draft it renders to
 cargo test
 ```
 
 Runs from the `reply/` directory, where `templates/` and `fixtures/` are.
-No network. `--feed-url`, `--ledger-url` and `--log-url` set where cites
-resolve to; the defaults are the three local servers.
+`render` and `check` need no network. `resolve` asks `feed` and `ledger`
+at `--feed-url` and `--ledger-url` (default: the local servers) and
+`--log-url` is where the reply log will live; cites resolve against all
+three. A `resolve` output saved under `fixtures/mentions/` is a fixture.
+
+## Resolving a mention
+
+A mention file is `{ id, platform, author, at, text, urls, parent?, quoted? }`
+where `parent` and `quoted` are `{ id, text, urls }`. The subject is chosen
+in this order: links in the mention itself, links in the quoted post, links
+in the parent, then the mention's own text once the summons is stripped
+and enough words remain, then the quoted or parent text. Only the first
+link is looked up, and the gap says so. `feed` unreachable means no reply;
+`ledger` unreachable means a reply with that gap in it.
 
 ## How a reply is made
 
@@ -54,6 +68,7 @@ length limit, and the closing sentence that links the full record.
 
 ## Changing what the bot says
 
-Edit a template or add one, run `cargo run -- check --update`, and
+Read `docs/voice.md` first: it is the tone guide every template is
+held to. Then edit a template or add one, run `cargo run -- check --update`, and
 commit the fixture diffs with it. The diff is the review: it shows every
 reply that changes. A new situation gets a new fixture first.
