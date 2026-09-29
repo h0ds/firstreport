@@ -8,27 +8,28 @@ The project is split into two layers.
 
 ## Intelligence layer
 
-Rust, single binary per tool, runs entirely locally. Three pillars, built in order:
+Rust, one binary per tool, runs entirely locally. Four pillars, built in
+order, and one command over them:
 
 | Tool | Pillar | Job |
 |---|---|---|
 | [`feed/`](feed/) | 1 | Ingest headlines, cluster them into stories, record propagation. Neutral by construction. |
-| [`ledger/`](ledger/) | 2 | Sourced facts about outlets keyed by outlet id: ownership, country, founding, third-party ratings, each with its source and licence. Never a score. |
-| [`kagami/`](kagami/) | | One command over the three: `run`, `site`, `doctor`. |
-| [`lens/`](lens/) | 3 | Static site generated from `feed` and `ledger` exports: stories, outlets, coverage by a named source's labels. At N2; see `lens/docs/plan.md`. |
-| [`reply/`](reply/) | 4 | A social account that answers "prove it" with sourced provenance from `feed` and `ledger`, never a verdict. Built through R6; not yet run live. |
+| [`ledger/`](ledger/) | 2 | Sourced facts about outlets keyed by outlet id: ownership, country, founding, third-party ratings, observed behaviour, each with its source and licence. Never a score. |
+| [`lens/`](lens/) | 3 | Static site generated from `feed` and `ledger` exports: stories, outlets, coverage by a named source's labels. |
+| [`reply/`](reply/) | 4 | A social account that answers "prove it" with sourced provenance from `feed` and `ledger`, never a verdict. |
+| [`kagami/`](kagami/) | | One command over the pillars: `run`, `site`, `doctor`. |
 
-`feed/docs/plan.md` is the full plan for pillar 1, including the project rules
-that apply to every pillar. `ledger/docs/plan.md` is pillar 2's and
-`lens/docs/plan.md` is pillar 3's and `reply/docs/plan.md` is pillar 4's.
-`docs/local-runbook.md` lists everything that has not yet run outside the
-sandbox it was built in, with the commands to do it.
+Each pillar has its plan under `<tool>/docs/plan.md`; `feed`'s carries the
+project rules that apply to every pillar. `docs/local-runbook.md` lists
+everything that has not yet run outside the sandbox it was built in, with
+the commands to do it.
 
 ## Visual layer
 
 [`design/`](design/) holds the aesthetics document, the CSS tokens, and a
 component preview page. Each tool copies `tokens.css` rather than depending
-on it at runtime. The `feed` debug page is the first consumer.
+on it at runtime, and a test in `lens` fails if its copy drifts. The `lens`
+site, the `feed` debug page and the `ledger` lookup page are its consumers.
 
 ## For agents and bots
 
@@ -57,47 +58,35 @@ Each pillar is still its own binary with its own commands (`feed`,
 
 ## Status
 
-M3 cluster. `feed run` polls the seed feeds, archives every non-304 body
-as a zstd snapshot, parses and canonicalizes items, dedupes them, fills
-the SQLite store, embeds each item (MiniLM via ONNX Runtime once
-`feed fetch-model` has run), and clusters embedded items into stories
-with an incremental cosine assignment over an in-memory active set that
-is checkpointed to disk. `/v1/clusters`, `/v1/events` and `/debug` are
-live alongside the M1 routes, and `feed replay` runs recorded fixtures
-through the whole pipeline offline. M4 added revision and withdrawal
-tracking from snapshot diffs, `/v1/items/{id}/revisions`,
-`/v1/syndication`, and spread curves on the debug page. The ingress
-hardening pass added adaptive polling with jitter, Retry-After and
-permanent-redirect handling, a User-Agent fallback, `/v1/feeds` health,
-OPML import and feed autodiscovery. M5 added the merge pass, a golden
-pair set with `feed eval`, and `feed/docs/clustering.md` for tuning.
-M6 added NDJSON and Parquet export, `prune`, the nightly job, and the
-contract and API docs. `feed` is at v0.1.0 with the data contract
-frozen at v1; it is complete and verified offline, and has not yet run
-against live feeds. See `feed/docs/plan.md` §11.
+Everything below is verified offline against recorded fixtures. The
+first live runs (feeds, model download, ledger imports) are the local
+runbook's job; `kagami doctor` reports what is still missing.
 
-`lens` is at N2: front, story, outlet, search and about pages with JSON
-and Markdown twins, `llms.txt` and a sitemap, `check` and `serve`,
-built from the two exports and verified offline. See
-`lens/docs/plan.md` §9.
-
-`reply` is at R3: contract, templates, composer with the cite check,
-`render` and `check` over golden fixtures, `resolve`, which asks a
-running `feed` and `ledger` about a mention, `listen`, which drafts
-every mention into a local queue, and `serve`, the review page where a
-person keeps or drops sentences and posts or declines, with a public
-log of every decision, on-demand observation of each mention's subject
-through platform search with salted sightings and the four coordination
-signals, and templates that say those observations, always reviewed. It answers
-in the language it was summoned in; English and Japanese templates ship. Drafts whose template set
-has earned it can post alone; that is off by default. X is the
-primary platform and Bluesky the live testbed; nothing has been run
-against a live account yet.
-`feed` gained `/v1/lookup` for it. See `reply/docs/plan.md` §16.
-
-`ledger` is at L2e: file-backed claim store with validation, refresh
-tracking, read-only API with search and a `/lookup` page, export, and
-importers for Wikidata, Wikipedia's perennial sources list and domain
-registration data via RDAP, the outlet's own site, plus feed behaviour measured from `feed`'s
-own export. See
-`ledger/docs/plan.md` §8.
+- **feed** is at v0.1.0 with the data contract frozen at v1: polling
+  with adaptive intervals and snapshot archival, canonical URLs and
+  dedup, embedding through ONNX Runtime with in-repo WordPiece and
+  SentencePiece unigram tokenizers (presets for English MiniLM-L6 and
+  the multilingual MiniLM-L12 that covers Japanese), incremental
+  clustering with a merge pass, revision and withdrawal tracking,
+  syndication groups, the read-only API with Markdown twins, OpenAPI
+  and `llms.txt`, NDJSON and Parquet export including revisions, a
+  nightly job, feed discovery and OPML import, and `feed eval` over two
+  golden pair sets. See `feed/docs/plan.md` §11.
+- **ledger** is at L2e: file-backed claim store with validation and
+  refresh tracking, importers for Wikidata, Wikipedia's perennial
+  sources list, domain registration via RDAP, the outlet's own site and
+  feed behaviour from `feed`'s export, a read-only API with search,
+  Markdown twins, OpenAPI and a `/lookup` page. See
+  `ledger/docs/plan.md` §8.
+- **lens** is at N3: front, story, outlet, search and about pages with
+  JSON and Markdown twins, `llms.txt` and a sitemap, coverage by a named
+  source's labels on story pages, `check` and `serve`. See
+  `lens/docs/plan.md` §9.
+- **reply** is built through R6: templates with the cite check, the
+  resolver over `feed` and `ledger`, a Bluesky listener that drafts
+  mentions into a queue, a review page and poster with a public log,
+  on-demand observation with the four coordination signals, English and
+  Japanese templates. Nothing has run against a live account. See
+  `reply/docs/plan.md` §16.
+- **kagami** runs `feed` and `ledger` together, builds and checks the
+  site, and reports what is in place.
