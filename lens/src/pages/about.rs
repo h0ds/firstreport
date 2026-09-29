@@ -14,6 +14,7 @@ const WHAT: &[(&str, &str)] = &[
     ("Story", "A cluster of headlines Kagami feed judged to be about the same event, by text similarity against a threshold. A machine's judgement, not a person's; treat membership as evidence."),
     ("First", "The member with the earliest published time as its feed reported it. Feeds misreport times; the picked-up time is what Kagami saw, and both are shown."),
     ("Outlets, items", "Counts of distinct outlets and of headlines in a story. Neither is weighted."),
+    ("Reach", "The front page's order, and the only place Kagami says one story matters more than another. Reach is independent reports plus languages minus one, over the page's window: independent reports are the outlets that joined, less those whose every item was a copy of another outlet's text; languages are the distinct languages of the items' own text. Then outlets in the last six hours, then recency. A story with one independent report is listed apart under single reports, newest first. No word, label or outlet is an input: a story many outlets tell independently in several languages ranks high whatever it is about. The full register of rules is docs/algorithms.md in the repository."),
     ("Copy", "The same text at more than one outlet, found by a text fingerprint. A copy is not independent coverage; a wire service is meant to be copied."),
     ("Revised, withdrawn", "The headline or summary changed after publication, or the item left its feed, as seen in later fetches."),
     ("Claim", "One fact about an outlet as one source states it, with the source, its licence, the date Kagami read it and the page that states it. Sources that disagree are shown side by side and never merged."),
@@ -35,7 +36,13 @@ pub fn about(input: &Input) -> Twins {
     b.push_str("<p>This site is generated from two exports: Kagami feed, which polls outlets' feeds and clusters headlines into stories, and Kagami ledger, which holds claims about outlets with their sources. It is rebuilt from a fresh export on a schedule; the header of every page says when.</p>");
     b.push_str("<h2>What the numbers mean</h2>");
     for (k, v) in WHAT {
-        let _ = write!(b, "<h3>{}</h3><p>{}</p>", esc(k), esc(v));
+        let _ = write!(
+            b,
+            "<h3 id=\"{}\">{}</h3><p>{}</p>",
+            k.to_ascii_lowercase().replace(", ", "-").replace(' ', "-"),
+            esc(k),
+            esc(v)
+        );
     }
     b.push_str("<h2>What this site does not do</h2><ul>");
     for x in NOT {

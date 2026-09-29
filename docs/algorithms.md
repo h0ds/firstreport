@@ -44,14 +44,15 @@ the page and the flag beside it; Kagami does not correct it.
 
 Where: `lens`, front page and its JSON twin. This is the one place
 Kagami says one story matters more than another, so the rule is the
-strictest. A story's **reach** over the last 24 hours is:
+strictest. A story's **reach** over the page's window (24 hours by
+default; the JSON twin states the window it used) is:
 
     reach = independent reports + languages − 1
 
-- **independent reports**: outlets that joined in the last 24 hours,
-  counted once per syndication group, so a wire story carried by
-  twenty subscribers is one report plus the subscribers that rewrote
-  it.
+- **independent reports**: outlets that joined in the window, less
+  those whose every item in it was a copy of another outlet's text, so
+  a wire story carried by twenty subscribers is one report plus the
+  subscribers that rewrote it.
 - **languages**: distinct item languages among those reports, so a
   story reported in two languages counts one more than a story the
   same size in one. Language is detected from the item's own text, not
@@ -59,13 +60,14 @@ strictest. A story's **reach** over the last 24 hours is:
 
 Stories are ordered by reach, then by outlets joining in the last six
 hours, then by recency, then by id. Every card shows the three counts
-that made its place. Stories with one independent report sit in a
+that made its place; the JSON twin carries them, the window, and the
+rule as one sentence under `order`. Stories with one independent report sit in a
 separate list, "single reports", below, in recency order: a story that
 only one outlet has told is shown, not hidden, and not mixed in.
 
 The "spreading now" list is unchanged: outlets joining in the last six
-hours, most first, shown only when it differs from the top of the
-main list.
+hours, most first, drawn from every active story, shown only when it
+differs from the order already on the page.
 
 What reach does not do: it does not read the ledger, so a story
 covered by outlets any list rates badly ranks exactly as one covered

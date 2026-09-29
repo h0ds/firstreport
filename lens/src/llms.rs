@@ -23,7 +23,7 @@ Built from an export at {export}. Pages regenerate nightly.
 
 ## Pages
 
-- `/` - stories in the window as cluster cards, then every outlet
+- `/` - stories in the window as cluster cards ordered by reach (independent reports plus languages, a count over coverage stated on each card and under `order` in the JSON twin; see /about/#reach), single reports listed apart, then every outlet
 - `/story/<id>/` - one story: timeline in join order with headlines side by side, copies, changes, facts about each outlet present
 - `/outlet/<id>/` - every claim about one outlet with its provenance line, then its stories and counts over 30 days
 - `/search/` - outlets and stories; its `index.json` is the index

@@ -69,11 +69,14 @@ alternates, with the same facts in the same order.
 
 Stories from the last 24 hours (configurable), each a cluster card:
 primary title, outlet count, item count, "first: <outlet>", first-seen
-time, sparkline of joins. Ordered by outlets in the last 24 hours, then
-by recency. A second list, "spreading now", ordered by outlets in the
-last 6 hours. No other ranking. A line at the top states the window,
-the outlet pool size, and the export time, so the page says what it
-covers.
+time, sparkline of joins, and the counts that placed it. Ordered by
+reach (`docs/algorithms.md` §4): independent reports in the window plus
+languages minus one, then outlets in the last 6 hours, then recency.
+Stories with one independent report are listed apart, newest first. A
+second list, "spreading now", ordered by outlets in the last 6 hours,
+shown only when it differs from the top. No other ranking. A line at
+the top states the window, the outlet pool size, the export time and
+the rule, so the page says what it covers and how it is ordered.
 
 ### 3.2 Story page `/story/<cluster id>/`
 
