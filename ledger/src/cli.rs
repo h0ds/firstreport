@@ -19,6 +19,9 @@ pub enum Command {
         write: bool,
         /// Write past the change guard (docs/steward.md §4).
         force: bool,
+        /// A local file for sources supplied as files (allsides; optional
+        /// for robertson2018, which is otherwise downloaded).
+        file: Option<PathBuf>,
     },
 }
 
@@ -46,12 +49,14 @@ commands:
   serve                              read-only API (default 127.0.0.1:8081)
   export --out <dir>                 claims.ndjson, sources.ndjson, outlets.ndjson
   refresh [--write] [--force]        re-import scheduled sources that are due (list unless --write)
-  import <source> [--only <id>] [--write] [--force]
+  import <source> [--only <id>] [--file <path>] [--write] [--force]
                                      pull claims from a source; print unless --write.
                                      A run that would change more than a third of the
                                      source's claims is held in data/review/ unless --force
                                      sources: wikidata, wikipedia_rsp, rdap,
-                                     feed_behaviour (needs --feed-export; --window default 90)
+                                     feed_behaviour (needs --feed-export; --window default 90),
+                                     allsides (--file: the CSV or JSON AllSides supplies),
+                                     robertson2018 (downloaded from Dataverse, or --file)
 ";
 
 pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
@@ -121,6 +126,7 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
             only: flag("--only"),
             write: rest.iter().any(|x| x == "--write"),
             force: rest.iter().any(|x| x == "--force"),
+            file: flag("--file").map(PathBuf::from),
         },
         other => return Err(format!("unknown command {other:?}\n\n{USAGE}")),
     };
@@ -160,7 +166,8 @@ mod tests {
                 source: "wikidata".into(),
                 only: Some("bbc".into()),
                 write: true,
-                force: false
+                force: false,
+                file: None
             }
         );
         assert_eq!(parse(argv("check")).unwrap().command, Command::Check);
@@ -177,7 +184,8 @@ mod tests {
                 source: "rdap".into(),
                 only: None,
                 write: true,
-                force: true
+                force: true,
+                file: None
             }
         );
         let a = parse(argv("--feed-export out --window 30 import feed_behaviour")).unwrap();

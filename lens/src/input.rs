@@ -143,7 +143,7 @@ pub struct Revision {
     pub summary: String,
 }
 
-#[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
+#[derive(Debug, Clone, Default, Deserialize, Serialize, PartialEq)]
 pub struct Source {
     pub id: String,
     #[serde(default)]

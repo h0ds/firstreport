@@ -228,10 +228,16 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         .iter()
         .filter_map(|(src, field)| crate::render::label_bar(input, &outlet_ids, src, field))
         .collect();
-    if !bars.is_empty() {
-        b.push_str("<h2>Coverage by label</h2><p class=\"kg-muted\">How a named source labels the outlets in this story. Outlets the source has not rated are shown as such and never redistributed.</p>");
+    let strip = crate::render::audience_strip(input, &outlet_ids, true);
+    if !bars.is_empty() || !strip.is_empty() {
+        b.push_str("<h2>Coverage by label</h2><p class=\"kg-muted\">How named sources place the outlets in this story. Outlets a source has not rated are shown as such and never redistributed.</p>");
         for bar in &bars {
             b.push_str(&crate::render::label_bar_html(input, bar));
+        }
+        if !strip.is_empty() {
+            b.push_str("<div class=\"kg-audience-block\"><p class=\"kg-muted\">Audience: who shared each outlet's links on Twitter in 2017, from -1 (Democrats) to +1 (Republicans). A measure of audiences, not of this story's coverage. <a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a> <span class=\"kg-tag\">CC0-1.0</span></p>");
+            b.push_str(&strip);
+            b.push_str("</div>");
         }
     }
 

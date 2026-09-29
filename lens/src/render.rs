@@ -264,6 +264,136 @@ pub fn outlet_stack(input: &Input, c: &Cluster, max: usize) -> String {
     )
 }
 
+/// Distinct outlets in a story's timeline, in the order they joined.
+pub fn story_outlets(c: &Cluster) -> Vec<&str> {
+    let mut ids: Vec<&str> = Vec::new();
+    for j in &c.timeline {
+        if !ids.contains(&j.outlet_id.as_str()) {
+            ids.push(&j.outlet_id);
+        }
+    }
+    ids
+}
+
+/// Robertson et al.'s audience score for an outlet, if ledger has it.
+fn audience_score(input: &Input, id: &str) -> Option<f64> {
+    input.claims.get(id)?.iter().find_map(|c| {
+        (c.field == "audience_partisanship")
+            .then(|| c.data.as_ref()?.get("score")?.as_f64())
+            .flatten()
+    })
+}
+
+/// Fewer scored outlets than this and the strip is a point, not a spread.
+pub const AUDIENCE_MIN_SCORED: usize = 2;
+
+/// Where the outlets in a story sit on Robertson et al.'s audience scale,
+/// -1 (links shared by Democrats) to +1 (by Republicans): one grey dot per
+/// scored outlet on a hairline with a centre mark (design §5, lean strip).
+/// A measure of the outlets' audiences, named as such; empty with fewer
+/// than two scored outlets.
+pub fn audience_strip(input: &Input, outlets: &[&str], large: bool) -> String {
+    let scored: Vec<(&str, f64)> = outlets
+        .iter()
+        .filter_map(|id| audience_score(input, id).map(|s| (*id, s)))
+        .collect();
+    if scored.len() < AUDIENCE_MIN_SCORED {
+        return String::new();
+    }
+    let (w, h) = if large { (240.0, 16.0) } else { (120.0, 12.0) };
+    let (pad, mid) = (4.0, h / 2.0);
+    let x = |s: f64| pad + (s.clamp(-1.0, 1.0) + 1.0) / 2.0 * (w - 2.0 * pad);
+    let mut dots = String::new();
+    for (id, s) in &scored {
+        let _ = write!(
+            dots,
+            "<circle cx=\"{:.1}\" cy=\"{mid}\" r=\"{}\"><title>{} {s:+.2}</title></circle>",
+            x(*s),
+            if large { 3.5 } else { 3.0 },
+            esc(input.outlet_name(id))
+        );
+    }
+    let label = scored
+        .iter()
+        .map(|(id, s)| format!("{} {s:+.2}", input.outlet_name(id)))
+        .collect::<Vec<_>>()
+        .join(", ");
+    format!(
+        "<span class=\"kg-audience\" data-scored=\"{}\"><span class=\"end\">D</span><svg width=\"{w}\" height=\"{h}\" viewBox=\"0 0 {w} {h}\" role=\"img\" aria-label=\"Audience of {} outlets on -1 (links shared by Democrats) to +1 (by Republicans), Robertson et al. 2018: {}\"><line class=\"axis\" x1=\"{pad}\" y1=\"{mid}\" x2=\"{:.1}\" y2=\"{mid}\"/><line class=\"zero\" x1=\"{:.1}\" y1=\"1\" x2=\"{:.1}\" y2=\"{:.1}\"/>{dots}</svg><span class=\"end\">R</span><span class=\"lbl\">audience of {} of {} outlets <span class=\"src\">(Robertson et al. 2018)</span></span></span>",
+        scored.len(),
+        scored.len(),
+        esc(&label),
+        w - pad,
+        x(0.0),
+        x(0.0),
+        h - 1.0,
+        scored.len(),
+        outlets.len()
+    )
+}
+
+/// The label bar in one line for a card: thin grey segments in the
+/// source's order and the counts as text. Same data and rules as the
+/// story page's bar (at least two outlets rated), without the legend.
+pub fn label_bar_compact(input: &Input, bar: &LabelBar) -> String {
+    let sname = input
+        .sources
+        .get(&bar.source_id)
+        .map(|s| s.name.as_str())
+        .unwrap_or(bar.source_id.as_str());
+    let short = sname.split_whitespace().next().unwrap_or(sname);
+    let mut segs = String::new();
+    for (k, (label, ids)) in bar.segments.iter().enumerate() {
+        let _ = write!(
+            segs,
+            "<span class=\"seg w{}\" style=\"flex: {}\" title=\"{}: {}\"></span>",
+            (k % 5) + 1,
+            ids.len(),
+            esc(label),
+            esc(&ids.iter().map(|id| input.outlet_name(id)).collect::<Vec<_>>().join(", "))
+        );
+    }
+    if !bar.unrated.is_empty() {
+        let _ = write!(
+            segs,
+            "<span class=\"seg none\" style=\"flex: {}\" title=\"not rated: {}\"></span>",
+            bar.unrated.len(),
+            esc(&bar.unrated.iter().map(|id| input.outlet_name(id)).collect::<Vec<_>>().join(", "))
+        );
+    }
+    let text = bar
+        .segments
+        .iter()
+        .map(|(l, v)| format!("{} {l}", v.len()))
+        .collect::<Vec<_>>()
+        .join(" · ");
+    format!(
+        "<span class=\"kg-labelbar compact\" data-source=\"{}\" data-field=\"{}\"><span class=\"bar\" role=\"img\" aria-label=\"{} on {}: {}{}\">{segs}</span><span class=\"lbl\">{} <span class=\"src\">({})</span></span></span>",
+        esc(&bar.source_id),
+        esc(&bar.field),
+        esc(sname),
+        esc(&field_label(&bar.field).to_lowercase()),
+        esc(&text),
+        if bar.unrated.is_empty() { String::new() } else { format!(", not rated {}", bar.unrated.len()) },
+        esc(&text),
+        esc(short)
+    )
+}
+
+/// The lean line under a card: AllSides' labels when at least two
+/// outlets are rated, and the audience strip when at least two are scored.
+pub fn lean_line(input: &Input, c: &Cluster) -> String {
+    let ids = story_outlets(c);
+    let bar = label_bar(input, &ids, "allsides", "bias")
+        .map(|b| label_bar_compact(input, &b))
+        .unwrap_or_default();
+    let strip = audience_strip(input, &ids, false);
+    if bar.is_empty() && strip.is_empty() {
+        return String::new();
+    }
+    format!("<div class=\"kg-lean\">{bar}{strip}</div>")
+}
+
 /// Largest value across a page's sparklines: the shared y scale (design §5).
 pub fn spark_scale<'a>(series: impl IntoIterator<Item = &'a [u32]>) -> u32 {
     series
@@ -391,7 +521,9 @@ pub fn cluster_card(
         }
     }
     s.push_str(&spark(spark_points, scale_max, large));
-    s.push_str("</div></article>");
+    s.push_str("</div>");
+    s.push_str(&lean_line(input, c));
+    s.push_str("</article>");
     s
 }
 
@@ -895,6 +1027,40 @@ mod tests {
         assert_eq!(short_time(now - 400 * DAY, now), "18 Aug 2024 13:03");
         assert!(time_el(now, now).contains("title=\"2025-09-22 13:03 UTC\">13:03</time>"));
         assert!(day_el(now, now).ends_with(">22 Sep</time>"));
+    }
+
+    #[test]
+    fn lean_visuals_need_two_outlets_and_name_their_source() {
+        let mut i = fixture_input();
+        let claim = |id: &str, field: &str, value: &str, src: &str, data: Option<serde_json::Value>| crate::input::Claim {
+            outlet_id: id.into(),
+            field: field.into(),
+            value: value.into(),
+            data: data.map(|d| serde_json::from_value(d).unwrap()),
+            source_id: src.into(),
+            ref_url: "https://x".into(),
+            retrieved_at: 0,
+            as_of: None,
+            note: None,
+        };
+        for (id, score) in [("wire", -0.5), ("gazette", 0.5)] {
+            i.claims.entry(id.into()).or_default().push(claim(id, "audience_partisanship", "x", "robertson2018", Some(serde_json::json!({"score": score}))));
+        }
+        let one = audience_strip(&i, &["wire"], false);
+        assert!(one.is_empty(), "one scored outlet is a point, not a spread");
+        let two = audience_strip(&i, &["wire", "gazette", "blog"], false);
+        assert!(two.contains("audience of 2 of 3 outlets") && two.contains("Robertson et al. 2018"));
+        // -0.5 and +0.5 sit a quarter in from each end of the 120px strip.
+        assert!(two.contains("cx=\"32.0\"") && two.contains("cx=\"88.0\""), "{two}");
+        assert!(!two.contains("fill=") && !two.contains("stroke=") && !two.contains("style="), "colours come from the grey tokens only");
+        // AllSides: no bar with fewer than two rated outlets.
+        i.sources.insert("allsides".into(), crate::input::Source { id: "allsides".into(), name: "AllSides Media Bias Ratings".into(), licence: "CC-BY-NC-4.0".into(), ..Default::default() });
+        i.claims.entry("wire".into()).or_default().push(claim("wire", "bias", "Center", "allsides", None));
+        assert!(label_bar(&i, &["wire", "gazette"], "allsides", "bias").is_none());
+        i.claims.entry("gazette".into()).or_default().push(claim("gazette", "bias", "Lean Right", "allsides", None));
+        let bar = label_bar(&i, &["wire", "gazette", "blog"], "allsides", "bias").unwrap();
+        let compact = label_bar_compact(&i, &bar);
+        assert!(compact.contains("1 Center · 1 Lean Right") && compact.contains("(AllSides)") && compact.contains("not rated 1"));
     }
 
     #[test]

@@ -72,6 +72,7 @@ with a link to the discussion. Consumers weigh them; `ledger` doesn't.
 | `website` | official website | wikidata |
 | `wikipedia` | English article URL | wikidata |
 | `bias` | a rater's political-lean label, on that rater's scale | allsides, others |
+| `audience_partisanship` | who shares the outlet's links, on the rater's numeric scale; a measure of audience, not content | robertson2018 |
 | `reliability` | a rater's or community's reliability verdict | wikipedia_rsp, others |
 | `domain_registered` | registration date of a registrable domain, per registry | rdap |
 | `registrar` | the domain's registrar of record | rdap |

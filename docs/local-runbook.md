@@ -236,12 +236,22 @@ confirmed is a five-minute follow-up.
 These are decisions, not commands, and the sites were blocked so I
 could not read the current terms.
 
-- **AllSides** (`allsides.com/media-bias/ratings`): the chart is
-  CC BY-NC-ND; whether individual ratings may be redistributed with
-  attribution is not stated on the chart page. The `allsides` source
-  entry has `no_redistribution = true` until this is confirmed, and
-  `ledger check` will refuse to serve its claims until that flag is
-  cleared. No importer exists yet.
+- **AllSides** (`allsides.com/media-bias/ratings`): confirmed. AllSides'
+  terms of use (October 2025) license the ratings CC BY-NC 4.0: free for
+  research or noncommercial use with attribution; commercial use (ads, paid
+  tiers, selling data) needs AllSides' written consent. The site blocks
+  automated access, so do not scrape it: email admin@allsides.com asking
+  for the ratings as CSV or JSON, then
+  `ledger import allsides --file <file> --write`. The `allsides` source
+  entry carries the licence and the required attribution text.
+- **Robertson et al. 2018** partisan audience scores: CC0 on Harvard
+  Dataverse, imported with `ledger import robertson2018 --write`. A measure
+  of who shares an outlet's links, recorded as `audience_partisanship`.
+- **Not usable as sources**: Media Bias/Fact Check (RapidAPI terms exclude
+  redistribution, and Kagami's exports redistribute; a direct commercial
+  licence would be needed), Ad Fontes Media (free licence covers the chart
+  image for teaching, not the per-outlet data), Bakshy et al. 2015 (download
+  terms forbid sharing).
 - **Iffy Index** and similar lists: check licence before adding.
 
 ## 8. Multilingual embeddings: English and Japanese

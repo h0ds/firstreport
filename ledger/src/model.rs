@@ -23,6 +23,7 @@ pub const KNOWN_FIELDS: &[&str] = &[
     "domain_registered",
     "registrar",
     "posting_cadence",
+    "audience_partisanship",
     "revision_rate",
     "withdrawal_rate",
     "syndication_share",

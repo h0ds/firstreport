@@ -303,6 +303,24 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 .kg-labelbar .seg.w4 { background: var(--kg-line-strong); color: var(--kg-text); }
 .kg-labelbar .seg.w5 { background: var(--kg-line); color: var(--kg-text); }
 .kg-labelbar .seg.none { background: transparent; color: var(--kg-text-muted); border-left: 1px dashed var(--kg-line-strong); }
+/* compact bar for cards: 8px tall, counts as text beside it */
+.kg-labelbar.compact { display: inline-flex; align-items: center; gap: var(--kg-s2); margin: 0; }
+.kg-labelbar.compact .bar { width: 120px; height: var(--kg-s2); border: 0; background: var(--kg-bg-subtle); }
+.kg-labelbar.compact .seg { padding: 0; }
+.kg-labelbar.compact .seg.none { border: 1px dashed var(--kg-line-strong); }
+
+/* lean line under a card, and the audience strip (§5): greys only */
+.kg-lean { display: flex; flex-wrap: wrap; gap: var(--kg-s2) var(--kg-s5); align-items: center; margin-top: var(--kg-s2); }
+.kg-lean .lbl, .kg-audience .lbl { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-secondary); }
+.kg-lean .src, .kg-audience .src { color: var(--kg-text-muted); }
+.kg-audience { display: inline-flex; align-items: center; gap: var(--kg-s1); }
+.kg-audience svg { display: block; overflow: visible; }
+.kg-audience .axis { stroke: var(--kg-line-strong); stroke-width: 1; }
+.kg-audience .zero { stroke: var(--kg-text-muted); stroke-width: 1; }
+.kg-audience circle { fill: var(--kg-text-secondary); fill-opacity: 0.55; stroke: var(--kg-bg); stroke-width: 1; }
+.kg-audience .end { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); font-weight: 500; }
+.kg-audience .lbl { margin-left: var(--kg-s2); }
+.kg-audience-block { margin: var(--kg-s3) 0; }
 .kg-labelbar .seg .n { font-variant-numeric: tabular-nums; font-weight: 600; }
 .kg-labelbar .legend { display: flex; flex-wrap: wrap; gap: var(--kg-s2) var(--kg-s4); margin-top: var(--kg-s2); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-secondary); }
 .kg-labelbar .legend b { font-weight: 600; color: var(--kg-text); }

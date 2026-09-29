@@ -11,6 +11,7 @@ mod lookup;
 mod model;
 mod openapi;
 mod perennial;
+mod ratings;
 mod rdap;
 mod site;
 mod store;
@@ -189,6 +190,7 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             only,
             write,
             force,
+            file,
         } => {
             let mode = guard::WriteMode::from_flags(write, force);
             let outlets_path = args.outlets.as_ref().ok_or(
@@ -207,9 +209,11 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                 "rdap" => rdap::SOURCE_ID,
                 "site" => site::SOURCE_ID,
                 "feed_behaviour" | "behaviour" => behaviour::SOURCE_ID,
+                "allsides" => ratings::ALLSIDES,
+                "robertson2018" | "robertson" => ratings::ROBERTSON,
                 other => {
                     return Err(format!(
-                        "no importer for {other:?}; available: wikidata, wikipedia_rsp, rdap, site, feed_behaviour"
+                        "no importer for {other:?}; available: wikidata, wikipedia_rsp, rdap, site, feed_behaviour, allsides, robertson2018"
                     )
                     .into())
                 }
@@ -224,6 +228,9 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                 rdap::SOURCE_ID => import_rdap(&args.data_dir, &ledger, &outlets, mode).await,
                 site::SOURCE_ID => import_site(&args.data_dir, &ledger, &outlets, mode).await,
                 behaviour::SOURCE_ID => import_behaviour(&args, &ledger, &outlets, mode),
+                ratings::ALLSIDES | ratings::ROBERTSON => {
+                    import_ratings(&args.data_dir, &ledger, &outlets, source_id, file.as_deref(), mode).await
+                }
                 _ => import_perennial(&args.data_dir, &ledger, &outlets, mode).await,
             }
         }
@@ -439,6 +446,80 @@ async fn import_perennial(
 /// RDAP: one registry lookup per registrable domain of each outlet, one
 /// a second. Domain age and registrar are facts we observe ourselves,
 /// so no licence question; each claim links the registry's record.
+/// AllSides (from the file they supply) or Robertson et al. (downloaded,
+/// or from a file): one claim per registry outlet whose domain the source
+/// rates, written through the change guard like every importer.
+async fn import_ratings(
+    data_dir: &std::path::Path,
+    ledger: &store::Ledger,
+    outlets: &[store::FeedOutlet],
+    source_id: &str,
+    file: Option<&std::path::Path>,
+    mode: guard::WriteMode,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let now = now_secs();
+    let text = match file {
+        Some(p) => std::fs::read_to_string(p).map_err(|e| format!("{}: {e}", p.display()))?,
+        None if source_id == ratings::ROBERTSON => ratings::fetch_robertson(&rdap::client()?).await?,
+        None => {
+            return Err("allsides needs --file <csv or json>: AllSides supplies the ratings as a file on request (admin@allsides.com); Kagami does not scrape their site".into())
+        }
+    };
+    let mut per_outlet: std::collections::BTreeMap<String, Vec<model::Claim>> = Default::default();
+    if source_id == ratings::ALLSIDES {
+        for row in ratings::parse_allsides(&text)? {
+            if let Some(o) = ratings::outlet_for(outlets, &row.host) {
+                let v = per_outlet.entry(o.id.clone()).or_default();
+                if !v.iter().any(|c| c.value == row.label) {
+                    v.push(ratings::allsides_claim(&o.id, &row, now));
+                }
+            }
+        }
+    } else {
+        let scores = ratings::parse_robertson(&text)?;
+        for o in outlets {
+            let hit = o.domains.iter().find_map(|d| {
+                let h = ratings::host_of(d)?;
+                scores.get(&h).map(|s| (h, *s))
+            });
+            if let Some((host, score)) = hit {
+                per_outlet.insert(o.id.clone(), vec![ratings::robertson_claim(&o.id, &host, score, now)]);
+            }
+        }
+    }
+    let mut batch = Vec::new();
+    let mut total = 0;
+    for (id, fresh) in per_outlet {
+        let problems: Vec<_> = fresh
+            .iter()
+            .flat_map(|c| model::validate_claim(c, &ledger.sources, None))
+            .filter(|f| f.is_error())
+            .collect();
+        if !problems.is_empty() {
+            for p in &problems {
+                error!(outlet = %id, "{p}");
+            }
+            continue;
+        }
+        total += fresh.len();
+        if mode.writes() {
+            batch.push((id, fresh));
+        } else {
+            for c in &fresh {
+                println!("{:<18} {:<24} {}", id, c.field, c.value);
+            }
+        }
+    }
+    let matched = if mode.writes() { batch.len() } else { total };
+    if mode.writes() {
+        report_commit(guard::commit_source(data_dir, ledger, source_id, batch, mode.force(), now_secs())?);
+    } else {
+        println!("# re-run with --write to store these claims");
+    }
+    info!(source = source_id, matched, claims = total, outlets = outlets.len(), written = mode.writes(), "ratings import done");
+    Ok(())
+}
+
 async fn import_rdap(
     data_dir: &std::path::Path,
     ledger: &store::Ledger,
