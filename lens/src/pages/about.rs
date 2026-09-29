@@ -11,29 +11,28 @@ use crate::input::Input;
 use crate::render::{datetime, esc, html, n, Page};
 
 const WHAT: &[(&str, &str)] = &[
-    ("Story", "A cluster of headlines Kagami feed judged to be about the same event, by text similarity against a threshold. A machine's judgement, not a person's; treat membership as evidence."),
-    ("First", "The member with the earliest published time as its feed reported it. Feeds misreport times; the picked-up time is what Kagami saw, and both are shown."),
-    ("Outlets, items", "Counts of distinct outlets and of headlines in a story. Neither is weighted."),
-    ("Reach", "The front page's order, and the only place Kagami says one story matters more than another. Reach is independent reports plus languages minus one, over the page's window: independent reports are the outlets that joined, less those whose every item was a copy of another outlet's text; languages are the distinct languages of the items' own text. Then outlets in the last six hours, then recency. A story with one independent report is listed apart under single reports, newest first. No word, label or outlet is an input: a story many outlets tell independently in several languages ranks high whatever it is about. The full register of rules is docs/algorithms.md in the repository."),
-    ("Copy", "The same text at more than one outlet, found by a text fingerprint. A copy is not independent coverage; a wire service is meant to be copied."),
-    ("Revised, withdrawn", "The headline or summary changed after publication, or the item left its feed, as seen in later fetches."),
-    ("Claim", "One fact about an outlet as one source states it, with the source, its licence, the date Kagami read it and the page that states it. Sources that disagree are shown side by side and never merged."),
-    ("Stale", "Older than its source's refresh interval; the value may have changed since."),
-    ("Measurement", "Claims from Kagami's own observation (domain registry, the outlet's site, its feed behaviour) carry the window and the counts they came from. They describe what an outlet does, not whether that is good."),
+    ("Story", "Headlines that feed grouped as the same event because their text is similar. The grouping is automatic and sometimes wrong."),
+    ("First", "The headline with the earliest publish time in its feed. Feeds sometimes get times wrong, so we also show when we picked it up."),
+    ("Outlets, items", "How many outlets covered a story, and how many headlines they published. No outlet counts for more than another."),
+    ("Reach", "How the front page is ordered. It counts outlets that wrote their own version of the story, adds one for each extra language, then breaks ties by recent coverage and by time. Stories only one outlet covered are listed separately. The topic and the outlets involved play no part. Full rules: docs/algorithms.md."),
+    ("Copy", "The same text published by more than one outlet. Copies don't count as separate coverage. Wire stories are meant to be copied."),
+    ("Revised, withdrawn", "The headline or summary changed after publication, or the item disappeared from its feed."),
+    ("Claim", "A fact about an outlet from one source, with a link, the licence and the date we read it. When sources disagree we show both."),
+    ("Stale", "Older than the source's refresh interval, so it may be out of date."),
+    ("Measurement", "Facts we measured ourselves from domain records, the outlet's home page and its feed. Each one gives the time window and counts it's based on."),
 ];
 
 const NOT: &[&str] = &[
-    "It does not rate outlets, and there is no score anywhere in Kagami.",
-    "It does not colour, badge or order outlets by lean or credibility. Outlets are ordered by the time they joined a story or alphabetically.",
-    "It does not summarise stories or claims in its own words. Every headline is the outlet's; every claim is a source's.",
-    "It does not fetch article pages. Only feeds are read, and the raw feed fetches are kept as evidence.",
-    "It does not filter by outlet quality. Fringe and mainstream feeds are ingested identically.",
+    "Kagami has no score or rating of its own. Lean colours come from AllSides, and the State, Sanctioned and Deprecated tags each come from a named source, shown on hover.",
+    "It doesn't summarise stories. Headlines are the outlets' own.",
+    "It only reads feeds, never full article pages. The raw fetches are kept.",
+    "It doesn't filter outlets by quality. Every feed in the pool is treated the same.",
 ];
 
 pub fn about(input: &Input) -> Twins {
     let mut b = String::new();
-    b.push_str("<h1>About</h1><p>Kagami is an open-source record of how news stories spread: which outlet published first, who joined when, what was copied, and what changed afterwards, together with sourced facts about each outlet. It exists to make provenance as cheap to check as a headline is to share, for people and for the automated systems that increasingly do the sharing.</p>");
-    b.push_str("<p>This site is generated from two exports: Kagami feed, which polls outlets' feeds and clusters headlines into stories, and Kagami ledger, which holds claims about outlets with their sources. It is rebuilt from a fresh export on a schedule; the header of every page says when.</p>");
+    b.push_str("<h1>About</h1><p>Kagami tracks how news stories spread: who published first, who followed, what was copied and what was changed later. It also collects facts about each outlet, with sources.</p>");
+    b.push_str("<p>The site is built from two parts: feed, which reads outlets' feeds and groups headlines into stories, and ledger, which stores facts about outlets. Each page shows when it was last built.</p>");
     b.push_str("<h2>What the numbers mean</h2>");
     for (k, v) in WHAT {
         let _ = write!(
@@ -44,11 +43,11 @@ pub fn about(input: &Input) -> Twins {
             esc(v)
         );
     }
-    b.push_str("<h2>What this site does not do</h2><ul>");
+    b.push_str("<h2>What Kagami doesn't do</h2><ul>");
     for x in NOT {
         let _ = write!(b, "<li>{}</li>", esc(x));
     }
-    b.push_str("</ul><h2>Sources</h2><p class=\"kg-muted\">Every claim names one of these. The licence is the source's; carry it with anything you quote.</p>");
+    b.push_str("</ul><h2>Sources</h2><p class=\"kg-muted\">Where our facts about outlets come from. If you reuse them, follow the source's licence.</p>");
     for s in input.sources.values() {
         let _ = write!(
             b,
@@ -63,7 +62,7 @@ pub fn about(input: &Input) -> Twins {
             if s.notes.is_empty() { String::new() } else { format!("<div class=\"note\">{}</div>", esc(&s.notes)) }
         );
     }
-    b.push_str("<h2>For machine readers</h2><p>Every page has <code>index.json</code> and <code>index.md</code> beside it with the same facts in the same order, linked from its head. <a href=\"/llms.txt\">/llms.txt</a> states the rules of use; <a href=\"/sitemap.xml\">/sitemap.xml</a> lists every page; <a href=\"/search/index.json\">/search/index.json</a> is the index of outlets and stories. Quote the source, not Kagami; carry the licence; never turn claims into a score.</p>");
+    b.push_str("<h2>For machine readers</h2><p>Every page has <code>index.json</code> and <code>index.md</code> beside it with with the same content. <a href=\"/llms.txt\">/llms.txt</a> states the rules of use; <a href=\"/sitemap.xml\">/sitemap.xml</a> lists every page; <a href=\"/search/index.json\">/search/index.json</a> is the index of outlets and stories. Please cite the original source and keep its licence. Don't turn these facts into a score.</p>");
     let _ = write!(
         b,
         "<p class=\"kg-muted\">Built from an export at {} covering {} in the pool and {} with claims. Kagami is open source: <a href=\"https://github.com/h0ds/kagami\" rel=\"noopener\">github.com/h0ds/kagami</a>.</p>",
@@ -73,7 +72,7 @@ pub fn about(input: &Input) -> Twins {
     );
     let page_html = html(&Page {
         title: "About",
-        description: "What Kagami is, what each number means, what this site does not do, and the sources with their licences.",
+        description: "What Kagami is, what the numbers mean, and where the data comes from.",
         path: "/about/",
         wide: false,
         head: "",
@@ -89,11 +88,11 @@ pub fn about(input: &Input) -> Twins {
         "outlets_with_claims": input.claims.len(),
         "repository": "https://github.com/h0ds/kagami",
     });
-    let mut md = String::from("# About\n\nKagami is an open-source record of how news stories spread: which outlet published first, who joined when, what was copied, and what changed afterwards, together with sourced facts about each outlet. This site is generated from Kagami feed and Kagami ledger exports.\n\n## What the numbers mean\n\n");
+    let mut md = String::from("# About\n\nKagami tracks how news stories spread: who published first, who followed, what was copied and what was changed later. It also collects facts about each outlet, with sources.\n\n## What the numbers mean\n\n");
     for (k, v) in WHAT {
         let _ = writeln!(md, "- **{k}**: {v}");
     }
-    md.push_str("\n## What this site does not do\n\n");
+    md.push_str("\n## What Kagami doesn't do\n\n");
     for x in NOT {
         let _ = writeln!(md, "- {x}");
     }
@@ -115,7 +114,7 @@ pub fn about(input: &Input) -> Twins {
     }
     let _ = write!(
         md,
-        "\n## For machine readers\n\nEvery page has `index.json` and `index.md` beside it. `/llms.txt` states the rules of use; `/sitemap.xml` lists every page; `/search/index.json` is the index. Quote the source, not Kagami; carry the licence; never turn claims into a score.\n\nBuilt from an export at {}. Source: https://github.com/h0ds/kagami\n",
+        "\n## For machine readers\n\nEvery page has `index.json` and `index.md` beside it. `/llms.txt` states the rules of use; `/sitemap.xml` lists every page; `/search/index.json` is the index. Please cite the original source and keep its licence. Don't turn these facts into a score.\n\nBuilt from an export at {}. Source: https://github.com/h0ds/kagami\n",
         datetime(input.export_time)
     );
     Twins {
@@ -141,7 +140,7 @@ mod tests {
             5
         );
         assert!(t.html.contains("CC-BY-SA-4.0"));
-        assert!(t.html.contains("does not rate outlets"));
+        assert!(t.html.contains("no score or rating of its own"));
         assert_eq!(t.json["sources"].as_array().unwrap().len(), 5);
         assert!(t.md.contains("- **Wikidata** (database) · licence CC0-1.0"));
     }

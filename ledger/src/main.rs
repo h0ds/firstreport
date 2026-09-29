@@ -14,6 +14,7 @@ mod perennial;
 mod ratings;
 mod rdap;
 mod site;
+mod statemedia;
 mod store;
 mod wikidata;
 
@@ -211,9 +212,10 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                 "feed_behaviour" | "behaviour" => behaviour::SOURCE_ID,
                 "allsides" => ratings::ALLSIDES,
                 "robertson2018" | "robertson" => ratings::ROBERTSON,
+                "state_media_monitor" | "smm" => statemedia::SOURCE_ID,
                 other => {
                     return Err(format!(
-                        "no importer for {other:?}; available: wikidata, wikipedia_rsp, rdap, site, feed_behaviour, allsides, robertson2018"
+                        "no importer for {other:?}; available: wikidata, wikipedia_rsp, rdap, site, feed_behaviour, allsides, robertson2018, state_media_monitor"
                     )
                     .into())
                 }
@@ -231,6 +233,7 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                 ratings::ALLSIDES | ratings::ROBERTSON => {
                     import_ratings(&args.data_dir, &ledger, &outlets, source_id, file.as_deref(), mode).await
                 }
+                statemedia::SOURCE_ID => import_statemedia(&args.data_dir, &ledger, &outlets, mode).await,
                 _ => import_perennial(&args.data_dir, &ledger, &outlets, mode).await,
             }
         }
@@ -438,6 +441,48 @@ async fn import_perennial(
         "perennial import done"
     );
     if !mode.writes() {
+        println!("# re-run with --write to store these claims");
+    }
+    Ok(())
+}
+
+/// State Media Monitor: one page per reviewed entry (statemedia::ENTRIES),
+/// one a second, SMM's category read from each. A page whose category
+/// can't be read is reported and skipped.
+async fn import_statemedia(
+    data_dir: &std::path::Path,
+    ledger: &store::Ledger,
+    outlets: &[store::FeedOutlet],
+    mode: guard::WriteMode,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let client = rdap::client()?;
+    let mut batch = Vec::new();
+    for (id, url, via) in statemedia::ENTRIES {
+        if !outlets.iter().any(|o| &o.id == id) {
+            continue;
+        }
+        tokio::time::sleep(std::time::Duration::from_secs(1)).await;
+        let page = match client.get(*url).send().await.and_then(|r| r.error_for_status()) {
+            Ok(r) => r.text().await?,
+            Err(e) => {
+                error!(outlet = %id, %url, "fetch failed: {e}");
+                continue;
+            }
+        };
+        let Some((code, name)) = statemedia::parse_category(&page) else {
+            error!(outlet = %id, %url, "no State Media Monitor category found on the page");
+            continue;
+        };
+        let c = statemedia::claim(id, url, *via, code, name, now_secs());
+        if mode.writes() {
+            batch.push((id.to_string(), vec![c]));
+        } else {
+            println!("{:<18} {:<24} {}", id, c.field, c.value);
+        }
+    }
+    if mode.writes() {
+        report_commit(guard::commit_source(data_dir, ledger, statemedia::SOURCE_ID, batch, mode.force(), now_secs())?);
+    } else {
         println!("# re-run with --write to store these claims");
     }
     Ok(())

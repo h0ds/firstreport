@@ -56,7 +56,8 @@ commands:
                                      sources: wikidata, wikipedia_rsp, rdap,
                                      feed_behaviour (needs --feed-export; --window default 90),
                                      allsides (--file: the CSV or JSON AllSides supplies),
-                                     robertson2018 (downloaded from Dataverse, or --file)
+                                     robertson2018 (downloaded from Dataverse, or --file),
+                                     state_media_monitor (the reviewed entries in statemedia.rs)
 ";
 
 pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {

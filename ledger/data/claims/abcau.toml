@@ -229,6 +229,19 @@ privacy = "https://help.abc.net.au/hc/en-us/articles/360001511015"
 
 [[claim]]
 outlet_id = "abcau"
+field = "state_media"
+value = "Independent State-Funded (ISF)"
+source_id = "state_media_monitor"
+ref_url = "https://statemediamonitor.com/2026/06/australian-broadcasting-corporation-abc/"
+retrieved_at = 1790722339
+as_of = "2026"
+note = "State Media Monitor's category, not Kagami's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
+
+[claim.data]
+code = "ISF"
+
+[[claim]]
+outlet_id = "abcau"
 field = "syndication_share"
 value = "0% of items carry text first published elsewhere; 0% were carried by others"
 source_id = "feed_behaviour"

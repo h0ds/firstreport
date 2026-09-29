@@ -249,6 +249,16 @@ window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "sputnik"
+field = "sanctioned"
+value = "Broadcasting suspended in the EU"
+source_id = "eu_sanctions"
+ref_url = "https://eur-lex.europa.eu/eli/reg/2022/350/oj"
+retrieved_at = 1790722232
+as_of = "2022-03-01"
+note = "Council Regulation (EU) 2022/350 names Sputnik (Annex XV to Regulation 833/2014), citing the Russian Federation's systematic, international campaign of media manipulation and distortion of facts."
+
+[[claim]]
+outlet_id = "sputnik"
 field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
@@ -282,6 +292,20 @@ missing = [
     "masthead",
 ]
 privacy = "https://www.iubenda.com/privacy-policy/25986213/cookie-policy"
+
+[[claim]]
+outlet_id = "sputnik"
+field = "state_media"
+value = "State-Controlled (SC)"
+source_id = "state_media_monitor"
+ref_url = "https://statemediamonitor.com/2026/09/rossiya-segodnya/"
+retrieved_at = 1790722323
+as_of = "2026"
+note = "SMM's entry for Rossiya Segodnya, which runs this outlet; State Media Monitor's category, not Kagami's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
+
+[claim.data]
+code = "SC"
+entity = "Rossiya Segodnya"
 
 [[claim]]
 outlet_id = "sputnik"

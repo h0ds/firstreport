@@ -9,7 +9,7 @@ name = "Wikidata"
 url = "https://www.wikidata.org"
 licence = "CC0-1.0"
 kind = "database"
-notes = "Ownership, parent, country, inception, legal form, website and Wikipedia link via SPARQL. Public domain; no restriction on reuse."
+notes = "Owner, parent company, country, founding date, legal form, website and Wikipedia link. Public domain."
 refresh_days = 90
 
 [[source]]
@@ -18,7 +18,7 @@ name = "Wikipedia: Reliable sources/Perennial sources"
 url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
 licence = "CC-BY-SA-4.0"
 kind = "community"
-notes = "Community consensus on reliability, one claim per matching row with the list's own status, scope, discussions and summary. Reuse requires attribution and share-alike."
+notes = "Wikipedia editors' consensus on how reliable each source is, with their status, summary and links to the discussions. Reuse needs attribution and the same licence."
 refresh_days = 30
 
 [[source]]
@@ -27,7 +27,7 @@ name = "Domain registries (RDAP)"
 url = "https://about.rdap.org"
 licence = "public registration data"
 kind = "observed"
-notes = "Registration date, registrar and status of each outlet's registrable domains, as reported by the registry's RDAP service. Facts observed by Kagami, not licensed content."
+notes = "When each outlet's domain was registered, the registrar, and the domain's status, from the registry."
 refresh_days = 180
 
 [[source]]
@@ -36,7 +36,7 @@ name = "Outlet home page"
 url = "https://github.com/h0ds/kagami/tree/main/ledger"
 licence = "Kagami observation"
 kind = "observed"
-notes = "Whether the site serves HTTPS and redirects plain HTTP, and which accountability pages (about, contact, privacy, corrections, ethics, masthead) the home page links. Absence means not linked from the home page, not that the page does not exist."
+notes = "Whether the outlet's site uses HTTPS, and which pages (about, contact, corrections, ethics, staff) its home page links to. A missing page means it isn't linked from the home page, not that it doesn't exist."
 refresh_days = 30
 
 [[source]]
@@ -45,7 +45,7 @@ name = "Kagami feed behaviour"
 url = "https://github.com/h0ds/kagami/tree/main/feed"
 licence = "Kagami observation"
 kind = "observed"
-notes = "Posting cadence, revision and withdrawal rates, syndication share and origin share, measured from feed's own export. Each claim carries its window and counts; outlets with fewer than ten items in the window get none. Describes what a feed does, not whether that is good."
+notes = "How often the outlet posts, how often it edits or removes items, how much it copies and how often it's first. Outlets with fewer than ten items in the window are left out."
 refresh_days = 7
 
 [[source]]
@@ -54,7 +54,7 @@ name = "AllSides Media Bias Ratings"
 url = "https://www.allsides.com/media-bias/ratings"
 licence = "CC-BY-NC-4.0"
 kind = "rating"
-notes = "Left, Lean Left, Center, Lean Right, Right on AllSides' own scale, with published methodology. Terms of use (October 2025): the ratings are licensed CC BY-NC 4.0, usable for research or noncommercial purposes with attribution; commercial use needs AllSides' written consent. Required attribution: \"AllSides Media Bias Ratings™ by AllSides.com are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\" AllSides supplies the ratings as CSV or JSON on request (admin@allsides.com); import with `ledger import allsides --file <file>`. Their style guide colours the labels blue to red; Kagami shows them in greys (design §5)."
+notes = "AllSides' rating of each outlet from Left to Right, using their own method. Non-commercial use only. Attribution: \"AllSides Media Bias Ratings™ by AllSides.com are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\" AllSides sends the data on request (admin@allsides.com); import it with `ledger import allsides --file <file>`."
 # Supplied as a file, so not on a refresh schedule: re-import when AllSides sends a new one.
 refresh_days = 0
 
@@ -64,5 +64,23 @@ name = "Partisan audience bias scores (Robertson et al. 2018)"
 url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX"
 licence = "CC0-1.0"
 kind = "database"
-notes = "Scores from -1 (links shared only by Democrats) to +1 (only by Republicans) for ~19,000 web domains, from the sharing of ~500,000 US Twitter accounts of known party in 2017. A measure of an outlet's audience, not of its content, recorded as audience_partisanship. Only the authors' own score column is used; the file's other columns are other raters' scores under their own terms. Cite: Robertson, Jiang, Joseph, Friedland, Lazer, Wilson (2018), Auditing Partisan Audience Bias within Google Search, PACM HCI 2(CSCW)."
+notes = "Scores from -1 to +1 for about 19,000 websites, based on whether Democrats or Republicans shared their links on Twitter in 2017. This measures the audience, not the content. Robertson, Jiang, Joseph, Friedland, Lazer and Wilson (2018), Auditing Partisan Audience Bias within Google Search."
+refresh_days = 0
+
+[[source]]
+id = "state_media_monitor"
+name = "State Media Monitor (MJRC)"
+url = "https://statemediamonitor.com"
+licence = "CC-BY-4.0"
+kind = "database"
+notes = "Classifies state media by ownership, funding and editorial control: State-Controlled (SC), Captured Public (CaPu), Captured Private (CaPr), and independent public media (IP, ISF, ISM, ISFM). Some entries cover a parent group, such as China Media Group for CGTN. Cite: Dragomir, M. (2025). State Media Monitor Global Dataset 2025. MJRC. DOI: 10.5281/zenodo.17219015."
+refresh_days = 180
+
+[[source]]
+id = "eu_sanctions"
+name = "EU restrictive measures (Council of the European Union)"
+url = "https://eur-lex.europa.eu/eli/reg/2014/833/oj"
+licence = "EU legal texts, free reuse (Commission Decision 2011/833/EU)"
+kind = "legal"
+notes = "Outlets the EU has banned from broadcasting under Regulation 833/2014, as part of sanctions against Russian state propaganda. Each claim links the regulation that named the outlet."
 refresh_days = 0

@@ -64,6 +64,10 @@ Semantic colours are for **system status only** — never for characterizing con
 Left-right placement is drawn red for left and blue for right, as a news aggregator draws it (the project owner's call, taken knowing that red means right in the US and left in much of Europe; the labels are always written out, so the colour never stands alone).
 
 - **Outlet colour comes from AllSides only**: an outlet AllSides rates carries its label as a 2px border on its icon (origin ring outside it), with "AllSides: Lean Left" on hover. Outlets AllSides does not rate carry no border. Audience measures (Robertson et al.) never colour an outlet; they colour only the positions on their own strip.
+- **Designations** beside an outlet's name, each a named source's words, the source on hover:
+  - **State** (outlined grey): State Media Monitor files the outlet, or the group running it, as State-Controlled (SC) or Captured Public (CaPu). Its independent public categories (IP, ISF, ISM, ISFM: BBC, NHK, ABC, CBC, France 24) carry no tag; they show only on the outlet page.
+  - **Sanctioned** or **Deprecated** (solid near-black), one at most: the EU suspended its broadcasting as propaganda (Regulation 833/2014 as amended), or Wikipedia's perennial sources list deprecates it. Sanctioned wins when both apply.
+  - Never red or a status colour; the words carry it.
 - **Coverage bar** (card): Left / Center / Right as percentages of the rated outlets in the story, red / white / blue, "N not rated · AllSides" beside it; AllSides' five labels fold into three (Lean Left with Left, Lean Right with Right). Shown when AllSides rates at least two outlets in the story. The story page keeps the full five-label bar in the same colours.
 
 ### Dark mode

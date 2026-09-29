@@ -35,9 +35,13 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     let mut b = String::new();
     let _ = write!(
         b,
-        "<h1 data-id=\"{}\">{}</h1><p class=\"kg-muted\">{}{}{} · every value below is a source's, never ours</p>",
+        "<h1 data-id=\"{}\">{}</h1>{}<p class=\"kg-muted\">{}{}{} · every value below is a source's, never ours</p>",
         esc(&o.id),
         esc(name),
+        {
+            let f = crate::render::outlet_flags(input, &o.id);
+            if f.is_empty() { f } else { format!("<p class=\"kg-flags\">{f}</p>") }
+        },
         esc(&o.domains.join(", ")),
         if o.domains.is_empty() { "" } else { " · " },
         n(claims.len(), "claim")

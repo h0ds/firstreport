@@ -20,6 +20,8 @@ pub const KNOWN_FIELDS: &[&str] = &[
     "wikipedia",
     "bias",
     "reliability",
+    "state_media",
+    "sanctioned",
     "domain_registered",
     "registrar",
     "posting_cadence",
@@ -40,6 +42,8 @@ pub enum SourceKind {
     Rating,
     /// Measured by Kagami itself from what outlets publish.
     Observed,
+    /// A law or official act, such as a sanctions regulation.
+    Legal,
 }
 
 /// A source of claims: a database, a community process, a rater, or

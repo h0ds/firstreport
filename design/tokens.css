@@ -426,3 +426,10 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
   h1 { font-size: var(--kg-fs-h2); line-height: var(--kg-lh-h2); }
   .kg-display { font-size: var(--kg-fs-h1); line-height: var(--kg-lh-h1); }
 }
+
+/* designations (§5): named sources' words beside an outlet's name.
+   State: outlined grey. Sanctioned / Deprecated: solid near-black.
+   Never red or a status colour: those mean lean and system state. */
+.kg-flag { font-family: var(--kg-font-mono); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; padding: 0 var(--kg-s1); border: 1px solid var(--kg-line-strong); border-radius: var(--kg-radius-input); color: var(--kg-text-secondary); cursor: help; white-space: nowrap; }
+.kg-flag.warn { background: var(--kg-text); border-color: var(--kg-text); color: var(--kg-bg); }
+.kg-flags { display: flex; gap: var(--kg-s2); margin: 0 0 var(--kg-s2); }

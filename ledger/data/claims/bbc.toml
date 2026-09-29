@@ -266,6 +266,19 @@ privacy = "https://www.bbc.com/usingthebbc/privacy"
 
 [[claim]]
 outlet_id = "bbc"
+field = "state_media"
+value = "Independent Public (IP)"
+source_id = "state_media_monitor"
+ref_url = "https://statemediamonitor.com/2026/09/british-broadcasting-corporation-bbc/"
+retrieved_at = 1790722336
+as_of = "2026"
+note = "State Media Monitor's category, not Kagami's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
+
+[claim.data]
+code = "IP"
+
+[[claim]]
+outlet_id = "bbc"
 field = "syndication_share"
 value = "0% of items carry text first published elsewhere; 0% were carried by others"
 source_id = "feed_behaviour"

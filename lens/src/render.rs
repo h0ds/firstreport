@@ -246,12 +246,44 @@ pub fn lean_slug(label: &str) -> String {
     label.to_ascii_lowercase().replace(' ', "-")
 }
 
-/// An outlet as it appears in a row: icon, then name.
+/// Designations that travel with an outlet's name, each a named
+/// source's (design §5): a "State" tag when State Media Monitor files it
+/// as State-Controlled or Captured Public, and one dark tag for the
+/// strongest propaganda designation: "Sanctioned" (EU suspension) over
+/// "Deprecated" (Wikipedia RSP). The source and its words are on hover.
+pub fn outlet_flags(input: &Input, id: &str) -> String {
+    let Some(claims) = input.claims.get(id) else { return String::new() };
+    let find = |src: &str, field: &str| claims.iter().find(|c| c.source_id == src && c.field == field);
+    let mut s = String::new();
+    if let Some(c) = find("state_media_monitor", "state_media") {
+        if c.value.ends_with("(SC)") || c.value.ends_with("(CaPu)") {
+            let _ = write!(
+                s,
+                "<abbr class=\"kg-flag state\" title=\"State Media Monitor: {}\">State</abbr>",
+                esc(&c.value)
+            );
+        }
+    }
+    let flag = find("eu_sanctions", "sanctioned")
+        .map(|c| ("Sanctioned", format!("EU: {}", c.value)))
+        .or_else(|| {
+            find("wikipedia_rsp", "reliability")
+                .filter(|c| c.value == "Deprecated")
+                .map(|_| ("Deprecated", "Wikipedia: deprecated as a source".to_string()))
+        });
+    if let Some((label, title)) = flag {
+        let _ = write!(s, "<abbr class=\"kg-flag warn\" title=\"{}\">{label}</abbr>", esc(&title));
+    }
+    s
+}
+
+/// An outlet as it appears in a row: icon, name, then any designations.
 pub fn outlet_badge(input: &Input, id: &str) -> String {
     format!(
-        "<span class=\"kg-outlet\">{}{}</span>",
+        "<span class=\"kg-outlet\">{}{}{}</span>",
         outlet_icon(input, id, false).unwrap_or_default(),
-        outlet_link(input, id)
+        outlet_link(input, id),
+        outlet_flags(input, id)
     )
 }
 
@@ -260,8 +292,9 @@ pub fn outlet_badge(input: &Input, id: &str) -> String {
 pub fn origin_link(input: &Input, id: &str) -> String {
     match outlet_icon(input, id, true) {
         Some(icon) => format!(
-            "<span class=\"kg-outlet\">{icon}<span class=\"kg-sr\">first to publish: </span>{}</span>",
-            outlet_link(input, id)
+            "<span class=\"kg-outlet\">{icon}<span class=\"kg-sr\">first to publish: </span>{}{}</span>",
+            outlet_link(input, id),
+            outlet_flags(input, id)
         ),
         None => format!(
             "<span class=\"kg-origin-name\"><span class=\"kg-sr\">first to publish: </span>{}</span>",
@@ -686,6 +719,8 @@ pub fn cluster_card(
 pub const FIELD_ORDER: &[(&str, &str)] = &[
     ("reliability", "Reliability"),
     ("bias", "Bias"),
+    ("sanctioned", "Sanctions"),
+    ("state_media", "State media"),
     ("owner", "Owner"),
     ("parent", "Parent organisation"),
     ("legal_form", "Legal form"),
@@ -1209,6 +1244,18 @@ mod tests {
         // -0.5 and +0.5 sit a quarter in from each end of the 120px strip.
         assert!(two.contains("cx=\"32.0\"") && two.contains("cx=\"88.0\""), "{two}");
         assert!(!two.contains("fill=") && !two.contains("stroke=") && !two.contains("style="), "colours come from the grey tokens only");
+        // Designations: State only for SC / CaPu; Sanctioned beats Deprecated.
+        i.claims.entry("wire".into()).or_default().push(claim("wire", "state_media", "Independent Public (IP)", "state_media_monitor", None));
+        assert_eq!(outlet_flags(&i, "wire"), "", "independent public media carry no tag");
+        i.claims.entry("flagged".into()).or_default().push(claim("flagged", "state_media", "State-Controlled (SC)", "state_media_monitor", None));
+        i.claims.entry("flagged".into()).or_default().push(claim("flagged", "reliability", "Deprecated", "wikipedia_rsp", None));
+        let f = outlet_flags(&i, "flagged");
+        assert!(f.contains(">State</abbr>") && f.contains(">Deprecated</abbr>"), "{f}");
+        i.claims.entry("flagged".into()).or_default().push(claim("flagged", "sanctioned", "Broadcasting suspended in the EU", "eu_sanctions", None));
+        let f = outlet_flags(&i, "flagged");
+        assert!(f.contains(">Sanctioned</abbr>") && !f.contains("Deprecated"), "one dark tag at most: {f}");
+        assert!(outlet_badge(&i, "flagged").contains("kg-flag state"));
+        i.claims.get_mut("wire").unwrap().clear();
         // AllSides: no bar with fewer than two rated outlets.
         i.sources.insert("allsides".into(), crate::input::Source { id: "allsides".into(), name: "AllSides Media Bias Ratings".into(), licence: "CC-BY-NC-4.0".into(), ..Default::default() });
         i.claims.entry("wire".into()).or_default().push(claim("wire", "bias", "Center", "allsides", None));
