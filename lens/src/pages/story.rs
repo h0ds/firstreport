@@ -11,8 +11,8 @@ use super::Twins;
 use crate::derive::{cluster_facts, ClusterFacts};
 use crate::input::{Cluster, Input, Item};
 use crate::render::{
-    claim_card, claim_md, cluster_card, datetime, delta, esc, field_label, grouped_claims, html,
-    iso, n, outlet_link, time_el, Page,
+    claim_card_compact, claim_md, cluster_card, datetime, delta, esc, field_label, grouped_claims,
+    html, iso, n, outlet_link, time_el, Page,
 };
 
 /// Fields shown per outlet on a story page, in this order.
@@ -194,7 +194,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         b.push_str("</ul>");
     }
 
-    b.push_str("<h2>About the outlets</h2><p class=\"kg-muted\">From Kagami ledger, each fact with its source. Outlets with no claims yet are listed as such.</p>");
+    b.push_str("<h2>About the outlets</h2><p class=\"kg-muted\">From Kagami ledger, each fact with its source; the outlet's page has the full record. Outlets with no claims yet are listed as such.</p>");
     for (outlet, _) in &rows {
         let _ = write!(b, "<h3>{}</h3>", outlet_link(input, outlet));
         let claims: Vec<_> = input
@@ -218,7 +218,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
                 esc(&field_label(field))
             );
             for c in cs {
-                b.push_str(&claim_card(input, c));
+                b.push_str(&claim_card_compact(input, c));
             }
         }
     }

@@ -301,6 +301,17 @@ pub fn freshness(c: &Claim, source: Option<&Source>, now: i64) -> Freshness {
 /// The claim card with its provenance line (design §5), one form
 /// everywhere. Order: source · licence · retrieved · as of · status.
 pub fn claim_card(input: &Input, c: &Claim) -> String {
+    claim_card_with(input, c, true)
+}
+
+/// The same card without notes, summaries, measurement lines or
+/// discussion links: for a story page listing many outlets, where the
+/// outlet page has the full record one click away.
+pub fn claim_card_compact(input: &Input, c: &Claim) -> String {
+    claim_card_with(input, c, false)
+}
+
+fn claim_card_with(input: &Input, c: &Claim, full: bool) -> String {
     let source = input.sources.get(&c.source_id);
     let (sname, licence) = source
         .map(|s| (s.name.as_str(), s.licence.as_str()))
@@ -345,60 +356,64 @@ pub fn claim_card(input: &Input, c: &Claim) -> String {
         if f.stale { "warn" } else { "ok" },
         if f.stale {
             format!("stale, {} days old", f.age_days)
+        } else if f.age_days == 0 {
+            "retrieved today".to_string()
         } else {
             format!("{} days old", f.age_days)
         }
     );
-    if let Some(w) = get("window_days").and_then(|v| v.as_i64()) {
-        let _ = write!(
-            s,
-            "<div class=\"note\">Measured over {w} days to {}, {}. A measurement, not a verdict.</div>",
-            esc(get("window_end").and_then(|v| v.as_str()).unwrap_or("?")),
-            n(get("items").and_then(|v| v.as_u64()).unwrap_or(0) as usize, "item")
-        );
-    }
-    if let Some(sum) = get("summary").and_then(|v| v.as_str()) {
-        let _ = write!(s, "<div class=\"note\">{}</div>", esc(sum));
-    }
-    if c.field == "site_pages" {
-        let links: Vec<String> = [
-            "about",
-            "contact",
-            "privacy",
-            "corrections",
-            "ethics",
-            "masthead",
-        ]
-        .iter()
-        .filter_map(|k| get(k).and_then(|v| v.as_str()).map(|u| (k, u)))
-        .map(|(k, u)| format!("<a href=\"{}\" rel=\"noopener\">{k}</a>", esc(u)))
-        .collect();
-        let _ = write!(
-            s,
-            "<div class=\"note\">{}</div>",
-            if links.is_empty() {
-                "none linked".to_string()
-            } else {
-                links.join(" · ")
-            }
-        );
-    }
-    if let Some(note) = &c.note {
-        let _ = write!(s, "<div class=\"note\">Note: {}</div>", esc(note));
-    }
-    if let Some(disc) = get("discussions").and_then(|v| v.as_array()) {
-        let links: Vec<String> = disc
-            .iter()
-            .filter_map(|u| u.as_str())
-            .enumerate()
-            .map(|(i, u)| format!("<a href=\"{}\" rel=\"noopener\">{}</a>", esc(u), i + 1))
-            .collect();
-        if !links.is_empty() {
+    if full {
+        if let Some(w) = get("window_days").and_then(|v| v.as_i64()) {
             let _ = write!(
                 s,
-                "<div class=\"note\">Discussions: {}</div>",
-                links.join(" ")
+                "<div class=\"note\">Measured over {w} days to {}, {}. A measurement, not a verdict.</div>",
+                esc(get("window_end").and_then(|v| v.as_str()).unwrap_or("?")),
+                n(get("items").and_then(|v| v.as_u64()).unwrap_or(0) as usize, "item")
             );
+        }
+        if let Some(sum) = get("summary").and_then(|v| v.as_str()) {
+            let _ = write!(s, "<div class=\"note\">{}</div>", esc(sum));
+        }
+        if c.field == "site_pages" {
+            let links: Vec<String> = [
+                "about",
+                "contact",
+                "privacy",
+                "corrections",
+                "ethics",
+                "masthead",
+            ]
+            .iter()
+            .filter_map(|k| get(k).and_then(|v| v.as_str()).map(|u| (k, u)))
+            .map(|(k, u)| format!("<a href=\"{}\" rel=\"noopener\">{k}</a>", esc(u)))
+            .collect();
+            let _ = write!(
+                s,
+                "<div class=\"note\">{}</div>",
+                if links.is_empty() {
+                    "none linked".to_string()
+                } else {
+                    links.join(" · ")
+                }
+            );
+        }
+        if let Some(note) = &c.note {
+            let _ = write!(s, "<div class=\"note\">Note: {}</div>", esc(note));
+        }
+        if let Some(disc) = get("discussions").and_then(|v| v.as_array()) {
+            let links: Vec<String> = disc
+                .iter()
+                .filter_map(|u| u.as_str())
+                .enumerate()
+                .map(|(i, u)| format!("<a href=\"{}\" rel=\"noopener\">{}</a>", esc(u), i + 1))
+                .collect();
+            if !links.is_empty() {
+                let _ = write!(
+                    s,
+                    "<div class=\"note\">Discussions: {}</div>",
+                    links.join(" ")
+                );
+            }
         }
     }
     s.push_str("</article>");
@@ -434,6 +449,8 @@ pub fn claim_md(input: &Input, c: &Claim) -> String {
     }
     if f.stale {
         let _ = writeln!(md, " · stale, {} days old", f.age_days);
+    } else if f.age_days == 0 {
+        let _ = writeln!(md, " · retrieved today");
     } else {
         let _ = writeln!(md, " · {} days old", f.age_days);
     }
