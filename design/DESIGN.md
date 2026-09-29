@@ -253,6 +253,13 @@ step since it was first seen. Spec:
 
 ---
 
+**Label bar** (coverage by a named source's labels, the honest form of a left/centre/right bar)
+- One bar per source and field, headed "<source> on <field>" with the source's licence tag. It is that source's map of the outlets in the story, never Kagami's.
+- Segments in the source's own scale order (AllSides: Left, Lean Left, Center, Lean Right, Right; Wikipedia's perennial list: Generally reliable, No consensus, Generally unreliable, Deprecated, Blacklisted), width proportional to the number of outlets, the label text and count on every segment. Greys of different weight, darkest first; never a hue per side.
+- Outlets the source does not label are the last segment, drawn empty and dashed, "not rated by <source>". They are never dropped, and they are never distributed across the others.
+- Shown only when the source labels at least two of the outlets in the story; a bar with one labelled outlet is a point, not a distribution.
+- A legend beneath lists the outlets under each label, by name, alphabetically.
+
 ## 6. Wordmark & mark
 
 - Wordmark: `Kagami` in Instrument Serif Italic, `--kg-text`. Minimum height 20px.

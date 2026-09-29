@@ -272,6 +272,24 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 .kg-provenance a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
 .kg-provenance .sep { color: var(--kg-line-strong); }
 
+/* label bar: a named source's labels across the outlets in a story.
+   Segments in the source's own scale order, greys of different weight,
+   the label text on every segment, the unrated remainder drawn empty.
+   Never a hue per side (DESIGN.md §5). */
+.kg-labelbar { margin: var(--kg-s2) 0 var(--kg-s1); }
+.kg-labelbar .bar { display: flex; height: 28px; border-radius: var(--kg-radius-input); overflow: hidden; border: 1px solid var(--kg-line); }
+.kg-labelbar .seg { display: flex; align-items: center; justify-content: center; gap: var(--kg-s1); min-width: 0; padding: 0 var(--kg-s2); font-size: var(--kg-fs-small); line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kg-labelbar .seg + .seg { border-left: 1px solid var(--kg-bg); }
+.kg-labelbar .seg.w1 { background: var(--kg-text); color: var(--kg-bg); }
+.kg-labelbar .seg.w2 { background: var(--kg-text-secondary); color: var(--kg-bg); }
+.kg-labelbar .seg.w3 { background: var(--kg-text-muted); color: var(--kg-bg); }
+.kg-labelbar .seg.w4 { background: var(--kg-line-strong); color: var(--kg-text); }
+.kg-labelbar .seg.w5 { background: var(--kg-line); color: var(--kg-text); }
+.kg-labelbar .seg.none { background: transparent; color: var(--kg-text-muted); border-left: 1px dashed var(--kg-line-strong); }
+.kg-labelbar .seg .n { font-variant-numeric: tabular-nums; font-weight: 600; }
+.kg-labelbar .legend { display: flex; flex-wrap: wrap; gap: var(--kg-s2) var(--kg-s4); margin-top: var(--kg-s2); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-secondary); }
+.kg-labelbar .legend b { font-weight: 600; color: var(--kg-text); }
+
 /* status dots */
 .kg-status { display: inline-flex; align-items: center; gap: var(--kg-s2); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); }
 .kg-status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
