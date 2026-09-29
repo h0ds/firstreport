@@ -272,7 +272,12 @@ async fn fixture_through_store_and_api() {
         join_threshold: 0.72,
         ledger_url: "http://ledger.test".into(),
         configured_feeds: std::sync::Arc::new(
-            [feed.url.clone(), "https://www.example.com/held.xml".to_string()].into_iter().collect(),
+            [
+                feed.url.clone(),
+                "https://www.example.com/held.xml".to_string(),
+            ]
+            .into_iter()
+            .collect(),
         ),
     });
     let get = |uri: &str| Request::builder().uri(uri).body(Body::empty()).unwrap();
