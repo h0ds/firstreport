@@ -204,10 +204,13 @@ fallbacks apply.
 
 ## 9. Milestones
 
-- **N0** crate, `input.rs`, `derive.rs` against the recorded exports,
-  `lens check`. No pages yet. Proves the join and the counts.
-- **N1** Story page and outlet page, with twins. `lens build` on the
-  fixtures produces the golden site; a test diffs it.
+- **N0** crate, `input.rs`, `derive.rs` against the recorded exports.
+  Done: the join and the counts, pinned to ledger's feed_behaviour
+  numbers.
+- **N1** Story page and outlet page, with twins; `lens check`,
+  `lens serve`, a first front page and `llms.txt`. Done: `lens build`
+  on the fixtures produces a site that `check` passes and a test diffs
+  three twins against golden copies.
 - **N2** Front page, search, about, `llms.txt`, sitemap, JSON-LD.
   First real build over a week of live data (needs the local runbook
   done).
@@ -223,8 +226,9 @@ be judged, not to be built.
 
 - `feed`: nothing new for the static site; the export carries
   everything. Live mode would want a stories-by-outlet route.
-- `ledger`: `export` should include the outlet registry with names and
-  domains (it does) and the source registry (it does). Ownership
+- `ledger`: `export` includes the source registry; its outlet list has
+  ids and claim counts only, so names and domains come from `feed`'s
+  export, which is the registry. Ownership
   chains (ledger plan §9) are not needed for N1; the outlet page shows
   the direct owner claim and links to the owner's outlet page when the
   owner is itself an outlet in the registry.
@@ -247,6 +251,12 @@ be judged, not to be built.
   or misleading is a judgement to make on real pages.
 - **Window.** 24 hours on the front page and 30 days of stories on
   outlet pages are guesses. Tune on real data.
+- **Revision text.** The story page lists revisions and withdrawals
+  with their times but not the earlier text, because the feed export
+  carries events and not the revision rows. Either the export grows a
+  `revisions.ndjson` (additive, cheap) or the page keeps linking to
+  feed's revision route. Decide once live data shows how often it
+  matters.
 - **Site size.** A year of clusters is hundreds of thousands of story
   pages. Keep the last 30 days as pages and older stories as JSON only,
   or let the site grow? Decide when it is measured.
