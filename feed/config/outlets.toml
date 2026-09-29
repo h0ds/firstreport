@@ -72,7 +72,7 @@ domains = ["cbsnews.com"]
 [[outlet]]
 id = "abcnews"
 name = "ABC News"
-domains = ["abcnews.go.com"]
+domains = ["abcnews.go.com", "abcnews.com"]
 
 [[outlet]]
 id = "pbs"
@@ -127,7 +127,7 @@ domains = ["upi.com"]
 [[outlet]]
 id = "nypost"
 name = "New York Post"
-domains = ["nypost.com"]
+domains = ["nypost.com", "pagesix.com"]
 
 [[outlet]]
 id = "washingtontimes"
@@ -237,7 +237,7 @@ domains = ["telegraph.co.uk"]
 [[outlet]]
 id = "dailymail"
 name = "Daily Mail"
-domains = ["dailymail.co.uk"]
+domains = ["dailymail.co.uk", "dailymail.com"]
 
 [[outlet]]
 id = "skynews"
@@ -322,7 +322,7 @@ domains = ["ndtv.com"]
 [[outlet]]
 id = "timesofindia"
 name = "The Times of India"
-domains = ["timesofindia.indiatimes.com", "indiatimes.com"]
+domains = ["timesofindia.indiatimes.com", "indiatimes.com", "toi.li"]
 
 [[outlet]]
 id = "jpost"
