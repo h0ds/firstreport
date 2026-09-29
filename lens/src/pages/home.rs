@@ -39,6 +39,33 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     if recent.is_empty() {
         b.push_str("<div class=\"empty\">No stories in the window. Run feed for a while, export, and build again.</div>");
     }
+    // Spreading now: outlets joining in the last six hours, most first.
+    // Only stories with any; the list is absent when nothing is moving.
+    let mut spreading: Vec<&(&crate::input::Cluster, crate::derive::ClusterFacts)> =
+        recent.iter().filter(|(_, f)| f.outlets_6h > 0).collect();
+    spreading.sort_by(|a, b| {
+        b.1.outlets_6h
+            .cmp(&a.1.outlets_6h)
+            .then(b.0.last_active_at.cmp(&a.0.last_active_at))
+            .then(a.0.id.cmp(&b.0.id))
+    });
+    spreading.truncate(10);
+    if !spreading.is_empty() {
+        b.push_str("<h2>Spreading now</h2><p class=\"kg-muted\">Outlets that joined in the last six hours.</p><ul class=\"stories\">");
+        for (c, f) in &spreading {
+            let _ = write!(
+                b,
+                "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\">{} in 6 h · {} in all · first: {}</span></li>",
+                c.id,
+                c.id,
+                esc(&c.primary_title),
+                n(f.outlets_6h as usize, "outlet"),
+                n(c.outlet_count as usize, "outlet"),
+                outlet_link(input, &c.origin_outlet_id)
+            );
+        }
+        b.push_str("</ul><h2>All stories in the window</h2>");
+    }
     for (c, f) in &recent {
         b.push_str(&cluster_card(input, c, &f.spark, false));
     }
@@ -59,18 +86,35 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     }
     b.push_str("</ul>");
 
+    let head = format!(
+        "<script type=\"application/ld+json\">{}</script>\n",
+        json!({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Stories",
+            "description": "Stories forming across news outlets, ordered by outlets joining in the last day. No outlet is rated.",
+            "numberOfItems": recent.len(),
+            "itemListElement": recent.iter().enumerate().map(|(k, (c, _))| json!({
+                "@type": "ListItem",
+                "position": k + 1,
+                "url": format!("/story/{}/", c.id),
+                "name": c.primary_title,
+            })).collect::<Vec<_>>()
+        })
+    );
     let page_html = html(&Page {
         title: "Stories",
         description: "Stories forming across news outlets: who published first, who joined when, what was copied. No outlet is rated.",
         path: "/",
         wide: false,
-        head: "",
+        head: &head,
         body: &b,
         status: &format!("built from an export at {}", datetime(now)),
     });
     let page_json = json!({
         "window_hours": window_hours,
         "export_time": now,
+        "spreading_now": spreading.iter().map(|(c, f)| json!({"id": c.id, "title": c.primary_title, "outlets_6h": f.outlets_6h})).collect::<Vec<_>>(),
         "stories": recent.iter().map(|(c, f)| json!({
             "id": c.id, "title": c.primary_title, "outlet_count": c.outlet_count, "item_count": c.item_count,
             "origin_outlet_id": c.origin_outlet_id, "created_at": c.created_at, "last_active_at": c.last_active_at,
@@ -85,6 +129,21 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         datetime(now),
         n(input.outlets.len(), "outlet")
     );
+    if !spreading.is_empty() {
+        md.push_str("## Spreading now\n\nOutlets that joined in the last six hours.\n\n");
+        for (c, f) in &spreading {
+            let _ = writeln!(
+                md,
+                "- [{}](/story/{}/) · {} in 6 h · {} in all · first: {}",
+                c.primary_title,
+                c.id,
+                n(f.outlets_6h as usize, "outlet"),
+                n(c.outlet_count as usize, "outlet"),
+                input.outlet_name(&c.origin_outlet_id)
+            );
+        }
+        md.push_str("\n## All stories in the window\n\n");
+    }
     for (c, f) in &recent {
         let _ = writeln!(
             md,
@@ -131,5 +190,12 @@ mod tests {
                 >= all.json["stories"][60]["outlets_24h"].as_u64().unwrap()
         );
         assert!(all.md.contains("- [Story 1001](/story/1001/)"));
+        assert!(all.html.contains("\"@type\":\"ItemList\""));
+        assert!(!all.html.contains("Rating"));
+        // the export's last two hours hold the newest story only
+        let t = home(&i, 6);
+        assert!(t.html.contains("<h2>Spreading now</h2>"));
+        assert_eq!(t.json["spreading_now"][0]["id"], 1060);
+        assert!(t.md.contains("## Spreading now"));
     }
 }
