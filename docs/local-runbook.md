@@ -193,7 +193,33 @@ could not read the current terms.
   cleared. No importer exists yet.
 - **Iffy Index** and similar lists: check licence before adding.
 
-## 8. The model question
+## 8. Multilingual embeddings: designed, not built
+
+Disinformation crosses borders and MiniLM-L6 is English only. The
+swap was not built in the sandbox because the models worth using
+(`paraphrase-multilingual-MiniLM-L12-v2`, `multilingual-e5-small`) use
+XLM-RoBERTa's SentencePiece unigram tokenizer, not the WordPiece one
+`feed` has, and the vocabulary needed to test a bespoke implementation
+was on a blocked host. Writing a tokenizer blind would put unverified
+code in the clustering path. The design, for when the files can be
+fetched:
+
+1. Download the model's `tokenizer.json` (HF tokenizers format) and
+   ONNX export. The tokenizer file is JSON: the unigram vocabulary with
+   log-probabilities, a Metaspace pre-tokenizer (`▁` for space) and a
+   `<s> … </s>` post-processor.
+2. Implement `embed/unigram.rs`: NFKC normalisation (the
+   `unicode-normalization` crate is commodity plumbing), Metaspace,
+   Viterbi segmentation over the unigram scores, special ids from the
+   file. Test by encoding a hundred multilingual headlines and diffing
+   against the ids the reference Python `tokenizers` library produces
+   for the same file.
+3. `embed.tokenizer = "wordpiece" | "unigram"` in config, chosen by
+   the model preset; the `Tokenizer` trait already isolates encode.
+4. Re-run both golden sets with the new model; the join threshold
+   will move and `feed/docs/clustering.md` says how to re-tune.
+
+## 9. The model question
 
 The links you sent about jev and System One models (typesafe.ai) and
 the jeff weights on Hugging Face (mstrasser) were blocked. What I need

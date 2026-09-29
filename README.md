@@ -14,6 +14,7 @@ Rust, single binary per tool, runs entirely locally. Three pillars, built in ord
 |---|---|---|
 | [`feed/`](feed/) | 1 | Ingest headlines, cluster them into stories, record propagation. Neutral by construction. |
 | [`ledger/`](ledger/) | 2 | Sourced facts about outlets keyed by outlet id: ownership, country, founding, third-party ratings, each with its source and licence. Never a score. |
+| [`kagami/`](kagami/) | | One command over the three: `run`, `site`, `doctor`. |
 | [`lens/`](lens/) | 3 | Static site generated from `feed` and `ledger` exports: stories, outlets, coverage by a named source's labels. At N2; see `lens/docs/plan.md`. |
 
 `feed/docs/plan.md` is the full plan for pillar 1, including the project rules
@@ -43,11 +44,15 @@ for people links its JSON twin from `<head>`. `design/DESIGN.md` §11 has the ru
 ## Getting started
 
 ```
-cd feed
-cargo run -- run
+cargo build --workspace
+./target/debug/kagami doctor    # what is in place, what to fetch or import
+./target/debug/kagami run       # feed on :8080, ledger on :8081, Ctrl-C stops both
+./target/debug/kagami site      # export both, build the lens site into ./site, check it
 ```
 
 Requires a Rust toolchain. No Docker, no managed database, no cloud APIs.
+Each pillar is still its own binary with its own commands (`feed`,
+`ledger`, `lens`); `kagami` only drives them from a checkout.
 
 ## Status
 
