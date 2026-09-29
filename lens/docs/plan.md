@@ -211,9 +211,10 @@ fallbacks apply.
   `lens serve`, a first front page and `llms.txt`. Done: `lens build`
   on the fixtures produces a site that `check` passes and a test diffs
   three twins against golden copies.
-- **N2** Front page, search, about, `llms.txt`, sitemap, JSON-LD.
-  First real build over a week of live data (needs the local runbook
-  done).
+- **N2** Front page with the spreading-now list, search, about,
+  sitemap, JSON-LD on front and story and outlet pages. Done offline;
+  the first real build over a week of live data needs the local
+  runbook.
 - **N3** Coverage by source label, once `ledger` has enough labelled
   outlets and the AllSides question is settled. Merged-cluster stubs.
 - **N4** Live mode, only if the daily cadence is a problem in

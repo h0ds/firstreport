@@ -24,10 +24,15 @@ them anywhere static.
   copies, changes, and a claim card per outlet.
 - `/outlet/<id>/` every claim with its provenance line, then the
   outlet's stories and counts over 30 days.
+- `/search/` outlets and stories, queried in the browser over the
+  prebuilt `index.json`.
+- `/about/` what each number means, what the site does not do, the
+  sources with their licences.
 
 Every page has `index.json` and `index.md` beside it with the same
-facts in the same order, linked from `<head>`. `/llms.txt` and
-`/robots.txt` are written too.
+facts in the same order, linked from `<head>`. `/llms.txt`,
+`/robots.txt` and `/sitemap.xml` are written too; `--base-url` makes
+sitemap locations absolute.
 
 ## Tests
 
@@ -47,7 +52,8 @@ LENS_UPDATE_GOLDEN=1 cargo test -p lens
 
 ## Status
 
-N1. Story and outlet pages with twins, a first front page, `check`,
-`serve`, `llms.txt`. Verified offline end to end; not yet built from
-live data. N2 adds the "spreading now" list, search, about, sitemap and
-JSON-LD on the front page.
+N2. Front page with the spreading-now list, story, outlet, search and
+about pages, all with twins, plus `llms.txt`, `robots.txt` and
+`sitemap.xml`; `check` verifies links, twins and the sitemap. Verified
+offline end to end; not yet built from live data. N3 (coverage by a
+named source's labels) waits on the AllSides terms and on live data.

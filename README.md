@@ -14,7 +14,7 @@ Rust, single binary per tool, runs entirely locally. Three pillars, built in ord
 |---|---|---|
 | [`feed/`](feed/) | 1 | Ingest headlines, cluster them into stories, record propagation. Neutral by construction. |
 | [`ledger/`](ledger/) | 2 | Sourced facts about outlets keyed by outlet id: ownership, country, founding, third-party ratings, each with its source and licence. Never a score. |
-| [`lens/`](lens/) | 3 | Static site generated from `feed` and `ledger` exports: stories, outlets, coverage by a named source's labels. At N1; see `lens/docs/plan.md`. |
+| [`lens/`](lens/) | 3 | Static site generated from `feed` and `ledger` exports: stories, outlets, coverage by a named source's labels. At N2; see `lens/docs/plan.md`. |
 
 `feed/docs/plan.md` is the full plan for pillar 1, including the project rules
 that apply to every pillar. `ledger/docs/plan.md` is pillar 2's and
@@ -70,9 +70,10 @@ contract and API docs. `feed` is at v0.1.0 with the data contract
 frozen at v1; it is complete and verified offline, and has not yet run
 against live feeds. See `feed/docs/plan.md` §11.
 
-`lens` is at N1: story and outlet pages with JSON and Markdown twins,
-a first front page, `check` and `serve`, built from the two exports and
-verified offline. See `lens/docs/plan.md` §9.
+`lens` is at N2: front, story, outlet, search and about pages with JSON
+and Markdown twins, `llms.txt` and a sitemap, `check` and `serve`,
+built from the two exports and verified offline. See
+`lens/docs/plan.md` §9.
 
 `ledger` is at L2e: file-backed claim store with validation, refresh
 tracking, read-only API with search and a `/lookup` page, export, and
