@@ -311,6 +311,20 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 
 /* a card's picture row: sparkline, then the lean strip (§5) */
 .kg-visuals { display: flex; flex-wrap: wrap; align-items: center; gap: var(--kg-s2) var(--kg-s6); margin-top: var(--kg-s2); }
+/* own reports against copies (§5): dark = own, light = copy */
+.kg-split { display: inline-flex; align-items: center; gap: var(--kg-s1); }
+.kg-split .bar { display: inline-block; width: 32px; height: var(--kg-s1); border-radius: 2px; background: var(--kg-line-strong); overflow: hidden; }
+.kg-split .own { display: block; height: 100%; background: var(--kg-text-secondary); }
+
+/* timeline track on the story page (§5) */
+.kg-track { margin: var(--kg-s3) 0 var(--kg-s4); }
+.kg-track .lanes { position: relative; margin: 0 var(--kg-s2); border-bottom: 1px solid var(--kg-line-strong); padding-bottom: var(--kg-s1); box-sizing: content-box; }
+.kg-track .pt { position: absolute; transform: translateX(-50%); display: flex; }
+.kg-track .pt:hover { text-decoration: none; }
+.kg-track .pt:hover .kg-icon { box-shadow: 0 0 0 1px var(--kg-blue); }
+.kg-track .dot { width: var(--kg-s2); height: var(--kg-s2); margin: var(--kg-s1); border-radius: 50%; background: var(--kg-text-muted); }
+.kg-track .axis { display: flex; justify-content: space-between; margin-top: var(--kg-s1); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); }
+
 /* the list's legend: the card pictures explained once */
 .kg-legend { margin: 0 0 var(--kg-s2); }
 .kg-legend .key { display: inline-block; vertical-align: middle; margin-right: var(--kg-s1); color: var(--kg-text-secondary); font-weight: 500; }

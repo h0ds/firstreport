@@ -28,10 +28,10 @@ main > p a:hover, main > ul:not(.stories) a:hover { text-decoration-color: curre
 .timeline li { display: grid; grid-template-columns: var(--kg-s8) 1fr; gap: var(--kg-s3); padding: var(--kg-s2) 0; border-top: 1px solid var(--kg-line); }
 .timeline .when { font-family: var(--kg-font-mono); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-body); color: var(--kg-text-secondary); }
 .timeline li.first .when { color: var(--kg-blue); }
-.timeline .outlet { font-weight: 600; color: var(--kg-text); }
+.timeline .outlet { font-weight: 600; color: var(--kg-text); margin-right: var(--kg-s2); }
 .timeline .outlet a { color: inherit; }
 .timeline .outlet a:hover { color: var(--kg-blue); }
-.timeline .hl { display: block; color: var(--kg-text); }
+.timeline .hl { color: var(--kg-text); }
 .timeline .hl a { color: inherit; }
 .timeline .hl a:hover { color: var(--kg-blue); }
 .timeline .alt, .timeline .times { display: block; font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); margin-top: var(--kg-s1); }
@@ -78,6 +78,30 @@ h3 a:hover { color: var(--kg-blue); }
 .pager .rail { position: relative; flex: 1; height: 2px; background: var(--kg-line); border-radius: 1px; }
 .pager .rail .pos { position: absolute; top: 0; bottom: 0; background: var(--kg-blue); border-radius: 1px; min-width: var(--kg-s1); }
 .pager .range { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Outlet page: fields as rows (design §5, dense claims) */
+.kg-field { display: grid; grid-template-columns: 176px 1fr; gap: var(--kg-s4); padding: var(--kg-s3) 0; border-top: 1px solid var(--kg-line); }
+.kg-field .fname { font-size: var(--kg-fs-ui); line-height: var(--kg-lh-body); font-weight: 500; color: var(--kg-text-secondary); }
+.kg-field .kg-claim { padding: 0; border-bottom: 0; }
+.kg-field .kg-claim + .kg-claim { margin-top: var(--kg-s3); }
+.kg-field .kg-claim .value { font-size: var(--kg-fs-body); line-height: var(--kg-lh-body); }
+@media (max-width: 720px) { .kg-field { grid-template-columns: 1fr; gap: var(--kg-s1); } }
+
+/* About the outlets on a story page: one row per outlet (design §5) */
+.kg-outlet-facts { list-style: none; margin: 0; padding: 0; }
+.kg-outlet-facts li { display: grid; grid-template-columns: 200px 1fr; gap: var(--kg-s3); padding: var(--kg-s2) 0; border-top: 1px solid var(--kg-line); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); }
+.kg-outlet-facts .facts { color: var(--kg-text-secondary); }
+.kg-outlet-facts .fact { color: var(--kg-text); text-decoration-line: underline; text-decoration-color: var(--kg-line); }
+.kg-outlet-facts .fact:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+.kg-outlet-facts .none { color: var(--kg-text-muted); }
+.kg-outlet-facts .sep { color: var(--kg-line-strong); }
+@media (max-width: 720px) { .kg-outlet-facts li { grid-template-columns: 1fr; gap: var(--kg-s1); } }
+
+/* Method, collapsed */
+.kg-method { margin-top: var(--kg-s6); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); color: var(--kg-text-secondary); }
+.kg-method summary { cursor: pointer; color: var(--kg-text-muted); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); }
+.kg-method ul { margin: var(--kg-s2) 0; padding-left: var(--kg-s5); }
+.kg-method li + li { margin-top: var(--kg-s1); }
 
 footer { margin-top: var(--kg-s8); padding-top: var(--kg-s4); border-top: 1px solid var(--kg-line); }
 footer a { color: inherit; text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }

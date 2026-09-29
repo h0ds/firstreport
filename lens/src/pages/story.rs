@@ -11,7 +11,7 @@ use super::Twins;
 use crate::derive::{cluster_facts, ClusterFacts};
 use crate::input::{Cluster, Input, Item};
 use crate::render::{
-    claim_card_compact, claim_md, cluster_card, datetime, delta, esc, field_label, grouped_claims,
+    claim_md, cluster_card, datetime, delta, esc, field_label, grouped_claims,
     html, iso, n, outlet_link, time_el, Page,
 };
 
@@ -62,6 +62,167 @@ fn by_outlet<'a>(input: &'a Input, c: &'a Cluster) -> Vec<(&'a str, Vec<&'a Item
         out.insert(0, origin);
     }
     out
+}
+
+/// The story's spread as a picture (design §5, timeline track): each
+/// outlet's icon placed along a line by when it published, the origin
+/// ringed, icons that would overlap stacked into lanes. The start time
+/// and the total spread label the ends. Empty for a single outlet.
+fn track(input: &Input, c: &Cluster, rows: &[(&str, Vec<&Item>)], t0: i64) -> String {
+    if rows.len() < 2 {
+        return String::new();
+    }
+    let times: Vec<i64> = rows.iter().map(|(_, v)| v.first().map(|i| when(i)).unwrap_or(t0)).collect();
+    let end = times.iter().copied().max().unwrap_or(t0);
+    let span = (end - t0).max(60);
+    // Lanes: an icon goes in the first lane whose last icon is far enough
+    // left of it (in percent of the width) not to overlap.
+    const GAP: f64 = 3.5;
+    let mut lanes: Vec<f64> = Vec::new();
+    let mut pts = String::new();
+    let mut order: Vec<usize> = (0..rows.len()).collect();
+    order.sort_by_key(|&k| times[k]);
+    for k in order {
+        let (outlet, _) = &rows[k];
+        let x = (times[k] - t0) as f64 / span as f64 * 100.0;
+        let lane = match lanes.iter().position(|last| x - last >= GAP) {
+            Some(l) => {
+                lanes[l] = x;
+                l
+            }
+            None => {
+                lanes.push(x);
+                lanes.len() - 1
+            }
+        };
+        let origin = *outlet == c.origin_outlet_id;
+        let mark = crate::render::outlet_icon(input, outlet, origin)
+            .unwrap_or_else(|| format!("<span class=\"dot{}\"></span>", if origin { " kg-origin" } else { "" }));
+        let has_page = input.outlets.contains_key(*outlet) || input.claims.contains_key(*outlet);
+        let (open, close) = if has_page {
+            (format!("<a class=\"pt\" href=\"/outlet/{}/\"", esc(outlet)), "</a>")
+        } else {
+            ("<span class=\"pt\"".to_string(), "</span>")
+        };
+        let _ = write!(
+            pts,
+            "{open} style=\"left: {x:.2}%; top: {}px\" title=\"{} · {}\">{mark}{close}",
+            lane * 20,
+            esc(input.outlet_name(outlet)),
+            if times[k] == t0 { "first".to_string() } else { delta(times[k] - t0) },
+        );
+    }
+    let height = lanes.len() * 20;
+    format!(
+        "<div class=\"kg-track\" role=\"img\" aria-label=\"{} outlets over {}, in order: {}\"><div class=\"lanes\" style=\"height: {height}px\">{pts}</div><div class=\"axis\"><span>{}</span><span>{} later</span></div></div>",
+        rows.len(),
+        delta(span).trim_start_matches('+'),
+        esc(&rows.iter().map(|(o, _)| input.outlet_name(o)).collect::<Vec<_>>().join(", ")),
+        time_el(t0, input.export_time),
+        delta(end - t0).trim_start_matches('+')
+    )
+}
+
+/// A fact's value for the compact table: Wikidata's year-precision dates
+/// ("1982-01-01") read as the year.
+fn short_value(c: &crate::input::Claim) -> String {
+    let v = c.value.trim();
+    if matches!(c.field.as_str(), "founded" | "domain_registered") && v.len() >= 4 {
+        if v.ends_with("-01-01") || c.field == "domain_registered" {
+            return v[..4].to_string();
+        }
+    }
+    v.to_string()
+}
+
+/// "About the outlets" as one row per outlet (design §5, dense claims):
+/// icon and name, then reliability, owner, country, founded and domain
+/// age as short values. Each value's provenance (source, licence,
+/// retrieved date, as-of) is its hover title; the sources used are named
+/// once under the heading; the outlet's page has every fact in full.
+fn outlets_table(input: &Input, rows: &[(&str, Vec<&Item>)]) -> String {
+    let mut used: Vec<&str> = Vec::new();
+    let mut body = String::new();
+    for (outlet, _) in rows {
+        let claims: Vec<&crate::input::Claim> = input
+            .claims
+            .get(*outlet)
+            .map(|v| v.iter().filter(|c| OUTLET_FIELDS.contains(&c.field.as_str())).collect())
+            .unwrap_or_default();
+        let mut facts: Vec<String> = Vec::new();
+        for field in OUTLET_FIELDS {
+            let mut vals: Vec<(String, &crate::input::Claim)> = Vec::new();
+            for c in claims.iter().filter(|c| c.field == *field) {
+                let v = short_value(c);
+                if !vals.iter().any(|(x, _)| *x == v) {
+                    vals.push((v, c));
+                }
+            }
+            if *field == "domain_registered" {
+                vals.sort_by(|a, b| a.0.cmp(&b.0));
+                vals.truncate(1);
+            }
+            if vals.is_empty() {
+                continue;
+            }
+            let label = match *field {
+                "founded" => "founded ",
+                "domain_registered" => "domain since ",
+                "owner" => "owned by ",
+                _ => "",
+            };
+            let shown: Vec<String> = vals
+                .iter()
+                .map(|(v, c)| {
+                    if !used.contains(&c.source_id.as_str()) {
+                        used.push(&c.source_id);
+                    }
+                    let src = input.sources.get(&c.source_id);
+                    let title = format!(
+                        "{} · {} · retrieved {}{}",
+                        src.map(|s| s.name.as_str()).unwrap_or(&c.source_id),
+                        src.map(|s| s.licence.as_str()).unwrap_or(""),
+                        crate::render::date(c.retrieved_at),
+                        c.as_of.as_ref().map(|a| format!(" · as of {a}")).unwrap_or_default()
+                    );
+                    format!(
+                        "<a class=\"fact\" href=\"{}\" rel=\"noopener\" title=\"{}\">{}</a>",
+                        esc(&c.ref_url),
+                        esc(&title),
+                        esc(v)
+                    )
+                })
+                .collect();
+            facts.push(format!("<span data-field=\"{field}\">{label}{}</span>", shown.join(", ")));
+        }
+        let _ = write!(
+            body,
+            "<li data-outlet=\"{}\">{}<span class=\"facts\">{}</span></li>",
+            esc(outlet),
+            crate::render::outlet_badge(input, outlet),
+            if facts.is_empty() {
+                "<span class=\"none\">no facts yet</span>".to_string()
+            } else {
+                facts.join("<span class=\"sep\"> · </span>")
+            }
+        );
+    }
+    let sources = used
+        .iter()
+        .map(|id| {
+            let s = input.sources.get(*id);
+            format!(
+                "{} ({})",
+                esc(s.map(|s| s.name.as_str()).unwrap_or(id)),
+                esc(s.map(|s| s.licence.as_str()).unwrap_or(""))
+            )
+        })
+        .collect::<Vec<_>>()
+        .join(", ");
+    format!(
+        "<h2>About the outlets</h2><p class=\"kg-muted\">From Kagami ledger{}. Hover a fact for its source and date; each outlet's page has the full record.</p><ul class=\"kg-outlet-facts\">{body}</ul>",
+        if sources.is_empty() { String::new() } else { format!(": {sources}") }
+    )
 }
 
 /// The item's text as it stood just before `ts`: the latest revision
@@ -147,19 +308,28 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         false,
         Some(&f),
     ));
-    b.push_str("<h2>Timeline</h2><p class=\"kg-muted\">Each outlet once, in the order they published, with the headline each ran first. Other articles from the same outlet sit beneath. Times are what the outlet claimed; pick-up is when Kagami saw it, shown where it differs from the row above.</p><ol class=\"timeline\">");
+    b.push_str("<h2>Timeline</h2>");
+    b.push_str(&track(input, c, &rows, t0));
+    b.push_str("<p class=\"kg-muted\">Each outlet once, in the order it published, with its first headline. Hover a time for when it was published and when Kagami picked it up.</p><ol class=\"timeline\">");
     let mut last_pickup: Option<i64> = None;
     for (k, (outlet, items)) in rows.iter().enumerate() {
         let first = &items[0];
         let at = first.joined_at.unwrap_or(first.fetched_at);
-        let show_pickup = last_pickup != Some(at);
-        last_pickup = Some(at);
+        let _ = last_pickup.replace(at);
+        // Published and picked-up times are the time column's hover, not a
+        // line of their own on every row.
+        let when_title = format!(
+            "{}{} · picked up {}",
+            if k == 0 { "first".to_string() } else { format!("{} after the first outlet", delta(when(first) - t0)) },
+            if first.published_at > 0 { format!(" · published {}", datetime(first.published_at)) } else { String::new() },
+            datetime(at)
+        );
         let _ = write!(
             b,
-            "<li{} data-outlet=\"{}\"><span class=\"when\" title=\"{} after the first outlet\">{}</span><div><span class=\"outlet\">{}</span>{}",
+            "<li{} data-outlet=\"{}\"><span class=\"when\" title=\"{}\">{}</span><div><span class=\"outlet\">{}</span>{}",
             if k == 0 { " class=\"first\"" } else { "" },
             esc(outlet),
-            if k == 0 { "0 min".to_string() } else { delta(when(first) - t0) },
+            esc(&when_title),
             delta(when(first) - t0),
             if k == 0 { crate::render::origin_link(input, outlet) } else { crate::render::outlet_badge(input, outlet) },
             match f.copies_of.get(&first.id) {
@@ -178,21 +348,10 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             esc(&first.canonical_url),
             esc(&first.title)
         );
-        let mut times = Vec::new();
-        if first.published_at > 0 {
-            times.push(format!(
-                "published {}",
-                time_el(first.published_at, input.export_time)
-            ));
-        }
-        if show_pickup || first.published_at == 0 {
-            times.push(format!("picked up {}", time_el(at, input.export_time)));
-        }
-        let _ = write!(b, "<span class=\"times\">{}</span>", times.join(" · "));
         for alt in items.iter().skip(1).filter(|i| i.title != first.title) {
             let _ = write!(
                 b,
-                "<span class=\"alt\">also from this outlet: <a href=\"{}\" rel=\"noopener\">{}</a></span>",
+                "<span class=\"alt\">also: <a href=\"{}\" rel=\"noopener\">{}</a></span>",
                 esc(&alt.canonical_url),
                 esc(&alt.title)
             );
@@ -230,12 +389,12 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         .collect();
     let strip = crate::render::audience_strip(input, &outlet_ids, true);
     if !bars.is_empty() || !strip.is_empty() {
-        b.push_str("<h2>Coverage by label</h2><p class=\"kg-muted\">How named sources place the outlets in this story. Outlets a source has not rated are shown as such and never redistributed.</p>");
+        b.push_str("<h2>Coverage by label</h2>");
         for bar in &bars {
             b.push_str(&crate::render::label_bar_html(input, bar));
         }
         if !strip.is_empty() {
-            b.push_str("<div class=\"kg-audience-block\"><p class=\"kg-muted\">Audience: who shared each outlet's links on Twitter in 2017, from -1 (Democrats) to +1 (Republicans). A measure of audiences, not of this story's coverage. <a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a> <span class=\"kg-tag\">CC0-1.0</span></p>");
+            b.push_str("<div class=\"kg-audience-block\"><p class=\"kg-muted\" title=\"Who shared each outlet's links on Twitter in 2017, from -1 (Democrats) to +1 (Republicans): a measure of audiences, not of this story's coverage.\">Audience lean · <a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a>, CC0</p>");
             b.push_str(&strip);
             b.push_str("</div>");
         }
@@ -280,41 +439,24 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
 
     // Method (docs/steward.md §3): how sure the clustering was, as
     // counts over the members. Shown so a borderline story says so.
-    let method = method_lines(c);
-    b.push_str("<h2>Method</h2><p class=\"kg-muted\">Kagami feed's own judgement of this story, as counts; see <a href=\"/about/#story\">what a story is</a>.</p><ul class=\"stories method\" data-section=\"method\">");
+    // Collapsed, and only the lines that say something about this story;
+    // the JSON and Markdown twins keep all of them.
+    let method: Vec<String> = method_lines(c)
+        .into_iter()
+        .filter(|l| {
+            !(l.starts_with("No member has a recorded")
+                || l.contains("without a recorded similarity")
+                || l.starts_with("Not merged")
+                || l.starts_with("1 language"))
+        })
+        .collect();
+    b.push_str("<details class=\"kg-method\" data-section=\"method\"><summary>How this story was grouped</summary><ul>");
     for l in &method {
         let _ = write!(b, "<li>{}</li>", esc(l));
     }
-    b.push_str("</ul>");
+    b.push_str("</ul><p class=\"kg-muted\"><a href=\"/about/#story\">What a story is</a></p></details>");
 
-    b.push_str("<h2>About the outlets</h2><p class=\"kg-muted\">From Kagami ledger, each fact with its source; the outlet's page has the full record. Outlets with no claims yet are listed as such.</p>");
-    for (outlet, _) in &rows {
-        let _ = write!(b, "<h3>{}</h3>", outlet_link(input, outlet));
-        let claims: Vec<_> = input
-            .claims
-            .get(*outlet)
-            .map(|v| {
-                v.iter()
-                    .filter(|c| OUTLET_FIELDS.contains(&c.field.as_str()))
-                    .collect()
-            })
-            .unwrap_or_default();
-        if claims.is_empty() {
-            b.push_str("<div class=\"empty\">No claims yet.</div>");
-            continue;
-        }
-        let owned: Vec<_> = claims.into_iter().cloned().collect();
-        for (field, cs) in grouped_claims(&owned) {
-            let _ = write!(
-                b,
-                "<div class=\"kg-muted\">{}</div>",
-                esc(&field_label(field))
-            );
-            for c in cs {
-                b.push_str(&claim_card_compact(input, c));
-            }
-        }
-    }
+    b.push_str(&outlets_table(input, &rows));
 
     let head = format!(
         "<script type=\"application/ld+json\">{}</script>\n",
@@ -494,7 +636,8 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         }
     }
     md.push_str("\n## Method\n\nKagami feed's own judgement of this story, as counts.\n\n");
-    for l in &method {
+    // Every line, including the ones the HTML leaves out as noise.
+    for l in &method_lines(c) {
         let _ = writeln!(md, "- {l}");
     }
     md.push_str("\n## About the outlets\n");
@@ -621,7 +764,7 @@ mod tests {
         let mut c = i.clusters[&1001].clone();
         // The fixture export predates confidence: said, not zeroed.
         let t = story(&i, &c);
-        assert!(t.html.contains("<h2>Method</h2>"));
+        assert!(t.html.contains("<summary>How this story was grouped</summary>"));
         assert!(t.html.contains("not recorded in this export"));
         assert!(t.md.contains("## Method"));
         assert!(t.json["cluster"].get("confidence").is_none());
@@ -636,7 +779,8 @@ mod tests {
         });
         let t = story(&i, &c);
         assert!(t.html.contains("Weakest join 0.74, 0.02 above the threshold; one borderline join holds this story together."));
-        assert!(t.html.contains("1 member without a recorded similarity"));
+        assert!(!t.html.contains("without a recorded similarity"), "not reader information");
+        assert!(t.md.contains("1 member without a recorded similarity"), "kept for machines");
         assert!(t.html.contains("Formed by merging"));
         assert!(t.html.contains("2 languages: en, ja."));
         assert!(
@@ -681,11 +825,8 @@ mod tests {
             "offset from the origin's published time: {}",
             t.html
         );
-        assert_eq!(
-            t.html.matches("picked up ").count(),
-            1,
-            "identical pick-up shown once"
-        );
+        assert!(!t.html.contains("class=\"times\""), "times are the hover, not a line per row");
+        assert!(t.html.contains("title=\"first · published "), "published and picked-up times in the time column's title");
         assert!(
             t.md.contains("- first · **Gazette**") && t.md.contains("- +9.0h · **Wire**"),
             "{}",

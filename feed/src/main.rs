@@ -203,6 +203,14 @@ async fn run(
     outlets: config::Outlets,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let cfg = Arc::new(cfg);
+    // Credit items stored under a host that outlets.toml has since claimed.
+    {
+        let r = parse::outlet::Resolver::from_config(&outlets);
+        let n = store::reattribute_unknown(&store::open(&cfg.store.path)?, |h| r.resolve(h))?;
+        if n > 0 {
+            info!(items = n, "re-attributed items whose host is now in the outlet registry");
+        }
+    }
     let configured_feeds: Arc<std::collections::HashSet<String>> =
         Arc::new(feeds.feeds.iter().map(|f| f.url.clone()).collect());
     let stats = Arc::new(stats::Stats::default());

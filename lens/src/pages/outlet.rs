@@ -47,9 +47,40 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
             "<div class=\"empty\">No claims yet. Kagami ledger has not assessed this outlet.</div>",
         );
     }
+    // Fields as rows: the name on the left, its claims on the right
+    // (design §5, dense claims), not a heading per field.
+    // Values from one source with the same provenance share a block, and
+    // a note repeated across fields is shown the first time only.
+    let mut seen_notes = std::collections::HashSet::new();
     for (field, cs) in &groups {
-        let _ = write!(b, "<h2>{}</h2>", esc(&field_label(field)));
-        for c in cs {
+        let _ = write!(
+            b,
+            "<section class=\"kg-field\" data-field=\"{}\"><div class=\"fname\">{}</div><div>",
+            esc(field),
+            esc(&field_label(field))
+        );
+        let mut merged: Vec<crate::input::Claim> = Vec::new();
+        for c in cs.iter() {
+            let same = merged.iter_mut().find(|m| {
+                m.source_id == c.source_id
+                    && m.ref_url == c.ref_url
+                    && m.as_of == c.as_of
+                    && crate::render::date(m.retrieved_at) == crate::render::date(c.retrieved_at)
+                    && m.data.as_ref().and_then(|d| d.get("summary")).is_none()
+            });
+            match same {
+                Some(m) if m.value != c.value => m.value = format!("{} · {}", m.value, c.value),
+                Some(_) => {}
+                None => merged.push((*c).clone()),
+            }
+        }
+        for mut m in merged {
+            if let Some(n) = &m.note {
+                if !seen_notes.insert(n.clone()) {
+                    m.note = None;
+                }
+            }
+            let c = &m;
             b.push_str(&claim_card(input, c));
             if *field == "owner" {
                 if let Some(id) = owner_outlet(input, &c.value) {
@@ -62,6 +93,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
                 }
             }
         }
+        b.push_str("</div></section>");
     }
     let _ = write!(
         b,
@@ -217,9 +249,9 @@ mod tests {
         let facts = outlet_facts(&i, 90 * DAY);
         let t = outlet(&i, &i.outlets["wire"], &facts["wire"], 90);
         assert!(t.html.contains("<h1 data-id=\"wire\">Wire</h1>"));
-        let rel = t.html.find("<h2>Reliability</h2>").unwrap();
-        let owner = t.html.find("<h2>Owner</h2>").unwrap();
-        let qid = t.html.find("<h2>Wikidata</h2>").unwrap();
+        let rel = t.html.find("<div class=\"fname\">Reliability</div>").unwrap();
+        let owner = t.html.find("<div class=\"fname\">Owner</div>").unwrap();
+        let qid = t.html.find("<div class=\"fname\">Wikidata</div>").unwrap();
         assert!(rel < owner && owner < qid, "shared field order");
         assert!(t
             .html

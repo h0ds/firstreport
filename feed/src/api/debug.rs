@@ -171,18 +171,25 @@ function curve(tl, now){
     <text class="lbl" x="${W}" y="${H-2}" text-anchor="end">${label} · ${o} outlets, ${maxI} items</text>
   </svg>`;
 }
+// Keyed update: each card keeps its DOM node, replaced only when its HTML
+// changed and moved rather than rebuilt when the order changes, so a
+// refresh never reloads icons or flashes the list.
+const cardHtml = new Map();
 function render(list, now){
   const root = $('#clusters');
-  if (!list.length) { root.innerHTML = '<div class="empty">No clusters yet.</div>'; return; }
+  if (!list.length) { cardHtml.clear(); if (!root.querySelector('.empty')) root.innerHTML = '<div class="empty">No clusters yet.</div>'; return; }
+  root.querySelector('.empty')?.remove();
   const open = new Set([...root.querySelectorAll('.cluster.open')].map(e=>e.dataset.id));
   const pts = new Map(list.map(c => [c.id, sparkPoints(c.timeline)]));
   const scale = Math.max(1, ...[...pts.values()].flat());
-  root.innerHTML = list.map(c => {
+  const nodes = new Map([...root.querySelectorAll('.cluster')].map(e => [e.dataset.id, e]));
+  const order = list.map(c => {
+    const id = String(c.id);
     const v = c.velocity || {};
     const fresh = !seen.has(c.id);
     seen.add(c.id);
     const items = compare(c);
-    return `<article class="cluster${fresh?' enter':''}${open.has(String(c.id))?' open':''}" data-id="${c.id}">
+    const html = `<article class="cluster${fresh?' enter':''}${open.has(id)?' open':''}" data-id="${c.id}">
       <p class="title title-link"><a href="/v1/clusters/${c.id}" onclick="this.closest('.cluster').classList.toggle('open');return false">${esc(c.primary_title)}</a></p>
       <div class="meta muted quiet">
         ${outletStack(c)}
@@ -197,8 +204,26 @@ function render(list, now){
       ${curve(c.timeline, now)}
       <ul class="items">${items}</ul>
     </article>`;
-  }).join('');
+    // Compare without the one-off enter class, so a card that was new last
+    // time is not rebuilt just because it no longer animates.
+    const key = html.replace(' enter', '');
+    let el = nodes.get(id);
+    if (!el || cardHtml.get(id) !== key) {
+      const t = document.createElement('template');
+      t.innerHTML = html.trim();
+      const fresh = t.content.firstElementChild;
+      if (el) el.replaceWith(fresh); 
+      el = fresh;
+      cardHtml.set(id, key);
+    }
+    nodes.delete(id);
+    return el;
+  });
+  for (const [id, el] of nodes) { el.remove(); cardHtml.delete(id); }
+  order.forEach((el, i) => { if (root.children[i] !== el) root.insertBefore(el, root.children[i] || null); });
 }
+// Set markup only when it changed, so unchanged text never re-renders.
+const setHtml = (el, html) => { if (el.innerHTML !== html) el.innerHTML = html; };
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 // Outlet id -> {name, domain}, from the registry; ids fall back to themselves.
 let outlets = {};
@@ -257,7 +282,7 @@ async function tick(){
       fetch('/v1/stats').then(r=>r.json())]);
     const now = Math.floor(Date.now()/1000);
     const p = st.process, s = st.store;
-    $('#stats').innerHTML = [
+    setHtml($('#stats'), [
       // The feeds count opens the network dashboard: every feed and its health.
       ['feeds', `<a href="/feeds" title="Every feed and its status">${st.feeds_configured ?? s.feeds_total}</a> <span class="muted">${s.feeds_dead} dead</span>`],
       ['items / hour', s.items_last_hour], ['items total', s.items_total],
@@ -265,11 +290,11 @@ async function tick(){
       ['embed p50', (p.embed_latency.p50_us/1000).toFixed(1)+' ms'],
       ['assign p50', (p.assign_latency.p50_us/1000).toFixed(2)+' ms'],
       ['fetch errors', p.fetch_errors]
-    ].map(([k,v])=>`<div class="stat"><b>${v}</b><span class="muted">${k}</span></div>`).join('');
+    ].map(([k,v])=>`<div class="stat"><b>${v}</b><span class="muted">${k}</span></div>`).join(''));
     render(cs.items || [], now);
     const h = $('#health');
-    if (p.fetch_errors > p.fetches / 2 && p.fetches > 5) { h.className='status warn'; h.innerHTML='<span>most fetches failing</span>'; }
-    else { h.className='status ok'; h.innerHTML=`<span>up ${age(now - p.uptime_secs, now)}</span>`; }
+    if (p.fetch_errors > p.fetches / 2 && p.fetches > 5) { h.className='status warn'; setHtml(h, '<span>most fetches failing</span>'); }
+    else { h.className='status ok'; setHtml(h, `<span>up ${age(now - p.uptime_secs, now)}</span>`); }
   } catch (e) {
     const h = $('#health'); h.className='status err'; h.innerHTML='<span>api unreachable</span>';
   }

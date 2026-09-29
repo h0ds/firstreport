@@ -121,6 +121,32 @@ function status(f, now){
   return {k: 'ok', label: 'online', rank: 6};
 }
 let outlets = {}, feeds = [];
+// Update only what changed, so the 10 s refresh never reloads icons or
+// flashes the table: markup is set when it differs, and each row keeps its
+// node (keyed by feed URL), replaced only when its own markup changed.
+const setHtml = (el, html) => { if (el.innerHTML !== html) el.innerHTML = html; };
+const rowHtml = new Map();
+function patchRows(body, rows, empty){
+  if (!rows.length) { rowHtml.clear(); setHtml(body, empty); return; }
+  body.querySelector('td.empty')?.closest('tr')?.remove();
+  const nodes = new Map([...body.querySelectorAll('tr[data-key]')].map(e => [e.dataset.key, e]));
+  const order = rows.map(([key, html]) => {
+    let el = nodes.get(key);
+    if (!el || rowHtml.get(key) !== html) {
+      const t = document.createElement('template');
+      t.innerHTML = `<table><tbody>${html}</tbody></table>`;
+      const fresh = t.content.querySelector('tr');
+      fresh.dataset.key = key;
+      if (el) el.replaceWith(fresh);
+      el = fresh;
+      rowHtml.set(key, html);
+    }
+    nodes.delete(key);
+    return el;
+  });
+  for (const [key, el] of nodes) { el.remove(); rowHtml.delete(key); }
+  order.forEach((el, i) => { if (body.children[i] !== el) body.insertBefore(el, body.children[i] || null); });
+}
 const host = u => { try { return new URL(u).host.replace(/^www\./, ''); } catch { return u; } };
 const shortErr = e => e.replace(/^error sending request for url \([^)]*\): /, '').replace(/^client error \((\w+)\): /, '$1: ');
 function outletCell(id){
@@ -139,14 +165,14 @@ function render(){
     ['quarantined', count('quarantined'), 'warn'], ['skipped: robots.txt', count('skipped: robots.txt'), 'warn'], ['waiting', count('waiting'), 'idle'],
     ['timestamps unreliable', rows.filter(r => r.f.health && r.f.health.timestamps_unreliable).length, 'warn'],
   ].filter(([k, v], i) => i < 2 || v > 0);
-  $('#stats').innerHTML = tiles.map(([k, v, c]) => `<div class="stat"><b>${v}</b>${c ? `<span class="status ${c}"><span class="muted">${k}</span></span>` : `<span class="muted">${k}</span>`}</div>`).join('');
+  setHtml($('#stats'), tiles.map(([k, v, c]) => `<div class="stat"><b>${v}</b>${c ? `<span class="status ${c}"><span class="muted">${k}</span></span>` : `<span class="muted">${k}</span>`}</div>`).join(''));
   const sorted = [...rows].sort((a, b) => a.s.rank - b.s.rank || (outlets[a.f.outlet_id]?.name || a.f.outlet_id).localeCompare(outlets[b.f.outlet_id]?.name || b.f.outlet_id));
-  $('#strip').innerHTML = sorted.map(r => `<li class="${r.s.k}" title="${esc((outlets[r.f.outlet_id]||{}).name || r.f.outlet_id)}: ${r.s.label}" aria-label="${esc(r.f.outlet_id)} ${r.s.label}"></li>`).join('');
+  setHtml($('#strip'), sorted.map(r => `<li class="${r.s.k}" title="${esc((outlets[r.f.outlet_id]||{}).name || r.f.outlet_id)}: ${r.s.label}" aria-label="${esc(r.f.outlet_id)} ${r.s.label}"></li>`).join(''));
   const show = $('#show').value, q = $('#q').value.trim().toLowerCase();
   const list = sorted.filter(r => (show === 'all' || (show === 'ok' ? r.s.k === 'ok' : show === 'err' ? r.s.k === 'err' : r.s.k !== 'ok'))
     && (!q || (r.f.outlet_id + ' ' + ((outlets[r.f.outlet_id]||{}).name || '') + ' ' + r.f.url).toLowerCase().includes(q)));
   $('#count').textContent = `${list.length} of ${rows.length}`;
-  $('#rows').innerHTML = list.length ? list.map(({f, s}) => `<tr data-outlet="${esc(f.outlet_id)}">
+  const trs = list.map(({f, s}) => [f.url, `<tr data-outlet="${esc(f.outlet_id)}">
     <td><span class="status ${s.k}"><span>${s.label}</span></span>${s.note ? `<span class="err-text">${esc(s.note)}</span>` : f.last_error ? `<span class="err-text" title="${esc(f.last_error)}">${esc(shortErr(f.last_error))}</span>` : ''}</td>
     <td>${outletCell(f.outlet_id)}</td>
     <td class="hide-sm quiet"><a class="feedurl" href="${esc(f.url)}" rel="noopener">${esc(host(f.url))}${esc(new URL(f.url, 'http://x').pathname.length > 1 ? new URL(f.url, 'http://x').pathname : '')}</a>${f.resolved_url ? `<span class="feedurl moved">moved to ${esc(f.resolved_url)}</span>` : ''}</td>
@@ -154,7 +180,8 @@ function render(){
     <td class="hide-sm nw">${ago(f.last_ok_at, now)}</td>
     <td class="hide-sm nw" title="configured every ${dur(f.base_interval_secs)}">${dur(f.interval_secs)}</td>
     <td class="num">${f.last_items ?? '—'}</td>
-    <td class="num hide-sm">${f.fail_count || ''}</td></tr>`).join('') : '<tr><td colspan="8" class="empty">No feed matches.</td></tr>';
+    <td class="num hide-sm">${f.fail_count || ''}</td></tr>`]);
+  patchRows($('#rows'), trs, '<tr><td colspan="8" class="empty">No feed matches.</td></tr>');
   $('#updated').textContent = `updated ${new Date().toLocaleTimeString([], {hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23'})} · refreshes every 10 s`;
 }
 async function tick(){

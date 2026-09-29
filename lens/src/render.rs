@@ -395,6 +395,19 @@ pub fn audience_strip(input: &Input, outlets: &[&str], large: bool) -> String {
     )
 }
 
+/// Outlets in a story that wrote their own report, and outlets whose
+/// every item was the same text as another outlet's (a copy).
+pub fn copy_split(c: &Cluster, f: &crate::derive::ClusterFacts) -> (usize, usize) {
+    let mut by: std::collections::BTreeMap<&str, bool> = Default::default();
+    for j in &c.timeline {
+        let is_copy = f.copies_of.contains_key(&j.item_id);
+        let e = by.entry(j.outlet_id.as_str()).or_insert(true);
+        *e = *e && is_copy;
+    }
+    let copies = by.values().filter(|v| **v).count();
+    (by.len() - copies, copies)
+}
+
 /// Countries of the outlets in a story, from ledger's Wikidata country
 /// claims, most outlets first. An outlet with several counts each.
 pub fn story_countries(input: &Input, outlets: &[&str]) -> Vec<(String, usize)> {
@@ -567,33 +580,24 @@ pub fn cluster_card(
         origin_link(input, &c.origin_outlet_id),
         time_el(c.created_at, input.export_time)
     );
-    if !c.syndication.is_empty() {
-        let _ = write!(
-            s,
-            "<span class=\"sep\">·</span><span>{}</span>",
-            n(c.syndication.len(), "syndication group")
-        );
-    }
-    // The counts that placed the card (docs/algorithms.md §4), said only
-    // where they add to the outlet count: independent reports when copies
-    // made some outlets not count, languages when there is more than one.
-    // The full reach is on the card as data-reach and in the JSON twin.
+    // Own reports against copies (design §5): outlets whose every item on
+    // the story was the same text as another outlet's are copies. Shown
+    // only when there are some; the count of each is in words.
     if let Some(f) = reach {
-        let reports = f.reports as usize != c.outlet_count as usize;
-        let text = match (f.languages > 1, reports) {
-            (true, _) => Some(format!(
-                "{} in {} languages",
-                n(f.reports as usize, "independent report"),
-                f.languages
-            )),
-            (false, true) => Some(n(f.reports as usize, "independent report")),
-            (false, false) => None,
-        };
-        if let Some(t) = text {
+        let (own, copies) = copy_split(c, f);
+        if copies > 0 {
+            let total = (own + copies).max(1) as f64;
             let _ = write!(
                 s,
-                "<span class=\"sep\">·</span><span title=\"reach = independent reports in the window + languages − 1\">{t}</span>"
+                "<span class=\"sep\">·</span><span class=\"kg-split\" title=\"{own} of {} outlets wrote their own report; {copies} ran the same text as another outlet\"><span class=\"bar\" aria-hidden=\"true\"><span class=\"own\" style=\"width: {:.0}%\"></span></span>{} · {}</span>",
+                own + copies,
+                own as f64 / total * 100.0,
+                n(own, "own report"),
+                n(copies, "copy")
             );
+        }
+        if f.languages > 1 {
+            let _ = write!(s, "<span class=\"sep\">·</span><span>in {} languages</span>", f.languages);
         }
     }
     // How far across the world: the outlets' countries (Wikidata), when
@@ -684,10 +688,6 @@ pub fn claim_card(input: &Input, c: &Claim) -> String {
 /// The same card without notes, summaries, measurement lines or
 /// discussion links: for a story page listing many outlets, where the
 /// outlet page has the full record one click away.
-pub fn claim_card_compact(input: &Input, c: &Claim) -> String {
-    claim_card_with(input, c, false)
-}
-
 fn claim_card_with(input: &Input, c: &Claim, full: bool) -> String {
     let source = input.sources.get(&c.source_id);
     let (sname, licence) = source
@@ -727,18 +727,16 @@ fn claim_card_with(input: &Input, c: &Claim, full: bool) -> String {
             esc(a)
         );
     }
-    let _ = write!(
-        s,
-        "<span class=\"sep\">·</span><span class=\"kg-status {}\"><span>{}</span></span></div>",
-        if f.stale { "warn" } else { "ok" },
-        if f.stale {
-            format!("stale, {} days old", f.age_days)
-        } else if f.age_days == 0 {
-            "retrieved today".to_string()
-        } else {
-            format!("{} days old", f.age_days)
-        }
-    );
+    // The age only when it matters: a stale fact says so; a fresh one's
+    // retrieved date already tells its age.
+    if f.stale {
+        let _ = write!(
+            s,
+            "<span class=\"sep\">·</span><span class=\"kg-status warn\"><span>stale, {} days old</span></span>",
+            f.age_days
+        );
+    }
+    s.push_str("</div>");
     if full {
         if let Some(w) = get("window_days").and_then(|v| v.as_i64()) {
             let _ = write!(
@@ -1197,7 +1195,7 @@ mod tests {
             "no curve when nothing moved after the first bucket"
         );
         assert!(!flat.contains("kg-spark-n"), "no bare count beside nothing");
-        assert!(h.contains("1 syndication group<"));
+        assert!(!h.contains("syndication group"), "copies are said as own reports against copies");
         let page = html(&Page {
             title: "T",
             description: "D",
