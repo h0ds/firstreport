@@ -2,6 +2,7 @@
 
 pub mod agents;
 pub mod debug;
+pub mod network;
 pub mod openapi;
 pub mod routes;
 
@@ -22,6 +23,9 @@ pub struct AppState {
     pub join_threshold: f32,
     /// Ledger base URL for outlet links; empty for none.
     pub ledger_url: String,
+    /// Feed URLs in the loaded feeds.toml. The store also keeps rows for
+    /// feeds that were since removed or moved; `/v1/feeds` marks which is which.
+    pub configured_feeds: std::sync::Arc<std::collections::HashSet<String>>,
 }
 
 pub fn router(state: AppState) -> axum::Router {

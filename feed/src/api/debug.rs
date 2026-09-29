@@ -258,7 +258,8 @@ async function tick(){
     const now = Math.floor(Date.now()/1000);
     const p = st.process, s = st.store;
     $('#stats').innerHTML = [
-      ['feeds', `${s.feeds_total} <span class="muted">${s.feeds_dead} dead</span>`],
+      // The feeds count opens the network dashboard: every feed and its health.
+      ['feeds', `<a href="/feeds" title="Every feed and its status">${st.feeds_configured ?? s.feeds_total}</a> <span class="muted">${s.feeds_dead} dead</span>`],
       ['items / hour', s.items_last_hour], ['items total', s.items_total],
       ['embedded', s.items_embedded], ['active clusters', p.active_clusters],
       ['embed p50', (p.embed_latency.p50_us/1000).toFixed(1)+' ms'],

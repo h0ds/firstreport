@@ -34,6 +34,7 @@ pub(crate) fn routes() -> Vec<(&'static str, MethodRouter<AppState>)> {
         ("/v1/outlets/{id}", get(get_outlet)),
         ("/v1/stats", get(stats)),
         ("/debug", get(debug_page)),
+        ("/feeds", get(network_page)),
         ("/llms.txt", get(llms_txt)),
         ("/v1/openapi.json", get(openapi)),
         ("/robots.txt", get(robots_txt)),
@@ -286,6 +287,14 @@ async fn lookup(State(s): State<AppState>, Query(q): Query<LookupQ>) -> Response
     }
 
     Json(out).into_response()
+}
+
+async fn network_page() -> Response {
+    (
+        [(header::CONTENT_TYPE, "text/html; charset=utf-8")],
+        super::network::PAGE,
+    )
+        .into_response()
 }
 
 async fn debug_page() -> Response {
@@ -676,6 +685,9 @@ pub(crate) struct FeedOut {
     state: crate::store::writer::FeedState,
     /// Seconds since the last successful fetch, if any.
     ok_age_secs: Option<i64>,
+    /// Whether this URL is in the loaded feeds.toml. False for rows kept
+    /// from feeds that were removed or replaced; those are no longer polled.
+    configured: bool,
 }
 
 /// Per-feed health, newest failures first.
@@ -688,6 +700,7 @@ async fn feeds(State(s): State<AppState>, Query(q): Query<FeedsQ>) -> Response {
     let filter = q.filter.unwrap_or_else(|| "all".into());
     let mut out: Vec<FeedOut> = rows
         .into_iter()
+        .filter(|f| filter == "history" || s.configured_feeds.contains(&f.url))
         .filter(|f| match filter.as_str() {
             "failing" => f.fail_count > 0 && !f.dead,
             "dead" => f.dead,
@@ -697,6 +710,7 @@ async fn feeds(State(s): State<AppState>, Query(q): Query<FeedsQ>) -> Response {
         })
         .map(|f| FeedOut {
             ok_age_secs: f.last_ok_at.map(|o| t - o),
+            configured: s.configured_feeds.contains(&f.url),
             state: f,
         })
         .collect();
@@ -782,6 +796,9 @@ async fn get_outlet(State(s): State<AppState>, Path(id): Path<String>) -> Respon
 #[derive(Serialize, JsonSchema)]
 pub(crate) struct StatsOut {
     contract_version: u32,
+    /// Feeds in the loaded feeds.toml. `store.feeds_total` also counts
+    /// rows kept from feeds that were removed or replaced.
+    feeds_configured: usize,
     process: crate::stats::StatsSnapshot,
     store: reader::StoreStats,
 }
@@ -791,6 +808,7 @@ async fn stats(State(s): State<AppState>) -> Response {
     match s.reader.call(move |c| reader::stats(c, t)).await {
         Ok(store) => Json(StatsOut {
             contract_version: crate::types::CONTRACT_VERSION,
+            feeds_configured: s.configured_feeds.len(),
             process: s.stats.snapshot(t),
             store,
         })

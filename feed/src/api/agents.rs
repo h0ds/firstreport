@@ -40,6 +40,7 @@ sourced facts about each outlet.
 - `GET /v1/stats`
 - `GET /v1/openapi.json` - OpenAPI 3.1 description of all of the above
 - `GET /debug` - the same data as a page for people
+- `GET /feeds` - every feed and its health as a page for people (the data is `GET /v1/feeds`)
 
 ## Rules of use
 

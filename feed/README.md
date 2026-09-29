@@ -65,7 +65,8 @@ Embed latency (amortized per item, p50 and p99) is reported in `/v1/stats`.
 | `GET /v1/clusters/{id}` | contract `Cluster` plus its items |
 | `GET /v1/clusters/{id}/timeline` | ordered joins only |
 | `GET /v1/events?after_seq=&limit=` | cluster event log for incremental sync |
-| `GET /v1/feeds?filter=all\|failing\|dead\|stale\|quarantined` | per-feed health: last status and error, adapted interval, fail count, permanent moves, the steward's signals and quarantine |
+| `GET /v1/feeds?filter=all\|failing\|dead\|stale\|quarantined\|history` | per-feed health: last status and error, adapted interval, fail count, permanent moves, the steward's signals and quarantine; configured feeds only unless `history` |
+| `GET /feeds` | network dashboard: every feed with its outlet, status light and last fetch, linked from the feeds count on `/debug` |
 | `GET /v1/outlets` | registry with domains and feeds |
 | `GET /v1/stats` | process counters, store totals, embed and assign latency |
 | `GET /debug` | live page showing clusters form, styled from `design/tokens.css` |

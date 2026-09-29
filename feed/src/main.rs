@@ -168,6 +168,8 @@ async fn run(
     outlets: config::Outlets,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let cfg = Arc::new(cfg);
+    let configured_feeds: Arc<std::collections::HashSet<String>> =
+        Arc::new(feeds.feeds.iter().map(|f| f.url.clone()).collect());
     let stats = Arc::new(stats::Stats::default());
     stats
         .started_at
@@ -294,6 +296,7 @@ async fn run(
         hamming_threshold: cfg.syndication.hamming_threshold,
         join_threshold: cfg.cluster.join_threshold,
         ledger_url: cfg.api.ledger_url.clone(),
+        configured_feeds,
     });
     let listener = tokio::net::TcpListener::bind(&cfg.api.bind).await?;
     info!(bind = %cfg.api.bind, "api listening");

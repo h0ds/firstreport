@@ -148,5 +148,6 @@ cursor for `GET /v1/events?after_seq=`. `merged` sets `merged_into`;
 ## Feed (operational, not part of the analytic contract)
 
 `GET /v1/feeds` describes poller state per feed: last status and error,
-adapted interval, permanent moves, dead flag. It is for operating `feed`
+adapted interval, permanent moves, dead flag, and `configured` (whether the
+URL is in the loaded `feeds.toml`). It is for operating `feed`
 and may change between versions without a contract bump.
