@@ -200,14 +200,32 @@ pub fn outlet_link(input: &Input, id: &str) -> String {
 /// rating), or nothing when `feed icons` found none. `origin` adds the
 /// origin ring.
 pub fn outlet_icon(input: &Input, id: &str, origin: bool) -> Option<String> {
-    let file = input.icons.get(id)?.file_name()?.to_str()?.to_string();
     let lean = allsides_label(input, id);
-    Some(format!(
-        "<img class=\"kg-icon{}{}\" src=\"/icons/{}\" alt=\"\" width=\"16\" height=\"16\" decoding=\"async\"{}>",
+    let classes = format!(
+        "{}{}",
         if origin { " kg-origin" } else { "" },
-        lean.map(|l| format!(" lean-{}", lean_slug(l))).unwrap_or_default(),
-        esc(&file),
-        lean.map(|l| format!(" title=\"AllSides: {l}\"")).unwrap_or_default()
+        lean.map(|l| format!(" lean-{}", lean_slug(l))).unwrap_or_default()
+    );
+    let title = lean.map(|l| format!(" title=\"AllSides: {l}\"")).unwrap_or_default();
+    // No icon: the outlet's first letter on a light tile, the same size,
+    // so rows line up and the origin ring always sits on a square.
+    let Some(file) = input.icons.get(id).and_then(|p| p.file_name()?.to_str().map(str::to_string)) else {
+        let name = input.outlet_name(id);
+        let letter = name
+            .trim_start_matches("unknown:")
+            .trim_start_matches("The ")
+            .chars()
+            .find(|c| c.is_alphanumeric())
+            .map(|c| c.to_uppercase().to_string())
+            .unwrap_or_default();
+        return Some(format!(
+            "<span class=\"kg-icon kg-letter{classes}\" aria-hidden=\"true\"{title}>{}</span>",
+            esc(&letter)
+        ));
+    };
+    Some(format!(
+        "<img class=\"kg-icon{classes}\" src=\"/icons/{}\" alt=\"\" width=\"16\" height=\"16\" decoding=\"async\"{title}>",
+        esc(&file)
     ))
 }
 
@@ -1232,7 +1250,8 @@ mod tests {
         );
         assert!(h.contains("data-id=\"1001\""));
         assert!(h.contains("href=\"/story/1001/\""));
-        assert!(h.contains("<span class=\"kg-origin-name\"><span class=\"kg-sr\">first to publish: </span><a href=\"/outlet/wire/\" data-outlet=\"wire\">Wire</a></span>"));
+        // No icon in the fixture: the origin ring sits on a letter tile.
+        assert!(h.contains("<span class=\"kg-outlet\"><span class=\"kg-icon kg-letter kg-origin\" aria-hidden=\"true\">W</span><span class=\"kg-sr\">first to publish: </span><a href=\"/outlet/wire/\" data-outlet=\"wire\">Wire</a></span>"), "{h}");
         assert!(!h.contains("first: "), "the origin is a ring, not the word");
         assert!(h.contains("aria-label=\"Outlets carrying the story, two-hour steps: 1, 2, 2"));
         let flat = cluster_card(&i, c, &[2; 12], 2, false, false, None);

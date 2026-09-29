@@ -258,7 +258,9 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 
 /* outlet badge (§10): the outlet's own icon, then its name. No box; the
    icon carries the outlet's colours, Kagami adds none. */
-.kg-outlet { display: inline-flex; align-items: center; gap: var(--kg-s1); white-space: nowrap; vertical-align: middle; }
+.kg-outlet { display: inline-flex; align-items: center; gap: var(--kg-s2); white-space: nowrap; vertical-align: middle; }
+/* an outlet with no icon: its first letter on a light 16px tile */
+.kg-icon.kg-letter { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); font-weight: 600; color: var(--kg-text-secondary); background: var(--kg-bg-subtle); }
 .kg-icon { width: 16px; height: 16px; border-radius: var(--kg-radius-input); object-fit: contain; background: var(--kg-bg); box-shadow: 0 0 0 1px var(--kg-line); flex: none; }
 /* icon row: the outlets carrying a story, joined order, origin first */
 .kg-stack { display: inline-flex; align-items: center; gap: var(--kg-s1); margin-left: var(--kg-s1); }
