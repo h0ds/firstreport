@@ -17,8 +17,18 @@ max_tokens = 128
 batch_size = 64
 batch_wait_ms = 200
 pooling = "mean"                 # mean (MiniLM, gte, e5) | cls (bge)
+tokenizer = "wordpiece"          # wordpiece (vocab.txt) | unigram (sentencepiece.bpe.model)
+preset = "minilm-l6"             # what fetch-model downloads: minilm-l6 (English) | multilingual-minilm-l12 (50 languages incl. Japanese)
 input_template = "{title} . {summary}"
-# model_url / runtime_url: leave unset to pick by target triple
+# model_url / vocab_url / runtime_url: leave unset to pick by preset and target triple
+#
+# English and Japanese together: swap the four lines above for
+#   model_path = "models/multilingual-minilm-l12-int8.onnx"
+#   vocab_path = "models/sentencepiece.bpe.model"
+#   tokenizer  = "unigram"
+#   preset     = "multilingual-minilm-l12"
+# run `feed fetch-model` again, add "ja" to cluster.languages, and re-check
+# cluster.join_threshold against the golden sets (docs/clustering.md).
 
 [cluster]
 join_threshold = 0.72

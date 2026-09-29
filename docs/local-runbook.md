@@ -193,31 +193,36 @@ could not read the current terms.
   cleared. No importer exists yet.
 - **Iffy Index** and similar lists: check licence before adding.
 
-## 8. Multilingual embeddings: designed, not built
+## 8. Multilingual embeddings: English and Japanese
 
-Disinformation crosses borders and MiniLM-L6 is English only. The
-swap was not built in the sandbox because the models worth using
-(`paraphrase-multilingual-MiniLM-L12-v2`, `multilingual-e5-small`) use
-XLM-RoBERTa's SentencePiece unigram tokenizer, not the WordPiece one
-`feed` has, and the vocabulary needed to test a bespoke implementation
-was on a blocked host. Writing a tokenizer blind would put unverified
-code in the clustering path. The design, for when the files can be
-fetched:
+Built and verified as far as the sandbox allowed: the SentencePiece
+unigram tokenizer matches the Python reference on the sentencepiece
+project's English and Japanese test models. What could not be done is
+run the real multilingual model, whose files are on huggingface.co.
 
-1. Download the model's `tokenizer.json` (HF tokenizers format) and
-   ONNX export. The tokenizer file is JSON: the unigram vocabulary with
-   log-probabilities, a Metaspace pre-tokenizer (`▁` for space) and a
-   `<s> … </s>` post-processor.
-2. Implement `embed/unigram.rs`: NFKC normalisation (the
-   `unicode-normalization` crate is commodity plumbing), Metaspace,
-   Viterbi segmentation over the unigram scores, special ids from the
-   file. Test by encoding a hundred multilingual headlines and diffing
-   against the ids the reference Python `tokenizers` library produces
-   for the same file.
-3. `embed.tokenizer = "wordpiece" | "unigram"` in config, chosen by
-   the model preset; the `Tokenizer` trait already isolates encode.
-4. Re-run both golden sets with the new model; the join threshold
-   will move and `feed/docs/clustering.md` says how to re-tune.
+1. In `feed/config/feed.toml`, switch the `[embed]` block to the
+   multilingual lines shown in the comment there (model path, vocab
+   path, `tokenizer = "unigram"`, `preset = "multilingual-minilm-l12"`),
+   and add `"ja"` to `cluster.languages`.
+2. `cd feed && cargo run -- fetch-model`. It downloads the model's
+   `sentencepiece.bpe.model` and int8 ONNX export for your machine.
+   If the repository has no `onnx/` directory for your architecture,
+   set `model_url` by hand to the `onnx/model.onnx` file.
+3. Check the tokenizer against the real vocabulary once:
+
+   ```
+   pip install sentencepiece
+   python3 -c "import sentencepiece as s; sp=s.SentencePieceProcessor(model_file='models/sentencepiece.bpe.model'); print(sp.encode('日銀、政策金利を据え置き'))"
+   ```
+
+   and compare with `RUST_LOG=feed=debug` output for the same headline,
+   remembering the XLM-RoBERTa offset: feed's ids are those plus one,
+   wrapped in 0 and 2. A difference on ordinary text is a bug to
+   report with the headline.
+4. Re-run both golden sets with the new model (`feed eval`). The join
+   threshold will move; `feed/docs/clustering.md` says how to re-tune.
+   Expect cross-language pairs to need a hand-labelled set of their
+   own before the threshold is trusted for Japanese.
 
 ## 9. The model question
 

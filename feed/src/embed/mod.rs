@@ -93,6 +93,7 @@ pub fn load_from_config(
                 &cfg.embed.runtime_lib,
                 &cfg.embed.model_path,
                 &cfg.embed.vocab_path,
+                cfg.embed.tokenizer,
                 cfg.embed.max_tokens,
                 cfg.embed.pooling,
                 threads,

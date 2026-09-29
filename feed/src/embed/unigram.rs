@@ -12,9 +12,6 @@
 //! The raw SentencePiece ids are available for the tests and for any
 //! model that uses them directly.
 
-// Wired into the embedder in the next commit.
-#![allow(dead_code)]
-
 use std::collections::HashMap;
 use std::path::Path;
 
@@ -43,7 +40,9 @@ pub struct Piece {
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum IdScheme {
     /// Ids as SentencePiece assigns them; sequence wrapped in the model's
-    /// own `<s>` and `</s>` when it has them.
+    /// own `<s>` and `</s>` when it has them. What the reference tests
+    /// compare against; no shipped preset uses it yet.
+    #[cfg_attr(not(test), allow(dead_code))]
     Native,
     /// XLM-RoBERTa: `<s>`=0, `<pad>`=1, `</s>`=2, `<unk>`=3, pieces +1.
     XlmRoberta,

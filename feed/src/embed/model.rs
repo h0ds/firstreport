@@ -9,7 +9,7 @@ use std::sync::OnceLock;
 use ort::session::Session;
 use ort::value::Tensor;
 
-use super::tokenizer::{Encoded, Tokenizer};
+use super::tokenizer::{AnyTokenizer, Encoded};
 use crate::config::Pooling;
 
 static RUNTIME: OnceLock<Result<(), String>> = OnceLock::new();
@@ -27,7 +27,10 @@ pub fn init_runtime(lib: &Path) -> Result<(), String> {
 
 pub struct Model {
     session: Session,
-    tokenizer: Tokenizer,
+    tokenizer: AnyTokenizer,
+    /// Whether the graph declares a `token_type_ids` input (BERT-family
+    /// models do, XLM-RoBERTa-family models do not).
+    wants_token_types: bool,
     max_tokens: usize,
     pooling: Pooling,
     dim: Option<usize>,
@@ -53,21 +56,33 @@ impl Model {
         runtime_lib: &Path,
         model: &Path,
         vocab: &Path,
+        tokenizer_kind: crate::config::TokenizerKind,
         max_tokens: usize,
         pooling: Pooling,
         threads: usize,
     ) -> Result<Self, ModelError> {
         init_runtime(runtime_lib).map_err(ModelError)?;
-        let tokenizer = Tokenizer::from_vocab_file(vocab)
-            .map_err(|e| ModelError(format!("vocab {}: {e}", vocab.display())))?;
+        let tokenizer = AnyTokenizer::load(tokenizer_kind, vocab)
+            .map_err(|e| ModelError(format!("tokenizer {}: {e}", vocab.display())))?;
         let session = Session::builder()?
             .with_optimization_level(ort::session::builder::GraphOptimizationLevel::Level3)?
             .with_intra_threads(threads.max(1))?
             .commit_from_file(model)
             .map_err(|e| ModelError(format!("model {}: {e}", model.display())))?;
+        let wants_token_types = session
+            .inputs()
+            .iter()
+            .any(|i| i.name() == "token_type_ids");
+        tracing::info!(
+            tokenizer = ?tokenizer_kind,
+            vocab = tokenizer.vocab_size(),
+            token_type_ids = wants_token_types,
+            "model loaded"
+        );
         Ok(Self {
             session,
             tokenizer,
+            wants_token_types,
             max_tokens,
             pooling,
             dim: None,
@@ -103,11 +118,18 @@ impl Model {
             }
         }
         let shape = [batch as i64, seq as i64];
-        let outputs = self.session.run(ort::inputs![
-            "input_ids" => Tensor::from_array((shape, ids))?,
-            "attention_mask" => Tensor::from_array((shape, mask.clone()))?,
-            "token_type_ids" => Tensor::from_array((shape, types))?,
-        ])?;
+        let outputs = if self.wants_token_types {
+            self.session.run(ort::inputs![
+                "input_ids" => Tensor::from_array((shape, ids))?,
+                "attention_mask" => Tensor::from_array((shape, mask.clone()))?,
+                "token_type_ids" => Tensor::from_array((shape, types))?,
+            ])?
+        } else {
+            self.session.run(ort::inputs![
+                "input_ids" => Tensor::from_array((shape, ids))?,
+                "attention_mask" => Tensor::from_array((shape, mask.clone()))?,
+            ])?
+        };
         let (out_shape, data) = outputs[0].try_extract_tensor::<f32>()?;
         let dims: Vec<i64> = out_shape.iter().copied().collect();
         if dims.len() != 3 || dims[0] as usize != batch || dims[1] as usize != seq {
@@ -205,6 +227,7 @@ mod tests {
             Path::new(&lib),
             &root.join("tiny.onnx"),
             &root.join("tiny-vocab.txt"),
+            crate::config::TokenizerKind::WordPiece,
             16,
             Pooling::Mean,
             1,

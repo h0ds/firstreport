@@ -14,6 +14,46 @@ pub const PAD: &str = "[PAD]";
 /// Longest word (in chars) WordPiece will attempt; longer ones become UNK.
 const MAX_WORD_CHARS: usize = 100;
 
+/// Either tokenizer behind one interface; chosen by `embed.tokenizer`.
+pub enum AnyTokenizer {
+    WordPiece(Tokenizer),
+    Unigram(super::unigram::Unigram),
+}
+
+impl AnyTokenizer {
+    pub fn load(kind: crate::config::TokenizerKind, path: &Path) -> std::io::Result<Self> {
+        use crate::config::TokenizerKind;
+        Ok(match kind {
+            TokenizerKind::WordPiece => AnyTokenizer::WordPiece(Tokenizer::from_vocab_file(path)?),
+            TokenizerKind::Unigram => AnyTokenizer::Unigram(super::unigram::Unigram::from_file(
+                path,
+                super::unigram::IdScheme::XlmRoberta,
+            )?),
+        })
+    }
+
+    pub fn encode(&self, text: &str, max_len: usize) -> Encoded {
+        match self {
+            AnyTokenizer::WordPiece(t) => t.encode(text, max_len),
+            AnyTokenizer::Unigram(t) => t.encode(text, max_len),
+        }
+    }
+
+    pub fn pad_id(&self) -> u32 {
+        match self {
+            AnyTokenizer::WordPiece(t) => t.pad_id(),
+            AnyTokenizer::Unigram(t) => t.pad_id(),
+        }
+    }
+
+    pub fn vocab_size(&self) -> usize {
+        match self {
+            AnyTokenizer::WordPiece(t) => t.vocab_size(),
+            AnyTokenizer::Unigram(t) => t.vocab_size(),
+        }
+    }
+}
+
 pub struct Tokenizer {
     vocab: HashMap<String, u32>,
     cls: u32,
@@ -61,6 +101,10 @@ impl Tokenizer {
 
     pub fn pad_id(&self) -> u32 {
         self.pad
+    }
+
+    pub fn vocab_size(&self) -> usize {
+        self.vocab.len()
     }
 
     /// `[CLS] tokens… [SEP]`, truncated so the total is at most `max_len`.
