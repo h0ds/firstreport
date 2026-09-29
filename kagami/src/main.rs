@@ -329,6 +329,25 @@ fn doctor(root: &Path) -> Result<(), String> {
         })
         .unwrap_or(0);
     line(claims > 0, &format!("ledger/data/claims ({claims} outlet files)"), "cd ledger && cargo run -- --outlets ../feed/config/outlets.toml import wikidata --write, then the other importers");
+    // The steward's view of the feeds (docs/steward.md §2), once there is
+    // a store to read: failing feeds and feeds it is holding.
+    if feed.join("data/feed.db").is_file() {
+        if let Some(t) = ts.iter().find(|t| t.name == "feed") {
+            println!("feed feeds:");
+            match std::process::Command::new(&t.bin)
+                .current_dir(&t.cwd)
+                .arg("feeds")
+                .output()
+            {
+                Ok(out) => {
+                    for l in String::from_utf8_lossy(&out.stdout).lines() {
+                        println!("  {l}");
+                    }
+                }
+                Err(e) => println!("  could not run feed feeds: {e}"),
+            }
+        }
+    }
     if missing == 0 {
         println!("everything in place: kagami run, then kagami site");
         Ok(())

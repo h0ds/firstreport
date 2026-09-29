@@ -520,6 +520,66 @@ pub fn replace_feed_url(toml_text: &str, old: &str, new: &str) -> Option<String>
     replaced.then_some(out)
 }
 
+/// A feed the steward is holding (docs/steward.md §2): it fetches and
+/// parses, but its items are not ingested until `until`.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct Quarantined {
+    pub url: String,
+    pub outlet_id: String,
+    pub reason: String,
+    pub until: i64,
+    pub timestamps_unreliable: bool,
+}
+
+/// Feeds under quarantine at `now`, and feeds flagged for unreliable
+/// timestamps, alphabetical.
+pub fn quarantined_feeds(states: &[crate::store::writer::FeedState], now: i64) -> Vec<Quarantined> {
+    let mut out: Vec<Quarantined> = states
+        .iter()
+        .filter_map(|s| {
+            let h = s.health.as_ref()?;
+            let q = h.quarantine.as_ref().filter(|q| now < q.until);
+            if q.is_none() && !h.timestamps_unreliable {
+                return None;
+            }
+            Some(Quarantined {
+                url: s.url.clone(),
+                outlet_id: s.outlet_id.clone(),
+                reason: q.map(|q| q.reason.clone()).unwrap_or_default(),
+                until: q.map(|q| q.until).unwrap_or(0),
+                timestamps_unreliable: h.timestamps_unreliable,
+            })
+        })
+        .collect();
+    out.sort_by(|a, b| a.url.cmp(&b.url));
+    out
+}
+
+/// Print the quarantined and flagged feeds, one per line. Nothing is
+/// printed when there are none: `feed feeds` is about problems.
+pub fn print_quarantined(q: &[Quarantined], now: i64) {
+    for f in q {
+        let mut what = Vec::new();
+        if !f.reason.is_empty() {
+            what.push(format!(
+                "quarantined, {} ({} h left)",
+                f.reason,
+                ((f.until - now).max(0) + 1_800) / 3_600
+            ));
+        }
+        if f.timestamps_unreliable {
+            what.push("timestamps unreliable".to_string());
+        }
+        println!("{}\t{}\t{}", f.outlet_id, f.url, what.join("; "));
+    }
+    if !q.is_empty() {
+        println!(
+            "# {} held or flagged by the steward (docs/steward.md §2); nothing to fix by hand, a quarantine lifts itself after a day",
+            q.len()
+        );
+    }
+}
+
 /// Print the failing feeds from the store, one per line.
 pub fn print_failing(failing: &[Failing]) {
     if failing.is_empty() {
@@ -586,6 +646,46 @@ mod feeds_tests {
         let urls: Vec<&str> = f.iter().map(|x| x.url.as_str()).collect();
         assert_eq!(urls, vec!["https://x/dead", "https://x/gone"]);
         assert!(f[0].dead && f[1].last_status == Some(404));
+    }
+
+    #[test]
+    fn quarantined_feeds_are_the_held_and_flagged_ones() {
+        use crate::steward::{Health, Quarantine};
+        let mut held = state("https://x/held", 0, false, Some(200));
+        held.health = Some(Health {
+            quarantine: Some(Quarantine {
+                reason: "flood".into(),
+                since: 0,
+                until: 86_400,
+            }),
+            ..Default::default()
+        });
+        let mut lifted = state("https://x/lifted", 0, false, Some(200));
+        lifted.health = Some(Health {
+            quarantine: Some(Quarantine {
+                reason: "old".into(),
+                since: 0,
+                until: 10,
+            }),
+            ..Default::default()
+        });
+        let mut flagged = state("https://x/flagged", 0, false, Some(200));
+        flagged.health = Some(Health {
+            timestamps_unreliable: true,
+            ..Default::default()
+        });
+        let states = vec![
+            state("https://x/ok", 0, false, Some(200)),
+            held,
+            lifted,
+            flagged,
+        ];
+        let q = quarantined_feeds(&states, 100);
+        let urls: Vec<&str> = q.iter().map(|x| x.url.as_str()).collect();
+        assert_eq!(urls, vec!["https://x/flagged", "https://x/held"]);
+        assert!(q[0].reason.is_empty() && q[0].timestamps_unreliable);
+        assert_eq!(q[1].reason, "flood");
+        assert_eq!(q[1].until, 86_400);
     }
 
     #[test]

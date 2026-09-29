@@ -111,7 +111,7 @@ fn operation(path: &str) -> Value {
         }
         "/v1/feeds" => {
             json!({"get": {"operationId": "feeds", "summary": "Per-feed poller state, failures first. Operational; not part of the analytic contract.",
-                "parameters": [q("filter", json!({"type": "string", "enum": ["all", "failing", "dead", "stale"], "default": "all"}), "stale means no success in 24 h.")],
+                "parameters": [q("filter", json!({"type": "string", "enum": ["all", "failing", "dead", "stale", "quarantined"], "default": "all"}), "stale means no success in 24 h; quarantined means the steward is holding the feed's items, with the reason and release time in health.quarantine.")],
                 "responses": ok(json!({"type": "array", "items": {"$ref": "#/components/schemas/Feed"}}))}})
         }
         "/v1/outlets" => {

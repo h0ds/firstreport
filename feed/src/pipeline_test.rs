@@ -247,6 +247,20 @@ async fn fixture_through_store_and_api() {
     writer
         .send(store::WriteMsg::FeedState(Box::new(feed.clone())))
         .await;
+    let mut held_state = quarantined.clone();
+    held_state.url = "https://www.example.com/held.xml".into();
+    held_state.health = held.health.clone();
+    // The fixture clock is 2024; the filter judges against the wall clock.
+    if let Some(q) = held_state
+        .health
+        .as_mut()
+        .and_then(|h| h.quarantine.as_mut())
+    {
+        q.until = i64::MAX / 4;
+    }
+    writer
+        .send(store::WriteMsg::FeedState(Box::new(held_state)))
+        .await;
     writer.flush().await;
 
     // API over the same store.
@@ -405,10 +419,25 @@ async fn fixture_through_store_and_api() {
     );
 
     let v = body_json(app.clone().oneshot(get("/v1/feeds")).await.unwrap()).await;
-    assert_eq!(v.as_array().unwrap().len(), 1);
+    assert_eq!(v.as_array().unwrap().len(), 2);
     assert_eq!(v[0]["url"], "https://www.example.com/feed.xml");
     assert_eq!(v[0]["base_interval_secs"], 900);
     assert!(v[0].get("etag").is_none(), "validators are not exposed");
+    assert!(v[0]["health"]["quarantine"].is_null());
+    // The steward's view rides on the feed row: reason and release time.
+    let v = body_json(
+        app.clone()
+            .oneshot(get("/v1/feeds?filter=quarantined"))
+            .await
+            .unwrap(),
+    )
+    .await;
+    assert_eq!(v.as_array().unwrap().len(), 1);
+    assert_eq!(v[0]["url"], "https://www.example.com/held.xml");
+    let q = &v[0]["health"]["quarantine"];
+    assert!(q["reason"].as_str().unwrap().contains("failed to parse"));
+    assert!(q["until"].as_i64().unwrap() > q["since"].as_i64().unwrap());
+    assert_eq!(v[0]["health"]["signals"]["fetches"], 11);
     let v = body_json(
         app.clone()
             .oneshot(get("/v1/feeds?filter=dead"))

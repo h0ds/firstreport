@@ -657,7 +657,8 @@ async fn snapshot_body(State(s): State<AppState>, Path(id): Path<String>) -> Res
 
 #[derive(Deserialize)]
 struct FeedsQ {
-    /// `failing`, `dead`, `stale` (no success in 24 h), or `all` (default).
+    /// `failing`, `dead`, `stale` (no success in 24 h), `quarantined`
+    /// (held by the steward, docs/steward.md §2), or `all` (default).
     filter: Option<String>,
 }
 
@@ -683,6 +684,7 @@ async fn feeds(State(s): State<AppState>, Query(q): Query<FeedsQ>) -> Response {
             "failing" => f.fail_count > 0 && !f.dead,
             "dead" => f.dead,
             "stale" => f.last_ok_at.map(|o| t - o > 86_400).unwrap_or(true),
+            "quarantined" => f.health.as_ref().is_some_and(|h| h.is_quarantined(t)),
             _ => true,
         })
         .map(|f| FeedOut {
