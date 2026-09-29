@@ -40,6 +40,10 @@ pub fn write_site(input: &Input, out: &Path, window_hours: i64) -> Result<(usize
         .map_err(|e| e.to_string())?;
     std::fs::write(tmp.join("robots.txt"), crate::llms::ROBOTS_TXT).map_err(|e| e.to_string())?;
     write_twins(&tmp, &crate::pages::home::home(input, window_hours))?;
+    write_twins(
+        &tmp.join("search"),
+        &crate::pages::search::search(input, window_hours),
+    )?;
     let mut n = 0;
     for c in input.clusters.values() {
         if c.timeline.is_empty() {

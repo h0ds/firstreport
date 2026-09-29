@@ -4,6 +4,7 @@
 
 pub mod home;
 pub mod outlet;
+pub mod search;
 pub mod story;
 
 pub struct Twins {
