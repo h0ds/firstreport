@@ -89,6 +89,26 @@ pub struct Cluster {
     pub syndication: Vec<SynGroup>,
     #[serde(default)]
     pub expired: bool,
+    /// How sure feed's clustering was (docs/steward.md §3). Absent in
+    /// exports from before it was recorded.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub confidence: Option<Confidence>,
+}
+
+#[derive(Debug, Clone, Deserialize, Serialize, PartialEq, Default)]
+pub struct Confidence {
+    #[serde(default)]
+    pub join_threshold: f32,
+    #[serde(default)]
+    pub weakest_join: Option<f32>,
+    #[serde(default)]
+    pub join_margin: Option<f32>,
+    #[serde(default)]
+    pub unscored: u32,
+    #[serde(default)]
+    pub merged: bool,
+    #[serde(default)]
+    pub languages: Vec<String>,
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]

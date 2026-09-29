@@ -364,6 +364,7 @@ mod tests {
                 item_ids: vec![1, 2, 3],
             }],
             expired: false,
+            confidence: None,
         };
         let f = cluster_facts(&c, &items, &[], 200, DAY);
         assert_eq!(f.outlets_24h, 5);

@@ -76,6 +76,49 @@ fn text_before(input: &Input, item_id: u64, ts: i64) -> Option<&crate::input::Re
         .find(|r| r.seen_at < ts)
 }
 
+/// The method lines (docs/steward.md §3), the same in HTML and Markdown.
+/// An export from before confidence was recorded says so rather than
+/// showing zeros.
+pub fn method_lines(c: &Cluster) -> Vec<String> {
+    let Some(k) = &c.confidence else {
+        return vec!["Clustering confidence was not recorded in this export.".to_string()];
+    };
+    let mut v = vec![format!(
+        "Members joined by text similarity at or above {:.2} (cosine to the story's centroid).",
+        k.join_threshold
+    )];
+    match (k.weakest_join, k.join_margin) {
+        (Some(w), Some(m)) => v.push(format!(
+            "Weakest join {w:.2}, {m:.2} above the threshold{}.",
+            if m < 0.05 {
+                "; one borderline join holds this story together"
+            } else {
+                ""
+            }
+        )),
+        _ => v.push("No member has a recorded join similarity.".to_string()),
+    }
+    if k.unscored > 0 {
+        v.push(format!(
+            "{} without a recorded similarity (the first item, or moved here by a merge).",
+            n(k.unscored as usize, "member")
+        ));
+    }
+    v.push(if k.merged {
+        "Formed by merging two stories whose centroids met the merge threshold.".to_string()
+    } else {
+        "Not merged from another story.".to_string()
+    });
+    if !k.languages.is_empty() {
+        v.push(format!(
+            "{}: {}.",
+            n(k.languages.len(), "language"),
+            k.languages.join(", ")
+        ));
+    }
+    v
+}
+
 pub fn story(input: &Input, c: &Cluster) -> Twins {
     let f: ClusterFacts = cluster_facts(
         c,
@@ -228,6 +271,15 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         }
         b.push_str("</ul>");
     }
+
+    // Method (docs/steward.md §3): how sure the clustering was, as
+    // counts over the members. Shown so a borderline story says so.
+    let method = method_lines(c);
+    b.push_str("<h2>Method</h2><p class=\"kg-muted\">Kagami feed's own judgement of this story, as counts; see <a href=\"/about/#story\">what a story is</a>.</p><ul class=\"stories method\" data-section=\"method\">");
+    for l in &method {
+        let _ = write!(b, "<li>{}</li>", esc(l));
+    }
+    b.push_str("</ul>");
 
     b.push_str("<h2>About the outlets</h2><p class=\"kg-muted\">From Kagami ledger, each fact with its source; the outlet's page has the full record. Outlets with no claims yet are listed as such.</p>");
     for (outlet, _) in &rows {
@@ -435,6 +487,10 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             );
         }
     }
+    md.push_str("\n## Method\n\nKagami feed's own judgement of this story, as counts.\n\n");
+    for l in &method {
+        let _ = writeln!(md, "- {l}");
+    }
     md.push_str("\n## About the outlets\n");
     for (outlet, _) in &rows {
         let _ = write!(md, "\n### {}\n", input.outlet_name(outlet));
@@ -549,6 +605,43 @@ mod tests {
         assert!(one.json["coverage_by_label"].as_array().unwrap().is_empty());
         // bias from a source that forbids redistribution never reaches lens
         assert!(!t.html.contains("data-source=\"allsides\""));
+    }
+
+    #[test]
+    fn method_section_states_confidence_or_its_absence() {
+        use crate::input::Confidence;
+        let i = fixture_input();
+        let mut c = i.clusters[&1001].clone();
+        // The fixture export predates confidence: said, not zeroed.
+        let t = story(&i, &c);
+        assert!(t.html.contains("<h2>Method</h2>"));
+        assert!(t.html.contains("not recorded in this export"));
+        assert!(t.md.contains("## Method"));
+        assert!(t.json["cluster"].get("confidence").is_none());
+
+        c.confidence = Some(Confidence {
+            join_threshold: 0.72,
+            weakest_join: Some(0.74),
+            join_margin: Some(0.02),
+            unscored: 1,
+            merged: true,
+            languages: vec!["en".into(), "ja".into()],
+        });
+        let t = story(&i, &c);
+        assert!(t.html.contains("Weakest join 0.74, 0.02 above the threshold; one borderline join holds this story together."));
+        assert!(t.html.contains("1 member without a recorded similarity"));
+        assert!(t.html.contains("Formed by merging"));
+        assert!(t.html.contains("2 languages: en, ja."));
+        assert!(
+            (t.json["cluster"]["confidence"]["join_margin"]
+                .as_f64()
+                .unwrap()
+                - 0.02)
+                .abs()
+                < 1e-6
+        );
+        assert!(t.md.contains("- Weakest join 0.74"));
+        assert!(!t.html.contains("Rating"));
     }
 
     #[test]

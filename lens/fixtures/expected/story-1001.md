@@ -21,6 +21,12 @@ Wikipedia: Reliable sources/Perennial sources on reliability (licence CC-BY-SA-4
 - No consensus: 1 outlet · Gazette
 
 
+## Method
+
+Kagami feed's own judgement of this story, as counts.
+
+- Clustering confidence was not recorded in this export.
+
 ## About the outlets
 
 ### Wire
