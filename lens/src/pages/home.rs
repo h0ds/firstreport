@@ -18,7 +18,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         .clusters
         .values()
         .filter(|c| c.last_active_at >= since && !c.timeline.is_empty())
-        .map(|c| (c, cluster_facts(c, &input.events, now)))
+        .map(|c| (c, cluster_facts(c, &input.items, &input.events, now)))
         .collect();
     recent.sort_by(|a, b| {
         b.1.outlets_24h

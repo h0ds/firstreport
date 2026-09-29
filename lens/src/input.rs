@@ -33,6 +33,9 @@ pub struct Item {
     pub published_at: i64,
     #[serde(default)]
     pub fetched_at: i64,
+    /// Detected from the item's own text by `feed`; never from the outlet.
+    #[serde(default)]
+    pub lang: String,
     #[serde(default)]
     pub text_hash: u64,
     #[serde(default)]

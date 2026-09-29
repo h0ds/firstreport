@@ -77,7 +77,7 @@ fn text_before(input: &Input, item_id: u64, ts: i64) -> Option<&crate::input::Re
 }
 
 pub fn story(input: &Input, c: &Cluster) -> Twins {
-    let f: ClusterFacts = cluster_facts(c, &input.events, input.export_time);
+    let f: ClusterFacts = cluster_facts(c, &input.items, &input.events, input.export_time);
     let rows = by_outlet(input, c);
     let t0 = rows
         .first()
