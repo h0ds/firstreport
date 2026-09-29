@@ -36,6 +36,10 @@ pub struct Poll {
     /// Fraction of each wait randomized (deterministically) so feeds on
     /// the same interval don't burst together. 0 disables.
     pub jitter: f64,
+    /// Request budgets (docs/steward.md §5): feed requests per host per
+    /// hour and in total; a request over budget waits. 0 disables one.
+    pub per_host_requests_per_hour: u32,
+    pub global_requests_per_hour: u32,
 }
 
 impl Default for Poll {
@@ -49,6 +53,8 @@ impl Default for Poll {
             min_interval_secs: 300,
             max_interval_secs: 3_600,
             jitter: 0.1,
+            per_host_requests_per_hour: 240,
+            global_requests_per_hour: 20_000,
         }
     }
 }

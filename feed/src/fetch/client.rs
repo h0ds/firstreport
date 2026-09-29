@@ -5,7 +5,8 @@
 //! publisher's robots.txt honoured on every request: a disallowed path
 //! is never fetched and `Crawl-delay` spaces requests to the host.
 
-use std::collections::{HashMap, HashSet};
+use std::collections::{HashMap, HashSet, VecDeque};
+use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::{Arc, Mutex};
 use std::time::{Duration, Instant};
 
@@ -42,6 +43,32 @@ pub const ROBOTS_RETRY: Duration = Duration::from_secs(3600);
 /// Longest `Crawl-delay` honoured; anything larger is capped so one
 /// host cannot stall the poller.
 pub const MAX_CRAWL_DELAY: Duration = Duration::from_secs(120);
+/// The window the request budgets (docs/steward.md §5) are counted over.
+pub const BUDGET_WINDOW: Duration = Duration::from_secs(3600);
+
+/// Request budgets: how many feed requests a host, and Kagami as a
+/// whole, may be sent per window. A request over budget waits for the
+/// oldest one in the window to age out. 0 means no budget.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct Budgets {
+    pub per_host: u32,
+    pub global: u32,
+}
+
+impl Default for Budgets {
+    fn default() -> Self {
+        Self {
+            per_host: 240,
+            global: 20_000,
+        }
+    }
+}
+
+#[derive(Default)]
+struct BudgetState {
+    per_host: HashMap<String, VecDeque<Instant>>,
+    global: VecDeque<Instant>,
+}
 
 #[derive(Debug)]
 pub struct Fetched {
@@ -130,6 +157,11 @@ pub struct Client {
     robots: Arc<Mutex<HashMap<String, RobotsEntry>>>,
     /// Per host: when the last request was sent, for Crawl-delay.
     last_request: Arc<Mutex<HashMap<String, Instant>>>,
+    budgets: Budgets,
+    budget_window: Duration,
+    budget: Arc<Mutex<BudgetState>>,
+    /// Requests that waited on a budget, for `/v1/stats`.
+    budget_waits: Arc<AtomicU64>,
 }
 
 #[derive(Clone)]
@@ -170,7 +202,83 @@ impl Client {
             compat_hosts: Arc::new(Mutex::new(HashSet::new())),
             robots: Arc::new(Mutex::new(HashMap::new())),
             last_request: Arc::new(Mutex::new(HashMap::new())),
+            budgets: Budgets::default(),
+            budget_window: BUDGET_WINDOW,
+            budget: Arc::new(Mutex::new(BudgetState::default())),
+            budget_waits: Arc::new(AtomicU64::new(0)),
         })
+    }
+
+    /// Set the request budgets (docs/steward.md §5).
+    pub fn with_budgets(mut self, budgets: Budgets) -> Self {
+        self.budgets = budgets;
+        self
+    }
+
+    /// Shorten the budget window; for tests.
+    #[cfg(test)]
+    pub fn with_budget_window(mut self, window: Duration) -> Self {
+        self.budget_window = window;
+        self
+    }
+
+    /// Requests that had to wait for budget so far.
+    pub fn budget_waits(&self) -> u64 {
+        self.budget_waits.load(Ordering::Relaxed)
+    }
+
+    /// How long until this host and the whole client are under budget,
+    /// or None when a request may go now; records the request when so.
+    fn budget_wait(&self, host: &str, now: Instant) -> Option<Duration> {
+        let window = self.budget_window;
+        let mut st = self.budget.lock().unwrap_or_else(|p| p.into_inner());
+        let trim = |q: &mut VecDeque<Instant>| {
+            while q.front().is_some_and(|t| now.duration_since(*t) >= window) {
+                q.pop_front();
+            }
+        };
+        let until = |q: &VecDeque<Instant>, cap: u32| -> Option<Duration> {
+            if cap == 0 || (q.len() as u32) < cap {
+                None
+            } else {
+                q.front()
+                    .map(|t| window.saturating_sub(now.duration_since(*t)))
+            }
+        };
+        trim(&mut st.global);
+        let mut wait = until(&st.global, self.budgets.global);
+        let hq = st.per_host.entry(host.to_string()).or_default();
+        trim(hq);
+        if let Some(w) = until(hq, self.budgets.per_host) {
+            wait = Some(wait.map_or(w, |g| g.max(w)));
+        }
+        if wait.is_none() {
+            hq.push_back(now);
+            st.global.push_back(now);
+        }
+        wait
+    }
+
+    /// Wait until the request fits the budgets, then count it.
+    async fn honour_budget(&self, host: &str) {
+        let mut waited = false;
+        loop {
+            match self.budget_wait(host, Instant::now()) {
+                None => break,
+                Some(d) => {
+                    if !waited {
+                        waited = true;
+                        self.budget_waits.fetch_add(1, Ordering::Relaxed);
+                        tracing::info!(
+                            host,
+                            wait_secs = d.as_secs(),
+                            "request budget reached; waiting"
+                        );
+                    }
+                    tokio::time::sleep(d.max(Duration::from_millis(10))).await;
+                }
+            }
+        }
     }
 
     /// The host's rules, fetched at most once per ROBOTS_TTL. A file
@@ -292,6 +400,7 @@ impl Client {
         if !decision.allowed {
             return Err(FetchError::Disallowed);
         }
+        self.honour_budget(&host).await;
         self.honour_crawl_delay(&host, decision.crawl_delay).await;
         self.note_request(&host);
 

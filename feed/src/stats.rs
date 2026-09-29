@@ -30,6 +30,8 @@ pub struct Stats {
     pub future_dates: AtomicU64,
     /// Items parsed from a quarantined feed and not ingested.
     pub items_held: AtomicU64,
+    /// Requests that waited on a request budget (docs/steward.md §5).
+    pub budget_waits: AtomicU64,
     pub merges: AtomicU64,
     embed_latency_us: Mutex<Vec<u64>>,
     assign_latency_us: Mutex<Vec<u64>>,
@@ -92,6 +94,7 @@ pub struct StatsSnapshot {
     /// Items whose feed-supplied date was clamped to the fetch time.
     pub future_dates: u64,
     pub items_held: u64,
+    pub budget_waits: u64,
     pub merges: u64,
 }
 
@@ -140,6 +143,7 @@ impl Stats {
             withdrawals: self.withdrawals.load(Relaxed),
             future_dates: self.future_dates.load(Relaxed),
             items_held: self.items_held.load(Relaxed),
+            budget_waits: self.budget_waits.load(Relaxed),
             merges: self.merges.load(Relaxed),
         }
     }

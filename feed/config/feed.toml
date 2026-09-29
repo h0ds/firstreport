@@ -7,6 +7,8 @@ adaptive = true                  # speed up feeds that yield items, slow down qu
 min_interval_secs = 300
 max_interval_secs = 3600
 jitter = 0.1                     # ±10% so feeds don't poll in lockstep
+per_host_requests_per_hour = 240 # request budgets (docs/steward.md §5): a request over budget waits; 0 disables
+global_requests_per_hour = 20000
 
 [embed]
 backend = "onnx"                 # onnx | hash (deterministic, model-free, for replay and CI)

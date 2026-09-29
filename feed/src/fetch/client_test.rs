@@ -266,3 +266,32 @@ async fn robots_txt_is_honoured_and_fetched_once() {
         "disallowed by the host's robots.txt"
     );
 }
+
+#[tokio::test]
+async fn request_budget_makes_the_third_request_wait() {
+    use std::time::{Duration, Instant};
+    let (base, hits) = serve();
+    let c = Client::new(4, 2)
+        .unwrap()
+        .with_budgets(super::client::Budgets {
+            per_host: 2,
+            global: 0,
+        })
+        .with_budget_window(Duration::from_millis(2_500));
+    let url = format!("{base}/feed");
+    // The server's robots.txt asks for a second between requests, so the
+    // window must outlast two of those for the budget to be what waits.
+    let t0 = Instant::now();
+    c.fetch(&url, None, None).await.unwrap();
+    c.fetch(&url, None, None).await.unwrap();
+    assert_eq!(c.budget_waits(), 0, "two fit the budget");
+    c.fetch(&url, None, None).await.unwrap();
+    assert_eq!(c.budget_waits(), 1, "the third waited for the window");
+    assert!(
+        t0.elapsed() >= Duration::from_millis(350),
+        "{:?}",
+        t0.elapsed()
+    );
+    // robots.txt plus three feed requests reached the server
+    assert_eq!(hits.load(Ordering::SeqCst), 4);
+}

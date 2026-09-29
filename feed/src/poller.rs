@@ -98,7 +98,11 @@ impl Poller {
         writer: Writer,
         stats: Arc<Stats>,
     ) -> reqwest::Result<Self> {
-        let client = Client::new(cfg.poll.global_concurrency, cfg.poll.per_host_concurrency)?;
+        let client = Client::new(cfg.poll.global_concurrency, cfg.poll.per_host_concurrency)?
+            .with_budgets(crate::fetch::client::Budgets {
+                per_host: cfg.poll.per_host_requests_per_hour,
+                global: cfg.poll.global_requests_per_hour,
+            });
         let snapshot_dir = cfg.snapshots.dir.clone();
         Ok(Self {
             cfg,
@@ -211,6 +215,9 @@ impl Poller {
                 _ = tokio::time::sleep(sleep_for.min(Duration::from_secs(60))) => {}
                 Some(done) = inflight.join_next(), if !inflight.is_empty() => {
                     let Ok(done) = done else { continue };
+                    self.stats
+                        .budget_waits
+                        .store(self.client.budget_waits(), std::sync::atomic::Ordering::Relaxed);
                     let feed = sched.feed(done.idx).clone();
                     let (retry_after, status, error) = match &done.result {
                         Ok(f) => (None, Some(f.status), None),
