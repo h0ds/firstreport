@@ -24,6 +24,8 @@ project rules that apply to every pillar. `docs/local-runbook.md` lists
 everything that has not yet run outside the sandbox it was built in, with
 the commands to do it. `docs/steward.md` is the design for judging the
 data pipe, our own algorithms and our own conduct, and never the outlets.
+`docs/algorithms.md` is the public register of every rule Kagami runs to
+group, order, hold or flag anything; a rule not in it does not run.
 
 ## Visual layer
 
