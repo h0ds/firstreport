@@ -57,7 +57,7 @@ pub fn search(input: &Input, window_hours: i64) -> Twins {
     let mut b = String::new();
     let _ = write!(
         b,
-        "<h1>Search</h1><p class=\"kg-muted\">{} and {} from the {} hours to {}. Matches by name, id, domain or title; nothing is ranked beyond that.</p><input id=\"q\" class=\"kg-input\" type=\"search\" placeholder=\"Outlet name, id or domain; story title\" autocomplete=\"off\" autofocus><noscript><p class=\"kg-muted\">Search runs in the browser over <a href=\"/search/index.json\">index.json</a>; without scripts, read that file or the <a href=\"/\">front page</a>.</p></noscript><div id=\"outlets\"></div><div id=\"stories\"></div>{SCRIPT}",
+        "<h1>Search</h1><p class=\"kg-muted\">{} and {} from the {} hours to {}. Matches by name, id, domain or title; nothing is ranked beyond that.</p><input id=\"q\" class=\"kg-input wide\" type=\"search\" placeholder=\"Outlet name, id or domain; story title\" autocomplete=\"off\" autofocus><noscript><p class=\"kg-muted\">Search runs in the browser over <a href=\"/search/index.json\">index.json</a>; without scripts, read that file or the <a href=\"/\">front page</a>.</p></noscript><div id=\"outlets\"></div><div id=\"stories\"></div>{SCRIPT}",
         n(input.outlets.len(), "outlet"),
         n(stories.len(), "story"),
         window_hours,

@@ -22,5 +22,7 @@ h3 { margin: var(--kg-s5) 0 var(--kg-s2); }
 .stories { list-style: none; margin: 0; padding: 0; }
 .stories li { display: flex; gap: var(--kg-s3); align-items: baseline; padding: var(--kg-s2) 0; border-top: 1px solid var(--kg-line); }
 .stories .n { margin-left: auto; white-space: nowrap; }
+.changes .alt { display: block; font-size: var(--kg-fs-small); color: var(--kg-text-muted); }
+.kg-input.wide, input.wide { width: 100%; box-sizing: border-box; }
 .empty { color: var(--kg-text-muted); padding: var(--kg-s5) 0; }
 footer { margin-top: var(--kg-s8); padding-top: var(--kg-s4); border-top: 1px solid var(--kg-line); }

@@ -47,7 +47,9 @@ only if the daily cadence turns out to matter.
 ## 2. Inputs
 
 From `feed export --format ndjson`: `items`, `clusters` (with
-`timeline`, `syndication`, `expired`), `events`, `outlets`.
+`timeline`, `syndication`, `expired`), `events`, `outlets`, and
+`revisions` when present (older exports lack it; the story page then
+says the earlier text is not in the export).
 
 From `ledger export`: `claims`, `sources`, `outlets`.
 
@@ -252,12 +254,6 @@ be judged, not to be built.
   or misleading is a judgement to make on real pages.
 - **Window.** 24 hours on the front page and 30 days of stories on
   outlet pages are guesses. Tune on real data.
-- **Revision text.** The story page lists revisions and withdrawals
-  with their times but not the earlier text, because the feed export
-  carries events and not the revision rows. Either the export grows a
-  `revisions.ndjson` (additive, cheap) or the page keeps linking to
-  feed's revision route. Decide once live data shows how often it
-  matters.
 - **Site size.** A year of clusters is hundreds of thousands of story
   pages. Keep the last 30 days as pages and older stories as JSON only,
   or let the site grow? Decide when it is measured.

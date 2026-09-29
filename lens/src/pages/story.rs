@@ -42,6 +42,18 @@ fn by_outlet<'a>(input: &'a Input, c: &'a Cluster) -> Vec<(&'a str, Vec<&'a Item
     out
 }
 
+/// The item's text as it stood just before `ts`: the latest revision
+/// seen at or before it. None when the export carries no revisions
+/// for the item.
+fn text_before(input: &Input, item_id: u64, ts: i64) -> Option<&crate::input::Revision> {
+    input
+        .revisions
+        .get(&item_id)?
+        .iter()
+        .rev()
+        .find(|r| r.seen_at < ts)
+}
+
 pub fn story(input: &Input, c: &Cluster) -> Twins {
     let f: ClusterFacts = cluster_facts(c, &input.events, input.export_time);
     let rows = by_outlet(input, c);
@@ -133,12 +145,13 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
     }
 
     if !f.revisions.is_empty() || !f.withdrawals.is_empty() {
-        b.push_str("<h2>Changes</h2><p class=\"kg-muted\">Text that changed or disappeared after publication, as seen in later feed fetches. The earlier text is in feed's revision record.</p><ul class=\"stories\">");
+        b.push_str("<h2>Changes</h2><p class=\"kg-muted\">Text that changed or disappeared after publication, as seen in later feed fetches.</p><ul class=\"stories changes\">");
         for e in f.revisions.iter().chain(f.withdrawals.iter()) {
             let it = e.item_id.and_then(|id| input.items.get(&id));
+            let before = e.item_id.and_then(|id| text_before(input, id, e.ts));
             let _ = write!(
                 b,
-                "<li><span>{} {}</span><span class=\"n kg-muted\">{}</span></li>",
+                "<li><div><span>{} {}</span>{}</div><span class=\"n kg-muted\">{}</span></li>",
                 if e.kind == "revised" {
                     "Revised:"
                 } else {
@@ -151,6 +164,17 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
                     esc(&i.title)
                 ))
                 .unwrap_or_default(),
+                match (e.kind.as_str(), before, it) {
+                    ("revised", Some(old), Some(i)) if old.title != i.title =>
+                        format!("<span class=\"alt\">was: {}</span>", esc(&old.title)),
+                    ("revised", Some(old), Some(i)) if old.summary != i.summary => format!(
+                        "<span class=\"alt\">summary changed; was: {}</span>",
+                        esc(&old.summary)
+                    ),
+                    ("revised", None, _) =>
+                        "<span class=\"alt\">earlier text not in this export</span>".to_string(),
+                    _ => String::new(),
+                },
                 time_el(e.ts)
             );
         }
@@ -308,9 +332,10 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         md.push_str("\n## Changes\n\n");
         for e in f.revisions.iter().chain(f.withdrawals.iter()) {
             let it = e.item_id.and_then(|id| input.items.get(&id));
+            let before = e.item_id.and_then(|id| text_before(input, id, e.ts));
             let _ = writeln!(
                 md,
-                "- {} {} at {}",
+                "- {} {} at {}{}",
                 if e.kind == "revised" {
                     "Revised:"
                 } else {
@@ -323,7 +348,15 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
                     i.canonical_url
                 ))
                 .unwrap_or_default(),
-                datetime(e.ts)
+                datetime(e.ts),
+                match (e.kind.as_str(), before, it) {
+                    ("revised", Some(old), Some(i)) if old.title != i.title =>
+                        format!(" · was: {}", old.title),
+                    ("revised", Some(old), Some(i)) if old.summary != i.summary =>
+                        " · summary changed".to_string(),
+                    ("revised", None, _) => " · earlier text not in this export".to_string(),
+                    _ => String::new(),
+                }
             );
         }
     }
@@ -404,6 +437,11 @@ mod tests {
             .contains("### Wire\n\nReliability\n\n**Generally reliable**"));
         let rev = story(&i, &i.clusters[&1002]);
         assert!(rev.html.contains("<h2>Changes</h2>") && rev.html.contains("Revised:"));
-        assert!(rev.md.contains("- Revised: Wire [Story 1002]"));
+        assert!(rev
+            .html
+            .contains("<span class=\"alt\">was: Story 1002, as first seen</span>"));
+        assert!(rev.md.contains("- Revised: Wire [Story 1002](https://wire.example/1002) at 2025-08-24 14:53 UTC · was: Story 1002, as first seen"));
+        let wd = story(&i, &i.clusters[&1022]);
+        assert!(wd.html.contains("Withdrawn:") && !wd.html.contains("was:"));
     }
 }

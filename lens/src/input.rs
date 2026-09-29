@@ -105,6 +105,21 @@ pub struct Event {
     pub snapshot_id: Option<u64>,
 }
 
+/// One earlier version of an item's text, from `revisions.ndjson`
+/// (feed export, added after v1; optional on read).
+#[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
+pub struct Revision {
+    pub item_id: u64,
+    #[serde(default)]
+    pub snapshot_id: u64,
+    #[serde(default)]
+    pub seen_at: i64,
+    #[serde(default)]
+    pub title: String,
+    #[serde(default)]
+    pub summary: String,
+}
+
 #[derive(Debug, Clone, Deserialize, Serialize, PartialEq)]
 pub struct Source {
     pub id: String,
@@ -149,6 +164,8 @@ pub struct Input {
     pub items: HashMap<u64, Item>,
     pub clusters: BTreeMap<u64, Cluster>,
     pub events: Vec<Event>,
+    /// Per item, oldest first. Empty when the export predates the file.
+    pub revisions: HashMap<u64, Vec<Revision>>,
     pub sources: BTreeMap<String, Source>,
     /// Claims per outlet, in export order.
     pub claims: BTreeMap<String, Vec<Claim>>,
@@ -178,6 +195,12 @@ pub fn read(feed_export: &Path, ledger_export: &Path) -> Result<Input, String> {
     let items: Vec<Item> = read_ndjson(&feed_export.join("items.ndjson"))?;
     let clusters: Vec<Cluster> = read_ndjson(&feed_export.join("clusters.ndjson"))?;
     let events: Vec<Event> = read_ndjson(&feed_export.join("events.ndjson"))?;
+    let revisions_path = feed_export.join("revisions.ndjson");
+    let revisions: Vec<Revision> = if revisions_path.is_file() {
+        read_ndjson(&revisions_path)?
+    } else {
+        Vec::new()
+    };
     let sources: Vec<Source> = read_ndjson(&ledger_export.join("sources.ndjson"))?;
     let claims: Vec<Claim> = read_ndjson(&ledger_export.join("claims.ndjson"))?;
 
@@ -187,10 +210,17 @@ pub fn read(feed_export: &Path, ledger_export: &Path) -> Result<Input, String> {
         items: items.into_iter().map(|i| (i.id, i)).collect(),
         clusters: clusters.into_iter().map(|c| (c.id, c)).collect(),
         events,
+        revisions: HashMap::new(),
         sources: sources.into_iter().map(|s| (s.id.clone(), s)).collect(),
         claims: BTreeMap::new(),
         export_time,
     };
+    for r in revisions {
+        input.revisions.entry(r.item_id).or_default().push(r);
+    }
+    for v in input.revisions.values_mut() {
+        v.sort_by_key(|r| (r.seen_at, r.snapshot_id));
+    }
     // Claims for outlets the feed registry does not know are kept:
     // ledger is allowed to know more outlets than feed polls. Claims
     // from a source that forbids redistribution are dropped here as
@@ -245,6 +275,9 @@ mod tests {
         assert_eq!(i.claims["wire"].len(), 11);
         assert_eq!(i.claims["gazette"].len(), 7);
         assert!(i.export_time > 0);
+        assert_eq!(i.revisions.len(), 11, "10 revised items and one withdrawn");
+        assert_eq!(i.revisions[&1002][0].title, "Story 1002, as first seen");
+        assert_eq!(i.revisions[&1002][1].title, "Story 1002");
         let c = &i.clusters[&1001];
         assert_eq!(c.origin_outlet_id, "wire");
         assert_eq!(c.timeline.len(), 2);
