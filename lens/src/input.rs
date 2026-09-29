@@ -273,7 +273,7 @@ mod tests {
         assert!(i.events.windows(2).all(|w| w[0].seq <= w[1].seq));
         assert_eq!(i.sources.len(), 5);
         assert_eq!(i.claims["wire"].len(), 11);
-        assert_eq!(i.claims["gazette"].len(), 7);
+        assert_eq!(i.claims["gazette"].len(), 8);
         assert!(i.export_time > 0);
         assert_eq!(i.revisions.len(), 11, "10 revised items and one withdrawn");
         assert_eq!(i.revisions[&1002][0].title, "Story 1002, as first seen");

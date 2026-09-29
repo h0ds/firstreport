@@ -13,6 +13,14 @@ Membership is by text similarity, not by a person; treat it as evidence. No outl
 
 - Wire, Gazette · first at Wire · spread over 1.0h
 
+## Coverage by label
+
+Wikipedia: Reliable sources/Perennial sources on reliability (licence CC-BY-SA-4.0); the source's map, not ours.
+
+- Generally reliable: 1 outlet · Wire
+- No consensus: 1 outlet · Gazette
+
+
 ## About the outlets
 
 ### Wire
@@ -40,6 +48,13 @@ Founded
 Source: [Wikidata](https://www.wikidata.org/wiki/Q130879) · licence CC0-1.0 · retrieved 2025-08-12 · 41 days old
 
 ### Gazette
+
+Reliability
+
+**No consensus**
+Gazette (gazette.example)
+Source: [Wikipedia: Reliable sources/Perennial sources](https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources#Gazette) · licence CC-BY-SA-4.0 · retrieved 2025-06-15 · as of 2025-03 · stale, 98 days old
+No consensus on the Gazette's reliability.
 
 Owner
 

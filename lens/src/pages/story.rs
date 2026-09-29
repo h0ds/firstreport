@@ -15,6 +15,10 @@ use crate::render::{
     html, iso, n, outlet_link, time_el, Page,
 };
 
+/// Source and field pairs that can draw a label bar, in display order.
+/// AllSides bias joins once its terms are confirmed (ledger plan §4).
+const LABEL_SOURCES: &[(&str, &str)] = &[("wikipedia_rsp", "reliability"), ("allsides", "bias")];
+
 /// Fields shown per outlet on a story page, in this order.
 const OUTLET_FIELDS: &[&str] = &[
     "reliability",
@@ -157,6 +161,20 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         b.push_str("</ul>");
     }
 
+    // Coverage by a named source's labels (plan §3.2): every source
+    // and field pair that labels at least two outlets in the story.
+    let outlet_ids: Vec<&str> = rows.iter().map(|(o, _)| *o).collect();
+    let bars: Vec<crate::render::LabelBar> = LABEL_SOURCES
+        .iter()
+        .filter_map(|(src, field)| crate::render::label_bar(input, &outlet_ids, src, field))
+        .collect();
+    if !bars.is_empty() {
+        b.push_str("<h2>Coverage by label</h2><p class=\"kg-muted\">How a named source labels the outlets in this story. Outlets the source has not rated are shown as such and never redistributed.</p>");
+        for bar in &bars {
+            b.push_str(&crate::render::label_bar_html(input, bar));
+        }
+    }
+
     if !f.revisions.is_empty() || !f.withdrawals.is_empty() {
         b.push_str("<h2>Changes</h2><p class=\"kg-muted\">Text that changed or disappeared after publication, as seen in later feed fetches.</p><ul class=\"stories changes\">");
         for e in f.revisions.iter().chain(f.withdrawals.iter()) {
@@ -275,6 +293,11 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             "copy_of": f.copies_of.get(&items[0].id),
             "copied": f.copied.contains(&items[0].id),
         })).collect::<Vec<_>>(),
+        "coverage_by_label": bars.iter().map(|bar| json!({
+            "source_id": bar.source_id, "field": bar.field,
+            "labels": bar.segments.iter().map(|(l, ids)| json!({"label": l, "outlets": ids})).collect::<Vec<_>>(),
+            "not_rated": bar.unrated,
+        })).collect::<Vec<_>>(),
         "revisions": f.revisions,
         "withdrawals": f.withdrawals,
         "claims": rows.iter().map(|(o, _)| (o.to_string(), input.claims.get(*o).map(|v| v.iter().filter(|c| OUTLET_FIELDS.contains(&c.field.as_str())).collect::<Vec<_>>()).unwrap_or_default())).collect::<HashMap<_, _>>(),
@@ -354,6 +377,13 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
                 input.outlet_name(&g.first_outlet_id),
                 delta(g.spread_secs as i64).trim_start_matches('+')
             );
+        }
+    }
+    if !bars.is_empty() {
+        md.push_str("\n## Coverage by label\n\n");
+        for bar in &bars {
+            md.push_str(&crate::render::label_bar_md(input, bar));
+            md.push('\n');
         }
     }
     if !f.revisions.is_empty() || !f.withdrawals.is_empty() {
@@ -472,6 +502,36 @@ mod tests {
         assert!(rev.md.contains("- Revised: Wire [Story 1002](https://wire.example/1002) at 2025-08-24 14:53 UTC · was: Story 1002, as first seen"));
         let wd = story(&i, &i.clusters[&1022]);
         assert!(wd.html.contains("Withdrawn:") && !wd.html.contains("was:"));
+    }
+
+    #[test]
+    fn coverage_by_label_shows_the_sources_map_when_two_outlets_are_rated() {
+        let i = fixture_input();
+        let t = story(&i, &i.clusters[&1001]);
+        assert!(t.html.contains("<h2>Coverage by label</h2>"));
+        let bar = t.html.find("<div class=\"kg-labelbar\" data-source=\"wikipedia_rsp\" data-field=\"reliability\">").unwrap();
+        let gr = t.html[bar..]
+            .find("Generally reliable <span class=\"n\">1</span>")
+            .unwrap();
+        let nc = t.html[bar..]
+            .find("No consensus <span class=\"n\">1</span>")
+            .unwrap();
+        assert!(gr < nc, "the source's own order, not alphabetical");
+        assert!(
+            !t.html.contains("class=\"seg none\""),
+            "both outlets rated: no unrated segment"
+        );
+        assert_eq!(
+            t.json["coverage_by_label"][0]["labels"][0]["label"],
+            "Generally reliable"
+        );
+        assert!(t.md.contains("## Coverage by label\n\nWikipedia: Reliable sources/Perennial sources on reliability (licence CC-BY-SA-4.0); the source's map, not ours.\n\n- Generally reliable: 1 outlet · Wire\n- No consensus: 1 outlet · Gazette\n"), "{}", t.md);
+        // a single-outlet story has no bar
+        let one = story(&i, &i.clusters[&1002]);
+        assert!(!one.html.contains("Coverage by label"));
+        assert!(one.json["coverage_by_label"].as_array().unwrap().is_empty());
+        // bias from a source that forbids redistribution never reaches lens
+        assert!(!t.html.contains("data-source=\"allsides\""));
     }
 
     #[test]

@@ -495,6 +495,197 @@ pub fn grouped_claims(claims: &[Claim]) -> Vec<(&str, Vec<&Claim>)> {
         .collect()
 }
 
+/// The order a source's labels are shown in: its own scale, not ours.
+/// A source not listed here shows its labels alphabetically.
+pub fn label_order(source_id: &str, field: &str) -> Option<&'static [&'static str]> {
+    match (source_id, field) {
+        ("wikipedia_rsp", "reliability") => Some(&[
+            "Generally reliable",
+            "No consensus",
+            "Generally unreliable",
+            "Deprecated",
+            "Blacklisted",
+        ]),
+        ("allsides", "bias") => Some(&["Left", "Lean Left", "Center", "Lean Right", "Right"]),
+        _ => None,
+    }
+}
+
+/// One source's labels across a set of outlets (design §5, label bar).
+pub struct LabelBar {
+    pub source_id: String,
+    pub field: String,
+    /// (label, outlet ids) in the source's order; labels with no outlet omitted.
+    pub segments: Vec<(String, Vec<String>)>,
+    pub unrated: Vec<String>,
+}
+
+/// Fewer rated outlets than this and there is no bar to draw.
+pub const LABEL_BAR_MIN_RATED: usize = 2;
+
+/// Build the bar for `field` from `source_id`'s claims over `outlets`,
+/// or None when fewer than two are rated. An outlet with several
+/// claims from the source (a row per section, say) counts once, by
+/// its first claim.
+pub fn label_bar(
+    input: &Input,
+    outlets: &[&str],
+    source_id: &str,
+    field: &str,
+) -> Option<LabelBar> {
+    let mut by_label: std::collections::BTreeMap<String, Vec<String>> = Default::default();
+    let mut unrated = Vec::new();
+    for o in outlets {
+        let claim = input.claims.get(*o).and_then(|v| {
+            v.iter()
+                .find(|c| c.source_id == source_id && c.field == field)
+        });
+        match claim {
+            Some(c) => by_label
+                .entry(c.value.clone())
+                .or_default()
+                .push(o.to_string()),
+            None => unrated.push(o.to_string()),
+        }
+    }
+    let rated: usize = by_label.values().map(|v| v.len()).sum();
+    if rated < LABEL_BAR_MIN_RATED {
+        return None;
+    }
+    let mut segments: Vec<(String, Vec<String>)> = Vec::new();
+    if let Some(order) = label_order(source_id, field) {
+        for l in order {
+            if let Some(v) = by_label.remove(*l) {
+                segments.push((l.to_string(), v));
+            }
+        }
+    }
+    for (l, v) in by_label {
+        segments.push((l, v));
+    }
+    for (_, v) in &mut segments {
+        v.sort_by_key(|id| input.outlet_name(id).to_lowercase());
+    }
+    unrated.sort_by_key(|id| input.outlet_name(id).to_lowercase());
+    Some(LabelBar {
+        source_id: source_id.to_string(),
+        field: field.to_string(),
+        segments,
+        unrated,
+    })
+}
+
+pub fn label_bar_html(input: &Input, bar: &LabelBar) -> String {
+    let source = input.sources.get(&bar.source_id);
+    let (sname, licence) = source
+        .map(|s| (s.name.as_str(), s.licence.as_str()))
+        .unwrap_or((bar.source_id.as_str(), "unknown"));
+    let total = bar.segments.iter().map(|(_, v)| v.len()).sum::<usize>() + bar.unrated.len();
+    let rated = total - bar.unrated.len();
+    let mut s = String::new();
+    let _ = write!(
+        s,
+        "<div class=\"kg-labelbar\" data-source=\"{}\" data-field=\"{}\"><p class=\"kg-muted\">{} on {} <span class=\"kg-tag\">{}</span> · {} in the story, {} rated. The source's map, not ours.</p><div class=\"bar\" role=\"img\" aria-label=\"{}\">",
+        esc(&bar.source_id),
+        esc(&bar.field),
+        esc(sname),
+        esc(&field_label(&bar.field).to_lowercase()),
+        esc(licence),
+        n(total, "outlet"),
+        rated,
+        esc(&bar
+            .segments
+            .iter()
+            .map(|(l, v)| format!("{l} {}", v.len()))
+            .chain((!bar.unrated.is_empty()).then(|| format!("not rated {}", bar.unrated.len())))
+            .collect::<Vec<_>>()
+            .join(", "))
+    );
+    for (k, (label, ids)) in bar.segments.iter().enumerate() {
+        let _ = write!(
+            s,
+            "<span class=\"seg w{}\" style=\"flex: {}\" title=\"{}\">{} <span class=\"n\">{}</span></span>",
+            (k % 5) + 1,
+            ids.len(),
+            esc(&ids.iter().map(|id| input.outlet_name(id)).collect::<Vec<_>>().join(", ")),
+            esc(label),
+            ids.len()
+        );
+    }
+    if !bar.unrated.is_empty() {
+        let _ = write!(
+            s,
+            "<span class=\"seg none\" style=\"flex: {}\" title=\"{}\">not rated <span class=\"n\">{}</span></span>",
+            bar.unrated.len(),
+            esc(&bar.unrated.iter().map(|id| input.outlet_name(id)).collect::<Vec<_>>().join(", ")),
+            bar.unrated.len()
+        );
+    }
+    s.push_str("</div><div class=\"legend\">");
+    for (label, ids) in &bar.segments {
+        let _ = write!(
+            s,
+            "<span><b>{}</b> {}</span>",
+            esc(label),
+            ids.iter()
+                .map(|id| outlet_link(input, id))
+                .collect::<Vec<_>>()
+                .join(", ")
+        );
+    }
+    if !bar.unrated.is_empty() {
+        let _ = write!(
+            s,
+            "<span><b>Not rated by {}</b> {}</span>",
+            esc(sname),
+            bar.unrated
+                .iter()
+                .map(|id| outlet_link(input, id))
+                .collect::<Vec<_>>()
+                .join(", ")
+        );
+    }
+    s.push_str("</div></div>");
+    s
+}
+
+pub fn label_bar_md(input: &Input, bar: &LabelBar) -> String {
+    let source = input.sources.get(&bar.source_id);
+    let (sname, licence) = source
+        .map(|s| (s.name.as_str(), s.licence.as_str()))
+        .unwrap_or((bar.source_id.as_str(), "unknown"));
+    let mut md = format!(
+        "{} on {} (licence {}); the source's map, not ours.\n\n",
+        sname,
+        field_label(&bar.field).to_lowercase(),
+        licence
+    );
+    for (label, ids) in &bar.segments {
+        let _ = writeln!(
+            md,
+            "- {label}: {} · {}",
+            n(ids.len(), "outlet"),
+            ids.iter()
+                .map(|id| input.outlet_name(id))
+                .collect::<Vec<_>>()
+                .join(", ")
+        );
+    }
+    if !bar.unrated.is_empty() {
+        let _ = writeln!(
+            md,
+            "- Not rated by {sname}: {} · {}",
+            n(bar.unrated.len(), "outlet"),
+            bar.unrated
+                .iter()
+                .map(|id| input.outlet_name(id))
+                .collect::<Vec<_>>()
+                .join(", ")
+        );
+    }
+    md
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

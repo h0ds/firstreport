@@ -277,8 +277,8 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
    the label text on every segment, the unrated remainder drawn empty.
    Never a hue per side (DESIGN.md §5). */
 .kg-labelbar { margin: var(--kg-s2) 0 var(--kg-s1); }
-.kg-labelbar .bar { display: flex; height: 28px; border-radius: var(--kg-radius-input); overflow: hidden; border: 1px solid var(--kg-line); }
-.kg-labelbar .seg { display: flex; align-items: center; justify-content: center; gap: var(--kg-s1); min-width: 0; padding: 0 var(--kg-s2); font-size: var(--kg-fs-small); line-height: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kg-labelbar .bar { display: flex; height: var(--kg-s6); border-radius: var(--kg-radius-input); overflow: hidden; border: 1px solid var(--kg-line); }
+.kg-labelbar .seg { display: flex; align-items: center; justify-content: center; gap: var(--kg-s1); min-width: 0; padding: 0 var(--kg-s2); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .kg-labelbar .seg + .seg { border-left: 1px solid var(--kg-bg); }
 .kg-labelbar .seg.w1 { background: var(--kg-text); color: var(--kg-bg); }
 .kg-labelbar .seg.w2 { background: var(--kg-text-secondary); color: var(--kg-bg); }
