@@ -4,6 +4,26 @@
 
 [[claim]]
 outlet_id = "aljazeera"
+field = "audience_partisanship"
+value = "-0.53 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+source_id = "robertson2018"
+ref_url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX"
+retrieved_at = 1790663606
+as_of = "2017"
+note = "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0."
+
+[claim.data]
+host = "aljazeera.com"
+score = -0.5265
+
+[claim.data.scale]
+max = 1
+max_means = "shared only by Republicans"
+min = -1
+min_means = "shared only by Democrats"
+
+[[claim]]
+outlet_id = "aljazeera"
 field = "country"
 value = "Qatar"
 source_id = "wikidata"
