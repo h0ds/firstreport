@@ -1,5 +1,5 @@
 //! Bluesky over XRPC. Mentions come from `app.bsky.notification.listNotifications`,
-//! polled: the bot is summoned, so no firehose is needed. Parent and quoted
+//! polled: the bot is summoned, so no firehose is needed.
 //! Parent and quoted posts are fetched with `app.bsky.feed.getPosts`.
 //! Parsing is pure and tested on recorded responses.
 
