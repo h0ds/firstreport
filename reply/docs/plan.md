@@ -335,6 +335,8 @@ reply/
     mentions/*.json         recorded mentions with the FactSet they resolved to
     mentions/*.<platform>.draft.json
                             golden drafts, rewritten by `check --update`
+    bluesky/*.json, x/*.json, bluesky/jetstream.ndjson
+                            recorded platform responses for the parsers
     firehose/*.ndjson       recorded platform streams for the observer
   src/
     main.rs                 CLI: listen | render | review | serve | observe | export | check | queue
@@ -350,8 +352,11 @@ reply/
     resolve.rs              mention → Subject → FactSet, via feed and ledger
     compose.rs              templates → Draft
     template.rs             TOML template loading and rendering
-    observe/store.rs        sightings, salted hashes, pruning
+    observe/mod.rs          Sighting, salted account hash, thresholds, subject URLs
+    observe/store.rs        data/sightings/<day>.ndjson, observations, ages, pruning
     observe/signals.rs      burst, syndicated_text, cohort, first_movers
+    observe/jetstream.rs    Bluesky's firehose as JSON, and profile ages for burst members
+    observe/simhash.rs      copy of feed's simhash
     api.rs                  review page, queue actions, the public log, limits
 ```
 
@@ -452,7 +457,14 @@ salt_env = "REPLY_SALT"
   and against a scratch queue; not yet run against a live account.
   First live replies are the next step, all human-approved.
 - **R4** Observer and the four signals, shown on the public log before
-  any reply carries one.
+  any reply carries one. Done: `observe` records sightings from Bluesky's
+  Jetstream (X has no free firehose) with salted account hashes, runs
+  burst, syndicated_text, cohort and first_movers over the retained
+  window, fetches ages only for burst members, and appends observations;
+  `serve` lists them at `/v1/observations`, and `listen` attaches a
+  subject's observations to the FactSet on the log. Signals are tested
+  on planted bursts, a copied text, a young-account cohort against a
+  background signup wave, and two first movers. Not yet run live.
 - **R5** Observations in replies, still reviewed. Autonomous posting for
   templates that have earned it.
 - **R6** Mastodon adapter.

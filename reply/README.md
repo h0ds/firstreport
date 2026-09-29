@@ -15,6 +15,8 @@ REPLY_BSKY_PASSWORD=... cargo run -- --platform bluesky --handle kagami.example 
 cargo run -- queue                                   # print the queued drafts
 cargo run -- serve                                   # review page and public log on 127.0.0.1:8082
 REPLY_X_ACCESS_TOKEN=... cargo run -- serve          # ...with posting to X on approval
+REPLY_SALT=... cargo run -- observe                  # record Bluesky's firehose, run the signals
+cargo run -- observe --from sightings.ndjson         # replay recorded sightings, print observations
 cargo test
 ```
 
@@ -77,6 +79,41 @@ id}`, which is where every reply's closing link points. The summoner's
 handle is dropped from it. The queue routes are for the local reviewer
 and not part of the contract. `listen` and `serve` share `data/`
 through the filesystem and run as two processes.
+
+## Observing (coordination signals)
+
+`observe` reads Bluesky's Jetstream, the firehose as JSON, and records a
+sighting for every post that carries a link (or, with no link, enough
+text to be a claim): the platform, a salted hash of the account, the
+time, the link folded of tracking parameters, and a simhash of the text.
+Sightings go to `data/sightings/<day>.ndjson` and are pruned after
+`--retain` days (default 90). The salt is `REPLY_SALT`, a long random
+string that never changes and never leaves the machine; without it the
+hashes cannot be tied to accounts, and Kagami holds no mapping either.
+Handles and DIDs are never written.
+
+Every `--interval` seconds (at least 60) the four signals run over the
+retained window and append to `data/observations.ndjson`:
+
+| kind | counts | detail |
+|---|---|---|
+| `burst` | distinct accounts posting one link or text inside `--burst-window` seconds (default 600), at least `--burst-min` (default 20) | first, last, span, median gap, posts |
+| `syndicated_text` | posts of that subject whose text is within three bits of another account's | share, earliest |
+| `cohort` | accounts in the burst created within `--cohort-span` days of each other (default 14), when at least `--cohort-min-share` percent (default 50) | share, and the same share over every account seen, as the baseline |
+| `first_movers` | accounts first or second into at least `--movers-min` bursts (default 5) over `--movers-window` days (default 30) | share of bursts |
+
+Ages come from the public profile API, fetched only for accounts in a
+burst, from an in-memory map of hash to DID that is never written; the
+ages are kept by hash in `data/accounts.json`. Everything is a count
+with a window and a denominator. Nothing is a label.
+
+`serve` exposes them at `GET /v1/observations?subject=&kind=`, and
+`listen` attaches the observations for a mention's subject to its
+FactSet, so they are on the public log before any template says them.
+No template does yet (R5).
+
+X has no free firehose, so the observer runs on Bluesky. A subject is a
+URL, and campaigns carry the same URLs across platforms.
 
 ## Resolving a mention
 

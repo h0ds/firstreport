@@ -7,6 +7,7 @@ mod client;
 mod compose;
 mod facts;
 mod model;
+mod observe;
 mod platform;
 mod queue;
 mod resolve;
@@ -120,6 +121,20 @@ async fn run(args: cli::Args) -> Result<(), String> {
                 .await
                 .map_err(|e| e.to_string())
         }
+        cli::Command::Observe { from, once } => {
+            // A recorded file already holds hashed accounts; only the live
+            // firehose needs the salt.
+            let salt = match &from {
+                Some(_) => String::new(),
+                None => std::env::var(observe::SALT_ENV).map_err(|_| {
+                    format!(
+                        "observe needs {} in the environment: a long random string that never changes",
+                        observe::SALT_ENV
+                    )
+                })?,
+            };
+            observe_cmd(&args, &salt, from, once).await
+        }
         cli::Command::Queue => {
             let q = queue::Queue::open(&args.data)?;
             let entries = q.list()?;
@@ -198,7 +213,14 @@ async fn listen<L: platform::Listener, A: client::Api>(
                     if q.seen(&m.id) {
                         continue;
                     }
-                    match resolve::resolve(api, &args.urls, &m).await {
+                    match resolve::resolve(api, &args.urls, &m).await.map(|mut fs| {
+                        fs.observations = observe::store::observations_for(
+                            &args.data,
+                            fs.subject.urls.first().map(String::as_str),
+                            fs.subject.text.as_deref().map(observe::simhash::simhash),
+                        );
+                        fs
+                    }) {
                         Err(e) => {
                             eprintln!("{}: not drafted: {e}", m.id);
                             if e.contains("404") {
@@ -223,6 +245,138 @@ async fn listen<L: platform::Listener, A: client::Api>(
             return Ok(());
         }
         tokio::time::sleep(std::time::Duration::from_secs(args.interval_secs)).await;
+    }
+}
+
+/// The observer loop (plan §16, R4). Live: read Jetstream into the store,
+/// and every `interval` run the signals over the retained window, look
+/// up ages for accounts in bursts, and append observations. Replaying a
+/// file: load it, run once, print what was found.
+async fn observe_cmd(
+    args: &cli::Args,
+    salt: &str,
+    from: Option<std::path::PathBuf>,
+    once: bool,
+) -> Result<(), String> {
+    let t = args.thresholds;
+    let store = observe::store::Store::open(&args.data)?;
+    if let Some(path) = from {
+        let text =
+            std::fs::read_to_string(&path).map_err(|e| format!("{}: {e}", path.display()))?;
+        let mut sightings: Vec<observe::Sighting> = Vec::new();
+        for line in text.lines().filter(|l| !l.trim().is_empty()) {
+            let s: observe::Sighting =
+                serde_json::from_str(line).map_err(|e| format!("{}: {e}", path.display()))?;
+            store.append(&s)?;
+            sightings.push(s);
+        }
+        let now = sightings.iter().map(|s| s.at).max().unwrap_or(0);
+        let (obs, bursts) = observe::signals::run(&sightings, t, now);
+        store.append_observations(&obs)?;
+        for o in &obs {
+            println!(
+                "{} {} {}/{} over {}s",
+                o.kind, o.subject, o.count, o.denominator, o.window_secs
+            );
+        }
+        println!(
+            "{} sightings, {} bursts, {} observations",
+            sightings.len(),
+            bursts.len(),
+            obs.len()
+        );
+        return Ok(());
+    }
+
+    let client = reqwest::Client::builder()
+        .user_agent(concat!("kagami-reply/", env!("CARGO_PKG_VERSION")))
+        .timeout(std::time::Duration::from_secs(20))
+        .build()
+        .map_err(|e| e.to_string())?;
+    // Hash → DID for accounts seen recently, in memory only, so ages can be
+    // fetched for burst members without ever writing a DID to disk.
+    let dids: std::sync::Arc<std::sync::Mutex<std::collections::HashMap<String, String>>> =
+        Default::default();
+    let store = std::sync::Arc::new(std::sync::Mutex::new(store));
+    eprintln!(
+        "observing {} ; sightings in {} ; signals every {}s",
+        args.firehose,
+        args.data.join("sightings").display(),
+        args.interval_secs.max(60)
+    );
+
+    let reader = {
+        let (store, dids, url, salt) = (
+            store.clone(),
+            dids.clone(),
+            args.firehose.clone(),
+            salt.to_string(),
+        );
+        tokio::spawn(async move {
+            loop {
+                let r = observe::jetstream::run(&url, &salt, |s, did| {
+                    dids.lock()
+                        .unwrap()
+                        .insert(s.account.clone(), did.to_string());
+                    store.lock().unwrap().append(&s)
+                })
+                .await;
+                eprintln!(
+                    "firehose ended: {}; reconnecting in 10s",
+                    r.err().unwrap_or_else(|| "closed".into())
+                );
+                tokio::time::sleep(std::time::Duration::from_secs(10)).await;
+            }
+        })
+    };
+
+    loop {
+        tokio::time::sleep(std::time::Duration::from_secs(args.interval_secs.max(60))).await;
+        let now = now();
+        let since = now - t.movers_window_days as i64 * 86_400;
+        let sightings = store.lock().unwrap().load(since)?;
+        let (_, bursts) = observe::signals::run(&sightings, t, now);
+        // Ages for burst members not yet known, then run again with them.
+        let want: Vec<String> = {
+            let known = &store.lock().unwrap().ages;
+            let dids = dids.lock().unwrap();
+            bursts
+                .iter()
+                .flat_map(|b| b.accounts_in_order.iter())
+                .filter(|a| !known.contains_key(*a))
+                .filter_map(|a| dids.get(a).cloned())
+                .collect::<std::collections::BTreeSet<_>>()
+                .into_iter()
+                .collect()
+        };
+        if !want.is_empty() {
+            let ages =
+                observe::jetstream::ages(&client, observe::jetstream::PUBLIC_API, &want, now).await;
+            let dids = dids.lock().unwrap();
+            let mut st = store.lock().unwrap();
+            for (hash, did) in dids.iter() {
+                if let Some(age) = ages.get(did) {
+                    st.remember_age(hash, *age);
+                }
+            }
+            st.save_ages()?;
+        }
+        let sightings = store.lock().unwrap().load(since)?;
+        let (obs, bursts) = observe::signals::run(&sightings, t, now);
+        let st = store.lock().unwrap();
+        st.append_observations(&obs)?;
+        let pruned = st.prune(now, t.retain_days)?;
+        eprintln!(
+            "{} sightings, {} bursts, {} observations, {} day files pruned",
+            sightings.len(),
+            bursts.len(),
+            obs.len(),
+            pruned
+        );
+        if once {
+            reader.abort();
+            return Ok(());
+        }
     }
 }
 

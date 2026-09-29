@@ -53,6 +53,7 @@ pub fn router(state: AppState) -> Router {
         .route("/v1/queue/{id}/decline", post(decline))
         .route("/v1/log", get(list_log))
         .route("/v1/log/{id}", get(get_log))
+        .route("/v1/observations", get(observations))
         .route("/v1/stats", get(stats))
         .with_state(state)
 }
@@ -242,6 +243,39 @@ async fn get_log(State(s): State<AppState>, Path(id): Path<String>) -> Response 
     }
 }
 
+#[derive(Deserialize, Default)]
+struct ObservationsQ {
+    subject: Option<String>,
+    kind: Option<String>,
+}
+
+/// Latest observation per (kind, subject), filtered. Accounts appear only
+/// as salted hashes, in `first_movers` subjects.
+async fn observations(
+    State(s): State<AppState>,
+    axum::extract::Query(q): axum::extract::Query<ObservationsQ>,
+) -> Response {
+    let store = match crate::observe::store::Store::open(&s.data) {
+        Ok(st) => st,
+        Err(e) => return err(StatusCode::INTERNAL_SERVER_ERROR, e),
+    };
+    match store.observations() {
+        Ok(v) => Json(
+            v.into_iter()
+                .filter(|o| q.kind.as_deref().is_none_or(|k| o.kind == k))
+                .filter(|o| {
+                    q.subject.as_deref().is_none_or(|sub| {
+                        o.subject == sub
+                            || crate::observe::subject_url(sub).is_some_and(|u| o.subject == u)
+                    })
+                })
+                .collect::<Vec<_>>(),
+        )
+        .into_response(),
+        Err(e) => err(StatusCode::INTERNAL_SERVER_ERROR, e),
+    }
+}
+
 #[derive(Serialize)]
 struct Stats {
     contract_version: u32,
@@ -291,6 +325,7 @@ Contract version {CONTRACT_VERSION}. Times are unix seconds UTC.
 
 - `GET /v1/log` - every mention answered or declined, with the facts each reply was built from, the templates that fired, and who approved it
 - `GET /v1/log/{{mention id or queue id}}` - one entry; this is what every reply's closing link points at
+- `GET /v1/observations?subject=&kind=` - counts over accounts posting a link or text: burst, syndicated_text, cohort, first_movers. Accounts are salted hashes; a count is a count, not a label
 - `GET /v1/stats`
 
 The handle of whoever summoned the bot is not in the log. Queue routes
@@ -624,6 +659,14 @@ mod tests {
                 .status(),
             200
         );
+        let v = body_json(
+            app.clone()
+                .oneshot(req("GET", "/v1/observations?kind=burst", ""))
+                .await
+                .unwrap(),
+        )
+        .await;
+        assert_eq!(v.as_array().map(Vec::len), Some(0));
 
         // A thread that fails part-way is still logged as posted, with a correction.
         let poster: Arc<Mutex<Box<dyn Poster>>> =

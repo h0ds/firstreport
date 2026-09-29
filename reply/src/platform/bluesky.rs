@@ -373,7 +373,7 @@ pub fn parse_posts(v: &Value) -> HashMap<String, Post> {
 
 /// Text plus every link the record carries: link facets in the text and
 /// an external-link card, in that order.
-fn post_content(record: &Value) -> (String, Vec<String>) {
+pub fn post_content(record: &Value) -> (String, Vec<String>) {
     let t = get(record, "text").map(text).unwrap_or_default();
     let mut urls: Vec<String> = Vec::new();
     if let Some(facets) = get(record, "facets").and_then(Value::as_array) {

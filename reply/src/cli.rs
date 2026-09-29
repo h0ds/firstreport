@@ -22,6 +22,9 @@ pub enum Command {
     Listen { platform: String, once: bool },
     /// Print the queue.
     Queue,
+    /// Record sightings from the firehose (or a recorded NDJSON file) and
+    /// run the signals over the window, writing observations.
+    Observe { from: Option<PathBuf>, once: bool },
     /// Review page, queue actions and the public log; posts approved
     /// drafts when platform credentials are present.
     Serve,
@@ -42,13 +45,18 @@ pub struct Args {
     pub interval_secs: u64,
     pub bind: String,
     pub limits: crate::api::Limits,
+    pub thresholds: crate::observe::Thresholds,
+    /// Jetstream URL for `observe`.
+    pub firehose: String,
     pub command: Command,
 }
 
 pub const USAGE: &str = "\
 usage: reply [--templates <dir>] [--data <dir>] [--feed-url <url>] [--ledger-url <url>] [--log-url <url>]
              [--platform x|bluesky] [--handle <bot account>] [--api <url>] [--interval <secs>]
-             [--bind <addr>] [--per-account-per-day <n>] [--global-per-hour <n>] <command>
+             [--bind <addr>] [--per-account-per-day <n>] [--global-per-hour <n>]
+             [--burst-window <secs>] [--burst-min <n>] [--cohort-span <days>] [--cohort-min-share <pct>]
+             [--movers-window <days>] [--movers-min <n>] [--retain <days>] [--firehose <wss url>] <command>
 
 commands:
   render <fixture.json> [--platform <name>]   render a recorded mention; print the draft and its cites
@@ -62,6 +70,10 @@ commands:
   queue                                       print the queued drafts
   serve                                       review page and public log on 127.0.0.1:8082; with
                                               credentials for --platform, approving posts
+  observe [--from <sightings.ndjson>] [--once]
+                                              record sightings from Bluesky's Jetstream (or replay a
+                                              file) and run the four signals; observations go to
+                                              data/observations.ndjson. Needs REPLY_SALT
 
 credentials, from the environment:
   x        REPLY_X_ACCESS_TOKEN, and for refresh REPLY_X_REFRESH_TOKEN, REPLY_X_CLIENT_ID,
@@ -82,6 +94,11 @@ impl Args {
     }
 }
 
+fn num<T: std::str::FromStr>(s: String, flag: &str) -> Result<T, String> {
+    s.parse()
+        .map_err(|_| format!("{flag} needs a number\n{USAGE}"))
+}
+
 pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let mut it = argv.into_iter().skip(1).peekable();
     let mut templates = PathBuf::from("templates");
@@ -99,6 +116,9 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let mut interval_secs = 30;
     let mut bind = String::from("127.0.0.1:8082");
     let mut limits = crate::api::Limits::default();
+    let mut thresholds = crate::observe::Thresholds::default();
+    let mut firehose = String::from(crate::observe::jetstream::DEFAULT_URL);
+    let mut from = None;
     while let Some(a) = it.next() {
         let mut val = |flag: &str| {
             it.next()
@@ -133,7 +153,30 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
                     .parse()
                     .map_err(|_| format!("--global-per-hour needs a number\n{USAGE}"))?
             }
-            "render" | "check" | "resolve" | "listen" | "queue" | "serve" => command = Some(a),
+            "--from" => from = Some(PathBuf::from(val("--from")?)),
+            "--firehose" => firehose = val("--firehose")?,
+            "--burst-window" => {
+                thresholds.burst_window_secs = num(val("--burst-window")?, "--burst-window")?
+            }
+            "--burst-min" => {
+                thresholds.burst_min_accounts = num(val("--burst-min")?, "--burst-min")?
+            }
+            "--cohort-span" => {
+                thresholds.cohort_span_days = num(val("--cohort-span")?, "--cohort-span")?
+            }
+            "--cohort-min-share" => {
+                thresholds.cohort_min_share = num(val("--cohort-min-share")?, "--cohort-min-share")?
+            }
+            "--movers-window" => {
+                thresholds.movers_window_days = num(val("--movers-window")?, "--movers-window")?
+            }
+            "--movers-min" => {
+                thresholds.movers_min_bursts = num(val("--movers-min")?, "--movers-min")?
+            }
+            "--retain" => thresholds.retain_days = num(val("--retain")?, "--retain")?,
+            "render" | "check" | "resolve" | "listen" | "queue" | "serve" | "observe" => {
+                command = Some(a)
+            }
             "-h" | "--help" => return Err(USAGE.into()),
             other
                 if matches!(command.as_deref(), Some("render" | "resolve"))
@@ -156,6 +199,7 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         },
         Some("queue") => Command::Queue,
         Some("serve") => Command::Serve,
+        Some("observe") => Command::Observe { from, once },
         Some("resolve") => Command::Resolve {
             mention: fixture.ok_or_else(|| format!("resolve needs a mention file\n{USAGE}"))?,
             platform: platform.clone(),
@@ -173,6 +217,8 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         interval_secs,
         bind,
         limits,
+        thresholds,
+        firehose,
         command,
     })
 }
@@ -226,6 +272,18 @@ mod tests {
         let a = p("listen").unwrap();
         assert_eq!(a.platform, "x");
         assert_eq!(a.pds_or_default("x"), "https://api.x.com");
+        let a = p("--burst-min 5 --retain 7 observe --from s.ndjson --once").unwrap();
+        assert_eq!(
+            a.command,
+            Command::Observe {
+                from: Some("s.ndjson".into()),
+                once: true
+            }
+        );
+        assert_eq!(
+            (a.thresholds.burst_min_accounts, a.thresholds.retain_days),
+            (5, 7)
+        );
         let a = p("--bind 0.0.0.0:9000 --per-account-per-day 5 serve").unwrap();
         assert_eq!(a.command, Command::Serve);
         assert_eq!(
