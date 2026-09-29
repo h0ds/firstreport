@@ -88,6 +88,16 @@ time skew, clamped future dates and burst decide whether the feed is
 quarantined for a day or flagged. The reason is on the feed row and
 at `/v1/feeds?filter=quarantined`. No rule reads the outlet.
 
+## 5a. Our own conduct: budgets and opt-outs
+
+Where: `feed`, the shared fetch client, `docs/publisher-rules.md`.
+Before any request: the host is not on the opt-out list (nor a
+subdomain of one), robots.txt allows the path, the host and Kagami as
+a whole are under their hourly request budgets (a request over budget
+waits), and the host's Crawl-delay has passed. The snapshot archive
+stays under `snapshots.max_bytes` by dropping whole days, oldest first.
+None of these reads what an outlet publishes.
+
 ## 6. Outlet pages: counts, never rank
 
 Where: `lens` outlet page, `ledger` feed_behaviour importer. Per

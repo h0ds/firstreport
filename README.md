@@ -83,8 +83,9 @@ runbook's job; `kagami doctor` reports what is still missing.
   and `llms.txt`, NDJSON and Parquet export including revisions, a
   nightly job, feed discovery and OPML import, `feed eval` over three
   golden pair sets, the steward's feed health (five stated rules that
-  quarantine a broken feed for a day with the reason shown) and
-  clustering confidence on every story (`docs/steward.md` S1 and S2).
+  quarantine a broken feed for a day with the reason shown), clustering
+  confidence on every story, request and disk budgets and the opt-out
+  list (`docs/steward.md` S1, S2 and S4).
   See `feed/docs/plan.md` §11.
 - **ledger** is at L2e: file-backed claim store with validation and
   refresh tracking, importers for Wikidata, Wikipedia's perennial

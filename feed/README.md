@@ -151,7 +151,8 @@ embeddings and centroids; Parquet includes them as `list<float32>`.
 This is the bulk interface for `ledger` and `lens`; the live API is for
 incremental updates. `prune --older-than` deletes rows past the cutoff
 (active clusters excepted), `--embeddings` nulls embeddings outside the
-clustering window, and snapshot retention is applied on every run.
+clustering window, and snapshot retention is applied on every run,
+then the disk budget (`snapshots.max_bytes`, whole days oldest first).
 With `export.nightly = true`, `feed run` does an export into
 `out_dir/<yyyy-mm-dd>` at `export.hour_utc` daily and applies snapshot
 retention.

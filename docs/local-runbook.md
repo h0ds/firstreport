@@ -83,7 +83,9 @@ Then, in another terminal or a browser:
   the `last_error`.
 - `http://127.0.0.1:8080/v1/stats` — `fetch_errors` and `parse_errors`
   should be a small fraction of `fetches`; `items_held` counts items
-  the steward kept out.
+  the steward kept out; `budget_waits` should stay near zero with the
+  default budgets, and a host that keeps hitting its budget has too
+  many feeds configured for one hour.
 - `http://127.0.0.1:8080/v1/feeds?filter=quarantined` — feeds the
   steward is holding (`docs/steward.md` §2), each with the one-sentence
   reason and the release time. Expect none on the first fetch and a

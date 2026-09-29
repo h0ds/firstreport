@@ -130,6 +130,15 @@ pending review files and conflicts and counts both in its summary.
 - **Opt-outs.** A list in the repository of hosts that asked to be left
   alone, honoured before robots.txt is even read.
 
+Done: request budgets in the shared client (`poll.per_host_requests_per_hour`,
+default 240, and `poll.global_requests_per_hour`, default 20,000; a
+request over budget waits and `/v1/stats` counts `budget_waits`); the
+snapshot disk budget (`snapshots.max_bytes`, whole days dropped oldest
+first by prune and the nightly job, `kagami doctor` reports the
+archive's size); and `feed/config/opt-out.toml`, checked before any
+request by the poller, discovery and `feeds --fix`, subdomains
+included, each entry with its reason and date.
+
 ## 6. Ordering in lens
 
 The front page orders stories by outlets joining in the last day, then
@@ -149,7 +158,7 @@ page states it.
 - **S2** Clustering confidence in the contract as an addition, shown
   in lens twins. Done.
 - **S3** Ledger change guard and conflict list. Done.
-- **S4** Budgets and the opt-out list.
+- **S4** Budgets and the opt-out list. Done.
 
 S1 first, because the first live run over 96 feeds will meet junk
 feeds before it meets anything else.
