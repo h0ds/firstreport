@@ -117,6 +117,24 @@ raw a news aggregator scrape is not in the repository (only the extracted
 pairs and domains are); if you want to re-extract, `extract.py` in that
 directory documents the input it expects.
 
+## 4a. Telegram channels
+
+Public channel preview pages are a source now. Add a few that matter
+for the stories you follow, each with its own outlet:
+
+```toml
+[[feed]]
+url = "https://t.me/s/<channel>"
+outlet = "<channel>"
+```
+
+and the outlet in `outlets.toml` with `domains = ["t.me"]`. The
+adapter was tested against a recorded preview page only; if Telegram's
+markup differs from it, `feed` logs a parse error naming the URL and
+keeps the snapshot, so nothing is lost. Also note the preview page
+lists about twenty recent posts; a busy channel needs a short
+`interval_secs`.
+
 ## 5. Ledger imports
 
 None of the four network importers has run live. Run them in this

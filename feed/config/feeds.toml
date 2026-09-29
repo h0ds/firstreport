@@ -43,3 +43,10 @@ outlet = "rt"
 [[feed]]
 url = "https://feedx.net/rss/ap.xml"
 outlet = "ap"
+
+# Public Telegram channels: the preview page https://t.me/s/<channel> needs
+# no account and is parsed post by post. Give the channel its own outlet
+# in outlets.toml (domain t.me is shared, so the id comes from here).
+# [[feed]]
+# url = "https://t.me/s/examplechannel"
+# outlet = "examplechannel"
