@@ -605,9 +605,10 @@ mod tests {
             "Generally reliable"
         );
         assert!(t.md.contains("## Coverage by label\n\nWikipedia: Reliable sources/Perennial sources on reliability (licence CC-BY-SA-4.0); the source's map, not ours.\n\n- Generally reliable: 1 outlet · Wire\n- No consensus: 1 outlet · Gazette\n"), "{}", t.md);
-        // a single-outlet story has no bar
+        // a single-outlet story has no bar; its lean is stated, as unknown
+        // when the source does not score it
         let one = story(&i, &i.clusters[&1002]);
-        assert!(!one.html.contains("Coverage by label"));
+        assert!(!one.html.contains("kg-labelbar"));
         assert!(one.json["coverage_by_label"].as_array().unwrap().is_empty());
         // bias from a source that forbids redistribution never reaches lens
         assert!(!t.html.contains("data-source=\"allsides\""));

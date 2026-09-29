@@ -318,6 +318,9 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 .kg-audience .axis { stroke: var(--kg-line-strong); stroke-width: 1; }
 .kg-audience .zero { stroke: var(--kg-text-muted); stroke-width: 1; }
 .kg-audience circle { fill: var(--kg-text-secondary); fill-opacity: 0.55; stroke: var(--kg-bg); stroke-width: 1; }
+.kg-audience circle.unknown { fill: var(--kg-bg); fill-opacity: 1; stroke: var(--kg-text-muted); stroke-width: 1; stroke-dasharray: 2 1.5; }
+.kg-audience .unknown-group { margin-left: var(--kg-s2); }
+.kg-audience.none .lbl { margin-left: 0; color: var(--kg-text-muted); }
 .kg-audience .end { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); font-weight: 500; }
 .kg-audience .lbl { margin-left: var(--kg-s2); }
 .kg-audience-block { margin: var(--kg-s3) 0; }

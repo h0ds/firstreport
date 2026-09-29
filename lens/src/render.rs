@@ -284,8 +284,6 @@ fn audience_score(input: &Input, id: &str) -> Option<f64> {
     })
 }
 
-/// Fewer scored outlets than this and the strip is a point, not a spread.
-pub const AUDIENCE_MIN_SCORED: usize = 2;
 
 /// Where the outlets in a story sit on Robertson et al.'s audience scale,
 /// -1 (links shared by Democrats) to +1 (by Republicans): one grey dot per
@@ -297,38 +295,85 @@ pub fn audience_strip(input: &Input, outlets: &[&str], large: bool) -> String {
         .iter()
         .filter_map(|id| audience_score(input, id).map(|s| (*id, s)))
         .collect();
-    if scored.len() < AUDIENCE_MIN_SCORED {
+    let unknown: Vec<&str> = outlets
+        .iter()
+        .copied()
+        .filter(|id| audience_score(input, id).is_none())
+        .collect();
+    let names = |ids: &[&str]| ids.iter().map(|id| input.outlet_name(id)).collect::<Vec<_>>().join(", ");
+    if outlets.is_empty() {
         return String::new();
+    }
+    // No outlet scored: say so rather than show nothing (design §5).
+    if scored.is_empty() {
+        return format!(
+            "<span class=\"kg-audience none\" data-scored=\"0\" data-unknown=\"{}\" title=\"Not scored by Robertson et al. 2018: {}\"><span class=\"lbl\">political lean unknown for {}</span></span>",
+            unknown.len(),
+            esc(&names(&unknown)),
+            n(unknown.len(), "outlet")
+        );
     }
     let (w, h) = if large { (240.0, 16.0) } else { (120.0, 12.0) };
     let (pad, mid) = (4.0, h / 2.0);
+    let r = if large { 3.5 } else { 3.0 };
     let x = |s: f64| pad + (s.clamp(-1.0, 1.0) + 1.0) / 2.0 * (w - 2.0 * pad);
     let mut dots = String::new();
     for (id, s) in &scored {
         let _ = write!(
             dots,
-            "<circle cx=\"{:.1}\" cy=\"{mid}\" r=\"{}\"><title>{} {s:+.2}</title></circle>",
+            "<circle cx=\"{:.1}\" cy=\"{mid}\" r=\"{r}\"><title>{} {s:+.2}</title></circle>",
             x(*s),
-            if large { 3.5 } else { 3.0 },
             esc(input.outlet_name(id))
         );
     }
+    // Unknown outlets: hollow dots in their own group after R, never placed
+    // on the scale and never counted toward either side.
+    let unknown_svg = if unknown.is_empty() {
+        String::new()
+    } else {
+        let step = r * 2.0 + 2.0;
+        let uw = (unknown.len().min(6) as f64) * step + 2.0;
+        let mut u = String::new();
+        for (k, id) in unknown.iter().take(6).enumerate() {
+            let _ = write!(
+                u,
+                "<circle class=\"unknown\" cx=\"{:.1}\" cy=\"{mid}\" r=\"{r}\"><title>{}: not scored</title></circle>",
+                1.0 + r + k as f64 * step,
+                esc(input.outlet_name(id))
+            );
+        }
+        format!(
+            "<svg class=\"unknown-group\" width=\"{uw:.0}\" height=\"{h}\" viewBox=\"0 0 {uw:.0} {h}\" aria-hidden=\"true\">{u}</svg>"
+        )
+    };
     let label = scored
         .iter()
         .map(|(id, s)| format!("{} {s:+.2}", input.outlet_name(id)))
         .collect::<Vec<_>>()
         .join(", ");
+    let unknown_label = if unknown.is_empty() {
+        String::new()
+    } else {
+        format!("; unknown: {}", names(&unknown))
+    };
     format!(
-        "<span class=\"kg-audience\" data-scored=\"{}\"><span class=\"end\">D</span><svg width=\"{w}\" height=\"{h}\" viewBox=\"0 0 {w} {h}\" role=\"img\" aria-label=\"Audience of {} outlets on -1 (links shared by Democrats) to +1 (by Republicans), Robertson et al. 2018: {}\"><line class=\"axis\" x1=\"{pad}\" y1=\"{mid}\" x2=\"{:.1}\" y2=\"{mid}\"/><line class=\"zero\" x1=\"{:.1}\" y1=\"1\" x2=\"{:.1}\" y2=\"{:.1}\"/>{dots}</svg><span class=\"end\">R</span><span class=\"lbl\">audience of {} of {} outlets <span class=\"src\">(Robertson et al. 2018)</span></span></span>",
+        "<span class=\"kg-audience\" data-scored=\"{}\" data-unknown=\"{}\"><span class=\"end\">D</span><svg width=\"{w}\" height=\"{h}\" viewBox=\"0 0 {w} {h}\" role=\"img\" aria-label=\"Audience of {} outlets on -1 (links shared by Democrats) to +1 (by Republicans), Robertson et al. 2018: {}{}\"><line class=\"axis\" x1=\"{pad}\" y1=\"{mid}\" x2=\"{:.1}\" y2=\"{mid}\"/><line class=\"zero\" x1=\"{:.1}\" y1=\"1\" x2=\"{:.1}\" y2=\"{:.1}\"/>{dots}</svg><span class=\"end\">R</span>{unknown_svg}<span class=\"lbl\">{} of {} scored{} <span class=\"src\">(Robertson et al. 2018)</span></span></span>",
         scored.len(),
+        unknown.len(),
         scored.len(),
         esc(&label),
+        esc(&unknown_label),
         w - pad,
         x(0.0),
         x(0.0),
         h - 1.0,
         scored.len(),
-        outlets.len()
+        outlets.len(),
+        if unknown.is_empty() {
+            String::new()
+        } else {
+            format!(" · <span title=\"Not scored by Robertson et al. 2018: {}\">{} unknown</span>", esc(&names(&unknown)), unknown.len())
+        }
     )
 }
 
@@ -1046,10 +1091,15 @@ mod tests {
         for (id, score) in [("wire", -0.5), ("gazette", 0.5)] {
             i.claims.entry(id.into()).or_default().push(claim(id, "audience_partisanship", "x", "robertson2018", Some(serde_json::json!({"score": score}))));
         }
-        let one = audience_strip(&i, &["wire"], false);
-        assert!(one.is_empty(), "one scored outlet is a point, not a spread");
+        // Nothing scored: said, not hidden.
+        let none = audience_strip(&i, &["blog"], false);
+        assert!(none.contains("political lean unknown for 1 outlet") && none.contains("data-unknown=\"1\""));
+        // One scored outlet still draws, beside its unknowns.
+        let one = audience_strip(&i, &["wire", "blog"], false);
+        assert!(one.contains("1 of 2 scored") && one.contains("1 unknown") && one.contains("class=\"unknown\""));
         let two = audience_strip(&i, &["wire", "gazette", "blog"], false);
-        assert!(two.contains("audience of 2 of 3 outlets") && two.contains("Robertson et al. 2018"));
+        assert!(two.contains("2 of 3 scored") && two.contains("Robertson et al. 2018"));
+        assert!(two.contains("unknown: Blog"), "unknown outlets are named in the aria-label");
         // -0.5 and +0.5 sit a quarter in from each end of the 120px strip.
         assert!(two.contains("cx=\"32.0\"") && two.contains("cx=\"88.0\""), "{two}");
         assert!(!two.contains("fill=") && !two.contains("stroke=") && !two.contains("style="), "colours come from the grey tokens only");
