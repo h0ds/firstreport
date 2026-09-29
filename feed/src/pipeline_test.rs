@@ -271,8 +271,17 @@ async fn fixture_through_store_and_api() {
         hamming_threshold: 3,
         join_threshold: 0.72,
         ledger_url: "http://ledger.test".into(),
+        configured_feeds: std::sync::Arc::new(
+            [feed.url.clone(), "https://www.example.com/held.xml".to_string()].into_iter().collect(),
+        ),
     });
     let get = |uri: &str| Request::builder().uri(uri).body(Body::empty()).unwrap();
+
+    // The network dashboard is served, and /v1/feeds marks configured feeds.
+    let r = app.clone().oneshot(get("/feeds")).await.unwrap();
+    assert_eq!(r.status(), 200);
+    let v = body_json(app.clone().oneshot(get("/v1/feeds")).await.unwrap()).await;
+    assert_eq!(v[0]["configured"], true);
 
     let v = body_json(app.clone().oneshot(get("/v1/items?limit=2")).await.unwrap()).await;
     assert_eq!(v["items"].as_array().unwrap().len(), 2);
