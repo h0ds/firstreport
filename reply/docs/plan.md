@@ -69,7 +69,7 @@ and reports them as observations.
   windows, never as labels
 - A public log of every mention received and every reply posted, with
   the facts each reply was built from
-- Platform adapters: X as the primary platform, Bluesky as the live testbed, Mastodon later
+- Platform adapters: X as the primary platform, Bluesky as the live testbed only
 
 ### Out of scope (deliberately)
 - Judging whether a claim is true
@@ -205,8 +205,9 @@ whole enforcement of rule 6, and it is a unit test.
    the firehose, which needs a websocket and CAR decoding, is only worth
    it for the observer (R4). Replies go through the same authenticated
    API as any client.
-3. **Mastodon**. Streaming API per instance, open, well behaved. The bot
-   lives on one instance and receives mentions from any. Later.
+No other platform is planned. Disinformation campaigns run on X; the
+bot's job is there, and Bluesky exists in this plan only as the place
+to run each stage live before it runs on X.
 
 An adapter implements `listen() -> Stream<Mention | Sighting>` and
 `post(reply_to, text) -> post_id`. Everything else is platform-neutral.
@@ -330,7 +331,7 @@ reply/
   docs/voice.md             the tone guide every template is held to
   templates/
     en/*.toml               one file per fact kind
-    layout/<platform>.toml  sentence order and length rules (x: 280, bluesky: 300, mastodon: 500)
+    layout/<platform>.toml  sentence order and length rules (x: 280, bluesky: 300)
   fixtures/
     mentions/*.json         recorded mentions with the FactSet they resolved to
     mentions/*.<platform>.draft.json
@@ -474,7 +475,16 @@ salt_env = "REPLY_SALT"
   set has N unchanged human approvals in the log; the same limits
   apply, a refusal leaves it for a person, and the log says `auto`.
   Off by default until the templates have settled.
-- **R6** Mastodon adapter. Not started.
+- **R6** The observer on X. There is no free firehose, so sightings on
+  X are gathered on demand: when a mention names a subject, `GET
+  /2/tweets/search/recent?query=url:"…"` (or the text, quoted) returns
+  up to a week of posts carrying it with authors and creation dates,
+  which become sightings the same way and run through the same four
+  signals. The cohort baseline on X then comes from every account seen
+  across all such searches, not from a firehose. Rate limits on the
+  search endpoint bound how many subjects can be observed per hour;
+  a mention whose subject cannot be searched in time is answered
+  without observations and the log says so. Not started.
 
 ## 17. Open questions
 

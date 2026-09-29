@@ -133,8 +133,9 @@ with a window and a denominator. Nothing is a label.
 `listen` attaches the observations for a mention's subject to its
 FactSet, where the three observation templates read them.
 
-X has no free firehose, so the observer runs on Bluesky. A subject is a
-URL, and campaigns carry the same URLs across platforms.
+X has no free firehose, so the observer's firehose mode runs on
+Bluesky; on X, sightings will be gathered on demand through recent
+search when a mention names a subject (plan §16, R6).
 
 ## Resolving a mention
 
