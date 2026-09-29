@@ -292,7 +292,12 @@ can see everything, not only what fit in the post.
 
 `docs/voice.md` is the tone guide: what the bot sounds like, what it
 never says, and the tests a sentence has to pass before it becomes a
-template. Templates are the community's surface. A better sentence, a new fact
+template. The bot answers in the language it was summoned in: the
+mention's language is detected, and the draft is composed from that
+language's templates when the set is complete, else from English with
+the fallback recorded on the draft and shown to the reviewer. A
+translation is the same ids, facts and cites with only the sentences
+changed. Templates are the community's surface. A better sentence, a new fact
 kind, a translation: all are pull requests against `reply/templates/`,
 tested by `reply render` over the fixtures. There is no other place
 wording comes from. If an LLM is ever used, it is to choose among
@@ -332,7 +337,7 @@ reply/
   docs/plan.md
   docs/voice.md             the tone guide every template is held to
   templates/
-    en/*.toml               one file per fact kind
+    <lang>/*.toml           one file per fact kind, per language; en is the fallback, fr ships
     layout/<platform>.toml  sentence order and length rules (x: 280, bluesky: 300)
   fixtures/
     mentions/*.json         recorded mentions with the FactSet they resolved to
@@ -351,7 +356,8 @@ reply/
     platform/bluesky.rs     XRPC: listNotifications, getPosts; parsing is pure
     queue.rs                data/queue/*.json, data/log/*.json and data/seen.txt
     client.rs               the Api trait: HTTP, and recorded responses for tests
-    resolve.rs              mention → Subject → FactSet, via feed and ledger
+    resolve.rs              mention → Subject → FactSet, via feed and ledger; language of the summons
+    lang.rs                 copy of feed's language detector
     compose.rs              templates → Draft
     template.rs             TOML template loading and rendering
     observe/mod.rs          Sighting, salted account hash, thresholds, subject URLs

@@ -1,0 +1,6 @@
+# The one sentence that is about the bot rather than the story. Always
+# last, never dropped by a reviewer.
+
+[trailer]
+text = "Every fact above links its source; full record: {d.log_url}"
+cite = "reply:lookup:{mention.id}"

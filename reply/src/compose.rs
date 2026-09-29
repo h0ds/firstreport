@@ -4,7 +4,7 @@ use serde_json::Value;
 
 use crate::facts;
 use crate::model::{check_cites, Cite, Draft, FactSet, CONTRACT_VERSION};
-use crate::template::{applies, render, Layout, Set, Template};
+use crate::template::{applies, render, Layout, Set, Template, TRAILER};
 
 /// Where cites resolve to. Empty means the reference is left as a URL-less
 /// cite, which the cite check rejects: every deployment names its servers.
@@ -62,7 +62,9 @@ pub fn cite_url(reference: &str, urls: &Urls) -> Result<(String, String), String
 }
 
 pub fn compose(fs: &FactSet, set: &Set, layout: &Layout, urls: &Urls) -> Result<Draft, String> {
-    let mut view = facts::view(fs);
+    let (lang, lang_fallback) = set.choose(fs.mention.lang.as_deref(), layout);
+    let templates = &set.langs[&lang];
+    let mut view = facts::view(fs, &lang);
     if let Some(d) = view.get_mut("d").and_then(Value::as_object_mut) {
         d.insert(
             "log_url".into(),
@@ -81,26 +83,23 @@ pub fn compose(fs: &FactSet, set: &Set, layout: &Layout, urls: &Urls) -> Result<
         sentences: vec![],
         posts: vec![],
         max_chars: layout.max_chars,
+        lang: lang.clone(),
+        lang_fallback,
         cites: vec![],
         autonomous: false,
     };
     for id in &layout.order {
-        let t = set
-            .templates
+        let t = templates
             .get(id)
             .ok_or_else(|| format!("layout {} names unknown template {id}", layout.platform))?;
         if applies(t, &view) {
             push(&mut draft, t, &view, urls)?;
         }
     }
-    let trailer = Template {
-        id: "trailer".into(),
-        needs: vec![],
-        when: None,
-        text: layout.trailer.clone(),
-        cite: layout.trailer_cite.clone(),
-    };
-    push(&mut draft, &trailer, &view, urls)?;
+    let trailer = templates
+        .get(TRAILER)
+        .ok_or_else(|| format!("{lang}: no trailer template"))?;
+    push(&mut draft, trailer, &view, urls)?;
     draft.posts = split(&draft.sentences, layout.max_chars)?;
     check_cites(&draft)?;
     Ok(draft)
@@ -227,6 +226,8 @@ mod tests {
             sentences: vec!["A.".into(), "B.".into(), "T.".into()],
             posts: vec![],
             max_chars: 300,
+            lang: "en".into(),
+            lang_fallback: false,
             cites: (0..3)
                 .map(|i| Cite {
                     sentence: i,

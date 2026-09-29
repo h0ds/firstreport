@@ -6,6 +6,7 @@ mod cli;
 mod client;
 mod compose;
 mod facts;
+mod lang;
 mod model;
 mod observe;
 mod platform;
@@ -192,8 +193,9 @@ async fn run(args: cli::Args) -> Result<(), String> {
                 println!("{p}");
             }
             println!(
-                "{} templates, {} layouts, {n} fixtures, {} problems",
-                set.templates.len(),
+                "{} templates in {} languages, {} layouts, {n} fixtures, {} problems",
+                set.langs.values().map(|t| t.len()).sum::<usize>(),
+                set.langs.len(),
                 set.layouts.len(),
                 problems.len()
             );

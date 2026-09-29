@@ -1,0 +1,6 @@
+# Français. Mêmes identifiants, mêmes faits, mêmes citations que l'anglais ;
+# seule la phrase change. Tenu à docs/voice.md.
+
+[trailer]
+text = "Chaque fait ci-dessus renvoie à sa source ; dossier complet : {d.log_url}"
+cite = "reply:lookup:{mention.id}"

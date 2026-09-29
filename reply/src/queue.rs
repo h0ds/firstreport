@@ -206,6 +206,7 @@ pub mod tests {
                 parent: None,
                 quoted: None,
                 thread: None,
+                lang: None,
             },
             subject: Subject {
                 urls: vec![],
@@ -229,6 +230,8 @@ pub mod tests {
             sentences: vec![],
             posts: vec![],
             max_chars: 300,
+            lang: "en".into(),
+            lang_fallback: false,
             cites: vec![],
             autonomous: false,
         }

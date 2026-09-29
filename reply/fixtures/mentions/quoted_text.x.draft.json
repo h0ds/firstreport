@@ -17,6 +17,8 @@
     "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/https%3A%2F%2Fmastodon.example%2F%40frank%2F112"
   ],
   "max_chars": 280,
+  "lang": "en",
+  "lang_fallback": false,
   "cites": [
     {
       "sentence": 0,

@@ -93,13 +93,7 @@ fn strip_summons(t: &str) -> String {
         .filter(|w| !(w.starts_with("http://") || w.starts_with("https://")))
         .collect();
     let mut s = kept.join(" ");
-    for phrase in [
-        "prove it",
-        "is this real",
-        "is this true",
-        "source",
-        "thoughts",
-    ] {
+    for phrase in SUMMONS_STRIP {
         let lower = s.to_ascii_lowercase();
         if let Some(i) = lower.find(phrase) {
             s.replace_range(i..i + phrase.len(), "");
@@ -111,12 +105,62 @@ fn strip_summons(t: &str) -> String {
     .to_string()
 }
 
+/// Phrases that are a summons rather than a claim; stripped before matching.
+const SUMMONS_STRIP: &[&str] = &[
+    "prove it",
+    "is this real",
+    "is this true",
+    "source",
+    "thoughts",
+];
+/// Words that mark a short summons as English.
+const SUMMONS: &[&str] = &[
+    "prove it",
+    "is this real",
+    "is this true",
+    "source",
+    "thoughts",
+    "real",
+    "true",
+    "fake",
+];
+
 fn words(s: &str) -> usize {
     s.split_whitespace().count()
 }
 
+/// The language the bot was summoned in: the mention's own words first;
+/// when those are too short to tell ("@kagami prove it" is under the
+/// detector's floor) but are a known summons, English; else the quoted or
+/// parent post; else unknown, which the composer treats as English.
+pub fn language(m: &Mention) -> Option<String> {
+    let own: String = m
+        .text
+        .split_whitespace()
+        .filter(|w| !w.starts_with('@') && !w.starts_with("http"))
+        .collect::<Vec<_>>()
+        .join(" ");
+    if let Some(l) = crate::lang::detect(&own) {
+        return Some(l);
+    }
+    let lower = own.to_ascii_lowercase();
+    if words(&own) > 0 && SUMMONS.iter().any(|p| lower.contains(p)) {
+        return Some("en".into());
+    }
+    for post in [&m.quoted, &m.parent].into_iter().flatten() {
+        if let Some(l) = crate::lang::detect(&strip_summons(&post.text)) {
+            return Some(l);
+        }
+    }
+    None
+}
+
 pub async fn resolve<A: Api>(api: &A, urls: &Urls, m: &Mention) -> Result<FactSet, String> {
     let subject = subject(m);
+    let mut m = m.clone();
+    if m.lang.is_none() {
+        m.lang = language(&m);
+    }
     let mut fs = FactSet {
         mention: m.clone(),
         subject: subject.clone(),
@@ -225,6 +269,7 @@ mod tests {
             parent,
             quoted: None,
             thread: None,
+            lang: None,
         }
     }
 
@@ -269,6 +314,36 @@ mod tests {
 
         let s = subject(&mention("@kagami thoughts?", &[], None));
         assert!(s.urls.is_empty() && s.text.is_none());
+    }
+
+    #[test]
+    fn language_of_the_summons() {
+        let p = |t: &str| {
+            Some(Post {
+                id: "p".into(),
+                text: t.into(),
+                urls: vec![],
+            })
+        };
+        let fr = "C'est complètement faux, regardez la source de cette histoire";
+        assert_eq!(
+            language(&mention("@kagami prove it", &[], p(fr))).as_deref(),
+            Some("en")
+        );
+        assert_eq!(
+            language(&mention(
+                "@kagami est-ce que cette histoire est vraie ? d'où vient-elle",
+                &[],
+                None
+            ))
+            .as_deref(),
+            Some("fr")
+        );
+        assert_eq!(
+            language(&mention("@kagami ?", &[], p(fr))).as_deref(),
+            Some("fr")
+        );
+        assert_eq!(language(&mention("@kagami ?", &[], None)), None);
     }
 
     #[tokio::test]

@@ -17,6 +17,8 @@
     "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Adave%2Fapp.bsky.feed.post%2F5b2"
   ],
   "max_chars": 300,
+  "lang": "en",
+  "lang_fallback": false,
   "cites": [
     {
       "sentence": 0,

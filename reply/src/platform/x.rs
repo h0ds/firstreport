@@ -192,6 +192,7 @@ impl Poster for X {
         &'a mut self,
         m: &'a Mention,
         posts: &'a [String],
+        _lang: &'a str,
     ) -> std::pin::Pin<Box<dyn std::future::Future<Output = Posted> + Send + 'a>> {
         Box::pin(async move {
             let mut parent = m.id.clone();
@@ -381,6 +382,7 @@ pub fn parse_mentions(v: &Value) -> Vec<Mention> {
                             root_id: get(t, "conversation_id").map(text).unwrap_or_default(),
                             root_cid: String::new(),
                         }),
+                        lang: None,
                     })
                 })
                 .collect()

@@ -409,7 +409,7 @@ async function load() {
     const m = e.facts.mention, d = e.draft, last = d.sentences.length - 1;
     const subj = e.facts.subject, about = subj.urls.length ? subj.urls[0] : (subj.text || '');
     return `<article class="entry enter" data-id="${esc(e.id)}">
-      <div class="mention"><span class="who">@${esc(m.author)}</span> on ${esc(m.platform)} · ${when(m.at)} · <a href="${esc(m.id)}" rel="noopener">mention</a> · subject from ${esc(subj.from)}</div>
+      <div class="mention"><span class="who">@${esc(m.author)}</span> on ${esc(m.platform)} · ${when(m.at)} · <a href="${esc(m.id)}" rel="noopener">mention</a> · subject from ${esc(subj.from)} · ${esc(d.lang)}${d.lang_fallback ? ` (no ${esc(m.lang)} templates)` : ''}</div>
       <div class="quote">${esc(m.text)}${about ? `<br><span class="mono">${esc(about)}</span>` : ''}</div>
       <ul class="sentences">${d.sentences.map((s, i) => { const c = d.cites.find(c => c.sentence === i) || {}; return `<li><input type="checkbox" checked ${i === last ? 'disabled' : ''} data-i="${i}"><div>${esc(s)}<span class="cite"><span class="tag">${esc(c.kind)}</span><a href="${esc(c.url)}" rel="noopener">${esc(c.reference)}</a> · ${esc(d.template_ids[i])}</span></div></li>`; }).join('')}</ul>
       ${e.facts.gaps.length ? `<div class="gaps">${e.facts.gaps.map(g => `<span>${esc(g)}</span>`).join('<br>')}</div>` : ''}
@@ -453,6 +453,7 @@ mod tests {
             &'a mut self,
             m: &'a Mention,
             posts: &'a [String],
+            _lang: &'a str,
         ) -> std::pin::Pin<Box<dyn std::future::Future<Output = crate::platform::Posted> + Send + 'a>>
         {
             Box::pin(async move {
@@ -480,6 +481,8 @@ mod tests {
             sentences: (0..n).map(|i| format!("Sentence {i}.")).collect(),
             posts: vec![],
             max_chars: 20,
+            lang: "en".into(),
+            lang_fallback: false,
             cites: (0..n)
                 .map(|i| Cite {
                     sentence: i as u16,

@@ -23,6 +23,8 @@
     "28 of the 39 accounts with a known signup date were created within 14 days of each other; across every account Kagami has seen, that share is 21%. Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aivan%2Fapp.bsky.feed.post%2F8e5"
   ],
   "max_chars": 280,
+  "lang": "en",
+  "lang_fallback": false,
   "cites": [
     {
       "sentence": 0,

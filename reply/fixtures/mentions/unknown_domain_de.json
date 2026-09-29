@@ -1,0 +1,50 @@
+{
+  "mention": {
+    "id": "at://did:plc:klaus/app.bsky.feed.post/0a7",
+    "platform": "bluesky",
+    "author": "klaus.example",
+    "at": 1704300000,
+    "text": "@kagami stimmt das? woher kommt diese Geschichte eigentlich",
+    "urls": [],
+    "parent": {
+      "id": "at://did:plc:eve/app.bsky.feed.post/5b1",
+      "text": "",
+      "urls": [
+        "https://truth-wire.example/breaking/999"
+      ]
+    },
+    "lang": "de"
+  },
+  "subject": {
+    "urls": [
+      "https://truth-wire.example/breaking/999"
+    ],
+    "from": "parent"
+  },
+  "lookup": {
+    "matched": "none",
+    "canonical_url": "https://truth-wire.example/breaking/999",
+    "host": "truth-wire.example",
+    "checked": [
+      "item by canonical url https://truth-wire.example/breaking/999",
+      "outlet by host truth-wire.example"
+    ]
+  },
+  "names": {
+    "outlets": {
+      "example": "Example",
+      "wire": "Wire Agency",
+      "bbc": "BBC",
+      "paper-a": "The Paper A",
+      "paper-b": "Paper B Daily",
+      "paper-c": "C Tribune"
+    },
+    "sources": {
+      "wikidata": "Wikidata",
+      "rdap": "the domain registry (RDAP)"
+    }
+  },
+  "outlets": [],
+  "observations": [],
+  "gaps": []
+}

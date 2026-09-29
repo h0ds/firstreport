@@ -30,7 +30,10 @@ pub async fn post_and_log(
     if let Some(why) = over_limit(&log, &entry.facts.mention.author, limits, now) {
         return Err(Refused::OverLimit(why));
     }
-    let (post_ids, failure) = match poster.post(&entry.facts.mention, &draft.posts).await {
+    let (post_ids, failure) = match poster
+        .post(&entry.facts.mention, &draft.posts, &draft.lang)
+        .await
+    {
         Ok(ids) => (ids, None),
         Err((ids, e)) => (ids, Some(e)),
     };

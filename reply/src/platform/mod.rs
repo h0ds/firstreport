@@ -63,12 +63,14 @@ pub type Posted = Result<Vec<String>, (Vec<String>, String)>;
 /// Object-safe so the server can hold whichever platform is configured.
 pub trait Poster: Send {
     fn name(&self) -> &str;
-    /// Post `posts` in reply to `m`, each after the previous; returns the
-    /// platform ids of the posts made. A failure part-way returns what
-    /// was posted in the error so the log can record it.
+    /// Post `posts` in reply to `m`, each after the previous, in `lang`
+    /// (ISO 639-1, for platforms that tag posts); returns the platform
+    /// ids of the posts made. A failure part-way returns what was posted
+    /// in the error so the log can record it.
     fn post<'a>(
         &'a mut self,
         m: &'a Mention,
         posts: &'a [String],
+        lang: &'a str,
     ) -> Pin<Box<dyn Future<Output = Posted> + Send + 'a>>;
 }

@@ -1,0 +1,76 @@
+{
+  "contract_version": 1,
+  "mention_id": "at://did:plc:juliette/app.bsky.feed.post/9f6",
+  "platform": "x",
+  "template_ids": [
+    "origin",
+    "this_is_origin",
+    "spread",
+    "syndication",
+    "domain_age",
+    "owner",
+    "trailer"
+  ],
+  "sentences": [
+    "Publié d'abord par Example le 2024-01-01 09:00 UTC.",
+    "Ce lien est cette première publication.",
+    "Repris par 6 médias ; cinq en 1 h 30 min après le premier.",
+    "63% de ces articles portent le même texte, vu d'abord chez Wire Agency ; c'est une seule copie, pas un travail indépendant.",
+    "Son domaine a été enregistré le 1995-08-14, selon the domain registry (RDAP).",
+    "Propriétaire déclaré : Example Media Group, selon Wikidata.",
+    "Chaque fait ci-dessus renvoie à sa source ; dossier complet : http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Ajuliette%2Fapp.bsky.feed.post%2F9f6"
+  ],
+  "posts": [
+    "Publié d'abord par Example le 2024-01-01 09:00 UTC. Ce lien est cette première publication. Repris par 6 médias ; cinq en 1 h 30 min après le premier. 63% de ces articles portent le même texte, vu d'abord chez Wire Agency ; c'est une seule copie, pas un travail indépendant.",
+    "Son domaine a été enregistré le 1995-08-14, selon the domain registry (RDAP). Propriétaire déclaré : Example Media Group, selon Wikidata.",
+    "Chaque fait ci-dessus renvoie à sa source ; dossier complet : http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Ajuliette%2Fapp.bsky.feed.post%2F9f6"
+  ],
+  "max_chars": 280,
+  "lang": "fr",
+  "lang_fallback": false,
+  "cites": [
+    {
+      "sentence": 0,
+      "reference": "feed:item:1234567890123",
+      "url": "http://127.0.0.1:8080/v1/items/1234567890123",
+      "kind": "feed"
+    },
+    {
+      "sentence": 1,
+      "reference": "feed:item:1234567890123",
+      "url": "http://127.0.0.1:8080/v1/items/1234567890123",
+      "kind": "feed"
+    },
+    {
+      "sentence": 2,
+      "reference": "feed:cluster:1234567890123",
+      "url": "http://127.0.0.1:8080/v1/clusters/1234567890123",
+      "kind": "feed"
+    },
+    {
+      "sentence": 3,
+      "reference": "feed:cluster:1234567890123/syndication",
+      "url": "http://127.0.0.1:8080/v1/clusters/1234567890123",
+      "kind": "feed"
+    },
+    {
+      "sentence": 4,
+      "reference": "ledger:example:domain_registered",
+      "url": "http://127.0.0.1:8081/v1/outlets/example/domain_registered",
+      "kind": "ledger"
+    },
+    {
+      "sentence": 5,
+      "reference": "ledger:example:owner",
+      "url": "http://127.0.0.1:8081/v1/outlets/example/owner",
+      "kind": "ledger"
+    },
+    {
+      "sentence": 6,
+      "reference": "reply:lookup:at://did:plc:juliette/app.bsky.feed.post/9f6",
+      "url": "http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Ajuliette%2Fapp.bsky.feed.post%2F9f6",
+      "kind": "log"
+    }
+  ],
+  "autonomous": false
+}

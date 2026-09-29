@@ -1732,6 +1732,7 @@ dependencies = [
  "toml",
  "tower",
  "url",
+ "whatlang",
  "xxhash-rust",
 ]
 

@@ -6,5 +6,3 @@ order = [
   "no_story", "nothing_to_check",
   "burst", "syndicated_text", "cohort",
 ]
-trailer = "Every fact above links its source; full record: {d.log_url}"
-trailer_cite = "reply:lookup:{mention.id}"

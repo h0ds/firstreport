@@ -173,6 +173,7 @@ impl Poster for Bluesky {
         &'a mut self,
         m: &'a Mention,
         posts: &'a [String],
+        lang: &'a str,
     ) -> std::pin::Pin<Box<dyn std::future::Future<Output = Posted> + Send + 'a>> {
         Box::pin(async move {
             let thread = m.thread.clone().unwrap_or_default();
@@ -194,7 +195,7 @@ impl Poster for Bluesky {
             let mut parent = (m.id.clone(), thread.cid.clone());
             let mut ids = Vec::with_capacity(posts.len());
             for text_ in posts {
-                let record = post_record(text_, &root, &parent, &now_rfc3339());
+                let record = post_record(text_, &root, &parent, &now_rfc3339(), lang);
                 let body = json!({ "repo": self.did, "collection": "app.bsky.feed.post", "record": record });
                 match self.xrpc_post("com.atproto.repo.createRecord", &body).await {
                     Ok(v) => {
@@ -297,12 +298,13 @@ pub fn post_record(
     root: &(String, String),
     parent: &(String, String),
     created_at: &str,
+    lang: &str,
 ) -> Value {
     json!({
         "$type": "app.bsky.feed.post",
         "text": text_,
         "createdAt": created_at,
-        "langs": ["en"],
+        "langs": [lang],
         "reply": {
             "root": { "uri": root.0, "cid": root.1 },
             "parent": { "uri": parent.0, "cid": parent.1 }
@@ -414,6 +416,7 @@ pub fn parse_notifications(v: &Value, after: &str) -> Vec<Partial> {
                     parent: None,
                     quoted: None,
                     thread,
+                    lang: None,
                 },
                 parent_uri,
                 quoted_uri,
@@ -529,7 +532,9 @@ mod tests {
             &("r".into(), "rc".into()),
             &("p".into(), "pc".into()),
             "2024-01-01T00:00:00Z",
+            "fr",
         );
+        assert_eq!(r["langs"][0], "fr");
         assert_eq!(r["reply"]["root"]["cid"], "rc");
         assert_eq!(r["reply"]["parent"]["uri"], "p");
         assert!(now_rfc3339().ends_with('Z'));

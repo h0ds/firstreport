@@ -1,0 +1,43 @@
+{
+  "contract_version": 1,
+  "mention_id": "at://did:plc:klaus/app.bsky.feed.post/0a7",
+  "platform": "bluesky",
+  "template_ids": [
+    "not_followed",
+    "no_story",
+    "trailer"
+  ],
+  "sentences": [
+    "truth-wire.example is not an outlet Kagami follows.",
+    "Kagami has no story for this. Checked: item by canonical url https://truth-wire.example/breaking/999, outlet by host truth-wire.example.",
+    "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aklaus%2Fapp.bsky.feed.post%2F0a7"
+  ],
+  "posts": [
+    "truth-wire.example is not an outlet Kagami follows. Kagami has no story for this. Checked: item by canonical url https://truth-wire.example/breaking/999, outlet by host truth-wire.example.",
+    "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aklaus%2Fapp.bsky.feed.post%2F0a7"
+  ],
+  "max_chars": 300,
+  "lang": "en",
+  "lang_fallback": true,
+  "cites": [
+    {
+      "sentence": 0,
+      "reference": "reply:lookup:at://did:plc:klaus/app.bsky.feed.post/0a7",
+      "url": "http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aklaus%2Fapp.bsky.feed.post%2F0a7",
+      "kind": "log"
+    },
+    {
+      "sentence": 1,
+      "reference": "reply:lookup:at://did:plc:klaus/app.bsky.feed.post/0a7",
+      "url": "http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aklaus%2Fapp.bsky.feed.post%2F0a7",
+      "kind": "log"
+    },
+    {
+      "sentence": 2,
+      "reference": "reply:lookup:at://did:plc:klaus/app.bsky.feed.post/0a7",
+      "url": "http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aklaus%2Fapp.bsky.feed.post%2F0a7",
+      "kind": "log"
+    }
+  ],
+  "autonomous": false
+}

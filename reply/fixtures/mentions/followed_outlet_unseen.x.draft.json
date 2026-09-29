@@ -16,6 +16,8 @@
     "Kagami follows BBC but has not seen this link in its feeds. Owner of record: British Broadcasting Corporation, per Wikidata. Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Agrace%2Fapp.bsky.feed.post%2F6c3"
   ],
   "max_chars": 280,
+  "lang": "en",
+  "lang_fallback": false,
   "cites": [
     {
       "sentence": 0,

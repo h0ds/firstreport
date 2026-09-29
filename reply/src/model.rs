@@ -49,6 +49,9 @@ pub struct Mention {
     pub quoted: Option<Post>,
     #[serde(default)]
     pub thread: Option<Thread>,
+    /// ISO 639-1 of the mention's own words, detected; absent when too short.
+    #[serde(default)]
+    pub lang: Option<String>,
 }
 
 /// A posted reply (plan §4).
@@ -146,12 +149,23 @@ pub struct Draft {
     /// The layout's post length limit, kept so an edited draft splits the same way.
     #[serde(default = "default_max_chars")]
     pub max_chars: usize,
+    /// Language of the templates used.
+    #[serde(default = "default_lang")]
+    pub lang: String,
+    /// True when the mention's language had no complete template set and
+    /// English was used instead.
+    #[serde(default)]
+    pub lang_fallback: bool,
     pub cites: Vec<Cite>,
     pub autonomous: bool,
 }
 
 fn default_max_chars() -> usize {
     300
+}
+
+fn default_lang() -> String {
+    "en".into()
 }
 
 /// Rule 6, enforced: every sentence has exactly one cite with a URL.
@@ -207,6 +221,8 @@ mod tests {
             sentences: sentences.iter().map(|s| s.to_string()).collect(),
             posts: vec![],
             max_chars: 300,
+            lang: "en".into(),
+            lang_fallback: false,
             cites: cites
                 .iter()
                 .map(|&i| Cite {

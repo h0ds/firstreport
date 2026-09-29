@@ -1,9 +1,12 @@
 //! Templates (plan §8): TOML files, one sentence each, with the facts the
-//! sentence needs, an optional condition, and the cite it emits. Layouts
-//! give the sentence order and length rules per platform.
+//! sentence needs, an optional condition, and the cite it emits, in one
+//! directory per language. Layouts give the sentence order and length
+//! rules per platform and apply to every language. A language is usable
+//! only when it has every template a layout names plus `trailer`; English
+//! is the fallback.
 
 use std::collections::BTreeMap;
-use std::path::Path;
+use std::path::{Path, PathBuf};
 
 use serde::Deserialize;
 use serde_json::Value;
@@ -31,34 +34,53 @@ pub struct Layout {
     #[serde(skip)]
     pub platform: String,
     pub max_chars: usize,
-    /// Template ids in the order their sentences appear.
+    /// Template ids in the order their sentences appear. The closing
+    /// sentence is the `trailer` template of the language, always last.
     pub order: Vec<String>,
-    /// Closing sentence, always present, linking the full record.
-    pub trailer: String,
-    pub trailer_cite: String,
 }
+
+pub const FALLBACK_LANG: &str = "en";
+pub const TRAILER: &str = "trailer";
 
 #[derive(Debug, Default)]
 pub struct Set {
-    pub templates: BTreeMap<String, Template>,
+    /// Language → template id → template.
+    pub langs: BTreeMap<String, BTreeMap<String, Template>>,
     pub layouts: BTreeMap<String, Layout>,
 }
 
-/// `templates/en/*.toml` (each file holds `[id]` tables) and
-/// `templates/layout/<platform>.toml`.
+/// `templates/<lang>/*.toml` (each file holds `[id]` tables) for every
+/// two-letter directory, and `templates/layout/<platform>.toml`.
 pub fn load(dir: &Path) -> Result<Set, String> {
     let mut set = Set::default();
-    for path in toml_files(&dir.join("en"))? {
-        let s = std::fs::read_to_string(&path).map_err(|e| format!("{}: {e}", path.display()))?;
-        let tables: BTreeMap<String, Template> =
-            toml::from_str(&s).map_err(|e| format!("{}: {e}", path.display()))?;
-        for (id, mut t) in tables {
-            if set.templates.contains_key(&id) {
-                return Err(format!("{}: template {id} defined twice", path.display()));
+    let mut lang_dirs: Vec<PathBuf> = std::fs::read_dir(dir)
+        .map_err(|e| format!("{}: {e}", dir.display()))?
+        .filter_map(|e| e.ok().map(|e| e.path()))
+        .filter(|p| p.is_dir())
+        .filter(|p| {
+            p.file_name().is_some_and(|n| {
+                n.len() == 2 && n.to_string_lossy().chars().all(|c| c.is_ascii_lowercase())
+            })
+        })
+        .collect();
+    lang_dirs.sort();
+    for ld in lang_dirs {
+        let lang = ld.file_name().unwrap().to_string_lossy().to_string();
+        let mut templates = BTreeMap::new();
+        for path in toml_files(&ld)? {
+            let s =
+                std::fs::read_to_string(&path).map_err(|e| format!("{}: {e}", path.display()))?;
+            let tables: BTreeMap<String, Template> =
+                toml::from_str(&s).map_err(|e| format!("{}: {e}", path.display()))?;
+            for (id, mut t) in tables {
+                if templates.contains_key(&id) {
+                    return Err(format!("{}: template {id} defined twice", path.display()));
+                }
+                t.id = id.clone();
+                templates.insert(id, t);
             }
-            t.id = id.clone();
-            set.templates.insert(id, t);
         }
+        set.langs.insert(lang, templates);
     }
     for path in toml_files(&dir.join("layout"))? {
         let s = std::fs::read_to_string(&path).map_err(|e| format!("{}: {e}", path.display()))?;
@@ -66,8 +88,8 @@ pub fn load(dir: &Path) -> Result<Set, String> {
         l.platform = path.file_stem().unwrap().to_string_lossy().to_string();
         set.layouts.insert(l.platform.clone(), l);
     }
-    if set.templates.is_empty() {
-        return Err(format!("{}: no templates", dir.display()));
+    if set.langs.get(FALLBACK_LANG).is_none_or(BTreeMap::is_empty) {
+        return Err(format!("{}: no {FALLBACK_LANG} templates", dir.display()));
     }
     if set.layouts.is_empty() {
         return Err(format!("{}: no layouts", dir.display()));
@@ -92,34 +114,72 @@ impl Set {
             .ok_or_else(|| format!("no layout for platform {platform}"))
     }
 
+    /// The English templates: the reference set every layout is written against.
+    pub fn fallback(&self) -> &BTreeMap<String, Template> {
+        &self.langs[FALLBACK_LANG]
+    }
+
+    /// Whether `lang` has every template `layout` names, and the trailer.
+    pub fn complete(&self, lang: &str, layout: &Layout) -> bool {
+        self.langs.get(lang).is_some_and(|t| {
+            t.contains_key(TRAILER) && layout.order.iter().all(|id| t.contains_key(id))
+        })
+    }
+
+    /// The language to answer in: the mention's, when complete; else English.
+    pub fn choose(&self, wanted: Option<&str>, layout: &Layout) -> (String, bool) {
+        match wanted {
+            Some(l) if self.complete(l, layout) => (l.to_string(), false),
+            Some(l) if l != FALLBACK_LANG => (FALLBACK_LANG.to_string(), true),
+            _ => (FALLBACK_LANG.to_string(), false),
+        }
+    }
+
     /// Static problems: empty text or cite, a layout naming an unknown
-    /// template, a template no layout uses, a bad `when`.
+    /// template, an English template no layout uses, a bad `when`, a
+    /// language missing a template a layout names or with one English
+    /// lacks. Translations are all-or-nothing: a partial language is a
+    /// problem, not a fallback.
     pub fn check(&self) -> Vec<String> {
         let mut out = Vec::new();
-        for t in self.templates.values() {
-            if t.text.trim().is_empty() {
-                out.push(format!("template {}: empty text", t.id));
-            }
-            if t.cite.trim().is_empty() {
-                out.push(format!("template {}: no cite; rule 6", t.id));
-            }
-            if let Some(w) = &t.when {
-                if parse_when(w).is_none() {
-                    out.push(format!("template {}: cannot parse when {w:?}", t.id));
+        let en = self.fallback();
+        for (lang, templates) in &self.langs {
+            for t in templates.values() {
+                if t.text.trim().is_empty() {
+                    out.push(format!("{lang}/{}: empty text", t.id));
+                }
+                if t.cite.trim().is_empty() {
+                    out.push(format!("{lang}/{}: no cite; rule 6", t.id));
+                }
+                if let Some(w) = &t.when {
+                    if parse_when(w).is_none() {
+                        out.push(format!("{lang}/{}: cannot parse when {w:?}", t.id));
+                    }
+                }
+                if lang == FALLBACK_LANG
+                    && t.id != TRAILER
+                    && !self.layouts.values().any(|l| l.order.contains(&t.id))
+                {
+                    out.push(format!("{lang}/{}: no layout uses it", t.id));
+                }
+                if lang != FALLBACK_LANG && !en.contains_key(&t.id) {
+                    out.push(format!("{lang}/{}: no such English template", t.id));
                 }
             }
-            if !self.layouts.values().any(|l| l.order.contains(&t.id)) {
-                out.push(format!("template {}: no layout uses it", t.id));
+            if !templates.contains_key(TRAILER) {
+                out.push(format!("{lang}: no trailer template"));
+            }
+            for id in en.keys() {
+                if !templates.contains_key(id) {
+                    out.push(format!("{lang}: missing {id}"));
+                }
             }
         }
         for l in self.layouts.values() {
             for id in &l.order {
-                if !self.templates.contains_key(id) {
+                if !en.contains_key(id) {
                     out.push(format!("layout {}: unknown template {id}", l.platform));
                 }
-            }
-            if l.trailer_cite.trim().is_empty() {
-                out.push(format!("layout {}: trailer has no cite", l.platform));
             }
         }
         out

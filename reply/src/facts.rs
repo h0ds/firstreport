@@ -30,7 +30,34 @@ pub fn text(v: &Value) -> String {
     }
 }
 
-pub fn view(fs: &FactSet) -> Value {
+/// The few connective words a derived value needs, per language. A new
+/// language adds a row here and a directory under `templates/`.
+struct Words {
+    and: &'static str,
+    others: &'static str,
+    outlet: &'static str,
+    outlets: &'static str,
+}
+
+fn words(lang: &str) -> Words {
+    match lang {
+        "fr" => Words {
+            and: "et",
+            others: "autres",
+            outlet: "média",
+            outlets: "médias",
+        },
+        _ => Words {
+            and: "and",
+            others: "others",
+            outlet: "outlet",
+            outlets: "outlets",
+        },
+    }
+}
+
+pub fn view(fs: &FactSet, lang: &str) -> Value {
+    let w = words(lang);
     let mut root = serde_json::to_value(fs).unwrap_or(Value::Null);
     let mut d = Map::new();
     let lookup = fs.lookup.as_ref();
@@ -71,7 +98,10 @@ pub fn view(fs: &FactSet) -> Value {
         }
         if let Some(n) = get(c, "outlet_count").and_then(Value::as_u64) {
             d.insert("outlet_count".into(), json!(n));
-            d.insert("outlets_word".into(), json!(plural(n, "outlet")));
+            d.insert(
+                "outlets_word".into(),
+                json!(if n == 1 { w.outlet } else { w.outlets }),
+            );
         }
         if let Some(s) = get(c, "velocity.time_to_5_outlets_secs").and_then(Value::as_u64) {
             d.insert("t5".into(), json!(duration(s)));
@@ -96,7 +126,7 @@ pub fn view(fs: &FactSet) -> Value {
                 .into_iter()
                 .filter(|o| seen.insert(o.clone()))
                 .collect();
-            d.insert("carried_by".into(), json!(list_of(&unique, 4)));
+            d.insert("carried_by".into(), json!(list_of(&unique, 4, &w)));
         }
     }
     // Ledger claims for the subject outlet: first claim per field wins.
@@ -181,23 +211,21 @@ fn biggest_syndication(c: &Value) -> Option<(f64, Value, u64)> {
     ))
 }
 
-fn plural(n: u64, word: &str) -> String {
-    if n == 1 {
-        word.to_string()
-    } else {
-        format!("{word}s")
-    }
-}
-
-fn list_of(names: &[String], max: usize) -> String {
+fn list_of(names: &[String], max: usize, w: &Words) -> String {
     match names.len() {
         0 => String::new(),
         1 => names[0].clone(),
         n if n <= max => {
             let (last, rest) = names.split_last().unwrap();
-            format!("{} and {last}", rest.join(", "))
+            format!("{} {} {last}", rest.join(", "), w.and)
         }
-        n => format!("{} and {} others", names[..max].join(", "), n - max),
+        n => format!(
+            "{} {} {} {}",
+            names[..max].join(", "),
+            w.and,
+            n - max,
+            w.others
+        ),
     }
 }
 
@@ -339,9 +367,17 @@ mod tests {
         assert_eq!(get(&v, "a.b.1.c").map(text).as_deref(), Some("x"));
         assert!(get(&v, "n").is_none());
         assert!(get(&v, "a.z").is_none());
-        let s = |v: &[&str]| list_of(&v.iter().map(|s| s.to_string()).collect::<Vec<_>>(), 2);
+        let s = |v: &[&str]| {
+            list_of(
+                &v.iter().map(|s| s.to_string()).collect::<Vec<_>>(),
+                2,
+                &words("en"),
+            )
+        };
         assert_eq!(s(&["A"]), "A");
         assert_eq!(s(&["A", "B"]), "A and B");
         assert_eq!(s(&["A", "B", "C"]), "A, B and 1 others");
+        let f = list_of(&["A".to_string(), "B".to_string()], 2, &words("fr"));
+        assert_eq!(f, "A et B");
     }
 }

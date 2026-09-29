@@ -155,9 +155,27 @@ whose `needs` resolve and whose `when` holds. Every sentence carries a
 cite; a draft with an uncited sentence fails `check` and is never
 posted. Nothing in a draft comes from anywhere but a template.
 
+## Languages
+
+The bot answers in the language it was summoned in. The mention's own
+words are detected (a short summons like "prove it" counts as English;
+one too short to tell falls back to the quoted or parent post), and the
+draft is composed from `templates/<lang>/` when that language has every
+template a layout names plus the closing `trailer`. Otherwise English is
+used and the draft says so in `lang_fallback`, which the review page
+shows, so a missing translation is visible where it matters. English
+and French ship. A translation is a directory with the same ids, needs,
+conditions and cites and only the sentence changed, held to
+`docs/voice.md` §7, and `check` refuses a partial one. The few
+connective words a derived value needs ("and", "outlets") live in a
+small table in `facts.rs`; a new language adds a row there.
+
+What `feed` reports in `checked` and what `ledger` claims say stay in
+the language their source wrote them in.
+
 ## Templates
 
-`templates/en/*.toml`, one `[id]` table per sentence:
+`templates/<lang>/*.toml`, one `[id]` table per sentence:
 
 ```toml
 [origin]
@@ -178,8 +196,9 @@ Cites resolve as `feed:item:ID`, `feed:cluster:ID`, `feed:outlet:ID`,
 `ledger:OUTLET:FIELD`, `reply:lookup:MENTION` and
 `observation:KIND:SUBJECT`.
 
-`templates/layout/<platform>.toml` gives the sentence order, the post
-length limit, and the closing sentence that links the full record.
+`templates/layout/<platform>.toml` gives the sentence order and the post
+length limit; the closing sentence is each language's `trailer`
+template, always last.
 
 ## Changing what the bot says
 
