@@ -50,3 +50,431 @@ domains = ["rt.com"]
 id = "ap"
 name = "Associated Press"
 domains = ["apnews.com"]
+
+# ---- added by hand to widen the pool across the spectrum and to cover
+# Japan; see feeds.toml for the sources. No outlet is here for its quality.
+
+[[outlet]]
+id = "cnn"
+name = "CNN"
+domains = ["cnn.com", "edition.cnn.com"]
+
+[[outlet]]
+id = "nbcnews"
+name = "NBC News"
+domains = ["nbcnews.com"]
+
+[[outlet]]
+id = "cbsnews"
+name = "CBS News"
+domains = ["cbsnews.com"]
+
+[[outlet]]
+id = "abcnews"
+name = "ABC News"
+domains = ["abcnews.go.com"]
+
+[[outlet]]
+id = "pbs"
+name = "PBS NewsHour"
+domains = ["pbs.org"]
+
+[[outlet]]
+id = "thehill"
+name = "The Hill"
+domains = ["thehill.com"]
+
+[[outlet]]
+id = "politico"
+name = "Politico"
+domains = ["politico.com"]
+
+[[outlet]]
+id = "axios"
+name = "Axios"
+domains = ["axios.com"]
+
+[[outlet]]
+id = "wsj"
+name = "The Wall Street Journal"
+domains = ["wsj.com"]
+
+[[outlet]]
+id = "bloomberg"
+name = "Bloomberg"
+domains = ["bloomberg.com"]
+
+[[outlet]]
+id = "latimes"
+name = "Los Angeles Times"
+domains = ["latimes.com"]
+
+[[outlet]]
+id = "usnews"
+name = "U.S. News & World Report"
+domains = ["usnews.com"]
+
+[[outlet]]
+id = "forbes"
+name = "Forbes"
+domains = ["forbes.com"]
+
+[[outlet]]
+id = "upi"
+name = "UPI"
+domains = ["upi.com"]
+
+[[outlet]]
+id = "nypost"
+name = "New York Post"
+domains = ["nypost.com"]
+
+[[outlet]]
+id = "washingtontimes"
+name = "The Washington Times"
+domains = ["washingtontimes.com"]
+
+[[outlet]]
+id = "dailycaller"
+name = "The Daily Caller"
+domains = ["dailycaller.com"]
+
+[[outlet]]
+id = "newsmax"
+name = "Newsmax"
+domains = ["newsmax.com"]
+
+[[outlet]]
+id = "theblaze"
+name = "TheBlaze"
+domains = ["theblaze.com"]
+
+[[outlet]]
+id = "gatewaypundit"
+name = "The Gateway Pundit"
+domains = ["thegatewaypundit.com"]
+
+[[outlet]]
+id = "zerohedge"
+name = "ZeroHedge"
+domains = ["zerohedge.com"]
+
+[[outlet]]
+id = "epochtimes"
+name = "The Epoch Times"
+domains = ["theepochtimes.com"]
+
+[[outlet]]
+id = "justthenews"
+name = "Just the News"
+domains = ["justthenews.com"]
+
+[[outlet]]
+id = "nationalreview"
+name = "National Review"
+domains = ["nationalreview.com"]
+
+[[outlet]]
+id = "reason"
+name = "Reason"
+domains = ["reason.com"]
+
+[[outlet]]
+id = "huffpost"
+name = "HuffPost"
+domains = ["huffpost.com"]
+
+[[outlet]]
+id = "rawstory"
+name = "Raw Story"
+domains = ["rawstory.com"]
+
+[[outlet]]
+id = "motherjones"
+name = "Mother Jones"
+domains = ["motherjones.com"]
+
+[[outlet]]
+id = "theintercept"
+name = "The Intercept"
+domains = ["theintercept.com"]
+
+[[outlet]]
+id = "dailybeast"
+name = "The Daily Beast"
+domains = ["thedailybeast.com"]
+
+[[outlet]]
+id = "vox"
+name = "Vox"
+domains = ["vox.com"]
+
+[[outlet]]
+id = "commondreams"
+name = "Common Dreams"
+domains = ["commondreams.org"]
+
+[[outlet]]
+id = "democracynow"
+name = "Democracy Now!"
+domains = ["democracynow.org"]
+
+[[outlet]]
+id = "jacobin"
+name = "Jacobin"
+domains = ["jacobin.com"]
+
+[[outlet]]
+id = "independent"
+name = "The Independent"
+domains = ["independent.co.uk"]
+
+[[outlet]]
+id = "telegraph"
+name = "The Telegraph"
+domains = ["telegraph.co.uk"]
+
+[[outlet]]
+id = "dailymail"
+name = "Daily Mail"
+domains = ["dailymail.co.uk"]
+
+[[outlet]]
+id = "skynews"
+name = "Sky News"
+domains = ["news.sky.com", "sky.com"]
+
+[[outlet]]
+id = "express"
+name = "Daily Express"
+domains = ["express.co.uk"]
+
+[[outlet]]
+id = "mirror"
+name = "Daily Mirror"
+domains = ["mirror.co.uk"]
+
+[[outlet]]
+id = "gbnews"
+name = "GB News"
+domains = ["gbnews.com"]
+
+[[outlet]]
+id = "dw"
+name = "Deutsche Welle"
+domains = ["dw.com"]
+
+[[outlet]]
+id = "france24"
+name = "France 24"
+domains = ["france24.com"]
+
+[[outlet]]
+id = "euronews"
+name = "Euronews"
+domains = ["euronews.com"]
+
+[[outlet]]
+id = "abcau"
+name = "ABC News (Australia)"
+domains = ["abc.net.au"]
+
+[[outlet]]
+id = "cbc"
+name = "CBC News"
+domains = ["cbc.ca"]
+
+[[outlet]]
+id = "globeandmail"
+name = "The Globe and Mail"
+domains = ["theglobeandmail.com"]
+
+[[outlet]]
+id = "nzherald"
+name = "The New Zealand Herald"
+domains = ["nzherald.co.nz"]
+
+[[outlet]]
+id = "scmp"
+name = "South China Morning Post"
+domains = ["scmp.com"]
+
+[[outlet]]
+id = "straitstimes"
+name = "The Straits Times"
+domains = ["straitstimes.com"]
+
+[[outlet]]
+id = "cna"
+name = "CNA"
+domains = ["channelnewsasia.com"]
+
+[[outlet]]
+id = "thehindu"
+name = "The Hindu"
+domains = ["thehindu.com"]
+
+[[outlet]]
+id = "ndtv"
+name = "NDTV"
+domains = ["ndtv.com"]
+
+[[outlet]]
+id = "timesofindia"
+name = "The Times of India"
+domains = ["timesofindia.indiatimes.com", "indiatimes.com"]
+
+[[outlet]]
+id = "jpost"
+name = "The Jerusalem Post"
+domains = ["jpost.com"]
+
+[[outlet]]
+id = "timesofisrael"
+name = "The Times of Israel"
+domains = ["timesofisrael.com"]
+
+[[outlet]]
+id = "arabnews"
+name = "Arab News"
+domains = ["arabnews.com"]
+
+[[outlet]]
+id = "anadolu"
+name = "Anadolu Agency"
+domains = ["aa.com.tr"]
+
+[[outlet]]
+id = "dailysabah"
+name = "Daily Sabah"
+domains = ["dailysabah.com"]
+
+[[outlet]]
+id = "sputnik"
+name = "Sputnik"
+domains = ["sputnikglobe.com", "sputniknews.com"]
+
+[[outlet]]
+id = "tass"
+name = "TASS"
+domains = ["tass.com"]
+
+[[outlet]]
+id = "cgtn"
+name = "CGTN"
+domains = ["cgtn.com"]
+
+[[outlet]]
+id = "globaltimes"
+name = "Global Times"
+domains = ["globaltimes.cn"]
+
+[[outlet]]
+id = "presstv"
+name = "Press TV"
+domains = ["presstv.ir"]
+
+[[outlet]]
+id = "kyivindependent"
+name = "The Kyiv Independent"
+domains = ["kyivindependent.com"]
+
+[[outlet]]
+id = "meduza"
+name = "Meduza"
+domains = ["meduza.io"]
+
+[[outlet]]
+id = "nhk"
+name = "NHK"
+domains = ["nhk.or.jp", "www3.nhk.or.jp"]
+
+[[outlet]]
+id = "asahi"
+name = "朝日新聞"
+domains = ["asahi.com"]
+
+[[outlet]]
+id = "mainichi"
+name = "毎日新聞"
+domains = ["mainichi.jp"]
+
+[[outlet]]
+id = "yomiuri"
+name = "読売新聞"
+domains = ["yomiuri.co.jp"]
+
+[[outlet]]
+id = "sankei"
+name = "産経新聞"
+domains = ["sankei.com"]
+
+[[outlet]]
+id = "jiji"
+name = "時事通信"
+domains = ["jiji.com"]
+
+[[outlet]]
+id = "kyodo"
+name = "Kyodo News"
+domains = ["kyodonews.net", "english.kyodonews.net", "47news.jp"]
+
+[[outlet]]
+id = "japantimes"
+name = "The Japan Times"
+domains = ["japantimes.co.jp"]
+
+[[outlet]]
+id = "nikkeiasia"
+name = "Nikkei Asia"
+domains = ["asia.nikkei.com", "nikkei.com"]
+
+[[outlet]]
+id = "japanforward"
+name = "Japan Forward"
+domains = ["japan-forward.com"]
+
+[[outlet]]
+id = "nipponcom"
+name = "nippon.com"
+domains = ["nippon.com"]
+
+[[outlet]]
+id = "toyokeizai"
+name = "東洋経済オンライン"
+domains = ["toyokeizai.net"]
+
+[[outlet]]
+id = "diamond"
+name = "ダイヤモンド・オンライン"
+domains = ["diamond.jp"]
+
+[[outlet]]
+id = "president"
+name = "PRESIDENT Online"
+domains = ["president.jp"]
+
+[[outlet]]
+id = "bunshun"
+name = "文春オンライン"
+domains = ["bunshun.jp"]
+
+[[outlet]]
+id = "litera"
+name = "リテラ"
+domains = ["lite-ra.com"]
+
+[[outlet]]
+id = "huffpostjp"
+name = "ハフポスト日本版"
+domains = ["huffingtonpost.jp"]
+
+[[outlet]]
+id = "tbsnewsdig"
+name = "TBS NEWS DIG"
+domains = ["newsdig.tbs.co.jp"]
+
+[[outlet]]
+id = "fnn"
+name = "FNNプライムオンライン"
+domains = ["fnn.jp"]

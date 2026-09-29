@@ -101,6 +101,23 @@ Things to watch in the first day, all discussed in
 
 ## 4. Grow the outlet pool
 
+The pool is 95 outlets now: the original ten plus 85 added by hand
+across the spectrum (wire, broadcasters, papers, partisan and fringe
+sites, state media, and 19 Japanese outlets). Their feed URLs were
+written from memory in a sandbox that could not fetch them, so the
+first live poll is the verification:
+
+```
+curl -s 'localhost:8080/v1/feeds?filter=failing' | python3 -m json.tool | grep -E '"url"|last_error|last_status'
+```
+
+For each failing feed, `cd feed && cargo run -- discover <homepage>`
+finds the feeds the site advertises; replace the URL in
+`config/feeds.toml`. A host answering 403 or 404 to every UA has no
+public feed; drop it or find a mirror. For Japanese clustering add
+`"ja"` to `cluster.languages` and use the multilingual preset (step 8).
+Then widen further with discovery over the a news aggregator domains:
+
 `feed discover --hosts` batch mode was written to run over the 888
 domains extracted from the a news aggregator scrape, but it needs to fetch
 each host.

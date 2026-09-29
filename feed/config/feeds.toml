@@ -43,3 +43,349 @@ outlet = "rt"
 [[feed]]
 url = "https://feedx.net/rss/ap.xml"
 outlet = "ap"
+
+# ---- added by hand, not yet polled. Feed URLs are from memory: after
+# the first poll, /v1/feeds?filter=failing lists any that are wrong, and
+# `feed discover <homepage>` finds the right one. Reuters, Nikkei (Japanese)
+# and Yahoo! Japan are absent on purpose: Reuters and Nikkei publish no
+# public feed, and Yahoo! Japan aggregates others' articles.
+
+[[feed]]
+url = "http://rss.cnn.com/rss/edition_world.rss"
+outlet = "cnn"
+
+[[feed]]
+url = "https://feeds.nbcnews.com/nbcnews/public/world"
+outlet = "nbcnews"
+
+[[feed]]
+url = "https://www.cbsnews.com/latest/rss/world"
+outlet = "cbsnews"
+
+[[feed]]
+url = "https://abcnews.go.com/abcnews/internationalheadlines"
+outlet = "abcnews"
+
+[[feed]]
+url = "https://www.pbs.org/newshour/feeds/rss/headlines"
+outlet = "pbs"
+
+[[feed]]
+url = "https://thehill.com/feed/"
+outlet = "thehill"
+
+[[feed]]
+url = "https://www.politico.com/rss/politicopicks.xml"
+outlet = "politico"
+
+[[feed]]
+url = "https://api.axios.com/feed/"
+outlet = "axios"
+
+[[feed]]
+url = "https://feeds.a.dj.com/rss/RSSWorldNews.xml"
+outlet = "wsj"
+
+[[feed]]
+url = "https://feeds.bloomberg.com/politics/news.rss"
+outlet = "bloomberg"
+
+[[feed]]
+url = "https://www.latimes.com/world-nation/rss2.0.xml"
+outlet = "latimes"
+
+[[feed]]
+url = "https://www.usnews.com/rss/news"
+outlet = "usnews"
+
+[[feed]]
+url = "https://www.forbes.com/real-time/feed2/"
+outlet = "forbes"
+
+[[feed]]
+url = "https://rss.upi.com/news/top_news.rss"
+outlet = "upi"
+
+[[feed]]
+url = "https://nypost.com/feed/"
+outlet = "nypost"
+
+[[feed]]
+url = "https://www.washingtontimes.com/rss/headlines/news/world/"
+outlet = "washingtontimes"
+
+[[feed]]
+url = "https://dailycaller.com/feed/"
+outlet = "dailycaller"
+
+[[feed]]
+url = "https://www.newsmax.com/rss/Newsfront/1/"
+outlet = "newsmax"
+
+[[feed]]
+url = "https://www.theblaze.com/feeds/feed.rss"
+outlet = "theblaze"
+
+[[feed]]
+url = "https://www.thegatewaypundit.com/feed/"
+outlet = "gatewaypundit"
+
+[[feed]]
+url = "https://feeds.feedburner.com/zerohedge/feed"
+outlet = "zerohedge"
+
+[[feed]]
+url = "https://www.theepochtimes.com/feed"
+outlet = "epochtimes"
+
+[[feed]]
+url = "https://justthenews.com/rss.xml"
+outlet = "justthenews"
+
+[[feed]]
+url = "https://www.nationalreview.com/feed/"
+outlet = "nationalreview"
+
+[[feed]]
+url = "https://reason.com/feed/"
+outlet = "reason"
+
+[[feed]]
+url = "https://www.huffpost.com/section/world-news/feed"
+outlet = "huffpost"
+
+[[feed]]
+url = "https://www.rawstory.com/feed/"
+outlet = "rawstory"
+
+[[feed]]
+url = "https://www.motherjones.com/feed/"
+outlet = "motherjones"
+
+[[feed]]
+url = "https://theintercept.com/feed/?rss"
+outlet = "theintercept"
+
+[[feed]]
+url = "https://feeds.thedailybeast.com/rss/articles"
+outlet = "dailybeast"
+
+[[feed]]
+url = "https://www.vox.com/rss/index.xml"
+outlet = "vox"
+
+[[feed]]
+url = "https://www.commondreams.org/feeds/feed.rss"
+outlet = "commondreams"
+
+[[feed]]
+url = "https://www.democracynow.org/democracynow.rss"
+outlet = "democracynow"
+
+[[feed]]
+url = "https://jacobin.com/feed"
+outlet = "jacobin"
+
+[[feed]]
+url = "https://www.independent.co.uk/news/world/rss"
+outlet = "independent"
+
+[[feed]]
+url = "https://www.telegraph.co.uk/news/rss.xml"
+outlet = "telegraph"
+
+[[feed]]
+url = "https://www.dailymail.co.uk/news/worldnews/index.rss"
+outlet = "dailymail"
+
+[[feed]]
+url = "https://feeds.skynews.com/feeds/rss/world.xml"
+outlet = "skynews"
+
+[[feed]]
+url = "https://www.express.co.uk/feed/news/world"
+outlet = "express"
+
+[[feed]]
+url = "https://www.mirror.co.uk/news/world-news/?service=rss"
+outlet = "mirror"
+
+[[feed]]
+url = "https://www.gbnews.com/feeds/news.rss"
+outlet = "gbnews"
+
+[[feed]]
+url = "https://rss.dw.com/rdf/rdf-en-all"
+outlet = "dw"
+
+[[feed]]
+url = "https://www.france24.com/en/rss"
+outlet = "france24"
+
+[[feed]]
+url = "https://www.euronews.com/rss?level=theme&name=news"
+outlet = "euronews"
+
+[[feed]]
+url = "https://www.abc.net.au/news/feed/2942460/rss.xml"
+outlet = "abcau"
+
+[[feed]]
+url = "https://www.cbc.ca/webfeed/rss/rss-world"
+outlet = "cbc"
+
+[[feed]]
+url = "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/world/"
+outlet = "globeandmail"
+
+[[feed]]
+url = "https://www.nzherald.co.nz/arc/outboundfeeds/rss/section/world/?outputType=xml"
+outlet = "nzherald"
+
+[[feed]]
+url = "https://www.scmp.com/rss/91/feed"
+outlet = "scmp"
+
+[[feed]]
+url = "https://www.straitstimes.com/news/world/rss.xml"
+outlet = "straitstimes"
+
+[[feed]]
+url = "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml"
+outlet = "cna"
+
+[[feed]]
+url = "https://www.thehindu.com/news/international/feeder/default.rss"
+outlet = "thehindu"
+
+[[feed]]
+url = "https://feeds.feedburner.com/ndtvnews-world-news"
+outlet = "ndtv"
+
+[[feed]]
+url = "https://timesofindia.indiatimes.com/rssfeeds/296589292.cms"
+outlet = "timesofindia"
+
+[[feed]]
+url = "https://www.jpost.com/rss/rssfeedsheadlines.aspx"
+outlet = "jpost"
+
+[[feed]]
+url = "https://www.timesofisrael.com/feed/"
+outlet = "timesofisrael"
+
+[[feed]]
+url = "https://www.arabnews.com/rss.xml"
+outlet = "arabnews"
+
+[[feed]]
+url = "https://www.aa.com.tr/en/rss/default?cat=guncel"
+outlet = "anadolu"
+
+[[feed]]
+url = "https://www.dailysabah.com/rssFeed/world"
+outlet = "dailysabah"
+
+[[feed]]
+url = "https://sputnikglobe.com/export/rss2/archive/index.xml"
+outlet = "sputnik"
+
+[[feed]]
+url = "https://tass.com/rss/v2.xml"
+outlet = "tass"
+
+[[feed]]
+url = "https://www.cgtn.com/subscribe/rss/section/world.xml"
+outlet = "cgtn"
+
+[[feed]]
+url = "https://www.globaltimes.cn/rss/outbrain.xml"
+outlet = "globaltimes"
+
+[[feed]]
+url = "https://www.presstv.ir/rss"
+outlet = "presstv"
+
+[[feed]]
+url = "https://kyivindependent.com/feed/"
+outlet = "kyivindependent"
+
+[[feed]]
+url = "https://meduza.io/rss/en"
+outlet = "meduza"
+
+[[feed]]
+url = "https://www3.nhk.or.jp/rss/news/cat0.xml"
+outlet = "nhk"
+
+[[feed]]
+url = "https://www.asahi.com/rss/asahi/newsheadlines.rdf"
+outlet = "asahi"
+
+[[feed]]
+url = "https://mainichi.jp/rss/etc/mainichi-flash.rss"
+outlet = "mainichi"
+
+[[feed]]
+url = "https://www.yomiuri.co.jp/feed/"
+outlet = "yomiuri"
+
+[[feed]]
+url = "https://www.sankei.com/feed/"
+outlet = "sankei"
+
+[[feed]]
+url = "https://www.jiji.com/rss/ranking.rdf"
+outlet = "jiji"
+
+[[feed]]
+url = "https://english.kyodonews.net/rss/all.xml"
+outlet = "kyodo"
+
+[[feed]]
+url = "https://www.japantimes.co.jp/feed/"
+outlet = "japantimes"
+
+[[feed]]
+url = "https://asia.nikkei.com/rss/feed/nar"
+outlet = "nikkeiasia"
+
+[[feed]]
+url = "https://japan-forward.com/feed/"
+outlet = "japanforward"
+
+[[feed]]
+url = "https://www.nippon.com/ja/feed/"
+outlet = "nipponcom"
+
+[[feed]]
+url = "https://toyokeizai.net/list/feed/rss"
+outlet = "toyokeizai"
+
+[[feed]]
+url = "https://diamond.jp/list/feed/rss"
+outlet = "diamond"
+
+[[feed]]
+url = "https://president.jp/list/feed/rss"
+outlet = "president"
+
+[[feed]]
+url = "https://bunshun.jp/list/feed/rss"
+outlet = "bunshun"
+
+[[feed]]
+url = "https://lite-ra.com/feed"
+outlet = "litera"
+
+[[feed]]
+url = "https://www.huffingtonpost.jp/feed"
+outlet = "huffpostjp"
+
+[[feed]]
+url = "https://newsdig.tbs.co.jp/list/feed/rss"
+outlet = "tbsnewsdig"
+
+[[feed]]
+url = "https://www.fnn.jp/feed"
+outlet = "fnn"
