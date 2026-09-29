@@ -143,6 +143,15 @@ pub fn outlet_link(input: &Input, id: &str) -> String {
     )
 }
 
+/// The origin outlet's name inside the origin ring (design §10): no visible
+/// word "first", which stays in the accessible name and the twins.
+pub fn origin_link(input: &Input, id: &str) -> String {
+    format!(
+        "<span class=\"kg-origin-name\"><span class=\"kg-sr\">first to publish: </span>{}</span>",
+        outlet_link(input, id)
+    )
+}
+
 /// Largest value across a page's sparklines: the shared y scale (design §5).
 pub fn spark_scale<'a>(series: impl IntoIterator<Item = &'a [u32]>) -> u32 {
     series
@@ -232,10 +241,10 @@ pub fn cluster_card(
     );
     let _ = write!(
         s,
-        "<span>{}</span><span class=\"sep\">·</span><span>{}</span><span class=\"sep\">·</span><span>first: {}</span><span class=\"sep\">·</span><span>first seen {}</span>",
+        "<span>{}</span><span class=\"sep\">·</span><span>{}</span><span class=\"sep\">·</span>{}<span class=\"sep\">·</span><span>first seen {}</span>",
         n(c.outlet_count as usize, "outlet"),
         n(c.item_count as usize, "item"),
-        outlet_link(input, &c.origin_outlet_id),
+        origin_link(input, &c.origin_outlet_id),
         time_el(c.created_at)
     );
     if !c.syndication.is_empty() {
@@ -756,7 +765,8 @@ mod tests {
         );
         assert!(h.contains("data-id=\"1001\""));
         assert!(h.contains("href=\"/story/1001/\""));
-        assert!(h.contains("first: <a href=\"/outlet/wire/\" data-outlet=\"wire\">Wire</a>"));
+        assert!(h.contains("<span class=\"kg-origin-name\"><span class=\"kg-sr\">first to publish: </span><a href=\"/outlet/wire/\" data-outlet=\"wire\">Wire</a></span>"));
+        assert!(!h.contains("first: "), "the origin is a ring, not the word");
         assert!(h.contains("aria-label=\"Outlets carrying the story, two-hour steps: 1, 2, 2"));
         let flat = cluster_card(&i, c, &[2; 12], 2, false, false);
         assert!(

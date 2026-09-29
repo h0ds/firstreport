@@ -62,7 +62,11 @@ input[type=search]:focus,input[type=number]:focus,select:focus{outline:2px solid
 .origin img,.outlet img{width:16px;height:16px;border-radius:var(--kg-radius-input);flex:none}
 .stack{display:inline-flex;gap:var(--kg-s1)}.stack:empty{display:none}
 .broke{color:var(--kg-text);font-weight:600}
-.first-label{font-size:var(--kg-fs-small);line-height:var(--kg-lh-small);text-transform:uppercase;letter-spacing:.06em;color:var(--kg-text-muted)}
+/* origin ring (design §10): around the first outlet's icon, or its name when it has none */
+.kg-origin{border-radius:var(--kg-radius-input);box-shadow:0 0 0 1.5px var(--kg-bg),0 0 0 3px var(--kg-text)}
+.kg-origin-name{border-radius:var(--kg-radius-input);box-shadow:0 0 0 1.5px var(--kg-text);padding:0 var(--kg-s1)}
+.kg-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.stack{margin-left:var(--kg-s1)}
 .outlet{display:inline-flex;align-items:center;gap:var(--kg-s2);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .spark-wrap{display:inline-flex;align-items:center;gap:var(--kg-s2)}
 .spark{width:80px;height:20px;display:block;overflow:visible}
@@ -200,19 +204,24 @@ let outlets = {};
 fetch('/v1/outlets').then(r=>r.json()).then(v => { for (const o of v) outlets[o.id] = {name: o.name, domain: (o.domains||[])[0], ledger: o.ledger_lookup}; }).catch(()=>{});
 // Outlet name links to the ledger's page for it: the facts about an outlet
 // are one click from any story it is in, and never shown here as a colour.
-const outletTag = (id, cls) => {
+// Moves the origin ring from the outlet's name to its icon once the icon has
+// loaded, so the ring never wraps an empty box.
+const ringToIcon = "this.classList.add('kg-origin');const n=this.closest('.origin,.outlet').querySelector('.kg-origin-name');if(n)n.classList.remove('kg-origin-name')";
+const outletTag = (id, cls, origin) => {
   const o = outlets[id] || {};
-  const icon = o.domain ? `<img src="https://icons.duckduckgo.com/ip3/${encodeURIComponent(o.domain)}.ico" alt="" loading="lazy" onerror="this.remove()">` : '';
+  const icon = o.domain ? `<img src="https://icons.duckduckgo.com/ip3/${encodeURIComponent(o.domain)}.ico" alt="" loading="lazy"${origin ? ` onload="${ringToIcon}"` : ''} onerror="this.remove()">` : '';
   const nm = o.ledger ? `<a href="${esc(o.ledger)}" title="Sourced facts about ${esc(o.name || id)} in the ledger">${esc(o.name || id)}</a>` : esc(o.name || id);
-  return `<span class="${cls}" title="${esc(o.domain || id)}" data-outlet="${esc(id)}">${icon}${nm}</span>`;
+  return `<span class="${cls}" title="${esc(o.domain || id)}" data-outlet="${esc(id)}">${icon}${origin ? `<span class="kg-origin-name"><span class="kg-sr">first to publish: </span>${nm}</span>` : nm}</span>`;
 };
 // Every outlet in the cluster, origin first: icons overlap, first two named, rest as +N.
 const outletStack = c => {
   const ids = [...new Set([c.origin_outlet_id, ...[...(c.items||[])].sort((a,b)=>at(a)-at(b)).map(i=>i.outlet_id)])];
   const icons = ids.slice(0, 8).map((id, k) => { const o = outlets[id] || {};
-    return o.domain ? `<img src="https://icons.duckduckgo.com/ip3/${encodeURIComponent(o.domain)}.ico" alt="" title="${esc(o.name||id)}${k ? '' : ' · broke the story'}" loading="lazy" onerror="this.remove()">` : ''; }).join('');
+    // The origin ring starts on the first outlet's name and moves to its icon once the icon loads.
+    return o.domain ? `<img src="https://icons.duckduckgo.com/ip3/${encodeURIComponent(o.domain)}.ico" alt="" title="${esc(o.name||id)}${k ? '' : ' · first to publish'}" loading="lazy"${k ? '' : ` onload="${ringToIcon}"`} onerror="this.remove()">` : ''; }).join('');
   const names = ids.slice(0, 2).map((id, k) => { const nm = esc((outlets[id]||{}).name || id);
-    return k ? nm : `<b class="broke">${nm}</b> <span class="first-label">first</span>`; }).join('<span class="sep">·</span>');
+    // No visible "first": the ring says it; screen readers get the words.
+    return k ? nm : `<b class="broke kg-origin-name"><span class="kg-sr">first to publish: </span>${nm}</b>`; }).join('<span class="sep">·</span>');
   const total = Math.max(c.outlet_count || 0, ids.length);
   const more = total > 2 ? ` <span class="muted">+${total - 2}</span>` : '';
   return `<span class="origin" title="${esc(ids.map(id => (outlets[id]||{}).name || id).join(', '))}"><span class="stack">${icons}</span>${names}${more}</span>`;
@@ -233,9 +242,9 @@ const compare = c => {
   // Headlines are title links; "also:" rewrites and outlet names are quiet.
   return [...by].map(([id, v], k) => {
     const d = at(v[0]) - t0;
-    const when = k === 0 ? 'first' : '+' + (d < 3600 ? Math.round(d/60) + 'm' : (d/3600).toFixed(1) + 'h');
+    const when = '+' + (d < 3600 ? Math.round(d/60) + 'm' : (d/3600).toFixed(1) + 'h');
     const alts = v.slice(1).filter(i => i.title !== v[0].title).map(i => `<span class="alt">also: ${link(i)}</span>`).join('');
-    return `<li${k ? '' : ' class="first"'}><span class="mono when" title="${esc(`Picked up ${fullT(at(v[0]))}` + (v[0].published_at ? `\nOutlet says published ${fullT(v[0].published_at)}` : ''))}">${when}</span>${outletTag(id,'outlet quiet')}<span class="hl">${link(v[0])}<span class="quiet">${alts}</span></span></li>`;
+    return `<li${k ? '' : ' class="first"'}><span class="mono when" title="${esc(`Picked up ${fullT(at(v[0]))}` + (v[0].published_at ? `\nOutlet says published ${fullT(v[0].published_at)}` : ''))}">${when}</span>${outletTag(id, 'outlet quiet', k === 0)}<span class="hl">${link(v[0])}<span class="quiet">${alts}</span></span></li>`;
   }).join('');
 };
 const n = (k, word) => `${k} ${word}${k === 1 ? '' : 's'}`;

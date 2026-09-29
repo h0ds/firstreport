@@ -245,6 +245,12 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
   white-space: nowrap;
 }
 
+/* origin ring (§10): marks the outlet that published first. A ring, not a
+   word and not blue; the accessible name comes from a .kg-sr span. */
+.kg-origin { border-radius: var(--kg-radius-input); box-shadow: 0 0 0 1.5px var(--kg-bg), 0 0 0 3px var(--kg-text); }
+.kg-origin-name { border-radius: var(--kg-radius-input); box-shadow: 0 0 0 1.5px var(--kg-text); padding: 0 var(--kg-s1); }
+.kg-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
 /* sparkline (§5): shared y scale per page, drawn at size, never stretched */
 .kg-spark-wrap { display: inline-flex; align-items: center; gap: var(--kg-s2); }
 .kg-spark { width: 80px; height: 20px; display: block; overflow: visible; }

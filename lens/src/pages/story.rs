@@ -102,9 +102,9 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             "<li{} data-outlet=\"{}\"><span class=\"when\" title=\"{} after the first outlet\">{}</span><div><span class=\"outlet\">{}</span>{}",
             if k == 0 { " class=\"first\"" } else { "" },
             esc(outlet),
-            if k == 0 { "First".to_string() } else { delta(when(first) - t0) },
-            if k == 0 { "first".to_string() } else { delta(when(first) - t0) },
-            outlet_link(input, outlet),
+            if k == 0 { "0 min".to_string() } else { delta(when(first) - t0) },
+            delta(when(first) - t0),
+            if k == 0 { crate::render::origin_link(input, outlet) } else { outlet_link(input, outlet) },
             match f.copies_of.get(&first.id) {
                 Some(src) => format!(
                     " <span class=\"copy\" title=\"Same text as {}'s\">copy of {}</span>",
