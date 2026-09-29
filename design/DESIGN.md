@@ -51,17 +51,20 @@ Cool-leaning greys, so they sit naturally next to the blue.
 
 Semantic colours are for **system status only** — never for characterizing content, outlets, or claims. A story is never red.
 
-### Lean scale (the one exception)
+### Lean scale (the one exception; owner's decision)
 
 | Token | Value | Position |
 |---|---|---|
-| `--kg-lean-1` | `#0F766E` | far left |
-| `--kg-lean-2` | `#2DA39A` | left |
-| `--kg-lean-3` | `#94A3B8` | centre |
-| `--kg-lean-4` | `#E0A33A` | right |
-| `--kg-lean-5` | `#B45309` | far right |
+| `--kg-lean-1` | `#8B1E1E` | left |
+| `--kg-lean-2` | `#C75A5A` | lean left |
+| `--kg-lean-3` | `#94A3B8` | centre (white fill in bars) |
+| `--kg-lean-4` | `#5B82C2` | lean right |
+| `--kg-lean-5` | `#1E4B8F` | right |
 
-A named source's left-right placement (today: Robertson et al.'s audience scores) is drawn on a teal-to-amber scale through grey. It colours a position on the source's scale, never an outlet's name, badge or card. Never red and blue: red is the left in much of Europe and the right in the US, so on an international site those colours say the opposite of what they mean to half the readers. Unscored outlets stay hollow grey.
+Left-right placement is drawn red for left and blue for right, as a news aggregator draws it (the project owner's call, taken knowing that red means right in the US and left in much of Europe; the labels are always written out, so the colour never stands alone).
+
+- **Outlet colour comes from AllSides only**: an outlet AllSides rates carries its label as a 2px border on its icon (origin ring outside it), with "AllSides: Lean Left" on hover. Outlets AllSides does not rate carry no border. Audience measures (Robertson et al.) never colour an outlet; they colour only the positions on their own strip.
+- **Coverage bar** (card): Left / Center / Right as percentages of the rated outlets in the story, red / white / blue, "N not rated · AllSides" beside it; AllSides' five labels fold into three (Lean Left with Left, Lean Right with Right). Shown when AllSides rates at least two outlets in the story. The story page keeps the full five-label bar in the same colours.
 
 ### Dark mode
 

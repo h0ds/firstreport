@@ -17,13 +17,13 @@
   --kg-text-secondary: #334155;
   --kg-text:           #0F172A;
 
-  /* lean scale (§2, §5): teal (left) to amber (right) through grey.
-     Not red and blue, whose left/right meaning flips between countries. */
-  --kg-lean-1: #0F766E;
-  --kg-lean-2: #2DA39A;
+  /* lean scale (§2, §5), owner's decision: red is left, blue is right,
+     as a news aggregator draws it; white/grey is centre. */
+  --kg-lean-1: #8B1E1E;
+  --kg-lean-2: #C75A5A;
   --kg-lean-3: #94A3B8;
-  --kg-lean-4: #E0A33A;
-  --kg-lean-5: #B45309;
+  --kg-lean-4: #5B82C2;
+  --kg-lean-5: #1E4B8F;
 
   /* semantic: system status only, never content */
   --kg-ok:   #059669;
@@ -332,6 +332,36 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 .kg-track .pt:hover .kg-icon { box-shadow: 0 0 0 1px var(--kg-blue); }
 .kg-track .dot { width: var(--kg-s2); height: var(--kg-s2); margin: var(--kg-s1); border-radius: 50%; background: var(--kg-text-muted); }
 .kg-track .axis { display: flex; justify-content: space-between; margin-top: var(--kg-s1); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); }
+
+/* AllSides coverage bar on a card (§5): Left / Center / Right with percents */
+.kg-coverage { display: inline-flex; align-items: center; gap: var(--kg-s2); }
+.kg-coverage .bar { display: flex; width: 200px; height: 16px; border-radius: var(--kg-radius-input); overflow: hidden; border: 1px solid var(--kg-line-strong); }
+.kg-coverage .seg { display: flex; align-items: center; justify-content: center; min-width: 0; overflow: hidden; }
+.kg-coverage .seg .t { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: clip; }
+.kg-coverage .seg.left { background: var(--kg-lean-1); color: var(--kg-bg); }
+.kg-coverage .seg.center { background: var(--kg-bg); color: var(--kg-text); }
+.kg-coverage .seg.right { background: var(--kg-lean-5); color: var(--kg-bg); }
+.kg-coverage .lbl { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); }
+
+/* an outlet AllSides rates carries its lean as the icon's border */
+.kg-icon.lean-left { box-shadow: 0 0 0 2px var(--kg-lean-1); }
+.kg-icon.lean-lean-left { box-shadow: 0 0 0 2px var(--kg-lean-2); }
+.kg-icon.lean-center { box-shadow: 0 0 0 2px var(--kg-lean-3); }
+.kg-icon.lean-lean-right { box-shadow: 0 0 0 2px var(--kg-lean-4); }
+.kg-icon.lean-right { box-shadow: 0 0 0 2px var(--kg-lean-5); }
+/* with the origin ring outside the lean border */
+.kg-icon.kg-origin.lean-left { box-shadow: 0 0 0 2px var(--kg-lean-1), 0 0 0 3.5px var(--kg-bg), 0 0 0 5px var(--kg-text); }
+.kg-icon.kg-origin.lean-lean-left { box-shadow: 0 0 0 2px var(--kg-lean-2), 0 0 0 3.5px var(--kg-bg), 0 0 0 5px var(--kg-text); }
+.kg-icon.kg-origin.lean-center { box-shadow: 0 0 0 2px var(--kg-lean-3), 0 0 0 3.5px var(--kg-bg), 0 0 0 5px var(--kg-text); }
+.kg-icon.kg-origin.lean-lean-right { box-shadow: 0 0 0 2px var(--kg-lean-4), 0 0 0 3.5px var(--kg-bg), 0 0 0 5px var(--kg-text); }
+.kg-icon.kg-origin.lean-right { box-shadow: 0 0 0 2px var(--kg-lean-5), 0 0 0 3.5px var(--kg-bg), 0 0 0 5px var(--kg-text); }
+
+/* the full AllSides bar on a story page takes the lean colours */
+.kg-labelbar[data-source="allsides"] .seg.w1 { background: var(--kg-lean-1); color: var(--kg-bg); }
+.kg-labelbar[data-source="allsides"] .seg.w2 { background: var(--kg-lean-2); color: var(--kg-bg); }
+.kg-labelbar[data-source="allsides"] .seg.w3 { background: var(--kg-bg); color: var(--kg-text); }
+.kg-labelbar[data-source="allsides"] .seg.w4 { background: var(--kg-lean-4); color: var(--kg-bg); }
+.kg-labelbar[data-source="allsides"] .seg.w5 { background: var(--kg-lean-5); color: var(--kg-bg); }
 
 /* the list's legend: the card pictures explained once */
 .kg-legend { margin: 0 0 var(--kg-s2); }

@@ -201,11 +201,31 @@ pub fn outlet_link(input: &Input, id: &str) -> String {
 /// origin ring.
 pub fn outlet_icon(input: &Input, id: &str, origin: bool) -> Option<String> {
     let file = input.icons.get(id)?.file_name()?.to_str()?.to_string();
+    let lean = allsides_label(input, id);
     Some(format!(
-        "<img class=\"kg-icon{}\" src=\"/icons/{}\" alt=\"\" width=\"16\" height=\"16\" decoding=\"async\">",
+        "<img class=\"kg-icon{}{}\" src=\"/icons/{}\" alt=\"\" width=\"16\" height=\"16\" decoding=\"async\"{}>",
         if origin { " kg-origin" } else { "" },
-        esc(&file)
+        lean.map(|l| format!(" lean-{}", lean_slug(l))).unwrap_or_default(),
+        esc(&file),
+        lean.map(|l| format!(" title=\"AllSides: {l}\"")).unwrap_or_default()
     ))
+}
+
+/// The outlet's AllSides label (Left … Right), if AllSides rates it.
+/// Only AllSides drives colour on outlets (a rating of the outlet's
+/// content, by a named rater); audience measures never do.
+pub fn allsides_label<'a>(input: &'a Input, id: &str) -> Option<&'a str> {
+    input
+        .claims
+        .get(id)?
+        .iter()
+        .find(|c| c.source_id == "allsides" && c.field == "bias")
+        .map(|c| c.value.as_str())
+}
+
+/// CSS slug for an AllSides label: left, lean-left, center, lean-right, right.
+pub fn lean_slug(label: &str) -> String {
+    label.to_ascii_lowercase().replace(' ', "-")
 }
 
 /// An outlet as it appears in a row: icon, then name.
@@ -446,47 +466,51 @@ pub fn story_countries(input: &Input, outlets: &[&str]) -> Vec<(String, usize)> 
 /// source's order and the counts as text. Same data and rules as the
 /// story page's bar (at least two outlets rated), without the legend.
 pub fn label_bar_compact(input: &Input, bar: &LabelBar) -> String {
-    let sname = input
-        .sources
-        .get(&bar.source_id)
-        .map(|s| s.name.as_str())
-        .unwrap_or(bar.source_id.as_str());
-    let short = sname.split_whitespace().next().unwrap_or(sname);
+    // AllSides' five labels fold into Left / Center / Right, as percentages
+    // of the rated outlets; unrated outlets are counted beside the bar.
+    let count = |labels: &[&str]| -> Vec<String> {
+        bar.segments
+            .iter()
+            .filter(|(l, _)| labels.contains(&l.as_str()))
+            .flat_map(|(_, ids)| ids.clone())
+            .collect()
+    };
+    let parts = [
+        ("left", "Left", count(&["Left", "Lean Left"])),
+        ("center", "Center", count(&["Center"])),
+        ("right", "Right", count(&["Lean Right", "Right"])),
+    ];
+    let rated: usize = parts.iter().map(|(_, _, v)| v.len()).sum();
+    if rated == 0 {
+        return String::new();
+    }
     let mut segs = String::new();
-    for (k, (label, ids)) in bar.segments.iter().enumerate() {
+    for (slug, word, ids) in &parts {
+        if ids.is_empty() {
+            continue;
+        }
+        let pct = (ids.len() as f64 / rated as f64 * 100.0).round() as usize;
         let _ = write!(
             segs,
-            "<span class=\"seg w{}\" style=\"flex: {}\" title=\"{}: {}\"></span>",
-            (k % 5) + 1,
+            "<span class=\"seg {slug}\" style=\"flex: {}\" title=\"{word}: {}\"><span class=\"t\">{word} {pct}%</span></span>",
             ids.len(),
-            esc(label),
             esc(&ids.iter().map(|id| input.outlet_name(id)).collect::<Vec<_>>().join(", "))
         );
     }
-    if !bar.unrated.is_empty() {
-        let _ = write!(
-            segs,
-            "<span class=\"seg none\" style=\"flex: {}\" title=\"not rated: {}\"></span>",
-            bar.unrated.len(),
-            esc(&bar.unrated.iter().map(|id| input.outlet_name(id)).collect::<Vec<_>>().join(", "))
-        );
-    }
-    let text = bar
-        .segments
+    let summary = parts
         .iter()
-        .map(|(l, v)| format!("{} {l}", v.len()))
+        .filter(|(_, _, v)| !v.is_empty())
+        .map(|(_, w, v)| format!("{w} {}%", (v.len() as f64 / rated as f64 * 100.0).round() as usize))
         .collect::<Vec<_>>()
-        .join(" · ");
+        .join(", ");
     format!(
-        "<span class=\"kg-labelbar compact\" data-source=\"{}\" data-field=\"{}\"><span class=\"bar\" role=\"img\" aria-label=\"{} on {}: {}{}\">{segs}</span><span class=\"lbl\">{} <span class=\"src\">({})</span></span></span>",
+        "<span class=\"kg-coverage\" data-source=\"{}\" data-field=\"{}\"><span class=\"bar\" role=\"img\" aria-label=\"AllSides on {} rated outlets: {}{}\">{segs}</span><span class=\"lbl\">{}AllSides</span></span>",
         esc(&bar.source_id),
         esc(&bar.field),
-        esc(sname),
-        esc(&field_label(&bar.field).to_lowercase()),
-        esc(&text),
-        if bar.unrated.is_empty() { String::new() } else { format!(", not rated {}", bar.unrated.len()) },
-        esc(&text),
-        esc(short)
+        rated,
+        esc(&summary),
+        if bar.unrated.is_empty() { String::new() } else { format!("; {} not rated", bar.unrated.len()) },
+        if bar.unrated.is_empty() { String::new() } else { format!("{} not rated · ", bar.unrated.len()) }
     )
 }
 
@@ -1174,7 +1198,12 @@ mod tests {
         i.claims.entry("gazette".into()).or_default().push(claim("gazette", "bias", "Lean Right", "allsides", None));
         let bar = label_bar(&i, &["wire", "gazette", "blog"], "allsides", "bias").unwrap();
         let compact = label_bar_compact(&i, &bar);
-        assert!(compact.contains("1 Center · 1 Lean Right") && compact.contains("(AllSides)") && compact.contains("not rated 1"));
+        assert!(compact.contains("Center 50%") && compact.contains("Right 50%") && !compact.contains("Left "), "{compact}");
+        assert!(compact.contains("1 not rated") && compact.contains("AllSides"));
+        // Only AllSides colours an outlet, and only a rated one.
+        assert_eq!(allsides_label(&i, "gazette"), Some("Lean Right"));
+        assert_eq!(allsides_label(&i, "blog"), None);
+        assert_eq!(lean_slug("Lean Right"), "lean-right");
     }
 
     #[test]
