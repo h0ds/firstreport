@@ -67,69 +67,11 @@ fn page_path(page: usize) -> String {
     }
 }
 
-/// Stories N–M of T with thousands separators, for the pager.
-fn thousands(n: usize) -> String {
-    let d = n.to_string();
-    let mut out = String::new();
-    for (k, ch) in d.chars().enumerate() {
-        if k > 0 && (d.len() - k) % 3 == 0 {
-            out.push(',');
-        }
-        out.push(ch);
-    }
-    out
-}
-
-/// The story list's pager (design §5): Newer and Older as plain arrowed
-/// links, page numbers in mono with the current one underlined like a tab,
-/// "51–100 of 2,219" in words, and a hairline rail with a blue segment
-/// showing where this page sits in the whole list.
+/// The story list's pager: the shared one, 50 to a page.
 fn pager(page: usize, pages: usize, total: usize) -> String {
-    if pages <= 1 {
-        return String::new();
-    }
-    let first = (page - 1) * PAGE_SIZE + 1;
-    let last_item = (page * PAGE_SIZE).min(total);
-    let mut s = String::from("<nav class=\"pager\" aria-label=\"Story pages\"><div class=\"row\">");
-    if page > 1 {
-        let _ = write!(s, "<a class=\"step\" rel=\"prev\" href=\"{}\">← Newer</a>", page_path(page - 1));
-    } else {
-        s.push_str("<span class=\"step off\">← Newer</span>");
-    }
-    s.push_str("<span class=\"pages\">");
-    let mut last = 0;
-    for p in 1..=pages {
-        if p == 1 || p == pages || p.abs_diff(page) <= 2 {
-            if last != 0 && p > last + 1 {
-                s.push_str("<span class=\"gap\">…</span>");
-            }
-            if p == page {
-                let _ = write!(s, "<span class=\"cur\" aria-current=\"page\">{p}</span>");
-            } else {
-                let _ = write!(s, "<a href=\"{}\">{p}</a>", page_path(p));
-            }
-            last = p;
-        }
-    }
-    s.push_str("</span>");
-    if page < pages {
-        let _ = write!(s, "<a class=\"step\" rel=\"next\" href=\"{}\">Older →</a>", page_path(page + 1));
-    } else {
-        s.push_str("<span class=\"step off\">Older →</span>");
-    }
-    let left = (first - 1) as f64 / total.max(1) as f64 * 100.0;
-    let width = ((last_item - first + 1) as f64 / total.max(1) as f64 * 100.0).max(1.0);
-    let _ = write!(
-        s,
-        "</div><div class=\"where\"><span class=\"rail\" aria-hidden=\"true\"><span class=\"pos\" style=\"left: {left:.2}%; width: {width:.2}%\"></span></span><span class=\"range\">{}–{} of {}</span></div></nav>",
-        thousands(first),
-        thousands(last_item),
-        thousands(total)
-    );
-    s
+    crate::render::pager(page, pages, total, PAGE_SIZE, "Story pages", &page_path)
 }
 
-/// Cluster cards for one page of the list, with the "Single reports"
 /// heading where that part of the list begins (or continues).
 fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usize) -> String {
     let scale = crate::render::spark_scale(
@@ -480,6 +422,7 @@ mod tests {
 
     #[test]
     fn thousands_separators() {
+        use crate::render::thousands;
         assert_eq!(thousands(7), "7");
         assert_eq!(thousands(2219), "2,219");
         assert_eq!(thousands(1234567), "1,234,567");

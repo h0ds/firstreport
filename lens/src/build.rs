@@ -158,6 +158,11 @@ pub fn write_site(
         let t = crate::pages::outlet::outlet(input, &o, &f, OUTLET_WINDOW_DAYS);
         write_twins(&tmp.join("outlet").join(id), &t)?;
         pages.push(format!("/outlet/{id}/"));
+        for p in 2..=crate::pages::outlet::story_pages(&f) {
+            let t = crate::pages::outlet::stories_page(input, &o, &f, OUTLET_WINDOW_DAYS, p);
+            write_twins(&tmp.join("outlet").join(id).join("page").join(p.to_string()), &t)?;
+            pages.push(format!("/outlet/{id}/page/{p}/"));
+        }
         m += 1;
     }
     std::fs::write(

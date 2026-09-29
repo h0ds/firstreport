@@ -113,21 +113,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     if facts.clusters.is_empty() {
         b.push_str("<div class=\"empty\">No stories in the window.</div>");
     } else {
-        b.push_str("<ul class=\"stories\">");
-        for id in &facts.clusters {
-            let c = &input.clusters[id];
-            let _ = write!(
-                b,
-                "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a>{}<span class=\"n kg-muted\">{} · {}</span></li>",
-                c.id,
-                c.id,
-                esc(&c.primary_title),
-                if c.origin_outlet_id == o.id && c.outlet_count > 1 { " <span class=\"kg-tag\">first</span>" } else { "" },
-                n(c.outlet_count as usize, "outlet"),
-                time_el(c.created_at, input.export_time)
-            );
-        }
-        b.push_str("</ul>");
+        b.push_str(&stories_block(input, o, facts, 1));
     }
 
     let get = |field: &str| {
@@ -181,10 +167,8 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         "first_to": facts.first_to,
         "copies": facts.copies,
         "copied": facts.copied,
-        "stories": facts.clusters.iter().map(|id| {
-            let c = &input.clusters[id];
-            json!({"id": c.id, "title": c.primary_title, "outlet_count": c.outlet_count, "created_at": c.created_at, "first": c.origin_outlet_id == o.id})
-        }).collect::<Vec<_>>(),
+        "stories": stories_json(input, o, facts, 1),
+        "story_pages": story_pages(facts),
         "export_time": input.export_time,
     });
 
@@ -217,7 +201,72 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         facts.copies,
         facts.copied
     );
-    for id in &facts.clusters {
+    md.push_str(&stories_md(input, o, facts, 1));
+
+    Twins {
+        html: page_html,
+        json: page_json,
+        md,
+    }
+}
+
+/// Stories per page of an outlet's list; page 1 is on the outlet page,
+/// then `/outlet/<id>/page/N/`.
+pub const STORIES_PER_PAGE: usize = 50;
+
+pub fn story_pages(facts: &OutletFacts) -> usize {
+    facts.clusters.len().div_ceil(STORIES_PER_PAGE).max(1)
+}
+
+fn stories_path(o: &Outlet, page: usize) -> String {
+    if page <= 1 {
+        format!("/outlet/{}/", o.id)
+    } else {
+        format!("/outlet/{}/page/{page}/", o.id)
+    }
+}
+
+fn page_ids<'a>(facts: &'a OutletFacts, page: usize) -> impl Iterator<Item = &'a u64> {
+    facts.clusters.iter().skip((page - 1) * STORIES_PER_PAGE).take(STORIES_PER_PAGE)
+}
+
+/// One page of the outlet's stories between two pagers.
+fn stories_block(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) -> String {
+    let pages = story_pages(facts);
+    let path = |p: usize| stories_path(o, p);
+    let pager = crate::render::pager(page, pages, facts.clusters.len(), STORIES_PER_PAGE, "Story pages", &path);
+    let mut b = pager.clone();
+    b.push_str("<ul class=\"stories\">");
+    for id in page_ids(facts, page) {
+        let c = &input.clusters[id];
+        let _ = write!(
+            b,
+            "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a>{}<span class=\"n kg-muted\">{} · {}</span></li>",
+            c.id,
+            c.id,
+            esc(&c.primary_title),
+            if c.origin_outlet_id == o.id && c.outlet_count > 1 { " <span class=\"kg-tag\">first</span>" } else { "" },
+            n(c.outlet_count as usize, "outlet"),
+            time_el(c.created_at, input.export_time)
+        );
+    }
+    b.push_str("</ul>");
+    b.push_str(&pager);
+    b
+}
+
+fn stories_json(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) -> Vec<serde_json::Value> {
+    page_ids(facts, page)
+        .map(|id| {
+            let c = &input.clusters[id];
+            json!({"id": c.id, "title": c.primary_title, "outlet_count": c.outlet_count, "created_at": c.created_at, "first": c.origin_outlet_id == o.id})
+        })
+        .collect()
+}
+
+fn stories_md(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) -> String {
+    let mut md = String::new();
+    for id in page_ids(facts, page) {
         let c = &input.clusters[id];
         let _ = writeln!(
             md,
@@ -233,12 +282,48 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
             datetime(c.created_at)
         );
     }
-
-    Twins {
-        html: page_html,
-        json: page_json,
-        md,
+    let pages = story_pages(facts);
+    if pages > 1 {
+        let _ = writeln!(md, "
+Page {page} of {pages}; next: {}", stories_path(o, (page + 1).min(pages)));
     }
+    md
+}
+
+/// Page `page` (2 or more) of an outlet's stories, at `/outlet/<id>/page/N/`.
+pub fn stories_page(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64, page: usize) -> Twins {
+    let name = input.outlet_name(&o.id);
+    let pages = story_pages(facts);
+    let path = stories_path(o, page);
+    let title = format!("{name}: stories, page {page}");
+    let mut b = format!(
+        "<h1>{}</h1><p class=\"kg-muted\">Page {page} of {pages} · {} in the {window_days} days to {} · <a href=\"/outlet/{}/\">back to the outlet</a></p>",
+        esc(&title),
+        n(facts.clusters.len(), "story"),
+        crate::render::day_el(input.export_time, input.export_time),
+        esc(&o.id)
+    );
+    b.push_str(&stories_block(input, o, facts, page));
+    let page_html = html(&Page {
+        title: &title,
+        description: &format!("Stories {name} carried, page {page} of {pages}."),
+        path: &path,
+        wide: false,
+        head: "",
+        body: &b,
+        status: &format!("outlet · built from an export at {}", datetime(input.export_time)),
+    });
+    let json = json!({
+        "outlet": o.id, "page": page, "pages": pages, "page_size": STORIES_PER_PAGE,
+        "window_days": window_days, "export_time": input.export_time,
+        "stories": stories_json(input, o, facts, page),
+    });
+    let md = format!("# {title}
+
+Page {page} of {pages}. Outlet: /outlet/{}/
+
+{}", o.id, stories_md(input, o, facts, page));
+    Twins { html: page_html, json, md }
 }
 
 #[cfg(test)]
@@ -264,13 +349,19 @@ mod tests {
             t.html
                 .matches("<span class=\"kg-tag\">first</span>")
                 .count(),
-            30
+            24,
+            "first page: 50 of 61 stories"
         );
         assert!(t.html.contains("\"@type\":\"Organization\""));
         assert!(t.html.contains("https://www.wikidata.org/wiki/Q130879"));
         assert!(!t.html.contains("Rating"));
         assert_eq!(t.json["first_to"], 30);
-        assert_eq!(t.json["stories"].as_array().unwrap().len(), 61);
+        assert_eq!(t.json["stories"].as_array().unwrap().len(), STORIES_PER_PAGE);
+        assert_eq!(t.json["story_pages"], 2);
+        assert!(t.html.contains("<a class=\"step\" rel=\"next\" href=\"/outlet/wire/page/2/\">Older →</a>"));
+        let p2 = stories_page(&i, &i.outlets["wire"], &facts["wire"], 90, 2);
+        assert_eq!(p2.json["stories"].as_array().unwrap().len(), 11);
+        assert!(p2.html.contains("aria-current=\"page\">2</span>"));
         assert!(t
             .md
             .starts_with("# Wire\n\nOutlet id `wire`, wire.example. 11 claims."));

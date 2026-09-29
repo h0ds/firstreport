@@ -118,14 +118,5 @@ In the 30 days to 2025-09-22 13:03 UTC: 61 items, in 61 stories. First to 30 of 
 - [Story 1014](/story/1014/) · 1 outlet · 2025-08-30 13:03 UTC
 - [Story 1013](/story/1013/) · 2 outlets · first · 2025-08-30 01:56 UTC
 - [Story 1012](/story/1012/) · 1 outlet · 2025-08-29 13:03 UTC
-- [Story 1011](/story/1011/) · 2 outlets · first · 2025-08-29 01:56 UTC
-- [Story 1010](/story/1010/) · 1 outlet · 2025-08-28 13:03 UTC
-- [Story 1009](/story/1009/) · 2 outlets · first · 2025-08-28 01:56 UTC
-- [Story 1008](/story/1008/) · 1 outlet · 2025-08-27 13:03 UTC
-- [Story 1007](/story/1007/) · 2 outlets · first · 2025-08-27 01:56 UTC
-- [Story 1006](/story/1006/) · 1 outlet · 2025-08-26 13:03 UTC
-- [Story 1005](/story/1005/) · 2 outlets · first · 2025-08-26 01:56 UTC
-- [Story 1004](/story/1004/) · 1 outlet · 2025-08-25 13:03 UTC
-- [Story 1003](/story/1003/) · 2 outlets · first · 2025-08-25 01:56 UTC
-- [Story 1002](/story/1002/) · 1 outlet · 2025-08-24 13:03 UTC
-- [Story 1001](/story/1001/) · 2 outlets · first · 2025-08-24 01:56 UTC
+
+Page 1 of 2; next: /outlet/wire/page/2/
