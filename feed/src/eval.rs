@@ -301,6 +301,25 @@ mod tests {
     }
 
     #[test]
+    fn japanese_pairs_parse_balanced_and_cover_both_languages() {
+        let path = Path::new(env!("CARGO_MANIFEST_DIR")).join("fixtures/golden/ja-pairs.tsv");
+        let pairs = parse_pairs(&std::fs::read_to_string(path).unwrap()).unwrap();
+        assert_eq!(pairs.len(), 60);
+        assert_eq!(pairs.iter().filter(|p| p.same).count(), 30);
+        let has_kana = |s: &str| s.chars().any(|c| ('\u{3040}'..='\u{30ff}').contains(&c));
+        assert!(
+            pairs.iter().all(|p| has_kana(&p.a) || has_kana(&p.b)),
+            "every pair has Japanese on at least one side"
+        );
+        let cross = pairs
+            .iter()
+            .filter(|p| has_kana(&p.a) != has_kana(&p.b))
+            .count();
+        assert_eq!(cross, 20, "ten cross-language positives and ten negatives");
+        assert!(pairs.iter().all(|p| p.a != p.b), "no identical pairs");
+    }
+
+    #[test]
     fn golden_pairs_evaluate_with_hash_backend() {
         let path = Path::new(env!("CARGO_MANIFEST_DIR")).join("fixtures/golden/pairs.tsv");
         let pairs = parse_pairs(&std::fs::read_to_string(path).unwrap()).unwrap();

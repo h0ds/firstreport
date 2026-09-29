@@ -1,0 +1,69 @@
+# Japanese and cross-language golden pair set (feed/docs/clustering.md).
+# Tab-separated like pairs.tsv: label  text_a  text_b; texts are what the
+# embedder sees, headline " . " summary. For each of ten stories: a
+# Japanese paraphrase (1), a Japanese syndicated copy with an agency mark
+# (1), the same story in English and Japanese (1), a Japanese hard
+# negative on the same topic (0), an English-Japanese hard negative (0),
+# and an unrelated Japanese story (0). Sixty pairs, thirty positive.
+# Meaningful only with the multilingual preset; the hash backend and the
+# English MiniLM cannot pair across languages. Grow it from real clusters.
+1	日銀、政策金利を据え置き　年内の利下げを示唆 . 日本銀行は月曜日の金融政策決定会合で政策金利を据え置き、物価上昇の鈍化を受けて年内にも利下げに踏み切る可能性を示唆した。	日銀が金利据え置き、年内利下げの可能性に言及 . 日銀は月曜、政策金利の維持を決めた。総裁は記者会見で、物価の動向次第では年内に利下げもあり得るとの見方を示した。
+1	日銀、政策金利を据え置き　年内の利下げを示唆 . 日本銀行は月曜日の金融政策決定会合で政策金利を据え置き、物価上昇の鈍化を受けて年内にも利下げに踏み切る可能性を示唆した。	日銀、政策金利を据え置き　年内の利下げを示唆 . 日本銀行は月曜日の金融政策決定会合で政策金利を据え置き、物価上昇の鈍化を受けて年内にも利下げに踏み切る可能性を示唆した。（共同）
+1	Bank of Japan holds rates steady, signals cuts later this year . The Bank of Japan kept its policy rate unchanged on Monday and said cuts could follow later this year as inflation slows.	日銀、政策金利を据え置き　年内の利下げを示唆 . 日本銀行は月曜日の金融政策決定会合で政策金利を据え置き、物価上昇の鈍化を受けて年内にも利下げに踏み切る可能性を示唆した。
+0	日銀、政策金利を据え置き　年内の利下げを示唆 . 日本銀行は月曜日の金融政策決定会合で政策金利を据え置き、物価上昇の鈍化を受けて年内にも利下げに踏み切る可能性を示唆した。	日銀、政策金利を0.25%引き上げ　17年ぶりの利上げ . 日本銀行は金融政策決定会合で政策金利の引き上げを決めた。利上げは17年ぶりで、物価上昇の定着を理由に挙げた。
+0	Bank of Japan holds rates steady, signals cuts later this year . The Bank of Japan kept its policy rate unchanged on Monday and said cuts could follow later this year as inflation slows.	日銀、政策金利を0.25%引き上げ　17年ぶりの利上げ . 日本銀行は金融政策決定会合で政策金利の引き上げを決めた。利上げは17年ぶりで、物価上昇の定着を理由に挙げた。
+0	日銀、政策金利を据え置き　年内の利下げを示唆 . 日本銀行は月曜日の金融政策決定会合で政策金利を据え置き、物価上昇の鈍化を受けて年内にも利下げに踏み切る可能性を示唆した。	国会、データ保存法案を可決　深夜までの審議経て . 国会は水曜深夜、通信データの保存を義務付ける法案を可決した。審議は日付をまたぎ、法案は参院に送られる。
+1	沿岸部で洪水、夜間の暴風雨で高速道路2本が通行止めに . 夜間の暴風雨による浸水で、沿岸部の高速道路2路線が月曜早朝から通行止めとなった。復旧の見通しは立っていない。	暴風雨で沿岸の高速2路線が不通　浸水で復旧めど立たず . 月曜未明の暴風雨で沿岸地域が浸水し、高速道路2路線が通行止めになった。県は復旧時期を示していない。
+1	沿岸部で洪水、夜間の暴風雨で高速道路2本が通行止めに . 夜間の暴風雨による浸水で、沿岸部の高速道路2路線が月曜早朝から通行止めとなった。復旧の見通しは立っていない。	沿岸部で洪水、夜間の暴風雨で高速道路2本が通行止めに . 夜間の暴風雨による浸水で、沿岸部の高速道路2路線が月曜早朝から通行止めとなった。復旧の見通しは立っていない。【時事】
+1	Coastal flooding closes two highways after overnight storm . Two coastal highways were closed early Monday after an overnight storm brought flooding to low-lying stretches of the coast road.	沿岸部で洪水、夜間の暴風雨で高速道路2本が通行止めに . 夜間の暴風雨による浸水で、沿岸部の高速道路2路線が月曜早朝から通行止めとなった。復旧の見通しは立っていない。
+0	沿岸部で洪水、夜間の暴風雨で高速道路2本が通行止めに . 夜間の暴風雨による浸水で、沿岸部の高速道路2路線が月曜早朝から通行止めとなった。復旧の見通しは立っていない。	鉄砲水で山間部の村が孤立、道路寸断で救助難航 . 山間部を襲った鉄砲水で村に通じる道路が寸断され、住民約200人が孤立している。救助隊は徒歩で現地に向かっている。
+0	Coastal flooding closes two highways after overnight storm . Two coastal highways were closed early Monday after an overnight storm brought flooding to low-lying stretches of the coast road.	鉄砲水で山間部の村が孤立、道路寸断で救助難航 . 山間部を襲った鉄砲水で村に通じる道路が寸断され、住民約200人が孤立している。救助隊は徒歩で現地に向かっている。
+0	沿岸部で洪水、夜間の暴風雨で高速道路2本が通行止めに . 夜間の暴風雨による浸水で、沿岸部の高速道路2路線が月曜早朝から通行止めとなった。復旧の見通しは立っていない。	客室乗務員のストで200便欠航　国内航空大手 . 国内航空大手は月曜、客室乗務員による賃上げ要求の2日間のストライキが始まり、約200便を欠航にしたと発表した。
+1	北部沖でM6.1の地震、津波の心配なし . 火曜早朝、北部沖を震源とするマグニチュード6.1の地震があった。気象庁は津波の心配はないとしている。けが人の情報は入っていない。	北部沖を震源にM6.1　気象庁「津波なし」 . 気象庁によると火曜午前、北部沖でマグニチュード6.1の地震が発生した。津波の心配はなく、これまでに被害の報告はない。
+1	北部沖でM6.1の地震、津波の心配なし . 火曜早朝、北部沖を震源とするマグニチュード6.1の地震があった。気象庁は津波の心配はないとしている。けが人の情報は入っていない。	北部沖でM6.1の地震、津波の心配なし . 火曜早朝、北部沖を震源とするマグニチュード6.1の地震があった。気象庁は津波の心配はないとしている。けが人の情報は入っていない。（共同通信）
+1	Magnitude 6.1 earthquake strikes off the northern coast, no tsunami warning . A magnitude 6.1 earthquake struck off the northern coast early Tuesday, the agency said. No tsunami warning was issued and no injuries were reported.	北部沖でM6.1の地震、津波の心配なし . 火曜早朝、北部沖を震源とするマグニチュード6.1の地震があった。気象庁は津波の心配はないとしている。けが人の情報は入っていない。
+0	北部沖でM6.1の地震、津波の心配なし . 火曜早朝、北部沖を震源とするマグニチュード6.1の地震があった。気象庁は津波の心配はないとしている。けが人の情報は入っていない。	南部でM5.4の地震、建物数棟が損壊 . 水曜夜、南部を震源とするマグニチュード5.4の地震で建物数棟が損壊した。津波はなかったが、余震への警戒が呼びかけられている。
+0	Magnitude 6.1 earthquake strikes off the northern coast, no tsunami warning . A magnitude 6.1 earthquake struck off the northern coast early Tuesday, the agency said. No tsunami warning was issued and no injuries were reported.	南部でM5.4の地震、建物数棟が損壊 . 水曜夜、南部を震源とするマグニチュード5.4の地震で建物数棟が損壊した。津波はなかったが、余震への警戒が呼びかけられている。
+0	北部沖でM6.1の地震、津波の心配なし . 火曜早朝、北部沖を震源とするマグニチュード6.1の地震があった。気象庁は津波の心配はないとしている。けが人の情報は入っていない。	首相、内閣改造を断行　経済安保相を新設 . 首相は金曜、内閣改造を行い、経済安全保障を担当する閣僚ポストを新設した。改造後の閣僚名簿は同日午後に発表された。
+1	国会、データ保存法案を可決　深夜までの審議経て . 国会は水曜深夜、通信データの保存を義務付ける法案を可決した。審議は日付をまたぎ、法案は参院に送られる。	通信データ保存法案が衆院通過　審議は未明まで . 通信事業者にデータ保存を義務付ける法案が水曜、衆院本会議で可決された。審議は未明に及び、参院での審議に移る。
+1	国会、データ保存法案を可決　深夜までの審議経て . 国会は水曜深夜、通信データの保存を義務付ける法案を可決した。審議は日付をまたぎ、法案は参院に送られる。	国会、データ保存法案を可決　深夜までの審議経て . 国会は水曜深夜、通信データの保存を義務付ける法案を可決した。審議は日付をまたぎ、法案は参院に送られる。（共同）
+1	Parliament passes data retention bill after marathon debate . Lawmakers approved the data retention bill late on Wednesday after a debate that ran past midnight, sending it to the upper house.	国会、データ保存法案を可決　深夜までの審議経て . 国会は水曜深夜、通信データの保存を義務付ける法案を可決した。審議は日付をまたぎ、法案は参院に送られる。
+0	国会、データ保存法案を可決　深夜までの審議経て . 国会は水曜深夜、通信データの保存を義務付ける法案を可決した。審議は日付をまたぎ、法案は参院に送られる。	参院、データ保存法案を否決　与党に打撃 . 参院は木曜、通信データ保存法案を否決した。与党は再提出を検討するとしている。
+0	Parliament passes data retention bill after marathon debate . Lawmakers approved the data retention bill late on Wednesday after a debate that ran past midnight, sending it to the upper house.	参院、データ保存法案を否決　与党に打撃 . 参院は木曜、通信データ保存法案を否決した。与党は再提出を検討するとしている。
+0	国会、データ保存法案を可決　深夜までの審議経て . 国会は水曜深夜、通信データの保存を義務付ける法案を可決した。審議は日付をまたぎ、法案は参院に送られる。	大手電機、国内工場で5000人削減へ . 大手電機メーカーは火曜、国内工場で約5000人を削減する計画を発表した。半導体事業の不振が理由で、希望退職を募る。
+1	客室乗務員のストで200便欠航　国内航空大手 . 国内航空大手は月曜、客室乗務員による賃上げ要求の2日間のストライキが始まり、約200便を欠航にしたと発表した。	乗務員スト初日、約200便が欠航 . 賃金をめぐる客室乗務員の2日間ストが月曜に始まり、国内大手は約200便を欠航とした。空港には振り替えを求める利用客が並んだ。
+1	客室乗務員のストで200便欠航　国内航空大手 . 国内航空大手は月曜、客室乗務員による賃上げ要求の2日間のストライキが始まり、約200便を欠航にしたと発表した。	客室乗務員のストで200便欠航　国内航空大手 . 国内航空大手は月曜、客室乗務員による賃上げ要求の2日間のストライキが始まり、約200便を欠航にしたと発表した。＝時事
+1	Airline cancels 200 flights as cabin crew strike begins . The national airline cancelled around 200 flights on Monday as a two-day strike by cabin crew over pay began.	客室乗務員のストで200便欠航　国内航空大手 . 国内航空大手は月曜、客室乗務員による賃上げ要求の2日間のストライキが始まり、約200便を欠航にしたと発表した。
+0	客室乗務員のストで200便欠航　国内航空大手 . 国内航空大手は月曜、客室乗務員による賃上げ要求の2日間のストライキが始まり、約200便を欠航にしたと発表した。	パイロット組合がスト予告　来月に3日間 . 国内航空大手のパイロット組合は来月に3日間のストライキを行うと予告した。賃金交渉の決裂が理由という。
+0	Airline cancels 200 flights as cabin crew strike begins . The national airline cancelled around 200 flights on Monday as a two-day strike by cabin crew over pay began.	パイロット組合がスト予告　来月に3日間 . 国内航空大手のパイロット組合は来月に3日間のストライキを行うと予告した。賃金交渉の決裂が理由という。
+0	客室乗務員のストで200便欠航　国内航空大手 . 国内航空大手は月曜、客室乗務員による賃上げ要求の2日間のストライキが始まり、約200便を欠航にしたと発表した。	台風接近で新幹線が計画運休　東海道・山陽の一部区間 . 台風の接近に伴い、JRは土曜午後から東海道・山陽新幹線の一部区間で計画運休を実施すると発表した。
+1	首相、内閣改造を断行　経済安保相を新設 . 首相は金曜、内閣改造を行い、経済安全保障を担当する閣僚ポストを新設した。改造後の閣僚名簿は同日午後に発表された。	内閣改造、経済安保担当相を新たに設置 . 金曜に行われた内閣改造で、経済安全保障担当の閣僚が新設された。首相は記者団に「経済と安全保障を一体で進める」と述べた。
+1	首相、内閣改造を断行　経済安保相を新設 . 首相は金曜、内閣改造を行い、経済安全保障を担当する閣僚ポストを新設した。改造後の閣僚名簿は同日午後に発表された。	首相、内閣改造を断行　経済安保相を新設 . 首相は金曜、内閣改造を行い、経済安全保障を担当する閣僚ポストを新設した。改造後の閣僚名簿は同日午後に発表された。（時事通信）
+1	Prime minister reshuffles cabinet, creates economic security post . The prime minister reshuffled the cabinet on Friday and created a new ministerial post for economic security; the full list was published in the afternoon.	首相、内閣改造を断行　経済安保相を新設 . 首相は金曜、内閣改造を行い、経済安全保障を担当する閣僚ポストを新設した。改造後の閣僚名簿は同日午後に発表された。
+0	首相、内閣改造を断行　経済安保相を新設 . 首相は金曜、内閣改造を行い、経済安全保障を担当する閣僚ポストを新設した。改造後の閣僚名簿は同日午後に発表された。	経済安保相が辞任　政治資金問題で . 経済安全保障担当相は月曜、政治資金をめぐる問題の責任を取って辞任した。就任からわずか3か月だった。
+0	Prime minister reshuffles cabinet, creates economic security post . The prime minister reshuffled the cabinet on Friday and created a new ministerial post for economic security; the full list was published in the afternoon.	経済安保相が辞任　政治資金問題で . 経済安全保障担当相は月曜、政治資金をめぐる問題の責任を取って辞任した。就任からわずか3か月だった。
+0	首相、内閣改造を断行　経済安保相を新設 . 首相は金曜、内閣改造を行い、経済安全保障を担当する閣僚ポストを新設した。改造後の閣僚名簿は同日午後に発表された。	最高裁、同性婚訴訟で初の憲法判断へ . 最高裁大法廷は、同性婚を認めない民法の規定が憲法に反するかを争う訴訟について、来月に判決を言い渡すと発表した。最高裁の判断は初めて。
+1	大手電機、国内工場で5000人削減へ . 大手電機メーカーは火曜、国内工場で約5000人を削減する計画を発表した。半導体事業の不振が理由で、希望退職を募る。	電機大手が5000人の人員削減　半導体不振で希望退職 . 半導体事業の低迷を受け、大手電機メーカーは国内で約5000人の希望退職を募集すると発表した。
+1	大手電機、国内工場で5000人削減へ . 大手電機メーカーは火曜、国内工場で約5000人を削減する計画を発表した。半導体事業の不振が理由で、希望退職を募る。	大手電機、国内工場で5000人削減へ . 大手電機メーカーは火曜、国内工場で約5000人を削減する計画を発表した。半導体事業の不振が理由で、希望退職を募る。（共同）
+1	Electronics giant to cut 5,000 jobs at domestic plants . The electronics maker said on Tuesday it would cut about 5,000 jobs at plants in Japan through voluntary retirement, blaming its chip business.	大手電機、国内工場で5000人削減へ . 大手電機メーカーは火曜、国内工場で約5000人を削減する計画を発表した。半導体事業の不振が理由で、希望退職を募る。
+0	大手電機、国内工場で5000人削減へ . 大手電機メーカーは火曜、国内工場で約5000人を削減する計画を発表した。半導体事業の不振が理由で、希望退職を募る。	大手電機、半導体の新工場に1兆円投資 . 大手電機メーカーは半導体の新工場建設に1兆円を投じると発表した。2028年の稼働を目指す。
+0	Electronics giant to cut 5,000 jobs at domestic plants . The electronics maker said on Tuesday it would cut about 5,000 jobs at plants in Japan through voluntary retirement, blaming its chip business.	大手電機、半導体の新工場に1兆円投資 . 大手電機メーカーは半導体の新工場建設に1兆円を投じると発表した。2028年の稼働を目指す。
+0	大手電機、国内工場で5000人削減へ . 大手電機メーカーは火曜、国内工場で約5000人を削減する計画を発表した。半導体事業の不振が理由で、希望退職を募る。	国産ロケット、打ち上げ成功　気象衛星を軌道に投入 . 国産の新型ロケットが火曜朝に打ち上げられ、気象衛星を予定の軌道に投入した。新型機の成功は2回連続。
+1	台風接近で新幹線が計画運休　東海道・山陽の一部区間 . 台風の接近に伴い、JRは土曜午後から東海道・山陽新幹線の一部区間で計画運休を実施すると発表した。	新幹線、土曜午後から一部区間で計画運休　台風で . JR各社は台風接近を受け、東海道・山陽新幹線の一部で土曜午後以降の運転を取りやめると発表した。
+1	台風接近で新幹線が計画運休　東海道・山陽の一部区間 . 台風の接近に伴い、JRは土曜午後から東海道・山陽新幹線の一部区間で計画運休を実施すると発表した。	台風接近で新幹線が計画運休　東海道・山陽の一部区間 . 台風の接近に伴い、JRは土曜午後から東海道・山陽新幹線の一部区間で計画運休を実施すると発表した。【共同】
+1	Bullet trains suspended on parts of Tokaido and Sanyo lines as typhoon nears . JR will suspend some Tokaido and Sanyo shinkansen services from Saturday afternoon as a typhoon approaches.	台風接近で新幹線が計画運休　東海道・山陽の一部区間 . 台風の接近に伴い、JRは土曜午後から東海道・山陽新幹線の一部区間で計画運休を実施すると発表した。
+0	台風接近で新幹線が計画運休　東海道・山陽の一部区間 . 台風の接近に伴い、JRは土曜午後から東海道・山陽新幹線の一部区間で計画運休を実施すると発表した。	台風で九州の空港が閉鎖、300便欠航 . 台風の直撃で九州の主要空港が土曜に閉鎖され、約300便が欠航した。
+0	Bullet trains suspended on parts of Tokaido and Sanyo lines as typhoon nears . JR will suspend some Tokaido and Sanyo shinkansen services from Saturday afternoon as a typhoon approaches.	台風で九州の空港が閉鎖、300便欠航 . 台風の直撃で九州の主要空港が土曜に閉鎖され、約300便が欠航した。
+0	台風接近で新幹線が計画運休　東海道・山陽の一部区間 . 台風の接近に伴い、JRは土曜午後から東海道・山陽新幹線の一部区間で計画運休を実施すると発表した。	日銀、政策金利を据え置き　年内の利下げを示唆 . 日本銀行は月曜日の金融政策決定会合で政策金利を据え置き、物価上昇の鈍化を受けて年内にも利下げに踏み切る可能性を示唆した。
+1	最高裁、同性婚訴訟で初の憲法判断へ . 最高裁大法廷は、同性婚を認めない民法の規定が憲法に反するかを争う訴訟について、来月に判決を言い渡すと発表した。最高裁の判断は初めて。	同性婚めぐる訴訟、最高裁が来月判決　初の憲法判断 . 同性婚を認めない規定の合憲性が争われた訴訟で、最高裁大法廷は来月判決を言い渡す。最高裁が憲法判断を示すのは初めてとなる。
+1	最高裁、同性婚訴訟で初の憲法判断へ . 最高裁大法廷は、同性婚を認めない民法の規定が憲法に反するかを争う訴訟について、来月に判決を言い渡すと発表した。最高裁の判断は初めて。	最高裁、同性婚訴訟で初の憲法判断へ . 最高裁大法廷は、同性婚を認めない民法の規定が憲法に反するかを争う訴訟について、来月に判決を言い渡すと発表した。最高裁の判断は初めて。（時事）
+1	Supreme Court to rule on same-sex marriage for the first time . The Supreme Court's grand bench said it would deliver its first ruling next month on whether the civil code's bar on same-sex marriage is unconstitutional.	最高裁、同性婚訴訟で初の憲法判断へ . 最高裁大法廷は、同性婚を認めない民法の規定が憲法に反するかを争う訴訟について、来月に判決を言い渡すと発表した。最高裁の判断は初めて。
+0	最高裁、同性婚訴訟で初の憲法判断へ . 最高裁大法廷は、同性婚を認めない民法の規定が憲法に反するかを争う訴訟について、来月に判決を言い渡すと発表した。最高裁の判断は初めて。	高裁、同性婚認めない規定は「違憲」　5件目の判断 . 高等裁判所は同性婚を認めない民法の規定を違憲と判断した。高裁レベルでの違憲判断は5件目。
+0	Supreme Court to rule on same-sex marriage for the first time . The Supreme Court's grand bench said it would deliver its first ruling next month on whether the civil code's bar on same-sex marriage is unconstitutional.	高裁、同性婚認めない規定は「違憲」　5件目の判断 . 高等裁判所は同性婚を認めない民法の規定を違憲と判断した。高裁レベルでの違憲判断は5件目。
+0	最高裁、同性婚訴訟で初の憲法判断へ . 最高裁大法廷は、同性婚を認めない民法の規定が憲法に反するかを争う訴訟について、来月に判決を言い渡すと発表した。最高裁の判断は初めて。	沿岸部で洪水、夜間の暴風雨で高速道路2本が通行止めに . 夜間の暴風雨による浸水で、沿岸部の高速道路2路線が月曜早朝から通行止めとなった。復旧の見通しは立っていない。
+1	国産ロケット、打ち上げ成功　気象衛星を軌道に投入 . 国産の新型ロケットが火曜朝に打ち上げられ、気象衛星を予定の軌道に投入した。新型機の成功は2回連続。	新型ロケットが2連続成功、気象衛星を軌道へ . 火曜朝、種子島から打ち上げられた新型ロケットが気象衛星を軌道に投入した。新型機としては2回連続の成功となる。
+1	国産ロケット、打ち上げ成功　気象衛星を軌道に投入 . 国産の新型ロケットが火曜朝に打ち上げられ、気象衛星を予定の軌道に投入した。新型機の成功は2回連続。	国産ロケット、打ち上げ成功　気象衛星を軌道に投入 . 国産の新型ロケットが火曜朝に打ち上げられ、気象衛星を予定の軌道に投入した。新型機の成功は2回連続。（共同通信）
+1	Japanese rocket launches weather satellite into orbit . Japan's new rocket lifted off on Tuesday morning and placed a weather satellite in its planned orbit, the vehicle's second straight success.	国産ロケット、打ち上げ成功　気象衛星を軌道に投入 . 国産の新型ロケットが火曜朝に打ち上げられ、気象衛星を予定の軌道に投入した。新型機の成功は2回連続。
+0	国産ロケット、打ち上げ成功　気象衛星を軌道に投入 . 国産の新型ロケットが火曜朝に打ち上げられ、気象衛星を予定の軌道に投入した。新型機の成功は2回連続。	新型ロケットの打ち上げ失敗、第2段が着火せず . 新型ロケットの初号機は打ち上げ後、第2段エンジンが着火せず、指令破壊された。搭載していた衛星は失われた。
+0	Japanese rocket launches weather satellite into orbit . Japan's new rocket lifted off on Tuesday morning and placed a weather satellite in its planned orbit, the vehicle's second straight success.	新型ロケットの打ち上げ失敗、第2段が着火せず . 新型ロケットの初号機は打ち上げ後、第2段エンジンが着火せず、指令破壊された。搭載していた衛星は失われた。
+0	国産ロケット、打ち上げ成功　気象衛星を軌道に投入 . 国産の新型ロケットが火曜朝に打ち上げられ、気象衛星を予定の軌道に投入した。新型機の成功は2回連続。	北部沖でM6.1の地震、津波の心配なし . 火曜早朝、北部沖を震源とするマグニチュード6.1の地震があった。気象庁は津波の心配はないとしている。けが人の情報は入っていない。

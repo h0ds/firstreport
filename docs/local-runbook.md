@@ -52,6 +52,7 @@ Runtime shared library for your target triple into `models/`
 cargo run -- replay --fixtures fixtures/replay
 cargo run -- eval --pairs fixtures/golden/pairs.tsv
 cargo run -- eval --pairs fixtures/golden/aggregator/aggregator-pairs.tsv
+cargo run -- eval --pairs fixtures/golden/ja-pairs.tsv      # meaningful with the multilingual preset only
 ```
 
 Both `eval` runs print a precision/recall sweep over the join

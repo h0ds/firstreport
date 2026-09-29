@@ -62,6 +62,20 @@ Once `feed` has run live for a day, a third set sampled from its own
 clusters and labelled by hand will catch whatever the seed feeds do
 that the aggregator's mix does not.
 
+## The Japanese and cross-language set
+
+`fixtures/golden/ja-pairs.tsv` holds sixty pairs over ten stories:
+Japanese paraphrases, agency-marked syndicated copies, the same story
+in English and Japanese, Japanese hard negatives on the same topic,
+English-Japanese hard negatives and unrelated stories. It is the set
+that decides whether a join threshold tuned on English holds for
+Japanese and across the two, which only the multilingual preset can
+answer; the English model and the hash backend score it near chance
+on the cross-language pairs by construction. Run it alongside the
+English sets and expect the threshold to move. Sixty hand-written
+pairs is a smoke set; grow it from real Japanese clusters once feed
+polls the Japanese outlets.
+
 ## Current numbers
 
 ### Hash backend (lexical stand-in, no model)

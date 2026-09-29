@@ -154,6 +154,7 @@ Docs: `docs/data-contract.md` (the v1 schema, frozen), `docs/api.md`,
 
 ```
 cargo run -- eval --pairs fixtures/golden/pairs.tsv
+cargo run -- eval --pairs fixtures/golden/ja-pairs.tsv     # Japanese and cross-language; needs the multilingual preset
 ```
 
 reports precision, recall and F1 of the assignment step across
