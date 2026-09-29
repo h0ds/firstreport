@@ -79,7 +79,7 @@ Alternates considered: Fraunces (more personality, too warm), Newsreader (better
 The default choice for a reason: enormous glyph coverage, tabular figures, optical sizing, and it disappears behind the content. Use the variable font.
 
 - Body: 15px / 1.6, `--kg-text-secondary` in dense layouts, `--kg-text` in articles.
-- UI labels, buttons, nav: 13–14px, weight 500, tracking 0.
+- UI labels, buttons, nav: 13px (`ui`), weight 500, tracking 0.
 - Small metadata: 12px, weight 400, `--kg-text-muted`, tracking 0.01em.
 - H3 and below: Inter Semibold 600, 16–20px. Below H2 the serif hands off to the sans.
 - Enable `font-feature-settings: "tnum", "cv11", "ss01"` for tabular numbers and the single-storey a in UI contexts.
@@ -102,25 +102,74 @@ For the `鏡` glyph and any Japanese UI: **Noto Serif JP** paired with Instrumen
 
 ### Type scale
 
-Based on 15px, ratio ~1.25.
+Based on 15px, ratio ~1.25. Eight steps, and nothing else: a size that is
+not in this table is a bug. Every step has a fixed line height that is a
+multiple of 4px, so baselines land on the spacing grid and stacked text
+never produces fractional pixels. Line heights are tokens
+(`--kg-lh-*`); never inherit body's line height into a heading, and never
+write a unitless ratio.
 
-```
-12  small / meta
-13  ui-sm / mono
-15  body
-17  body-lg
-20  h3
-28  h2       (serif)
-40  h1       (serif)
-56  display  (serif)
-```
+| Token | Size / line | Family, weight | Tracking | Use |
+|---|---|---|---|---|
+| `small` | 12 / 16 | Inter 400 | 0.01em | Metadata, provenance line, captions, table headers (500, uppercase, 0.06em) |
+| `ui` | 13 / 20 | Inter 400–500, or JetBrains Mono 400 | 0 | UI labels, notes, scope lines, mono data, timeline times |
+| `body` | 15 / 24 | Inter 400 | 0 | Running text, list rows, story-list titles |
+| `body-lg` | 17 / 24 | Inter 600 | −0.005em | Cluster card title, claim value |
+| `h3` | 20 / 28 | Inter 600 | −0.01em | Section heads below H2, outlet names on a story |
+| `h2` | 28 / 32 | Instrument Serif 400 | −0.01em | Section heads |
+| `h1` | 40 / 44 | Instrument Serif 400 | −0.02em | Page title, one per page |
+| `display` | 56 / 60 | Instrument Serif 400 | −0.02em | Home masthead only |
+
+Rules:
+- **One H1 per page.** The page title, in the serif. Story pages use the
+  story's primary title at `h1`; if it runs past three lines at 720px it
+  steps down to `h2` size, never smaller.
+- **Weight carries hierarchy, not size, below 20px.** Between 12 and 17
+  the steps are small; use 600 against 400 to separate a title from its
+  metadata rather than adding a size.
+- **Muted is always small.** `--kg-text-muted` is only ever set at 12 or
+  13px. Muted body text fails contrast intent; use `--kg-text-secondary`.
+- **Numbers.** Tabular figures everywhere (`tnum` is on for the whole
+  page). Counts in prose stay Inter; ids, hashes, clock times and raw
+  values are JetBrains Mono at `ui`.
+- **Measure.** Running text is capped at 68ch inside the 720px column.
+  Headlines may use the full column.
+- **Row alignment.** The only time a size takes another step's line height
+  is to share a baseline with its neighbour in the same row: a 13px mono
+  time beside a 15px headline sits on the headline's 24px line, and the
+  kanji sits on the lockup's line.
+- **Truncation.** Headlines are never truncated or ellipsised: they are
+  the outlet's words. Long URLs and hashes may break anywhere
+  (`overflow-wrap: anywhere`).
 
 ---
 
 ## 4. Spacing, grid, shape
 
-- Base unit 4px. Spacing tokens: 4, 8, 12, 16, 24, 32, 48, 64, 96.
+- Base unit 4px. Spacing tokens: 4, 8, 12, 16, 24, 32, 48, 64, 96 (`--kg-s1` … `--kg-s9`). Every margin, padding and gap uses one of them. The single exception is the inline tag (below), whose 2px vertical padding keeps it inside a 16px line.
 - Content column max 720px for reading; data tables and cluster views may go to 1200px.
+
+**Where each step goes.** Spacing is chosen by relationship, not by eye:
+
+| Step | px | Between |
+|---|---|---|
+| `s1` | 4 | A line and its own qualifier: title → metadata, value → scope, claim → provenance |
+| `s2` | 8 | Items inside one row: meta items, tag and text, icon and label; list-row vertical padding |
+| `s3` | 12 | Column gutter inside a row (time column → content); claim card vertical padding |
+| `s4` | 16 | Page side gutter on phones; cluster card vertical padding; header bottom padding |
+| `s5` | 24 | H3 → its content; between groups inside a section; empty-state padding |
+| `s6` | 32 | Above an H2; page top padding on desktop |
+| `s7` | 48 | Between major sections of a long page |
+| `s8` | 64 | Above the footer |
+| `s9` | 96 | Page bottom padding |
+
+- Space above a heading is always larger than space below it (H2: `s6` above, `s2` below; H3: `s5` above, `s2` below), so a heading belongs to what follows.
+- Rows in a list are separated by a hairline and `s2` padding each side; cards by a hairline and `s4`. No margins between rows, only padding, so rules stay evenly spaced.
+- Prose: paragraphs and lists `0 0 s4`; list indent `s5`; list items `s1` apart.
+
+**Breakpoints.** Two, content-driven: at `max-width: 720px` the side gutter drops to `s4`, H1 to 28/32 and `display` to 40/44; two-column rows (timeline, story list counts) stack. Nothing else changes; the same page, narrower.
+
+**Touch.** Anything clickable on its own (not inline in a sentence) has at least a 32px hit area, from padding, not from a larger font.
 - Corner radius: **4px** on inputs and buttons, **6px** on cards, **0** on tables and rules. Nothing rounder — pill shapes read as consumer app, not instrument.
 - Borders are 1px `--kg-line`. No drop shadows except a single `0 1px 2px rgba(15,23,42,0.06)` on floating elements (menus, popovers).
 - Rules over boxes: separate sections with a hairline, not a bordered container.
@@ -130,13 +179,29 @@ Based on 15px, ratio ~1.25.
 ## 5. Components
 
 **Buttons**
-- Primary: `--kg-blue` fill, white text, Inter 500 14px, 8px 14px padding, radius 4. Hover `--kg-blue-hover`.
+- Primary: `--kg-blue` fill, white text, Inter 500 13px on a 20px line, 4px 16px padding, 32px minimum height, radius 4. Hover `--kg-blue-hover`.
 - Secondary: white fill, 1px `--kg-line-strong` border, `--kg-text`. Hover: border `--kg-text-muted`.
 - Ghost: no border, `--kg-blue` text. For tertiary actions only.
 - Never more than one primary button visible in a view.
 
 **Links**
-- `--kg-blue`, no underline at rest, underline on hover with `text-underline-offset: 3px`. In body prose, underline at rest with `text-decoration-color: --kg-line-strong`.
+
+Blue marks the thing a person is most likely to act on (§1.2), so most
+links are not blue. Four kinds, chosen by where the link sits, and every
+link is exactly one of them:
+
+| Kind | Class | At rest | Hover / focus | Where |
+|---|---|---|---|---|
+| Title | `.kg-link-title` | inherits the heading's colour (`--kg-text`), no underline | `--kg-blue`, underline | Cluster card titles, story-list headlines, outlet names used as headings. The object's name is the link. |
+| Action | `a` (default) | `--kg-blue`, no underline | `--kg-blue-hover`, underline | The one next step in a view: "all 12 stories", "open the timeline", pagination, search results. Few per screen. |
+| Quiet | `.kg-link-quiet` | inherits (`--kg-text-secondary` or muted), underline in `--kg-line-strong` | `--kg-blue`, underline in blue | Links inside metadata and provenance lines: source names, outlet links in a meta row, footer, discussion numbers. |
+| Prose | `.kg-prose a` | `--kg-blue`, underline in `--kg-line-strong` | underline in blue | Links inside running text, where the underline is how you find them. |
+
+- Underlines are 1px, `text-underline-offset: 3px`, `text-decoration-skip-ink: auto`. Colour transitions over `--kg-t-fast`; nothing else animates.
+- **No visited style.** The mirror doesn't track where a reader has been.
+- **Focus** is the global 2px `--kg-blue` outline, offset 2px, on every kind. Never remove it.
+- **Leaving the site.** Links to an outlet's article or a source's page open in the same tab, carry `rel="noopener"`, and add no icon; the provenance line already says it is the source.
+- A link's text says where it goes ("BBC", "Wikidata", "12 stories"). Never "here", never a bare URL except in a mono tag.
 
 **Tables**
 - Header row: Inter 500 12px uppercase, tracking 0.06em, `--kg-text-muted`, bottom rule `--kg-line-strong`.
@@ -147,8 +212,21 @@ Based on 15px, ratio ~1.25.
 **Cluster card** (the core object across all three tools)
 - Primary title in Inter 600 17px.
 - Metadata line: outlet count · item count · velocity · age, Inter 12px muted, separated by `·`.
-- Spread sparkline: 80×20px, single `--kg-blue` line, no axes.
+- Spread sparkline, per the sparkline rules below.
 - Origin outlet shown as a small mono tag. No colour by outlet.
+
+**Sparklines**
+
+One chart type, one job: how many outlets had carried a story at each
+step since it was first seen. Spec:
+
+- **Size** 80×20 in a list, 160×32 on the story page. The SVG is drawn at that size (no `preserveAspectRatio="none"` stretching), and strokes use `vector-effect: non-scaling-stroke`.
+- **Data** cumulative distinct outlets, twelve two-hour buckets over the first 24 hours. Cumulative means the line never falls; a flat line means nobody new picked it up.
+- **Scale** the y axis is shared across every sparkline on a page (max = the largest story on the page), and starts at zero. Never scale each line to its own maximum: that draws a 2-outlet story and a 40-outlet story as the same shape, which is exactly the editorialising the mirror avoids.
+- **Marks** 1.5px `--kg-blue` line, round joins; area below in `--kg-blue-soft` at 40%; a 1px `--kg-line` baseline; a 3px `--kg-blue` dot on the last point. No axes, gridlines, labels or hover tooltips.
+- **Label** the final count sits to the right of the chart as `small` tabular text ("12"), so the number is read, not estimated.
+- **Accessibility** `role="img"` with an `aria-label` giving every value ("Outlets carrying the story, two-hour steps: 1, 1, 3, 5 …"). No fact lives only in the line (§11).
+- **Single-outlet stories** draw only the baseline and the end dot. An empty curve is still information.
 
 **Charts**
 - Line and area only for spread curves; `--kg-blue` stroke 1.5px, `--kg-blue-soft` fill at 40%.
@@ -156,7 +234,7 @@ Based on 15px, ratio ~1.25.
 - When several series must be distinguished, use blue plus greys of different weight. Introduce a second hue only when unavoidable, and never a red/blue pairing.
 
 **Inputs**
-- 1px `--kg-line-strong`, radius 4, 36px height, Inter 14px. Focus: 2px `--kg-blue` ring, no border colour change.
+- 1px `--kg-line-strong`, radius 4, 36px height, Inter 13px. Focus: 2px `--kg-blue` ring, no border colour change.
 
 **Status dots**
 - 8px circle, semantic colour, always paired with a text label. Never colour alone.
@@ -181,6 +259,7 @@ Based on 15px, ratio ~1.25.
 - Mark (for favicon, avatars): a hairline circle, 1.5px `--kg-text`, bisected by a single vertical line offset 10% left of centre — a mirror's edge, in profile. Blue variant for active/selected contexts. Keep it geometric; no reflections, no gradients, no eyes.
 - Clear space: the cap height of the wordmark on all sides.
 - Sub-tool lockups: `Kagami` in serif, then a thin vertical rule, then the tool name in Inter 500 lowercase: **Kagami** │ feed.
+- Lockup sizes are fixed, not scaled from one number: wordmark 28px (`h2`), kanji 17px, tool name 13px (`ui`) at weight 500, `s3` either side of the rule. The lockup is the same size on every screen.
 
 ---
 
@@ -243,5 +322,6 @@ Agents and bots are first-class readers, not scrapers to tolerate. Disinformatio
 ## 12. Implementation notes
 
 - Tokens live in one `tokens.css` shared across tools; each tool copies it, no shared runtime dependency (project rule: bespoke, no framework).
-- Fonts: download variable Inter, static Instrument Serif (Regular + Italic), variable JetBrains Mono; subset to Latin + Latin Extended with `pyftsubset`; serve as `woff2` with `font-display: swap`. Noto JP loaded on demand.
+- Fonts: `design/fonts/fetch.sh` downloads variable Inter, static Instrument Serif (Regular + Italic) and variable JetBrains Mono from a pinned google/fonts commit, subsets them to Latin + Latin Extended with `pyftsubset`, and writes `woff2` (about 164 KB together, under the 200 KB budget). `lens build` copies them into the site's `fonts/`. Noto JP loaded on demand.
+- Conformance: `lens` has a test that its copy of `tokens.css` is byte-identical to this directory's, and one that its stylesheets use only scale sizes and spacing tokens. The other surfaces follow the same rules by hand.
 - The `#2563EB` blue coincides with a well-known utility framework's `blue-600`. That's fine — it's a good blue — but no tool in the project uses that framework; tokens are hand-written.

@@ -41,6 +41,33 @@ pub fn sitemap(pages: &[String], base_url: &str, export_time: i64) -> String {
     s
 }
 
+/// Where the self-hosted woff2 files live: `KAGAMI_FONTS`, else the
+/// checkout's `design/fonts/` (populated by `design/fonts/fetch.sh`).
+fn fonts_dir() -> PathBuf {
+    std::env::var_os("KAGAMI_FONTS")
+        .map(PathBuf::from)
+        .unwrap_or_else(|| Path::new(env!("CARGO_MANIFEST_DIR")).join("../design/fonts"))
+}
+
+/// Copy the woff2 files into `<site>/fonts/`, where `tokens.css` points.
+/// Missing fonts are not an error: the stacks fall back to system faces.
+fn copy_fonts(site: &Path) -> Result<usize, String> {
+    let Ok(entries) = std::fs::read_dir(fonts_dir()) else {
+        return Ok(0);
+    };
+    let dst = site.join("fonts");
+    let mut n = 0;
+    for p in entries.flatten().map(|e| e.path()) {
+        if p.extension().is_some_and(|x| x == "woff2") {
+            std::fs::create_dir_all(&dst).map_err(|e| format!("{}: {e}", dst.display()))?;
+            let to = dst.join(p.file_name().unwrap_or_default());
+            std::fs::copy(&p, &to).map_err(|e| format!("{}: {e}", to.display()))?;
+            n += 1;
+        }
+    }
+    Ok(n)
+}
+
 /// Returns the number of story and outlet pages written.
 pub fn write_site(
     input: &Input,
@@ -59,6 +86,7 @@ pub fn write_site(
     std::fs::create_dir_all(&tmp).map_err(|e| format!("{}: {e}", tmp.display()))?;
     std::fs::write(tmp.join("tokens.css"), crate::render::TOKENS_CSS).map_err(|e| e.to_string())?;
     std::fs::write(tmp.join("lens.css"), crate::render::LENS_CSS).map_err(|e| e.to_string())?;
+    copy_fonts(&tmp)?;
     std::fs::write(tmp.join("llms.txt"), crate::llms::llms_txt(input))
         .map_err(|e| e.to_string())?;
     std::fs::write(tmp.join("robots.txt"), crate::llms::ROBOTS_TXT).map_err(|e| e.to_string())?;
@@ -161,6 +189,8 @@ mod tests {
             }
             let want = std::fs::read_to_string(&want_path)
                 .unwrap_or_else(|_| panic!("missing golden {name}; run with LENS_UPDATE_GOLDEN=1"));
+            // Line endings are git's business (a Windows checkout has CRLF).
+            let (got, want) = (got.replace("\r\n", "\n"), want.replace("\r\n", "\n"));
             assert_eq!(got, want, "{name} differs from the golden copy");
         }
         std::fs::remove_dir_all(&out).unwrap();

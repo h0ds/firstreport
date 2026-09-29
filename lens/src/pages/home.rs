@@ -66,8 +66,9 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         }
         b.push_str("</ul><h2>All stories in the window</h2>");
     }
+    let scale = crate::render::spark_scale(recent.iter().map(|(_, f)| f.spark.as_slice()));
     for (c, f) in &recent {
-        b.push_str(&cluster_card(input, c, &f.spark, false));
+        b.push_str(&cluster_card(input, c, &f.spark, scale, false, false));
     }
     b.push_str("<h2>Outlets</h2><ul class=\"stories\">");
     for o in input.outlets.values() {

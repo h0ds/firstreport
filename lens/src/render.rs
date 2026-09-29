@@ -143,33 +143,72 @@ pub fn outlet_link(input: &Input, id: &str) -> String {
     )
 }
 
-pub fn spark(points: &[u32]) -> String {
-    let max = points.iter().copied().max().unwrap_or(0).max(1) as f64;
-    let step = 80.0 / (points.len().max(2) - 1) as f64;
-    let pts: Vec<String> = points
+/// Largest value across a page's sparklines: the shared y scale (design §5).
+pub fn spark_scale<'a>(series: impl IntoIterator<Item = &'a [u32]>) -> u32 {
+    series
+        .into_iter()
+        .flat_map(|s| s.iter().copied())
+        .max()
+        .unwrap_or(0)
+        .max(1)
+}
+
+/// Spread sparkline (design §5): cumulative outlets per two-hour step,
+/// y scaled to `scale_max` shared across the page, drawn at its own size,
+/// with a baseline, an end dot and the final count beside it.
+pub fn spark(points: &[u32], scale_max: u32, large: bool) -> String {
+    let (w, h) = if large { (160.0, 32.0) } else { (80.0, 20.0) };
+    // 2px inset top and bottom so the stroke and end dot are not clipped.
+    let (top, bottom) = (2.0, h - 2.0);
+    let max = scale_max.max(1) as f64;
+    let step = w / (points.len().max(2) - 1) as f64;
+    let xy: Vec<(f64, f64)> = points
         .iter()
         .enumerate()
-        .map(|(i, v)| {
-            format!(
-                "{:.1},{:.1}",
-                i as f64 * step,
-                20.0 - 18.0 * (*v as f64 / max)
-            )
-        })
+        .map(|(i, v)| (i as f64 * step, bottom - (bottom - top) * (*v as f64 / max)))
         .collect();
-    let line = format!("M{}", pts.join(" L"));
-    format!(
-        "<svg class=\"kg-spark\" viewBox=\"0 0 80 20\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Outlets over the first day, two-hour steps: {}\"><path class=\"area\" d=\"{line} L80,20 L0,20 Z\"/><path d=\"{line}\"/></svg>",
-        points
-            .iter()
-            .map(|v| v.to_string())
-            .collect::<Vec<_>>()
-            .join(", ")
-    )
+    let values = points
+        .iter()
+        .map(|v| v.to_string())
+        .collect::<Vec<_>>()
+        .join(", ");
+    let last = points.last().copied().unwrap_or(0);
+    let mut svg = format!(
+        "<span class=\"kg-spark-wrap\"><svg class=\"kg-spark{}\" width=\"{w}\" height=\"{h}\" viewBox=\"0 0 {w} {h}\" role=\"img\" aria-label=\"Outlets carrying the story, two-hour steps: {values}\"><line class=\"base\" x1=\"0\" y1=\"{bottom}\" x2=\"{w}\" y2=\"{bottom}\"/>",
+        if large { " lg" } else { "" }
+    );
+    // A single-outlet story (or an empty series) draws only the baseline
+    // and the end dot: an empty curve is still information.
+    if points.iter().any(|&v| v > 1) {
+        let line = format!(
+            "M{}",
+            xy.iter()
+                .map(|(x, y)| format!("{x:.1},{y:.1}"))
+                .collect::<Vec<_>>()
+                .join(" L")
+        );
+        let _ = write!(
+            svg,
+            "<path class=\"area\" d=\"{line} L{w},{bottom} L0,{bottom} Z\"/><path class=\"line\" d=\"{line}\"/>"
+        );
+    }
+    if let Some((x, y)) = xy.last() {
+        let _ = write!(svg, "<circle class=\"end\" cx=\"{x:.1}\" cy=\"{y:.1}\" r=\"1.5\"/>");
+    }
+    let _ = write!(svg, "</svg><span class=\"kg-spark-n\">{last}</span></span>");
+    svg
 }
 
 /// The cluster card (design §5). `outlets_24h` is the derived count.
-pub fn cluster_card(input: &Input, c: &Cluster, spark_points: &[u32], enter: bool) -> String {
+/// `scale_max` is the page's shared sparkline scale (see `spark_scale`).
+pub fn cluster_card(
+    input: &Input,
+    c: &Cluster,
+    spark_points: &[u32],
+    scale_max: u32,
+    large: bool,
+    enter: bool,
+) -> String {
     let mut s = String::new();
     let _ = write!(
         s,
@@ -194,7 +233,7 @@ pub fn cluster_card(input: &Input, c: &Cluster, spark_points: &[u32], enter: boo
             n(c.syndication.len(), "syndication group")
         );
     }
-    s.push_str(&spark(spark_points));
+    s.push_str(&spark(spark_points, scale_max, large));
     s.push_str("</div></article>");
     s
 }
@@ -487,11 +526,11 @@ mod tests {
     fn cluster_card_and_skeleton() {
         let i = fixture_input();
         let c = &i.clusters[&1001];
-        let h = cluster_card(&i, c, &[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], false);
+        let h = cluster_card(&i, c, &[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], 2, false, false);
         assert!(h.contains("data-id=\"1001\""));
         assert!(h.contains("href=\"/story/1001/\""));
         assert!(h.contains("first: <a href=\"/outlet/wire/\" data-outlet=\"wire\">Wire</a>"));
-        assert!(h.contains("aria-label=\"Outlets over the first day, two-hour steps: 1, 2, 2"));
+        assert!(h.contains("aria-label=\"Outlets carrying the story, two-hour steps: 1, 2, 2"));
         assert!(h.contains("1 syndication group<"));
         let page = html(&Page {
             title: "T",
@@ -510,5 +549,95 @@ mod tests {
         ));
         assert!(page.contains("<title>T · Kagami</title>"));
         assert!(page.contains("Kagami<span class=\"kanji\">鏡</span></a><span class=\"rule\"></span><span class=\"tool\">lens</span>"));
+    }
+
+    // ---- design conformance (design/DESIGN.md §3, §4, §5, §12)
+
+    #[test]
+    fn tokens_css_is_the_design_copy() {
+        let design = std::fs::read_to_string(
+            std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../design/tokens.css"),
+        )
+        .expect("design/tokens.css");
+        let norm = |s: &str| s.replace("
+", "
+");
+        assert_eq!(
+            norm(TOKENS_CSS),
+            norm(&design),
+            "lens/src/tokens.css drifted from design/tokens.css; copy it again"
+        );
+    }
+
+    /// Stylesheets use only the type scale, grid line heights and spacing
+    /// tokens. Raw px are allowed only in token definitions, hairlines
+    /// (1px, 2px focus/underline), the tag padding and fixed geometry
+    /// (sparkline, dots, breakpoint).
+    #[test]
+    fn stylesheets_use_only_scale_values() {
+
+        let spacing = ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px"];
+        for (name, css) in [("tokens.css", TOKENS_CSS), ("lens.css", LENS_CSS)] {
+            for (n, line) in css.lines().enumerate() {
+                let l = line.trim();
+                if l.starts_with("--kg-") || l.starts_with("/*") || l.contains("@media") {
+                    continue; // token definitions, comments, breakpoints
+                }
+                for decl in l.split(';') {
+                    let Some((prop, val)) = decl.split_once(':') else { continue };
+                    let prop = prop.trim().rsplit(['{', ' ']).next().unwrap_or("");
+                    let val = val.trim();
+                    let where_ = format!("{name}:{} `{}`", n + 1, decl.trim());
+                    if prop == "font-size" {
+                        assert!(
+                            val.starts_with("var(--kg-fs-") || val.starts_with("var(--kg-lockup-"),
+                            "raw font size {where_}"
+                        );
+                    }
+                    if prop == "font" {
+                        assert!(
+                            val.contains("var(--kg-fs-") && !val.contains("px"),
+                            "font shorthand off the scale {where_}"
+                        );
+                    }
+                    if prop == "line-height" {
+                        assert!(val.starts_with("var(--kg-lh-"), "line height not a grid token {where_}");
+                    }
+                    if prop.starts_with("margin") || prop.starts_with("padding") || prop == "gap" {
+                        for tok in val.split_whitespace() {
+                            let tok = tok.trim_end_matches(';');
+                            let ok = tok == "0"
+                                || tok == "auto"
+                                || tok.starts_with("var(--kg-s")
+                                || spacing.contains(&tok)
+                                || (tok == "2px" && l.contains("off-grid"));
+                            assert!(ok, "spacing off the 4px scale {where_}");
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #[test]
+    fn sparkline_shares_scale_and_labels_values() {
+        let small = spark(&[1, 1, 2, 2], 40, false);
+        let big = spark(&[1, 10, 20, 40], 40, false);
+        // same scale: the small story's end sits near the baseline, the big one's at the top
+        let end_y = |s: &str| -> f64 {
+            let i = s.find("class=\"end\" cx=\"").unwrap();
+            let rest = &s[i..];
+            let j = rest.find("cy=\"").unwrap() + 4;
+            rest[j..].split('"').next().unwrap().parse().unwrap()
+        };
+        assert!(end_y(&small) > 15.0 && end_y(&big) < 3.0);
+        assert!(!small.contains("preserveAspectRatio"), "drawn at size, never stretched");
+        assert!(small.contains("aria-label=\"Outlets carrying the story, two-hour steps: 1, 1, 2, 2\""));
+        assert!(small.contains("<span class=\"kg-spark-n\">2</span>"));
+        // single-outlet story: baseline and end dot only
+        let flat = spark(&[1, 1, 1], 5, false);
+        assert!(!flat.contains("class=\"line\"") && flat.contains("class=\"base\"") && flat.contains("class=\"end\""));
+        assert!(spark(&[1, 2], 2, true).contains("width=\"160\" height=\"32\""));
+        assert_eq!(spark_scale([&[1u32, 3][..], &[7][..]]), 7);
     }
 }

@@ -11,7 +11,7 @@
   section > h2 { margin-bottom: var(--kg-s4); }
   .row { display: flex; gap: var(--kg-s3); align-items: center; flex-wrap: wrap; }
   .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: var(--kg-s3); }
-  .swatch { height: 56px; border: 1px solid var(--kg-line); border-radius: var(--kg-radius-card); display: flex; align-items: flex-end; padding: var(--kg-s2); font-family: var(--kg-font-mono); font-size: 11px; }
+  .swatch { height: 56px; border: 1px solid var(--kg-line); border-radius: var(--kg-radius-card); display: flex; align-items: flex-end; padding: var(--kg-s2); font-family: var(--kg-font-mono); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); }
   .type-sample > * { margin-bottom: var(--kg-s3); }
   .prose { max-width: var(--kg-measure); }
 </style>
@@ -19,7 +19,7 @@
 <body>
 <main>
   <header class="row" style="justify-content: space-between;">
-    <span class="kg-lockup" style="font-size: 40px;">
+    <span class="kg-lockup">
       <span class="kg-wordmark">Kagami<span class="kanji">鏡</span></span>
       <span class="rule"></span>
       <span class="tool">feed</span>
@@ -49,12 +49,12 @@
   <section>
     <h2>Type</h2>
     <div class="type-sample">
-      <div style="font-family: var(--kg-font-serif); font-size: var(--kg-fs-display); line-height: 1.05; letter-spacing: -0.02em;">Where did it start</div>
+      <div class="kg-display">Where did it start</div>
       <h1>Story clusters forming over 72 hours</h1>
       <h2>Syndication and origin</h2>
       <h3>Velocity counters are recomputed on read</h3>
-      <p class="prose kg-secondary">Body, 15 on 1.6. The interface reflects the data without editorializing. Timeline entries carry both <a class="kg-prose" href="#">published_at</a> and fetched_at, so a downstream tool can choose which to trust.</p>
-      <p class="kg-muted">Small metadata, 12px, muted. first seen 14:02 UTC</p>
+      <p class="kg-prose kg-secondary">Body, 15 on 24. The interface reflects the data without editorializing. Timeline entries carry both <a href="#">published_at</a> and fetched_at, so a downstream tool can choose which to trust.</p>
+      <p class="kg-muted">Small metadata, 12 on 16, muted. first seen 14:02 UTC</p>
       <pre class="kg-mono">cluster 0x9f3a1c2e7b0d4f61  origin=reuters  n=27  outlets=19</pre>
     </div>
   </section>
@@ -79,33 +79,44 @@
   </section>
 
   <section>
+    <h2>Links</h2>
+    <p class="kg-muted">Four kinds, chosen by where the link sits. Hover each.</p>
+    <div class="kg-cluster"><p class="title"><a href="#">Title link: the object's name, text colour until hovered</a></p></div>
+    <p style="margin-top: var(--kg-s4);"><a href="#">Action link: all 12 stories</a> <span class="kg-muted">the one next step in a view; blue at rest</span></p>
+    <div class="kg-provenance"><a href="#">Wikidata</a><span class="sep">·</span><span class="kg-tag">CC0-1.0</span><span class="sep">·</span><span>quiet link, in metadata and provenance lines</span></div>
+    <p class="kg-prose" style="margin-top: var(--kg-s4);">A prose link sits in running text, like the <a href="#">perennial sources list</a>, and is underlined at rest so it can be found.</p>
+  </section>
+
+  <section>
+    <h2>Sparklines</h2>
+    <p class="kg-muted">Shared scale: both cards above use max 19, so the 4-outlet story stays low. A single-outlet story draws only the baseline and end dot.</p>
+    <div class="row" style="margin-top: var(--kg-s3);">
+      <span class="kg-spark-wrap"><svg class="kg-spark" width="80" height="20" viewBox="0 0 80 20" role="img" aria-label="Outlets carrying the story, two-hour steps: 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1"><line class="base" x1="0" y1="18" x2="80" y2="18"/><circle class="end" cx="80.0" cy="17.2" r="1.5"/></svg><span class="kg-spark-n">1</span></span>
+    </div>
+  </section>
+
+  <section>
     <h2>Cluster cards</h2>
     <article class="kg-cluster">
-      <p class="title">Central bank holds rates, signals cuts may come later in the year</p>
+      <p class="title"><a href="#">Central bank holds rates, signals cuts may come later in the year</a></p>
       <div class="meta kg-muted">
         <span>19 outlets</span><span class="sep">·</span>
         <span>27 items</span><span class="sep">·</span>
         <span>6 in the last hour</span><span class="sep">·</span>
         <span>first seen 14:02 UTC</span><span class="sep">·</span>
         <span class="origin">reuters</span>
-        <svg class="kg-spark" viewBox="0 0 80 20" preserveAspectRatio="none" aria-hidden="true">
-          <path class="area" d="M0,20 L0,19 L10,18 L20,17 L30,14 L40,9 L50,6 L60,4 L70,3 L80,2 L80,20 Z"/>
-          <path d="M0,19 L10,18 L20,17 L30,14 L40,9 L50,6 L60,4 L70,3 L80,2"/>
-        </svg>
+        <span class="kg-spark-wrap"><svg class="kg-spark" width="80" height="20" viewBox="0 0 80 20" role="img" aria-label="Outlets carrying the story, two-hour steps: 1, 1, 2, 4, 7, 11, 14, 16, 17, 18, 19, 19"><line class="base" x1="0" y1="18" x2="80" y2="18"/><path class="area" d="M0.0,17.2 L7.3,17.2 L14.5,16.3 L21.8,14.6 L29.1,12.1 L36.4,8.7 L43.6,6.2 L50.9,4.5 L58.2,3.7 L65.5,2.8 L72.7,2.0 L80.0,2.0 L80,18 L0,18 Z"/><path class="line" d="M0.0,17.2 L7.3,17.2 L14.5,16.3 L21.8,14.6 L29.1,12.1 L36.4,8.7 L43.6,6.2 L50.9,4.5 L58.2,3.7 L65.5,2.8 L72.7,2.0 L80.0,2.0"/><circle class="end" cx="80.0" cy="2.0" r="1.5"/></svg><span class="kg-spark-n">19</span></span>
       </div>
     </article>
     <article class="kg-cluster kg-enter">
-      <p class="title">Coastal flooding closes two highways after overnight storm</p>
+      <p class="title"><a href="#">Coastal flooding closes two highways after overnight storm</a></p>
       <div class="meta kg-muted">
         <span>4 outlets</span><span class="sep">·</span>
         <span>5 items</span><span class="sep">·</span>
         <span>2 syndication groups</span><span class="sep">·</span>
         <span>first seen 09:41 UTC</span><span class="sep">·</span>
         <span class="origin">ap</span>
-        <svg class="kg-spark" viewBox="0 0 80 20" preserveAspectRatio="none" aria-hidden="true">
-          <path class="area" d="M0,20 L0,19 L20,19 L40,17 L60,12 L80,10 L80,20 Z"/>
-          <path d="M0,19 L20,19 L40,17 L60,12 L80,10"/>
-        </svg>
+        <span class="kg-spark-wrap"><svg class="kg-spark" width="80" height="20" viewBox="0 0 80 20" role="img" aria-label="Outlets carrying the story, two-hour steps: 1, 1, 1, 2, 2, 3, 3, 4, 4, 4, 4, 4"><line class="base" x1="0" y1="18" x2="80" y2="18"/><path class="area" d="M0.0,17.2 L7.3,17.2 L14.5,17.2 L21.8,16.3 L29.1,16.3 L36.4,15.5 L43.6,15.5 L50.9,14.6 L58.2,14.6 L65.5,14.6 L72.7,14.6 L80.0,14.6 L80,18 L0,18 Z"/><path class="line" d="M0.0,17.2 L7.3,17.2 L14.5,17.2 L21.8,16.3 L29.1,16.3 L36.4,15.5 L43.6,15.5 L50.9,14.6 L58.2,14.6 L65.5,14.6 L72.7,14.6 L80.0,14.6"/><circle class="end" cx="80.0" cy="14.6" r="1.5"/></svg><span class="kg-spark-n">4</span></span>
       </div>
     </article>
   </section>

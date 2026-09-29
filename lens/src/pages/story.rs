@@ -66,7 +66,8 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
 
     // ---- HTML
     let mut b = String::new();
-    b.push_str(&cluster_card(input, c, &f.spark, false));
+    let scale = crate::render::spark_scale([f.spark.as_slice()]);
+    b.push_str(&cluster_card(input, c, &f.spark, scale, true, false));
     let _ = write!(
         b,
         "<p class=\"kg-muted\">{} in the last 6 hours, {} in the last 24, as of {}.</p>",
