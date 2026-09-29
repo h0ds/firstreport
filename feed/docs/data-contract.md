@@ -127,6 +127,11 @@ that shares the previous file.
 Oldest first. The first entry is the text as originally seen, written
 when the first change is detected. An item that never changed has none.
 
+The NDJSON export writes every revision to `revisions.ndjson` with an
+added `item_id`, in per-item chronological order, so a consumer can
+show what changed without the API. Added after v1 as a fifth file;
+the four existing files are unchanged.
+
 ## ClusterEvent
 
 ```json

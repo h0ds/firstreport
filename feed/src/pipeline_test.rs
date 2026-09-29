@@ -378,6 +378,25 @@ async fn fixture_through_store_and_api() {
     let r = app.clone().oneshot(get("/v1/outlets/nope")).await.unwrap();
     assert_eq!(r.status(), 404);
 
+    // Every path the OpenAPI document lists is routed: an unmatched route
+    // is axum's bare 404 with an empty body, ours always carry a body.
+    let spec = body_json(app.clone().oneshot(get("/v1/openapi.json")).await.unwrap()).await;
+    assert_eq!(spec["openapi"], "3.1.0");
+    for p in crate::api::openapi::sample_paths() {
+        let uri = if p == "/v1/syndication" {
+            format!("{p}?text_hash=1")
+        } else {
+            p.clone()
+        };
+        let r = app.clone().oneshot(get(&uri)).await.unwrap();
+        let st = r.status();
+        let body = axum::body::to_bytes(r.into_body(), 1 << 20).await.unwrap();
+        assert!(
+            st != 404 || !body.is_empty(),
+            "documented path {p} is not routed"
+        );
+    }
+
     // Revisions: the rates item carries its original text and the new one;
     // the item itself now reads the new title. The flooding item was
     // withdrawn. Both show up in the event log.

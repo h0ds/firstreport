@@ -14,11 +14,15 @@ Rust, single binary per tool, runs entirely locally. Three pillars, built in ord
 |---|---|---|
 | [`feed/`](feed/) | 1 | Ingest headlines, cluster them into stories, record propagation. Neutral by construction. |
 | [`ledger/`](ledger/) | 2 | Sourced facts about outlets keyed by outlet id: ownership, country, founding, third-party ratings, each with its source and licence. Never a score. |
-| `lens/` | 3 | Presentation over `feed` and `ledger`. Not started. |
-| [`reply/`](reply/) | 4 | A social account that answers "prove it" with sourced provenance from `feed` and `ledger`. Templates and composer only so far. |
+| [`kagami/`](kagami/) | | One command over the three: `run`, `site`, `doctor`. |
+| [`lens/`](lens/) | 3 | Static site generated from `feed` and `ledger` exports: stories, outlets, coverage by a named source's labels. At N2; see `lens/docs/plan.md`. |
+| [`reply/`](reply/) | 4 | A social account that answers "prove it" with sourced provenance from `feed` and `ledger`, never a verdict. Built through R6; not yet run live. |
 
 `feed/docs/plan.md` is the full plan for pillar 1, including the project rules
-that apply to every pillar. `ledger/docs/plan.md` is pillar 2's, and `reply/docs/plan.md` is pillar 4's.
+that apply to every pillar. `ledger/docs/plan.md` is pillar 2's and
+`lens/docs/plan.md` is pillar 3's and `reply/docs/plan.md` is pillar 4's.
+`docs/local-runbook.md` lists everything that has not yet run outside the
+sandbox it was built in, with the commands to do it.
 
 ## Visual layer
 
@@ -33,17 +37,23 @@ the disinformation it documents is spread by machines. Every server
 publishes `/llms.txt` describing itself and its rules of use, allows
 everything in `/robots.txt`, serves JSON by default, and answers
 `Accept: text/markdown` on its main object with a rendering that keeps
-every source, licence and date. Every page for people links its JSON
-twin from `<head>`. `design/DESIGN.md` §11 has the rules.
+every source, licence and date. Each server also serves an OpenAPI 3.1
+document at `/v1/openapi.json`, with schemas generated from its types,
+so a tool-using agent can call it correctly the first time. Every page
+for people links its JSON twin from `<head>`. `design/DESIGN.md` §11 has the rules.
 
 ## Getting started
 
 ```
-cd feed
-cargo run -- run
+cargo build --workspace
+./target/debug/kagami doctor    # what is in place, what to fetch or import
+./target/debug/kagami run       # feed on :8080, ledger on :8081, Ctrl-C stops both
+./target/debug/kagami site      # export both, build the lens site into ./site, check it
 ```
 
 Requires a Rust toolchain. No Docker, no managed database, no cloud APIs.
+Each pillar is still its own binary with its own commands (`feed`,
+`ledger`, `lens`); `kagami` only drives them from a checkout.
 
 ## Status
 
@@ -65,6 +75,11 @@ M6 added NDJSON and Parquet export, `prune`, the nightly job, and the
 contract and API docs. `feed` is at v0.1.0 with the data contract
 frozen at v1; it is complete and verified offline, and has not yet run
 against live feeds. See `feed/docs/plan.md` §11.
+
+`lens` is at N2: front, story, outlet, search and about pages with JSON
+and Markdown twins, `llms.txt` and a sitemap, `check` and `serve`,
+built from the two exports and verified offline. See
+`lens/docs/plan.md` §9.
 
 `reply` is at R3: contract, templates, composer with the cite check,
 `render` and `check` over golden fixtures, `resolve`, which asks a

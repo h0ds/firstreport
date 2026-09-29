@@ -4,6 +4,7 @@
 // Contract types land ahead of their consumers (clusters arrive at M3).
 #![allow(dead_code)]
 
+use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
 pub const CONTRACT_VERSION: u32 = 1;
@@ -34,7 +35,7 @@ pub struct Outlet {
     pub feeds: Vec<FeedRef>,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 pub struct Item {
     /// xxhash64 of `canonical_url`.
     pub id: u64,
@@ -57,7 +58,7 @@ pub struct Item {
     pub snapshot_id: u64,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 pub struct Join {
     pub item_id: u64,
     pub outlet_id: String,
@@ -65,7 +66,7 @@ pub struct Join {
     pub joined_at: i64,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 pub struct SynGroup {
     pub text_hash: u64,
     pub item_ids: Vec<u64>,
@@ -73,7 +74,7 @@ pub struct SynGroup {
     pub spread_secs: u32,
 }
 
-#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize, JsonSchema)]
 pub struct Velocity {
     pub items_1h: u32,
     pub items_6h: u32,
@@ -85,7 +86,7 @@ pub struct Velocity {
     pub time_to_20_outlets_secs: Option<u32>,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 pub struct Cluster {
     /// Id of the first item in the cluster.
     pub id: u64,
@@ -102,7 +103,7 @@ pub struct Cluster {
     pub velocity: Velocity,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 pub struct Snapshot {
     /// xxhash64(feed_url + fetched_at).
     pub id: u64,
@@ -112,7 +113,7 @@ pub struct Snapshot {
     pub body_hash: u64,
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, JsonSchema)]
 #[serde(rename_all = "snake_case")]
 pub enum EventKind {
     Created,
@@ -124,7 +125,7 @@ pub enum EventKind {
     Withdrawn,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 pub struct ClusterEvent {
     pub ts: i64,
     pub kind: EventKind,

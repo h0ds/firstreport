@@ -1,0 +1,28 @@
+/* lens layouts on top of tokens.css (copied from design/). Three
+   layouts, no new objects: the timeline list, the label table, the
+   outlet story list. */
+main { max-width: var(--kg-measure); margin: 0 auto; padding: var(--kg-s6) var(--kg-s4) var(--kg-s9); }
+main.wide { max-width: var(--kg-measure-wide); }
+header.chrome { display: flex; align-items: baseline; justify-content: space-between; gap: var(--kg-s4); flex-wrap: wrap; padding-bottom: var(--kg-s4); border-bottom: 1px solid var(--kg-line); }
+header.chrome .kg-lockup { font-size: 32px; }
+h2 { margin: var(--kg-s6) 0 var(--kg-s1); }
+h3 { margin: var(--kg-s5) 0 var(--kg-s2); }
+.kg-cluster .title a { color: inherit; }
+.sep { color: var(--kg-line-strong); }
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li { display: grid; grid-template-columns: 64px 1fr; gap: var(--kg-s3); padding: var(--kg-s2) 0; border-top: 1px solid var(--kg-line); }
+.timeline .when { font-family: var(--kg-font-mono); font-size: var(--kg-fs-ui); color: var(--kg-text-secondary); }
+.timeline li.first .when { color: var(--kg-blue); }
+.timeline .outlet { font-weight: 600; }
+.timeline .hl { display: block; color: var(--kg-text); line-height: 1.4; }
+.timeline .hl a { color: inherit; }
+.timeline .alt { display: block; font-size: var(--kg-fs-small); color: var(--kg-text-muted); margin-top: 2px; }
+.timeline .times { display: block; font-size: var(--kg-fs-small); color: var(--kg-text-muted); }
+.copy { font-family: var(--kg-font-mono); font-size: var(--kg-fs-small); color: var(--kg-text-secondary); }
+.stories { list-style: none; margin: 0; padding: 0; }
+.stories li { display: flex; gap: var(--kg-s3); align-items: baseline; padding: var(--kg-s2) 0; border-top: 1px solid var(--kg-line); }
+.stories .n { margin-left: auto; white-space: nowrap; }
+.changes .alt { display: block; font-size: var(--kg-fs-small); color: var(--kg-text-muted); }
+.kg-input.wide, input.wide { width: 100%; box-sizing: border-box; }
+.empty { color: var(--kg-text-muted); padding: var(--kg-s5) 0; }
+footer { margin-top: var(--kg-s8); padding-top: var(--kg-s4); border-top: 1px solid var(--kg-line); }

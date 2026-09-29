@@ -7,8 +7,9 @@ use std::sync::Arc;
 use axum::extract::{Path, Query, State};
 use axum::http::{header, HeaderMap, StatusCode};
 use axum::response::{IntoResponse, Response};
-use axum::routing::get;
+use axum::routing::{get, MethodRouter};
 use axum::{Json, Router};
+use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
 use crate::model::{Claim, Source, CONTRACT_VERSION};
@@ -22,17 +23,27 @@ pub struct AppState {
     pub outlets: Arc<Vec<FeedOutlet>>,
 }
 
+/// Every route, once. The router and the OpenAPI document are both
+/// built from this table.
+pub(crate) fn routes() -> Vec<(&'static str, MethodRouter<AppState>)> {
+    vec![
+        ("/v1/search", get(search)),
+        ("/lookup", get(lookup_page)),
+        ("/llms.txt", get(llms_txt)),
+        ("/v1/openapi.json", get(openapi)),
+        ("/robots.txt", get(robots_txt)),
+        ("/v1/outlets", get(outlets)),
+        ("/v1/outlets/{id}", get(outlet)),
+        ("/v1/outlets/{id}/{field}", get(outlet_field)),
+        ("/v1/sources", get(sources)),
+        ("/v1/stats", get(stats)),
+    ]
+}
+
 pub fn router(ledger: Arc<Ledger>, registry: Vec<FeedOutlet>) -> Router {
-    Router::new()
-        .route("/v1/search", get(search))
-        .route("/lookup", get(lookup_page))
-        .route("/llms.txt", get(llms_txt))
-        .route("/robots.txt", get(robots_txt))
-        .route("/v1/outlets", get(outlets))
-        .route("/v1/outlets/{id}", get(outlet))
-        .route("/v1/outlets/{id}/{field}", get(outlet_field))
-        .route("/v1/sources", get(sources))
-        .route("/v1/stats", get(stats))
+    routes()
+        .into_iter()
+        .fold(Router::new(), |r, (path, handler)| r.route(path, handler))
         .with_state(AppState {
             ledger,
             outlets: Arc::new(registry),
@@ -55,6 +66,10 @@ async fn llms_txt() -> Response {
         .into_response()
 }
 
+async fn openapi() -> Response {
+    Json(crate::openapi::spec()).into_response()
+}
+
 async fn robots_txt() -> Response {
     (
         [(header::CONTENT_TYPE, "text/plain; charset=utf-8")],
@@ -71,8 +86,8 @@ fn wants_markdown(headers: &HeaderMap) -> bool {
         .is_some_and(|a| a.contains("text/markdown"))
 }
 
-#[derive(Serialize)]
-struct ApiError {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct ApiError {
     error: String,
 }
 
@@ -80,8 +95,9 @@ fn not_found(msg: &str) -> Response {
     (StatusCode::NOT_FOUND, Json(ApiError { error: msg.into() })).into_response()
 }
 
-#[derive(Serialize)]
-struct OutletSummary {
+/// An outlet that has claims.
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct OutletSummary {
     id: String,
     claims: usize,
     fields: Vec<String>,
@@ -112,20 +128,25 @@ async fn outlets(State(s): State<AppState>) -> Response {
 }
 
 /// A claim plus its freshness against the source's schedule.
-#[derive(Serialize)]
-struct ClaimView<'a> {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct ClaimView<'a> {
     #[serde(flatten)]
     claim: &'a Claim,
+    /// Days since retrieved.
     age_days: i64,
+    /// Older than the source's refresh interval; the value may have
+    /// changed since.
     stale: bool,
 }
 
-#[derive(Serialize)]
-struct OutletView<'a> {
+/// Every claim about one outlet.
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct OutletView<'a> {
     id: String,
     /// Grouped by field; every claim keeps its source. Nothing is merged.
     fields: BTreeMap<String, Vec<ClaimView<'a>>>,
     claims: usize,
+    /// How many are past their source's refresh interval.
     stale: usize,
 }
 
@@ -213,11 +234,13 @@ struct SearchQ {
     limit: Option<usize>,
 }
 
-#[derive(Serialize)]
-struct SearchHit {
+/// A registry outlet matching a search.
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct SearchHit {
     id: String,
     name: String,
     domains: Vec<String>,
+    /// 0 means in the registry but not assessed yet.
     claims: usize,
     stale: usize,
     /// Which of id, name or a domain matched.
@@ -341,8 +364,8 @@ async fn sources(State(s): State<AppState>) -> Response {
     Json(v).into_response()
 }
 
-#[derive(Serialize)]
-struct Stats {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct Stats {
     contract_version: u32,
     outlets: usize,
     claims: usize,
@@ -483,6 +506,17 @@ mod tests {
             .await
             .unwrap();
         assert_eq!(r.status(), 200);
+        let (st, spec) = json(&app, "/v1/openapi.json").await;
+        assert_eq!(st, 200);
+        assert_eq!(spec["openapi"], "3.1.0");
+        for p in crate::openapi::sample_paths() {
+            let r = app
+                .clone()
+                .oneshot(Request::builder().uri(&p).body(Body::empty()).unwrap())
+                .await
+                .unwrap();
+            assert_ne!(r.status(), 404, "documented path {p} is not routed");
+        }
         let (_, v) = json(&app, "/v1/outlets/bbc").await;
         assert_eq!(
             v["fields"]["bias"].as_array().unwrap().len(),

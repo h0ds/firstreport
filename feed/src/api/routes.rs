@@ -1,8 +1,9 @@
 use axum::extract::{Path, Query, State};
 use axum::http::{header, HeaderMap, StatusCode};
 use axum::response::{IntoResponse, Response};
-use axum::routing::get;
+use axum::routing::{get, MethodRouter};
 use axum::{Json, Router};
+use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
 use super::AppState;
@@ -12,31 +13,41 @@ use crate::store::reader;
 pub const DEFAULT_LIMIT: usize = 50;
 pub const MAX_LIMIT: usize = 500;
 
-pub fn router() -> Router<AppState> {
-    Router::new()
-        .route("/v1/items", get(list_items))
-        .route("/v1/items/{id}", get(get_item))
-        .route("/v1/items/{id}/revisions", get(item_revisions))
-        .route("/v1/syndication", get(syndication))
-        .route("/v1/lookup", get(lookup))
-        .route("/v1/snapshots", get(list_snapshots))
-        .route("/v1/snapshots/{id}", get(get_snapshot))
-        .route("/v1/snapshots/{id}/body", get(snapshot_body))
-        .route("/v1/clusters", get(list_clusters))
-        .route("/v1/clusters/{id}", get(get_cluster))
-        .route("/v1/clusters/{id}/timeline", get(cluster_timeline))
-        .route("/v1/events", get(events))
-        .route("/v1/feeds", get(feeds))
-        .route("/v1/outlets", get(outlets))
-        .route("/v1/outlets/{id}", get(get_outlet))
-        .route("/v1/stats", get(stats))
-        .route("/debug", get(debug_page))
-        .route("/llms.txt", get(llms_txt))
-        .route("/robots.txt", get(robots_txt))
+/// Every route, once. The router and the OpenAPI document are both
+/// built from this table.
+pub(crate) fn routes() -> Vec<(&'static str, MethodRouter<AppState>)> {
+    vec![
+        ("/v1/items", get(list_items)),
+        ("/v1/items/{id}", get(get_item)),
+        ("/v1/items/{id}/revisions", get(item_revisions)),
+        ("/v1/syndication", get(syndication)),
+        ("/v1/lookup", get(lookup)),
+        ("/v1/snapshots", get(list_snapshots)),
+        ("/v1/snapshots/{id}", get(get_snapshot)),
+        ("/v1/snapshots/{id}/body", get(snapshot_body)),
+        ("/v1/clusters", get(list_clusters)),
+        ("/v1/clusters/{id}", get(get_cluster)),
+        ("/v1/clusters/{id}/timeline", get(cluster_timeline)),
+        ("/v1/events", get(events)),
+        ("/v1/feeds", get(feeds)),
+        ("/v1/outlets", get(outlets)),
+        ("/v1/outlets/{id}", get(get_outlet)),
+        ("/v1/stats", get(stats)),
+        ("/debug", get(debug_page)),
+        ("/llms.txt", get(llms_txt)),
+        ("/v1/openapi.json", get(openapi)),
+        ("/robots.txt", get(robots_txt)),
+    ]
 }
 
-#[derive(Serialize)]
-struct RevisionsOut {
+pub fn router() -> Router<AppState> {
+    routes()
+        .into_iter()
+        .fold(Router::new(), |r, (path, handler)| r.route(path, handler))
+}
+
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct RevisionsOut {
     item_id: u64,
     /// Current text, as `/v1/items/{id}` returns it.
     current: crate::types::Item,
@@ -76,8 +87,8 @@ struct SyndicationQ {
 /// Default window for the syndication scan: 30 days.
 const SYNDICATION_WINDOW_SECS: i64 = 30 * 86_400;
 
-#[derive(Serialize)]
-struct SyndicationOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct SyndicationOut {
     text_hash: u64,
     hamming_threshold: u32,
     /// In `published_at` order, so the first entry is the earliest copy.
@@ -115,8 +126,8 @@ struct LookupQ {
     since: Option<i64>,
 }
 
-#[derive(Serialize)]
-struct TextMatches {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct TextMatches {
     text_hash: u64,
     hamming_threshold: u32,
     /// Earliest published first.
@@ -127,8 +138,8 @@ struct TextMatches {
 /// call: the reply layer's whole backend (reply plan §3). `matched` says
 /// how far the lookup got, and `checked` lists what was looked for so a
 /// miss can be reported as honestly as a hit.
-#[derive(Serialize)]
-struct LookupOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct LookupOut {
     /// `item`: the URL is an item `feed` holds. `text`: no item, but the
     /// text has near-copies in the store. `outlet`: no item, but the host
     /// belongs to an outlet `feed` follows. `none`: nothing.
@@ -298,8 +309,8 @@ struct ListClustersQ {
 
 /// Cluster plus, optionally, its items. The contract `Cluster` carries the
 /// timeline; `items` is an addition, never a removal.
-#[derive(Serialize)]
-struct ClusterOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct ClusterOut {
     #[serde(flatten)]
     cluster: crate::types::Cluster,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -413,6 +424,10 @@ fn wants_markdown(headers: &HeaderMap) -> bool {
         .is_some_and(|a| a.contains("text/markdown"))
 }
 
+async fn openapi() -> Response {
+    Json(super::openapi::spec()).into_response()
+}
+
 async fn llms_txt() -> Response {
     (
         [(header::CONTENT_TYPE, "text/plain; charset=utf-8")],
@@ -453,8 +468,8 @@ struct EventsQ {
     limit: Option<usize>,
 }
 
-#[derive(Serialize)]
-struct EventsPage {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct EventsPage {
     items: Vec<reader::EventRow>,
     /// Pass back as `after_seq` for the next page.
     last_seq: Option<i64>,
@@ -476,14 +491,14 @@ async fn events(State(s): State<AppState>, Query(q): Query<EventsQ>) -> Response
     }
 }
 
-#[derive(Serialize)]
-struct Page<T> {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct Page<T> {
     items: Vec<T>,
     next: Option<String>,
 }
 
-#[derive(Serialize)]
-struct ApiError {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct ApiError {
     error: String,
 }
 
@@ -646,8 +661,8 @@ struct FeedsQ {
     filter: Option<String>,
 }
 
-#[derive(Serialize)]
-struct FeedOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct FeedOut {
     #[serde(flatten)]
     state: crate::store::writer::FeedState,
     /// Seconds since the last successful fetch, if any.
@@ -689,8 +704,8 @@ async fn feeds(State(s): State<AppState>, Query(q): Query<FeedsQ>) -> Response {
 /// about an outlet beyond its feeds; the link is how a reader gets
 /// from a story to who owns the outlet without knowing two servers
 /// exist.
-#[derive(Serialize)]
-struct OutletOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct OutletOut {
     #[serde(flatten)]
     outlet: reader::OutletRow,
     /// Ledger record for this outlet id (JSON; `Accept: text/markdown` works there too).
@@ -754,8 +769,8 @@ async fn get_outlet(State(s): State<AppState>, Path(id): Path<String>) -> Respon
     }
 }
 
-#[derive(Serialize)]
-struct StatsOut {
+#[derive(Serialize, JsonSchema)]
+pub(crate) struct StatsOut {
     contract_version: u32,
     process: crate::stats::StatsSnapshot,
     store: reader::StoreStats,

@@ -1,6 +1,7 @@
 //! Process-wide counters for `/v1/stats`. Atomics only; no locks on the
 //! hot path.
 
+use schemars::JsonSchema;
 use std::sync::atomic::{AtomicU64, Ordering::Relaxed};
 use std::sync::Mutex;
 use std::time::Duration;
@@ -32,7 +33,7 @@ pub struct Stats {
     assign_latency_us: Mutex<Vec<u64>>,
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, JsonSchema)]
 pub struct Latency {
     pub p50_us: u64,
     pub p99_us: u64,
@@ -66,7 +67,7 @@ fn record(ring: &Mutex<Vec<u64>>, us: u64) {
     ring.push(us);
 }
 
-#[derive(Debug, Serialize)]
+#[derive(Debug, Serialize, JsonSchema)]
 pub struct StatsSnapshot {
     pub uptime_secs: u64,
     pub fetches: u64,

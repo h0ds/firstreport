@@ -265,6 +265,7 @@ pub fn encode(s: &str) -> String {
     out
 }
 
+#[cfg(test)]
 pub fn duration(secs: u64) -> String {
     duration_in(secs, &words("en"))
 }

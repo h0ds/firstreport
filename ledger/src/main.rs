@@ -8,6 +8,7 @@ mod export;
 mod html;
 mod lookup;
 mod model;
+mod openapi;
 mod perennial;
 mod rdap;
 mod site;

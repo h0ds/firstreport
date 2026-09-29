@@ -82,7 +82,7 @@ async fn main() {
                 stats::now(),
                 cfg.syndication.hamming_threshold,
             )?;
-            info!(items = s.items, clusters = s.clusters, events = s.events, outlets = s.outlets, out = %out.display(), "export complete");
+            info!(items = s.items, clusters = s.clusters, events = s.events, revisions = s.revisions, outlets = s.outlets, out = %out.display(), "export complete");
             Ok(())
         })(),
         cli::Command::Prune {
@@ -336,14 +336,16 @@ async fn fetch_model(cfg: &config::Config) -> Result<(), Box<dyn std::error::Err
         Ok::<_, std::io::Error>(())
     };
 
+    cfg.embed.check_preset()?;
     let (os, arch) = (std::env::consts::OS, std::env::consts::ARCH);
     let model_url = cfg.embed.model_url_for(os, arch);
+    let vocab_url = cfg.embed.vocab_url_for();
     let runtime_url = cfg.embed.runtime_url_for(os, arch)?;
     info!(os, arch, %model_url, %runtime_url, "sources for this machine");
 
     for (path, url) in [
         (&cfg.embed.model_path, &model_url),
-        (&cfg.embed.vocab_path, &cfg.embed.vocab_url),
+        (&cfg.embed.vocab_path, &vocab_url),
     ] {
         if path.exists() {
             info!(path = %path.display(), "already present");

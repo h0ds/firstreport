@@ -37,6 +37,7 @@ sourced facts about each outlet.
 - `GET /v1/snapshots`, `GET /v1/snapshots/{{id}}/body` - the raw feed fetches
 - `GET /v1/outlets` and `GET /v1/outlets/{{id}}` - outlets with `ledger` and `ledger_lookup` links to the sourced facts about them
 - `GET /v1/feeds`, `GET /v1/stats`
+- `GET /v1/openapi.json` - OpenAPI 3.1 description of all of the above
 - `GET /debug` - the same data as a page for people
 
 ## Rules of use

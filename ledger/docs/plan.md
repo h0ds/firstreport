@@ -171,6 +171,8 @@ GET /v1/outlets/{id}                  all claims for one outlet
 GET /v1/outlets/{id}/{field}          claims for one field
 GET /v1/sources                       the source registry
 GET /v1/stats
+GET /v1/openapi.json                  OpenAPI 3.1 for the routes above
+GET /llms.txt, /robots.txt            for machine readers (design §11)
 ```
 
 ## 8. Milestones
@@ -195,7 +197,9 @@ GET /v1/stats
   the match recorded in the claim's `note` so a reviewer can reject it.
 - **Ownership chains.** P127 gives the direct owner; the ultimate owner
   needs a walk up P127/P749. Store the direct link and let `lens` walk;
-  or store the chain as `data.chain`. Decide when `lens` needs it.
+  or store the chain as `data.chain`. `lens/docs/plan.md` §10 does not
+  need the chain for N1; it links the direct owner when the owner is
+  itself a registry outlet. Decide when N3 is designed.
 - **Time.** Ownership changes. `as_of` carries what the source says;
   the retrieved date carries what we saw. Re-import periodically and
   keep old claims in git history rather than in the files.

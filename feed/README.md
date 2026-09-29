@@ -19,8 +19,11 @@ cargo run -- fetch-model
 ```
 
 downloads three files into `models/` (gitignored): the int8 ONNX export of
-`all-MiniLM-L6-v2`, its WordPiece vocab, and the ONNX Runtime shared
-library. Nothing is fetched at build time; the runtime is loaded at startup
+the configured preset (`all-MiniLM-L6-v2` by default, or
+`paraphrase-multilingual-MiniLM-L12-v2` for English and Japanese
+together), its tokenizer file, and the ONNX Runtime shared library. The
+commented block under `[embed]` in `config/feed.toml` shows the
+multilingual settings. Nothing is fetched at build time; the runtime is loaded at startup
 from `embed.runtime_lib`. Without these files `feed run` still ingests and
 logs a warning; items are embedded from the backlog once they appear. Sources
 are configurable under `[embed]` in `config/feed.toml`, and the embedding

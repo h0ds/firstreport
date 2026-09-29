@@ -69,6 +69,12 @@ pub struct Embed {
     pub batch_wait_ms: u64,
     /// `mean` (MiniLM, gte, e5) or `cls` (bge).
     pub pooling: Pooling,
+    /// `wordpiece` (BERT-family models, `vocab.txt`) or `unigram`
+    /// (XLM-RoBERTa-family models, `sentencepiece.bpe.model`).
+    pub tokenizer: TokenizerKind,
+    /// Which published model `fetch-model` downloads when no URL is
+    /// set; also the documented pairing of tokenizer and pooling.
+    pub preset: ModelPreset,
     /// Text handed to the model. `{title}` and `{summary}` are substituted;
     /// a summary-only segment is dropped when the summary is empty.
     pub input_template: String,
@@ -79,6 +85,24 @@ pub struct Embed {
     pub vocab_url: String,
     /// Tarball containing the runtime library under `lib/`.
     pub runtime_url: String,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum TokenizerKind {
+    WordPiece,
+    Unigram,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Deserialize)]
+pub enum ModelPreset {
+    /// `all-MiniLM-L6-v2`: English, 384-wide, WordPiece, ~22 MB int8.
+    #[serde(rename = "minilm-l6")]
+    MinilmL6,
+    /// `paraphrase-multilingual-MiniLM-L12-v2`: 50 languages including
+    /// Japanese, 384-wide, XLM-RoBERTa unigram tokenizer, ~120 MB int8.
+    #[serde(rename = "multilingual-minilm-l12")]
+    MultilingualMinilmL12,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Deserialize)]
@@ -113,10 +137,12 @@ impl Default for Embed {
             batch_size: 64,
             batch_wait_ms: 200,
             pooling: Pooling::Mean,
+            tokenizer: TokenizerKind::WordPiece,
+            preset: ModelPreset::MinilmL6,
             input_template: "{title} . {summary}".into(),
             hash_dim: 256,
             model_url: String::new(),
-            vocab_url: "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt".into(),
+            vocab_url: String::new(),
             runtime_url: String::new(),
         }
     }
@@ -124,8 +150,9 @@ impl Default for Embed {
 
 /// ONNX Runtime release used by `fetch-model` when no URL is configured.
 pub const ORT_VERSION: &str = "1.27.1";
-const MINILM: &str =
-    "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/onnx/";
+const MINILM: &str = "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/";
+const MULTILINGUAL: &str =
+    "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/";
 
 impl Embed {
     /// Model export for this machine: int8 AVX2 on x86_64, int8 ARM64 on
@@ -140,7 +167,43 @@ impl Embed {
             _ => "model.onnx",
         };
         let _ = os;
-        format!("{MINILM}{file}")
+        format!("{}onnx/{file}", self.preset_base())
+    }
+
+    fn preset_base(&self) -> &'static str {
+        match self.preset {
+            ModelPreset::MinilmL6 => MINILM,
+            ModelPreset::MultilingualMinilmL12 => MULTILINGUAL,
+        }
+    }
+
+    /// The tokenizer file for the preset: WordPiece vocab or the
+    /// SentencePiece model.
+    pub fn vocab_url_for(&self) -> String {
+        if !self.vocab_url.is_empty() {
+            return self.vocab_url.clone();
+        }
+        let file = match self.preset {
+            ModelPreset::MinilmL6 => "vocab.txt",
+            ModelPreset::MultilingualMinilmL12 => "sentencepiece.bpe.model",
+        };
+        format!("{}{file}", self.preset_base())
+    }
+
+    /// The preset's tokenizer, so a mismatch in config is caught at
+    /// startup rather than as garbage embeddings.
+    pub fn check_preset(&self) -> Result<(), String> {
+        let want = match self.preset {
+            ModelPreset::MinilmL6 => TokenizerKind::WordPiece,
+            ModelPreset::MultilingualMinilmL12 => TokenizerKind::Unigram,
+        };
+        if self.tokenizer != want && self.model_url.is_empty() {
+            return Err(format!(
+                "embed.preset {:?} uses the {:?} tokenizer but embed.tokenizer is {:?}; set both, or set model_url and vocab_url for a custom model",
+                self.preset, want, self.tokenizer
+            ));
+        }
+        Ok(())
     }
 
     /// Runtime tarball for this machine, or an error naming the triple.
@@ -412,7 +475,35 @@ mod tests {
         assert!(e
             .model_url_for("macos", "aarch64")
             .ends_with("model_qint8_arm64.onnx"));
-        assert!(e.model_url_for("linux", "riscv64").ends_with("/model.onnx"));
+        assert!(e
+            .model_url_for("linux", "riscv64")
+            .ends_with("/onnx/model.onnx"));
+        assert!(e
+            .vocab_url_for()
+            .ends_with("all-MiniLM-L6-v2/resolve/main/vocab.txt"));
+        assert!(e.check_preset().is_ok());
+        let m = Embed {
+            preset: ModelPreset::MultilingualMinilmL12,
+            tokenizer: TokenizerKind::Unigram,
+            ..Default::default()
+        };
+        assert!(m.model_url_for("linux", "x86_64").contains(
+            "paraphrase-multilingual-MiniLM-L12-v2/resolve/main/onnx/model_quint8_avx2.onnx"
+        ));
+        assert!(m.vocab_url_for().ends_with("/sentencepiece.bpe.model"));
+        assert!(m.check_preset().is_ok());
+        let wrong = Embed {
+            preset: ModelPreset::MultilingualMinilmL12,
+            ..Default::default()
+        };
+        assert!(
+            wrong.check_preset().is_err(),
+            "preset and tokenizer must agree"
+        );
+        let parsed: Embed =
+            toml::from_str("preset = \"multilingual-minilm-l12\"\ntokenizer = \"unigram\"")
+                .unwrap();
+        assert_eq!(parsed.tokenizer, TokenizerKind::Unigram);
         assert!(e
             .runtime_url_for("linux", "aarch64")
             .unwrap()
