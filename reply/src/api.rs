@@ -742,7 +742,9 @@ mod design_tests {
     fn declarations() -> Vec<(String, String, String)> {
         let mut out = Vec::new();
         for block in style_block().split('}') {
-            let Some((sel, body)) = block.rsplit_once('{') else { continue };
+            let Some((sel, body)) = block.rsplit_once('{') else {
+                continue;
+            };
             let sel = sel.rsplit('{').next().unwrap_or(sel).trim().to_string();
             for d in body.split(';') {
                 if let Some((p, v)) = d.split_once(':') {
@@ -763,7 +765,9 @@ mod design_tests {
 
     #[test]
     fn embedded_css_uses_only_scale_values() {
-        let spacing = ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px"];
+        let spacing = [
+            "4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px",
+        ];
         for (sel, prop, val) in declarations() {
             if sel == ":root" || prop.starts_with("--") {
                 continue; // token definitions, checked against design/ below
@@ -776,10 +780,16 @@ mod design_tests {
                 );
             }
             if prop == "font" {
-                assert!(val.contains("var(--kg-fs-") && !val.contains("px"), "font shorthand off the scale {at}");
+                assert!(
+                    val.contains("var(--kg-fs-") && !val.contains("px"),
+                    "font shorthand off the scale {at}"
+                );
             }
             if prop == "line-height" {
-                assert!(val.starts_with("var(--kg-lh-"), "line height not a grid token {at}");
+                assert!(
+                    val.starts_with("var(--kg-lh-"),
+                    "line height not a grid token {at}"
+                );
             }
             if prop.starts_with("margin") || prop.starts_with("padding") || prop == "gap" {
                 for tok in val.split_whitespace() {
@@ -809,22 +819,30 @@ mod design_tests {
         )
         .expect("design/tokens.css");
         let defs = |css: &str| -> Vec<(String, String)> {
-            css.split(|c| c == ';' || c == '{' || c == '}' || c == '\n')
+            css.split([';', '{', '}', '\n'])
                 .filter_map(|d| {
                     let d = d.trim();
                     let d = d.split("/*").next().unwrap_or(d).trim();
-                    d.strip_prefix("--kg-").and_then(|r| r.split_once(':')).map(|(k, v)| {
-                        (k.trim().to_string(), v.trim().to_string())
-                    })
+                    d.strip_prefix("--kg-")
+                        .and_then(|r| r.split_once(':'))
+                        .map(|(k, v)| (k.trim().to_string(), v.trim().to_string()))
                 })
                 .collect()
         };
         let want: std::collections::HashMap<String, String> = defs(&design).into_iter().collect();
-        let root = style_block().split(":root{").nth(1).expect(":root").split('}').next().unwrap();
+        let root = style_block()
+            .split(":root{")
+            .nth(1)
+            .expect(":root")
+            .split('}')
+            .next()
+            .unwrap();
         let have = defs(&format!("{{{root}}}"));
         assert!(have.len() > 20, "tokens block present");
         for (k, v) in have {
-            let w = want.get(&k).unwrap_or_else(|| panic!("--kg-{k} is not a design token"));
+            let w = want
+                .get(&k)
+                .unwrap_or_else(|| panic!("--kg-{k} is not a design token"));
             assert_eq!(&v, w, "--kg-{k} differs from design/tokens.css");
         }
     }
