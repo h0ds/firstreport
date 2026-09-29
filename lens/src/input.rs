@@ -258,7 +258,58 @@ pub fn read(feed_export: &Path, ledger_export: &Path) -> Result<Input, String> {
         }
     }
     input.events.sort_by_key(|e| e.seq);
+    attribute_unknown(&mut input);
     Ok(input)
+}
+
+/// The registry outlet for a host, as feed resolves it: exact domain,
+/// then a subdomain of one, ignoring `www.`.
+fn outlet_for_host(outlets: &BTreeMap<String, Outlet>, host: &str) -> Option<String> {
+    let host = host.trim_start_matches("www.");
+    let exact = outlets
+        .values()
+        .find(|o| o.domains.iter().any(|d| d.trim_start_matches("www.") == host));
+    exact
+        .or_else(|| {
+            outlets.values().find(|o| {
+                o.domains
+                    .iter()
+                    .any(|d| host.ends_with(&format!(".{}", d.trim_start_matches("www."))))
+            })
+        })
+        .map(|o| o.id.clone())
+}
+
+/// Items feed stored as `unknown:<host>` before that host was added to
+/// the outlet registry are credited to the outlet now, so a domain added
+/// later names its outlet on every page without a re-import. Hosts no
+/// registry outlet claims stay `unknown:<host>` and are named, unlinked.
+fn attribute_unknown(input: &mut Input) {
+    let mut map: HashMap<String, Option<String>> = HashMap::new();
+    let mut resolve = |id: &mut String, outlets: &BTreeMap<String, Outlet>| {
+        if let Some(host) = id.strip_prefix("unknown:") {
+            let hit = map
+                .entry(host.to_string())
+                .or_insert_with(|| outlet_for_host(outlets, host))
+                .clone();
+            if let Some(o) = hit {
+                *id = o;
+            }
+        }
+    };
+    let outlets = input.outlets.clone();
+    for i in input.items.values_mut() {
+        resolve(&mut i.outlet_id, &outlets);
+    }
+    for c in input.clusters.values_mut() {
+        resolve(&mut c.origin_outlet_id, &outlets);
+        for j in &mut c.timeline {
+            resolve(&mut j.outlet_id, &outlets);
+        }
+        for g in &mut c.syndication {
+            resolve(&mut g.first_outlet_id, &outlets);
+        }
+    }
 }
 
 impl Input {
@@ -332,5 +383,18 @@ mod tests {
         assert_eq!(i.claims["x"].len(), 1);
         assert_eq!(i.claims["x"][0].source_id, "open");
         std::fs::remove_dir_all(&dir).unwrap();
+    }
+
+    #[test]
+    fn unknown_hosts_are_credited_to_a_registry_outlet_that_claims_them() {
+        let mut outlets = BTreeMap::new();
+        outlets.insert(
+            "abcnews".to_string(),
+            Outlet { id: "abcnews".into(), name: "ABC News".into(), domains: vec!["abcnews.go.com".into(), "abcnews.com".into()] },
+        );
+        assert_eq!(outlet_for_host(&outlets, "abcnews.com").as_deref(), Some("abcnews"));
+        assert_eq!(outlet_for_host(&outlets, "www.abcnews.com").as_deref(), Some("abcnews"));
+        assert_eq!(outlet_for_host(&outlets, "video.abcnews.com").as_deref(), Some("abcnews"));
+        assert_eq!(outlet_for_host(&outlets, "notabcnews.com"), None);
     }
 }

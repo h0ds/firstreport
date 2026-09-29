@@ -219,12 +219,10 @@ pub fn spark_scale<'a>(series: impl IntoIterator<Item = &'a [u32]>) -> u32 {
 pub fn spark(points: &[u32], scale_max: u32, large: bool) -> String {
     // A series that never moves after its first bucket (every outlet
     // arrived within two hours, or one outlet and no one else) has no
-    // curve to show: the count alone, with the reason in the title.
+    // curve to show, and its count is already the card's count chip, so
+    // nothing is drawn: a bare number there read as a stray digit.
     if points.windows(2).all(|w| w[0] == w[1]) {
-        let last = points.last().copied().unwrap_or(0);
-        return format!(
-            "<span class=\"kg-spark-wrap\" title=\"No change after the first two hours\"><span class=\"kg-spark-n\">{last}</span></span>"
-        );
+        return String::new();
     }
     let (w, h) = if large { (160.0, 32.0) } else { (80.0, 20.0) };
     // 2px inset top and bottom so the stroke and end dot are not clipped.
@@ -859,7 +857,7 @@ mod tests {
             !flat.contains("<svg"),
             "no curve when nothing moved after the first bucket"
         );
-        assert!(flat.contains("<span class=\"kg-spark-n\">2</span>"));
+        assert!(!flat.contains("kg-spark-n"), "no bare count beside nothing");
         assert!(h.contains("1 syndication group<"));
         let page = html(&Page {
             title: "T",
@@ -972,11 +970,9 @@ mod tests {
             small.contains("aria-label=\"Outlets carrying the story, two-hour steps: 1, 1, 2, 2\"")
         );
         assert!(small.contains("<span class=\"kg-spark-n\">2</span>"));
-        // a series that never moves after its first bucket: the count only
-        let flat = spark(&[1, 1, 1], 5, false);
-        assert!(!flat.contains("<svg") && flat.contains("<span class=\"kg-spark-n\">1</span>"));
-        let all_at_once = spark(&[8, 8, 8, 8], 8, true);
-        assert!(!all_at_once.contains("<svg") && all_at_once.contains("first two hours"));
+        // a series that never moves after its first bucket: nothing at all
+        assert_eq!(spark(&[1, 1, 1], 5, false), "");
+        assert_eq!(spark(&[8, 8, 8, 8], 8, true), "");
         assert!(spark(&[1, 2], 2, true).contains("width=\"160\" height=\"32\""));
         assert_eq!(spark_scale([&[1u32, 3][..], &[7][..]]), 7);
     }

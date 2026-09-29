@@ -56,11 +56,15 @@ input[type=search]:focus,input[type=number]:focus,select:focus{outline:2px solid
 .hits li>a{font-weight:600;color:var(--kg-text)}.hits li>a:hover{color:var(--kg-blue)}
 .hits .dom{color:var(--kg-text-muted);font-size:var(--kg-fs-small);line-height:var(--kg-lh-small)}
 .hits .n{margin-left:auto;font-size:var(--kg-fs-small);line-height:var(--kg-lh-small);color:var(--kg-text-muted);white-space:nowrap}
-.claim{padding:var(--kg-s3) 0;border-bottom:1px solid var(--kg-line)}
-.claim .value{font-size:var(--kg-fs-body-lg);line-height:var(--kg-lh-body-lg);font-weight:600;letter-spacing:-0.005em}
+.field{display:grid;grid-template-columns:176px 1fr;gap:var(--kg-s4);padding:var(--kg-s3) 0;border-bottom:1px solid var(--kg-line)}
+.field .fname{font-size:var(--kg-fs-ui);line-height:var(--kg-lh-body);font-weight:500;color:var(--kg-text-secondary)}
+.claim+.claim{margin-top:var(--kg-s3)}
+.claim .value{font-size:var(--kg-fs-body);line-height:var(--kg-lh-body);font-weight:600;color:var(--kg-text);overflow-wrap:anywhere}
+.claim .value .v+.v::before{content:" · ";color:var(--kg-text-muted);font-weight:400}
+@media (max-width:720px){.field{grid-template-columns:1fr;gap:var(--kg-s1)}}
 .claim .scope{color:var(--kg-text-secondary);font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui);margin-top:var(--kg-s1)}
 .claim .provenance{display:flex;gap:var(--kg-s2);flex-wrap:wrap;align-items:center;margin-top:var(--kg-s1)}
-.summary{color:var(--kg-text-secondary);font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui);margin-top:var(--kg-s2)}
+.summary{color:var(--kg-text-secondary);font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui);margin-top:var(--kg-s1)}
 </style>
 </head>
 <body>
@@ -111,14 +115,40 @@ async function show(id, name){
   const o = await r.json();
   const fields = Object.keys(o.fields).sort((a,b) => (FIELD_ORDER.indexOf(a)+1||99) - (FIELD_ORDER.indexOf(b)+1||99));
   let html = `<h2 data-id="${esc(id)}">${esc(name)}</h2><div class="muted">${n(o.claims,'claim')}${o.stale ? ` · ${o.stale} past their source's refresh interval` : ' · all within their refresh intervals'} · every value is a source's, never ours</div>`;
+  // One row per field. Claims in a field whose provenance is identical
+  // (same source, page, retrieval day, as-of and age) share one
+  // provenance line and list their values together; claims from
+  // different sources are never merged (design §5).
+  // A note that applies to several fields (which Wikidata item matched,
+  // say) is shown at its first appearance only.
+  const seenNotes = new Set();
   for (const f of fields) {
-    html += `<h3>${esc(FIELD_LABEL[f] || f)}</h3>`;
+    const groups = new Map();
     for (const c of o.fields[f]) {
+      const k = [c.source_id, c.ref_url, date(c.retrieved_at), c.as_of || '', c.stale, c.age_days].join('|');
+      if (!groups.has(k)) groups.set(k, []);
+      groups.get(k).push(c);
+    }
+    html += `<section class="field enter" data-field="${esc(f)}"><div class="fname">${esc(FIELD_LABEL[f] || f)}</div><div>`;
+    for (const cs of groups.values()) {
+      const c = cs[0];
       const s = sources[c.source_id] || {name: c.source_id, licence: ''};
-      const d = c.data || {};
-      html += `<article class="claim enter" data-outlet="${esc(id)}" data-field="${esc(f)}" data-source="${esc(c.source_id)}">
-        <div class="value">${esc(c.value)}</div>
-        ${d.scope && d.scope !== c.value ? `<div class="scope">${esc(d.scope)}</div>` : ''}
+      const extra = cs.map(c => {
+        const d = c.data || {};
+        return [
+          d.scope && d.scope !== c.value ? `<div class="scope">${esc(d.scope)}</div>` : '',
+          d.summary ? `<div class="summary">${esc(d.summary)}</div>` : '',
+          d.window_days ? `<div class="summary">Measured over ${d.window_days} days to ${esc(d.window_end)}, ${n(d.items,'item')}. A measurement, not a verdict.</div>` : '',
+          d.domain ? `<div class="summary">${esc(d.domain)}${d.expires ? `, expires ${esc(d.expires)}` : ''}${Array.isArray(d.status) && d.status.length ? `, ${esc(d.status.join(', '))}` : ''}</div>` : '',
+          c.field === 'site_pages' ? `<div class="summary quiet">${['about','contact','privacy','corrections','ethics','masthead'].filter(k=>d[k]).map(k=>`<a href="${esc(d[k])}" rel="noopener">${k}</a>`).join(' · ') || 'none linked'}</div>` : '',
+          c.note && !seenNotes.has(c.note) && seenNotes.add(c.note) ? `<div class="summary">Note: ${esc(c.note)}</div>` : '',
+          Array.isArray(d.discussions) && d.discussions.length ? `<div class="summary quiet">Discussions: ${d.discussions.map((u,i)=>`<a href="${esc(u)}" rel="noopener">${i+1}</a>`).join(' ')}</div>` : '',
+        ].join('');
+      });
+      // Identical notes under a shared line are said once.
+      const notes = [...new Set(extra.filter(Boolean))].join('');
+      html += `<article class="claim" data-outlet="${esc(id)}" data-field="${esc(f)}" data-source="${esc(c.source_id)}">
+        <div class="value">${cs.map(c => `<span class="v">${esc(c.value)}</span>`).join('')}</div>
         <div class="provenance muted quiet">
           <a href="${esc(c.ref_url)}" rel="noopener">${esc(s.name)}</a><span class="sep">·</span>
           <span class="tag">${esc(s.licence)}</span><span class="sep">·</span>
@@ -126,15 +156,10 @@ async function show(id, name){
           ${c.as_of ? `<span class="sep">·</span><span>as of ${esc(c.as_of)}</span>` : ''}
           <span class="sep">·</span>
           <span class="status ${c.stale ? 'warn' : 'ok'}"><span>${c.stale ? `stale, ${c.age_days} days old` : `${c.age_days} days old`}</span></span>
-        </div>
-        ${d.summary ? `<div class="summary">${esc(d.summary)}</div>` : ''}
-        ${d.window_days ? `<div class="summary">Measured over ${d.window_days} days to ${esc(d.window_end)}, ${n(d.items,'item')}. A measurement, not a verdict.</div>` : ''}
-        ${d.domain ? `<div class="summary">${esc(d.domain)}${d.expires ? `, expires ${esc(d.expires)}` : ''}${Array.isArray(d.status) && d.status.length ? `, ${esc(d.status.join(', '))}` : ''}</div>` : ''}
-        ${c.field === 'site_pages' ? `<div class="summary quiet">${['about','contact','privacy','corrections','ethics','masthead'].filter(k=>d[k]).map(k=>`<a href="${esc(d[k])}" rel="noopener">${k}</a>`).join(' · ') || 'none linked'}</div>` : ''}
-        ${c.note ? `<div class="summary">Note: ${esc(c.note)}</div>` : ''}
-        ${Array.isArray(d.discussions) && d.discussions.length ? `<div class="summary quiet">Discussions: ${d.discussions.map((u,i)=>`<a href="${esc(u)}" rel="noopener">${i+1}</a>`).join(' ')}</div>` : ''}
+        </div>${notes}
       </article>`;
     }
+    html += `</div></section>`;
   }
   $('#outlet').innerHTML = html;
 }

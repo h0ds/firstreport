@@ -226,7 +226,7 @@ step since it was first seen. Spec:
 - **Marks** 1.5px `--kg-blue` line, round joins; area below in `--kg-blue-soft` at 40%; a 1px `--kg-line` baseline; a 3px `--kg-blue` dot on the last point. No axes, gridlines, labels or hover tooltips.
 - **Label** the final count sits to the right of the chart as `small` tabular text ("12"), so the number is read, not estimated.
 - **Accessibility** `role="img"` with an `aria-label` giving every value ("Outlets carrying the story, two-hour steps: 1, 1, 3, 5 …"). No fact lives only in the line (§11).
-- **Single-outlet stories** draw only the baseline and the end dot. An empty curve is still information.
+- **A line that never moves** after its first bucket (one outlet, or every outlet within two hours) is not drawn, and no bare count stands in for it: the card's count chip already gives the number. The feed debug page, which has no count chip, still draws the baseline and end dot.
 
 **Count chip**
 - The one number that ranks a row (outlets on a story card, outlets joined in six hours on "spreading now") sits in a chip: `--kg-blue-soft` fill, `--kg-blue-ink` text, weight 600, tabular, radius 4, `0 s2` padding. This is the "key data highlight" use of the accent (§2).
@@ -255,6 +255,8 @@ step since it was first seen. Spec:
 - Provenance line beneath, always. A value without its provenance line is a bug.
 - A note, if the source or importer has one, in 13px `--kg-text-secondary`, prefixed "Note:".
 - Claims from different sources for the same field sit one above the other, same weight, in source order. Never merged, never one shown as the answer.
+- Claims in one field with identical provenance (same source, page, retrieval day, as-of and age) share one provenance line and list their values together, separated by a muted `·`; a note repeated across fields is shown at its first appearance only. This is the only merging allowed: it removes repetition, never a source.
+- Dense surfaces (ledger's lookup) lay fields out as rows: the field name at `ui` 500 in a 176px left column, its claims on the right, one hairline between fields; values at `body` 600. Below 720px the columns stack.
 
 **Provenance line** (under every fact on every surface, one form everywhere)
 - Inter 12px muted, items separated by `·`: source name as a link to the page that states it · licence in a mono tag · "retrieved YYYY-MM-DD" · "as of YYYY-MM-DD" when the source says · status dot with "N days old" or "stale, N days old".
