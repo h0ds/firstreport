@@ -236,7 +236,9 @@ step since it was first seen. Spec:
 - A section that is a different view of the same list (lens's "spreading now") sits on `--kg-bg-subtle` with a 1px `--kg-line` border and radius 6, so the eye separates it from the main list without a second colour.
 
 **Pager**
-- Long lists are paged, 50 to a page: Newer and Older as bordered links, numbered pages between them (first, last, and two either side of the current page), the current page a filled `--kg-blue` chip. The machine-readable twin of page 1 keeps the whole list.
+- Long lists are paged, 50 to a page. "← Newer" and "Older →" are plain action links at weight 500 (greyed at the ends, never hidden, so the layout does not jump). Page numbers are JetBrains Mono between them: first, last, and two either side of the current one, which is `--kg-text` 600 with a 2px `--kg-blue` underline like a tab. No boxes or filled buttons.
+- Below the row, a 2px hairline rail across the list's width with a `--kg-blue` segment at this page's position and length, and "51–100 of 2,219" beside it: where you are in the whole list, in a glance and in words.
+- The machine-readable twin of page 1 keeps the whole list.
 
 **Charts**
 - Line and area only for spread curves; `--kg-blue` stroke 1.5px, `--kg-blue-soft` fill at 40%.

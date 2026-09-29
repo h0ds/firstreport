@@ -550,8 +550,7 @@ pub fn cluster_card(
         let reports = f.reports as usize != c.outlet_count as usize;
         let text = match (f.languages > 1, reports) {
             (true, _) => Some(format!(
-                "reach {}: {} in {} languages",
-                f.reach,
+                "{} in {} languages",
                 n(f.reports as usize, "independent report"),
                 f.languages
             )),

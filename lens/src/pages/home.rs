@@ -67,17 +67,34 @@ fn page_path(page: usize) -> String {
     }
 }
 
-/// Newer / numbered / older links for the story list (action links: the
-/// next step in the view, design §5). First, last, and two either side.
-fn pager(page: usize, pages: usize) -> String {
+/// Stories N–M of T with thousands separators, for the pager.
+fn thousands(n: usize) -> String {
+    let d = n.to_string();
+    let mut out = String::new();
+    for (k, ch) in d.chars().enumerate() {
+        if k > 0 && (d.len() - k) % 3 == 0 {
+            out.push(',');
+        }
+        out.push(ch);
+    }
+    out
+}
+
+/// The story list's pager (design §5): Newer and Older as plain arrowed
+/// links, page numbers in mono with the current one underlined like a tab,
+/// "51–100 of 2,219" in words, and a hairline rail with a blue segment
+/// showing where this page sits in the whole list.
+fn pager(page: usize, pages: usize, total: usize) -> String {
     if pages <= 1 {
         return String::new();
     }
-    let mut s = String::from("<nav class=\"pager\" aria-label=\"Story pages\">");
+    let first = (page - 1) * PAGE_SIZE + 1;
+    let last_item = (page * PAGE_SIZE).min(total);
+    let mut s = String::from("<nav class=\"pager\" aria-label=\"Story pages\"><div class=\"row\">");
     if page > 1 {
-        let _ = write!(s, "<a rel=\"prev\" href=\"{}\">Newer</a>", page_path(page - 1));
+        let _ = write!(s, "<a class=\"step\" rel=\"prev\" href=\"{}\">← Newer</a>", page_path(page - 1));
     } else {
-        s.push_str("<span class=\"off\">Newer</span>");
+        s.push_str("<span class=\"step off\">← Newer</span>");
     }
     s.push_str("<span class=\"pages\">");
     let mut last = 0;
@@ -96,11 +113,19 @@ fn pager(page: usize, pages: usize) -> String {
     }
     s.push_str("</span>");
     if page < pages {
-        let _ = write!(s, "<a rel=\"next\" href=\"{}\">Older</a>", page_path(page + 1));
+        let _ = write!(s, "<a class=\"step\" rel=\"next\" href=\"{}\">Older →</a>", page_path(page + 1));
     } else {
-        s.push_str("<span class=\"off\">Older</span>");
+        s.push_str("<span class=\"step off\">Older →</span>");
     }
-    s.push_str("</nav>");
+    let left = (first - 1) as f64 / total.max(1) as f64 * 100.0;
+    let width = ((last_item - first + 1) as f64 / total.max(1) as f64 * 100.0).max(1.0);
+    let _ = write!(
+        s,
+        "</div><div class=\"where\"><span class=\"rail\" aria-hidden=\"true\"><span class=\"pos\" style=\"left: {left:.2}%; width: {width:.2}%\"></span></span><span class=\"range\">{}–{} of {}</span></div></nav>",
+        thousands(first),
+        thousands(last_item),
+        thousands(total)
+    );
     s
 }
 
@@ -148,9 +173,9 @@ pub fn story_page(input: &Input, window_hours: i64, page: usize) -> Twins {
         window_hours,
         time_el(now, now)
     );
-    b.push_str(&pager(page, pages));
+    b.push_str(&pager(page, pages, recent.len() + single.len()));
     b.push_str(&page_cards(input, &recent, &single, page));
-    b.push_str(&pager(page, pages));
+    b.push_str(&pager(page, pages, recent.len() + single.len()));
     let ids: Vec<_> = recent
         .iter()
         .chain(single.iter())
@@ -249,9 +274,9 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         }
         b.push_str("</ul></section><h2>All stories in the window</h2>");
     }
-    b.push_str(&pager(1, pages));
+    b.push_str(&pager(1, pages, active));
     b.push_str(&page_cards(input, &recent, &single, 1));
-    b.push_str(&pager(1, pages));
+    b.push_str(&pager(1, pages, active));
     b.push_str("<h2>Outlets</h2><ul class=\"stories\">");
     for o in input.outlets.values() {
         let claims = input.claims.get(&o.id).map(|v| v.len()).unwrap_or(0);
@@ -440,15 +465,23 @@ mod tests {
     }
 
     #[test]
+    fn thousands_separators() {
+        assert_eq!(thousands(7), "7");
+        assert_eq!(thousands(2219), "2,219");
+        assert_eq!(thousands(1234567), "1,234,567");
+    }
+
+    #[test]
     fn story_list_is_paged_fifty_to_a_page() {
         let i = fixture_input();
         let pages = page_count(&i, 24 * 60);
         assert!(pages >= 2, "fixture has more than one page: {pages}");
         let home_page = home(&i, 24 * 60);
         assert_eq!(home_page.html.matches("class=\"kg-cluster").count(), PAGE_SIZE);
-        assert!(home_page.html.contains("<a rel=\"next\" href=\"/page/2/\">Older</a>"));
+        assert!(home_page.html.contains("<a class=\"step\" rel=\"next\" href=\"/page/2/\">Older →</a>"));
+        assert!(home_page.html.contains(&format!("<span class=\"range\">1–{PAGE_SIZE} of ")));
         let last = story_page(&i, 24 * 60, pages);
-        assert!(last.html.contains("<span class=\"off\">Older</span>"));
+        assert!(last.html.contains("<span class=\"step off\">Older →</span>"));
         assert!(last.html.contains(&format!("aria-current=\"page\">{pages}</span>")));
         assert_eq!(last.json["page"], pages);
         // The machine twin of page 1 keeps the whole list.

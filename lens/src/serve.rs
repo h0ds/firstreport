@@ -61,9 +61,11 @@ pub fn run(site: &Path, bind: &str) -> Result<(), String> {
                 b"not in the site\n".to_vec(),
             ),
         };
+        // A local preview of a site rebuilt often: browsers revalidate every
+        // time, so a rebuild is never hidden behind a cached page.
         let _ = write!(
             s,
-            "HTTP/1.0 {status}\r\nContent-Type: {ctype}\r\nContent-Length: {}\r\nConnection: close\r\n\r\n",
+            "HTTP/1.0 {status}\r\nContent-Type: {ctype}\r\nContent-Length: {}\r\nCache-Control: no-cache\r\nConnection: close\r\n\r\n",
             body.len()
         );
         let _ = s.write_all(&body);

@@ -62,16 +62,22 @@ h3 a:hover { color: var(--kg-blue); }
 .panel h2 { margin-top: var(--kg-s5); }
 .panel .stories li:first-child { border-top: 0; }
 
-/* Story list pages: newer, numbers, older. Action links, current page as a filled chip. */
-.pager { display: flex; align-items: center; justify-content: space-between; gap: var(--kg-s3); flex-wrap: wrap; margin: var(--kg-s5) 0; font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); }
-.pager .pages { display: flex; gap: var(--kg-s1); align-items: center; flex-wrap: wrap; }
-.pager .pages a, .pager .pages .cur { min-width: var(--kg-s6); min-height: var(--kg-s6); display: inline-flex; align-items: center; justify-content: center; border-radius: var(--kg-radius-input); font-variant-numeric: tabular-nums; }
-.pager .pages a:hover { background: var(--kg-blue-soft); text-decoration: none; }
-.pager .pages .cur { background: var(--kg-blue); color: #fff; font-weight: 600; }
-.pager > a, .pager .off { min-height: var(--kg-s6); display: inline-flex; align-items: center; padding: 0 var(--kg-s3); border: 1px solid var(--kg-line-strong); border-radius: var(--kg-radius-input); }
-.pager > a:hover { border-color: var(--kg-blue); text-decoration: none; }
-.pager .off { color: var(--kg-text-muted); border-color: var(--kg-line); }
-.pager .gap { color: var(--kg-text-muted); padding: 0 var(--kg-s1); }
+/* Story list pager (design §5): arrowed text steps, mono page numbers with
+   the current one underlined like a tab, and a rail showing where this page
+   sits in the whole list. No boxes. */
+.pager { margin: var(--kg-s5) 0; }
+.pager .row { display: flex; align-items: center; justify-content: space-between; gap: var(--kg-s3); flex-wrap: wrap; font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); }
+.pager .step { min-height: var(--kg-s6); display: inline-flex; align-items: center; font-weight: 500; }
+.pager .step.off { color: var(--kg-line-strong); }
+.pager .pages { display: flex; align-items: center; gap: var(--kg-s1); font-family: var(--kg-font-mono); font-variant-numeric: tabular-nums; }
+.pager .pages a, .pager .pages .cur { min-width: var(--kg-s6); min-height: var(--kg-s6); display: inline-flex; align-items: center; justify-content: center; border-bottom: 2px solid transparent; color: var(--kg-text-secondary); }
+.pager .pages a:hover { color: var(--kg-blue); border-bottom-color: var(--kg-blue-soft); text-decoration: none; }
+.pager .pages .cur { color: var(--kg-text); font-weight: 600; border-bottom-color: var(--kg-blue); }
+.pager .gap { color: var(--kg-text-muted); }
+.pager .where { display: flex; align-items: center; gap: var(--kg-s3); margin-top: var(--kg-s2); }
+.pager .rail { position: relative; flex: 1; height: 2px; background: var(--kg-line); border-radius: 1px; }
+.pager .rail .pos { position: absolute; top: 0; bottom: 0; background: var(--kg-blue); border-radius: 1px; min-width: var(--kg-s1); }
+.pager .range { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 footer { margin-top: var(--kg-s8); padding-top: var(--kg-s4); border-top: 1px solid var(--kg-line); }
 footer a { color: inherit; text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
