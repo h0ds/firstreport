@@ -12,7 +12,7 @@ use std::path::PathBuf;
 use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
 
-use super::{Listener, Posted, Poster};
+use super::{Found, Listener, Posted, Poster, SearchQuery, Searcher};
 use crate::facts::{get, parse_rfc3339, text};
 use crate::model::{Mention, Post, Thread};
 
@@ -215,6 +215,108 @@ impl Poster for X {
     }
 }
 
+impl Searcher for X {
+    fn name(&self) -> &str {
+        "x"
+    }
+
+    /// `GET /2/tweets/search/recent`: the last seven days of posts
+    /// carrying the subject, up to 100 per page, a few pages.
+    fn search<'a>(
+        &'a mut self,
+        q: &'a SearchQuery,
+    ) -> std::pin::Pin<Box<dyn std::future::Future<Output = Result<Vec<Found>, String>> + Send + 'a>>
+    {
+        Box::pin(async move {
+            let query = match q {
+                SearchQuery::Url(u) => format!("url:\"{u}\" -is:retweet"),
+                SearchQuery::Text(t) => format!("\"{}\" -is:retweet", t.replace('"', "")),
+            };
+            let mut out = Vec::new();
+            let mut next: Option<String> = None;
+            for _ in 0..3 {
+                let mut params = vec![
+                    ("query", query.as_str()),
+                    ("max_results", "100"),
+                    ("tweet.fields", "created_at,author_id,entities"),
+                    ("expansions", "author_id"),
+                    ("user.fields", "created_at"),
+                ];
+                if let Some(n) = next.as_deref() {
+                    params.push(("next_token", n));
+                }
+                let v = self
+                    .call(
+                        reqwest::Method::GET,
+                        "/2/tweets/search/recent",
+                        &params,
+                        None,
+                    )
+                    .await?;
+                out.extend(parse_search(&v, q));
+                next = get(&v, "meta.next_token").map(text);
+                if next.is_none() {
+                    break;
+                }
+            }
+            Ok(out)
+        })
+    }
+}
+
+/// Recent search → found posts, with the author's creation date from `includes.users`.
+pub fn parse_search(v: &Value, q: &SearchQuery) -> Vec<Found> {
+    let created: HashMap<String, i64> = get(v, "includes.users")
+        .and_then(Value::as_array)
+        .map(|a| {
+            a.iter()
+                .filter_map(|u| {
+                    Some((
+                        get(u, "id").map(text)?,
+                        get(u, "created_at")
+                            .map(text)
+                            .and_then(|s| parse_rfc3339(&s))?,
+                    ))
+                })
+                .collect()
+        })
+        .unwrap_or_default();
+    let want = match q {
+        SearchQuery::Url(u) => Some(u.as_str()),
+        _ => None,
+    };
+    get(v, "data")
+        .and_then(Value::as_array)
+        .map(|a| {
+            a.iter()
+                .filter_map(|t| {
+                    let post = tweet_post(t)?;
+                    let author = get(t, "author_id").map(text)?;
+                    let url = match want {
+                        Some(w) => post
+                            .urls
+                            .iter()
+                            .find(|u| crate::observe::subject_url(u).as_deref() == Some(w))
+                            .cloned()
+                            .or_else(|| post.urls.first().cloned()),
+                        None => None,
+                    };
+                    Some(Found {
+                        platform: "x".into(),
+                        created_at: created.get(&author).copied(),
+                        account_id: author,
+                        at: get(t, "created_at")
+                            .map(text)
+                            .and_then(|s| parse_rfc3339(&s))?,
+                        url,
+                        text_hash: Some(crate::observe::simhash::simhash(&post.text)),
+                    })
+                })
+                .collect()
+        })
+        .unwrap_or_default()
+}
+
 /// `GET /2/users/:id/mentions` → mentions, oldest first. The parent
 /// (`replied_to`) and quoted tweets come from `includes.tweets`; a
 /// referenced tweet the API did not include is kept as an id with no text.
@@ -322,6 +424,24 @@ fn tweet_post(t: &Value) -> Option<Post> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn search_results_become_found_posts_with_ages() {
+        let p = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("fixtures/x/search.json");
+        let v: Value = serde_json::from_str(&std::fs::read_to_string(p).unwrap()).unwrap();
+        let q = SearchQuery::Url("https://truth-wire.example/x".into());
+        let f = parse_search(&v, &q);
+        assert_eq!(f.len(), 2);
+        assert_eq!(
+            (f[0].account_id.as_str(), f[0].created_at),
+            ("u9", Some(1_703_980_800))
+        );
+        assert_eq!(
+            f[0].url.as_deref(),
+            Some("https://truth-wire.example/x?utm_source=a")
+        );
+        assert_eq!(f[1].created_at, None);
+    }
 
     #[test]
     fn mentions_carry_parents_quotes_and_expanded_links() {

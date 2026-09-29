@@ -69,25 +69,47 @@ async fn run(args: cli::Args) -> Result<(), String> {
             let layout = set.layout(&platform)?.clone();
             let api = client::Http::new()?;
             let mut q = queue::Queue::open(&args.data)?;
-            // The listener doubles as the poster for drafts that have earned autonomy.
+            // The same credentials serve the listener, the searcher that
+            // observes a subject on demand, and the poster for drafts that
+            // have earned autonomy. Without a salt, nothing is observed.
+            let salt = std::env::var(observe::SALT_ENV).ok();
             match platform.as_str() {
                 "bluesky" => {
                     let listener = bluesky_from_args(&args)?;
-                    let poster = (args.autonomous_after > 0)
+                    let searcher: Option<Box<dyn platform::Searcher>> = salt
+                        .is_some()
                         .then(|| bluesky_from_args(&args))
-                        .transpose()?;
-                    let poster: Option<Box<dyn platform::Poster>> =
-                        poster.map(|p| Box::new(p) as Box<dyn platform::Poster>);
-                    listen(listener, poster, &api, &set, &layout, &args, &mut q, once).await
+                        .transpose()?
+                        .map(|s| Box::new(s) as Box<dyn platform::Searcher>);
+                    let poster: Option<Box<dyn platform::Poster>> = (args.autonomous_after > 0)
+                        .then(|| bluesky_from_args(&args))
+                        .transpose()?
+                        .map(|p| Box::new(p) as Box<dyn platform::Poster>);
+                    let ctx = Ctx {
+                        poster,
+                        searcher,
+                        salt,
+                    };
+                    listen(listener, ctx, &api, &set, &layout, &args, &mut q, once).await
                 }
                 "x" => {
-                    let listener = platform::x::X::from_env(&args.pds_or_default("x"), &args.data)?;
-                    let poster = (args.autonomous_after > 0)
-                        .then(|| platform::x::X::from_env(&args.pds_or_default("x"), &args.data))
-                        .transpose()?;
-                    let poster: Option<Box<dyn platform::Poster>> =
-                        poster.map(|p| Box::new(p) as Box<dyn platform::Poster>);
-                    listen(listener, poster, &api, &set, &layout, &args, &mut q, once).await
+                    let mk = || platform::x::X::from_env(&args.pds_or_default("x"), &args.data);
+                    let listener = mk()?;
+                    let searcher: Option<Box<dyn platform::Searcher>> = salt
+                        .is_some()
+                        .then(mk)
+                        .transpose()?
+                        .map(|s| Box::new(s) as Box<dyn platform::Searcher>);
+                    let poster: Option<Box<dyn platform::Poster>> = (args.autonomous_after > 0)
+                        .then(mk)
+                        .transpose()?
+                        .map(|p| Box::new(p) as Box<dyn platform::Poster>);
+                    let ctx = Ctx {
+                        poster,
+                        searcher,
+                        salt,
+                    };
+                    listen(listener, ctx, &api, &set, &layout, &args, &mut q, once).await
                 }
                 other => Err(format!("no listener for platform {other}")),
             }
@@ -133,20 +155,7 @@ async fn run(args: cli::Args) -> Result<(), String> {
                 .await
                 .map_err(|e| e.to_string())
         }
-        cli::Command::Observe { from, once } => {
-            // A recorded file already holds hashed accounts; only the live
-            // firehose needs the salt.
-            let salt = match &from {
-                Some(_) => String::new(),
-                None => std::env::var(observe::SALT_ENV).map_err(|_| {
-                    format!(
-                        "observe needs {} in the environment: a long random string that never changes",
-                        observe::SALT_ENV
-                    )
-                })?,
-            };
-            observe_cmd(&args, &salt, from, once).await
-        }
+        cli::Command::Observe { from } => observe_cmd(&args, from),
         cli::Command::Queue => {
             let q = queue::Queue::open(&args.data)?;
             let entries = q.list()?;
@@ -201,10 +210,18 @@ async fn run(args: cli::Args) -> Result<(), String> {
 /// drafted and queued. A mention that cannot be resolved is logged and
 /// marked seen so it is not retried forever; a poll that fails is
 /// retried next interval.
+/// What `listen` may do beyond drafting: observe a subject, post alone.
+#[derive(Default)]
+struct Ctx {
+    poster: Option<Box<dyn platform::Poster>>,
+    searcher: Option<Box<dyn platform::Searcher>>,
+    salt: Option<String>,
+}
+
 #[allow(clippy::too_many_arguments)]
 async fn listen<L: platform::Listener, A: client::Api>(
     mut listener: L,
-    mut poster: Option<Box<dyn platform::Poster>>,
+    mut ctx: Ctx,
     api: &A,
     set: &template::Set,
     layout: &template::Layout,
@@ -227,14 +244,14 @@ async fn listen<L: platform::Listener, A: client::Api>(
                     if q.seen(&m.id) {
                         continue;
                     }
-                    match resolve::resolve(api, &args.urls, &m).await.map(|mut fs| {
-                        fs.observations = observe::store::observations_for(
-                            &args.data,
-                            fs.subject.urls.first().map(String::as_str),
-                            fs.subject.text.as_deref().map(observe::simhash::simhash),
-                        );
-                        fs
-                    }) {
+                    let resolved = match resolve::resolve(api, &args.urls, &m).await {
+                        Ok(mut fs) => {
+                            observe_for(&mut ctx, args, &mut fs).await;
+                            Ok(fs)
+                        }
+                        Err(e) => Err(e),
+                    };
+                    match resolved {
                         Err(e) => {
                             eprintln!("{}: not drafted: {e}", m.id);
                             if e.contains("404") {
@@ -250,7 +267,7 @@ async fn listen<L: platform::Listener, A: client::Api>(
                                 let t = now();
                                 let has_obs = !fs.observations.is_empty();
                                 let log = q.log()?;
-                                draft.autonomous = poster.is_some()
+                                draft.autonomous = ctx.poster.is_some()
                                     && post::earned(&draft, has_obs, &log, args.autonomous_after);
                                 let path = q.push(fs, draft.clone(), t)?;
                                 if !draft.autonomous {
@@ -259,7 +276,7 @@ async fn listen<L: platform::Listener, A: client::Api>(
                                 }
                                 let id = queue::queue_id(&m.id);
                                 let entry = q.get(&id)?.ok_or("queued entry vanished")?;
-                                let p = poster.as_deref_mut().unwrap();
+                                let p = ctx.poster.as_deref_mut().unwrap();
                                 match post::post_and_log(
                                     q,
                                     p,
@@ -304,136 +321,84 @@ async fn listen<L: platform::Listener, A: client::Api>(
     }
 }
 
-/// The observer loop (plan §16, R4). Live: read Jetstream into the store,
-/// and every `interval` run the signals over the retained window, look
-/// up ages for accounts in bursts, and append observations. Replaying a
-/// file: load it, run once, print what was found.
-async fn observe_cmd(
-    args: &cli::Args,
-    salt: &str,
-    from: Option<std::path::PathBuf>,
-    once: bool,
-) -> Result<(), String> {
+/// Observe the mention's subject on demand (plan §7, R6): search the
+/// platform, record sightings, run the signals, attach what concerns this
+/// subject. Anything that stops it becomes a gap in words; the stored
+/// observations from earlier searches still apply.
+async fn observe_for(ctx: &mut Ctx, args: &cli::Args, fs: &mut model::FactSet) {
+    let url = fs.subject.urls.first().cloned();
+    let text_ = fs.subject.text.clone();
+    if url.is_none() && text_.is_none() {
+        return;
+    }
+    let stored = observe::store::observations_for(
+        &args.data,
+        url.as_deref(),
+        text_.as_deref().map(observe::simhash::simhash),
+    );
+    let (Some(searcher), Some(salt)) = (ctx.searcher.as_deref_mut(), ctx.salt.as_deref()) else {
+        fs.observations = stored;
+        fs.gaps
+            .push(format!("not observed: {} unset", observe::SALT_ENV));
+        return;
+    };
+    let store = match observe::store::Store::open(&args.data) {
+        Ok(s) => s,
+        Err(e) => {
+            fs.observations = stored;
+            fs.gaps.push(format!("not observed: {e}"));
+            return;
+        }
+    };
+    match observe::observe_subject(
+        searcher,
+        &store,
+        salt,
+        url.as_deref(),
+        text_.as_deref(),
+        args.thresholds,
+        now(),
+    )
+    .await
+    {
+        Ok(obs) => fs.observations = obs,
+        Err(e) => {
+            fs.observations = stored;
+            fs.gaps.push(format!("search for the subject failed: {e}"));
+        }
+    }
+}
+
+/// `observe --from`: replay recorded sightings through the signals and
+/// print what was found (plan §15). Live observation happens inside
+/// `listen`, on demand, when a mention names a subject.
+fn observe_cmd(args: &cli::Args, from: std::path::PathBuf) -> Result<(), String> {
     let t = args.thresholds;
     let store = observe::store::Store::open(&args.data)?;
-    if let Some(path) = from {
-        let text =
-            std::fs::read_to_string(&path).map_err(|e| format!("{}: {e}", path.display()))?;
-        let mut sightings: Vec<observe::Sighting> = Vec::new();
-        for line in text.lines().filter(|l| !l.trim().is_empty()) {
-            let s: observe::Sighting =
-                serde_json::from_str(line).map_err(|e| format!("{}: {e}", path.display()))?;
-            store.append(&s)?;
-            sightings.push(s);
-        }
-        let now = sightings.iter().map(|s| s.at).max().unwrap_or(0);
-        let (obs, bursts) = observe::signals::run(&sightings, t, now);
-        store.append_observations(&obs)?;
-        for o in &obs {
-            println!(
-                "{} {} {}/{} over {}s",
-                o.kind, o.subject, o.count, o.denominator, o.window_secs
-            );
-        }
+    let text = std::fs::read_to_string(&from).map_err(|e| format!("{}: {e}", from.display()))?;
+    let mut sightings: Vec<observe::Sighting> = Vec::new();
+    for line in text.lines().filter(|l| !l.trim().is_empty()) {
+        let s: observe::Sighting =
+            serde_json::from_str(line).map_err(|e| format!("{}: {e}", from.display()))?;
+        store.append(&s)?;
+        sightings.push(s);
+    }
+    let now = sightings.iter().map(|s| s.at).max().unwrap_or(0);
+    let (obs, bursts) = observe::signals::run(&sightings, t, now);
+    store.append_observations(&obs)?;
+    for o in &obs {
         println!(
-            "{} sightings, {} bursts, {} observations",
-            sightings.len(),
-            bursts.len(),
-            obs.len()
+            "{} {} {}/{} over {}s",
+            o.kind, o.subject, o.count, o.denominator, o.window_secs
         );
-        return Ok(());
     }
-
-    let client = reqwest::Client::builder()
-        .user_agent(concat!("kagami-reply/", env!("CARGO_PKG_VERSION")))
-        .timeout(std::time::Duration::from_secs(20))
-        .build()
-        .map_err(|e| e.to_string())?;
-    // Hash → DID for accounts seen recently, in memory only, so ages can be
-    // fetched for burst members without ever writing a DID to disk.
-    let dids: std::sync::Arc<std::sync::Mutex<std::collections::HashMap<String, String>>> =
-        Default::default();
-    let store = std::sync::Arc::new(std::sync::Mutex::new(store));
-    eprintln!(
-        "observing {} ; sightings in {} ; signals every {}s",
-        args.firehose,
-        args.data.join("sightings").display(),
-        args.interval_secs.max(60)
+    println!(
+        "{} sightings, {} bursts, {} observations",
+        sightings.len(),
+        bursts.len(),
+        obs.len()
     );
-
-    let reader = {
-        let (store, dids, url, salt) = (
-            store.clone(),
-            dids.clone(),
-            args.firehose.clone(),
-            salt.to_string(),
-        );
-        tokio::spawn(async move {
-            loop {
-                let r = observe::jetstream::run(&url, &salt, |s, did| {
-                    dids.lock()
-                        .unwrap()
-                        .insert(s.account.clone(), did.to_string());
-                    store.lock().unwrap().append(&s)
-                })
-                .await;
-                eprintln!(
-                    "firehose ended: {}; reconnecting in 10s",
-                    r.err().unwrap_or_else(|| "closed".into())
-                );
-                tokio::time::sleep(std::time::Duration::from_secs(10)).await;
-            }
-        })
-    };
-
-    loop {
-        tokio::time::sleep(std::time::Duration::from_secs(args.interval_secs.max(60))).await;
-        let now = now();
-        let since = now - t.movers_window_days as i64 * 86_400;
-        let sightings = store.lock().unwrap().load(since)?;
-        let (_, bursts) = observe::signals::run(&sightings, t, now);
-        // Ages for burst members not yet known, then run again with them.
-        let want: Vec<String> = {
-            let known = &store.lock().unwrap().ages;
-            let dids = dids.lock().unwrap();
-            bursts
-                .iter()
-                .flat_map(|b| b.accounts_in_order.iter())
-                .filter(|a| !known.contains_key(*a))
-                .filter_map(|a| dids.get(a).cloned())
-                .collect::<std::collections::BTreeSet<_>>()
-                .into_iter()
-                .collect()
-        };
-        if !want.is_empty() {
-            let ages =
-                observe::jetstream::ages(&client, observe::jetstream::PUBLIC_API, &want, now).await;
-            let dids = dids.lock().unwrap();
-            let mut st = store.lock().unwrap();
-            for (hash, did) in dids.iter() {
-                if let Some(age) = ages.get(did) {
-                    st.remember_age(hash, *age);
-                }
-            }
-            st.save_ages()?;
-        }
-        let sightings = store.lock().unwrap().load(since)?;
-        let (obs, bursts) = observe::signals::run(&sightings, t, now);
-        let st = store.lock().unwrap();
-        st.append_observations(&obs)?;
-        let pruned = st.prune(now, t.retain_days)?;
-        eprintln!(
-            "{} sightings, {} bursts, {} observations, {} day files pruned",
-            sightings.len(),
-            bursts.len(),
-            obs.len(),
-            pruned
-        );
-        if once {
-            reader.abort();
-            return Ok(());
-        }
-    }
+    Ok(())
 }
 
 fn bluesky_from_args(args: &cli::Args) -> Result<platform::bluesky::Bluesky, String> {
@@ -557,7 +522,7 @@ mod tests {
         let mut q = queue::Queue::open(&args.data).unwrap();
         listen(
             Canned(mentions.clone()),
-            None,
+            Ctx::default(),
             &api,
             &set,
             &layout,
@@ -576,7 +541,7 @@ mod tests {
 
         listen(
             Canned(mentions),
-            None,
+            Ctx::default(),
             &api,
             &set,
             &layout,

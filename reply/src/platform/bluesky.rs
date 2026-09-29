@@ -1,5 +1,5 @@
 //! Bluesky over XRPC. Mentions come from `app.bsky.notification.listNotifications`,
-//! polled; the firehose is for the observer (R4), not for being summoned.
+//! polled: the bot is summoned, so no firehose is needed. Parent and quoted
 //! Parent and quoted posts are fetched with `app.bsky.feed.getPosts`.
 //! Parsing is pure and tested on recorded responses.
 
@@ -7,7 +7,7 @@ use std::collections::HashMap;
 
 use serde_json::{json, Value};
 
-use super::{Listener, Posted, Poster};
+use super::{Found, Listener, Posted, Poster, SearchQuery, Searcher};
 use crate::facts::{get, parse_rfc3339, text};
 use crate::model::{Mention, Post, Thread};
 
@@ -211,6 +211,85 @@ impl Poster for Bluesky {
     }
 }
 
+impl Searcher for Bluesky {
+    fn name(&self) -> &str {
+        "bluesky"
+    }
+
+    /// `app.bsky.feed.searchPosts`, up to 100 posts, newest first.
+    fn search<'a>(
+        &'a mut self,
+        q: &'a SearchQuery,
+    ) -> std::pin::Pin<Box<dyn std::future::Future<Output = Result<Vec<Found>, String>> + Send + 'a>>
+    {
+        Box::pin(async move {
+            let term = match q {
+                SearchQuery::Url(u) => u.clone(),
+                SearchQuery::Text(t) => format!("\"{t}\""),
+            };
+            let mut out = Vec::new();
+            let mut cursor: Option<String> = None;
+            for _ in 0..4 {
+                let mut params = vec![("q", term.as_str()), ("limit", "100")];
+                if let Some(c) = cursor.as_deref() {
+                    params.push(("cursor", c));
+                }
+                let v = self.xrpc_get("app.bsky.feed.searchPosts", &params).await?;
+                out.extend(parse_search(&v, q));
+                cursor = get(&v, "cursor").map(text);
+                if cursor.is_none() {
+                    break;
+                }
+            }
+            Ok(out)
+        })
+    }
+}
+
+/// `searchPosts` → found posts. The author's `createdAt` gives the age.
+pub fn parse_search(v: &Value, q: &SearchQuery) -> Vec<Found> {
+    let subject_url = match q {
+        SearchQuery::Url(u) => Some(u.as_str()),
+        _ => None,
+    };
+    get(v, "posts")
+        .and_then(Value::as_array)
+        .map(|a| {
+            a.iter()
+                .filter_map(|p| {
+                    let record = get(p, "record")?;
+                    let (body, urls) = post_content(record);
+                    let url = match subject_url {
+                        Some(want) => urls
+                            .iter()
+                            .find(|u| crate::observe::subject_url(u).as_deref() == Some(want))
+                            .cloned()
+                            .or_else(|| urls.first().cloned()),
+                        None => None,
+                    };
+                    Some(Found {
+                        platform: "bluesky".into(),
+                        account_id: get(p, "author.did").map(text)?,
+                        created_at: get(p, "author.createdAt")
+                            .map(text)
+                            .and_then(|s| parse_rfc3339(&s)),
+                        at: get(record, "createdAt")
+                            .map(text)
+                            .and_then(|s| parse_rfc3339(&s))
+                            .or_else(|| {
+                                get(p, "indexedAt")
+                                    .map(text)
+                                    .and_then(|s| parse_rfc3339(&s))
+                            })?,
+                        url,
+                        text_hash: Some(crate::observe::simhash::simhash(&body)),
+                    })
+                })
+                .collect()
+        })
+        .unwrap_or_default()
+}
+
 /// An `app.bsky.feed.post` record replying under `parent` in the thread
 /// rooted at `root`, with a link facet for every URL so they are clickable.
 pub fn post_record(
@@ -412,6 +491,26 @@ fn quoted_uri(record: &Value) -> Option<String> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn search_results_become_found_posts_with_ages() {
+        let v = fixture("search.json");
+        let q = SearchQuery::Url("https://truth-wire.example/x".into());
+        let f = parse_search(&v, &q);
+        assert_eq!(f.len(), 2);
+        assert_eq!(f[0].account_id, "did:plc:p1");
+        assert_eq!(f[0].created_at, Some(1_703_980_800));
+        assert_eq!(
+            f[0].url.as_deref(),
+            Some("https://www.truth-wire.example/x?utm_source=a")
+        );
+        assert_eq!(f[0].at, 1_704_103_200);
+        assert!(f[1].created_at.is_none());
+        assert_eq!(
+            f[0].text_hash, f[1].text_hash,
+            "same wording hashes the same"
+        );
+    }
 
     #[test]
     fn records_reply_in_thread_with_link_facets() {

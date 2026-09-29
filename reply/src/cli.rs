@@ -22,9 +22,8 @@ pub enum Command {
     Listen { platform: String, once: bool },
     /// Print the queue.
     Queue,
-    /// Record sightings from the firehose (or a recorded NDJSON file) and
-    /// run the signals over the window, writing observations.
-    Observe { from: Option<PathBuf>, once: bool },
+    /// Replay a recorded NDJSON file of sightings through the signals.
+    Observe { from: PathBuf },
     /// Review page, queue actions and the public log; posts approved
     /// drafts when platform credentials are present.
     Serve,
@@ -48,8 +47,6 @@ pub struct Args {
     /// Human approvals of an identical template set before a draft may post alone; 0 is off.
     pub autonomous_after: usize,
     pub thresholds: crate::observe::Thresholds,
-    /// Jetstream URL for `observe`.
-    pub firehose: String,
     pub command: Command,
 }
 
@@ -58,7 +55,7 @@ usage: reply [--templates <dir>] [--data <dir>] [--feed-url <url>] [--ledger-url
              [--platform x|bluesky] [--handle <bot account>] [--api <url>] [--interval <secs>]
              [--bind <addr>] [--per-account-per-day <n>] [--global-per-hour <n>] [--autonomous-after <n>]
              [--burst-window <secs>] [--burst-min <n>] [--cohort-span <days>] [--cohort-min-share <pct>]
-             [--movers-window <days>] [--movers-min <n>] [--retain <days>] [--firehose <wss url>] <command>
+             [--movers-window <days>] [--movers-min <n>] [--retain <days>] <command>
 
 commands:
   render <fixture.json> [--platform <name>]   render a recorded mention; print the draft and its cites
@@ -68,16 +65,15 @@ commands:
                                               ask feed and ledger about a mention; print the FactSet
                                               (a fixture for check) or, with --render, the draft
   listen [--once]                             poll for mentions, draft a reply for each, queue it.
-                                              With credentials and --autonomous-after N, a draft whose
+                                              With REPLY_SALT set, the subject of each mention is searched
+                                              for and observed. With --autonomous-after N, a draft whose
                                               template set a person has approved unchanged N times posts
                                               by itself; drafts with observations always wait for a person
   queue                                       print the queued drafts
   serve                                       review page and public log on 127.0.0.1:8082; with
                                               credentials for --platform, approving posts
-  observe [--from <sightings.ndjson>] [--once]
-                                              record sightings from Bluesky's Jetstream (or replay a
-                                              file) and run the four signals; observations go to
-                                              data/observations.ndjson. Needs REPLY_SALT
+  observe --from <sightings.ndjson>           replay recorded sightings through the four signals;
+                                              observations go to data/observations.ndjson
 
 credentials, from the environment:
   x        REPLY_X_ACCESS_TOKEN, and for refresh REPLY_X_REFRESH_TOKEN, REPLY_X_CLIENT_ID,
@@ -122,7 +118,6 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let mut limits = crate::api::Limits::default();
     let mut autonomous_after = 0;
     let mut thresholds = crate::observe::Thresholds::default();
-    let mut firehose = String::from(crate::observe::jetstream::DEFAULT_URL);
     let mut from = None;
     while let Some(a) = it.next() {
         let mut val = |flag: &str| {
@@ -162,7 +157,6 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
                 autonomous_after = num(val("--autonomous-after")?, "--autonomous-after")?
             }
             "--from" => from = Some(PathBuf::from(val("--from")?)),
-            "--firehose" => firehose = val("--firehose")?,
             "--burst-window" => {
                 thresholds.burst_window_secs = num(val("--burst-window")?, "--burst-window")?
             }
@@ -207,7 +201,10 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         },
         Some("queue") => Command::Queue,
         Some("serve") => Command::Serve,
-        Some("observe") => Command::Observe { from, once },
+        Some("observe") => Command::Observe {
+            from: from
+                .ok_or_else(|| format!("observe needs --from <sightings.ndjson>\n{USAGE}"))?,
+        },
         Some("resolve") => Command::Resolve {
             mention: fixture.ok_or_else(|| format!("resolve needs a mention file\n{USAGE}"))?,
             platform: platform.clone(),
@@ -227,7 +224,6 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         limits,
         autonomous_after,
         thresholds,
-        firehose,
         command,
     })
 }
@@ -285,14 +281,14 @@ mod tests {
             p("--autonomous-after 50 listen").unwrap().autonomous_after,
             50
         );
-        let a = p("--burst-min 5 --retain 7 observe --from s.ndjson --once").unwrap();
+        let a = p("--burst-min 5 --retain 7 observe --from s.ndjson").unwrap();
         assert_eq!(
             a.command,
             Command::Observe {
-                from: Some("s.ndjson".into()),
-                once: true
+                from: "s.ndjson".into()
             }
         );
+        assert!(p("observe").is_err());
         assert_eq!(
             (a.thresholds.burst_min_accounts, a.thresholds.retain_days),
             (5, 7)

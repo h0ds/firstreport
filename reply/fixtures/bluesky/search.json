@@ -1,0 +1,19 @@
+{
+  "cursor": null,
+  "posts": [
+    {
+      "uri": "at://did:plc:p1/app.bsky.feed.post/s1", "cid": "s1",
+      "author": { "did": "did:plc:p1", "handle": "p1.test", "createdAt": "2023-12-31T00:00:00.000Z" },
+      "indexedAt": "2024-01-01T10:00:05.000Z",
+      "record": { "$type": "app.bsky.feed.post", "text": "BREAKING the bank did the thing", "createdAt": "2024-01-01T10:00:00.000Z",
+        "facets": [ { "index": { "byteStart": 0, "byteEnd": 5 }, "features": [ { "$type": "app.bsky.richtext.facet#link", "uri": "https://www.truth-wire.example/x?utm_source=a" } ] } ] }
+    },
+    {
+      "uri": "at://did:plc:p2/app.bsky.feed.post/s2", "cid": "s2",
+      "author": { "did": "did:plc:p2", "handle": "p2.test" },
+      "indexedAt": "2024-01-01T10:00:20.000Z",
+      "record": { "$type": "app.bsky.feed.post", "text": "BREAKING the bank did the thing", "createdAt": "2024-01-01T10:00:15.000Z",
+        "embed": { "$type": "app.bsky.embed.external", "external": { "uri": "https://truth-wire.example/x", "title": "", "description": "" } } }
+    }
+  ]
+}

@@ -18,8 +18,6 @@ tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "signa
 axum = "0.8"
 xxhash-rust = { version = "0.8", features = ["xxh64"] }
 url = "2"
-tokio-tungstenite = { version = "0.26", features = ["rustls-tls-webpki-roots"] }
-futures-util = { version = "0.3", default-features = false, features = ["std"] }
 reqwest = { version = "0.13", default-features = false, features = ["rustls", "gzip", "system-proxy", "json", "query", "form"] }
 
 [dev-dependencies]

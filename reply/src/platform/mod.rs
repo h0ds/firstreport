@@ -17,6 +17,46 @@ pub trait Listener {
     fn poll(&mut self) -> impl Future<Output = Result<Vec<Mention>, String>> + Send;
 }
 
+/// What to search the platform for when observing a subject.
+#[derive(Debug, Clone, PartialEq)]
+pub enum SearchQuery {
+    Url(String),
+    Text(String),
+}
+
+impl SearchQuery {
+    /// The observation subjects this query maps to.
+    pub fn subjects(&self) -> Vec<String> {
+        match self {
+            SearchQuery::Url(u) => vec![u.clone()],
+            SearchQuery::Text(t) => {
+                vec![format!("text:{:016x}", crate::observe::simhash::simhash(t))]
+            }
+        }
+    }
+}
+
+/// One post found by a search, before hashing. The account id never
+/// leaves the process unhashed.
+#[derive(Debug, Clone, PartialEq)]
+pub struct Found {
+    pub platform: String,
+    pub account_id: String,
+    pub created_at: Option<i64>,
+    pub at: i64,
+    pub url: Option<String>,
+    pub text_hash: Option<u64>,
+}
+
+/// Object-safe: search recent posts carrying a subject.
+pub trait Searcher: Send {
+    fn name(&self) -> &str;
+    fn search<'a>(
+        &'a mut self,
+        q: &'a SearchQuery,
+    ) -> Pin<Box<dyn Future<Output = Result<Vec<Found>, String>> + Send + 'a>>;
+}
+
 /// What posting returns: the ids made so far, and the error if it stopped.
 pub type Posted = Result<Vec<String>, (Vec<String>, String)>;
 

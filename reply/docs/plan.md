@@ -90,11 +90,11 @@ Single Rust binary, single process, `tokio` runtime.
 │ Listener │ ───────▶ │ Resolver │ ────▶ │ Composer │ ────▶ │ Review │ ───▶ │  Poster  │
 └──────────┘          └──────────┘       └──────────┘       └────────┘      └──────────┘
      │                     │  ▲                                                   │
-     │ posts seen          │  │ /v1/lookup                                        │
+     │ subject             │  │ /v1/lookup                                        │
      ▼                     ▼  │                                                   ▼
 ┌──────────┐          ┌────────┴───┐                                        ┌──────────┐
 │ Observer │          │ feed+ledger│                                        │  Public  │
-│ (spread) │          └────────────┘                                        │   log    │
+│ (search) │          └────────────┘                                        │   log    │
 └──────────┘                                                                └──────────┘
 ```
 
@@ -110,9 +110,11 @@ Single Rust binary, single process, `tokio` runtime.
   marked autonomous in config; the log shows which replies were.
 - **Poster** — posts the draft as a reply to the mention, records the
   platform's post id, appends to the public log.
-- **Observer** — records `Sighting`s: account, time, link or text hash. Runs
-  the coordination signals over sightings and stores `Observation`s that
-  the resolver can include in later replies.
+- **Observer** — when a mention names a subject, searches the platform
+  for recent posts carrying it, records them as `Sighting`s (hashed
+  account, age, time, link or text hash), runs the coordination signals
+  over the retained window, and hands the subject's `Observation`s to the
+  composer. No firehose: the bot is summoned.
 
 `feed` gains one endpoint for this, `GET /v1/lookup?url=|text=`, which
 joins item, cluster, timeline, syndication and outlet in one call.
@@ -336,7 +338,7 @@ reply/
     mentions/*.json         recorded mentions with the FactSet they resolved to
     mentions/*.<platform>.draft.json
                             golden drafts, rewritten by `check --update`
-    bluesky/*.json, x/*.json, bluesky/jetstream.ndjson
+    bluesky/*.json, x/*.json
                             recorded platform responses for the parsers
     firehose/*.ndjson       recorded platform streams for the observer
   src/
@@ -355,7 +357,6 @@ reply/
     observe/mod.rs          Sighting, salted account hash, thresholds, subject URLs
     observe/store.rs        data/sightings/<day>.ndjson, observations, ages, pruning
     observe/signals.rs      burst, syndicated_text, cohort, first_movers
-    observe/jetstream.rs    Bluesky's firehose as JSON, and profile ages for burst members
     observe/simhash.rs      copy of feed's simhash
     api.rs                  review page, queue actions, the public log, limits
 ```
@@ -457,14 +458,11 @@ salt_env = "REPLY_SALT"
   and against a scratch queue; not yet run against a live account.
   First live replies are the next step, all human-approved.
 - **R4** Observer and the four signals, shown on the public log before
-  any reply carries one. Done: `observe` records sightings from Bluesky's
-  Jetstream (X has no free firehose) with salted account hashes, runs
-  burst, syndicated_text, cohort and first_movers over the retained
-  window, fetches ages only for burst members, and appends observations;
-  `serve` lists them at `/v1/observations`, and `listen` attaches a
-  subject's observations to the FactSet on the log. Signals are tested
-  on planted bursts, a copied text, a young-account cohort against a
-  background signup wave, and two first movers. Not yet run live.
+  any reply carries one. Done: the four signals over sightings with
+  salted account hashes, tested on planted bursts, a copied text, a
+  young-account cohort against a background signup wave, and two first
+  movers; `serve` lists observations at `/v1/observations`. Sightings
+  are gathered on demand (R6), not from a firehose.
 - **R5** Observations in replies, still reviewed; autonomous posting
   for templates that have earned it. Done: burst, syndicated_text and
   cohort templates (the cohort sentence always carries the baseline),
@@ -474,16 +472,15 @@ salt_env = "REPLY_SALT"
   set has N unchanged human approvals in the log; the same limits
   apply, a refusal leaves it for a person, and the log says `auto`.
   Off by default until the templates have settled.
-- **R6** The observer on X. There is no free firehose, so sightings on
-  X are gathered on demand: when a mention names a subject, `GET
-  /2/tweets/search/recent?query=url:"…"` (or the text, quoted) returns
-  up to a week of posts carrying it with authors and creation dates,
-  which become sightings the same way and run through the same four
-  signals. The cohort baseline on X then comes from every account seen
-  across all such searches, not from a firehose. Rate limits on the
-  search endpoint bound how many subjects can be observed per hour;
-  a mention whose subject cannot be searched in time is answered
-  without observations and the log says so. Not started.
+- **R6** Observation on demand. Done: the bot is summoned, so no
+  firehose. When a mention names a subject and the salt is set,
+  `listen` searches the platform for recent posts carrying it (X's
+  recent search, seven days; Bluesky's post search), records them as
+  sightings with the author's age from the profile, runs the signals
+  over the retained window so the baseline covers every account seen so
+  far, and attaches the subject's observations. A failed search or an
+  unset salt means a reply without observations and a gap that says so.
+  Parsers tested on recorded responses; not yet run live.
 
 ## 17. Open questions
 

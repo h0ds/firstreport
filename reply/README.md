@@ -16,7 +16,6 @@ REPLY_BSKY_PASSWORD=... cargo run -- --platform bluesky --handle kagami.example 
 cargo run -- queue                                   # print the queued drafts
 cargo run -- serve                                   # review page and public log on 127.0.0.1:8082
 REPLY_X_ACCESS_TOKEN=... cargo run -- serve          # ...with posting to X on approval
-REPLY_SALT=... cargo run -- observe                  # record Bluesky's firehose, run the signals
 cargo run -- observe --from sightings.ndjson         # replay recorded sightings, print observations
 cargo test
 ```
@@ -104,38 +103,36 @@ exists for that subject, and they never post without a person.
 
 ## Observing (coordination signals)
 
-`observe` reads Bluesky's Jetstream, the firehose as JSON, and records a
-sighting for every post that carries a link (or, with no link, enough
-text to be a claim): the platform, a salted hash of the account, the
-time, the link folded of tracking parameters, and a simhash of the text.
-Sightings go to `data/sightings/<day>.ndjson` and are pruned after
-`--retain` days (default 90). The salt is `REPLY_SALT`, a long random
-string that never changes and never leaves the machine; without it the
-hashes cannot be tied to accounts, and Kagami holds no mapping either.
-Handles and DIDs are never written.
+The bot is summoned, so it needs no firehose. When a mention names a
+subject and `REPLY_SALT` is set, `listen` searches the platform for the
+recent posts carrying that link (or that wording): X's recent search,
+seven days, or Bluesky's post search. Each post becomes a sighting: the
+platform, a salted hash of the account, its age in days from the
+profile's creation date, the time, the link folded of tracking
+parameters, and a simhash of the text. Sightings go to
+`data/sightings/<day>.ndjson` and are pruned after `--retain` days
+(default 90). The salt is a long random string that never changes and
+never leaves the machine; without it the hashes cannot be tied to
+accounts, and Kagami holds no mapping either. Handles and account ids
+are never written.
 
-Every `--interval` seconds (at least 60) the four signals run over the
-retained window and append to `data/observations.ndjson`:
+The four signals then run over the retained window, so the cohort
+baseline covers every account seen across every search so far, and the
+observations about this subject are attached to the mention's FactSet
+and appended to `data/observations.ndjson`:
 
 | kind | counts | detail |
 |---|---|---|
 | `burst` | distinct accounts posting one link or text inside `--burst-window` seconds (default 600), at least `--burst-min` (default 20) | first, last, span, median gap, posts |
 | `syndicated_text` | posts of that subject whose text is within three bits of another account's | share, earliest |
 | `cohort` | accounts in the burst created within `--cohort-span` days of each other (default 14), when at least `--cohort-min-share` percent (default 50) | share, and the same share over every account seen, as the baseline |
-| `first_movers` | accounts first or second into at least `--movers-min` bursts (default 5) over `--movers-window` days (default 30) | share of bursts |
+| `first_movers` | accounts first or second into at least `--movers-min` bursts (default 5) over `--movers-window` days (default 30); on the log only, never in a reply | share of bursts |
 
-Ages come from the public profile API, fetched only for accounts in a
-burst, from an in-memory map of hash to DID that is never written; the
-ages are kept by hash in `data/accounts.json`. Everything is a count
-with a window and a denominator. Nothing is a label.
-
-`serve` exposes them at `GET /v1/observations?subject=&kind=`, and
-`listen` attaches the observations for a mention's subject to its
-FactSet, where the three observation templates read them.
-
-X has no free firehose, so the observer's firehose mode runs on
-Bluesky; on X, sightings will be gathered on demand through recent
-search when a mention names a subject (plan §16, R6).
+Everything is a count with a window and a denominator. Nothing is a
+label. If the search fails or the salt is unset, the reply goes out
+without observations and the gap says so. `serve` lists observations at
+`GET /v1/observations?subject=&kind=`. `observe --from` replays a
+recorded sightings file through the signals, for tuning and tests.
 
 ## Resolving a mention
 

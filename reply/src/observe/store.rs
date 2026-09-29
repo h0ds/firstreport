@@ -1,9 +1,8 @@
 //! Sightings on disk: one NDJSON file per UTC day under `data/sightings/`,
 //! appended as they arrive, pruned after `retain_days`. Observations in
-//! `data/observations.ndjson`, latest per (kind, subject) winning. Account
-//! ages in `data/accounts.json`, keyed by account hash.
+//! `data/observations.ndjson`, latest per (kind, subject) winning.
 
-use std::collections::{BTreeMap, HashMap};
+use std::collections::BTreeMap;
 use std::io::Write;
 use std::path::{Path, PathBuf};
 
@@ -14,8 +13,6 @@ use super::Sighting;
 pub struct Store {
     dir: PathBuf,
     obs_path: PathBuf,
-    ages_path: PathBuf,
-    pub ages: HashMap<String, u32>,
 }
 
 fn day(ts: i64) -> String {
@@ -26,13 +23,9 @@ impl Store {
     pub fn open(data: &Path) -> Result<Self, String> {
         let dir = data.join("sightings");
         std::fs::create_dir_all(&dir).map_err(|e| format!("{}: {e}", dir.display()))?;
-        let ages_path = data.join("accounts.json");
-        let ages = crate::model::load_json(&ages_path).unwrap_or_default();
         Ok(Self {
             dir,
             obs_path: data.join("observations.ndjson"),
-            ages_path,
-            ages,
         })
     }
 
@@ -47,8 +40,7 @@ impl Store {
         writeln!(f, "{line}").map_err(|e| e.to_string())
     }
 
-    /// Every sighting with `at >= since`, oldest first, ages filled in from
-    /// the cache where the sighting has none.
+    /// Every sighting with `at >= since`, oldest first.
     pub fn load(&self, since: i64) -> Result<Vec<Sighting>, String> {
         let mut out = Vec::new();
         let first_day = day(since);
@@ -66,11 +58,8 @@ impl Store {
                 .map_err(|e| format!("{}: {e}", p.display()))?
                 .lines()
             {
-                if let Ok(mut s) = serde_json::from_str::<Sighting>(line) {
+                if let Ok(s) = serde_json::from_str::<Sighting>(line) {
                     if s.at >= since {
-                        if s.account_age_days.is_none() {
-                            s.account_age_days = self.ages.get(&s.account).copied();
-                        }
                         out.push(s);
                     }
                 }
@@ -94,16 +83,6 @@ impl Store {
             }
         }
         Ok(n)
-    }
-
-    pub fn remember_age(&mut self, account: &str, age_days: u32) {
-        self.ages.insert(account.to_string(), age_days);
-    }
-
-    pub fn save_ages(&self) -> Result<(), String> {
-        let body = serde_json::to_string(&self.ages).map_err(|e| e.to_string())?;
-        std::fs::write(&self.ages_path, body)
-            .map_err(|e| format!("{}: {e}", self.ages_path.display()))
     }
 
     pub fn append_observations(&self, obs: &[Observation]) -> Result<(), String> {
@@ -172,11 +151,11 @@ mod tests {
     fn append_load_prune_and_observations() {
         let dir = std::env::temp_dir().join(format!("kg-reply-obs-{}", std::process::id()));
         let _ = std::fs::remove_dir_all(&dir);
-        let mut st = Store::open(&dir).unwrap();
+        let st = Store::open(&dir).unwrap();
         let s = |at: i64, acc: &str| Sighting {
             platform: "t".into(),
             account: acc.into(),
-            account_age_days: None,
+            account_age_days: Some(7),
             at,
             url: Some("https://x.example/a".into()),
             text_hash: None,
@@ -184,8 +163,6 @@ mod tests {
         st.append(&s(1_704_099_600, "a")).unwrap(); // 2024-01-01
         st.append(&s(1_704_186_000, "b")).unwrap(); // 2024-01-02
         st.append(&s(1_704_272_400, "a")).unwrap(); // 2024-01-03
-        st.remember_age("a", 7);
-        st.save_ages().unwrap();
         let st = Store::open(&dir).unwrap();
         let all = st.load(0).unwrap();
         assert_eq!(all.len(), 3);
