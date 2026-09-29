@@ -465,9 +465,16 @@ salt_env = "REPLY_SALT"
   subject's observations to the FactSet on the log. Signals are tested
   on planted bursts, a copied text, a young-account cohort against a
   background signup wave, and two first movers. Not yet run live.
-- **R5** Observations in replies, still reviewed. Autonomous posting for
-  templates that have earned it.
-- **R6** Mastodon adapter.
+- **R5** Observations in replies, still reviewed; autonomous posting
+  for templates that have earned it. Done: burst, syndicated_text and
+  cohort templates (the cohort sentence always carries the baseline),
+  rendered after the story and the misses and before the closing line;
+  a draft with any observation is always reviewed. `listen
+  --autonomous-after N` posts a draft by itself when its exact template
+  set has N unchanged human approvals in the log; the same limits
+  apply, a refusal leaves it for a person, and the log says `auto`.
+  Off by default until the templates have settled.
+- **R6** Mastodon adapter. Not started.
 
 ## 17. Open questions
 

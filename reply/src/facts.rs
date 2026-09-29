@@ -120,16 +120,24 @@ pub fn view(fs: &FactSet) -> Value {
     let mut obs = Map::new();
     for o in &fs.observations {
         obs.entry(o.kind.clone()).or_insert_with(|| {
-            json!({
+            let pct = |x: f64| format!("{}%", (x * 100.0).round() as u64);
+            let mut m = json!({
                 "count": o.count,
                 "denominator": o.denominator,
                 "window": duration(o.window_secs as u64),
                 "subject": o.subject,
                 "detail": o.detail,
                 "share_pct": if o.denominator > 0 {
-                    format!("{}%", (o.count as f64 * 100.0 / o.denominator as f64).round() as u64)
+                    pct(o.count as f64 / o.denominator as f64)
                 } else { String::new() },
-            })
+            });
+            if let Some(b) = get(&o.detail, "baseline_share").and_then(Value::as_f64) {
+                m["baseline_pct"] = json!(pct(b));
+            }
+            if let Some(s) = get(&o.detail, "span_days") {
+                m["span_days"] = s.clone();
+            }
+            m
         });
     }
     d.insert("obs".into(), Value::Object(obs));

@@ -11,6 +11,7 @@ cargo run -- render fixtures/mentions/origin_story.json --platform bluesky
 cargo run -- resolve mention.json                    # ask a running feed and ledger; print the FactSet
 cargo run -- resolve mention.json --render           # ...and the draft it renders to
 REPLY_X_ACCESS_TOKEN=... cargo run -- listen         # dry run on X: mentions in, drafts to data/queue/
+REPLY_X_ACCESS_TOKEN=... cargo run -- --autonomous-after 50 listen   # ...posting alone what has earned it
 REPLY_BSKY_PASSWORD=... cargo run -- --platform bluesky --handle kagami.example listen   # same, on Bluesky
 cargo run -- queue                                   # print the queued drafts
 cargo run -- serve                                   # review page and public log on 127.0.0.1:8082
@@ -80,6 +81,27 @@ handle is dropped from it. The queue routes are for the local reviewer
 and not part of the contract. `listen` and `serve` share `data/`
 through the filesystem and run as two processes.
 
+## Earned autonomy
+
+`listen --autonomous-after N` lets a draft post without a person when
+its exact set of templates has been approved by a person, unchanged, at
+least N times before, counted over the log. A draft that carries any
+observation always waits for a person, because those are the sentences
+that get quoted. Limits apply the same way, and an autonomous post that
+is refused or fails stays in the queue for a person. The log records
+`reviewer: auto` on such replies. The default is 0, off; the plan's
+suggested value once the templates have settled is 50.
+
+## Observations in replies
+
+Three templates say what the observer found about a mention's subject:
+how many accounts posted the link within the burst window, how many of
+those posts carry the same wording, and how many of the accounts with a
+known signup date were created within the cohort span, always beside
+the same share over every account Kagami has seen. Each cites the
+observation on the public log. They render only when an observation
+exists for that subject, and they never post without a person.
+
 ## Observing (coordination signals)
 
 `observe` reads Bluesky's Jetstream, the firehose as JSON, and records a
@@ -109,8 +131,7 @@ with a window and a denominator. Nothing is a label.
 
 `serve` exposes them at `GET /v1/observations?subject=&kind=`, and
 `listen` attaches the observations for a mention's subject to its
-FactSet, so they are on the public log before any template says them.
-No template does yet (R5).
+FactSet, where the three observation templates read them.
 
 X has no free firehose, so the observer runs on Bluesky. A subject is a
 URL, and campaigns carry the same URLs across platforms.

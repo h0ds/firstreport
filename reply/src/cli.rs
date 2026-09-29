@@ -45,6 +45,8 @@ pub struct Args {
     pub interval_secs: u64,
     pub bind: String,
     pub limits: crate::api::Limits,
+    /// Human approvals of an identical template set before a draft may post alone; 0 is off.
+    pub autonomous_after: usize,
     pub thresholds: crate::observe::Thresholds,
     /// Jetstream URL for `observe`.
     pub firehose: String,
@@ -54,7 +56,7 @@ pub struct Args {
 pub const USAGE: &str = "\
 usage: reply [--templates <dir>] [--data <dir>] [--feed-url <url>] [--ledger-url <url>] [--log-url <url>]
              [--platform x|bluesky] [--handle <bot account>] [--api <url>] [--interval <secs>]
-             [--bind <addr>] [--per-account-per-day <n>] [--global-per-hour <n>]
+             [--bind <addr>] [--per-account-per-day <n>] [--global-per-hour <n>] [--autonomous-after <n>]
              [--burst-window <secs>] [--burst-min <n>] [--cohort-span <days>] [--cohort-min-share <pct>]
              [--movers-window <days>] [--movers-min <n>] [--retain <days>] [--firehose <wss url>] <command>
 
@@ -65,8 +67,10 @@ commands:
   resolve <mention.json> [--render] [--platform <name>]
                                               ask feed and ledger about a mention; print the FactSet
                                               (a fixture for check) or, with --render, the draft
-  listen [--once]                             poll for mentions, draft a reply for each, queue it;
-                                              nothing is posted
+  listen [--once]                             poll for mentions, draft a reply for each, queue it.
+                                              With credentials and --autonomous-after N, a draft whose
+                                              template set a person has approved unchanged N times posts
+                                              by itself; drafts with observations always wait for a person
   queue                                       print the queued drafts
   serve                                       review page and public log on 127.0.0.1:8082; with
                                               credentials for --platform, approving posts
@@ -116,6 +120,7 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let mut interval_secs = 30;
     let mut bind = String::from("127.0.0.1:8082");
     let mut limits = crate::api::Limits::default();
+    let mut autonomous_after = 0;
     let mut thresholds = crate::observe::Thresholds::default();
     let mut firehose = String::from(crate::observe::jetstream::DEFAULT_URL);
     let mut from = None;
@@ -152,6 +157,9 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
                 limits.global_per_hour = val("--global-per-hour")?
                     .parse()
                     .map_err(|_| format!("--global-per-hour needs a number\n{USAGE}"))?
+            }
+            "--autonomous-after" => {
+                autonomous_after = num(val("--autonomous-after")?, "--autonomous-after")?
             }
             "--from" => from = Some(PathBuf::from(val("--from")?)),
             "--firehose" => firehose = val("--firehose")?,
@@ -217,6 +225,7 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         interval_secs,
         bind,
         limits,
+        autonomous_after,
         thresholds,
         firehose,
         command,
@@ -272,6 +281,10 @@ mod tests {
         let a = p("listen").unwrap();
         assert_eq!(a.platform, "x");
         assert_eq!(a.pds_or_default("x"), "https://api.x.com");
+        assert_eq!(
+            p("--autonomous-after 50 listen").unwrap().autonomous_after,
+            50
+        );
         let a = p("--burst-min 5 --retain 7 observe --from s.ndjson --once").unwrap();
         assert_eq!(
             a.command,

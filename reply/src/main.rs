@@ -9,6 +9,7 @@ mod facts;
 mod model;
 mod observe;
 mod platform;
+mod post;
 mod queue;
 mod resolve;
 mod template;
@@ -68,14 +69,25 @@ async fn run(args: cli::Args) -> Result<(), String> {
             let layout = set.layout(&platform)?.clone();
             let api = client::Http::new()?;
             let mut q = queue::Queue::open(&args.data)?;
+            // The listener doubles as the poster for drafts that have earned autonomy.
             match platform.as_str() {
                 "bluesky" => {
                     let listener = bluesky_from_args(&args)?;
-                    listen(listener, &api, &set, &layout, &args, &mut q, once).await
+                    let poster = (args.autonomous_after > 0)
+                        .then(|| bluesky_from_args(&args))
+                        .transpose()?;
+                    let poster: Option<Box<dyn platform::Poster>> =
+                        poster.map(|p| Box::new(p) as Box<dyn platform::Poster>);
+                    listen(listener, poster, &api, &set, &layout, &args, &mut q, once).await
                 }
                 "x" => {
                     let listener = platform::x::X::from_env(&args.pds_or_default("x"), &args.data)?;
-                    listen(listener, &api, &set, &layout, &args, &mut q, once).await
+                    let poster = (args.autonomous_after > 0)
+                        .then(|| platform::x::X::from_env(&args.pds_or_default("x"), &args.data))
+                        .transpose()?;
+                    let poster: Option<Box<dyn platform::Poster>> =
+                        poster.map(|p| Box::new(p) as Box<dyn platform::Poster>);
+                    listen(listener, poster, &api, &set, &layout, &args, &mut q, once).await
                 }
                 other => Err(format!("no listener for platform {other}")),
             }
@@ -189,8 +201,10 @@ async fn run(args: cli::Args) -> Result<(), String> {
 /// drafted and queued. A mention that cannot be resolved is logged and
 /// marked seen so it is not retried forever; a poll that fails is
 /// retried next interval.
+#[allow(clippy::too_many_arguments)]
 async fn listen<L: platform::Listener, A: client::Api>(
     mut listener: L,
+    mut poster: Option<Box<dyn platform::Poster>>,
     api: &A,
     set: &template::Set,
     layout: &template::Layout,
@@ -232,9 +246,51 @@ async fn listen<L: platform::Listener, A: client::Api>(
                                 eprintln!("{}: compose failed: {e}", m.id);
                                 q.mark_seen(&m.id)?;
                             }
-                            Ok(draft) => {
-                                let path = q.push(fs, draft, now())?;
-                                eprintln!("{}: queued {}", m.id, path.display());
+                            Ok(mut draft) => {
+                                let t = now();
+                                let has_obs = !fs.observations.is_empty();
+                                let log = q.log()?;
+                                draft.autonomous = poster.is_some()
+                                    && post::earned(&draft, has_obs, &log, args.autonomous_after);
+                                let path = q.push(fs, draft.clone(), t)?;
+                                if !draft.autonomous {
+                                    eprintln!("{}: queued {}", m.id, path.display());
+                                    continue;
+                                }
+                                let id = queue::queue_id(&m.id);
+                                let entry = q.get(&id)?.ok_or("queued entry vanished")?;
+                                let p = poster.as_deref_mut().unwrap();
+                                match post::post_and_log(
+                                    q,
+                                    p,
+                                    &id,
+                                    &entry,
+                                    draft,
+                                    args.limits,
+                                    "auto",
+                                    t,
+                                )
+                                .await
+                                {
+                                    Ok(e) => eprintln!(
+                                        "{}: posted by itself {:?}",
+                                        m.id,
+                                        e.reply.map(|r| r.post_ids)
+                                    ),
+                                    Err(post::Refused::OverLimit(why)) => {
+                                        eprintln!(
+                                            "{}: earned but over limit, left for a person: {why}",
+                                            m.id
+                                        )
+                                    }
+                                    Err(post::Refused::Platform(e))
+                                    | Err(post::Refused::Store(e)) => {
+                                        eprintln!(
+                                            "{}: autonomous post failed, left for a person: {e}",
+                                            m.id
+                                        )
+                                    }
+                                }
                             }
                         },
                     }
@@ -501,6 +557,7 @@ mod tests {
         let mut q = queue::Queue::open(&args.data).unwrap();
         listen(
             Canned(mentions.clone()),
+            None,
             &api,
             &set,
             &layout,
@@ -517,9 +574,18 @@ mod tests {
             .contains("truth-wire.example is not an outlet Kagami follows"));
         assert!(mentions.iter().all(|m| q.seen(&m.id)));
 
-        listen(Canned(mentions), &api, &set, &layout, &args, &mut q, true)
-            .await
-            .unwrap();
+        listen(
+            Canned(mentions),
+            None,
+            &api,
+            &set,
+            &layout,
+            &args,
+            &mut q,
+            true,
+        )
+        .await
+        .unwrap();
         assert_eq!(q.list().unwrap().len(), 1);
         let _ = std::fs::remove_dir_all(&args.data);
     }

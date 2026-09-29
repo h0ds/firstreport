@@ -71,8 +71,10 @@ against live feeds. See `feed/docs/plan.md` §11.
 running `feed` and `ledger` about a mention, `listen`, which drafts
 every mention into a local queue, and `serve`, the review page where a
 person keeps or drops sentences and posts or declines, with a public
-log of every decision, and `observe`, which records Bluesky's firehose
-as salted sightings and runs the four coordination signals. X is the
+log of every decision, `observe`, which records Bluesky's firehose as
+salted sightings and runs the four coordination signals, and templates
+that say those observations, always reviewed. Drafts whose template set
+has earned it can post alone; that is off by default. X is the
 primary platform and Bluesky the live testbed; nothing has been run
 against a live account yet.
 `feed` gained `/v1/lookup` for it. See `reply/docs/plan.md` §16.

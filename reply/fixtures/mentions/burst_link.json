@@ -1,0 +1,94 @@
+{
+  "mention": {
+    "id": "at://did:plc:ivan/app.bsky.feed.post/8e5",
+    "platform": "bluesky",
+    "author": "ivan.example",
+    "at": 1704300000,
+    "text": "@kagami prove it",
+    "urls": [],
+    "parent": {
+      "id": "at://did:plc:eve/app.bsky.feed.post/5b1",
+      "text": "",
+      "urls": [
+        "https://truth-wire.example/breaking/999"
+      ]
+    }
+  },
+  "subject": {
+    "urls": [
+      "https://truth-wire.example/breaking/999"
+    ],
+    "from": "parent"
+  },
+  "lookup": {
+    "matched": "none",
+    "canonical_url": "https://truth-wire.example/breaking/999",
+    "host": "truth-wire.example",
+    "checked": [
+      "item by canonical url https://truth-wire.example/breaking/999",
+      "outlet by host truth-wire.example"
+    ]
+  },
+  "names": {
+    "outlets": {
+      "example": "Example",
+      "wire": "Wire Agency",
+      "bbc": "BBC",
+      "paper-a": "The Paper A",
+      "paper-b": "Paper B Daily",
+      "paper-c": "C Tribune"
+    },
+    "sources": {
+      "wikidata": "Wikidata",
+      "rdap": "the domain registry (RDAP)"
+    }
+  },
+  "outlets": [],
+  "observations": [
+    {
+      "kind": "burst",
+      "subject": "https://truth-wire.example/breaking/999",
+      "window_secs": 600,
+      "count": 41,
+      "denominator": 44,
+      "detail": {
+        "first": 1704299000,
+        "last": 1704299360,
+        "span_secs": 360,
+        "median_gap_secs": 8,
+        "posts_in_window": 43,
+        "posts_total": 47
+      },
+      "computed_at": 1704300000
+    },
+    {
+      "kind": "syndicated_text",
+      "subject": "https://truth-wire.example/breaking/999",
+      "window_secs": 360,
+      "count": 38,
+      "denominator": 43,
+      "detail": {
+        "share": 0.8837,
+        "earliest": 1704299000,
+        "hamming_threshold": 3
+      },
+      "computed_at": 1704300000
+    },
+    {
+      "kind": "cohort",
+      "subject": "https://truth-wire.example/breaking/999",
+      "window_secs": 600,
+      "count": 28,
+      "denominator": 39,
+      "detail": {
+        "span_days": 14,
+        "share": 0.7179,
+        "baseline_share": 0.21,
+        "accounts_in_burst": 41,
+        "accounts_with_known_age": 39
+      },
+      "computed_at": 1704300000
+    }
+  ],
+  "gaps": []
+}

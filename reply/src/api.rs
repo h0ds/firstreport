@@ -13,7 +13,7 @@ use serde::{Deserialize, Serialize};
 use tokio::sync::Mutex;
 
 use crate::compose::keep_sentences;
-use crate::model::{Reply, CONTRACT_VERSION};
+use crate::model::CONTRACT_VERSION;
 use crate::platform::Poster;
 use crate::queue::{Entry, Queue};
 
@@ -161,40 +161,23 @@ async fn approve(
         Ok(d) => d,
         Err(e) => return err(StatusCode::BAD_REQUEST, e),
     };
-    let t = now();
-    match q.log() {
-        Ok(log) => {
-            if let Some(why) = over_limit(&log, &entry.facts.mention.author, s.limits, t) {
-                return err(StatusCode::TOO_MANY_REQUESTS, why);
-            }
-        }
-        Err(e) => return err(StatusCode::INTERNAL_SERVER_ERROR, e),
-    }
     let mut poster = poster.lock().await;
-    let (post_ids, failure) = match poster.post(&entry.facts.mention, &draft.posts).await {
-        Ok(ids) => (ids, None),
-        Err((ids, e)) => (ids, Some(e)),
-    };
-    if post_ids.is_empty() {
-        return err(
-            StatusCode::BAD_GATEWAY,
-            format!("{}: {}", poster.name(), failure.unwrap_or_default()),
-        );
-    }
-    let reply = Reply {
-        post_ids,
-        posted_at: t,
-        reviewer: "human".into(),
-        edited: !keep.is_empty() && draft.sentences.len() != entry.draft.sentences.len(),
-    };
-    match q.decide(&id, "posted", draft, Some(reply), t) {
-        Ok(mut e) => {
-            if let Some(f) = failure {
-                e.corrections.push(format!("thread incomplete: {f}"));
-            }
-            Json(e).into_response()
-        }
-        Err(e) => err(StatusCode::INTERNAL_SERVER_ERROR, e),
+    match crate::post::post_and_log(
+        &mut q,
+        poster.as_mut(),
+        &id,
+        &entry,
+        draft,
+        s.limits,
+        "human",
+        now(),
+    )
+    .await
+    {
+        Ok(e) => Json(e).into_response(),
+        Err(crate::post::Refused::OverLimit(why)) => err(StatusCode::TOO_MANY_REQUESTS, why),
+        Err(crate::post::Refused::Platform(e)) => err(StatusCode::BAD_GATEWAY, e),
+        Err(crate::post::Refused::Store(e)) => err(StatusCode::INTERNAL_SERVER_ERROR, e),
     }
 }
 
@@ -433,7 +416,7 @@ async function load() {
       <div class="actions"><button class="primary" data-act="approve">Post reply</button><button data-act="decline">Decline</button><span class="result"></span></div>
     </article>`;
   }).join('');
-  $('#log').innerHTML = log.length ? log.slice(-20).reverse().map(e => `<div class="entry"><div class="mention">${esc(e.status)} · ${when(e.decided_at)} · ${esc(e.facts.mention.platform)} · ${esc(e.draft.template_ids.join(', '))} · <a href="/v1/log/${esc(e.id)}">record</a>${e.reply ? e.reply.post_ids.map(p => ` · <a href="${esc(p)}" rel="noopener">post</a>`).join('') : ''}</div><div class="posts">${e.draft.posts.map(esc).join('<br>')}</div></div>`).join('') : '<div class="empty">No replies yet.</div>';
+  $('#log').innerHTML = log.length ? log.slice(-20).reverse().map(e => `<div class="entry"><div class="mention">${esc(e.status)} · ${when(e.decided_at)} · ${esc(e.facts.mention.platform)} · ${esc(e.draft.template_ids.join(', '))} · <a href="/v1/log/${esc(e.id)}">record</a>${e.reply ? ` · ${esc(e.reply.reviewer)}` + e.reply.post_ids.map(p => ` · <a href="${esc(p)}" rel="noopener">post</a>`).join('') : ''}</div><div class="posts">${e.draft.posts.map(esc).join('<br>')}</div></div>`).join('') : '<div class="empty">No replies yet.</div>';
 }
 document.addEventListener('click', async ev => {
   const b = ev.target.closest('button[data-act]'); if (!b) return;

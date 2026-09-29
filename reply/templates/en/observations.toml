@@ -1,0 +1,18 @@
+# Sentences about how accounts carried the subject. Every fact is an
+# observation: a count, a window, a denominator. A draft with any of these
+# is always reviewed by a person before it posts.
+
+[burst]
+needs = ["d.obs.burst.count", "d.obs.burst.window", "d.obs.burst.subject"]
+text = "{d.obs.burst.count} accounts posted this link within {d.obs.burst.window}."
+cite = "observation:burst:{d.obs.burst.subject}"
+
+[syndicated_text]
+needs = ["d.obs.syndicated_text.count", "d.obs.syndicated_text.denominator", "d.obs.syndicated_text.subject"]
+text = "{d.obs.syndicated_text.count} of those {d.obs.syndicated_text.denominator} posts carry the same wording."
+cite = "observation:syndicated_text:{d.obs.syndicated_text.subject}"
+
+[cohort]
+needs = ["d.obs.cohort.count", "d.obs.cohort.denominator", "d.obs.cohort.span_days", "d.obs.cohort.baseline_pct", "d.obs.cohort.subject"]
+text = "{d.obs.cohort.count} of the {d.obs.cohort.denominator} accounts with a known signup date were created within {d.obs.cohort.span_days} days of each other; across every account Kagami has seen, that share is {d.obs.cohort.baseline_pct}."
+cite = "observation:cohort:{d.obs.cohort.subject}"
