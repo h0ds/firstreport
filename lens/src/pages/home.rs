@@ -11,7 +11,14 @@ use crate::derive::{cluster_facts, HOUR};
 use crate::input::Input;
 use crate::render::{cluster_card, datetime, esc, html, n, outlet_link, time_el, Page};
 
-pub fn home(input: &Input, window_hours: i64) -> Twins {
+/// Stories per page of the story list; page 1 is `/`, then `/page/N/`.
+pub const PAGE_SIZE: usize = 50;
+
+type Ranked<'a> = Vec<(&'a crate::input::Cluster, crate::derive::ClusterFacts)>;
+
+/// The window's stories in list order: ranked by reach, then single
+/// reports newest first (docs/algorithms.md §4).
+fn ranked(input: &Input, window_hours: i64) -> (Ranked<'_>, Ranked<'_>) {
     let now = input.export_time;
     let since = now - window_hours * HOUR;
     let mut recent: Vec<_> = input
@@ -43,6 +50,146 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
             .cmp(&a.0.last_active_at)
             .then(a.0.id.cmp(&b.0.id))
     });
+    (recent, single)
+}
+
+/// Number of pages the story list takes.
+pub fn page_count(input: &Input, window_hours: i64) -> usize {
+    let (r, s) = ranked(input, window_hours);
+    (r.len() + s.len()).div_ceil(PAGE_SIZE).max(1)
+}
+
+fn page_path(page: usize) -> String {
+    if page <= 1 {
+        "/".into()
+    } else {
+        format!("/page/{page}/")
+    }
+}
+
+/// Newer / numbered / older links for the story list (action links: the
+/// next step in the view, design §5). First, last, and two either side.
+fn pager(page: usize, pages: usize) -> String {
+    if pages <= 1 {
+        return String::new();
+    }
+    let mut s = String::from("<nav class=\"pager\" aria-label=\"Story pages\">");
+    if page > 1 {
+        let _ = write!(s, "<a rel=\"prev\" href=\"{}\">Newer</a>", page_path(page - 1));
+    } else {
+        s.push_str("<span class=\"off\">Newer</span>");
+    }
+    s.push_str("<span class=\"pages\">");
+    let mut last = 0;
+    for p in 1..=pages {
+        if p == 1 || p == pages || p.abs_diff(page) <= 2 {
+            if last != 0 && p > last + 1 {
+                s.push_str("<span class=\"gap\">…</span>");
+            }
+            if p == page {
+                let _ = write!(s, "<span class=\"cur\" aria-current=\"page\">{p}</span>");
+            } else {
+                let _ = write!(s, "<a href=\"{}\">{p}</a>", page_path(p));
+            }
+            last = p;
+        }
+    }
+    s.push_str("</span>");
+    if page < pages {
+        let _ = write!(s, "<a rel=\"next\" href=\"{}\">Older</a>", page_path(page + 1));
+    } else {
+        s.push_str("<span class=\"off\">Older</span>");
+    }
+    s.push_str("</nav>");
+    s
+}
+
+/// Cluster cards for one page of the list, with the "Single reports"
+/// heading where that part of the list begins (or continues).
+fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usize) -> String {
+    let scale = crate::render::spark_scale(
+        recent
+            .iter()
+            .chain(single.iter())
+            .map(|(_, f)| f.spark.as_slice()),
+    );
+    let start = (page.max(1) - 1) * PAGE_SIZE;
+    let mut b = String::new();
+    for (k, (c, f)) in recent
+        .iter()
+        .chain(single.iter())
+        .enumerate()
+        .skip(start)
+        .take(PAGE_SIZE)
+    {
+        if k >= recent.len() && (k == recent.len() || k == start) {
+            let _ = write!(
+                b,
+                "<h2>Single reports{}</h2><p class=\"kg-muted\">{} told by one outlet so far, or only as copies of one text. Newest first.</p>",
+                if k == recent.len() { "" } else { ", continued" },
+                n(single.len(), "story")
+            );
+        }
+        b.push_str(&cluster_card(input, c, &f.spark, scale, false, false, Some(f)));
+    }
+    b
+}
+
+/// Page `page` (2 or more) of the story list, at `/page/N/`. Its twins
+/// carry that page's stories; the full list stays at `/index.json`.
+pub fn story_page(input: &Input, window_hours: i64, page: usize) -> Twins {
+    let now = input.export_time;
+    let (recent, single) = ranked(input, window_hours);
+    let pages = page_count(input, window_hours);
+    let path = page_path(page);
+    let mut b = format!(
+        "<h1>Stories</h1><p class=\"kg-muted\">Page {page} of {pages} · {} in the {} hours to {}, ordered by reach then recency. <a href=\"/about/#reach\">How reach is counted</a>.</p>",
+        n(recent.len() + single.len(), "story"),
+        window_hours,
+        time_el(now, now)
+    );
+    b.push_str(&pager(page, pages));
+    b.push_str(&page_cards(input, &recent, &single, page));
+    b.push_str(&pager(page, pages));
+    let ids: Vec<_> = recent
+        .iter()
+        .chain(single.iter())
+        .skip((page - 1) * PAGE_SIZE)
+        .take(PAGE_SIZE)
+        .collect();
+    let title = format!("Stories, page {page}");
+    let html_page = html(&Page {
+        title: &title,
+        description: "Stories forming across news outlets, ordered by reach. No outlet is rated.",
+        path: &path,
+        wide: false,
+        head: "",
+        body: &b,
+        status: &format!("built from an export at {}", datetime(now)),
+    });
+    let json = json!({
+        "page": page, "pages": pages, "page_size": PAGE_SIZE, "export_time": now,
+        "stories": ids.iter().map(|(c, f)| json!({"id": c.id, "title": c.primary_title, "outlet_count": c.outlet_count, "reach": f.reach, "reports": f.reports})).collect::<Vec<_>>(),
+        "full_list": "/index.json",
+    });
+    let mut md = format!("# Stories, page {page} of {pages}\n\nOrdered by reach then recency; the full list is /index.md.\n\n");
+    for (c, f) in &ids {
+        let _ = writeln!(
+            md,
+            "- [{}](/story/{}/) · {} · reach {}",
+            c.primary_title,
+            c.id,
+            n(c.outlet_count as usize, "outlet"),
+            f.reach
+        );
+    }
+    Twins { html: html_page, json, md }
+}
+
+pub fn home(input: &Input, window_hours: i64) -> Twins {
+    let now = input.export_time;
+    let (recent, single) = ranked(input, window_hours);
+    let pages = page_count(input, window_hours);
     let active = recent.len() + single.len();
 
     let mut b = String::new();
@@ -83,11 +230,11 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         spreading.clear();
     }
     if !spreading.is_empty() {
-        b.push_str("<h2>Spreading now</h2><p class=\"kg-muted\">Outlets that joined in the last six hours.</p><ul class=\"stories\">");
+        b.push_str("<section class=\"panel\"><h2>Spreading now</h2><p class=\"kg-muted\">Outlets that joined in the last six hours.</p><ul class=\"stories\">");
         for (c, f) in &spreading {
             let _ = write!(
                 b,
-                "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\">{} in 6 h{} · {}</span></li>",
+                "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\"><span class=\"kg-count\">{} in 6 h</span>{} · {}</span></li>",
                 c.id,
                 c.id,
                 esc(&c.primary_title),
@@ -100,43 +247,11 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
                 crate::render::origin_link(input, &c.origin_outlet_id)
             );
         }
-        b.push_str("</ul><h2>All stories in the window</h2>");
+        b.push_str("</ul></section><h2>All stories in the window</h2>");
     }
-    let scale = crate::render::spark_scale(
-        recent
-            .iter()
-            .chain(single.iter())
-            .map(|(_, f)| f.spark.as_slice()),
-    );
-    for (c, f) in &recent {
-        b.push_str(&cluster_card(
-            input,
-            c,
-            &f.spark,
-            scale,
-            false,
-            false,
-            Some(f),
-        ));
-    }
-    if !single.is_empty() {
-        let _ = write!(
-            b,
-            "<h2>Single reports</h2><p class=\"kg-muted\">{} told by one outlet so far, or only as copies of one text. Newest first.</p>",
-            n(single.len(), "story")
-        );
-        for (c, f) in &single {
-            b.push_str(&cluster_card(
-                input,
-                c,
-                &f.spark,
-                scale,
-                false,
-                false,
-                Some(f),
-            ));
-        }
-    }
+    b.push_str(&pager(1, pages));
+    b.push_str(&page_cards(input, &recent, &single, 1));
+    b.push_str(&pager(1, pages));
     b.push_str("<h2>Outlets</h2><ul class=\"stories\">");
     for o in input.outlets.values() {
         let claims = input.claims.get(&o.id).map(|v| v.len()).unwrap_or(0);
@@ -318,9 +433,27 @@ mod tests {
         assert_eq!(t.json["single_reports"][0]["reports"], 1);
         assert!(
             t.html
-                .contains("1 outlet in 6 h · <span class=\"kg-origin-name\">"),
+                .contains("<span class=\"kg-count\">1 outlet in 6 h</span> · <span class=\"kg-origin-name\">"),
             "equal counts shown once"
         );
         assert!(t.md.contains("## Spreading now"));
+    }
+
+    #[test]
+    fn story_list_is_paged_fifty_to_a_page() {
+        let i = fixture_input();
+        let pages = page_count(&i, 24 * 60);
+        assert!(pages >= 2, "fixture has more than one page: {pages}");
+        let home_page = home(&i, 24 * 60);
+        assert_eq!(home_page.html.matches("class=\"kg-cluster").count(), PAGE_SIZE);
+        assert!(home_page.html.contains("<a rel=\"next\" href=\"/page/2/\">Older</a>"));
+        let last = story_page(&i, 24 * 60, pages);
+        assert!(last.html.contains("<span class=\"off\">Older</span>"));
+        assert!(last.html.contains(&format!("aria-current=\"page\">{pages}</span>")));
+        assert_eq!(last.json["page"], pages);
+        // The machine twin of page 1 keeps the whole list.
+        let all = home_page.json["stories"].as_array().unwrap().len()
+            + home_page.json["single_reports"].as_array().unwrap().len();
+        assert!(all > PAGE_SIZE);
     }
 }

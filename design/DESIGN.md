@@ -228,6 +228,16 @@ step since it was first seen. Spec:
 - **Accessibility** `role="img"` with an `aria-label` giving every value ("Outlets carrying the story, two-hour steps: 1, 1, 3, 5 …"). No fact lives only in the line (§11).
 - **Single-outlet stories** draw only the baseline and the end dot. An empty curve is still information.
 
+**Count chip**
+- The one number that ranks a row (outlets on a story card, outlets joined in six hours on "spreading now") sits in a chip: `--kg-blue-soft` fill, `--kg-blue-ink` text, weight 600, tabular, radius 4, `0 s2` padding. This is the "key data highlight" use of the accent (§2).
+- At most one chip per row, and only for counts, never for a label, a rating or an outlet. Everything else in the row stays muted.
+
+**Panel**
+- A section that is a different view of the same list (lens's "spreading now") sits on `--kg-bg-subtle` with a 1px `--kg-line` border and radius 6, so the eye separates it from the main list without a second colour.
+
+**Pager**
+- Long lists are paged, 50 to a page: Newer and Older as bordered links, numbered pages between them (first, last, and two either side of the current page), the current page a filled `--kg-blue` chip. The machine-readable twin of page 1 keeps the whole list.
+
 **Charts**
 - Line and area only for spread curves; `--kg-blue` stroke 1.5px, `--kg-blue-soft` fill at 40%.
 - Axes `--kg-line`, labels Inter 12px (`small`) muted, set with a class, never a `font-size` attribute. No gridlines except a baseline. The chart has an `aria-label` giving its numbers.

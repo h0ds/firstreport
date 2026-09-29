@@ -293,7 +293,7 @@ pub fn cluster_card(
     );
     let _ = write!(
         s,
-        "<span>{}</span><span class=\"sep\">·</span><span>{}</span><span class=\"sep\">·</span>{}<span class=\"sep\">·</span><span>first seen {}</span>",
+        "<span class=\"kg-count\">{}</span><span class=\"sep\">·</span><span>{}</span><span class=\"sep\">·</span>{}<span class=\"sep\">·</span><span>first seen {}</span>",
         n(c.outlet_count as usize, "outlet"),
         n(c.item_count as usize, "item"),
         origin_link(input, &c.origin_outlet_id),

@@ -14,11 +14,12 @@ h3 { margin: var(--kg-s5) 0 var(--kg-s2); }
 h1 + .kg-muted, h2 + .kg-muted { margin-bottom: var(--kg-s4); }
 
 /* prose: paragraphs and lists written straight into the page */
-main > p:not(.kg-muted), main > ul, main > ol { max-width: 68ch; margin: 0 0 var(--kg-s4); }
-main > ul, main > ol { padding-left: var(--kg-s5); }
-main > ul li + li, main > ol li + li { margin-top: var(--kg-s1); }
-main > p a, main > ul a { text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
-main > p a:hover, main > ul a:hover { text-decoration-color: currentColor; }
+/* Lists of stories or outlets (.stories) are not prose: their links are title links. */
+main > p:not(.kg-muted), main > ul:not(.stories), main > ol { max-width: 68ch; margin: 0 0 var(--kg-s4); }
+main > ul:not(.stories), main > ol { padding-left: var(--kg-s5); }
+main > ul:not(.stories) li + li, main > ol li + li { margin-top: var(--kg-s1); }
+main > p a, main > ul:not(.stories) a { text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
+main > p a:hover, main > ul:not(.stories) a:hover { text-decoration-color: currentColor; }
 
 .sep { color: var(--kg-line-strong); }
 
@@ -55,6 +56,22 @@ h3 a:hover { color: var(--kg-blue); }
 
 .kg-input.wide, input.wide { width: 100%; box-sizing: border-box; }
 .empty { color: var(--kg-text-muted); padding: var(--kg-s5) 0; }
+
+/* A section set apart on a tinted panel: "Spreading now". */
+.panel { background: var(--kg-bg-subtle); border: 1px solid var(--kg-line); border-radius: var(--kg-radius-card); padding: 0 var(--kg-s5) var(--kg-s3); margin-top: var(--kg-s6); }
+.panel h2 { margin-top: var(--kg-s5); }
+.panel .stories li:first-child { border-top: 0; }
+
+/* Story list pages: newer, numbers, older. Action links, current page as a filled chip. */
+.pager { display: flex; align-items: center; justify-content: space-between; gap: var(--kg-s3); flex-wrap: wrap; margin: var(--kg-s5) 0; font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); }
+.pager .pages { display: flex; gap: var(--kg-s1); align-items: center; flex-wrap: wrap; }
+.pager .pages a, .pager .pages .cur { min-width: var(--kg-s6); min-height: var(--kg-s6); display: inline-flex; align-items: center; justify-content: center; border-radius: var(--kg-radius-input); font-variant-numeric: tabular-nums; }
+.pager .pages a:hover { background: var(--kg-blue-soft); text-decoration: none; }
+.pager .pages .cur { background: var(--kg-blue); color: #fff; font-weight: 600; }
+.pager > a, .pager .off { min-height: var(--kg-s6); display: inline-flex; align-items: center; padding: 0 var(--kg-s3); border: 1px solid var(--kg-line-strong); border-radius: var(--kg-radius-input); }
+.pager > a:hover { border-color: var(--kg-blue); text-decoration: none; }
+.pager .off { color: var(--kg-text-muted); border-color: var(--kg-line); }
+.pager .gap { color: var(--kg-text-muted); padding: 0 var(--kg-s1); }
 
 footer { margin-top: var(--kg-s8); padding-top: var(--kg-s4); border-top: 1px solid var(--kg-line); }
 footer a { color: inherit; text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }

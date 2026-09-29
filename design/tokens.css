@@ -245,6 +245,9 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
   white-space: nowrap;
 }
 
+/* count chip (§5): the one number that ranks a row, as a highlight. */
+.kg-count { display: inline-block; padding: 0 var(--kg-s2); border-radius: var(--kg-radius-input); background: var(--kg-blue-soft); color: var(--kg-blue-ink); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
 /* origin ring (§10): marks the outlet that published first. A ring, not a
    word and not blue; the accessible name comes from a .kg-sr span. */
 .kg-origin { border-radius: var(--kg-radius-input); box-shadow: 0 0 0 1.5px var(--kg-bg), 0 0 0 3px var(--kg-text); }
