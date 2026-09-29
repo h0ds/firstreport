@@ -67,7 +67,7 @@ async fn fixture_through_store_and_api() {
     let resolver = Arc::new(Resolver::from_config(&outlets));
     let mut poller = Poller::new(
         cfg.clone(),
-        resolver,
+        resolver.clone(),
         reader.clone(),
         writer.clone(),
         stats.clone(),
@@ -182,8 +182,71 @@ async fn fixture_through_store_and_api() {
         )
         .await;
     assert_eq!(p5.outcome, Outcome::Err);
+    let h = p5.health.as_ref().expect("a body was judged");
+    // `feed` is passed unchanged here, so each call judges from a fresh
+    // window; the run loop and replay carry the returned health forward.
+    assert_eq!(h.signals.fetches, 1);
+    assert!(
+        h.quarantine.is_none(),
+        "one parse error is not a quarantine"
+    );
 
-    writer.send(store::WriteMsg::FeedState(feed.clone())).await;
+    // Steward (docs/steward.md §2): a feed carried into a quarantine keeps
+    // its snapshot but has its items held, and reports why.
+    let mut quarantined = feed.clone();
+    let mut health = crate::steward::Health::default();
+    for i in 0..10 {
+        health.observe(
+            crate::steward::FetchObs {
+                at: 1_704_000_000 + i * 600,
+                parsed: false,
+                new_items: 0,
+                dup_items: 0,
+                skew_secs: None,
+                future_items: 0,
+            },
+            1_704_000_000 + i * 600,
+        );
+    }
+    assert!(health.quarantine.is_some());
+    quarantined.health = Some(health);
+    let mut fresh = Poller::new(
+        cfg.clone(),
+        resolver.clone(),
+        reader.clone(),
+        writer.clone(),
+        stats.clone(),
+    )
+    .unwrap();
+    let mut third = Fetched {
+        status: 200,
+        body: Some(Bytes::from_static(FIXTURE)),
+        etag: None,
+        last_modified: None,
+        resolved_url: None,
+    };
+    third.body = Some(Bytes::from(
+        String::from_utf8_lossy(FIXTURE)
+            .replace("example.com/world", "example.com/held")
+            .into_bytes(),
+    ));
+    let held = fresh.process(&quarantined, 1_704_104_500, Ok(third)).await;
+    assert_eq!(
+        held.outcome,
+        Outcome::Unchanged,
+        "held items are not new items"
+    );
+    assert!(held.new_items.is_empty());
+    let q = held.health.as_ref().unwrap().quarantine.as_ref().unwrap();
+    assert!(q.reason.contains("failed to parse"), "{}", q.reason);
+    assert_eq!(
+        stats.items_held.load(std::sync::atomic::Ordering::Relaxed),
+        3
+    );
+
+    writer
+        .send(store::WriteMsg::FeedState(Box::new(feed.clone())))
+        .await;
     writer.flush().await;
 
     // API over the same store.
@@ -320,8 +383,8 @@ async fn fixture_through_store_and_api() {
     let snaps = v["items"].as_array().unwrap();
     assert_eq!(
         snaps.len(),
-        4,
-        "three good bodies and one unparseable; 304 and error produce none"
+        5,
+        "three good bodies, one unparseable, one held under quarantine; 304 and error produce none"
     );
     assert_eq!(snaps[0]["item_count"], 0);
     let first_snap = snaps.iter().find(|s| s["item_count"] == 3).unwrap();
@@ -490,15 +553,16 @@ async fn fixture_through_store_and_api() {
     let v = body_json(app.clone().oneshot(get("/v1/stats")).await.unwrap()).await;
     assert_eq!(v["contract_version"], 1);
     assert_eq!(v["store"]["items_total"], 3);
-    assert_eq!(v["store"]["snapshots_total"], 4);
-    assert_eq!(v["process"]["fetches"], 6);
+    assert_eq!(v["store"]["snapshots_total"], 5);
+    assert_eq!(v["process"]["fetches"], 7);
     assert_eq!(v["process"]["fetch_304"], 1);
     assert_eq!(v["process"]["fetch_errors"], 1);
     assert_eq!(v["process"]["parse_errors"], 1);
-    assert_eq!(v["process"]["items_seen"], 8);
+    assert_eq!(v["process"]["items_seen"], 11);
     assert_eq!(v["process"]["items_new"], 3);
     assert_eq!(v["process"]["revisions"], 1);
     assert_eq!(v["process"]["withdrawals"], 1);
+    assert_eq!(v["process"]["items_held"], 3);
 
     // Embedder: only when an ONNX Runtime library is available.
     if let Ok(lib) = std::env::var("KAGAMI_ORT_LIB") {
@@ -563,6 +627,7 @@ async fn fixture_through_store_and_api() {
 
     drop(writer);
     drop(poller); // holds a writer clone; the channel must close for the thread to exit
+    drop(fresh);
     thread.join().unwrap();
     let _ = std::fs::remove_dir_all(&dir);
 }

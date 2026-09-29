@@ -11,6 +11,8 @@ pub struct Seen {
     pub title: String,
     pub summary: String,
     pub published_at: i64,
+    /// Text fingerprint, for the steward's duplicate signal.
+    pub text_hash: u64,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -68,6 +70,7 @@ mod tests {
             title: title.into(),
             summary: String::new(),
             published_at: published,
+            text_hash: 0,
         }
     }
 

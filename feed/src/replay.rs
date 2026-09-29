@@ -107,15 +107,16 @@ pub async fn run(
                 acc
             }),
     };
-    let states = Poller::build_states(&feeds, vec![], cfg.poll.default_interval_secs, 0);
+    let mut states = Poller::build_states(&feeds, vec![], cfg.poll.default_interval_secs, 0);
 
     let mut clock = 0;
     let mut last_merge = 0;
     for s in snaps {
-        let state = states
+        let si = states
             .iter()
-            .find(|f| f.url == s.feed_url)
+            .position(|f| f.url == s.feed_url)
             .expect("state for every feed");
+        let state = &states[si];
         let body = std::fs::read(fixtures.join(&s.file))?;
         let fetched = Fetched {
             status: 200,
@@ -125,6 +126,9 @@ pub async fn run(
             resolved_url: None,
         };
         let p = poller.process(state, s.fetched_at, Ok(fetched)).await;
+        if p.health.is_some() {
+            states[si].health = p.health.clone();
+        }
         if p.new_items.is_empty() {
             continue;
         }

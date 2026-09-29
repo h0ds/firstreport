@@ -17,9 +17,10 @@ use crate::config::{Config, Feeds};
 use crate::fetch::client::{Client, Fetched};
 use crate::fetch::scheduler::{Outcome, Report, Scheduler, SchedulerCfg};
 use crate::parse::revision::{self, Change, Seen};
-use crate::parse::{feed as feedparse, outlet::Resolver};
+use crate::parse::{feed as feedparse, outlet::Resolver, simhash};
 use crate::snapshot;
 use crate::stats::{now, Stats};
+use crate::steward::{FetchObs, Health};
 use crate::store::reader::{self, Reader};
 use crate::store::writer::{FeedState, SnapshotRow, WriteMsg, Writer};
 use crate::types::Item;
@@ -76,11 +77,18 @@ pub struct Processed {
     /// Set for failures that happen after the fetch (parse errors).
     pub error: Option<String>,
     pub new_items: Vec<Item>,
+    /// Feed health after this fetch (docs/steward.md §2); None when the
+    /// fetch returned no body, so there was nothing to judge.
+    pub health: Option<Health>,
 }
 
 /// Publish dates further ahead of the fetch than this are treated as
 /// broken and replaced with the fetch time.
 pub const MAX_FUTURE_SECS: i64 = 3600;
+
+/// Simhash distance at or under which two texts count as the same for
+/// the steward's duplicate signal (the syndication threshold).
+pub const DUP_HAMMING: u32 = 3;
 
 impl Poller {
     pub fn new(
@@ -144,6 +152,7 @@ impl Poller {
                 last_status: prev.and_then(|p| p.last_status),
                 last_error: prev.and_then(|p| p.last_error.clone()),
                 last_items: prev.map(|p| p.last_items).unwrap_or(0),
+                health: prev.and_then(|p| p.health.clone()),
             });
         }
         out
@@ -220,6 +229,7 @@ impl Poller {
                         retry_after_secs: retry_after,
                         resolved_url: p.resolved_url,
                         new_items: p.new_items.len() as u32,
+                        health: p.health,
                     };
                     let had_move = feed.resolved_url.is_none() && report.resolved_url.is_some();
                     let st = sched.complete(done.idx, done.fetched_at, report).clone();
@@ -229,7 +239,7 @@ impl Poller {
                     if st.dead {
                         warn!(url = %st.url, "feed marked dead after 7 days of failures");
                     }
-                    self.writer.send(WriteMsg::FeedState(st)).await;
+                    self.writer.send(WriteMsg::FeedState(Box::new(st))).await;
                 }
             }
         }
@@ -281,6 +291,7 @@ impl Poller {
                     title: e.title.clone(),
                     summary: e.summary.clone(),
                     published_at: e.published_at,
+                    text_hash: e.text_hash,
                 })
                 .collect(),
             Err(_) => vec![],
@@ -464,12 +475,28 @@ impl Poller {
                         item_count: 0,
                     }))
                     .await;
+                let mut health = feed.health.clone().unwrap_or_default();
+                let d = health.observe(
+                    FetchObs {
+                        at: fetched_at,
+                        parsed: false,
+                        new_items: 0,
+                        dup_items: 0,
+                        skew_secs: None,
+                        future_items: 0,
+                    },
+                    fetched_at,
+                );
+                if let (true, Some(r)) = (d.quarantined, &d.reason) {
+                    warn!(url = %feed.url, reason = %r, "feed quarantined");
+                }
                 return Processed {
                     outcome: Outcome::Err,
                     etag: fetched.etag,
                     last_modified: fetched.last_modified,
                     resolved_url: fetched.resolved_url,
                     error: Some(format!("parse: {e}")),
+                    health: Some(health),
                     ..Default::default()
                 };
             }
@@ -488,12 +515,22 @@ impl Poller {
                 title: e.title.clone(),
                 summary: e.summary.clone(),
                 published_at: e.published_at,
+                text_hash: e.text_hash,
             })
             .collect();
-        self.track_revisions(feed, snap_id, fetched_at, cur).await;
+        let prev_hashes: Vec<u64> = self
+            .previous_listing(&feed.url)
+            .await
+            .iter()
+            .map(|s| s.text_hash)
+            .collect();
 
         let mut new_items = Vec::new();
         let mut seen_in_feed = HashSet::new();
+        let mut dup_items = 0u32;
+        let mut future_items = 0u32;
+        let mut skews: Vec<i64> = Vec::new();
+        let mut new_hashes: Vec<u64> = Vec::new();
         for e in parsed.entries {
             let id = crate::types::item_id(&e.canonical_url);
             if !seen_in_feed.insert(id) {
@@ -529,10 +566,25 @@ impl Poller {
             // cluster's window, so clamp it to when we saw it.
             let published_at = if e.published_at > fetched_at + MAX_FUTURE_SECS {
                 st.inc(&st.future_dates);
+                future_items += 1;
                 fetched_at
             } else {
                 e.published_at
             };
+            if e.published_at > 0 {
+                skews.push(fetched_at - e.published_at);
+            }
+            // Steward: a new URL carrying text we already saw in this feed's
+            // last listing, or in another item of this fetch, is the feed
+            // republishing itself.
+            if prev_hashes
+                .iter()
+                .chain(new_hashes.iter())
+                .any(|h| simhash::hamming(*h, e.text_hash) <= DUP_HAMMING)
+            {
+                dup_items += 1;
+            }
+            new_hashes.push(e.text_hash);
             new_items.push(Item {
                 id,
                 outlet_id,
@@ -550,8 +602,48 @@ impl Poller {
             });
         }
 
+        // Steward (docs/steward.md §2): judge the feed on this fetch before
+        // anything from it enters the store.
+        skews.sort_unstable();
+        let skew_secs = if skews.is_empty() {
+            None
+        } else {
+            Some(skews[skews.len() / 2])
+        };
+        let mut health = feed.health.clone().unwrap_or_default();
+        let decision = health.observe(
+            FetchObs {
+                at: fetched_at,
+                parsed: true,
+                new_items: new_items.len() as u32,
+                dup_items,
+                skew_secs,
+                future_items,
+            },
+            fetched_at,
+        );
+        let held_items = if decision.ingest {
+            // Revision tracking (plan §5.3a) only for a feed we are ingesting:
+            // a quarantined feed's listing is not evidence of a withdrawal.
+            self.track_revisions(feed, snap_id, fetched_at, cur).await;
+            0
+        } else {
+            let n = new_items.len() as u32;
+            if n > 0 || feed.health.as_ref().is_none_or(|h| h.quarantine.is_none()) {
+                warn!(
+                    url = %feed.url,
+                    held = n,
+                    reason = decision.reason.as_deref().unwrap_or("quarantined"),
+                    "feed quarantined; items held"
+                );
+            }
+            st.add(&st.items_held, n as u64);
+            new_items.clear();
+            n
+        };
+
         st.add(&st.items_new, new_items.len() as u64);
-        debug!(url = %feed.url, status = fetched.status, new = new_items.len(), "fetched");
+        debug!(url = %feed.url, status = fetched.status, new = new_items.len(), held = held_items, "fetched");
         self.writer
             .send(WriteMsg::Snapshot(SnapshotRow {
                 id: snap_id,
@@ -577,6 +669,7 @@ impl Poller {
             resolved_url: fetched.resolved_url,
             error: None,
             new_items,
+            health: Some(health),
         }
     }
 }

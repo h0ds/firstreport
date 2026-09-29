@@ -514,7 +514,7 @@ pub fn feed_states(c: &Connection) -> rusqlite::Result<Vec<FeedState>> {
     let mut st = c.prepare(
         "SELECT url, outlet_id, kind, interval_secs, etag, last_modified, next_fetch_at,
                 fail_count, last_ok_at, dead, base_interval_secs, resolved_url, last_fetch_at,
-                last_status, last_error, last_items FROM feed ORDER BY url",
+                last_status, last_error, last_items, health FROM feed ORDER BY url",
     )?;
     let rows = st.query_map([], |r| {
         let interval = r.get::<_, i64>(3)? as u64;
@@ -538,6 +538,9 @@ pub fn feed_states(c: &Connection) -> rusqlite::Result<Vec<FeedState>> {
             last_status: r.get::<_, Option<i64>>(13)?.map(|v| v as u16),
             last_error: r.get(14)?,
             last_items: r.get::<_, Option<i64>>(15)?.unwrap_or(0) as u32,
+            health: r
+                .get::<_, Option<String>>(16)?
+                .and_then(|j| serde_json::from_str(&j).ok()),
         })
     })?;
     rows.collect()

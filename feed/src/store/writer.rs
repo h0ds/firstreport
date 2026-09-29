@@ -51,13 +51,17 @@ pub struct FeedState {
     pub last_error: Option<String>,
     /// New items from the most recent fetch.
     pub last_items: u32,
+    /// Steward feed health (docs/steward.md §2): signals over the last
+    /// fetches, quarantine if any, timestamp flag.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub health: Option<crate::steward::Health>,
 }
 
 #[derive(Debug)]
 pub enum WriteMsg {
     Items(Vec<Item>),
     Snapshot(SnapshotRow),
-    FeedState(FeedState),
+    FeedState(Box<FeedState>),
     /// (item id, L2-normalized vector) pairs from the embedder.
     Embeddings(Vec<(u64, Vec<f32>)>),
     /// Item joined a cluster (or seeded one at rank 0).
@@ -222,8 +226,8 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
         let mut up_feed = tx.prepare_cached(
             "INSERT INTO feed (url, outlet_id, kind, interval_secs, etag, last_modified, next_fetch_at,
                                fail_count, last_ok_at, dead, base_interval_secs, resolved_url,
-                               last_fetch_at, last_status, last_error, last_items)
-             VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16)
+                               last_fetch_at, last_status, last_error, last_items, health)
+             VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16,?17)
              ON CONFLICT(url) DO UPDATE SET
                outlet_id=excluded.outlet_id, kind=excluded.kind, interval_secs=excluded.interval_secs,
                etag=excluded.etag, last_modified=excluded.last_modified,
@@ -231,7 +235,8 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                last_ok_at=excluded.last_ok_at, dead=excluded.dead,
                base_interval_secs=excluded.base_interval_secs, resolved_url=excluded.resolved_url,
                last_fetch_at=excluded.last_fetch_at, last_status=excluded.last_status,
-               last_error=excluded.last_error, last_items=excluded.last_items",
+               last_error=excluded.last_error, last_items=excluded.last_items,
+               health=excluded.health",
         )?;
         for m in batch {
             match m {
@@ -336,6 +341,7 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                     ])?;
                 }
                 WriteMsg::FeedState(f) => {
+                    let f = *f;
                     up_feed.execute(params![
                         f.url,
                         f.outlet_id,
@@ -352,7 +358,10 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                         f.last_fetch_at,
                         f.last_status.map(|s| s as i64),
                         f.last_error,
-                        f.last_items as i64
+                        f.last_items as i64,
+                        f.health
+                            .as_ref()
+                            .and_then(|h| serde_json::to_string(h).ok())
                     ])?;
                 }
                 WriteMsg::Flush(_) => unreachable!("flushes are taken out before commit"),

@@ -2,7 +2,7 @@
 
 use rusqlite::Connection;
 
-pub const SCHEMA_VERSION: i32 = 2;
+pub const SCHEMA_VERSION: i32 = 3;
 
 const V1: &str = "
 CREATE TABLE IF NOT EXISTS outlet (
@@ -65,6 +65,11 @@ ALTER TABLE feed ADD COLUMN last_error TEXT;
 ALTER TABLE feed ADD COLUMN last_items INTEGER NOT NULL DEFAULT 0;
 ";
 
+/// v3: steward feed health as JSON on the feed row.
+const V3: &str = "
+ALTER TABLE feed ADD COLUMN health TEXT;
+";
+
 pub fn migrate(conn: &Connection) -> rusqlite::Result<()> {
     let v: i32 = conn.query_row("PRAGMA user_version", [], |r| r.get(0))?;
     if v < 1 {
@@ -74,6 +79,9 @@ pub fn migrate(conn: &Connection) -> rusqlite::Result<()> {
         // A fresh V1 already lacks these columns, so this applies in both
         // the fresh and the upgrade case.
         conn.execute_batch(V2)?;
+    }
+    if v < 3 {
+        conn.execute_batch(V3)?;
     }
     if v < SCHEMA_VERSION {
         conn.pragma_update(None, "user_version", SCHEMA_VERSION)?;

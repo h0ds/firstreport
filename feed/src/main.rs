@@ -17,6 +17,7 @@ mod prune;
 mod replay;
 mod snapshot;
 mod stats;
+mod steward;
 mod store;
 mod tooling;
 mod types;
@@ -185,7 +186,9 @@ async fn run(
     let states =
         poller::Poller::build_states(&feeds, persisted, cfg.poll.default_interval_secs, boot_now);
     for s in &states {
-        writer.send(store::WriteMsg::FeedState(s.clone())).await;
+        writer
+            .send(store::WriteMsg::FeedState(Box::new(s.clone())))
+            .await;
     }
 
     let resolver = Arc::new(parse::outlet::Resolver::from_config(&outlets));

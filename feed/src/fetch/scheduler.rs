@@ -67,6 +67,8 @@ pub struct Report {
     pub retry_after_secs: Option<u64>,
     pub resolved_url: Option<String>,
     pub new_items: u32,
+    /// Updated feed health, when the fetch had a body to judge.
+    pub health: Option<crate::steward::Health>,
 }
 
 impl Report {
@@ -129,6 +131,12 @@ impl Scheduler {
         f.last_status = r.status;
         f.last_error = r.error.clone();
         f.last_items = r.new_items;
+        if r.health.is_some() {
+            f.health = r.health.clone();
+        }
+        // A quarantined feed keeps polling so its signals keep updating,
+        // but at its maximum interval (docs/steward.md §2).
+        let quarantined = f.health.as_ref().is_some_and(|h| h.is_quarantined(now));
         if let Some(u) = r.resolved_url.clone() {
             if u != f.url {
                 f.resolved_url = Some(u);
@@ -170,6 +178,10 @@ impl Scheduler {
                     .min(cfg.max_backoff_secs);
                 backoff.max(retry_after.unwrap_or(0))
             }
+            _ if quarantined => cfg
+                .max_interval_secs
+                .max(f.interval_secs)
+                .max(retry_after.unwrap_or(0)),
             _ => f.interval_secs.max(retry_after.unwrap_or(0)),
         };
         let url = f.url.clone();
@@ -205,6 +217,7 @@ mod tests {
             last_status: None,
             last_error: None,
             last_items: 0,
+            health: None,
         }
     }
 
@@ -273,6 +286,35 @@ mod tests {
             !f.dead,
             "never succeeded, so no baseline to declare dead from"
         );
+    }
+
+    #[test]
+    fn quarantined_feed_waits_its_maximum_interval() {
+        use crate::steward::{Health, Quarantine};
+        let mut s = Scheduler::new(vec![fs("a", 0)], cfg(true, 0.0));
+        s.pop_due(0);
+        let health = Health {
+            quarantine: Some(Quarantine {
+                reason: "test".into(),
+                since: 0,
+                until: 86_400,
+            }),
+            ..Default::default()
+        };
+        let f = s.complete(
+            0,
+            0,
+            Report {
+                health: Some(health),
+                ..ok(5)
+            },
+        );
+        assert_eq!(f.next_fetch_at, 3_600, "max interval while quarantined");
+        assert!(f.health.as_ref().unwrap().is_quarantined(100));
+        // Once the day is up the health is carried but the wait is normal.
+        s.pop_due(3_600);
+        let f = s.complete(0, 90_000, ok(5));
+        assert!(f.next_fetch_at - 90_000 < 3_600);
     }
 
     #[test]

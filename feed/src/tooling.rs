@@ -568,6 +568,7 @@ mod feeds_tests {
             last_status: status,
             last_error: status.map(|s| format!("http {s}")),
             last_items: 0,
+            health: None,
         }
     }
 
