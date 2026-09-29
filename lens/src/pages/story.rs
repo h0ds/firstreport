@@ -24,20 +24,38 @@ const OUTLET_FIELDS: &[&str] = &[
     "domain_registered",
 ];
 
-/// Members grouped by outlet in join order: the first item per outlet
-/// plus its later rewrites.
+/// When an item entered the story as the outlet told it: its published
+/// time, or the pick-up time when the feed gave none.
+fn when(i: &Item) -> i64 {
+    if i.published_at > 0 {
+        i.published_at
+    } else {
+        i.joined_at.unwrap_or(i.fetched_at)
+    }
+}
+
+/// Members grouped by outlet, ordered by published time (pick-up time
+/// and item id break ties, so a first poll that picks everything up at
+/// once still reads in the order the outlets published), the cluster's
+/// origin outlet always first. Within an outlet, its earliest item
+/// leads and the rest follow.
 fn by_outlet<'a>(input: &'a Input, c: &'a Cluster) -> Vec<(&'a str, Vec<&'a Item>)> {
-    let mut joins: Vec<_> = c.timeline.iter().collect();
-    joins.sort_by_key(|j| (j.joined_at, j.item_id));
+    let mut items: Vec<&Item> = c
+        .timeline
+        .iter()
+        .filter_map(|j| input.items.get(&j.item_id))
+        .collect();
+    items.sort_by_key(|i| (when(i), i.joined_at.unwrap_or(i.fetched_at), i.id));
     let mut out: Vec<(&str, Vec<&Item>)> = Vec::new();
-    for j in joins {
-        let Some(it) = input.items.get(&j.item_id) else {
-            continue;
-        };
-        match out.iter_mut().find(|(o, _)| *o == j.outlet_id) {
+    for it in items {
+        match out.iter_mut().find(|(o, _)| *o == it.outlet_id) {
             Some((_, v)) => v.push(it),
-            None => out.push((&j.outlet_id, vec![it])),
+            None => out.push((&it.outlet_id, vec![it])),
         }
+    }
+    if let Some(pos) = out.iter().position(|(o, _)| *o == c.origin_outlet_id) {
+        let origin = out.remove(pos);
+        out.insert(0, origin);
     }
     out
 }
@@ -60,7 +78,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
     let t0 = rows
         .first()
         .and_then(|(_, v)| v.first())
-        .map(|i| i.joined_at.unwrap_or(i.fetched_at))
+        .map(|i| when(i))
         .unwrap_or(c.created_at);
     let path = format!("/story/{}/", c.id);
 
@@ -68,24 +86,20 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
     let mut b = String::new();
     let scale = crate::render::spark_scale([f.spark.as_slice()]);
     b.push_str(&cluster_card(input, c, &f.spark, scale, true, false));
-    let _ = write!(
-        b,
-        "<p class=\"kg-muted\">{} in the last 6 hours, {} in the last 24, as of {}.</p>",
-        n(f.outlets_6h as usize, "outlet"),
-        n(f.outlets_24h as usize, "outlet"),
-        time_el(input.export_time)
-    );
-    b.push_str("<h2>Timeline</h2><p class=\"kg-muted\">Each outlet once, in the order Kagami saw it join, with its headline. Later rewrites from the same outlet sit beneath. Times are what the outlet claimed and what Kagami saw.</p><ol class=\"timeline\">");
+    b.push_str("<h2>Timeline</h2><p class=\"kg-muted\">Each outlet once, in the order they published, with the headline each ran first. Other articles from the same outlet sit beneath. Times are what the outlet claimed; pick-up is when Kagami saw it, shown where it differs from the row above.</p><ol class=\"timeline\">");
+    let mut last_pickup: Option<i64> = None;
     for (k, (outlet, items)) in rows.iter().enumerate() {
         let first = &items[0];
         let at = first.joined_at.unwrap_or(first.fetched_at);
+        let show_pickup = last_pickup != Some(at);
+        last_pickup = Some(at);
         let _ = write!(
             b,
-            "<li{} data-outlet=\"{}\"><span class=\"when\" title=\"Picked up {}\">{}</span><div><span class=\"outlet\">{}</span>{}",
+            "<li{} data-outlet=\"{}\"><span class=\"when\" title=\"{} after the first outlet\">{}</span><div><span class=\"outlet\">{}</span>{}",
             if k == 0 { " class=\"first\"" } else { "" },
             esc(outlet),
-            esc(&datetime(at)),
-            if k == 0 { "first".to_string() } else { delta(at - t0) },
+            if k == 0 { "First".to_string() } else { delta(when(first) - t0) },
+            if k == 0 { "first".to_string() } else { delta(when(first) - t0) },
             outlet_link(input, outlet),
             match f.copies_of.get(&first.id) {
                 Some(src) => format!(
@@ -103,20 +117,18 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             esc(&first.canonical_url),
             esc(&first.title)
         );
-        let _ = write!(
-            b,
-            "<span class=\"times\">{}picked up {}</span>",
-            if first.published_at > 0 {
-                format!("published {} · ", time_el(first.published_at))
-            } else {
-                String::new()
-            },
-            time_el(at)
-        );
+        let mut times = Vec::new();
+        if first.published_at > 0 {
+            times.push(format!("published {}", time_el(first.published_at)));
+        }
+        if show_pickup || first.published_at == 0 {
+            times.push(format!("picked up {}", time_el(at)));
+        }
+        let _ = write!(b, "<span class=\"times\">{}</span>", times.join(" · "));
         for alt in items.iter().skip(1).filter(|i| i.title != first.title) {
             let _ = write!(
                 b,
-                "<span class=\"alt\">also: <a href=\"{}\" rel=\"noopener\">{}</a></span>",
+                "<span class=\"alt\">also from this outlet: <a href=\"{}\" rel=\"noopener\">{}</a></span>",
                 esc(&alt.canonical_url),
                 esc(&alt.title)
             );
@@ -273,34 +285,45 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
     let mut md = format!("# {}\n\n", c.primary_title);
     let _ = writeln!(
         md,
-        "Story `{}`. {} · {} · first published by {} · first seen {}{}. {} in the last 6 hours, {} in the last 24, as of {}.",
+        "Story `{}`. {} · {} · first published by {} · first seen {}{}. As of {}.",
         c.id,
         n(c.outlet_count as usize, "outlet"),
         n(c.item_count as usize, "item"),
         input.outlet_name(&c.origin_outlet_id),
         datetime(c.created_at),
-        if c.syndication.is_empty() { String::new() } else { format!(" · {}", n(c.syndication.len(), "syndication group")) },
-        n(f.outlets_6h as usize, "outlet"),
-        n(f.outlets_24h as usize, "outlet"),
+        if c.syndication.is_empty() {
+            String::new()
+        } else {
+            format!(" · {}", n(c.syndication.len(), "syndication group"))
+        },
         datetime(input.export_time)
     );
     md.push_str("\nMembership is by text similarity, not by a person; treat it as evidence. No outlet here carries a rating; the facts about each outlet below are a source's, with its licence and date.\n\n## Timeline\n\n");
+    let mut last_pickup: Option<i64> = None;
     for (k, (outlet, items)) in rows.iter().enumerate() {
         let first = &items[0];
         let at = first.joined_at.unwrap_or(first.fetched_at);
+        let show_pickup = last_pickup != Some(at);
+        last_pickup = Some(at);
+        let mut times = Vec::new();
+        if first.published_at > 0 {
+            times.push(format!("published {}", datetime(first.published_at)));
+        }
+        if show_pickup || first.published_at == 0 {
+            times.push(format!("picked up {}", datetime(at)));
+        }
         let _ = writeln!(
             md,
-            "- {}**{}**: [{}]({}) · {}picked up {}{}",
-            if k == 0 { "first · " } else { "" },
+            "- {}**{}**: [{}]({}) · {}{}",
+            if k == 0 {
+                "first · ".to_string()
+            } else {
+                format!("{} · ", delta(when(first) - t0))
+            },
             input.outlet_name(outlet),
             first.title,
             first.canonical_url,
-            if first.published_at > 0 {
-                format!("published {} · ", datetime(first.published_at))
-            } else {
-                String::new()
-            },
-            datetime(at),
+            times.join(" · "),
             match f.copies_of.get(&first.id) {
                 Some(src) => format!(" · copy of {}", input.outlet_name(src)),
                 None if f.copied.contains(&first.id) => " · carried by others".to_string(),
@@ -308,7 +331,11 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             }
         );
         for alt in items.iter().skip(1).filter(|i| i.title != first.title) {
-            let _ = writeln!(md, "  - also: [{}]({})", alt.title, alt.canonical_url);
+            let _ = writeln!(
+                md,
+                "  - also from this outlet: [{}]({})",
+                alt.title, alt.canonical_url
+            );
         }
     }
     if !c.syndication.is_empty() {
@@ -432,6 +459,7 @@ mod tests {
         assert!(t
             .md
             .contains("- first · **Wire**: [Story 1001](https://wire.example/1001)"));
+        assert!(t.md.contains("- +1.0h · **Gazette**"), "{}", t.md);
         assert!(t.md.contains("· copy of Wire"));
         assert!(t
             .md
@@ -444,5 +472,47 @@ mod tests {
         assert!(rev.md.contains("- Revised: Wire [Story 1002](https://wire.example/1002) at 2025-08-24 14:53 UTC · was: Story 1002, as first seen"));
         let wd = story(&i, &i.clusters[&1022]);
         assert!(wd.html.contains("Withdrawn:") && !wd.html.contains("was:"));
+    }
+
+    #[test]
+    fn first_poll_ties_read_in_published_order_and_first_follows_the_origin() {
+        // Everything picked up in one poll; the outlet with the larger
+        // item id published earlier and is feed's origin.
+        let mut i = fixture_input();
+        let cid = 1001;
+        let (a, b) = (1001u64, 51001u64);
+        i.items.get_mut(&a).unwrap().published_at = 1_756_000_000 + 9 * 3600;
+        i.items.get_mut(&a).unwrap().joined_at = Some(1_756_100_000);
+        i.items.get_mut(&b).unwrap().published_at = 1_756_000_000;
+        i.items.get_mut(&b).unwrap().joined_at = Some(1_756_100_000);
+        let c = i.clusters.get_mut(&cid).unwrap();
+        c.origin_outlet_id = "gazette".into();
+        c.origin_item_id = b;
+        for j in &mut c.timeline {
+            j.joined_at = 1_756_100_000;
+        }
+        let c = i.clusters[&cid].clone();
+        let t = story(&i, &c);
+        let gz = t
+            .html
+            .find("<li class=\"first\" data-outlet=\"gazette\">")
+            .unwrap();
+        let wire = t.html.find("<li data-outlet=\"wire\">").unwrap();
+        assert!(gz < wire, "origin first even though its item id is larger");
+        assert!(
+            t.html.contains(">+9.0h<"),
+            "offset from the origin's published time: {}",
+            t.html
+        );
+        assert_eq!(
+            t.html.matches("picked up ").count(),
+            1,
+            "identical pick-up shown once"
+        );
+        assert!(
+            t.md.contains("- first · **Gazette**") && t.md.contains("- +9.0h · **Wire**"),
+            "{}",
+            t.md
+        );
     }
 }

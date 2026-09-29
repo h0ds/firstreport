@@ -1,13 +1,13 @@
 # Story 1001
 
-Story `1001`. 2 outlets · 2 items · first published by Wire · first seen 2025-08-24 01:56 UTC · 1 syndication group. 0 outlets in the last 6 hours, 0 outlets in the last 24, as of 2025-09-22 13:03 UTC.
+Story `1001`. 2 outlets · 2 items · first published by Wire · first seen 2025-08-24 01:56 UTC · 1 syndication group. As of 2025-09-22 13:03 UTC.
 
 Membership is by text similarity, not by a person; treat it as evidence. No outlet here carries a rating; the facts about each outlet below are a source's, with its licence and date.
 
 ## Timeline
 
 - first · **Wire**: [Story 1001](https://wire.example/1001) · published 2025-08-24 01:46 UTC · picked up 2025-08-24 01:56 UTC · carried by others
-- **Gazette**: [Story 1001](https://gazette.example/51001) · published 2025-08-24 02:46 UTC · picked up 2025-08-24 02:56 UTC · copy of Wire
+- +1.0h · **Gazette**: [Story 1001](https://gazette.example/51001) · published 2025-08-24 02:46 UTC · picked up 2025-08-24 02:56 UTC · copy of Wire
 
 ## Copies
 

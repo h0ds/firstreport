@@ -193,7 +193,10 @@ pub fn spark(points: &[u32], scale_max: u32, large: bool) -> String {
         );
     }
     if let Some((x, y)) = xy.last() {
-        let _ = write!(svg, "<circle class=\"end\" cx=\"{x:.1}\" cy=\"{y:.1}\" r=\"1.5\"/>");
+        let _ = write!(
+            svg,
+            "<circle class=\"end\" cx=\"{x:.1}\" cy=\"{y:.1}\" r=\"1.5\"/>"
+        );
     }
     let _ = write!(svg, "</svg><span class=\"kg-spark-n\">{last}</span></span>");
     svg
@@ -526,7 +529,14 @@ mod tests {
     fn cluster_card_and_skeleton() {
         let i = fixture_input();
         let c = &i.clusters[&1001];
-        let h = cluster_card(&i, c, &[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], 2, false, false);
+        let h = cluster_card(
+            &i,
+            c,
+            &[1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+            2,
+            false,
+            false,
+        );
         assert!(h.contains("data-id=\"1001\""));
         assert!(h.contains("href=\"/story/1001/\""));
         assert!(h.contains("first: <a href=\"/outlet/wire/\" data-outlet=\"wire\">Wire</a>"));
@@ -559,9 +569,7 @@ mod tests {
             std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../design/tokens.css"),
         )
         .expect("design/tokens.css");
-        let norm = |s: &str| s.replace("
-", "
-");
+        let norm = |s: &str| s.replace("\r\n", "\n");
         assert_eq!(
             norm(TOKENS_CSS),
             norm(&design),
@@ -575,8 +583,9 @@ mod tests {
     /// (sparkline, dots, breakpoint).
     #[test]
     fn stylesheets_use_only_scale_values() {
-
-        let spacing = ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px"];
+        let spacing = [
+            "4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px",
+        ];
         for (name, css) in [("tokens.css", TOKENS_CSS), ("lens.css", LENS_CSS)] {
             for (n, line) in css.lines().enumerate() {
                 let l = line.trim();
@@ -584,7 +593,9 @@ mod tests {
                     continue; // token definitions, comments, breakpoints
                 }
                 for decl in l.split(';') {
-                    let Some((prop, val)) = decl.split_once(':') else { continue };
+                    let Some((prop, val)) = decl.split_once(':') else {
+                        continue;
+                    };
                     let prop = prop.trim().rsplit(['{', ' ']).next().unwrap_or("");
                     let val = val.trim();
                     let where_ = format!("{name}:{} `{}`", n + 1, decl.trim());
@@ -601,7 +612,10 @@ mod tests {
                         );
                     }
                     if prop == "line-height" {
-                        assert!(val.starts_with("var(--kg-lh-"), "line height not a grid token {where_}");
+                        assert!(
+                            val.starts_with("var(--kg-lh-"),
+                            "line height not a grid token {where_}"
+                        );
                     }
                     if prop.starts_with("margin") || prop.starts_with("padding") || prop == "gap" {
                         for tok in val.split_whitespace() {
@@ -631,12 +645,21 @@ mod tests {
             rest[j..].split('"').next().unwrap().parse().unwrap()
         };
         assert!(end_y(&small) > 15.0 && end_y(&big) < 3.0);
-        assert!(!small.contains("preserveAspectRatio"), "drawn at size, never stretched");
-        assert!(small.contains("aria-label=\"Outlets carrying the story, two-hour steps: 1, 1, 2, 2\""));
+        assert!(
+            !small.contains("preserveAspectRatio"),
+            "drawn at size, never stretched"
+        );
+        assert!(
+            small.contains("aria-label=\"Outlets carrying the story, two-hour steps: 1, 1, 2, 2\"")
+        );
         assert!(small.contains("<span class=\"kg-spark-n\">2</span>"));
         // single-outlet story: baseline and end dot only
         let flat = spark(&[1, 1, 1], 5, false);
-        assert!(!flat.contains("class=\"line\"") && flat.contains("class=\"base\"") && flat.contains("class=\"end\""));
+        assert!(
+            !flat.contains("class=\"line\"")
+                && flat.contains("class=\"base\"")
+                && flat.contains("class=\"end\"")
+        );
         assert!(spark(&[1, 2], 2, true).contains("width=\"160\" height=\"32\""));
         assert_eq!(spark_scale([&[1u32, 3][..], &[7][..]]), 7);
     }
