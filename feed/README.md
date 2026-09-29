@@ -12,13 +12,6 @@ cargo test
 
 Runtime state lives in `data/` (gitignored): `feed.db` and `snapshots/`.
 
-## Sources
-
-`config/feeds.toml` lists RSS, Atom and JSON feeds, and public Telegram
-channels by their preview page (`https://t.me/s/<channel>`), each with
-the outlet id it belongs to. Everything downstream treats a channel
-post like a feed item.
-
 ## Embedding model
 
 ```

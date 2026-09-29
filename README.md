@@ -12,7 +12,7 @@ Rust, single binary per tool, runs entirely locally. Three pillars, built in ord
 
 | Tool | Pillar | Job |
 |---|---|---|
-| [`feed/`](feed/) | 1 | Ingest headlines from feeds and public Telegram channels, cluster them into stories, record propagation. Neutral by construction. |
+| [`feed/`](feed/) | 1 | Ingest headlines, cluster them into stories, record propagation. Neutral by construction. |
 | [`ledger/`](ledger/) | 2 | Sourced facts about outlets keyed by outlet id: ownership, country, founding, third-party ratings, each with its source and licence. Never a score. |
 | [`kagami/`](kagami/) | | One command over the three: `run`, `site`, `doctor`. |
 | [`lens/`](lens/) | 3 | Static site generated from `feed` and `ledger` exports: stories, outlets, coverage by a named source's labels. At N2; see `lens/docs/plan.md`. |
