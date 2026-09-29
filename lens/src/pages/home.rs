@@ -33,7 +33,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         "<h1>Stories</h1><p class=\"kg-muted\">{} active in the {} hours to {}, from {} in the pool. Ordered by outlets joining in the last day, then by recency.</p>",
         n(recent.len(), "story"),
         window_hours,
-        time_el(now),
+        time_el(now, now),
         n(input.outlets.len(), "outlet")
     );
     if recent.is_empty() {

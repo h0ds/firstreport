@@ -282,7 +282,8 @@ step since it was first seen. Spec:
 
 - Sentence case everywhere, including buttons and headings. No title case, no shouting.
 - Label things by what they are: "12 outlets", "first seen 14:02 UTC", "3 syndication groups". Never "trending", "viral", "breaking".
-- Timestamps in UTC by default with local time on hover.
+- Times are short: the clock time (`14:02`) on the page's own day, `28 Sep 14:02` on another day, the year only when it differs. The zone is stated once in the chrome ("times in UTC", or the time-zone control), never on each time. The full timestamp is on hover and in the `<time datetime>` attribute; JSON and Markdown twins keep full timestamps.
+- A range's end is a day (`in the 30 days to 22 Sep`), not a clock time.
 - Empty states are one short sentence and, if relevant, one action. No illustrations.
 
 ---
@@ -314,7 +315,7 @@ Every page any tool serves is a view of the same mirror, so they share:
   - a 1.5px `--kg-text` ring, 1.5px clear of the edge, around the outlet's icon (`.kg-origin`); where a surface shows no icons, the same ring around the outlet's name (`.kg-origin-name`);
   - near-black, not blue: blue means "act here", and the ring is a fact, not an action;
   - the word "first" is not written beside it. The ring carries "first to publish" as its accessible name (visually hidden text, `.kg-sr`), and the JSON and Markdown twins keep the word, since no fact lives only in a mark (§11).
-- **Time.** UTC by default, local on hover or by a control in the chrome, same control on every page. Ages as "N days old", "6 in the last hour", never relative words like "recently".
+- **Time.** UTC by default, or local by a control in the chrome, same control on every page; the zone is named there once and times on the page are short (§8). Ages as "N days old", "6 in the last hour", never relative words like "recently".
 - **Absence.** Empty and not-found states are one sentence naming what would fill them ("No claims yet. Run `ledger import wikidata`."). The same sentence shape everywhere.
 - **Copy, don't share.** Each tool carries its own copy of the tokens and component CSS, verified against `preview.html`. A change to a component is made here first, then copied.
 

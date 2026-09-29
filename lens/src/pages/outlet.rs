@@ -66,7 +66,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     let _ = write!(
         b,
         "<h2>Stories</h2><p class=\"kg-muted\">In the {window_days} days to {}: {}, in {}. First to {} of the {} other outlets also carried. {} of its items carried text first published elsewhere; {} were carried by others. Counts from Kagami feed, not a rating.</p>",
-        time_el(input.export_time),
+        crate::render::day_el(input.export_time, input.export_time),
         n(facts.items as usize, "item"),
         n(facts.clusters.len(), "story"),
         facts.first_to,
@@ -88,7 +88,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
                 esc(&c.primary_title),
                 if c.origin_outlet_id == o.id && c.outlet_count > 1 { " <span class=\"kg-tag\">first</span>" } else { "" },
                 n(c.outlet_count as usize, "outlet"),
-                time_el(c.created_at)
+                time_el(c.created_at, input.export_time)
             );
         }
         b.push_str("</ul>");

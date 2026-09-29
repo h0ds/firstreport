@@ -55,11 +55,46 @@ pub fn iso(ts: i64) -> String {
     format!("{}T{}:{:02}Z", date(ts), hhmm(ts), ts.rem_euclid(60))
 }
 
-pub fn time_el(ts: i64) -> String {
+/// `22 Sep`, or `22 Sep 2025` when the year differs from `now`'s.
+fn day_month(ts: i64, now: i64) -> String {
+    const MONTHS: [&str; 12] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    let (d, today) = (date(ts), date(now));
+    let m: usize = d[5..7].parse().unwrap_or(1);
+    let day: u32 = d[8..10].parse().unwrap_or(1);
+    let md = format!("{day} {}", MONTHS[m.clamp(1, 12) - 1]);
+    if d[..4] == today[..4] { md } else { format!("{md} {}", &d[..4]) }
+}
+
+/// A time as a person reads it on the page (design §8): the clock time on
+/// the export's day, `28 Sep 14:02` on another day, with the year only when
+/// it differs. The zone is stated once in the page chrome, not per time.
+pub fn short_time(ts: i64, now: i64) -> String {
+    if date(ts) == date(now) {
+        hhmm(ts)
+    } else {
+        format!("{} {}", day_month(ts, now), hhmm(ts))
+    }
+}
+
+/// The end of a range of days, `22 Sep`, as a `<time>` with the full
+/// timestamp on hover.
+pub fn day_el(ts: i64, now: i64) -> String {
     format!(
-        "<time datetime=\"{}\">{}</time>",
+        "<time datetime=\"{}\" title=\"{}\">{}</time>",
         iso(ts),
-        esc(&datetime(ts))
+        esc(&datetime(ts)),
+        esc(&day_month(ts, now))
+    )
+}
+
+/// `<time>` with the short form shown, the full UTC timestamp on hover and
+/// RFC 3339 in `datetime` for machines.
+pub fn time_el(ts: i64, now: i64) -> String {
+    format!(
+        "<time datetime=\"{}\" title=\"{}\">{}</time>",
+        iso(ts),
+        esc(&datetime(ts)),
+        esc(&short_time(ts, now))
     )
 }
 
@@ -116,7 +151,7 @@ pub fn html(p: &Page) -> String {
 <main{wide}>
 <header class="chrome">
   <span class="kg-lockup"><a class="kg-wordmark" href="/">Kagami<span class="kanji">鏡</span></a><span class="rule"></span><span class="tool">lens</span></span>
-  <span class="kg-muted">{status}</span>
+  <span class="kg-muted">{status} · times in UTC</span>
 </header>
 {body}
 <footer class="kg-muted">Every number on this page is a count from Kagami feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · <a href="/about/">About</a> · Machine readers: <a href="{path}index.json">JSON</a> · <a href="{path}index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a></footer>
@@ -135,6 +170,16 @@ pub fn html(p: &Page) -> String {
 }
 
 pub fn outlet_link(input: &Input, id: &str) -> String {
+    // Only registry outlets and outlets ledger knows get a page (build.rs).
+    // An item feed could not attribute ("unknown:<host>") is named by its
+    // host, unlinked, so the site never links to a page it did not build.
+    if !input.outlets.contains_key(id) && !input.claims.contains_key(id) {
+        return format!(
+            "<span data-outlet=\"{}\">{}</span>",
+            esc(id),
+            esc(id.strip_prefix("unknown:").unwrap_or(id))
+        );
+    }
     format!(
         "<a href=\"/outlet/{}/\" data-outlet=\"{}\">{}</a>",
         esc(id),
@@ -245,7 +290,7 @@ pub fn cluster_card(
         n(c.outlet_count as usize, "outlet"),
         n(c.item_count as usize, "item"),
         origin_link(input, &c.origin_outlet_id),
-        time_el(c.created_at)
+        time_el(c.created_at, input.export_time)
     );
     if !c.syndication.is_empty() {
         let _ = write!(
@@ -749,6 +794,24 @@ mod tests {
         let groups = grouped_claims(&i.claims["wire"]);
         assert_eq!(groups[0].0, "reliability");
         assert_eq!(groups.last().unwrap().0, "wikidata_id");
+    }
+
+    #[test]
+    fn times_are_short_with_the_full_form_on_hover() {
+        let now = 1_758_546_200; // 2025-09-22 13:03 UTC
+        assert_eq!(short_time(now - 3600, now), "12:03");
+        assert_eq!(short_time(now - 2 * DAY, now), "20 Sep 13:03");
+        assert_eq!(short_time(now - 400 * DAY, now), "18 Aug 2024 13:03");
+        assert!(time_el(now, now).contains("title=\"2025-09-22 13:03 UTC\">13:03</time>"));
+        assert!(day_el(now, now).ends_with(">22 Sep</time>"));
+    }
+
+    #[test]
+    fn unattributed_outlet_is_named_not_linked() {
+        let i = fixture_input();
+        let h = outlet_link(&i, "unknown:partner.example");
+        assert_eq!(h, "<span data-outlet=\"unknown:partner.example\">partner.example</span>");
+        assert!(outlet_link(&i, "wire").starts_with("<a href=\"/outlet/wire/\""));
     }
 
     #[test]

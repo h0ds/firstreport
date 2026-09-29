@@ -113,7 +113,7 @@ input[type=search]:focus,input[type=number]:focus,select:focus{outline:2px solid
 const $ = s => document.querySelector(s);
 const seen = new Set();
 // Times: one zone for the whole page (local by default, UTC on request, remembered
-// per browser). Short form carries the zone label and a date when not today;
+// per browser). Short form is the clock time, with a date when not today;
 // tooltips always give the full timestamp in both zones.
 let tz = 'local';
 try { tz = localStorage.getItem('kg-tz') || 'local'; } catch {}
@@ -122,7 +122,8 @@ const fmtT = ts => {
   if (!ts) return '—';
   const d = new Date(ts*1000), o = tzOpt();
   const day = x => x.toLocaleDateString('en-CA', o);
-  const hm = d.toLocaleTimeString([], {...o, hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZoneName: 'short'});
+  // The zone is stated once, by the time-zone control; each time is just the clock.
+  const hm = d.toLocaleTimeString([], {...o, hour: '2-digit', minute: '2-digit', hourCycle: 'h23'});
   return day(d) === day(new Date()) ? hm : d.toLocaleDateString([], {...o, month: 'short', day: 'numeric'}) + ' ' + hm;
 };
 const fullT = ts => ts ? `${new Date(ts*1000).toLocaleString([], {dateStyle: 'medium', timeStyle: 'long'})} · ${new Date(ts*1000).toISOString().replace('.000Z','Z')}` : '';

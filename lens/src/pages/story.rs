@@ -123,10 +123,10 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         );
         let mut times = Vec::new();
         if first.published_at > 0 {
-            times.push(format!("published {}", time_el(first.published_at)));
+            times.push(format!("published {}", time_el(first.published_at, input.export_time)));
         }
         if show_pickup || first.published_at == 0 {
-            times.push(format!("picked up {}", time_el(at)));
+            times.push(format!("picked up {}", time_el(at, input.export_time)));
         }
         let _ = write!(b, "<span class=\"times\">{}</span>", times.join(" · "));
         for alt in items.iter().skip(1).filter(|i| i.title != first.title) {
@@ -206,7 +206,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
                         "<span class=\"alt\">earlier text not in this export</span>".to_string(),
                     _ => String::new(),
                 },
-                time_el(e.ts)
+                time_el(e.ts, input.export_time)
             );
         }
         b.push_str("</ul>");
