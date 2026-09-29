@@ -77,7 +77,13 @@ fn text_before(input: &Input, item_id: u64, ts: i64) -> Option<&crate::input::Re
 }
 
 pub fn story(input: &Input, c: &Cluster) -> Twins {
-    let f: ClusterFacts = cluster_facts(c, &input.items, &input.events, input.export_time);
+    let f: ClusterFacts = cluster_facts(
+        c,
+        &input.items,
+        &input.events,
+        input.export_time,
+        crate::derive::DAY,
+    );
     let rows = by_outlet(input, c);
     let t0 = rows
         .first()
@@ -89,7 +95,15 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
     // ---- HTML
     let mut b = String::new();
     let scale = crate::render::spark_scale([f.spark.as_slice()]);
-    b.push_str(&cluster_card(input, c, &f.spark, scale, true, false));
+    b.push_str(&cluster_card(
+        input,
+        c,
+        &f.spark,
+        scale,
+        true,
+        false,
+        Some(&f),
+    ));
     b.push_str("<h2>Timeline</h2><p class=\"kg-muted\">Each outlet once, in the order they published, with the headline each ran first. Other articles from the same outlet sit beneath. Times are what the outlet claimed; pick-up is when Kagami saw it, shown where it differs from the row above.</p><ol class=\"timeline\">");
     let mut last_pickup: Option<i64> = None;
     for (k, (outlet, items)) in rows.iter().enumerate() {

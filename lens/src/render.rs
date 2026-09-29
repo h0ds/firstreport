@@ -280,6 +280,7 @@ pub fn cluster_card(
     scale_max: u32,
     large: bool,
     enter: bool,
+    reach: Option<&crate::derive::ClusterFacts>,
 ) -> String {
     let mut s = String::new();
     let _ = write!(
@@ -303,6 +304,18 @@ pub fn cluster_card(
             s,
             "<span class=\"sep\">·</span><span>{}</span>",
             n(c.syndication.len(), "syndication group")
+        );
+    }
+    // The counts that placed the card (docs/algorithms.md §4), so the
+    // order is checkable on the card itself.
+    if let Some(f) = reach {
+        let _ = write!(
+            s,
+            "<span class=\"sep\">·</span><span data-reach=\"{}\" title=\"reach = independent reports in the window + languages − 1\">reach {}: {}, {}</span>",
+            f.reach,
+            f.reach,
+            n(f.reports as usize, "independent report"),
+            n(f.languages as usize, "language")
         );
     }
     s.push_str(&spark(spark_points, scale_max, large));
@@ -834,13 +847,14 @@ mod tests {
             2,
             false,
             false,
+            None,
         );
         assert!(h.contains("data-id=\"1001\""));
         assert!(h.contains("href=\"/story/1001/\""));
         assert!(h.contains("<span class=\"kg-origin-name\"><span class=\"kg-sr\">first to publish: </span><a href=\"/outlet/wire/\" data-outlet=\"wire\">Wire</a></span>"));
         assert!(!h.contains("first: "), "the origin is a ring, not the word");
         assert!(h.contains("aria-label=\"Outlets carrying the story, two-hour steps: 1, 2, 2"));
-        let flat = cluster_card(&i, c, &[2; 12], 2, false, false);
+        let flat = cluster_card(&i, c, &[2; 12], 2, false, false, None);
         assert!(
             !flat.contains("<svg"),
             "no curve when nothing moved after the first bucket"

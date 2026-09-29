@@ -1,5 +1,5 @@
 //! `/` (plan §3.1). The N1 form: stories from the window as cluster
-//! cards ordered by outlets in the last 24 hours then recency, and the
+//! cards ordered by reach (docs/algorithms.md §4) then recency, and the
 //! outlet list. The "spreading now" list and the search page are N2.
 
 use std::fmt::Write as _;
@@ -18,31 +18,54 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         .clusters
         .values()
         .filter(|c| c.last_active_at >= since && !c.timeline.is_empty())
-        .map(|c| (c, cluster_facts(c, &input.items, &input.events, now)))
+        .map(|c| {
+            (
+                c,
+                cluster_facts(c, &input.items, &input.events, now, window_hours * HOUR),
+            )
+        })
         .collect();
+    // Reach order (docs/algorithms.md §4): independent reports plus
+    // languages minus one, then outlets in six hours, then recency. A
+    // story with at most one independent report is listed apart, in
+    // recency order, so single reports are shown but not mixed in.
     recent.sort_by(|a, b| {
-        b.1.outlets_24h
-            .cmp(&a.1.outlets_24h)
+        b.1.reach
+            .cmp(&a.1.reach)
+            .then(b.1.outlets_6h.cmp(&a.1.outlets_6h))
             .then(b.0.last_active_at.cmp(&a.0.last_active_at))
             .then(a.0.id.cmp(&b.0.id))
     });
+    let (recent, single): (Vec<_>, Vec<_>) = recent.into_iter().partition(|(_, f)| f.reports > 1);
+    let mut single = single;
+    single.sort_by(|a, b| {
+        b.0.last_active_at
+            .cmp(&a.0.last_active_at)
+            .then(a.0.id.cmp(&b.0.id))
+    });
+    let active = recent.len() + single.len();
 
     let mut b = String::new();
     let _ = write!(
         b,
-        "<h1>Stories</h1><p class=\"kg-muted\">{} active in the {} hours to {}, from {} in the pool. Ordered by outlets joining in the last day, then by recency.</p>",
-        n(recent.len(), "story"),
+        "<h1>Stories</h1><p class=\"kg-muted\">{} active in the {} hours to {}, from {} in the pool. Ordered by reach: independent reports in the window plus languages, then recency. <a href=\"/about/#reach\">How reach is counted</a>.</p>",
+        n(active, "story"),
         window_hours,
         time_el(now, now),
         n(input.outlets.len(), "outlet")
     );
-    if recent.is_empty() {
+    if active == 0 {
         b.push_str("<div class=\"empty\">No stories in the window. Run feed for a while, export, and build again.</div>");
     }
     // Spreading now: outlets joining in the last six hours, most first.
     // Only stories with any; the list is absent when nothing is moving.
-    let mut spreading: Vec<&(&crate::input::Cluster, crate::derive::ClusterFacts)> =
-        recent.iter().filter(|(_, f)| f.outlets_6h > 0).collect();
+    // Drawn from every active story, single reports included: what is
+    // moving now is a different question from what has reached far.
+    let mut spreading: Vec<&(&crate::input::Cluster, crate::derive::ClusterFacts)> = recent
+        .iter()
+        .chain(single.iter())
+        .filter(|(_, f)| f.outlets_6h > 0)
+        .collect();
     spreading.sort_by(|a, b| {
         b.1.outlets_6h
             .cmp(&a.1.outlets_6h)
@@ -54,7 +77,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     // the main list; the list earns its place only when it reorders.
     let same_as_top = spreading
         .iter()
-        .zip(recent.iter())
+        .zip(recent.iter().chain(single.iter()))
         .all(|(a, b)| a.0.id == b.0.id);
     if same_as_top {
         spreading.clear();
@@ -79,9 +102,40 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         }
         b.push_str("</ul><h2>All stories in the window</h2>");
     }
-    let scale = crate::render::spark_scale(recent.iter().map(|(_, f)| f.spark.as_slice()));
+    let scale = crate::render::spark_scale(
+        recent
+            .iter()
+            .chain(single.iter())
+            .map(|(_, f)| f.spark.as_slice()),
+    );
     for (c, f) in &recent {
-        b.push_str(&cluster_card(input, c, &f.spark, scale, false, false));
+        b.push_str(&cluster_card(
+            input,
+            c,
+            &f.spark,
+            scale,
+            false,
+            false,
+            Some(f),
+        ));
+    }
+    if !single.is_empty() {
+        let _ = write!(
+            b,
+            "<h2>Single reports</h2><p class=\"kg-muted\">{} told by one outlet so far, or only as copies of one text. Newest first.</p>",
+            n(single.len(), "story")
+        );
+        for (c, f) in &single {
+            b.push_str(&cluster_card(
+                input,
+                c,
+                &f.spark,
+                scale,
+                false,
+                false,
+                Some(f),
+            ));
+        }
     }
     b.push_str("<h2>Outlets</h2><ul class=\"stories\">");
     for o in input.outlets.values() {
@@ -106,9 +160,9 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
             "@context": "https://schema.org",
             "@type": "ItemList",
             "name": "Stories",
-            "description": "Stories forming across news outlets, ordered by outlets joining in the last day. No outlet is rated.",
-            "numberOfItems": recent.len(),
-            "itemListElement": recent.iter().enumerate().map(|(k, (c, _))| json!({
+            "description": "Stories forming across news outlets, ordered by reach: independent reports in the window plus languages. No outlet is rated.",
+            "numberOfItems": active,
+            "itemListElement": recent.iter().chain(single.iter()).enumerate().map(|(k, (c, _))| json!({
                 "@type": "ListItem",
                 "position": k + 1,
                 "url": format!("/story/{}/", c.id),
@@ -128,17 +182,25 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     let page_json = json!({
         "window_hours": window_hours,
         "export_time": now,
+        "order": "reach = reports + languages - 1 over reach_window_secs, then outlets_6h, then last_active_at; stories with reports <= 1 are listed under single_reports by last_active_at (docs/algorithms.md §4)",
         "spreading_now": spreading.iter().map(|(c, f)| json!({"id": c.id, "title": c.primary_title, "outlets_6h": f.outlets_6h})).collect::<Vec<_>>(),
         "stories": recent.iter().map(|(c, f)| json!({
             "id": c.id, "title": c.primary_title, "outlet_count": c.outlet_count, "item_count": c.item_count,
             "origin_outlet_id": c.origin_outlet_id, "created_at": c.created_at, "last_active_at": c.last_active_at,
             "outlets_24h": f.outlets_24h, "outlets_6h": f.outlets_6h,
+            "reach_window_secs": f.reach_window_secs, "reports": f.reports, "languages": f.languages, "reach": f.reach,
+        })).collect::<Vec<_>>(),
+        "single_reports": single.iter().map(|(c, f)| json!({
+            "id": c.id, "title": c.primary_title, "outlet_count": c.outlet_count, "item_count": c.item_count,
+            "origin_outlet_id": c.origin_outlet_id, "created_at": c.created_at, "last_active_at": c.last_active_at,
+            "outlets_24h": f.outlets_24h, "outlets_6h": f.outlets_6h,
+            "reach_window_secs": f.reach_window_secs, "reports": f.reports, "languages": f.languages, "reach": f.reach,
         })).collect::<Vec<_>>(),
         "outlets": input.outlets.values().collect::<Vec<_>>(),
     });
     let mut md = format!(
-        "# Stories\n\n{} active in the {} hours to {}, from {} in the pool. Ordered by outlets joining in the last day, then by recency; no outlet is rated.\n\n",
-        n(recent.len(), "story"),
+        "# Stories\n\n{} active in the {} hours to {}, from {} in the pool. Ordered by reach: independent reports in the window plus languages, then recency (see /about/#reach); no outlet is rated.\n\n",
+        n(active, "story"),
         window_hours,
         datetime(now),
         n(input.outlets.len(), "outlet")
@@ -162,17 +224,28 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         }
         md.push_str("\n## All stories in the window\n\n");
     }
-    for (c, f) in &recent {
+    let md_line = |md: &mut String, c: &crate::input::Cluster, f: &crate::derive::ClusterFacts| {
         let _ = writeln!(
             md,
-            "- [{}](/story/{}/) · {} · {} · first: {} · {} in the last day",
+            "- [{}](/story/{}/) · {} · {} · first: {} · reach {}: {}, {}",
             c.primary_title,
             c.id,
             n(c.outlet_count as usize, "outlet"),
             n(c.item_count as usize, "item"),
             input.outlet_name(&c.origin_outlet_id),
-            n(f.outlets_24h as usize, "outlet")
+            f.reach,
+            n(f.reports as usize, "independent report"),
+            n(f.languages as usize, "language")
         );
+    };
+    for (c, f) in &recent {
+        md_line(&mut md, c, f);
+    }
+    if !single.is_empty() {
+        md.push_str("\n## Single reports\n\nTold by one outlet so far, or only as copies of one text. Newest first.\n\n");
+        for (c, f) in &single {
+            md_line(&mut md, c, f);
+        }
     }
     md.push_str("\n## Outlets\n\n");
     for o in input.outlets.values() {
@@ -201,12 +274,19 @@ mod tests {
         );
         assert!(t.html.contains("not assessed yet"));
         let all = home(&i, 24 * 90);
-        assert_eq!(all.json["stories"].as_array().unwrap().len(), 61);
-        let first = &all.json["stories"][0];
-        assert!(
-            first["outlets_24h"].as_u64().unwrap()
-                >= all.json["stories"][60]["outlets_24h"].as_u64().unwrap()
-        );
+        let stories = all.json["stories"].as_array().unwrap();
+        let single = all.json["single_reports"].as_array().unwrap();
+        assert_eq!(stories.len() + single.len(), 61);
+        // Reach order (docs/algorithms.md §4): the counts are on every
+        // entry, the top has the most, and single reports are apart.
+        let reach = |v: &serde_json::Value| v["reach"].as_u64().unwrap();
+        assert!(stories.windows(2).all(|w| reach(&w[0]) >= reach(&w[1])));
+        assert!(stories.iter().all(|s| s["reports"].as_u64().unwrap() > 1));
+        assert!(single.iter().all(|s| s["reports"].as_u64().unwrap() <= 1));
+        assert_eq!(stories[0]["reach_window_secs"], 90 * 24 * HOUR);
+        assert!(all.html.contains("<h2>Single reports</h2>"));
+        assert!(all.html.contains("data-reach=\""));
+        assert!(all.md.contains("## Single reports"));
         assert!(all.md.contains("- [Story 1001](/story/1001/)"));
         assert!(all.html.contains("\"@type\":\"ItemList\""));
         assert!(!all.html.contains("Rating"));
@@ -224,6 +304,8 @@ mod tests {
             j.joined_at = now - 12 * HOUR;
         }
         i.clusters.get_mut(&1059).unwrap().last_active_at = now - 12 * HOUR;
+        // Two independent reports: the gazette's item is its own text.
+        i.clusters.get_mut(&1059).unwrap().syndication.clear();
         for j in &mut i.clusters.get_mut(&1060).unwrap().timeline {
             j.joined_at = now - HOUR;
         }
@@ -231,6 +313,9 @@ mod tests {
         assert!(t.html.contains("<h2>Spreading now</h2>"), "{}", t.html);
         assert_eq!(t.json["spreading_now"][0]["id"], 1060);
         assert_eq!(t.json["stories"][0]["id"], 1059);
+        assert_eq!(t.json["stories"][0]["reach"], 2);
+        assert_eq!(t.json["single_reports"][0]["id"], 1060);
+        assert_eq!(t.json["single_reports"][0]["reports"], 1);
         assert!(
             t.html
                 .contains("1 outlet in 6 h · <span class=\"kg-origin-name\">"),
