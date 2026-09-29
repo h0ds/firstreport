@@ -35,6 +35,28 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "cbsnews"
+field = "domain_registered"
+value = "1994-10-04"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/cbsnews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "cbsnews.com"
+expires = "2027-10-03"
+last_changed = "2026-09-01"
+registrar = "MarkMonitor Inc."
+status = [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "cbsnews"
 field = "founded"
 value = "1927-09-18"
 source_id = "wikidata"
@@ -66,10 +88,39 @@ qid = "Q10689397"
 [[claim]]
 outlet_id = "cbsnews"
 field = "name"
+value = "CBS News"
+source_id = "site"
+ref_url = "https://www.cbsnews.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "cbsnews.com"
+
+[[claim]]
+outlet_id = "cbsnews"
+field = "name"
 value = "Q861764"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q861764"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "cbsnews"
+field = "origin_share"
+value = "first to 7% of 14 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cbsnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+origin_of = 1
+shared_stories = 14
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "cbsnews"
@@ -95,6 +146,120 @@ qid = "Q76846862"
 
 [[claim]]
 outlet_id = "cbsnews"
+field = "posting_cadence"
+value = "0.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cbsnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "cbsnews"
+field = "registrar"
+value = "MarkMonitor Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/cbsnews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "cbsnews.com"
+
+[[claim]]
+outlet_id = "cbsnews"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2026"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_522#Request_for_Comment:_Reliability_of_CBS_News_under_Bari_Weiss",
+    "#cite_note-20",
+]
+scale = "wikipedia_rsp"
+scope = "CBS News"
+status = "generally_reliable"
+summary = "CBS News is the news division of CBS. It is considered generally reliable. Some editors note, however, that its television content may include superficial coverage, which might not qualify under WP:MEDRS. Editors also note that CBS has undergone intensified political bias after Bari Weiss became editor-in-chief in late 2025, and supression of reporting critical of the Trump administration has been"
+
+[[claim]]
+outlet_id = "cbsnews"
+field = "revision_rate"
+value = "7% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cbsnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+revised = 2
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "cbsnews"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.cbsnews.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "cbsnews.com"
+final_url = "https://www.cbsnews.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "cbsnews"
+field = "site_pages"
+value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+source_id = "site"
+ref_url = "https://www.cbsnews.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.cbsnews.com/news/thinking-about-gold-ira-what-to-know-first/"
+contact = "https://ombudsman.cbsnews.com/"
+domain = "cbsnews.com"
+ethics = "https://www.cbsnews.com/news/trump-fuel-economy-standards-biden-rules/"
+missing = [
+    "corrections",
+    "masthead",
+]
+privacy = "https://www.viacomcbsprivacy.com/policy"
+
+[[claim]]
+outlet_id = "cbsnews"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cbsnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "cbsnews"
 field = "website"
 value = "https://cbsnews.com"
 source_id = "wikidata"
@@ -116,3 +281,19 @@ value = "https://en.wikipedia.org/wiki/CBS_News"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q861764"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "cbsnews"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cbsnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

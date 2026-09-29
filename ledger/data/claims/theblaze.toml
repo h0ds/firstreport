@@ -36,6 +36,28 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "theblaze"
+field = "domain_registered"
+value = "2000-09-26"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/theblaze.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "theblaze.com"
+expires = "2027-09-26"
+last_changed = "2026-08-25"
+registrar = "MarkMonitor Inc."
+status = [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "theblaze"
 field = "founded"
 value = "2011-09-12"
 source_id = "wikidata"
@@ -83,10 +105,39 @@ qid = "Q35127"
 outlet_id = "theblaze"
 field = "name"
 value = "Blaze Media"
+source_id = "site"
+ref_url = "https://www.theblaze.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "theblaze.com"
+
+[[claim]]
+outlet_id = "theblaze"
+field = "name"
+value = "Blaze Media"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q7711621"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)"
+
+[[claim]]
+outlet_id = "theblaze"
+field = "origin_share"
+value = "first to 0% of 1 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/theblaze"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+origin_of = 0
+shared_stories = 1
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "theblaze"
@@ -99,6 +150,119 @@ note = "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also 
 
 [claim.data]
 qid = "Q6818648"
+
+[[claim]]
+outlet_id = "theblaze"
+field = "posting_cadence"
+value = "0.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/theblaze"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "theblaze"
+field = "registrar"
+value = "MarkMonitor Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/theblaze.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "theblaze.com"
+
+[[claim]]
+outlet_id = "theblaze"
+field = "reliability"
+value = "Generally unreliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2018"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Is_The_Blaze_a_WP:RS_for_America_(2014_film)",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_227#Newsbusters_and_The_Blaze_at_WP:BLP_page_Malcolm_Nance_?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_239#TheBlaze_show_Dana_etc._w_rgd_Dana_Loesch",
+]
+scale = "wikipedia_rsp"
+scope = "Blaze Media (BlazeTV, Conservative Review, CRTV, TheBlaze)"
+status = "generally_unreliable"
+summary = "Blaze Media (including TheBlaze) is considered generally unreliable for facts. In some cases, it may be usable for attributed opinions. In 2018, TheBlaze merged with Conservative Review (CRTV) to form Blaze Media. [ 3 ]"
+
+[[claim]]
+outlet_id = "theblaze"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/theblaze"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "theblaze"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.theblaze.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "theblaze.com"
+final_url = "https://www.theblaze.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "theblaze"
+field = "site_pages"
+value = "links about, contact, privacy, ethics, masthead pages from its home page; no corrections link found"
+source_id = "site"
+ref_url = "https://www.theblaze.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.theblaze.com/jan-6-truth/"
+contact = "https://www.theblaze.com/contact/"
+domain = "theblaze.com"
+ethics = "https://www.theblaze.com/editorial-standards"
+masthead = "https://www.theblaze.com/masthead"
+missing = ["corrections"]
+privacy = "https://www.theblaze.com/privacy"
+
+[[claim]]
+outlet_id = "theblaze"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/theblaze"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "theblaze"
@@ -129,3 +293,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q7711621"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)"
+
+[[claim]]
+outlet_id = "theblaze"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/theblaze"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

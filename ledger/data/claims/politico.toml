@@ -35,6 +35,21 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "politico"
+field = "domain_registered"
+value = "1998-09-18"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/politico.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "politico.com"
+expires = "2027-09-17"
+last_changed = "2026-09-18"
+registrar = "Register.com - Network Solutions, LLC"
+status = ["client transfer prohibited"]
+
+[[claim]]
+outlet_id = "politico"
 field = "founded"
 value = "2007-01-23"
 source_id = "wikidata"
@@ -77,10 +92,39 @@ qid = "Q11032"
 [[claim]]
 outlet_id = "politico"
 field = "name"
+value = "POLITICO"
+source_id = "site"
+ref_url = "https://www.politico.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "politico.com"
+
+[[claim]]
+outlet_id = "politico"
+field = "name"
 value = "Politico"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q3109740"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "politico"
+field = "origin_share"
+value = "first to 50% of 2 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/politico"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 36
+origin_of = 1
+shared_stories = 2
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "politico"
@@ -106,6 +150,124 @@ qid = "Q163560"
 
 [[claim]]
 outlet_id = "politico"
+field = "posting_cadence"
+value = "0.4 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/politico"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 36
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "politico"
+field = "registrar"
+value = "Register.com - Network Solutions, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/politico.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "politico.com"
+
+[[claim]]
+outlet_id = "politico"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2024"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_363#RfC:_Politico_update?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_11#Politico.com",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#DataTreasury",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_50#Politico;_Also_for_Book_reviews:_New_Engish_Review_and_Pajamas_Media",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#self-published?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Is_an_SPLC_report_a_reliable_source_for_List_of_Confederate_monuments_and_memorials?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_241#Statements_of_Fact_Based_on_One_Report_from_One_Media_Outlet,_Sourced_to_Anonymous_Sources",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_458#Politico_status_update",
+]
+scale = "wikipedia_rsp"
+scope = "Politico"
+status = "generally_reliable"
+summary = "Politico is considered generally reliable for American politics. A small number of editors say that Politico is a biased source."
+
+[[claim]]
+outlet_id = "politico"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/politico"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 36
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "politico"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.politico.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "politico.com"
+final_url = "https://www.politico.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "politico"
+field = "site_pages"
+value = "links about, contact, privacy, corrections, masthead pages from its home page; no ethics link found"
+source_id = "site"
+ref_url = "https://www.politico.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.politico.com/news/2026/09/29/larissa-waters-sudden-departure-opens-greens-leadership-and-questions-about-the-partys-future-01096611"
+contact = "https://www.politico.com/feedback"
+corrections = "https://www.politico.com/corrections"
+domain = "politico.com"
+masthead = "https://www.politico.com/staff/jordain-carney"
+missing = ["ethics"]
+privacy = "https://www.politico.com/privacy"
+
+[[claim]]
+outlet_id = "politico"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/politico"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 36
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "politico"
 field = "website"
 value = "https://www.politico.com"
 source_id = "wikidata"
@@ -127,3 +289,19 @@ value = "https://en.wikipedia.org/wiki/Politico"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q3109740"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "politico"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/politico"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 36
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

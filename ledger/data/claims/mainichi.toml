@@ -58,11 +58,107 @@ qid = "Q1110794"
 [[claim]]
 outlet_id = "mainichi"
 field = "name"
+value = "毎日新聞"
+source_id = "site"
+ref_url = "https://mainichi.jp/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "mainichi.jp"
+
+[[claim]]
+outlet_id = "mainichi"
+field = "name"
 value = "Mainichi Shimbun"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1136866"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q1136866 (Mainichi Shimbun); also Q11547261 (mainichi.jp)"
+
+[[claim]]
+outlet_id = "mainichi"
+field = "posting_cadence"
+value = "0.5 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/mainichi"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 47
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "mainichi"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/mainichi"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 47
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "mainichi"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://mainichi.jp/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "mainichi.jp"
+final_url = "https://mainichi.jp/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "mainichi"
+field = "site_pages"
+value = "links contact pages from its home page; no about, privacy, corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://mainichi.jp/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+contact = "https://www.mainichi.co.jp/contact/personal_information.html"
+domain = "mainichi.jp"
+missing = [
+    "about",
+    "privacy",
+    "corrections",
+    "ethics",
+    "masthead",
+]
+
+[[claim]]
+outlet_id = "mainichi"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/mainichi"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 47
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "mainichi"
@@ -93,3 +189,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1136866"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q1136866 (Mainichi Shimbun); also Q11547261 (mainichi.jp)"
+
+[[claim]]
+outlet_id = "mainichi"
+field = "withdrawal_rate"
+value = "11% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/mainichi"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 47
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 5

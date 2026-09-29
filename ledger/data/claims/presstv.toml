@@ -15,6 +15,21 @@ qid = "Q794"
 
 [[claim]]
 outlet_id = "presstv"
+field = "domain_registered"
+value = "2006-11-05"
+source_id = "rdap"
+ref_url = "https://rdap.nominet.uk/uk/domain/presstv.co.uk"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "presstv.co.uk"
+expires = "2026-11-05"
+last_changed = "2024-11-04"
+registrar = "Ionos SE"
+status = ["active"]
+
+[[claim]]
+outlet_id = "presstv"
 field = "founded"
 value = "2007-07-08"
 source_id = "wikidata"
@@ -57,10 +72,39 @@ qid = "Q1616075"
 [[claim]]
 outlet_id = "presstv"
 field = "name"
+value = "PressTV"
+source_id = "site"
+ref_url = "https://www.presstv.co.uk/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "presstv.ir"
+
+[[claim]]
+outlet_id = "presstv"
+field = "name"
 value = "Press TV"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q912429"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "presstv"
+field = "origin_share"
+value = "first to 100% of 13 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/presstv"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 91
+origin_of = 13
+shared_stories = 13
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "presstv"
@@ -72,6 +116,127 @@ retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q1674127"
+
+[[claim]]
+outlet_id = "presstv"
+field = "posting_cadence"
+value = "1.0 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/presstv"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 91
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "presstv"
+field = "registrar"
+value = "Ionos SE"
+source_id = "rdap"
+ref_url = "https://rdap.nominet.uk/uk/domain/presstv.co.uk"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "presstv.co.uk"
+
+[[claim]]
+outlet_id = "presstv"
+field = "reliability"
+value = "Deprecated"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2021"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_PressTV",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_Press_TV_on_Saudi_Arabian_protests",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_42#Press_TV",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_108#Alex_Jones,_Mathaba,_Pravda,_and_PressTV",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_139#Press_TV_and_Veterans_Today_RS_for_their_contibutors",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_175#Using_Press_TV_for_reporting_Hamas_claims",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_190#Press_TV",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#PressTV",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Press_TV's_website",
+]
+scale = "wikipedia_rsp"
+scope = "Press TV"
+status = "deprecated"
+summary = "In the 2020 RfC, editors found a clear consensus to deprecate Press TV, owing to its status as an Iranian government propaganda outlet that publishes disinformation, conspiracy theories, antisemitic content including Holocaust denial, [ 24 ] and a host of other problematic content."
+
+[[claim]]
+outlet_id = "presstv"
+field = "revision_rate"
+value = "1% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/presstv"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 91
+revised = 1
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "presstv"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.presstv.co.uk/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "presstv.ir"
+final_url = "https://www.presstv.co.uk/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "presstv"
+field = "site_pages"
+value = "links about, masthead pages from its home page; no contact, privacy, corrections, ethics link found"
+source_id = "site"
+ref_url = "https://www.presstv.co.uk/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.presstv.co.uk/aboutus/WhatPressTVis"
+domain = "presstv.ir"
+masthead = "https://www.presstv.co.uk/Detail/2026/09/27/777143/Nasrallah-legacy-leadership-sacrifice-resistance-liberation-"
+missing = [
+    "contact",
+    "privacy",
+    "corrections",
+    "ethics",
+]
+
+[[claim]]
+outlet_id = "presstv"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/presstv"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 91
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "presstv"
@@ -96,3 +261,19 @@ value = "https://en.wikipedia.org/wiki/Press_TV"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q912429"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "presstv"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/presstv"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 91
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

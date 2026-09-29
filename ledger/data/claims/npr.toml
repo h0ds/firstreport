@@ -39,8 +39,7 @@ field = "domain_registered"
 value = "1993-12-13"
 source_id = "rdap"
 ref_url = "https://rdap.publicinterestregistry.org/rdap/domain/npr.org"
-retrieved_at = 1790650154
-as_of = "2026-08-11"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "npr.org"
@@ -122,7 +121,7 @@ field = "name"
 value = "NPR"
 source_id = "site"
 ref_url = "https://www.npr.org/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -139,16 +138,16 @@ retrieved_at = 1790661446
 [[claim]]
 outlet_id = "npr"
 field = "origin_share"
-value = "first to 0% of 2 stories other outlets also carried"
+value = "first to 25% of 4 stories other outlets also carried"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/npr"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
 items = 10
-origin_of = 0
-shared_stories = 2
+origin_of = 1
+shared_stories = 4
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -159,7 +158,7 @@ field = "posting_cadence"
 value = "0.1 items/day"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/npr"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
@@ -174,8 +173,7 @@ field = "registrar"
 value = "MarkMonitor Inc."
 source_id = "rdap"
 ref_url = "https://rdap.publicinterestregistry.org/rdap/domain/npr.org"
-retrieved_at = 1790650154
-as_of = "2026-08-11"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "npr.org"
@@ -186,7 +184,7 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790650154
+retrieved_at = 1790668896
 as_of = "2024"
 
 [claim.data]
@@ -198,22 +196,22 @@ discussions = [
     "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_448#Is_NPR_a_reliable_source?",
 ]
 scale = "wikipedia_rsp"
-scope = "NPR (National Public Radio) WP:RSPNPR 📌"
+scope = "NPR (National Public Radio)"
 status = "generally_reliable"
-summary = "There is consensus that NPR, an American public service broadcaster, is generally reliable for news and statements of fact. NPR's opinion pieces should only be used with attribution ."
+summary = "There is consensus that NPR, an American public service broadcaster, is generally reliable for news and statements of fact. NPR's opinion pieces should only be used with attribution."
 
 [[claim]]
 outlet_id = "npr"
 field = "revision_rate"
-value = "0% of items revised after publication"
+value = "10% of items revised after publication"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/npr"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
 items = 10
-revised = 0
+revised = 1
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -224,7 +222,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.npr.org/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 
 [claim.data]
 domain = "npr.org"
@@ -240,7 +238,7 @@ field = "site_pages"
 value = "links about, contact, corrections, ethics pages from its home page; no privacy, masthead link found"
 source_id = "site"
 ref_url = "https://www.npr.org/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
@@ -260,7 +258,7 @@ field = "syndication_share"
 value = "0% of items carry text first published elsewhere; 0% were carried by others"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/npr"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
@@ -301,7 +299,7 @@ field = "withdrawal_rate"
 value = "0% of items withdrawn"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/npr"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]

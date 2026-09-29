@@ -36,6 +36,28 @@ qid = "Q145"
 
 [[claim]]
 outlet_id = "reuters"
+field = "domain_registered"
+value = "1993-06-03"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/reuters.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "reuters.com"
+expires = "2027-06-02"
+last_changed = "2026-05-01"
+registrar = "MarkMonitor Inc."
+status = [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "reuters"
 field = "founded"
 value = "1851-10-01"
 source_id = "wikidata"
@@ -99,6 +121,37 @@ note = "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q2234
 
 [claim.data]
 qid = "Q1141267"
+
+[[claim]]
+outlet_id = "reuters"
+field = "registrar"
+value = "MarkMonitor Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/reuters.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "reuters.com"
+
+[[claim]]
+outlet_id = "reuters"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2018"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_107#Can_this_review_from_reuters_be_used?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_130#Thomson_Reuters",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_243#Can_“wire”_news_services_such_AP,_Reuters,_or_AFP_ever_report_inaccurate,_misleading,_or_false_information",
+]
+scale = "wikipedia_rsp"
+scope = "Reuters"
+status = "generally_reliable"
+summary = "Reuters is a news agency. There is consensus that Reuters is generally reliable. Syndicated reports from Reuters that are published in other sources are also considered generally reliable. Press releases published by Reuters are not automatically reliable."
 
 [[claim]]
 outlet_id = "reuters"

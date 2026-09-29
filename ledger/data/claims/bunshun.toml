@@ -26,11 +26,107 @@ qid = "Q41298"
 [[claim]]
 outlet_id = "bunshun"
 field = "name"
+value = "文春オンライン"
+source_id = "site"
+ref_url = "https://bunshun.jp/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "bunshun.jp"
+
+[[claim]]
+outlet_id = "bunshun"
+field = "name"
 value = "Shūkan Bunshun"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4022413"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q4022413 (Shūkan Bunshun); also Q109594235 (Bunshun Online)"
+
+[[claim]]
+outlet_id = "bunshun"
+field = "posting_cadence"
+value = "0.4 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/bunshun"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 35
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "bunshun"
+field = "revision_rate"
+value = "3% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/bunshun"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 35
+revised = 1
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "bunshun"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://bunshun.jp/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "bunshun.jp"
+final_url = "https://bunshun.jp/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "bunshun"
+field = "site_pages"
+value = "links about, contact pages from its home page; no privacy, corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://bunshun.jp/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://bunshun.jp/list/about_ad"
+contact = "https://bunshun.jp/list/contact"
+domain = "bunshun.jp"
+missing = [
+    "privacy",
+    "corrections",
+    "ethics",
+    "masthead",
+]
+
+[[claim]]
+outlet_id = "bunshun"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/bunshun"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 35
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "bunshun"
@@ -61,3 +157,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4022413"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q4022413 (Shūkan Bunshun); also Q109594235 (Bunshun Online)"
+
+[[claim]]
+outlet_id = "bunshun"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/bunshun"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 35
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

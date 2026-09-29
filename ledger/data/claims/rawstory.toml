@@ -24,6 +24,26 @@ min_means = "shared only by Democrats"
 
 [[claim]]
 outlet_id = "rawstory"
+field = "domain_registered"
+value = "2004-01-29"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/rawstory.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "rawstory.com"
+expires = "2031-01-29"
+last_changed = "2026-01-29"
+registrar = "GoDaddy.com, LLC"
+status = [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+]
+
+[[claim]]
+outlet_id = "rawstory"
 field = "legal_form"
 value = "news website"
 source_id = "wikidata"
@@ -37,9 +57,156 @@ qid = "Q17232649"
 outlet_id = "rawstory"
 field = "name"
 value = "Raw Story"
+source_id = "site"
+ref_url = "https://www.rawstory.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "rawstory.com"
+
+[[claim]]
+outlet_id = "rawstory"
+field = "name"
+value = "Raw Story"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q7759518"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "rawstory"
+field = "origin_share"
+value = "first to 0% of 4 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/rawstory"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+origin_of = 0
+shared_stories = 4
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "rawstory"
+field = "posting_cadence"
+value = "0.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/rawstory"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "rawstory"
+field = "registrar"
+value = "GoDaddy.com, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/rawstory.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "rawstory.com"
+
+[[claim]]
+outlet_id = "rawstory"
+field = "reliability"
+value = "Generally unreliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2021"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#RfC_-_The_Raw_Story",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_12#Raw_Story",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_17#Raw_Story",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_112#The_Raw_Story",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_202#Raw_Story",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#Raw_story_a_RS_for_details_on_this_obscure_death?",
+]
+scale = "wikipedia_rsp"
+scope = "Raw Story"
+status = "generally_unreliable"
+summary = "There is consensus that Raw Story is generally unreliable for factual reporting, based upon a pattern of publishing false and sensationalized stories. Editors almost unanimously agree that the source is biased and that in-text attribution should accompany each use of the source."
+
+[[claim]]
+outlet_id = "rawstory"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/rawstory"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "rawstory"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.rawstory.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "rawstory.com"
+final_url = "https://www.rawstory.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "rawstory"
+field = "site_pages"
+value = "links about, privacy, ethics, masthead pages from its home page; no contact, corrections link found"
+source_id = "site"
+ref_url = "https://www.rawstory.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.rawstory.com/st/About_Us_Raw_Story"
+domain = "rawstory.com"
+ethics = "https://www.rawstory.com/st/ethics-policy"
+masthead = "https://www.rawstory.com/raw-investigates/white-house-staff-quits/"
+missing = [
+    "contact",
+    "corrections",
+]
+privacy = "https://www.rawstory.com/privacy-policy/"
+
+[[claim]]
+outlet_id = "rawstory"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/rawstory"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "rawstory"
@@ -64,3 +231,19 @@ value = "https://en.wikipedia.org/wiki/Raw_Story"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q7759518"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "rawstory"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/rawstory"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

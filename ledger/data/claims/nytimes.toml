@@ -40,8 +40,7 @@ field = "domain_registered"
 value = "1994-01-18"
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/nytimes.com"
-retrieved_at = 1790650154
-as_of = "2024-12-18"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "nytimes.com"
@@ -90,16 +89,16 @@ note = "2 Wikidata items match the domain; this is Q9684 (The New York Times); a
 [[claim]]
 outlet_id = "nytimes"
 field = "origin_share"
-value = "first to 36% of 11 stories other outlets also carried"
+value = "first to 14% of 14 stories other outlets also carried"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/nytimes"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 58
-origin_of = 4
-shared_stories = 11
+items = 61
+origin_of = 2
+shared_stories = 14
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -119,14 +118,14 @@ qid = "Q2529982"
 [[claim]]
 outlet_id = "nytimes"
 field = "posting_cadence"
-value = "0.6 items/day"
+value = "0.7 items/day"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/nytimes"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 58
+items = 61
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -137,8 +136,7 @@ field = "registrar"
 value = "MarkMonitor Inc."
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/nytimes.com"
-retrieved_at = 1790650154
-as_of = "2024-12-18"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "nytimes.com"
@@ -149,7 +147,7 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790650154
+retrieved_at = 1790668896
 as_of = "2024"
 
 [claim.data]
@@ -158,9 +156,9 @@ discussions = [
     "#cite_note-70",
 ]
 scale = "wikipedia_rsp"
-scope = "The New York Times ( NYT ) WP:NYT 📌 WP:NYTIMES 📌"
+scope = "The New York Times (NYT)"
 status = "generally_reliable"
-summary = "There is consensus that The New York Times is generally reliable. WP:RSOPINION should be used to evaluate opinion columns, while WP:NEWSBLOG should be used for the blogs on The New York Times 's website. The 2018 RfC cites WP:MEDPOP to establish that popular press sources such as The New York Times should generally not be used to support medical claims ."
+summary = "There is consensus that The New York Times is generally reliable. WP:RSOPINION should be used to evaluate opinion columns, while WP:NEWSBLOG should be used for the blogs on The New York Times's website. The 2018 RfC cites WP:MEDPOP to establish that popular press sources such as The New York Times should generally not be used to support medical claims."
 
 [[claim]]
 outlet_id = "nytimes"
@@ -168,11 +166,11 @@ field = "revision_rate"
 value = "0% of items revised after publication"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/nytimes"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 58
+items = 61
 revised = 0
 window_days = 90
 window_end = "2026-09-29"
@@ -184,7 +182,7 @@ field = "site_https"
 value = "https not served (status 403)"
 source_id = "site"
 ref_url = "https://www.nytimes.com/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 
 [claim.data]
 domain = "nytimes.com"
@@ -200,13 +198,13 @@ field = "syndication_share"
 value = "0% of items carry text first published elsewhere; 0% were carried by others"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/nytimes"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
 copied_by_others = 0
 copies = 0
-items = 58
+items = 61
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -244,15 +242,15 @@ note = "2 Wikidata items match the domain; this is Q9684 (The New York Times); a
 [[claim]]
 outlet_id = "nytimes"
 field = "withdrawal_rate"
-value = "0% of items withdrawn"
+value = "3% of items withdrawn"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/nytimes"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 58
+items = 61
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
-withdrawn = 0
+withdrawn = 2

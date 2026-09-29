@@ -35,6 +35,26 @@ qid = "Q334"
 
 [[claim]]
 outlet_id = "cna"
+field = "domain_registered"
+value = "1999-02-23"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/channelnewsasia.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "channelnewsasia.com"
+expires = "2027-02-23"
+last_changed = "2026-02-19"
+registrar = "CSC Corporate Domains, Inc."
+status = [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "cna"
 field = "founded"
 value = "1999-03-01"
 source_id = "wikidata"
@@ -67,9 +87,38 @@ qid = "Q561068"
 outlet_id = "cna"
 field = "name"
 value = "CNA"
+source_id = "site"
+ref_url = "https://www.channelnewsasia.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "channelnewsasia.com"
+
+[[claim]]
+outlet_id = "cna"
+field = "name"
+value = "CNA"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q40238"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "cna"
+field = "origin_share"
+value = "first to 33% of 6 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cna"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 42
+origin_of = 2
+shared_stories = 6
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "cna"
@@ -81,6 +130,117 @@ retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q1368796"
+
+[[claim]]
+outlet_id = "cna"
+field = "posting_cadence"
+value = "0.5 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cna"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 42
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "cna"
+field = "registrar"
+value = "CSC Corporate Domains, Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/channelnewsasia.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "channelnewsasia.com"
+
+[[claim]]
+outlet_id = "cna"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2025"
+
+[claim.data]
+discussions = ["https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_489#RfC:_Channel_NewsAsia_(CNA)_and_other_Mediacorp-affiliated_media"]
+scale = "wikipedia_rsp"
+scope = "CNA (Channel NewsAsia)"
+status = "generally_reliable"
+summary = "The 2025 RfC established a consensus that CNA, a Singaporean state-owned news channel, is a generally reliable source."
+
+[[claim]]
+outlet_id = "cna"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cna"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 42
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "cna"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.channelnewsasia.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "channelnewsasia.com"
+final_url = "https://www.channelnewsasia.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "cna"
+field = "site_pages"
+value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.channelnewsasia.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.channelnewsasia.com/about-us"
+contact = "https://www.channelnewsasia.com/contact-us"
+domain = "channelnewsasia.com"
+missing = [
+    "corrections",
+    "ethics",
+    "masthead",
+]
+privacy = "https://www.mediacorp.sg/privacy-policy"
+
+[[claim]]
+outlet_id = "cna"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cna"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 42
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "cna"
@@ -105,3 +265,19 @@ value = "https://en.wikipedia.org/wiki/CNA_(TV_network)"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q40238"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "cna"
+field = "withdrawal_rate"
+value = "7% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cna"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 42
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 3

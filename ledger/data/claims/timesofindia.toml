@@ -36,6 +36,24 @@ qid = "Q668"
 
 [[claim]]
 outlet_id = "timesofindia"
+field = "domain_registered"
+value = "1996-11-22"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/indiatimes.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "indiatimes.com"
+expires = "2026-11-21"
+last_changed = "2025-10-23"
+registrar = "Tucows Domains Inc."
+status = [
+    "client transfer prohibited",
+    "client update prohibited",
+]
+
+[[claim]]
+outlet_id = "timesofindia"
 field = "founded"
 value = "1838-01-01"
 source_id = "wikidata"
@@ -67,11 +85,40 @@ qid = "Q11032"
 [[claim]]
 outlet_id = "timesofindia"
 field = "name"
+value = "Indiatimes"
+source_id = "site"
+ref_url = "https://www.indiatimes.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "indiatimes.com"
+
+[[claim]]
+outlet_id = "timesofindia"
+field = "name"
 value = "The Times of India"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q46807"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)"
+
+[[claim]]
+outlet_id = "timesofindia"
+field = "origin_share"
+value = "first to 0% of 6 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/timesofindia"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 36
+origin_of = 0
+shared_stories = 6
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "timesofindia"
@@ -111,6 +158,126 @@ qid = "Q972645"
 
 [[claim]]
 outlet_id = "timesofindia"
+field = "posting_cadence"
+value = "0.4 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/timesofindia"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 36
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "timesofindia"
+field = "registrar"
+value = "Tucows Domains Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/indiatimes.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "indiatimes.com"
+
+[[claim]]
+outlet_id = "timesofindia"
+field = "reliability"
+value = "No consensus"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2025"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_287#Times_of_India_RFC",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_447#RfC:_The_Times_of_India",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_320#The_Times_of_India",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_342#Valid_Sources?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_353#Circular_references_from_The_Times_of_India",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_364#Times_of_India_is_not_that_pro-government_as_mentioned_?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_442#Times_of_India_running_AI-generated_articles?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_493#Another_AI-generated_article_from_The_Times_of_India",
+]
+scale = "wikipedia_rsp"
+scope = "The Times of India (post-1950) (TOI)"
+status = "no_consensus"
+summary = "Additional considerations apply to articles published in The Times of India (TOI) after 1950. TOI has sometimes had a poor reputation for fact-checking and its use should be evaluated with caution. Editors should ensure that they do not use paid advertorials —which were first published in TOI in 1950 at the earliest—to verify information or establish notability. Paid advertorials may be of particu"
+
+[[claim]]
+outlet_id = "timesofindia"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/timesofindia"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 36
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "timesofindia"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.indiatimes.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "indiatimes.com"
+final_url = "https://www.indiatimes.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "timesofindia"
+field = "site_pages"
+value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+source_id = "site"
+ref_url = "https://www.indiatimes.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.indiatimes.com/trending/who-is-scott-kretzschmar-cornell-chi-phi-member-faces-police-officer-claims-as-rumours-about-his-mothers-law-enforcement-ties-spark-shock/articleshow/134549780.html"
+contact = "https://www.indiatimes.com/contactus"
+domain = "indiatimes.com"
+ethics = "https://www.indiatimes.com/editorial-policy"
+missing = [
+    "corrections",
+    "masthead",
+]
+privacy = "https://www.indiatimes.com/privacy-policy"
+
+[[claim]]
+outlet_id = "timesofindia"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/timesofindia"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 36
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "timesofindia"
 field = "website"
 value = "http://timesofindia.indiatimes.com"
 source_id = "wikidata"
@@ -138,3 +305,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q46807"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)"
+
+[[claim]]
+outlet_id = "timesofindia"
+field = "withdrawal_rate"
+value = "39% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/timesofindia"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 36
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 14

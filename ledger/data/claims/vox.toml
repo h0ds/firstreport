@@ -35,6 +35,21 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "vox"
+field = "domain_registered"
+value = "1994-09-30"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/vox.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "vox.com"
+expires = "2027-09-29"
+last_changed = "2026-09-16"
+registrar = "Amazon Registrar, Inc."
+status = ["client transfer prohibited"]
+
+[[claim]]
+outlet_id = "vox"
 field = "founded"
 value = "2014-04-06"
 source_id = "wikidata"
@@ -56,6 +71,18 @@ qid = "Q1153191"
 outlet_id = "vox"
 field = "name"
 value = "Vox"
+source_id = "site"
+ref_url = "https://www.vox.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "vox.com"
+
+[[claim]]
+outlet_id = "vox"
+field = "name"
+value = "Vox"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q20877087"
 retrieved_at = 1790661446
@@ -70,6 +97,123 @@ retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q7942354"
+
+[[claim]]
+outlet_id = "vox"
+field = "posting_cadence"
+value = "0.2 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/vox"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 17
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "vox"
+field = "registrar"
+value = "Amazon Registrar, Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/vox.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "vox.com"
+
+[[claim]]
+outlet_id = "vox"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2024"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_170#is_quoting_someone's_calculations_based_on_four_year_old_outdated_information_allowed?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_181#Huffington_Post_and_Vox_and_WP:BLP",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Vox.com_and_Huffington_Post_at_Smith_&_Wesson_M&P15",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#Vox_article_containing_a_factually_wrong_claim_is_used_in_an_article",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_362#Vox_revisited",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_388#Vox",
+    'https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_441#OpenAI_"content_and_product_partnerships"_with_Vox_Media_and_The_Atlantic',
+]
+scale = "wikipedia_rsp"
+scope = "Vox (Recode)"
+status = "generally_reliable"
+summary = "Vox is considered generally reliable. Some editors say that Vox is a partisan source in the field of politics or that it does not always clearly delineate reporting and opinion content. See also: Polygon (pre–May 2025), The Verge, New York"
+
+[[claim]]
+outlet_id = "vox"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/vox"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 17
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "vox"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.vox.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "vox.com"
+final_url = "https://www.vox.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "vox"
+field = "site_pages"
+value = "links about, contact, privacy, ethics, masthead pages from its home page; no corrections link found"
+source_id = "site"
+ref_url = "https://www.vox.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.vox.com/today-explained-newsletter/503597/uncomfortable-truth-about-aquariums-beluga-deaths"
+contact = "https://www.vox.com/contact"
+domain = "vox.com"
+ethics = "https://www.vox.com/2018/12/7/18113237/ethics-and-guidelines-at-vox-com"
+masthead = "https://www.vox.com/masthead"
+missing = ["corrections"]
+privacy = "https://www.voxmedia.com/legal/privacy-notice"
+
+[[claim]]
+outlet_id = "vox"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/vox"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 17
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "vox"
@@ -94,3 +238,19 @@ value = "https://en.wikipedia.org/wiki/Vox_(website)"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q20877087"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "vox"
+field = "withdrawal_rate"
+value = "35% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/vox"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 17
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 6

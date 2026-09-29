@@ -35,6 +35,21 @@ qid = "Q334"
 
 [[claim]]
 outlet_id = "straitstimes"
+field = "domain_registered"
+value = "1997-08-18"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/straitstimes.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "straitstimes.com"
+expires = "2027-08-17"
+last_changed = "2026-08-13"
+registrar = "CSC Corporate Domains, Inc."
+status = ["client transfer prohibited"]
+
+[[claim]]
+outlet_id = "straitstimes"
 field = "founded"
 value = "1845-07-15"
 source_id = "wikidata"
@@ -56,9 +71,38 @@ qid = "Q1110794"
 outlet_id = "straitstimes"
 field = "name"
 value = "The Straits Times"
+source_id = "site"
+ref_url = "https://www.straitstimes.com/global"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "straitstimes.com"
+
+[[claim]]
+outlet_id = "straitstimes"
+field = "name"
+value = "The Straits Times"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q498921"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "straitstimes"
+field = "origin_share"
+value = "first to 32% of 31 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/straitstimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 63
+origin_of = 10
+shared_stories = 31
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "straitstimes"
@@ -70,6 +114,121 @@ retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q263204"
+
+[[claim]]
+outlet_id = "straitstimes"
+field = "posting_cadence"
+value = "0.7 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/straitstimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 63
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "straitstimes"
+field = "registrar"
+value = "CSC Corporate Domains, Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/straitstimes.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "straitstimes.com"
+
+[[claim]]
+outlet_id = "straitstimes"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2024"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed",
+]
+scale = "wikipedia_rsp"
+scope = "The Straits Times (ST)"
+status = "generally_reliable"
+summary = "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+
+[[claim]]
+outlet_id = "straitstimes"
+field = "revision_rate"
+value = "5% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/straitstimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 63
+revised = 3
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "straitstimes"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.straitstimes.com/global"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "straitstimes.com"
+final_url = "https://www.straitstimes.com/global"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "straitstimes"
+field = "site_pages"
+value = "links about pages from its home page; no contact, privacy, corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.straitstimes.com/global"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://vt.tiktok.com/ZSMr24eyF/?ref=headstart-navbar"
+domain = "straitstimes.com"
+missing = [
+    "contact",
+    "privacy",
+    "corrections",
+    "ethics",
+    "masthead",
+]
+
+[[claim]]
+outlet_id = "straitstimes"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/straitstimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 63
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "straitstimes"
@@ -94,3 +253,19 @@ value = "https://en.wikipedia.org/wiki/The_Straits_Times"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q498921"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "straitstimes"
+field = "withdrawal_rate"
+value = "5% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/straitstimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 63
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 3

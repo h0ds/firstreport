@@ -24,6 +24,21 @@ min_means = "shared only by Democrats"
 
 [[claim]]
 outlet_id = "motherjones"
+field = "domain_registered"
+value = "1995-06-19"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/motherjones.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "motherjones.com"
+expires = "2027-06-18"
+last_changed = "2025-04-19"
+registrar = "Network Solutions, LLC"
+status = ["client transfer prohibited"]
+
+[[claim]]
+outlet_id = "motherjones"
 field = "founded"
 value = "1976-01-01"
 source_id = "wikidata"
@@ -59,10 +74,156 @@ qid = "Q1002697"
 outlet_id = "motherjones"
 field = "name"
 value = "Mother Jones"
+source_id = "site"
+ref_url = "https://www.motherjones.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "motherjones.com"
+
+[[claim]]
+outlet_id = "motherjones"
+field = "name"
+value = "Mother Jones"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q851510"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q851510 (Mother Jones); also Q55467943 (Foundation for National Progress)"
+
+[[claim]]
+outlet_id = "motherjones"
+field = "origin_share"
+value = "first to 0% of 3 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/motherjones"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 10
+origin_of = 0
+shared_stories = 3
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "motherjones"
+field = "posting_cadence"
+value = "0.1 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/motherjones"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 10
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "motherjones"
+field = "registrar"
+value = "Network Solutions, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/motherjones.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "motherjones.com"
+
+[[claim]]
+outlet_id = "motherjones"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2019"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_132#[Mother_Jones_and_Rolling_Stone_articles_as_RS_sources_in_a_BLP_for_a_contentious_claim",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_149#Opinion_column_by_Stephanie_Mencimer_in_Mother_Jones",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_188#Buzzfeed,_Mother_Jones_for_BLP's.",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_229#Is_Mother_Jones_magazine_a_reliable_source_for_investigative_reporting?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_274#Does_this_Mother_Jones_article_accurately_summarize_the_arguments_made_by_the_PragerU_videos_it_cites?",
+]
+scale = "wikipedia_rsp"
+scope = "Mother Jones (MoJo)"
+status = "generally_reliable"
+summary = "There is consensus that Mother Jones is generally reliable. Almost all editors consider Mother Jones a biased source, so its statements (particularly on political topics) may need to be attributed. Consider whether content from this publication constitutes due weight before citing it in an article."
+
+[[claim]]
+outlet_id = "motherjones"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/motherjones"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 10
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "motherjones"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.motherjones.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "motherjones.com"
+final_url = "https://www.motherjones.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "motherjones"
+field = "site_pages"
+value = "links about, contact, privacy, masthead pages from its home page; no corrections, ethics link found"
+source_id = "site"
+ref_url = "https://www.motherjones.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.motherjones.com/about/privacy-policy/"
+contact = "https://www.motherjones.com/contact/"
+domain = "motherjones.com"
+masthead = "https://www.motherjones.com/blogs/mojo-wire/"
+missing = [
+    "corrections",
+    "ethics",
+]
+privacy = "https://policies.google.com/privacy"
+
+[[claim]]
+outlet_id = "motherjones"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/motherjones"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 10
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "motherjones"
@@ -93,3 +254,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q851510"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q851510 (Mother Jones); also Q55467943 (Foundation for National Progress)"
+
+[[claim]]
+outlet_id = "motherjones"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/motherjones"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 10
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

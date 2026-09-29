@@ -46,6 +46,21 @@ qid = "Q142"
 
 [[claim]]
 outlet_id = "euronews"
+field = "domain_registered"
+value = "1997-04-24"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/euronews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "euronews.com"
+expires = "2027-04-25"
+last_changed = "2026-03-25"
+registrar = "Hogan Lovells International LLP"
+status = ["client transfer prohibited"]
+
+[[claim]]
+outlet_id = "euronews"
 field = "founded"
 value = "1993-01-01"
 source_id = "wikidata"
@@ -77,10 +92,39 @@ qid = "Q1616075"
 [[claim]]
 outlet_id = "euronews"
 field = "name"
+value = "euronews"
+source_id = "site"
+ref_url = "https://www.euronews.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "euronews.com"
+
+[[claim]]
+outlet_id = "euronews"
+field = "name"
 value = "Euronews"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q8478"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "euronews"
+field = "origin_share"
+value = "first to 26% of 23 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/euronews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 58
+origin_of = 6
+shared_stories = 23
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "euronews"
@@ -106,6 +150,101 @@ qid = "Q2720711"
 
 [[claim]]
 outlet_id = "euronews"
+field = "posting_cadence"
+value = "0.6 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/euronews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 58
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "euronews"
+field = "registrar"
+value = "Hogan Lovells International LLP"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/euronews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "euronews.com"
+
+[[claim]]
+outlet_id = "euronews"
+field = "revision_rate"
+value = "2% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/euronews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 58
+revised = 1
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "euronews"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.euronews.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "euronews.com"
+final_url = "https://www.euronews.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "euronews"
+field = "site_pages"
+value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.euronews.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.euronews.com/2026/09/24/the-eu-wants-to-protect-children-online-what-about-everyone-else"
+contact = "https://www.euronews.com/contact"
+domain = "euronews.com"
+missing = [
+    "corrections",
+    "ethics",
+    "masthead",
+]
+privacy = "https://www.euronews.com/terms-and-conditions/#privacypolicy"
+
+[[claim]]
+outlet_id = "euronews"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/euronews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 58
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "euronews"
 field = "website"
 value = "http://www.euronews.com/"
 source_id = "wikidata"
@@ -127,3 +266,19 @@ value = "https://en.wikipedia.org/wiki/Euronews"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q8478"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "euronews"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/euronews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 58
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

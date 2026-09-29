@@ -36,6 +36,28 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "newsmax"
+field = "domain_registered"
+value = "1998-07-18"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/newsmax.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "newsmax.com"
+expires = "2027-07-17"
+last_changed = "2026-07-17"
+registrar = "SafeNames Ltd."
+status = [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "newsmax"
 field = "founded"
 value = "1998-01-01"
 source_id = "wikidata"
@@ -58,11 +80,157 @@ qid = "Q4830453"
 [[claim]]
 outlet_id = "newsmax"
 field = "name"
+value = "Newsmax"
+source_id = "site"
+ref_url = "https://www.newsmax.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "newsmax.com"
+
+[[claim]]
+outlet_id = "newsmax"
+field = "name"
 value = "Newsmax Media"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q11991273"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)"
+
+[[claim]]
+outlet_id = "newsmax"
+field = "origin_share"
+value = "first to 0% of 11 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/newsmax"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+origin_of = 0
+shared_stories = 11
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "newsmax"
+field = "posting_cadence"
+value = "0.2 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/newsmax"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "newsmax"
+field = "registrar"
+value = "SafeNames Ltd."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/newsmax.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "newsmax.com"
+
+[[claim]]
+outlet_id = "newsmax"
+field = "reliability"
+value = "Deprecated"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2022"
+note = "matched by name only; verify the row is this outlet"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#Newsmax",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Newsmax",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_297#Is_Newsmax_reliable_for_the_best_Catholic_Colleges?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#Newsmax_interviewee's_opinions",
+]
+scale = "wikipedia_rsp"
+scope = "Newsmax"
+status = "deprecated"
+summary = "Newsmax was deprecated by snowball clause consensus in the November 2020 RfC. Concerns of editors included that Newsmax lacks adherence to journalistic standards, launders propaganda, promulgates misinformation, promotes conspiracy theories and false information for political purposes, and promotes medical misinformation such as COVID-19 -related falsehoods, climate change denialism, conspiracy th"
+
+[[claim]]
+outlet_id = "newsmax"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/newsmax"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "newsmax"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.newsmax.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "newsmax.com"
+final_url = "https://www.newsmax.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "newsmax"
+field = "site_pages"
+value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+source_id = "site"
+ref_url = "https://www.newsmax.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.newsmax.com/newsmax-tv/john-zogby-democrats-dsa/2026/09/28/id/1270910/"
+contact = "https://www.newsmax.com/contact/"
+domain = "newsmax.com"
+ethics = "https://www.newsmax.com/politics/us-fuel-economy-standards-gas-powered-vehicles/2026/09/28/id/1270908/"
+missing = [
+    "corrections",
+    "masthead",
+]
+privacy = "https://www.newsmax.com/privacystatement/"
+
+[[claim]]
+outlet_id = "newsmax"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/newsmax"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 20
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "newsmax"
@@ -93,3 +261,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q11991273"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)"
+
+[[claim]]
+outlet_id = "newsmax"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/newsmax"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

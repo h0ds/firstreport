@@ -36,6 +36,21 @@ qid = "Q668"
 
 [[claim]]
 outlet_id = "ndtv"
+field = "domain_registered"
+value = "1996-09-26"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/ndtv.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "ndtv.com"
+expires = "2032-09-25"
+last_changed = "2026-09-26"
+registrar = "Network Solutions, LLC"
+status = ["pending transfer"]
+
+[[claim]]
+outlet_id = "ndtv"
 field = "founded"
 value = "1988-01-01"
 source_id = "wikidata"
@@ -90,6 +105,23 @@ note = "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q170558
 
 [[claim]]
 outlet_id = "ndtv"
+field = "origin_share"
+value = "first to 20% of 20 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/ndtv"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 32
+origin_of = 4
+shared_stories = 20
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "ndtv"
 field = "owner"
 value = "Adani Group"
 source_id = "wikidata"
@@ -99,6 +131,81 @@ note = "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q170558
 
 [claim.data]
 qid = "Q4680631"
+
+[[claim]]
+outlet_id = "ndtv"
+field = "posting_cadence"
+value = "0.4 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/ndtv"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 32
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "ndtv"
+field = "registrar"
+value = "Network Solutions, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/ndtv.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "ndtv.com"
+
+[[claim]]
+outlet_id = "ndtv"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/ndtv"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 32
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "ndtv"
+field = "site_https"
+value = "https not served (status 403)"
+source_id = "site"
+ref_url = "https://www.ndtv.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "ndtv.com"
+final_url = "https://www.ndtv.com/"
+http_redirects_to_https = true
+http_status = 403
+https = false
+status = 403
+
+[[claim]]
+outlet_id = "ndtv"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/ndtv"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 32
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "ndtv"
@@ -134,3 +241,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q2985356"
 retrieved_at = 1790661446
 note = "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)"
+
+[[claim]]
+outlet_id = "ndtv"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/ndtv"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 32
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

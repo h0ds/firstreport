@@ -36,6 +36,21 @@ qid = "Q17"
 
 [[claim]]
 outlet_id = "nikkeiasia"
+field = "domain_registered"
+value = "1995-05-09"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/nikkei.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "nikkei.com"
+expires = "2027-05-10"
+last_changed = "2026-05-08"
+registrar = "Japan Registry Services Co., Ltd."
+status = ["active"]
+
+[[claim]]
+outlet_id = "nikkeiasia"
 field = "founded"
 value = "1876-12-02"
 source_id = "wikidata"
@@ -58,11 +73,135 @@ qid = "Q1110794"
 [[claim]]
 outlet_id = "nikkeiasia"
 field = "name"
+value = "日本経済新聞"
+source_id = "site"
+ref_url = "https://www.nikkei.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "nikkei.com"
+
+[[claim]]
+outlet_id = "nikkeiasia"
+field = "name"
 value = "Nihon Keizai Shimbun"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1077694"
 retrieved_at = 1790661446
 note = "3 Wikidata items match the domain; this is Q1077694 (Nihon Keizai Shimbun); also Q17216388 (Nikkei Asia), Q55710642 (Nikkei)"
+
+[[claim]]
+outlet_id = "nikkeiasia"
+field = "origin_share"
+value = "first to 100% of 2 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nikkeiasia"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 57
+origin_of = 2
+shared_stories = 2
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "nikkeiasia"
+field = "posting_cadence"
+value = "0.6 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nikkeiasia"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 57
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "nikkeiasia"
+field = "registrar"
+value = "Japan Registry Services Co., Ltd."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/nikkei.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "nikkei.com"
+
+[[claim]]
+outlet_id = "nikkeiasia"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nikkeiasia"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 57
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "nikkeiasia"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.nikkei.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "nikkei.com"
+final_url = "https://www.nikkei.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "nikkeiasia"
+field = "site_pages"
+value = "links about, privacy pages from its home page; no contact, corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.nikkei.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.nikkei.com/promotion/about/?n_cid=DSPRM1RC01"
+domain = "nikkei.com"
+missing = [
+    "contact",
+    "corrections",
+    "ethics",
+    "masthead",
+]
+privacy = "https://www.nikkei.com/lounge/privacy/cookie/policy.html"
+
+[[claim]]
+outlet_id = "nikkeiasia"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nikkeiasia"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 57
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "nikkeiasia"
@@ -96,3 +235,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1077694"
 retrieved_at = 1790661446
 note = "3 Wikidata items match the domain; this is Q1077694 (Nihon Keizai Shimbun); also Q17216388 (Nikkei Asia), Q55710642 (Nikkei)"
+
+[[claim]]
+outlet_id = "nikkeiasia"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nikkeiasia"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 57
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

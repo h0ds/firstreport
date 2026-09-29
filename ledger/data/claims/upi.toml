@@ -48,6 +48,21 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "upi"
+field = "domain_registered"
+value = "1995-04-19"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/upi.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "upi.com"
+expires = "2027-04-20"
+last_changed = "2026-03-21"
+registrar = "NameCheap, Inc."
+status = ["client transfer prohibited"]
+
+[[claim]]
+outlet_id = "upi"
 field = "founded"
 value = "1907-01-01"
 source_id = "wikidata"
@@ -147,6 +162,33 @@ note = "2 Wikidata items match the domain; this is Q493845 (United Press Interna
 
 [claim.data]
 qid = "Q462079"
+
+[[claim]]
+outlet_id = "upi"
+field = "registrar"
+value = "NameCheap, Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/upi.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "upi.com"
+
+[[claim]]
+outlet_id = "upi"
+field = "site_https"
+value = "https not served (status 403)"
+source_id = "site"
+ref_url = "https://upi.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "upi.com"
+final_url = "https://upi.com/"
+http_redirects_to_https = false
+http_status = 403
+https = false
+status = 403
 
 [[claim]]
 outlet_id = "upi"

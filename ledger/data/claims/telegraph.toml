@@ -36,6 +36,21 @@ qid = "Q145"
 
 [[claim]]
 outlet_id = "telegraph"
+field = "domain_registered"
+value = "1995-07-29"
+source_id = "rdap"
+ref_url = "https://rdap.nominet.uk/uk/domain/telegraph.co.uk"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "telegraph.co.uk"
+expires = "2028-07-29"
+last_changed = "2026-06-27"
+registrar = "Markmonitor Inc."
+status = ["active"]
+
+[[claim]]
+outlet_id = "telegraph"
 field = "founded"
 value = "1855-01-01"
 source_id = "wikidata"
@@ -102,6 +117,120 @@ qid = "Q7696245"
 
 [[claim]]
 outlet_id = "telegraph"
+field = "posting_cadence"
+value = "1.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/telegraph"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 119
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "telegraph"
+field = "registrar"
+value = "Markmonitor Inc."
+source_id = "rdap"
+ref_url = "https://rdap.nominet.uk/uk/domain/telegraph.co.uk"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "telegraph.co.uk"
+
+[[claim]]
+outlet_id = "telegraph"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2026"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_392#RfC:_The_Telegraph",
+    "#cite_note-30",
+]
+scale = "wikipedia_rsp"
+scope = "The Daily Telegraph (UK) (excluding transgender topics) (The Telegraph, The Sunday Telegraph)"
+status = "generally_reliable"
+summary = "There is consensus that The Daily Telegraph (also known as The Telegraph) is generally reliable. Some editors believe that The Daily Telegraph is biased or opinionated for politics. Unrelated to The Daily Telegraph (Sydney)."
+
+[[claim]]
+outlet_id = "telegraph"
+field = "reliability"
+value = "No consensus"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2025"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_444#RFC:_The_Telegraph_on_trans_issues",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_441#The_Telegraph_and_trans_issues",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_496#The_Telegraph_repeating_a_hoax_from_Tucker_Carlson",
+]
+scale = "wikipedia_rsp"
+scope = "The Daily Telegraph (UK) (transgender topics) (The Telegraph, The Sunday Telegraph)"
+status = "no_consensus"
+summary = "In regards to transgender issues, there is no consensus on the reliability of The Daily Telegraph. Editors consider The Telegraph biased or opinionated on the topic, and its statements should be attributed."
+
+[[claim]]
+outlet_id = "telegraph"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/telegraph"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 119
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "telegraph"
+field = "site_https"
+value = "https not served (status 402)"
+source_id = "site"
+ref_url = "https://www.telegraph.co.uk/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "telegraph.co.uk"
+final_url = "https://www.telegraph.co.uk/"
+http_redirects_to_https = true
+http_status = 402
+https = false
+status = 402
+
+[[claim]]
+outlet_id = "telegraph"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/telegraph"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 119
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "telegraph"
 field = "website"
 value = "https://telegraph.co.uk"
 source_id = "wikidata"
@@ -129,3 +258,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q192621"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)"
+
+[[claim]]
+outlet_id = "telegraph"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/telegraph"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 119
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

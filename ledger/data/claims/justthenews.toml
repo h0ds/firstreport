@@ -15,6 +15,26 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "justthenews"
+field = "domain_registered"
+value = "2005-07-23"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/justthenews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "justthenews.com"
+expires = "2028-07-23"
+last_changed = "2026-08-28"
+registrar = "GoDaddy.com, LLC"
+status = [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+]
+
+[[claim]]
+outlet_id = "justthenews"
 field = "founded"
 value = "2020-01-01"
 source_id = "wikidata"
@@ -64,6 +84,116 @@ retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "justthenews"
+field = "origin_share"
+value = "first to 100% of 7 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/justthenews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 21
+origin_of = 7
+shared_stories = 7
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "justthenews"
+field = "posting_cadence"
+value = "0.2 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/justthenews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 21
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "justthenews"
+field = "registrar"
+value = "GoDaddy.com, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/justthenews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "justthenews.com"
+
+[[claim]]
+outlet_id = "justthenews"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/justthenews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 21
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "justthenews"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://justthenews.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "justthenews.com"
+final_url = "https://justthenews.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "justthenews"
+field = "site_pages"
+value = "links about, contact, privacy, ethics, masthead pages from its home page; no corrections link found"
+source_id = "site"
+ref_url = "https://justthenews.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://justthenews.com/government/white-house/mlb-reportedly-reached-out-white-house-about-hosting-game-national-park-no"
+contact = "https://justthenews.com/form/contact"
+domain = "justthenews.com"
+ethics = "https://justthenews.com/index%2ephp/accountability/political-ethics"
+masthead = "https://justthenews.com/center-square-staff"
+missing = ["corrections"]
+privacy = "https://justthenews.com/privacy-policy"
+
+[[claim]]
+outlet_id = "justthenews"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/justthenews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 21
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "justthenews"
 field = "website"
 value = "https://justthenews.com/"
 source_id = "wikidata"
@@ -85,3 +215,19 @@ value = "https://en.wikipedia.org/wiki/Just_the_News"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q103844322"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "justthenews"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/justthenews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 21
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

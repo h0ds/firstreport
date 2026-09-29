@@ -36,6 +36,28 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "cnn"
+field = "domain_registered"
+value = "1993-09-22"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/cnn.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "cnn.com"
+expires = "2027-09-21"
+last_changed = "2025-04-22"
+registrar = "Nom-iq Ltd. dba COM LAUDE"
+status = [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "cnn"
 field = "founded"
 value = "1980-06-01"
 source_id = "wikidata"
@@ -95,6 +117,18 @@ qid = "Q561068"
 outlet_id = "cnn"
 field = "name"
 value = "CNN"
+source_id = "site"
+ref_url = "https://edition.cnn.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "cnn.com"
+
+[[claim]]
+outlet_id = "cnn"
+field = "name"
+value = "CNN"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q48340"
 retrieved_at = 1790661446
@@ -123,6 +157,121 @@ note = "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 
 
 [claim.data]
 qid = "Q107074885"
+
+[[claim]]
+outlet_id = "cnn"
+field = "posting_cadence"
+value = "0.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cnn"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 23
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "cnn"
+field = "registrar"
+value = "Nom-iq Ltd. dba COM LAUDE"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/cnn.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "cnn.com"
+
+[[claim]]
+outlet_id = "cnn"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2024"
+
+[claim.data]
+discussions = [
+    'https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_274#RfC:_"CNN"_(October)',
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_307#RFC_on_CNN",
+    "#cite_note-25",
+]
+scale = "wikipedia_rsp"
+scope = "CNN (Cable News Network)"
+status = "generally_reliable"
+summary = "There is consensus that news broadcast or published by CNN is generally reliable. However, iReport consists solely of user-generated content, and talk show content should be treated as opinion pieces. Some editors consider CNN biased, though not to the extent that it affects reliability."
+
+[[claim]]
+outlet_id = "cnn"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cnn"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 23
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "cnn"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://edition.cnn.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "cnn.com"
+final_url = "https://edition.cnn.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "cnn"
+field = "site_pages"
+value = "links privacy pages from its home page; no about, contact, corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://edition.cnn.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+domain = "cnn.com"
+missing = [
+    "about",
+    "contact",
+    "corrections",
+    "ethics",
+    "masthead",
+]
+privacy = "https://www.cnn.com/privacy"
+
+[[claim]]
+outlet_id = "cnn"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cnn"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 23
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "cnn"
@@ -157,3 +306,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q48340"
 retrieved_at = 1790661446
 note = "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)"
+
+[[claim]]
+outlet_id = "cnn"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/cnn"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 23
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

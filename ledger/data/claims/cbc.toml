@@ -35,6 +35,27 @@ qid = "Q16"
 
 [[claim]]
 outlet_id = "cbc"
+field = "domain_registered"
+value = "2000-10-16"
+source_id = "rdap"
+ref_url = "https://rdap.ca.fury.ca/rdap/domain/cbc.ca"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "cbc.ca"
+expires = "2026-11-24"
+last_changed = "2025-11-24"
+registrar = "Authentic Web Inc."
+status = [
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "cbc"
 field = "founded"
 value = "1993-01-01"
 source_id = "wikidata"
@@ -81,6 +102,17 @@ retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q461761"
+
+[[claim]]
+outlet_id = "cbc"
+field = "registrar"
+value = "Authentic Web Inc."
+source_id = "rdap"
+ref_url = "https://rdap.ca.fury.ca/rdap/domain/cbc.ca"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "cbc.ca"
 
 [[claim]]
 outlet_id = "cbc"

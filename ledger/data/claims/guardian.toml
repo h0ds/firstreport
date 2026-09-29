@@ -39,8 +39,7 @@ field = "domain_registered"
 value = "1994-07-06"
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/theguardian.com"
-retrieved_at = 1790650154
-as_of = "2026-07-05"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "theguardian.com"
@@ -95,16 +94,16 @@ retrieved_at = 1790661446
 [[claim]]
 outlet_id = "guardian"
 field = "origin_share"
-value = "first to 45% of 11 stories other outlets also carried"
+value = "first to 19% of 21 stories other outlets also carried"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/guardian"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 52
-origin_of = 5
-shared_stories = 11
+items = 64
+origin_of = 4
+shared_stories = 21
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -134,14 +133,14 @@ qid = "Q2665980"
 [[claim]]
 outlet_id = "guardian"
 field = "posting_cadence"
-value = "0.6 items/day"
+value = "0.7 items/day"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/guardian"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 52
+items = 64
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -152,8 +151,7 @@ field = "registrar"
 value = "GoDaddy.com, LLC"
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/theguardian.com"
-retrieved_at = 1790650154
-as_of = "2026-07-05"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "theguardian.com"
@@ -164,15 +162,15 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790650154
+retrieved_at = 1790668896
 as_of = "2025"
 
 [claim.data]
 discussions = ["#cite_note-48"]
 scale = "wikipedia_rsp"
-scope = "The Guardian ( TheGuardian.com , The Manchester Guardian , The Guardian Weekly , The Observer ) WP:GUARDIAN 📌 WP:THEGUARDIAN 📌"
+scope = "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)"
 status = "generally_reliable"
-summary = "There is consensus that The Guardian is generally reliable. The Guardian ' s op-eds should be handled with WP:RSOPINION . Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs . Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+summary = "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
 
 [[claim]]
 outlet_id = "guardian"
@@ -180,28 +178,28 @@ field = "reliability"
 value = "No consensus"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790650154
+retrieved_at = 1790668896
 as_of = "2020"
 
 [claim.data]
 discussions = ["#cite_note-49"]
 scale = "wikipedia_rsp"
-scope = "The Guardian blogs WP:GUARDIANBLOG 📌"
+scope = "The Guardian blogs"
 status = "no_consensus"
-summary = 'Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a "blogposts" tag to determine whether the page is a blog post or a non-blog article . See also: The Guardian .'
+summary = 'Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a "blogposts" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian.'
 
 [[claim]]
 outlet_id = "guardian"
 field = "revision_rate"
-value = "17% of items revised after publication"
+value = "22% of items revised after publication"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/guardian"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 52
-revised = 9
+items = 64
+revised = 14
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -212,7 +210,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.theguardian.com/international"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 
 [claim.data]
 domain = "theguardian.com"
@@ -228,7 +226,7 @@ field = "site_pages"
 value = "links about, contact, privacy, corrections pages from its home page; no ethics, masthead link found"
 source_id = "site"
 ref_url = "https://www.theguardian.com/international"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
@@ -248,13 +246,13 @@ field = "syndication_share"
 value = "0% of items carry text first published elsewhere; 0% were carried by others"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/guardian"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
 copied_by_others = 0
 copies = 0
-items = 52
+items = 64
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -286,15 +284,15 @@ retrieved_at = 1790661446
 [[claim]]
 outlet_id = "guardian"
 field = "withdrawal_rate"
-value = "13% of items withdrawn"
+value = "30% of items withdrawn"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/guardian"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 52
+items = 64
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
-withdrawn = 7
+withdrawn = 19

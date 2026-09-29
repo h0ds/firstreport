@@ -36,6 +36,45 @@ qid = "Q145"
 
 [[claim]]
 outlet_id = "dailymail"
+field = "domain_registered"
+value = "1995-06-16"
+source_id = "rdap"
+ref_url = "https://rdap.nominet.uk/uk/domain/dailymail.co.uk"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "dailymail.co.uk"
+expires = "2028-06-16"
+last_changed = "2019-02-15"
+registrar = "Nom-IQ Limited t/a Com Laude"
+status = [
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "dailymail"
+field = "domain_registered"
+value = "1996-02-20"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/dailymail.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "dailymail.com"
+expires = "2027-12-24"
+last_changed = "2026-09-14"
+registrar = "Nom-iq Ltd. dba COM LAUDE"
+status = [
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "dailymail"
 field = "founded"
 value = "1896-05-04"
 source_id = "wikidata"
@@ -114,6 +153,23 @@ note = "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6
 
 [[claim]]
 outlet_id = "dailymail"
+field = "origin_share"
+value = "first to 0% of 2 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/dailymail"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 117
+origin_of = 0
+shared_stories = 2
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "dailymail"
 field = "owner"
 value = "Daily Mail and General Trust"
 source_id = "wikidata"
@@ -135,6 +191,113 @@ note = "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6
 
 [claim.data]
 qid = "Q6273342"
+
+[[claim]]
+outlet_id = "dailymail"
+field = "posting_cadence"
+value = "1.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/dailymail"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 117
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "dailymail"
+field = "registrar"
+value = "Nom-IQ Limited t/a Com Laude"
+source_id = "rdap"
+ref_url = "https://rdap.nominet.uk/uk/domain/dailymail.co.uk"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "dailymail.co.uk"
+
+[[claim]]
+outlet_id = "dailymail"
+field = "registrar"
+value = "Nom-iq Ltd. dba COM LAUDE"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/dailymail.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "dailymail.com"
+
+[[claim]]
+outlet_id = "dailymail"
+field = "reliability"
+value = "Deprecated"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2024"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_220#Daily_Mail_RfC",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_255#2nd_RfC:_The_Daily_Mail",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_299#(Infomercial_voice)_But_Wait!_There's_still_more!!_(News_about_The_Daily_Mail)",
+    "#cite_note-29",
+]
+scale = "wikipedia_rsp"
+scope = "Daily Mail (MailOnline)"
+status = "deprecated"
+summary = "In the 2017 RfC, the Daily Mail was the first source to be deprecated on Wikipedia, and the decision was challenged and reaffirmed in the 2019 RfC. There is consensus that the Daily Mail (including its online version, MailOnline) is generally unreliable, and its use as a reference is generally prohibited, especially when other sources exist that are more reliable. As a result, the Daily Mail shoul"
+
+[[claim]]
+outlet_id = "dailymail"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/dailymail"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 117
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "dailymail"
+field = "site_https"
+value = "https not served (status 403)"
+source_id = "site"
+ref_url = "https://www.dailymail.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "dailymail.co.uk"
+final_url = "https://www.dailymail.com/"
+http_redirects_to_https = false
+http_status = 403
+https = false
+status = 403
+
+[[claim]]
+outlet_id = "dailymail"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/dailymail"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 117
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "dailymail"
@@ -165,3 +328,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q210534"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)"
+
+[[claim]]
+outlet_id = "dailymail"
+field = "withdrawal_rate"
+value = "1% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/dailymail"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 117
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 1

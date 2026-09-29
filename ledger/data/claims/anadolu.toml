@@ -21,3 +21,158 @@ max = 1
 max_means = "shared only by Republicans"
 min = -1
 min_means = "shared only by Democrats"
+
+[[claim]]
+outlet_id = "anadolu"
+field = "origin_share"
+value = "first to 14% of 21 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/anadolu"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 47
+origin_of = 3
+shared_stories = 21
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "anadolu"
+field = "posting_cadence"
+value = "0.5 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/anadolu"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 47
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "anadolu"
+field = "reliability"
+value = "Generally unreliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2019"
+note = "matched by name only; verify the row is this outlet"
+
+[claim.data]
+discussions = ["https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"]
+scale = "wikipedia_rsp"
+scope = "Anadolu Agency (controversial topics, international politics) (AA)"
+status = "generally_unreliable"
+summary = "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+
+[[claim]]
+outlet_id = "anadolu"
+field = "reliability"
+value = "No consensus"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2023"
+note = "matched by name only; verify the row is this outlet"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency",
+]
+scale = "wikipedia_rsp"
+scope = "Anadolu Agency (general topics) (AA)"
+status = "no_consensus"
+summary = "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+
+[[claim]]
+outlet_id = "anadolu"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/anadolu"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 47
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "anadolu"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://aa.com.tr/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "aa.com.tr"
+final_url = "https://aa.com.tr/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "anadolu"
+field = "site_pages"
+value = "none of the usual accountability pages linked from its home page"
+source_id = "site"
+ref_url = "https://aa.com.tr/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+domain = "aa.com.tr"
+missing = [
+    "about",
+    "contact",
+    "privacy",
+    "corrections",
+    "ethics",
+    "masthead",
+]
+
+[[claim]]
+outlet_id = "anadolu"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/anadolu"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 47
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "anadolu"
+field = "withdrawal_rate"
+value = "4% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/anadolu"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 47
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 2

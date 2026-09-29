@@ -35,6 +35,26 @@ qid = "Q801"
 
 [[claim]]
 outlet_id = "timesofisrael"
+field = "domain_registered"
+value = "2010-02-12"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/timesofisrael.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "timesofisrael.com"
+expires = "2035-01-02"
+last_changed = "2025-03-04"
+registrar = "GoDaddy.com, LLC"
+status = [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+]
+
+[[claim]]
+outlet_id = "timesofisrael"
 field = "founded"
 value = "2012-02-01"
 source_id = "wikidata"
@@ -62,6 +82,141 @@ retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "timesofisrael"
+field = "origin_share"
+value = "first to 0% of 4 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/timesofisrael"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 14
+origin_of = 0
+shared_stories = 4
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "timesofisrael"
+field = "posting_cadence"
+value = "0.2 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/timesofisrael"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 14
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "timesofisrael"
+field = "registrar"
+value = "GoDaddy.com, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/timesofisrael.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "timesofisrael.com"
+
+[[claim]]
+outlet_id = "timesofisrael"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2024"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_461#RfC:_Times_of_Israel",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Times_of_Israel",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_442#Stop_using_The_Times_of_Israel_as_a_source_for_Israel-Palestine_conflict_news.",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_457#What_does_everyone_think_about_the_Times_of_Israel?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_461#Times_of_Israel_blogs",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_468#The_Times_of_Israel_and_fake_news.",
+]
+scale = "wikipedia_rsp"
+scope = "The Times of Israel (ToI)"
+status = "generally_reliable"
+summary = "In the 2024 RfC, there was consensus that The Times of Israel is generally reliable, although potentially biased in certain topics like the Israeli–Palestinian conflict. ToI disclaims responsibility for the contents of the blogs section (which is written by third parties) though experts' blog posts may be sometimes usable per the guidance at WP:BLOGS."
+
+[[claim]]
+outlet_id = "timesofisrael"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/timesofisrael"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 14
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "timesofisrael"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.timesofisrael.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "timesofisrael.com"
+final_url = "https://www.timesofisrael.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "timesofisrael"
+field = "site_pages"
+value = "links about, contact, privacy, masthead pages from its home page; no corrections, ethics link found"
+source_id = "site"
+ref_url = "https://www.timesofisrael.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.timesofisrael.com/about/"
+contact = "https://www.timesofisrael.com/contact/"
+domain = "timesofisrael.com"
+masthead = "https://www.timesofisrael.com/writers/times-of-israel-staff/"
+missing = [
+    "corrections",
+    "ethics",
+]
+privacy = "https://www.timesofisrael.com/privacy/"
+
+[[claim]]
+outlet_id = "timesofisrael"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/timesofisrael"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 14
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "timesofisrael"
 field = "website"
 value = "https://www.timesofisrael.com/"
 source_id = "wikidata"
@@ -83,3 +238,19 @@ value = "https://en.wikipedia.org/wiki/The_Times_of_Israel"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q6449319"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "timesofisrael"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/timesofisrael"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 14
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

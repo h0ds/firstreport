@@ -24,6 +24,25 @@ min_means = "shared only by Democrats"
 
 [[claim]]
 outlet_id = "dailybeast"
+field = "domain_registered"
+value = "2005-09-08"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/thedailybeast.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "thedailybeast.com"
+expires = "2028-09-08"
+last_changed = "2026-08-07"
+registrar = "MarkMonitor Inc."
+status = [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+]
+
+[[claim]]
+outlet_id = "dailybeast"
 field = "founded"
 value = "2008-01-01"
 source_id = "wikidata"
@@ -56,6 +75,18 @@ qid = "Q35127"
 outlet_id = "dailybeast"
 field = "name"
 value = "The Daily Beast"
+source_id = "site"
+ref_url = "https://www.thedailybeast.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "thedailybeast.com"
+
+[[claim]]
+outlet_id = "dailybeast"
+field = "name"
+value = "The Daily Beast"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1308139"
 retrieved_at = 1790661446
@@ -70,6 +101,76 @@ retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q974846"
+
+[[claim]]
+outlet_id = "dailybeast"
+field = "registrar"
+value = "MarkMonitor Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/thedailybeast.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "thedailybeast.com"
+
+[[claim]]
+outlet_id = "dailybeast"
+field = "reliability"
+value = "No consensus"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2023"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_39#The_Daily_Beast_as_a_source",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_242#The_Daily_Beast_as_a_source_for_a_denial",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Is_The_Daily_Beast_a_reliable_source",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_daily_beast",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_331#Daily_Beast_Tabloid_Reporting",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_397#The_Daily_Beast_and_Mediaite_for_extraordinary_claim_in_a_BLP",
+]
+scale = "wikipedia_rsp"
+scope = "The Daily Beast"
+status = "no_consensus"
+summary = "There is no consensus on the reliability of The Daily Beast. Most editors consider The Daily Beast a biased or opinionated source. Some editors advise particular caution when using this source for controversial statements of fact related to living persons."
+
+[[claim]]
+outlet_id = "dailybeast"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.thedailybeast.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "thedailybeast.com"
+final_url = "https://www.thedailybeast.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "dailybeast"
+field = "site_pages"
+value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+source_id = "site"
+ref_url = "https://www.thedailybeast.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.thedailybeast.com/this-moment-shows-trumps-bubble-is-about-to-burst-political-guru/"
+contact = "https://www.thedailybeast.com/company/contact-us"
+domain = "thedailybeast.com"
+ethics = "https://www.thedailybeast.com/company/code-of-ethics/"
+missing = [
+    "corrections",
+    "masthead",
+]
+privacy = "https://www.thedailybeast.com/company/privacy-policy"
 
 [[claim]]
 outlet_id = "dailybeast"

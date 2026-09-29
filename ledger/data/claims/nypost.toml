@@ -36,6 +36,50 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "nypost"
+field = "domain_registered"
+value = "1996-09-13"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/pagesix.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "pagesix.com"
+expires = "2027-09-12"
+last_changed = "2026-08-11"
+registrar = "MarkMonitor Inc."
+status = [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "nypost"
+field = "domain_registered"
+value = "1996-09-29"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/nypost.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "nypost.com"
+expires = "2027-09-28"
+last_changed = "2026-08-27"
+registrar = "MarkMonitor Inc."
+status = [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "nypost"
 field = "founded"
 value = "1801-01-01"
 source_id = "wikidata"
@@ -95,10 +139,39 @@ qid = "Q35127"
 outlet_id = "nypost"
 field = "name"
 value = "New York Post"
+source_id = "site"
+ref_url = "https://nypost.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "nypost.com"
+
+[[claim]]
+outlet_id = "nypost"
+field = "name"
+value = "New York Post"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q211374"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)"
+
+[[claim]]
+outlet_id = "nypost"
+field = "origin_share"
+value = "first to 0% of 8 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nypost"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 38
+origin_of = 0
+shared_stories = 8
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "nypost"
@@ -111,6 +184,152 @@ note = "2 Wikidata items match the domain; this is Q211374 (New York Post); also
 
 [claim.data]
 qid = "Q14289857"
+
+[[claim]]
+outlet_id = "nypost"
+field = "posting_cadence"
+value = "0.4 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nypost"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 38
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "nypost"
+field = "registrar"
+value = "MarkMonitor Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/nypost.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "nypost.com"
+
+[[claim]]
+outlet_id = "nypost"
+field = "registrar"
+value = "MarkMonitor Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/pagesix.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "pagesix.com"
+
+[[claim]]
+outlet_id = "nypost"
+field = "reliability"
+value = "Generally unreliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2025"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_312#RFC:_New_York_Post_(nypost.com)",
+    "#cite_note-69",
+]
+scale = "wikipedia_rsp"
+scope = "New York Post (NY Post, New York Evening Post, Page Six) (excluding entertainment)"
+status = "generally_unreliable"
+summary = "There is consensus the New York Post is generally unreliable for factual reporting, especially with regard to politics, particularly New York City politics. A tabloid newspaper, editors criticise its lack of concern for fact-checking or corrections, including examples of outright fabrication. Editors consider the New York Post more reliable before it changed ownership in 1976, and particularly unr"
+
+[[claim]]
+outlet_id = "nypost"
+field = "reliability"
+value = "No consensus"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2024"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_436#RfC:_Entertainment_coverage_of_the_New_York_Post_(including_Decider_and_Page_Six)",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_348#Using_a_Decider.com_interview",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_371#Decider.com_/_Jimmy_DiResta_/_Naomi_Wu",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_431#Using_Decider_/_Decider.com_for_interviews_and_reviews",
+]
+scale = "wikipedia_rsp"
+scope = "New York Post (NY Post, New York Evening Post, Page Six, Decider) (entertainment)"
+status = "no_consensus"
+summary = "There is consensus that the New York Post (nypost.com) and its sub-publications Decider (decider.com) and Page Six are considered to be marginally reliable sources for entertainment coverage, including reviews, but should not be used for controversial statements related to living persons."
+
+[[claim]]
+outlet_id = "nypost"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nypost"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 38
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "nypost"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://nypost.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "nypost.com"
+final_url = "https://nypost.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "nypost"
+field = "site_pages"
+value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+source_id = "site"
+ref_url = "https://nypost.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://nypost.com/2026/09/28/health/the-dangerous-assumption-people-make-about-aging/"
+contact = "https://nypost.com/contact/"
+domain = "nypost.com"
+ethics = "https://nypost.com/editorial-standards/"
+missing = [
+    "corrections",
+    "masthead",
+]
+privacy = "https://nypost.com/privacy/"
+
+[[claim]]
+outlet_id = "nypost"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nypost"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 38
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "nypost"
@@ -141,3 +360,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q211374"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)"
+
+[[claim]]
+outlet_id = "nypost"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nypost"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 38
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

@@ -40,8 +40,7 @@ field = "domain_registered"
 value = "1989-07-15"
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/bbc.com"
-retrieved_at = 1790650154
-as_of = "2021-07-06"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "bbc.com"
@@ -61,8 +60,7 @@ field = "domain_registered"
 value = "1994-12-13"
 source_id = "rdap"
 ref_url = "https://rdap.nominet.uk/uk/domain/bbc.co.uk"
-retrieved_at = 1790650154
-as_of = "2025-10-29"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "bbc.co.uk"
@@ -70,9 +68,9 @@ expires = "2034-12-13"
 last_changed = "2025-10-29"
 registrar = "British Broadcasting Corporation"
 status = [
-    "server update prohibited",
-    "server transfer prohibited",
     "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
 ]
 
 [[claim]]
@@ -114,7 +112,7 @@ field = "name"
 value = "BBC"
 source_id = "site"
 ref_url = "https://www.bbc.co.uk/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -132,16 +130,16 @@ note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting C
 [[claim]]
 outlet_id = "bbc"
 field = "origin_share"
-value = "first to 50% of 6 stories other outlets also carried"
+value = "first to 32% of 19 stories other outlets also carried"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/bbc"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 40
-origin_of = 3
-shared_stories = 6
+items = 47
+origin_of = 6
+shared_stories = 19
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -161,14 +159,14 @@ qid = "Q910019"
 [[claim]]
 outlet_id = "bbc"
 field = "posting_cadence"
-value = "0.4 items/day"
+value = "0.5 items/day"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/bbc"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 40
+items = 47
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -179,8 +177,7 @@ field = "registrar"
 value = "British Broadcasting Corporation"
 source_id = "rdap"
 ref_url = "https://rdap.nominet.uk/uk/domain/bbc.co.uk"
-retrieved_at = 1790650154
-as_of = "2025-10-29"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "bbc.co.uk"
@@ -191,8 +188,7 @@ field = "registrar"
 value = "Tucows Domains Inc."
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/bbc.com"
-retrieved_at = 1790650154
-as_of = "2021-07-06"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "bbc.com"
@@ -203,7 +199,7 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790650154
+retrieved_at = 1790668896
 as_of = "2025"
 
 [claim.data]
@@ -212,22 +208,22 @@ discussions = [
     "#cite_note-9",
 ]
 scale = "wikipedia_rsp"
-scope = "BBC (British Broadcasting Corporation) WP:RSPBBC 📌"
+scope = "BBC (British Broadcasting Corporation)"
 status = "generally_reliable"
-summary = "BBC is a British publicly funded broadcaster . It is considered generally reliable. This includes BBC News , BBC documentaries, and the BBC History site (on BBC Online ). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project ) and BBC publications with reduced editorial oversight (such as Collective ). Statements of opinion should co"
+summary = "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
 
 [[claim]]
 outlet_id = "bbc"
 field = "revision_rate"
-value = "8% of items revised after publication"
+value = "11% of items revised after publication"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/bbc"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 40
-revised = 3
+items = 47
+revised = 5
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -238,7 +234,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.bbc.co.uk/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 
 [claim.data]
 domain = "bbc.co.uk"
@@ -254,7 +250,7 @@ field = "site_pages"
 value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
 source_id = "site"
 ref_url = "https://www.bbc.co.uk/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
@@ -274,13 +270,13 @@ field = "syndication_share"
 value = "0% of items carry text first published elsewhere; 0% were carried by others"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/bbc"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
 copied_by_others = 0
 copies = 0
-items = 40
+items = 47
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -327,15 +323,15 @@ note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting C
 [[claim]]
 outlet_id = "bbc"
 field = "withdrawal_rate"
-value = "2% of items withdrawn"
+value = "26% of items withdrawn"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/bbc"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 40
+items = 47
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
-withdrawn = 1
+withdrawn = 12

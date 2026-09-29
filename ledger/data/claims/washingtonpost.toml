@@ -39,8 +39,7 @@ field = "domain_registered"
 value = "1995-11-13"
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/washingtonpost.com"
-retrieved_at = 1790650154
-as_of = "2025-11-09"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "washingtonpost.com"
@@ -120,8 +119,7 @@ field = "registrar"
 value = "CSC Corporate Domains, Inc."
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/washingtonpost.com"
-retrieved_at = 1790650154
-as_of = "2025-11-09"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "washingtonpost.com"
@@ -132,15 +130,15 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790650154
+retrieved_at = 1790668896
 as_of = "2024"
 
 [claim.data]
 discussions = ["#cite_note-92"]
 scale = "wikipedia_rsp"
-scope = "The Washington Post ( The Post , WaPo , TWP ) WP:WAPO 📌"
+scope = "The Washington Post (The Post, WaPo, TWP)"
 status = "generally_reliable"
-summary = "Most editors consider The Washington Post generally reliable. Some editors note that WP:NEWSBLOG should be used to evaluate blog posts on The Washington Post 's website."
+summary = "Most editors consider The Washington Post generally reliable. Some editors note that WP:NEWSBLOG should be used to evaluate blog posts on The Washington Post's website."
 
 [[claim]]
 outlet_id = "washingtonpost"

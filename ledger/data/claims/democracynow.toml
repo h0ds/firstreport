@@ -24,6 +24,27 @@ min_means = "shared only by Democrats"
 
 [[claim]]
 outlet_id = "democracynow"
+field = "domain_registered"
+value = "1999-09-10"
+source_id = "rdap"
+ref_url = "https://rdap.publicinterestregistry.org/rdap/domain/democracynow.org"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "democracynow.org"
+expires = "2027-09-10"
+last_changed = "2026-09-11"
+registrar = "GoDaddy.com, LLC"
+status = [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "auto renew period",
+]
+
+[[claim]]
+outlet_id = "democracynow"
 field = "legal_form"
 value = "news program"
 source_id = "wikidata"
@@ -48,9 +69,156 @@ qid = "Q24634210"
 outlet_id = "democracynow"
 field = "name"
 value = "Democracy Now!"
+source_id = "site"
+ref_url = "https://www.democracynow.org/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "democracynow.org"
+
+[[claim]]
+outlet_id = "democracynow"
+field = "name"
+value = "Democracy Now!"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1185824"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "democracynow"
+field = "origin_share"
+value = "first to 50% of 2 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/democracynow"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 41
+origin_of = 1
+shared_stories = 2
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "democracynow"
+field = "posting_cadence"
+value = "0.5 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/democracynow"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 41
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "democracynow"
+field = "registrar"
+value = "GoDaddy.com, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.publicinterestregistry.org/rdap/domain/democracynow.org"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "democracynow.org"
+
+[[claim]]
+outlet_id = "democracynow"
+field = "reliability"
+value = "No consensus"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2026"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard#RfC:_update_Democracy_Now!_from_WP:MREL_to_WP:GENREL?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_40#Democracy_Now!",
+    'https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_71#Democracy_Now_source_article_"Cheering_Movers_and_Art_Student_Spies"',
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_84#Democracy_Now!_and_CounterPunch",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_96#Democracy_Now",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_144#Democracy_Now!_in_general",
+]
+scale = "wikipedia_rsp"
+scope = "Democracy Now!"
+status = "no_consensus"
+summary = "There is no consensus on the reliability of Democracy Now!. Most editors consider Democracy Now! a partisan source whose statements should be attributed. Syndicated content published by Democracy Now! should be evaluated by the reliability of its original publisher."
+
+[[claim]]
+outlet_id = "democracynow"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/democracynow"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 41
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "democracynow"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.democracynow.org/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "democracynow.org"
+final_url = "https://www.democracynow.org/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "democracynow"
+field = "site_pages"
+value = "links about, contact pages from its home page; no privacy, corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.democracynow.org/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.democracynow.org/about"
+contact = "https://www.democracynow.org/contact"
+domain = "democracynow.org"
+missing = [
+    "privacy",
+    "corrections",
+    "ethics",
+    "masthead",
+]
+
+[[claim]]
+outlet_id = "democracynow"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/democracynow"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 41
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "democracynow"
@@ -75,3 +243,19 @@ value = "https://en.wikipedia.org/wiki/Democracy_Now!"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1185824"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "democracynow"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/democracynow"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 41
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

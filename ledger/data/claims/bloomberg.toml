@@ -36,6 +36,26 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "bloomberg"
+field = "domain_registered"
+value = "1993-09-29"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/bloomberg.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "bloomberg.com"
+expires = "2027-09-28"
+last_changed = "2026-09-24"
+registrar = "CSC Corporate Domains, Inc."
+status = [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "bloomberg"
 field = "founded"
 value = "1990-01-01"
 source_id = "wikidata"
@@ -58,11 +78,40 @@ qid = "Q192283"
 [[claim]]
 outlet_id = "bloomberg"
 field = "name"
+value = "Bloomberg.com"
+source_id = "site"
+ref_url = "https://www.bloomberg.com/jp"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "bloomberg.com"
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "name"
 value = "Bloomberg News"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q14270642"
 retrieved_at = 1790661446
 note = "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)"
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "origin_share"
+value = "first to 44% of 16 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/bloomberg"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+origin_of = 7
+shared_stories = 16
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "bloomberg"
@@ -87,6 +136,143 @@ note = "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); a
 
 [claim.data]
 qid = "Q13977"
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "posting_cadence"
+value = "0.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/bloomberg"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "registrar"
+value = "CSC Corporate Domains, Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/bloomberg.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "bloomberg.com"
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2025"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_151#Bloomberg_on_Microsoft",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_270#Bloomberg",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bloomberg_News_/_Decision_not_to_investigate_Michael_Bloomberg",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_499#Omitting_Bloomberg_from_India-Pak_Conflicts",
+]
+scale = "wikipedia_rsp"
+scope = "Bloomberg (Bloomberg News, Bloomberg Businessweek)"
+status = "generally_reliable"
+summary = "Bloomberg publications, including Bloomberg News and Bloomberg Businessweek, are considered generally reliable for news and business topics. See also: Bloomberg profiles."
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "reliability"
+value = "No consensus"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2018"
+note = "matched by name only; verify the row is this outlet"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#User_submitted_Executive_Profiles_on_Bloomberg.com",
+]
+scale = "wikipedia_rsp"
+scope = "Bloomberg profiles"
+status = "no_consensus"
+summary = "Bloomberg company and executive profiles are generally considered to be based on company press releases and should only be used as a source for uncontroversial information. There is consensus that these profiles should not be used to establish notability. Some editors consider these profiles to be akin to self-published sources. See also: Bloomberg."
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "revision_rate"
+value = "7% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/bloomberg"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+revised = 2
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.bloomberg.com/jp"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "bloomberg.com"
+final_url = "https://www.bloomberg.com/jp"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "site_pages"
+value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.bloomberg.com/jp"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.bloomberg.com/company/?utm_source=bloomberg-menu&utm_medium=bcom"
+contact = "https://www.bloomberg.com/professional/contact-menu/?utm_source=bloomberg-menu&utm_medium=bcom&bbgsum=DG-WS-PROF-DEMO-bbgmenu"
+domain = "bloomberg.com"
+missing = [
+    "corrections",
+    "ethics",
+    "masthead",
+]
+privacy = "https://www.bloomberg.com/notices/jp/privacy"
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/bloomberg"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "bloomberg"
@@ -123,3 +309,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q14270642"
 retrieved_at = 1790661446
 note = "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)"
+
+[[claim]]
+outlet_id = "bloomberg"
+field = "withdrawal_rate"
+value = "37% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/bloomberg"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 30
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 11

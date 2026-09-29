@@ -24,6 +24,26 @@ min_means = "shared only by Democrats"
 
 [[claim]]
 outlet_id = "france24"
+field = "domain_registered"
+value = "2005-12-01"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/france24.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "france24.com"
+expires = "2026-12-01"
+last_changed = "2026-04-21"
+registrar = "Gandi SAS"
+status = [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "france24"
 field = "legal_form"
 value = "online newspaper"
 source_id = "wikidata"
@@ -36,10 +56,39 @@ qid = "Q1153191"
 [[claim]]
 outlet_id = "france24"
 field = "name"
+value = "France 24"
+source_id = "site"
+ref_url = "https://www.france24.com/en/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "france24.com"
+
+[[claim]]
+outlet_id = "france24"
+field = "name"
 value = "France24.com"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q30097304"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "france24"
+field = "origin_share"
+value = "first to 8% of 12 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/france24"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 27
+origin_of = 1
+shared_stories = 12
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "france24"
@@ -51,6 +100,101 @@ retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q166180"
+
+[[claim]]
+outlet_id = "france24"
+field = "posting_cadence"
+value = "0.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/france24"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 27
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "france24"
+field = "registrar"
+value = "Gandi SAS"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/france24.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "france24.com"
+
+[[claim]]
+outlet_id = "france24"
+field = "revision_rate"
+value = "7% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/france24"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 27
+revised = 2
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "france24"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.france24.com/en/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "france24.com"
+final_url = "https://www.france24.com/en/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "france24"
+field = "site_pages"
+value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+source_id = "site"
+ref_url = "https://www.france24.com/en/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.france24.com/en/raf-fairford-ai-enhanced-photos-of-suspects-fuel-false-claims-about-their-religion-1"
+contact = "https://www.francemm.com/en/contact?brand=f24"
+domain = "france24.com"
+ethics = "https://www.francemediasmonde.com/en/our-commitments/ethics-and-transparency/"
+missing = [
+    "corrections",
+    "masthead",
+]
+privacy = "https://www.francemm.com/en/privacy"
+
+[[claim]]
+outlet_id = "france24"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/france24"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 27
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "france24"
@@ -67,3 +211,19 @@ value = "Q30097304"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q30097304"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "france24"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/france24"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 27
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

@@ -38,6 +38,18 @@ qid = "Q1110794"
 [[claim]]
 outlet_id = "yomiuri"
 field = "name"
+value = "読売新聞"
+source_id = "site"
+ref_url = "https://www.yomiuri.co.jp/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "yomiuri.co.jp"
+
+[[claim]]
+outlet_id = "yomiuri"
+field = "name"
 value = "Yomiuri Shimbun"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q645218"
@@ -55,6 +67,42 @@ note = "3 Wikidata items match the domain; this is Q645218 (Yomiuri Shimbun); al
 
 [claim.data]
 qid = "Q11101101"
+
+[[claim]]
+outlet_id = "yomiuri"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.yomiuri.co.jp/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "yomiuri.co.jp"
+final_url = "https://www.yomiuri.co.jp/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "yomiuri"
+field = "site_pages"
+value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.yomiuri.co.jp/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://info.yomiuri.co.jp/privacypolicy/about.html"
+contact = "https://info.yomiuri.co.jp/contact.html"
+domain = "yomiuri.co.jp"
+missing = [
+    "corrections",
+    "ethics",
+    "masthead",
+]
+privacy = "https://info.yomiuri.co.jp/privacypolicy/datapolicy.html"
 
 [[claim]]
 outlet_id = "yomiuri"

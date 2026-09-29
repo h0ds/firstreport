@@ -40,8 +40,7 @@ field = "domain_registered"
 value = "1991-09-23"
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/rt.com"
-retrieved_at = 1790650154
-as_of = "2026-09-21"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "rt.com"
@@ -113,7 +112,7 @@ field = "name"
 value = "RT International"
 source_id = "site"
 ref_url = "https://www.rt.com/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -131,16 +130,16 @@ note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 
 [[claim]]
 outlet_id = "rt"
 field = "origin_share"
-value = "first to 50% of 10 stories other outlets also carried"
+value = "first to 26% of 23 stories other outlets also carried"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/rt"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 102
-origin_of = 5
-shared_stories = 10
+items = 103
+origin_of = 6
+shared_stories = 23
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -187,11 +186,11 @@ field = "posting_cadence"
 value = "1.1 items/day"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/rt"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 102
+items = 103
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -202,8 +201,7 @@ field = "registrar"
 value = "Regional Network Information Center, JSC dba RU-CENTER"
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/rt.com"
-retrieved_at = 1790650154
-as_of = "2026-09-21"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "rt.com"
@@ -214,7 +212,7 @@ field = "reliability"
 value = "Deprecated"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790650154
+retrieved_at = 1790668896
 as_of = "2022"
 
 [claim.data]
@@ -230,22 +228,22 @@ discussions = [
     "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line",
 ]
 scale = "wikipedia_rsp"
-scope = "RT (Russia Today, ANO TV-Novosti, Ruptly , Redfish, Maffick ) WP:RT.COM 📌 WP:RUSSIATODAY 📌"
+scope = "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)"
 status = "deprecated"
 summary = "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
 
 [[claim]]
 outlet_id = "rt"
 field = "revision_rate"
-value = "0% of items revised after publication"
+value = "2% of items revised after publication"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/rt"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 102
-revised = 0
+items = 103
+revised = 2
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -256,7 +254,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.rt.com/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 
 [claim.data]
 domain = "rt.com"
@@ -272,7 +270,7 @@ field = "site_pages"
 value = "links about, privacy pages from its home page; no contact, corrections, ethics, masthead link found"
 source_id = "site"
 ref_url = "https://www.rt.com/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
@@ -292,13 +290,13 @@ field = "syndication_share"
 value = "0% of items carry text first published elsewhere; 0% were carried by others"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/rt"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
 copied_by_others = 0
 copies = 0
-items = 102
+items = 103
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -339,11 +337,11 @@ field = "withdrawal_rate"
 value = "0% of items withdrawn"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/rt"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 102
+items = 103
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"

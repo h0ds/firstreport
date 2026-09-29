@@ -24,6 +24,21 @@ min_means = "shared only by Democrats"
 
 [[claim]]
 outlet_id = "usnews"
+field = "domain_registered"
+value = "1995-01-20"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/usnews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "usnews.com"
+expires = "2034-01-21"
+last_changed = "2025-07-18"
+registrar = "Network Solutions, LLC"
+status = ["client transfer prohibited"]
+
+[[claim]]
+outlet_id = "usnews"
 field = "founded"
 value = "1933-01-01"
 source_id = "wikidata"
@@ -59,6 +74,38 @@ retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q11693671"
+
+[[claim]]
+outlet_id = "usnews"
+field = "registrar"
+value = "Network Solutions, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/usnews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "usnews.com"
+
+[[claim]]
+outlet_id = "usnews"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2020"
+note = "matched by name only; verify the row is this outlet"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_45#Using_US_News_and_World_Report_as_an_academic_authority.",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_120#U.S._News_and_World_Report_as_source_for_criticism",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_298#U.S._News",
+]
+scale = "wikipedia_rsp"
+scope = "U.S. News & World Report"
+status = "generally_reliable"
+summary = "There is consensus that U.S. News & World Report is generally reliable."
 
 [[claim]]
 outlet_id = "usnews"

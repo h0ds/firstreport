@@ -39,8 +39,7 @@ field = "domain_registered"
 value = "1995-06-21"
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/foxnews.com"
-retrieved_at = 1790650154
-as_of = "2022-09-20"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "foxnews.com"
@@ -90,7 +89,7 @@ field = "name"
 value = "Fox News"
 source_id = "site"
 ref_url = "https://www.foxnews.com/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -107,16 +106,16 @@ retrieved_at = 1790661446
 [[claim]]
 outlet_id = "foxnews"
 field = "origin_share"
-value = "first to 67% of 3 stories other outlets also carried"
+value = "first to 38% of 8 stories other outlets also carried"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/foxnews"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 26
-origin_of = 2
-shared_stories = 3
+items = 27
+origin_of = 3
+shared_stories = 8
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -171,11 +170,11 @@ field = "posting_cadence"
 value = "0.3 items/day"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/foxnews"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 26
+items = 27
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -186,8 +185,7 @@ field = "registrar"
 value = "GoDaddy Corporate Domains, LLC"
 source_id = "rdap"
 ref_url = "https://rdap.verisign.com/com/v1/domain/foxnews.com"
-retrieved_at = 1790650154
-as_of = "2022-09-20"
+retrieved_at = 1790668896
 
 [claim.data]
 domain = "foxnews.com"
@@ -198,7 +196,7 @@ field = "reliability"
 value = "Generally unreliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790650154
+retrieved_at = 1790668896
 as_of = "2024"
 
 [claim.data]
@@ -210,7 +208,7 @@ discussions = [
     "#cite_note-44",
 ]
 scale = "wikipedia_rsp"
-scope = "Fox News [ aa ] (politics and science) WP:FOXNEWSPOLITICS 📌 WP:FOXNEWSSCIENCE 📌"
+scope = "Fox News [ aa ] (politics and science)"
 status = "generally_unreliable"
 summary = "There is consensus Fox News is generally unreliable for the reporting of politics, especially from November 2020 onwards. On the matter of science, and on the matter of pre-November 2020 politics, there is a consensus that the reliability of Fox News is unclear and that additional considerations apply to its use. As a result, Fox News is considered marginally reliable and generally does not qualif"
 
@@ -220,7 +218,7 @@ field = "reliability"
 value = "Generally unreliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790650154
+retrieved_at = 1790668896
 as_of = "2024"
 
 [claim.data]
@@ -236,9 +234,9 @@ discussions = [
     "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Why_does_Fox_News_talk_shows_have_it's_own_section_in_the_list?",
 ]
 scale = "wikipedia_rsp"
-scope = "Fox News [ aa ] (talk shows) WP:FOXNEWSTALKSHOWS 📌"
+scope = "Fox News [ aa ] (talk shows)"
 status = "generally_unreliable"
-summary = "Fox News talk shows, including Hannity , Tucker Carlson Tonight , The Ingraham Angle , and Fox & Friends , should not be used for statements of fact but can sometimes be used for attributed opinions . See also: Fox News (news excluding politics and science) , Fox News (politics and science) ."
+summary = "Fox News talk shows, including Hannity, Tucker Carlson Tonight, The Ingraham Angle, and Fox & Friends, should not be used for statements of fact but can sometimes be used for attributed opinions. See also: Fox News (news excluding politics and science), Fox News (politics and science)."
 
 [[claim]]
 outlet_id = "foxnews"
@@ -246,7 +244,7 @@ field = "reliability"
 value = "No consensus"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790650154
+retrieved_at = 1790668896
 as_of = "2024"
 
 [claim.data]
@@ -257,9 +255,9 @@ discussions = [
     "#cite_note-43",
 ]
 scale = "wikipedia_rsp"
-scope = "Fox News [ aa ] (news excluding politics and science) WP:FOXNEWS 📌"
+scope = "Fox News [ aa ] (news excluding politics and science)"
 status = "no_consensus"
-summary = "Historically, there has been consensus that Fox News is generally reliable for news coverage on topics other than politics and science. However, many editors expressed concerns about the reliability of Fox News for any topic in a 2023 RFC. No formal consensus was reached on the matter, though. See also: Fox News (politics and science) , Fox News (talk shows) ."
+summary = "Historically, there has been consensus that Fox News is generally reliable for news coverage on topics other than politics and science. However, many editors expressed concerns about the reliability of Fox News for any topic in a 2023 RFC. No formal consensus was reached on the matter, though. See also: Fox News (politics and science), Fox News (talk shows)."
 
 [[claim]]
 outlet_id = "foxnews"
@@ -267,11 +265,11 @@ field = "revision_rate"
 value = "0% of items revised after publication"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/foxnews"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 26
+items = 27
 revised = 0
 window_days = 90
 window_end = "2026-09-29"
@@ -283,7 +281,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.foxnews.com/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 
 [claim.data]
 domain = "foxnews.com"
@@ -299,7 +297,7 @@ field = "site_pages"
 value = "links about, contact, privacy, masthead pages from its home page; no corrections, ethics link found"
 source_id = "site"
 ref_url = "https://www.foxnews.com/"
-retrieved_at = 1790650169
+retrieved_at = 1790669037
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
@@ -319,13 +317,13 @@ field = "syndication_share"
 value = "0% of items carry text first published elsewhere; 0% were carried by others"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/foxnews"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
 copied_by_others = 0
 copies = 0
-items = 26
+items = 27
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"
@@ -360,11 +358,11 @@ field = "withdrawal_rate"
 value = "0% of items withdrawn"
 source_id = "feed_behaviour"
 ref_url = "http://127.0.0.1:8080/v1/outlets/foxnews"
-retrieved_at = 1790650255
+retrieved_at = 1790669448
 as_of = "2026-09-29"
 
 [claim.data]
-items = 26
+items = 27
 window_days = 90
 window_end = "2026-09-29"
 window_start = "2026-07-01"

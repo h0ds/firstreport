@@ -36,6 +36,25 @@ qid = "Q145"
 
 [[claim]]
 outlet_id = "express"
+field = "domain_registered"
+value = "1995-11-17"
+source_id = "rdap"
+ref_url = "https://rdap.nominet.uk/uk/domain/express.co.uk"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "express.co.uk"
+expires = "2026-11-17"
+last_changed = "2025-11-13"
+registrar = "CSC Corporate Domains, Inc"
+status = [
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "express"
 field = "founded"
 value = "1900-01-01"
 source_id = "wikidata"
@@ -70,6 +89,18 @@ qid = "Q1002697"
 [[claim]]
 outlet_id = "express"
 field = "name"
+value = "Express.co.uk"
+source_id = "site"
+ref_url = "https://www.express.co.uk/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "express.co.uk"
+
+[[claim]]
+outlet_id = "express"
+field = "name"
 value = "Daily Express"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q610190"
@@ -87,6 +118,74 @@ note = "2 Wikidata items match the domain; this is Q610190 (Daily Express); also
 
 [claim.data]
 qid = "Q16148419"
+
+[[claim]]
+outlet_id = "express"
+field = "registrar"
+value = "CSC Corporate Domains, Inc"
+source_id = "rdap"
+ref_url = "https://rdap.nominet.uk/uk/domain/express.co.uk"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "express.co.uk"
+
+[[claim]]
+outlet_id = "express"
+field = "reliability"
+value = "Generally unreliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2020"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_239#If_we're_going_to_declare_the_Daily_Mail_an_unreliable_source_(and_I_think_we_should)_we_should_do_the_same_to_the_Daily_Express",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_224#Daily_Express_RfC",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_236#Reliability_of_Daily_Express,_Brexit_Central_and_BuzzFeed",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bad_source_to_show_reporting_in_bad_sources?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Daily_Express_and_Daily_Mirror",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_299#Daily_Express_2000-2017_(Desmond_era)",
+]
+scale = "wikipedia_rsp"
+scope = "Daily Express"
+status = "generally_unreliable"
+summary = "The Daily Express is a tabloid with a number of similarities to the Daily Mail. It is considered generally unreliable."
+
+[[claim]]
+outlet_id = "express"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.express.co.uk/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "express.co.uk"
+final_url = "https://www.express.co.uk/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "express"
+field = "site_pages"
+value = "links about, contact, privacy, corrections, ethics pages from its home page; no masthead link found"
+source_id = "site"
+ref_url = "https://www.express.co.uk/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.express.co.uk/news/royal/2252652/earl-spencer-wrong-about-king-charles-princess-diana-reaction"
+contact = "https://www.express.co.uk/contactus"
+corrections = "https://www.express.co.uk/news/clarifications-corrections"
+domain = "express.co.uk"
+ethics = "https://www.express.co.uk/community-standards"
+missing = ["masthead"]
+privacy = "https://www.express.co.uk/privacy-notice"
 
 [[claim]]
 outlet_id = "express"

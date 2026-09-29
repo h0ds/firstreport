@@ -35,6 +35,28 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "nbcnews"
+field = "domain_registered"
+value = "1997-06-26"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/nbcnews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "nbcnews.com"
+expires = "2027-06-25"
+last_changed = "2025-05-24"
+registrar = "MarkMonitor Inc."
+status = [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "nbcnews"
 field = "founded"
 value = "1940-02-21"
 source_id = "wikidata"
@@ -89,9 +111,38 @@ qid = "Q2001305"
 outlet_id = "nbcnews"
 field = "name"
 value = "NBC News"
+source_id = "site"
+ref_url = "https://www.nbcnews.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "nbcnews.com"
+
+[[claim]]
+outlet_id = "nbcnews"
+field = "name"
+value = "NBC News"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q2877626"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "nbcnews"
+field = "origin_share"
+value = "first to 50% of 8 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nbcnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 23
+origin_of = 4
+shared_stories = 8
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "nbcnews"
@@ -117,6 +168,122 @@ qid = "Q9048317"
 
 [[claim]]
 outlet_id = "nbcnews"
+field = "posting_cadence"
+value = "0.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nbcnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 23
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "nbcnews"
+field = "registrar"
+value = "MarkMonitor Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/nbcnews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "nbcnews.com"
+
+[[claim]]
+outlet_id = "nbcnews"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2024"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_186#Column_on_Donors_Trust_on_(but_not_by)_NBC",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Is_NBC_a_reliable_sources_for_the_Wikipedia_The_Epoch_Times_(ET)_article?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_314#NBC_News-_'Undecided_voters'_at_NBC's_Biden_town_hall_were_featured_on_MSNBC_as_Biden_voters",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_424#NBC_News_for_Wąsosz_pogrom",
+]
+scale = "wikipedia_rsp"
+scope = "NBC News"
+status = "generally_reliable"
+summary = "There is consensus that NBC News is generally reliable for news. See also: MS NOW (formerly MSNBC)"
+
+[[claim]]
+outlet_id = "nbcnews"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nbcnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 23
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "nbcnews"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.nbcnews.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "nbcnews.com"
+final_url = "https://www.nbcnews.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "nbcnews"
+field = "site_pages"
+value = "links about, contact, privacy, corrections pages from its home page; no ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.nbcnews.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.nbcnews.com/now/video/common-ground-loving-your-neighbor-in-2026-270690885853"
+contact = "https://www.nbcnews.com/information/nbc-news-info/contact-us-n1232521"
+corrections = "https://www.nbcnews.com/news/us-news/ahead-rare-execution-lone-woman-tennessee-death-row-says-peace-rcna600279"
+domain = "nbcnews.com"
+missing = [
+    "ethics",
+    "masthead",
+]
+privacy = "https://www.nbcuniversalprivacy.com/privacy/cookies#accordionheader2"
+
+[[claim]]
+outlet_id = "nbcnews"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nbcnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 23
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "nbcnews"
 field = "website"
 value = "https://www.nbcnews.com/"
 source_id = "wikidata"
@@ -138,3 +305,19 @@ value = "https://en.wikipedia.org/wiki/NBC_News"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q2877626"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "nbcnews"
+field = "withdrawal_rate"
+value = "17% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/nbcnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 23
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 4

@@ -135,6 +135,23 @@ note = "2 Wikidata items match the domain; this is Q781365 (Australian Broadcast
 
 [[claim]]
 outlet_id = "abcau"
+field = "origin_share"
+value = "first to 0% of 1 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/abcau"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 28
+origin_of = 0
+shared_stories = 1
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "abcau"
 field = "owner"
 value = "Australian Government"
 source_id = "wikidata"
@@ -144,6 +161,88 @@ note = "2 Wikidata items match the domain; this is Q781365 (Australian Broadcast
 
 [claim.data]
 qid = "Q2991162"
+
+[[claim]]
+outlet_id = "abcau"
+field = "posting_cadence"
+value = "0.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/abcau"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 28
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "abcau"
+field = "revision_rate"
+value = "4% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/abcau"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 28
+revised = 1
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "abcau"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.abc.net.au/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "abc.net.au"
+final_url = "https://www.abc.net.au/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "abcau"
+field = "site_pages"
+value = "links about, contact, privacy, corrections, ethics pages from its home page; no masthead link found"
+source_id = "site"
+ref_url = "https://www.abc.net.au/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.abc.net.au/about/accessibility-statement/103700726"
+contact = "https://www.abc.net.au/news/contact"
+corrections = "https://www.abc.net.au/news/2026-09-27/multi-generation-bond-market-correction/107191114"
+domain = "abc.net.au"
+ethics = "https://www.abc.net.au/religion"
+missing = ["masthead"]
+privacy = "https://help.abc.net.au/hc/en-us/articles/360001511015"
+
+[[claim]]
+outlet_id = "abcau"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/abcau"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 28
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "abcau"
@@ -174,3 +273,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q781365"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)"
+
+[[claim]]
+outlet_id = "abcau"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/abcau"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 28
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

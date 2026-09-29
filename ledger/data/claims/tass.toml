@@ -21,3 +21,180 @@ max = 1
 max_means = "shared only by Republicans"
 min = -1
 min_means = "shared only by Democrats"
+
+[[claim]]
+outlet_id = "tass"
+field = "domain_registered"
+value = "1993-09-17"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/tass.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "tass.com"
+expires = "2027-09-16"
+last_changed = "2026-09-15"
+registrar = "Regional Network Information Center, JSC dba RU-CENTER"
+status = ["client transfer prohibited"]
+
+[[claim]]
+outlet_id = "tass"
+field = "name"
+value = "TASS"
+source_id = "site"
+ref_url = "https://tass.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "tass.com"
+
+[[claim]]
+outlet_id = "tass"
+field = "origin_share"
+value = "first to 15% of 13 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/tass"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 118
+origin_of = 2
+shared_stories = 13
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "tass"
+field = "posting_cadence"
+value = "1.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/tass"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 118
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "tass"
+field = "registrar"
+value = "Regional Network Information Center, JSC dba RU-CENTER"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/tass.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "tass.com"
+
+[[claim]]
+outlet_id = "tass"
+field = "reliability"
+value = "Generally unreliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2022"
+note = "matched by name only; verify the row is this outlet"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#RfC:_TASS",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_378#RfC_on_TASS",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Use_of_TASS_for_Ukranian_refugee_figures",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_377#TASS,_Interfax_(russian_version)_and_RIA_Novosti's_reliability_on_the_2022_Russian_invasion_of_Ukraine_(especially_on_alleged_attacks_in_Russia)",
+]
+scale = "wikipedia_rsp"
+scope = "TASS (ITAR-TASS, Telegraph Agency of the Soviet Union, Information Telegraph Agency of Russia)"
+status = "generally_unreliable"
+summary = "In a 2022 RfC, editors achieved a strong consensus that TASS is a biased source with respect to topics in which the Russian government may have an interest and that the source is generally unreliable for providing contentious facts in that context. Editors attained a rough consensus that TASS should not be deprecated at this time and a rough consensus that TASS is generally unreliable more broadly"
+
+[[claim]]
+outlet_id = "tass"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/tass"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 118
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "tass"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://tass.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "tass.com"
+final_url = "https://tass.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "tass"
+field = "site_pages"
+value = "links contact, privacy, masthead pages from its home page; no about, corrections, ethics link found"
+source_id = "site"
+ref_url = "https://tass.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+contact = "https://tass.com/contacts"
+domain = "tass.com"
+masthead = "https://tass.com/press-releases/1588519"
+missing = [
+    "about",
+    "corrections",
+    "ethics",
+]
+privacy = "https://tass.com/privacy-policy"
+
+[[claim]]
+outlet_id = "tass"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/tass"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 118
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "tass"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/tass"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 118
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

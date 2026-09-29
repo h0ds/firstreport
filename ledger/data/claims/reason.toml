@@ -35,6 +35,21 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "reason"
+field = "domain_registered"
+value = "1997-08-22"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/reason.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "reason.com"
+expires = "2034-08-21"
+last_changed = "2024-08-21"
+registrar = "Network Solutions, LLC"
+status = ["client transfer prohibited"]
+
+[[claim]]
+outlet_id = "reason"
 field = "founded"
 value = "1968-01-01"
 source_id = "wikidata"
@@ -66,10 +81,155 @@ qid = "Q41298"
 [[claim]]
 outlet_id = "reason"
 field = "name"
+value = "Reason Magazine"
+source_id = "site"
+ref_url = "https://reason.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "reason.com"
+
+[[claim]]
+outlet_id = "reason"
+field = "name"
 value = "Reason"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1454090"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "reason"
+field = "origin_share"
+value = "first to 50% of 2 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/reason"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 49
+origin_of = 1
+shared_stories = 2
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "reason"
+field = "posting_cadence"
+value = "0.5 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/reason"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 49
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "reason"
+field = "registrar"
+value = "Network Solutions, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/reason.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "reason.com"
+
+[[claim]]
+outlet_id = "reason"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2025"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_200#Reason_Magazine_at_David_Lisak",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_291#Reason_Magazine_and_reason.com",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_352#Reason.com",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_500#Reason_(magazine)",
+]
+scale = "wikipedia_rsp"
+scope = "Reason"
+status = "generally_reliable"
+summary = "There is consensus that Reason is generally reliable for news and facts. Editors consider Reason to be a biased or opinionated source that primarily publishes commentary, analysis, and opinion articles. Statements of opinion should be attributed and evaluated for due weight."
+
+[[claim]]
+outlet_id = "reason"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/reason"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 49
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "reason"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://reason.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "reason.com"
+final_url = "https://reason.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "reason"
+field = "site_pages"
+value = "links about, contact, privacy, masthead pages from its home page; no corrections, ethics link found"
+source_id = "site"
+ref_url = "https://reason.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://reason.com/about/"
+contact = "https://reason.com/contact-reason/"
+domain = "reason.com"
+masthead = "https://reason.com/people/reason-staff/"
+missing = [
+    "corrections",
+    "ethics",
+]
+privacy = "https://reason.com/privacy/"
+
+[[claim]]
+outlet_id = "reason"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/reason"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 49
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "reason"
@@ -94,3 +254,19 @@ value = "https://en.wikipedia.org/wiki/Reason_(magazine)"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1454090"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "reason"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/reason"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 49
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

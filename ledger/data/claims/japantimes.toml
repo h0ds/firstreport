@@ -67,9 +67,122 @@ qid = "Q2085381"
 outlet_id = "japantimes"
 field = "name"
 value = "The Japan Times"
+source_id = "site"
+ref_url = "https://www.japantimes.co.jp/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "japantimes.co.jp"
+
+[[claim]]
+outlet_id = "japantimes"
+field = "name"
+value = "The Japan Times"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1190886"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "japantimes"
+field = "origin_share"
+value = "first to 19% of 16 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/japantimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 48
+origin_of = 3
+shared_stories = 16
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "japantimes"
+field = "posting_cadence"
+value = "0.5 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/japantimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 48
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "japantimes"
+field = "revision_rate"
+value = "6% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/japantimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 48
+revised = 3
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "japantimes"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.japantimes.co.jp/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "japantimes.co.jp"
+final_url = "https://www.japantimes.co.jp/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "japantimes"
+field = "site_pages"
+value = "links about, contact pages from its home page; no privacy, corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.japantimes.co.jp/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.japantimes.co.jp/about-us/site-support/"
+contact = "https://www.japantimes.co.jp/contact-us/"
+domain = "japantimes.co.jp"
+missing = [
+    "privacy",
+    "corrections",
+    "ethics",
+    "masthead",
+]
+
+[[claim]]
+outlet_id = "japantimes"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/japantimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 48
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "japantimes"
@@ -94,3 +207,19 @@ value = "https://en.wikipedia.org/wiki/The_Japan_Times"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q1190886"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "japantimes"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/japantimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 48
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

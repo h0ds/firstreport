@@ -4,6 +4,21 @@
 
 [[claim]]
 outlet_id = "jiji"
+field = "domain_registered"
+value = "1996-03-18"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/jiji.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "jiji.com"
+expires = "2027-03-19"
+last_changed = "2026-03-03"
+registrar = "GMO Internet Group, Inc. d/b/a Onamae.com"
+status = ["active"]
+
+[[claim]]
+outlet_id = "jiji"
 field = "founded"
 value = "2000-07-26"
 source_id = "wikidata"
@@ -35,10 +50,117 @@ qid = "Q35127"
 [[claim]]
 outlet_id = "jiji"
 field = "name"
+value = "時事ドットコム"
+source_id = "site"
+ref_url = "https://www.jiji.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "jiji.com"
+
+[[claim]]
+outlet_id = "jiji"
+field = "name"
 value = "JIJI.COM"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q116848058"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "jiji"
+field = "posting_cadence"
+value = "0.2 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/jiji"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 17
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "jiji"
+field = "registrar"
+value = "GMO Internet Group, Inc. d/b/a Onamae.com"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/jiji.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "jiji.com"
+
+[[claim]]
+outlet_id = "jiji"
+field = "revision_rate"
+value = "6% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/jiji"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 17
+revised = 1
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "jiji"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.jiji.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "jiji.com"
+final_url = "https://www.jiji.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "jiji"
+field = "site_pages"
+value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.jiji.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://barrons.jiji.com/lp/about"
+contact = "https://www.jiji.co.jp/contact/"
+domain = "jiji.com"
+missing = [
+    "corrections",
+    "ethics",
+    "masthead",
+]
+privacy = "https://www.jiji.co.jp/policy/privacy"
+
+[[claim]]
+outlet_id = "jiji"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/jiji"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 17
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "jiji"
@@ -55,3 +177,19 @@ value = "Q116848058"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q116848058"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "jiji"
+field = "withdrawal_rate"
+value = "47% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/jiji"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 17
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 8

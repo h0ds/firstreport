@@ -35,6 +35,25 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "washingtontimes"
+field = "domain_registered"
+value = "1998-09-14"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/washingtontimes.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "washingtontimes.com"
+expires = "2027-09-13"
+last_changed = "2026-07-30"
+registrar = "DNC Holdings, Inc."
+status = [
+    "client delete prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+]
+
+[[claim]]
+outlet_id = "washingtontimes"
 field = "founded"
 value = "1982-01-01"
 source_id = "wikidata"
@@ -62,6 +81,23 @@ retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "washingtontimes"
+field = "origin_share"
+value = "first to 38% of 13 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/washingtontimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+origin_of = 5
+shared_stories = 13
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "washingtontimes"
 field = "owner"
 value = "News World Communications"
 source_id = "wikidata"
@@ -81,6 +117,123 @@ retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q217059"
+
+[[claim]]
+outlet_id = "washingtontimes"
+field = "posting_cadence"
+value = "0.2 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/washingtontimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "washingtontimes"
+field = "registrar"
+value = "DNC Holdings, Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/washingtontimes.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "washingtontimes.com"
+
+[[claim]]
+outlet_id = "washingtontimes"
+field = "reliability"
+value = "No consensus"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2021"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_328#RfC:_The_Washington_Times",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Washington_Times",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_209#Is_the_Washington_Times_an_acceptable_source_for_statements_of_fact_related_to_student_protesters/black_lives_matter/Milo_Yiannopoulos?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#The_Washington_Times",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_Washington_Times",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_316#Rebel_News",
+]
+scale = "wikipedia_rsp"
+scope = "The Washington Times"
+status = "no_consensus"
+summary = "There is consensus that The Washington Times is a marginally reliable source for politics and science. Most editors agree that it is a partisan source. Some editors noted a history of publishing inaccurate or false information, of being slow to issue retractions or corrections, and of sometimes only doing so under the threat of legal action; a considerable minority favored deprecation on these gro"
+
+[[claim]]
+outlet_id = "washingtontimes"
+field = "revision_rate"
+value = "5% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/washingtontimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+revised = 1
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "washingtontimes"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.washingtontimes.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "washingtontimes.com"
+final_url = "https://www.washingtontimes.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "washingtontimes"
+field = "site_pages"
+value = "links about, contact, privacy, corrections, ethics, masthead pages from its home page"
+source_id = "site"
+ref_url = "https://www.washingtontimes.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.washingtontimes.com/about/jobs/"
+contact = "https://www.washingtontimes.com/contact-us/"
+corrections = "https://www.washingtontimes.com/news/corrections/"
+domain = "washingtontimes.com"
+ethics = "https://www.washingtontimes.com/news/2026/sep/28/trump-admin-roll-lower-fuel-economy-standards-cars-light-trucks/"
+masthead = "https://www.washingtontimes.com/staff/cheryl-k-chumley/"
+missing = []
+privacy = "https://www.washingtontimes.com/privacy/"
+
+[[claim]]
+outlet_id = "washingtontimes"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/washingtontimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 20
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "washingtontimes"
@@ -105,3 +258,19 @@ value = "https://en.wikipedia.org/wiki/The_Washington_Times"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q494170"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "washingtontimes"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/washingtontimes"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

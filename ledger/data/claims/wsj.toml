@@ -24,6 +24,26 @@ min_means = "shared only by Democrats"
 
 [[claim]]
 outlet_id = "wsj"
+field = "domain_registered"
+value = "1994-05-26"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/wsj.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "wsj.com"
+expires = "2027-05-25"
+last_changed = "2026-05-21"
+registrar = "CSC Corporate Domains, Inc."
+status = [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "wsj"
 field = "founded"
 value = "1889-07-08"
 source_id = "wikidata"
@@ -102,6 +122,90 @@ qid = "Q1126244"
 
 [[claim]]
 outlet_id = "wsj"
+field = "posting_cadence"
+value = "0.2 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/wsj"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "wsj"
+field = "registrar"
+value = "CSC Corporate Domains, Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/wsj.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "wsj.com"
+
+[[claim]]
+outlet_id = "wsj"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2025"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_48#Alleged_Wall_Street_Journal_Publication",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_80#Washington_Wire_by_WSJ?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_96#Wall_Street_Journal_is_usually_bogus",
+    'https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_180#Wall_Street_Journal_"Saturday_Essay"',
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_273#Dubious_report_by_the_Wall_Street_Journal",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_407#Wall_Street_Journal_opinions",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_448#WSJ_says_it_can't_prove_claims_that_10%_of_UNWRA_staff_had_ties_to_militant_groups",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_488#Did_WSJ_fall_for_a_hoax?",
+]
+scale = "wikipedia_rsp"
+scope = "The Wall Street Journal (WSJ)"
+status = "generally_reliable"
+summary = "Most editors consider The Wall Street Journal generally reliable for news. Use WP:NEWSBLOG to evaluate the newspaper's blogs, including Washington Wire. Use WP:RSOPINION for opinion pieces."
+
+[[claim]]
+outlet_id = "wsj"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/wsj"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "wsj"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/wsj"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 20
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "wsj"
 field = "website"
 value = "https://wsj.com"
 source_id = "wikidata"
@@ -129,3 +233,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q164746"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q164746 (The Wall Street Journal); also Q133802395 (Q133802395)"
+
+[[claim]]
+outlet_id = "wsj"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/wsj"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 20
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

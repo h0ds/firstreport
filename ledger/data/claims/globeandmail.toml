@@ -35,6 +35,21 @@ qid = "Q16"
 
 [[claim]]
 outlet_id = "globeandmail"
+field = "domain_registered"
+value = "1995-09-18"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "theglobeandmail.com"
+expires = "2027-09-17"
+last_changed = "2026-09-03"
+registrar = "Webnames.ca Inc."
+status = ["client transfer prohibited"]
+
+[[claim]]
+outlet_id = "globeandmail"
 field = "founded"
 value = "1936-01-01"
 source_id = "wikidata"
@@ -67,9 +82,149 @@ qid = "Q1416653"
 outlet_id = "globeandmail"
 field = "name"
 value = "The Globe and Mail"
+source_id = "site"
+ref_url = "https://www.theglobeandmail.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "theglobeandmail.com"
+
+[[claim]]
+outlet_id = "globeandmail"
+field = "name"
+value = "The Globe and Mail"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q604525"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "globeandmail"
+field = "origin_share"
+value = "first to 30% of 23 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/globeandmail"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 100
+origin_of = 7
+shared_stories = 23
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "globeandmail"
+field = "posting_cadence"
+value = "1.1 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/globeandmail"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 100
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "globeandmail"
+field = "registrar"
+value = "Webnames.ca Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "theglobeandmail.com"
+
+[[claim]]
+outlet_id = "globeandmail"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2021"
+
+[claim.data]
+discussions = ["https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"]
+scale = "wikipedia_rsp"
+scope = "The Globe and Mail"
+status = "generally_reliable"
+summary = "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+
+[[claim]]
+outlet_id = "globeandmail"
+field = "revision_rate"
+value = "1% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/globeandmail"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 100
+revised = 1
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "globeandmail"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.theglobeandmail.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "theglobeandmail.com"
+final_url = "https://www.theglobeandmail.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "globeandmail"
+field = "site_pages"
+value = "links about, privacy, ethics, masthead pages from its home page; no contact, corrections link found"
+source_id = "site"
+ref_url = "https://www.theglobeandmail.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.theglobeandmail.com/sports/article-arizona-state-hockey-players-send-letter-to-school-president-about/"
+domain = "theglobeandmail.com"
+ethics = "https://www.theglobeandmail.com/opinion/article-canadian-medical-association-cultural-safety-code-of-ethics-indigenous/"
+masthead = "https://theglobeleadershipinstitute.com/"
+missing = [
+    "contact",
+    "corrections",
+]
+privacy = "https://www.theglobeandmail.com/privacy-terms/terms-and-conditions/?intcmp=footer"
+
+[[claim]]
+outlet_id = "globeandmail"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/globeandmail"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 100
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "globeandmail"
@@ -94,3 +249,19 @@ value = "https://en.wikipedia.org/wiki/The_Globe_and_Mail"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q604525"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "globeandmail"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/globeandmail"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 100
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

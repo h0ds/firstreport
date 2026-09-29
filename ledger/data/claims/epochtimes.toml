@@ -46,6 +46,26 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "epochtimes"
+field = "domain_registered"
+value = "2003-12-17"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/theepochtimes.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "theepochtimes.com"
+expires = "2030-12-17"
+last_changed = "2025-12-17"
+registrar = "GoDaddy.com, LLC"
+status = [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+]
+
+[[claim]]
+outlet_id = "epochtimes"
 field = "founded"
 value = "2000-01-01"
 source_id = "wikidata"
@@ -67,6 +87,18 @@ qid = "Q1110794"
 outlet_id = "epochtimes"
 field = "name"
 value = "The Epoch Times"
+source_id = "site"
+ref_url = "https://www.theepochtimes.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "theepochtimes.com"
+
+[[claim]]
+outlet_id = "epochtimes"
+field = "name"
+value = "The Epoch Times"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q584472"
 retrieved_at = 1790661446
@@ -81,6 +113,78 @@ retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q109914129"
+
+[[claim]]
+outlet_id = "epochtimes"
+field = "registrar"
+value = "GoDaddy.com, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/theepochtimes.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "theepochtimes.com"
+
+[[claim]]
+outlet_id = "epochtimes"
+field = "reliability"
+value = "Deprecated"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2022"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_279#The_Epoch_Times,_once_again",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_15#The_Epoch_Times",
+    'https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#Is_"The_Epoch_Times"_a_reliable_source',
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_34#The_Epoch_Times",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_191#Epoch_Times_for_story_on_Monsanto_lawsuit",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_251#The_Epoch_Times_for_anything_related_to_political_controversies_involving_Falun_Gong",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_294#Should_we_be_using_this_Falun_Gong_media_outfit_as_a_source_for_BLPs,_politics,_China,_etc?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#Expert_interview_in_Epoch_Times_spinoff_channel",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Are_NTD_and_vision_times_legit_source?",
+]
+scale = "wikipedia_rsp"
+scope = "The Epoch Times (New Tang Dynasty Television, Vision Times, Vision China Times)"
+status = "deprecated"
+summary = "The Epoch Times was deprecated in the 2019 RfC. Most editors classify The Epoch Times as an advocacy group for the Falun Gong, and consider the publication a biased or opinionated source that frequently publishes conspiracy theories as fact."
+
+[[claim]]
+outlet_id = "epochtimes"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.theepochtimes.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "theepochtimes.com"
+final_url = "https://www.theepochtimes.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "epochtimes"
+field = "site_pages"
+value = "links about, contact, privacy, corrections, ethics, masthead pages from its home page"
+source_id = "site"
+ref_url = "https://www.theepochtimes.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.theepochtimes.com/epochtv/us-china-to-lower-tariffs-on-60-billion-worth-of-goods-trump-not-serious-about-arming-china-newsham-6095963"
+contact = "https://www.theepochtimes.com/contact-us"
+corrections = "https://www.theepochtimes.com/corrections"
+domain = "theepochtimes.com"
+ethics = "https://www.theepochtimes.com/us/trump-says-new-fuel-economy-standards-approved-ending-biden-ev-mandate-6095559"
+masthead = "https://www.theepochtimes.com/bright/leadership"
+missing = []
+privacy = "https://www.theepochtimes.com/privacy-notice"
 
 [[claim]]
 outlet_id = "epochtimes"

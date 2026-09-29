@@ -46,10 +46,106 @@ qid = "Q1254874"
 [[claim]]
 outlet_id = "fnn"
 field = "name"
+value = "FNNプライムオンライン"
+source_id = "site"
+ref_url = "https://www.fnn.jp/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "fnn.jp"
+
+[[claim]]
+outlet_id = "fnn"
+field = "name"
 value = "Fuji News Network"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q843791"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "fnn"
+field = "posting_cadence"
+value = "1.2 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/fnn"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 108
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "fnn"
+field = "revision_rate"
+value = "5% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/fnn"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 108
+revised = 5
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "fnn"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.fnn.jp/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "fnn.jp"
+final_url = "https://www.fnn.jp/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "fnn"
+field = "site_pages"
+value = "links about pages from its home page; no contact, privacy, corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.fnn.jp/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.fnn.jp/list/about"
+domain = "fnn.jp"
+missing = [
+    "contact",
+    "privacy",
+    "corrections",
+    "ethics",
+    "masthead",
+]
+
+[[claim]]
+outlet_id = "fnn"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/fnn"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 108
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "fnn"
@@ -74,3 +170,19 @@ value = "https://en.wikipedia.org/wiki/Fuji_News_Network"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q843791"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "fnn"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/fnn"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 108
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

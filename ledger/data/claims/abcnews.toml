@@ -35,6 +35,46 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "abcnews"
+field = "domain_registered"
+value = "1995-04-20"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/abcnews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "abcnews.com"
+expires = "2027-04-21"
+last_changed = "2026-03-22"
+registrar = "CSC Corporate Domains, Inc."
+status = [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "abcnews"
+field = "domain_registered"
+value = "1998-01-09"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/go.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "go.com"
+expires = "2027-01-08"
+last_changed = "2025-12-09"
+registrar = "CSC Corporate Domains, Inc."
+status = [
+    "client transfer prohibited",
+    "server delete prohibited",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "abcnews"
 field = "founded"
 value = "1945-06-15"
 source_id = "wikidata"
@@ -66,10 +106,39 @@ qid = "Q561068"
 [[claim]]
 outlet_id = "abcnews"
 field = "name"
+value = "Go"
+source_id = "site"
+ref_url = "https://www.go.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "go.com"
+
+[[claim]]
+outlet_id = "abcnews"
+field = "name"
 value = "ABC News"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q287171"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "abcnews"
+field = "origin_share"
+value = "first to 42% of 19 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/abcnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 29
+origin_of = 8
+shared_stories = 19
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "abcnews"
@@ -95,6 +164,131 @@ qid = "Q654073"
 
 [[claim]]
 outlet_id = "abcnews"
+field = "posting_cadence"
+value = "0.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/abcnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 29
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "abcnews"
+field = "registrar"
+value = "CSC Corporate Domains, Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/go.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "go.com"
+
+[[claim]]
+outlet_id = "abcnews"
+field = "registrar"
+value = "CSC Corporate Domains, Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/abcnews.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "abcnews.com"
+
+[[claim]]
+outlet_id = "abcnews"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2021"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources",
+]
+scale = "wikipedia_rsp"
+scope = "ABC News (USA)"
+status = "generally_reliable"
+summary = "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+
+[[claim]]
+outlet_id = "abcnews"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/abcnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 29
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "abcnews"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.go.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "go.com"
+final_url = "https://www.go.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "abcnews"
+field = "site_pages"
+value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+source_id = "site"
+ref_url = "https://www.go.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.thewaltdisneycompany.com/?ppLink=pp_wdig"
+contact = "http://disney.go.com/guestservices/"
+domain = "go.com"
+missing = [
+    "corrections",
+    "ethics",
+    "masthead",
+]
+privacy = "https://privacy.thewaltdisneycompany.com/en/"
+
+[[claim]]
+outlet_id = "abcnews"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/abcnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 29
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "abcnews"
 field = "website"
 value = "https://abcnews.go.com/"
 source_id = "wikidata"
@@ -116,3 +310,19 @@ value = "https://en.wikipedia.org/wiki/ABC_News_(United_States)"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q287171"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "abcnews"
+field = "withdrawal_rate"
+value = "14% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/abcnews"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 29
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 4

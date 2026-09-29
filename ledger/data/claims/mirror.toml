@@ -36,6 +36,26 @@ qid = "Q145"
 
 [[claim]]
 outlet_id = "mirror"
+field = "domain_registered"
+value = "1995-09-08"
+source_id = "rdap"
+ref_url = "https://rdap.nominet.uk/uk/domain/mirror.co.uk"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "mirror.co.uk"
+expires = "2027-09-08"
+last_changed = "2026-09-04"
+registrar = "CSC Corporate Domains, Inc"
+status = [
+    "server delete prohibited",
+    "renew period",
+    "server transfer prohibited",
+    "server update prohibited",
+]
+
+[[claim]]
+outlet_id = "mirror"
 field = "founded"
 value = "1903-01-01"
 source_id = "wikidata"
@@ -83,10 +103,39 @@ qid = "Q1002697"
 outlet_id = "mirror"
 field = "name"
 value = "Daily Mirror"
+source_id = "site"
+ref_url = "https://www.mirror.co.uk/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "mirror.co.uk"
+
+[[claim]]
+outlet_id = "mirror"
+field = "name"
+value = "Daily Mirror"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q217623"
 retrieved_at = 1790661446
 note = "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)"
+
+[[claim]]
+outlet_id = "mirror"
+field = "origin_share"
+value = "first to 67% of 6 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/mirror"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 27
+origin_of = 4
+shared_stories = 6
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "mirror"
@@ -99,6 +148,121 @@ note = "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also 
 
 [claim.data]
 qid = "Q1636545"
+
+[[claim]]
+outlet_id = "mirror"
+field = "posting_cadence"
+value = "0.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/mirror"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 27
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "mirror"
+field = "registrar"
+value = "CSC Corporate Domains, Inc"
+source_id = "rdap"
+ref_url = "https://rdap.nominet.uk/uk/domain/mirror.co.uk"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "mirror.co.uk"
+
+[[claim]]
+outlet_id = "mirror"
+field = "reliability"
+value = "No consensus"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2020"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#Daily_Mirror",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_160#Huffington_Post/Daily_Mirror",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#The_Daily_Mirror",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Daily_Express_and_Daily_Mirror",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Daily_Mirror",
+]
+scale = "wikipedia_rsp"
+scope = "Daily Mirror (Mirror)"
+status = "no_consensus"
+summary = "The Daily Mirror, also known just as the Mirror, is a tabloid newspaper that publishes tabloid journalism. There is no consensus on whether its reliability is comparable to that of British tabloids such as the Daily Mail and The Sun."
+
+[[claim]]
+outlet_id = "mirror"
+field = "revision_rate"
+value = "4% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/mirror"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 27
+revised = 1
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "mirror"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.mirror.co.uk/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "mirror.co.uk"
+final_url = "https://www.mirror.co.uk/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "mirror"
+field = "site_pages"
+value = "links about, contact, privacy, corrections, ethics pages from its home page; no masthead link found"
+source_id = "site"
+ref_url = "https://www.mirror.co.uk/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.mirror.co.uk/all-about/crime"
+contact = "https://www.mirror.co.uk/contact-us/"
+corrections = "https://www.mirror.co.uk/corrections-clarifications/"
+domain = "mirror.co.uk"
+ethics = "https://www.mirror.co.uk/community-standards/"
+missing = ["masthead"]
+privacy = "https://www.mirror.co.uk/privacy-notice/"
+
+[[claim]]
+outlet_id = "mirror"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/mirror"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 27
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "mirror"
@@ -132,3 +296,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q217623"
 retrieved_at = 1790661446
 note = "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)"
+
+[[claim]]
+outlet_id = "mirror"
+field = "withdrawal_rate"
+value = "0% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/mirror"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 27
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 0

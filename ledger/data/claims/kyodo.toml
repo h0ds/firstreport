@@ -15,6 +15,21 @@ qid = "Q17"
 
 [[claim]]
 outlet_id = "kyodo"
+field = "domain_registered"
+value = "2014-01-10"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/net/v1/domain/kyodonews.net"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "kyodonews.net"
+expires = "2027-01-10"
+last_changed = "2025-11-28"
+registrar = "GMO Internet Group, Inc. d/b/a Onamae.com"
+status = ["active"]
+
+[[claim]]
+outlet_id = "kyodo"
 field = "founded"
 value = "2006-12-24"
 source_id = "wikidata"
@@ -50,6 +65,17 @@ value = "47NEWS"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q11187831"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "kyodo"
+field = "registrar"
+value = "GMO Internet Group, Inc. d/b/a Onamae.com"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/net/v1/domain/kyodonews.net"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "kyodonews.net"
 
 [[claim]]
 outlet_id = "kyodo"

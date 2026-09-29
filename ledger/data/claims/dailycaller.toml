@@ -35,6 +35,26 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "dailycaller"
+field = "domain_registered"
+value = "2009-05-06"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/dailycaller.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "dailycaller.com"
+expires = "2028-05-06"
+last_changed = "2025-05-07"
+registrar = "GoDaddy.com, LLC"
+status = [
+    "client delete prohibited",
+    "client renew prohibited",
+    "client transfer prohibited",
+    "client update prohibited",
+]
+
+[[claim]]
+outlet_id = "dailycaller"
 field = "founded"
 value = "2010-01-01"
 source_id = "wikidata"
@@ -70,6 +90,79 @@ value = "The Daily Caller"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q7728625"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "dailycaller"
+field = "registrar"
+value = "GoDaddy.com, LLC"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/dailycaller.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "dailycaller.com"
+
+[[claim]]
+outlet_id = "dailycaller"
+field = "reliability"
+value = "Deprecated"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2019"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_258#RfC:_The_Daily_Caller",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_71#The_Daily_Caller",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_145#The_Daily_Caller_is_not_a_reliable_source",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_109#Daily_Caller_as_source_of_opinion_refuting_a_technical_white_paper_+_secondary_sources",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_149#The_Daily_Caller_as_a_source",
+    'https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_158#Timmerman_of_Daily_Caller:_"sources_with_access_to_intelligence_reports_had_told_him_that_intelligence_reports_from_French_and_Jordanian_military_intelligence_show..."',
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_242#The_Hill,_Fox_News,_and_Daily_Caller_reliable_sources?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_278#Correct_action_when_someone_persistently_adds_back_a_deprecated_source?",
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_280#Interviews_&_opinion_pieces_(The_Daily_Caller)",
+]
+scale = "wikipedia_rsp"
+scope = "The Daily Caller"
+status = "deprecated"
+summary = "The Daily Caller was deprecated in the 2019 RfC, which showed consensus that the site publishes false or fabricated information."
+
+[[claim]]
+outlet_id = "dailycaller"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://dailycaller.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "dailycaller.com"
+final_url = "https://dailycaller.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "dailycaller"
+field = "site_pages"
+value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+source_id = "site"
+ref_url = "https://dailycaller.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://dailycaller.com/about-us"
+contact = "https://dailycaller.com/contact"
+domain = "dailycaller.com"
+ethics = "https://dailycaller.com/2026/09/28/trump-fuel-economy-standards-ev-mandate-duffy-nhtsa-steve-milloy-jason-isaac"
+missing = [
+    "corrections",
+    "masthead",
+]
+privacy = "https://dailycaller.com/footer/privacy-policy"
 
 [[claim]]
 outlet_id = "dailycaller"

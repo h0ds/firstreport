@@ -35,6 +35,21 @@ qid = "Q30"
 
 [[claim]]
 outlet_id = "huffpost"
+field = "domain_registered"
+value = "2005-03-10"
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/huffpost.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "huffpost.com"
+expires = "2028-03-10"
+last_changed = "2026-02-06"
+registrar = "MarkMonitor Inc."
+status = ["active"]
+
+[[claim]]
+outlet_id = "huffpost"
 field = "founded"
 value = "2005-05-01"
 source_id = "wikidata"
@@ -67,9 +82,38 @@ qid = "Q1153191"
 outlet_id = "huffpost"
 field = "name"
 value = "HuffPost"
+source_id = "site"
+ref_url = "https://www.huffpost.com/"
+retrieved_at = 1790669037
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "huffpost.com"
+
+[[claim]]
+outlet_id = "huffpost"
+field = "name"
+value = "HuffPost"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q18049522"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "huffpost"
+field = "origin_share"
+value = "first to 12% of 8 stories other outlets also carried"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/huffpost"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 12
+origin_of = 1
+shared_stories = 8
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "huffpost"
@@ -95,6 +139,158 @@ qid = "Q5003490"
 
 [[claim]]
 outlet_id = "huffpost"
+field = "posting_cadence"
+value = "0.1 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/huffpost"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 12
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "huffpost"
+field = "registrar"
+value = "MarkMonitor Inc."
+source_id = "rdap"
+ref_url = "https://rdap.verisign.com/com/v1/domain/huffpost.com"
+retrieved_at = 1790668896
+
+[claim.data]
+domain = "huffpost.com"
+
+[[claim]]
+outlet_id = "huffpost"
+field = "reliability"
+value = "Generally reliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2021"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+    "#cite_note-52",
+]
+scale = "wikipedia_rsp"
+scope = "HuffPost (excluding politics) (The Huffington Post)"
+status = "generally_reliable"
+summary = "A 2020 RfC found HuffPost staff writers fairly reliable for factual reporting on non-political topics, but notes that they may give prominence to topics that support their political bias and less prominence to, or omit, things that contradict it. HuffPost's reliability has increased since 2012; articles before 2012 are less reliable and should be treated with more caution. HuffPost uses clickbait "
+
+[[claim]]
+outlet_id = "huffpost"
+field = "reliability"
+value = "Generally unreliable"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2020"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+    "#cite_note-54",
+]
+scale = "wikipedia_rsp"
+scope = "HuffPost contributors (The Huffington Post)"
+status = "generally_unreliable"
+summary = "Until 2018, the U.S. edition of HuffPost published content written by contributors with near-zero editorial oversight. These contributors generally did not have a reputation for fact-checking, and most editors consider them highly variable in quality. Editors show consensus for treating HuffPost contributor articles as self-published sources, unless the article was written by a subject-matter expe"
+
+[[claim]]
+outlet_id = "huffpost"
+field = "reliability"
+value = "No consensus"
+source_id = "wikipedia_rsp"
+ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
+retrieved_at = 1790668896
+as_of = "2024"
+
+[claim.data]
+discussions = [
+    "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+    "#cite_note-53",
+]
+scale = "wikipedia_rsp"
+scope = "HuffPost (politics) (The Huffington Post)"
+status = "no_consensus"
+summary = "In the 2020 RfC, there was no consensus on HuffPost staff writers' reliability for political topics. The community considers HuffPost openly biased on American politics. There is no consensus on its reliability for international politics. See also: HuffPost (excluding politics), HuffPost contributors."
+
+[[claim]]
+outlet_id = "huffpost"
+field = "revision_rate"
+value = "0% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/huffpost"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 12
+revised = 0
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "huffpost"
+field = "site_https"
+value = "https; plain http redirects to it"
+source_id = "site"
+ref_url = "https://www.huffpost.com/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "huffpost.com"
+final_url = "https://www.huffpost.com/"
+http_redirects_to_https = true
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "huffpost"
+field = "site_pages"
+value = "links about, contact, privacy, masthead pages from its home page; no corrections, ethics link found"
+source_id = "site"
+ref_url = "https://www.huffpost.com/"
+retrieved_at = 1790669037
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.huffpost.com/entry/what-the-length-width-and-color-of-your-tie-says-about-you-in-2026_l_6a98270ce4b087cf7f00a50d?origin=home-life-unit"
+contact = "https://www.huffpost.com/static/contact-us"
+domain = "huffpost.com"
+masthead = "https://www.huffpost.com/entry/trump-obama-women-leadership_n_6aba9fbfe4b075cb0a403a74?origin=home-latest-news-unit"
+missing = [
+    "corrections",
+    "ethics",
+]
+privacy = "https://www.huffpost.com/static/privacy-policy"
+
+[[claim]]
+outlet_id = "huffpost"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/huffpost"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 12
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "huffpost"
 field = "website"
 value = "https://www.huffpost.com/"
 source_id = "wikidata"
@@ -116,3 +312,19 @@ value = "https://en.wikipedia.org/wiki/HuffPost"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q18049522"
 retrieved_at = 1790661446
+
+[[claim]]
+outlet_id = "huffpost"
+field = "withdrawal_rate"
+value = "33% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/huffpost"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 12
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 4

@@ -82,6 +82,70 @@ qid = "Q605233"
 
 [[claim]]
 outlet_id = "tbsnewsdig"
+field = "posting_cadence"
+value = "2.3 items/day"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/tbsnewsdig"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 210
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "tbsnewsdig"
+field = "revision_rate"
+value = "9% of items revised after publication"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/tbsnewsdig"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 210
+revised = 18
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "tbsnewsdig"
+field = "site_https"
+value = "https not served (status 404)"
+source_id = "site"
+ref_url = "https://tbs.co.jp/"
+retrieved_at = 1790669037
+
+[claim.data]
+domain = "tbs.co.jp"
+final_url = "https://tbs.co.jp/"
+http_redirects_to_https = false
+http_status = 404
+https = false
+status = 404
+
+[[claim]]
+outlet_id = "tbsnewsdig"
+field = "syndication_share"
+value = "0% of items carry text first published elsewhere; 0% were carried by others"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/tbsnewsdig"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+copied_by_others = 0
+copies = 0
+items = 210
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+
+[[claim]]
+outlet_id = "tbsnewsdig"
 field = "website"
 value = "https://newsdig.tbs.co.jp/"
 source_id = "wikidata"
@@ -109,3 +173,19 @@ source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q844060"
 retrieved_at = 1790661446
 note = "2 Wikidata items match the domain; this is Q844060 (Japan News Network); also Q16143608 (TBS News DIG)"
+
+[[claim]]
+outlet_id = "tbsnewsdig"
+field = "withdrawal_rate"
+value = "73% of items withdrawn"
+source_id = "feed_behaviour"
+ref_url = "http://127.0.0.1:8080/v1/outlets/tbsnewsdig"
+retrieved_at = 1790669448
+as_of = "2026-09-29"
+
+[claim.data]
+items = 210
+window_days = 90
+window_end = "2026-09-29"
+window_start = "2026-07-01"
+withdrawn = 153
