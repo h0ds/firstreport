@@ -208,6 +208,17 @@ pub fn read(feed_export: &Path, ledger_export: &Path) -> Result<Input, String> {
     Ok(input)
 }
 
+impl Input {
+    /// Display name for an outlet id, falling back to the id.
+    pub fn outlet_name<'a>(&'a self, id: &'a str) -> &'a str {
+        self.outlets
+            .get(id)
+            .map(|o| o.name.as_str())
+            .filter(|n| !n.is_empty())
+            .unwrap_or(id)
+    }
+}
+
 #[cfg(test)]
 pub(crate) fn fixture_input() -> Input {
     let root = Path::new(env!("CARGO_MANIFEST_DIR"));

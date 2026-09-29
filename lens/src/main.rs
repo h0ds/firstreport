@@ -3,9 +3,12 @@
 //! no score, no lean colour, no summary in its own voice. Plan in
 //! `docs/plan.md`.
 
+mod build;
 mod cli;
 mod derive;
 mod input;
+mod pages;
+mod render;
 
 fn main() {
     if let Err(e) = run() {
@@ -19,42 +22,18 @@ fn run() -> Result<(), String> {
         cli::Command::Build {
             feed_export,
             ledger_export,
+            out,
             ..
         } => {
             let input = input::read(&feed_export, &ledger_export)?;
+            let n = build::write_site(&input, &out)?;
             println!(
-                "read {} outlets, {} items, {} clusters, {} events, {} sources, {} outlets with claims; export time {}",
-                input.outlets.len(),
-                input.items.len(),
+                "built {} story pages from {} clusters into {}",
+                n,
                 input.clusters.len(),
-                input.events.len(),
-                input.sources.len(),
-                input.claims.len(),
-                input.export_time
+                out.display()
             );
-            let facts = derive::outlet_facts(&input, 30 * derive::DAY);
-            for (id, f) in &facts {
-                println!(
-                    "  {id}: {} stories, first to {} of {} shared, {} copies, {} copied",
-                    f.clusters.len(),
-                    f.first_to,
-                    f.shared_stories,
-                    f.copies,
-                    f.copied
-                );
-            }
-            if let Some(c) = input.clusters.values().max_by_key(|c| c.last_active_at) {
-                let f = derive::cluster_facts(c, &input.events, input.export_time);
-                println!(
-                    "  latest story {}: {} outlets in 24 h, {} copies, {} revisions, spark {:?}",
-                    c.id,
-                    f.outlets_24h,
-                    f.copies_of.len(),
-                    f.revisions.len(),
-                    f.spark
-                );
-            }
-            Err("build: pages are not written yet (N1)".into())
+            Ok(())
         }
         cli::Command::Serve { .. } => Err("serve: not written yet (N1)".into()),
         cli::Command::Check { .. } => Err("check: not written yet (N1)".into()),
