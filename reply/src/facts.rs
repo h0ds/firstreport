@@ -229,6 +229,49 @@ pub fn date_time(ts: i64) -> String {
     )
 }
 
+/// Unix seconds from an RFC 3339 timestamp such as `2024-01-01T09:00:00.123Z`
+/// or `2024-01-01T09:00:00+02:00`. `None` if it does not parse.
+pub fn parse_rfc3339(s: &str) -> Option<i64> {
+    let s = s.trim();
+    let (date, rest) = s.split_at(s.find('T').or_else(|| s.find(' '))?);
+    let rest = &rest[1..];
+    let mut d = date.split('-');
+    let (y, mo, da): (i64, u32, u32) = (
+        d.next()?.parse().ok()?,
+        d.next()?.parse().ok()?,
+        d.next()?.parse().ok()?,
+    );
+    let tz_at = rest.find(['Z', 'z', '+', '-']).unwrap_or(rest.len());
+    let (time, tz) = rest.split_at(tz_at);
+    let mut t = time.split(':');
+    let (h, mi): (i64, i64) = (t.next()?.parse().ok()?, t.next()?.parse().ok()?);
+    let sec: i64 = t
+        .next()
+        .map(|x| x.split('.').next().unwrap_or("0").parse().ok())
+        .unwrap_or(Some(0))?;
+    let offset = match tz {
+        "" | "Z" | "z" => 0,
+        _ => {
+            let sign = if tz.starts_with('-') { -1 } else { 1 };
+            let mut p = tz[1..].split(':');
+            let oh: i64 = p.next()?.parse().ok()?;
+            let om: i64 = p.next().unwrap_or("0").parse().ok()?;
+            sign * (oh * 3600 + om * 60)
+        }
+    };
+    Some(days_from_civil(y, mo, da) * 86_400 + h * 3600 + mi * 60 + sec - offset)
+}
+
+fn days_from_civil(y: i64, m: u32, d: u32) -> i64 {
+    let y = if m <= 2 { y - 1 } else { y };
+    let era = y.div_euclid(400);
+    let yoe = y.rem_euclid(400);
+    let mp = (m as i64 + 9) % 12;
+    let doy = (153 * mp + 2) / 5 + d as i64 - 1;
+    let doe = yoe * 365 + yoe / 4 - yoe / 100 + doy;
+    era * 146_097 + doe - 719_468
+}
+
 // Howard Hinnant's algorithm.
 fn civil_from_days(z: i64) -> (i64, u32, u32) {
     let z = z + 719_468;
@@ -246,6 +289,26 @@ fn civil_from_days(z: i64) -> (i64, u32, u32) {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn rfc3339_round_trips() {
+        assert_eq!(parse_rfc3339("2024-01-01T09:00:00Z"), Some(1_704_099_600));
+        assert_eq!(
+            parse_rfc3339("2024-01-01T09:00:00.512Z"),
+            Some(1_704_099_600)
+        );
+        assert_eq!(
+            parse_rfc3339("2024-01-01T11:00:00+02:00"),
+            Some(1_704_099_600)
+        );
+        assert_eq!(parse_rfc3339("1970-01-01T00:00:00Z"), Some(0));
+        assert_eq!(parse_rfc3339("nope"), None);
+        for ts in [0, 951_782_400, 1_704_099_600, 4_102_444_800] {
+            let s = date_time(ts).replace(' ', "T").replace(" UTC", "") + ":00Z";
+            let s = s.replace("TUTC", "");
+            assert_eq!(parse_rfc3339(&s.replace("UTC", "")), Some(ts), "{s}");
+        }
+    }
 
     #[test]
     fn dates_and_durations() {

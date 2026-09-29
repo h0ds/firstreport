@@ -10,6 +10,8 @@ cargo run -- check --update                          # rewrite the goldens; revi
 cargo run -- render fixtures/mentions/origin_story.json --platform bluesky
 cargo run -- resolve mention.json                    # ask a running feed and ledger; print the FactSet
 cargo run -- resolve mention.json --render           # ...and the draft it renders to
+REPLY_BSKY_PASSWORD=... cargo run -- --handle kagami.example listen   # dry run: mentions in, drafts to data/queue/
+cargo run -- queue                                   # print the queued drafts
 cargo test
 ```
 
@@ -18,6 +20,20 @@ Runs from the `reply/` directory, where `templates/` and `fixtures/` are.
 at `--feed-url` and `--ledger-url` (default: the local servers) and
 `--log-url` is where the reply log will live; cites resolve against all
 three. A `resolve` output saved under `fixtures/mentions/` is a fixture.
+
+## Listening (dry run)
+
+`listen` polls Bluesky's notifications for mentions of `--handle` every
+`--interval` seconds (default 30), fetches the parent and quoted posts,
+resolves and drafts each mention, and writes the draft with its
+FactSet to `data/queue/<hash>.json` as `pending`. `data/seen.txt` holds
+every mention id handled, so a restart drafts nothing twice. Nothing is
+posted, and there is no code path that could: the poster is R3. The app
+password comes from `REPLY_BSKY_PASSWORD`; `--pds` defaults to
+`https://bsky.social`. `--once` polls a single time, for cron.
+
+Only `reason == "mention"` notifications count. Replies to the bot's own
+posts and quotes of them are not summonses.
 
 ## Resolving a mention
 

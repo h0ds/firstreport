@@ -189,9 +189,11 @@ whole enforcement of rule 6, and it is a unit test.
 
 ## 5. Platforms, in the order they are worth adding
 
-1. **Bluesky** (AT Protocol). Open firehose, free, documented, no
-   automation approval needed. Mentions arrive on the firehose; replies
-   go through the same authenticated API as any client. First adapter.
+1. **Bluesky** (AT Protocol). Open, free, documented, no automation
+   approval needed. Mentions are polled from the account's notifications
+   with an app password; the firehose, which needs a websocket and CAR
+   decoding, is only worth it for the observer (R4). Replies go through
+   the same authenticated API as any client. First adapter.
 2. **Mastodon**. Streaming API per instance, open, well behaved. The bot
    lives on one instance and receives mentions from any. Second.
 3. **X**. Where most campaigns run and where the bot is most wanted.
@@ -329,12 +331,13 @@ reply/
                             golden drafts, rewritten by `check --update`
     firehose/*.ndjson       recorded platform streams for the observer
   src/
-    main.rs                 CLI: listen | render | review | serve | observe | export | check
+    main.rs                 CLI: listen | render | review | serve | observe | export | check | queue
     cli.rs                  argument parsing
     model.rs                contract types, validation, the cite check
     facts.rs                FactSet → the view templates read, with derived values under d.
-    platform/mod.rs         adapter trait
-    platform/bluesky.rs
+    platform/mod.rs         Listener trait
+    platform/bluesky.rs     XRPC: listNotifications, getPosts; parsing is pure
+    queue.rs                data/queue/*.json and data/seen.txt
     platform/mastodon.rs
     client.rs               the Api trait: HTTP, and recorded responses for tests
     resolve.rs              mention → Subject → FactSet, via feed and ledger
@@ -423,8 +426,13 @@ salt_env = "REPLY_SALT"
   outlet, collects display names, and records every miss as a gap.
   Verified against a `feed` serving the replay fixtures; `ledger` not
   yet run alongside.
-- **R2** Bluesky listener in `--dry-run`: mentions in, drafts to the
-  queue, nothing posted. Run it for weeks and read what people ask.
+- **R2** Bluesky listener, dry run: mentions in, drafts to the queue,
+  nothing posted. Done: `listen` polls `listNotifications` for mentions
+  (the firehose is left to the observer), fetches parent and quoted
+  posts, drafts each mention into `data/queue/` and never drafts one
+  twice; `queue` prints them. Parsing is tested on recorded responses;
+  not yet run against a live account. Next: run it for weeks and read
+  what people ask.
 - **R3** Review page and poster. First replies, all human-approved.
 - **R4** Observer and the four signals, shown on the public log before
   any reply carries one.
