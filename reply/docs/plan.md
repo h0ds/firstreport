@@ -337,7 +337,7 @@ reply/
     facts.rs                FactSet → the view templates read, with derived values under d.
     platform/mod.rs         Listener trait
     platform/bluesky.rs     XRPC: listNotifications, getPosts; parsing is pure
-    queue.rs                data/queue/*.json and data/seen.txt
+    queue.rs                data/queue/*.json, data/log/*.json and data/seen.txt
     platform/mastodon.rs
     client.rs               the Api trait: HTTP, and recorded responses for tests
     resolve.rs              mention → Subject → FactSet, via feed and ledger
@@ -345,9 +345,7 @@ reply/
     template.rs             TOML template loading and rendering
     observe/store.rs        sightings, salted hashes, pruning
     observe/signals.rs      burst, syndicated_text, cohort, first_movers
-    review.rs               queue and its page
-    log.rs                  public log store and export
-    api.rs                  HTTP
+    api.rs                  review page, queue actions, the public log, limits
 ```
 
 ## 12. CLI
@@ -368,13 +366,18 @@ that alters any fixture's output shows up as a diff in the pull request.
 ## 13. API
 
 ```
-GET /v1/log?since=&platform=&limit=&cursor=     replies with their FactSets
-GET /v1/log/{mention_id}                        one mention, draft, reply, corrections
-GET /v1/observations?subject=&kind=&since=
-GET /v1/queue                                   pending drafts (local only)
-POST /v1/queue/{id}/approve | /edit | /decline  (local only)
-GET /v1/stats
+GET /v1/log                                     every decided mention with its FactSet, draft, reply, corrections
+GET /v1/log/{mention_id | queue_id}             one entry; the target of every reply's closing link
+GET /v1/observations?subject=&kind=&since=      (R4)
+GET /v1/queue, GET /v1/queue/{id}               pending drafts (local only)
+POST /v1/queue/{id}/approve {keep: [i…]}        post, keeping only these sentences (local only)
+POST /v1/queue/{id}/decline                     (local only)
+GET /v1/stats, /llms.txt, /robots.txt
 ```
+
+Editing is subtractive: a reviewer can drop sentences, not write new
+ones, so a posted reply is always made of template sentences with their
+cites. Anything else belongs in a template change.
 
 ## 14. Configuration
 
@@ -433,7 +436,14 @@ salt_env = "REPLY_SALT"
   twice; `queue` prints them. Parsing is tested on recorded responses;
   not yet run against a live account. Next: run it for weeks and read
   what people ask.
-- **R3** Review page and poster. First replies, all human-approved.
+- **R3** Review page and poster. Done: `serve` lists pending drafts
+  with every sentence's cite, the reviewer keeps or drops sentences
+  (cites follow; the closing line stays) and posts or declines; posting
+  threads under the mention with link facets; both decisions move the
+  entry to the public log, which hides the summoner's handle; per-account
+  and global limits are counted over the log. Tested with a fake poster
+  and against a scratch queue; not yet run against a live account.
+  First live replies are the next step, all human-approved.
 - **R4** Observer and the four signals, shown on the public log before
   any reply carries one.
 - **R5** Observations in replies, still reviewed. Autonomous posting for

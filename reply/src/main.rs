@@ -1,6 +1,7 @@
 //! `reply`: Kagami pillar 4. See `docs/plan.md`. R0 is offline: contract,
 //! templates, `render` and `check`.
 
+mod api;
 mod cli;
 mod client;
 mod compose;
@@ -80,6 +81,43 @@ async fn run(args: cli::Args) -> Result<(), String> {
             let api = client::Http::new()?;
             let mut q = queue::Queue::open(&args.data)?;
             listen(listener, &api, &set, &layout, &args, &mut q, once).await
+        }
+        cli::Command::Serve => {
+            let poster: Option<std::sync::Arc<tokio::sync::Mutex<Box<dyn platform::Poster>>>> =
+                match (
+                    args.handle.is_empty(),
+                    std::env::var(platform::bluesky::PASSWORD_ENV),
+                ) {
+                    (false, Ok(pw)) => {
+                        let b = platform::bluesky::Bluesky::new(&args.pds, &args.handle, &pw)?;
+                        Some(std::sync::Arc::new(tokio::sync::Mutex::new(Box::new(b))))
+                    }
+                    _ => None,
+                };
+            eprintln!(
+                "review page on http://{} ; data in {} ; poster: {}",
+                args.bind,
+                args.data.display(),
+                if poster.is_some() {
+                    "bluesky"
+                } else {
+                    "none (approving is off)"
+                }
+            );
+            let app = api::router(api::AppState {
+                data: args.data.clone(),
+                poster,
+                limits: args.limits,
+            });
+            let listener = tokio::net::TcpListener::bind(&args.bind)
+                .await
+                .map_err(|e| format!("bind {}: {e}", args.bind))?;
+            axum::serve(listener, app)
+                .with_graceful_shutdown(async {
+                    let _ = tokio::signal::ctrl_c().await;
+                })
+                .await
+                .map_err(|e| e.to_string())
         }
         cli::Command::Queue => {
             let q = queue::Queue::open(&args.data)?;

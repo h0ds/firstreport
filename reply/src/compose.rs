@@ -80,6 +80,7 @@ pub fn compose(fs: &FactSet, set: &Set, layout: &Layout, urls: &Urls) -> Result<
         template_ids: vec![],
         sentences: vec![],
         posts: vec![],
+        max_chars: layout.max_chars,
         cites: vec![],
         autonomous: false,
     };
@@ -103,6 +104,46 @@ pub fn compose(fs: &FactSet, set: &Set, layout: &Layout, urls: &Urls) -> Result<
     draft.posts = split(&draft.sentences, layout.max_chars)?;
     check_cites(&draft)?;
     Ok(draft)
+}
+
+/// A reviewer's edit: keep only these sentences, in order. Cites follow
+/// their sentences, so rule 6 survives; the closing sentence, which is
+/// the last one, cannot be dropped. `keep` empty means keep everything.
+pub fn keep_sentences(d: &Draft, keep: &[usize]) -> Result<Draft, String> {
+    let last = d.sentences.len().checked_sub(1).ok_or("empty draft")?;
+    let mut idx: Vec<usize> = if keep.is_empty() {
+        (0..=last).collect()
+    } else {
+        keep.to_vec()
+    };
+    idx.sort_unstable();
+    idx.dedup();
+    if idx.iter().any(|&i| i > last) {
+        return Err("keep names a sentence the draft does not have".into());
+    }
+    if *idx.last().unwrap() != last {
+        idx.push(last);
+    }
+    let mut out = Draft {
+        sentences: vec![],
+        cites: vec![],
+        posts: vec![],
+        template_ids: vec![],
+        ..d.clone()
+    };
+    for (n, &i) in idx.iter().enumerate() {
+        out.sentences.push(d.sentences[i].clone());
+        out.template_ids
+            .push(d.template_ids.get(i).cloned().unwrap_or_default());
+        for c in d.cites.iter().filter(|c| c.sentence as usize == i) {
+            let mut c = c.clone();
+            c.sentence = n as u16;
+            out.cites.push(c);
+        }
+    }
+    out.posts = split(&out.sentences, d.max_chars)?;
+    check_cites(&out)?;
+    Ok(out)
 }
 
 fn push(d: &mut Draft, t: &Template, view: &Value, urls: &Urls) -> Result<(), String> {
@@ -174,6 +215,42 @@ mod tests {
         );
         assert!(cite_url("nope", &u).is_err());
         assert!(cite_url("x:y:z", &u).is_err());
+    }
+
+    #[test]
+    fn keep_drops_sentences_but_never_the_closing_one() {
+        let d = Draft {
+            contract_version: 1,
+            mention_id: "m".into(),
+            platform: "t".into(),
+            template_ids: vec!["a".into(), "b".into(), "trailer".into()],
+            sentences: vec!["A.".into(), "B.".into(), "T.".into()],
+            posts: vec![],
+            max_chars: 300,
+            cites: (0..3)
+                .map(|i| Cite {
+                    sentence: i,
+                    reference: "r".into(),
+                    url: "u".into(),
+                    kind: "k".into(),
+                })
+                .collect(),
+            autonomous: false,
+        };
+        let k = keep_sentences(&d, &[1]).unwrap();
+        assert_eq!(k.sentences, vec!["B.", "T."]);
+        assert_eq!(
+            k.cites.iter().map(|c| c.sentence).collect::<Vec<_>>(),
+            vec![0, 1]
+        );
+        assert_eq!(k.posts, vec!["B. T."]);
+        let all = keep_sentences(&d, &[]).unwrap();
+        assert_eq!(
+            (all.sentences.clone(), all.cites.clone()),
+            (d.sentences.clone(), d.cites.clone())
+        );
+        assert_eq!(all.posts, vec!["A. B. T."]);
+        assert!(keep_sentences(&d, &[7]).is_err());
     }
 
     #[test]

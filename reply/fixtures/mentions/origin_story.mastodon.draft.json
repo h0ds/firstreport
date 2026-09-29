@@ -24,6 +24,7 @@
     "First published by Example at 2024-01-01 09:00 UTC. This link is that first publication. Reached 6 outlets; five within 1 h 30 min of the first. 63% of those items carry the same text, first seen at Wire Agency; that is one copy, not independent reporting. Its domain was registered 1995-08-14, per the domain registry (RDAP). Owner of record: Example Media Group, per Wikidata.",
     "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aalice%2Fapp.bsky.feed.post%2F3k1"
   ],
+  "max_chars": 500,
   "cites": [
     {
       "sentence": 0,

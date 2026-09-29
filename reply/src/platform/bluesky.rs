@@ -7,9 +7,9 @@ use std::collections::HashMap;
 
 use serde_json::{json, Value};
 
-use super::Listener;
+use super::{Listener, Posted, Poster};
 use crate::facts::{get, parse_rfc3339, text};
-use crate::model::{Mention, Post};
+use crate::model::{Mention, Post, Thread};
 
 pub const DEFAULT_PDS: &str = "https://bsky.social";
 pub const PASSWORD_ENV: &str = "REPLY_BSKY_PASSWORD";
@@ -21,6 +21,7 @@ pub struct Bluesky {
     password: String,
     client: reqwest::Client,
     access: Option<String>,
+    did: String,
     /// Newest `indexedAt` handled; older notifications are not re-read.
     high_water: String,
 }
@@ -39,6 +40,7 @@ impl Bluesky {
             password: password.to_string(),
             client,
             access: None,
+            did: String::new(),
             high_water: String::new(),
         })
     }
@@ -60,10 +62,41 @@ impl Bluesky {
             .await
             .map_err(|e| format!("createSession: {e}"))?;
         self.access = get(&v, "accessJwt").map(text);
+        self.did = get(&v, "did").map(text).unwrap_or_default();
         if self.access.is_none() {
             return Err("createSession: no accessJwt in response".into());
         }
         Ok(())
+    }
+
+    async fn xrpc_post(&mut self, method: &str, body: &Value) -> Result<Value, String> {
+        if self.access.is_none() {
+            self.login().await?;
+        }
+        for attempt in 0..2 {
+            let resp = self
+                .client
+                .post(format!("{}/xrpc/{method}", self.pds))
+                .bearer_auth(self.access.as_deref().unwrap_or_default())
+                .json(body)
+                .send()
+                .await
+                .map_err(|e| format!("{method}: {e}"))?;
+            if resp.status() == reqwest::StatusCode::UNAUTHORIZED && attempt == 0 {
+                self.login().await?;
+                continue;
+            }
+            let status = resp.status();
+            let v: Value = resp.json().await.map_err(|e| format!("{method}: {e}"))?;
+            if !status.is_success() {
+                return Err(format!(
+                    "{method}: HTTP {status} {}",
+                    get(&v, "message").map(text).unwrap_or_default()
+                ));
+            }
+            return Ok(v);
+        }
+        Err(format!("{method}: unauthorized after re-login"))
     }
 
     async fn xrpc_get(&mut self, method: &str, params: &[(&str, &str)]) -> Result<Value, String> {
@@ -131,6 +164,103 @@ impl Listener for Bluesky {
     }
 }
 
+impl Poster for Bluesky {
+    fn name(&self) -> &str {
+        "bluesky"
+    }
+
+    fn post<'a>(
+        &'a mut self,
+        m: &'a Mention,
+        posts: &'a [String],
+    ) -> std::pin::Pin<Box<dyn std::future::Future<Output = Posted> + Send + 'a>> {
+        Box::pin(async move {
+            let thread = m.thread.clone().unwrap_or_default();
+            if thread.cid.is_empty() {
+                return Err((vec![], "mention has no cid; cannot reply in thread".into()));
+            }
+            let root = (
+                if thread.root_id.is_empty() {
+                    m.id.clone()
+                } else {
+                    thread.root_id.clone()
+                },
+                if thread.root_cid.is_empty() {
+                    thread.cid.clone()
+                } else {
+                    thread.root_cid.clone()
+                },
+            );
+            let mut parent = (m.id.clone(), thread.cid.clone());
+            let mut ids = Vec::with_capacity(posts.len());
+            for text_ in posts {
+                let record = post_record(text_, &root, &parent, &now_rfc3339());
+                let body = json!({ "repo": self.did, "collection": "app.bsky.feed.post", "record": record });
+                match self.xrpc_post("com.atproto.repo.createRecord", &body).await {
+                    Ok(v) => {
+                        let uri = get(&v, "uri").map(text).unwrap_or_default();
+                        let cid = get(&v, "cid").map(text).unwrap_or_default();
+                        ids.push(uri.clone());
+                        parent = (uri, cid);
+                    }
+                    Err(e) => return Err((ids, e)),
+                }
+            }
+            Ok(ids)
+        })
+    }
+}
+
+/// An `app.bsky.feed.post` record replying under `parent` in the thread
+/// rooted at `root`, with a link facet for every URL so they are clickable.
+pub fn post_record(
+    text_: &str,
+    root: &(String, String),
+    parent: &(String, String),
+    created_at: &str,
+) -> Value {
+    json!({
+        "$type": "app.bsky.feed.post",
+        "text": text_,
+        "createdAt": created_at,
+        "langs": ["en"],
+        "reply": {
+            "root": { "uri": root.0, "cid": root.1 },
+            "parent": { "uri": parent.0, "cid": parent.1 }
+        },
+        "facets": link_facets(text_),
+    })
+}
+
+/// Byte-indexed link facets for each http(s) token in the text.
+pub fn link_facets(text_: &str) -> Vec<Value> {
+    let mut out = Vec::new();
+    let mut pos = 0;
+    for tok in text_.split(' ') {
+        let start = pos;
+        pos += tok.len() + 1;
+        if !(tok.starts_with("http://") || tok.starts_with("https://")) {
+            continue;
+        }
+        let trimmed = tok.trim_end_matches(['.', ',', ')', ';']);
+        out.push(json!({
+            "index": { "byteStart": start, "byteEnd": start + trimmed.len() },
+            "features": [ { "$type": "app.bsky.richtext.facet#link", "uri": trimmed } ]
+        }));
+    }
+    out
+}
+
+fn now_rfc3339() -> String {
+    let ts = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_secs() as i64)
+        .unwrap_or(0);
+    let d = crate::facts::date_time(ts);
+    // "YYYY-MM-DD HH:MM UTC" → RFC 3339 with the seconds.
+    format!("{}T{}:{:02}Z", &d[..10], &d[11..16], ts.rem_euclid(60))
+}
+
 /// A mention before its parent and quoted posts are fetched.
 #[derive(Debug, Clone, PartialEq)]
 pub struct Partial {
@@ -180,6 +310,11 @@ pub fn parse_notifications(v: &Value, after: &str) -> Vec<Partial> {
             let (text_, urls) = post_content(record);
             let parent_uri = get(record, "reply.parent.uri").map(text);
             let quoted_uri = quoted_uri(record);
+            let thread = Some(Thread {
+                cid: get(n, "cid").map(text).unwrap_or_default(),
+                root_id: get(record, "reply.root.uri").map(text).unwrap_or_default(),
+                root_cid: get(record, "reply.root.cid").map(text).unwrap_or_default(),
+            });
             let refs = [&parent_uri, &quoted_uri]
                 .into_iter()
                 .flatten()
@@ -199,6 +334,7 @@ pub fn parse_notifications(v: &Value, after: &str) -> Vec<Partial> {
                     urls,
                     parent: None,
                     quoted: None,
+                    thread,
                 },
                 parent_uri,
                 quoted_uri,
@@ -277,6 +413,29 @@ fn quoted_uri(record: &Value) -> Option<String> {
 mod tests {
     use super::*;
 
+    #[test]
+    fn records_reply_in_thread_with_link_facets() {
+        let t =
+            "First by X. Full record: https://log.example/v1/log/a%3Ab, and https://x.example/y.";
+        let f = link_facets(t);
+        assert_eq!(f.len(), 2);
+        assert_eq!(f[0]["index"]["byteStart"], 25);
+        assert_eq!(
+            f[0]["index"]["byteEnd"],
+            25 + "https://log.example/v1/log/a%3Ab".len()
+        );
+        assert_eq!(f[1]["features"][0]["uri"], "https://x.example/y");
+        let r = post_record(
+            t,
+            &("r".into(), "rc".into()),
+            &("p".into(), "pc".into()),
+            "2024-01-01T00:00:00Z",
+        );
+        assert_eq!(r["reply"]["root"]["cid"], "rc");
+        assert_eq!(r["reply"]["parent"]["uri"], "p");
+        assert!(now_rfc3339().ends_with('Z'));
+    }
+
     fn fixture(name: &str) -> Value {
         let p = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
             .join("fixtures/bluesky")
@@ -318,6 +477,13 @@ mod tests {
         assert_eq!(q.urls, vec!["https://news.bbc.co.uk/wire/123"]);
         // A parent the fetch did not return is kept as an id with no text.
         assert_eq!(quoting.parent.as_ref().unwrap().text, "");
+
+        let t = under.thread.as_ref().unwrap();
+        assert_eq!(
+            (t.cid.as_str(), t.root_id.as_str()),
+            ("c2", "at://did:plc:carol/app.bsky.feed.post/p1")
+        );
+        assert_eq!(linked.thread.as_ref().unwrap().root_id, "");
 
         // Only newer than the high-water mark.
         assert_eq!(parse_notifications(&n, "2024-01-01T12:00:00.000Z").len(), 1);

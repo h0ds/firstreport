@@ -13,6 +13,7 @@
   "posts": [
     "Nothing to check: no link, quoted text or parent post to look up. Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aheidi%2Fapp.bsky.feed.post%2F7d4"
   ],
+  "max_chars": 500,
   "cites": [
     {
       "sentence": 0,

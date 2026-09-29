@@ -22,6 +22,9 @@ pub enum Command {
     Listen { platform: String, once: bool },
     /// Print the queue.
     Queue,
+    /// Review page, queue actions and the public log; posts approved
+    /// drafts when platform credentials are present.
+    Serve,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -35,12 +38,15 @@ pub struct Args {
     /// Bluesky PDS base URL.
     pub pds: String,
     pub interval_secs: u64,
+    pub bind: String,
+    pub limits: crate::api::Limits,
     pub command: Command,
 }
 
 pub const USAGE: &str = "\
 usage: reply [--templates <dir>] [--data <dir>] [--feed-url <url>] [--ledger-url <url>] [--log-url <url>]
-             [--handle <bot account>] [--pds <url>] [--interval <secs>] <command>
+             [--handle <bot account>] [--pds <url>] [--interval <secs>] [--bind <addr>]
+             [--per-account-per-day <n>] [--global-per-hour <n>] <command>
 
 commands:
   render <fixture.json> [--platform <name>]   render a recorded mention; print the draft and its cites
@@ -52,6 +58,8 @@ commands:
   listen [--platform bluesky] [--once]        poll for mentions, draft a reply for each, queue it;
                                               nothing is posted. Needs --handle and REPLY_BSKY_PASSWORD
   queue                                       print the queued drafts
+  serve                                       review page and public log on 127.0.0.1:8082; with
+                                              --handle and REPLY_BSKY_PASSWORD, approving posts
 ";
 
 pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
@@ -69,6 +77,8 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
     let mut handle = String::new();
     let mut pds = String::from(crate::platform::bluesky::DEFAULT_PDS);
     let mut interval_secs = 30;
+    let mut bind = String::from("127.0.0.1:8082");
+    let mut limits = crate::api::Limits::default();
     while let Some(a) = it.next() {
         let mut val = |flag: &str| {
             it.next()
@@ -92,7 +102,18 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
                     .parse()
                     .map_err(|_| format!("--interval needs seconds\n{USAGE}"))?
             }
-            "render" | "check" | "resolve" | "listen" | "queue" => command = Some(a),
+            "--bind" => bind = val("--bind")?,
+            "--per-account-per-day" => {
+                limits.per_account_per_day = val("--per-account-per-day")?
+                    .parse()
+                    .map_err(|_| format!("--per-account-per-day needs a number\n{USAGE}"))?
+            }
+            "--global-per-hour" => {
+                limits.global_per_hour = val("--global-per-hour")?
+                    .parse()
+                    .map_err(|_| format!("--global-per-hour needs a number\n{USAGE}"))?
+            }
+            "render" | "check" | "resolve" | "listen" | "queue" | "serve" => command = Some(a),
             "-h" | "--help" => return Err(USAGE.into()),
             other
                 if matches!(command.as_deref(), Some("render" | "resolve"))
@@ -111,6 +132,7 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         Some("check") => Command::Check { fixtures, update },
         Some("listen") => Command::Listen { platform, once },
         Some("queue") => Command::Queue,
+        Some("serve") => Command::Serve,
         Some("resolve") => Command::Resolve {
             mention: fixture.ok_or_else(|| format!("resolve needs a mention file\n{USAGE}"))?,
             platform,
@@ -125,6 +147,8 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         handle,
         pds,
         interval_secs,
+        bind,
+        limits,
         command,
     })
 }
@@ -174,6 +198,12 @@ mod tests {
             }
         );
         assert_eq!((a.handle.as_str(), a.interval_secs), ("kagami.test", 5));
+        let a = p("--bind 0.0.0.0:9000 --per-account-per-day 5 serve").unwrap();
+        assert_eq!(a.command, Command::Serve);
+        assert_eq!(
+            (a.bind.as_str(), a.limits.per_account_per_day),
+            ("0.0.0.0:9000", 5)
+        );
         assert!(p("render").is_err());
         assert!(p("bogus").is_err());
     }

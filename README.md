@@ -66,10 +66,12 @@ contract and API docs. `feed` is at v0.1.0 with the data contract
 frozen at v1; it is complete and verified offline, and has not yet run
 against live feeds. See `feed/docs/plan.md` §11.
 
-`reply` is at R2: contract, templates, composer with the cite check,
+`reply` is at R3: contract, templates, composer with the cite check,
 `render` and `check` over golden fixtures, `resolve`, which asks a
-running `feed` and `ledger` about a mention, and `listen`, a Bluesky
-dry run that drafts every mention into a local queue. Nothing posts.
+running `feed` and `ledger` about a mention, `listen`, which drafts
+every Bluesky mention into a local queue, and `serve`, the review page
+where a person keeps or drops sentences and posts or declines, with a
+public log of every decision. Not yet run against a live account.
 `feed` gained `/v1/lookup` for it. See `reply/docs/plan.md` §16.
 
 `ledger` is at L2e: file-backed claim store with validation, refresh

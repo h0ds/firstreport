@@ -21,6 +21,18 @@ pub struct Post {
     pub urls: Vec<String>,
 }
 
+/// What a platform needs to reply in-thread. Bluesky wants the mention's
+/// content hash and the thread root; other platforms may leave it empty.
+#[derive(Debug, Clone, Default, Serialize, Deserialize, PartialEq)]
+pub struct Thread {
+    #[serde(default)]
+    pub cid: String,
+    #[serde(default)]
+    pub root_id: String,
+    #[serde(default)]
+    pub root_cid: String,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub struct Mention {
     pub id: String,
@@ -35,6 +47,20 @@ pub struct Mention {
     pub parent: Option<Post>,
     #[serde(default)]
     pub quoted: Option<Post>,
+    #[serde(default)]
+    pub thread: Option<Thread>,
+}
+
+/// A posted reply (plan §4).
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
+pub struct Reply {
+    /// Platform ids of the posts, one per thread post.
+    pub post_ids: Vec<String>,
+    pub posted_at: i64,
+    /// `human` or `auto`.
+    pub reviewer: String,
+    /// Whether the reviewer dropped sentences before posting.
+    pub edited: bool,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
@@ -117,8 +143,15 @@ pub struct Draft {
     pub sentences: Vec<String>,
     /// The sentences joined, split into posts at sentence boundaries.
     pub posts: Vec<String>,
+    /// The layout's post length limit, kept so an edited draft splits the same way.
+    #[serde(default = "default_max_chars")]
+    pub max_chars: usize,
     pub cites: Vec<Cite>,
     pub autonomous: bool,
+}
+
+fn default_max_chars() -> usize {
+    300
 }
 
 /// Rule 6, enforced: every sentence has exactly one cite with a URL.
@@ -173,6 +206,7 @@ mod tests {
             template_ids: vec![],
             sentences: sentences.iter().map(|s| s.to_string()).collect(),
             posts: vec![],
+            max_chars: 300,
             cites: cites
                 .iter()
                 .map(|&i| Cite {

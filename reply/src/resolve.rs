@@ -224,6 +224,7 @@ mod tests {
             urls: urls.iter().map(|s| s.to_string()).collect(),
             parent,
             quoted: None,
+            thread: None,
         }
     }
 

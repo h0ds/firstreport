@@ -12,6 +12,8 @@ cargo run -- resolve mention.json                    # ask a running feed and le
 cargo run -- resolve mention.json --render           # ...and the draft it renders to
 REPLY_BSKY_PASSWORD=... cargo run -- --handle kagami.example listen   # dry run: mentions in, drafts to data/queue/
 cargo run -- queue                                   # print the queued drafts
+cargo run -- serve                                   # review page and public log on 127.0.0.1:8082
+REPLY_BSKY_PASSWORD=... cargo run -- --handle kagami.example serve   # ...with posting on approval
 cargo test
 ```
 
@@ -34,6 +36,29 @@ password comes from `REPLY_BSKY_PASSWORD`; `--pds` defaults to
 
 Only `reason == "mention"` notifications count. Replies to the bot's own
 posts and quotes of them are not summonses.
+
+## Reviewing and posting
+
+`serve` shows every pending draft on `http://127.0.0.1:8082/`: the
+mention, the subject, each sentence with its cite and the template it
+came from, and the gaps. The reviewer unticks sentences to leave them
+out (the closing line always stays, and cites follow their sentences so
+rule 6 holds), then posts or declines. Posting replies under the
+mention, as a thread when the draft is more than one post, with link
+facets so URLs are clickable. Both decisions move the entry from
+`data/queue/` to `data/log/` with the decision, the draft as posted and
+the platform post ids.
+
+Without `--handle` and `REPLY_BSKY_PASSWORD`, `serve` still reviews and
+declines, but approving answers 409: nothing can post. Limits are
+`--per-account-per-day` (default 3) and `--global-per-hour` (default
+60), counted over the log; a post past either answers 429.
+
+The public log is `GET /v1/log` and `GET /v1/log/{mention id or queue
+id}`, which is where every reply's closing link points. The summoner's
+handle is dropped from it. The queue routes are for the local reviewer
+and not part of the contract. `listen` and `serve` share `data/`
+through the filesystem and run as two processes.
 
 ## Resolving a mention
 
