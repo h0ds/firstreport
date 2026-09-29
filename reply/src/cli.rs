@@ -242,12 +242,12 @@ mod tests {
 
     #[test]
     fn parses_render_and_check() {
-        let a = p("render fixtures/mentions/x.json --platform mastodon").unwrap();
+        let a = p("render fixtures/mentions/x.json --platform bluesky").unwrap();
         assert_eq!(
             a.command,
             Command::Render {
                 fixture: "fixtures/mentions/x.json".into(),
-                platform: "mastodon".into()
+                platform: "bluesky".into()
             }
         );
         let a = p("--log-url http://l check --update").unwrap();

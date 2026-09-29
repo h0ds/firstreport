@@ -123,7 +123,7 @@ joins item, cluster, timeline, syndication and outlet in one call.
 ```
 Mention {
   id:           string     // platform post id
-  platform:     "bluesky" | "mastodon" | "x"
+  platform:     "x" | "bluesky"
   author:       string     // platform handle; never stored beyond the log
   at:           i64
   text:         string
@@ -348,7 +348,6 @@ reply/
     platform/x.rs           API v2: mentions, tweets, token refresh; parsing is pure
     platform/bluesky.rs     XRPC: listNotifications, getPosts; parsing is pure
     queue.rs                data/queue/*.json, data/log/*.json and data/seen.txt
-    platform/mastodon.rs
     client.rs               the Api trait: HTTP, and recorded responses for tests
     resolve.rs              mention → Subject → FactSet, via feed and ledger
     compose.rs              templates → Draft
