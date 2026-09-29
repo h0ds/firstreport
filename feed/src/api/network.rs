@@ -11,7 +11,7 @@ pub const PAGE: &str = r##"<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kagami feed network</title>
-<meta name="description" content="Every feed Kagami polls: which are online, which are failing and why, and when each was last fetched.">
+<meta name="description" content="Every feed Kagami polls: which are online, which are failing and why, which the steward is holding, and when each was last fetched.">
 <link rel="alternate" type="application/json" href="/v1/feeds" title="Feeds (JSON)">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this server">
 <style>
@@ -115,6 +115,9 @@ function status(f, now){
   if (f.fail_count > 0) return {k: 'err', label: f.fail_count > 2 ? 'failing' : 'backing off', rank: f.fail_count > 2 ? 1 : 2};
   if (!f.last_fetch_at) return {k: 'idle', label: 'waiting', rank: 5};
   if (!f.last_ok_at || now - f.last_ok_at > 86400) return {k: 'warn', label: 'stale', rank: 4};
+  // Steward flag (docs/steward.md §2 rule 4): the feed works, but its
+  // claimed publish times are days off; pick-up times are what Kagami saw.
+  if (f.health && f.health.timestamps_unreliable) return {k: 'ok', label: 'online', rank: 6, note: 'timestamps unreliable: claimed publish times are days from pick-up; the timeline shows both.'};
   return {k: 'ok', label: 'online', rank: 6};
 }
 let outlets = {}, feeds = [];
@@ -134,6 +137,7 @@ function render(){
     ['feeds', rows.length, ''], ['online', count('online'), 'ok'], ['backing off', count('backing off'), 'err'],
     ['failing', count('failing'), 'err'], ['dead', count('dead'), 'err'], ['stale', count('stale'), 'warn'],
     ['quarantined', count('quarantined'), 'warn'], ['skipped: robots.txt', count('skipped: robots.txt'), 'warn'], ['waiting', count('waiting'), 'idle'],
+    ['timestamps unreliable', rows.filter(r => r.f.health && r.f.health.timestamps_unreliable).length, 'warn'],
   ].filter(([k, v], i) => i < 2 || v > 0);
   $('#stats').innerHTML = tiles.map(([k, v, c]) => `<div class="stat"><b>${v}</b>${c ? `<span class="status ${c}"><span class="muted">${k}</span></span>` : `<span class="muted">${k}</span>`}</div>`).join('');
   const sorted = [...rows].sort((a, b) => a.s.rank - b.s.rank || (outlets[a.f.outlet_id]?.name || a.f.outlet_id).localeCompare(outlets[b.f.outlet_id]?.name || b.f.outlet_id));
