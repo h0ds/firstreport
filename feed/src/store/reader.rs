@@ -258,6 +258,43 @@ pub struct RevisionRow {
     pub summary: String,
 }
 
+/// A revision with its item, for export. `rowid` is the export cursor.
+#[derive(Debug, Clone, Serialize, JsonSchema)]
+pub struct RevisionExportRow {
+    #[serde(skip)]
+    pub rowid: i64,
+    pub item_id: u64,
+    pub snapshot_id: u64,
+    pub seen_at: i64,
+    pub title: String,
+    pub summary: String,
+}
+
+/// Every revision after `after_rowid`, in insertion order, `limit` at a
+/// time. Insertion order is per-item chronological, which is what the
+/// export promises.
+pub fn revisions_after(
+    c: &Connection,
+    after_rowid: i64,
+    limit: usize,
+) -> rusqlite::Result<Vec<RevisionExportRow>> {
+    let mut st = c.prepare_cached(
+        "SELECT rowid, item_id, snapshot_id, seen_at, title, summary FROM item_revision
+         WHERE rowid > ?1 ORDER BY rowid ASC LIMIT ?2",
+    )?;
+    let rows = st.query_map(params![after_rowid, limit as i64], |r| {
+        Ok(RevisionExportRow {
+            rowid: r.get(0)?,
+            item_id: to_u64(r.get(1)?),
+            snapshot_id: to_u64(r.get(2)?),
+            seen_at: r.get(3)?,
+            title: r.get(4)?,
+            summary: r.get(5)?,
+        })
+    })?;
+    rows.collect()
+}
+
 /// Text history of an item, oldest first. Empty until the first change.
 pub fn item_revisions(c: &Connection, item_id: u64) -> rusqlite::Result<Vec<RevisionRow>> {
     let mut st = c.prepare_cached(

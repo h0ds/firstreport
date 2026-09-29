@@ -45,6 +45,7 @@ pub struct Summary {
     pub clusters: usize,
     pub events: usize,
     pub outlets: usize,
+    pub revisions: usize,
     pub files: Vec<PathBuf>,
 }
 
@@ -125,6 +126,30 @@ pub fn for_each_event(
     Ok(n)
 }
 
+pub fn for_each_revision(
+    reader: &Reader,
+    mut f: impl FnMut(reader::RevisionExportRow) -> std::io::Result<()>,
+) -> Result<usize, Box<dyn std::error::Error>> {
+    let mut after = 0;
+    let mut n = 0;
+    loop {
+        let page = reader.with(|c| reader::revisions_after(c, after, PAGE))?;
+        if page.is_empty() {
+            break;
+        }
+        after = page.last().map(|r| r.rowid).unwrap_or(after);
+        let len = page.len();
+        for r in page {
+            f(r)?;
+        }
+        n += len;
+        if len < PAGE {
+            break;
+        }
+    }
+    Ok(n)
+}
+
 fn ndjson_file(dir: &Path, name: &str) -> std::io::Result<(PathBuf, BufWriter<std::fs::File>)> {
     let path = dir.join(format!("{name}.ndjson"));
     Ok((path.clone(), BufWriter::new(std::fs::File::create(path)?)))
@@ -156,6 +181,11 @@ pub fn write_ndjson(
 
     let (p, mut w) = ndjson_file(out_dir, "events")?;
     s.events = for_each_event(reader, |e| line(&mut w, &e))?;
+    w.flush()?;
+    s.files.push(p);
+
+    let (p, mut w) = ndjson_file(out_dir, "revisions")?;
+    s.revisions = for_each_revision(reader, |r| line(&mut w, &r))?;
     w.flush()?;
     s.files.push(p);
 
@@ -274,6 +304,14 @@ pub(crate) mod fixture {
                     merged_into: None,
                     snapshot_id: None,
                 }),
+                WriteMsg::Revision {
+                    item_id: 3,
+                    snapshot_id: 8,
+                    seen_at: 300,
+                    title: "title 3, as first seen".into(),
+                    summary: String::new(),
+                    apply: false,
+                },
                 WriteMsg::Event(ClusterEvent {
                     ts: 301,
                     kind: EventKind::Revised,
@@ -295,7 +333,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn ndjson_export_writes_all_four_files() {
+    fn ndjson_export_writes_all_five_files() {
         let dir = std::env::temp_dir().join(format!("kg-export-{}", std::process::id()));
         let _ = std::fs::remove_dir_all(&dir);
         std::fs::create_dir_all(&dir).unwrap();
@@ -303,7 +341,13 @@ mod tests {
         let out = dir.join("out");
         let s = write_ndjson(&reader, &out, 1000, 3).unwrap();
         assert_eq!((s.items, s.clusters, s.events, s.outlets), (3, 1, 3, 1));
-        assert_eq!(s.files.len(), 4);
+        assert_eq!(s.revisions, 1);
+        assert_eq!(s.files.len(), 5);
+        let revs = std::fs::read_to_string(out.join("revisions.ndjson")).unwrap();
+        let r: serde_json::Value = serde_json::from_str(revs.lines().next().unwrap()).unwrap();
+        assert_eq!(r["item_id"], 3);
+        assert_eq!(r["title"], "title 3, as first seen");
+        assert!(r.get("rowid").is_none(), "cursor is not contract");
 
         let items = std::fs::read_to_string(out.join("items.ndjson")).unwrap();
         let lines: Vec<serde_json::Value> = items

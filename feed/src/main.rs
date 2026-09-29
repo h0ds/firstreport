@@ -82,7 +82,7 @@ async fn main() {
                 stats::now(),
                 cfg.syndication.hamming_threshold,
             )?;
-            info!(items = s.items, clusters = s.clusters, events = s.events, outlets = s.outlets, out = %out.display(), "export complete");
+            info!(items = s.items, clusters = s.clusters, events = s.events, revisions = s.revisions, outlets = s.outlets, out = %out.display(), "export complete");
             Ok(())
         })(),
         cli::Command::Prune {
