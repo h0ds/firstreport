@@ -30,7 +30,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     let mut b = String::new();
     let _ = write!(
         b,
-        "<h1>Stories</h1><p class=\"kg-muted\">{} active in the {} hours to {}, from {} in the pool. Ordered by outlets joining in the last day, then by recency. No other ranking.</p>",
+        "<h1>Stories</h1><p class=\"kg-muted\">{} active in the {} hours to {}, from {} in the pool. Ordered by outlets joining in the last day, then by recency.</p>",
         n(recent.len(), "story"),
         window_hours,
         time_el(now),
@@ -50,17 +50,30 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
             .then(a.0.id.cmp(&b.0.id))
     });
     spreading.truncate(10);
+    // On a first day every story is "spreading now" in the same order as
+    // the main list; the list earns its place only when it reorders.
+    let same_as_top = spreading
+        .iter()
+        .zip(recent.iter())
+        .all(|(a, b)| a.0.id == b.0.id);
+    if same_as_top {
+        spreading.clear();
+    }
     if !spreading.is_empty() {
         b.push_str("<h2>Spreading now</h2><p class=\"kg-muted\">Outlets that joined in the last six hours.</p><ul class=\"stories\">");
         for (c, f) in &spreading {
             let _ = write!(
                 b,
-                "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\">{} in 6 h · {} in all · first: {}</span></li>",
+                "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\">{} in 6 h{} · first: {}</span></li>",
                 c.id,
                 c.id,
                 esc(&c.primary_title),
                 n(f.outlets_6h as usize, "outlet"),
-                n(c.outlet_count as usize, "outlet"),
+                if c.outlet_count != f.outlets_6h {
+                    format!(" · {} in all", n(c.outlet_count as usize, "outlet"))
+                } else {
+                    String::new()
+                },
                 outlet_link(input, &c.origin_outlet_id)
             );
         }
@@ -124,7 +137,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         "outlets": input.outlets.values().collect::<Vec<_>>(),
     });
     let mut md = format!(
-        "# Stories\n\n{} active in the {} hours to {}, from {} in the pool. Ordered by outlets joining in the last day, then by recency. No other ranking; no outlet is rated.\n\n",
+        "# Stories\n\n{} active in the {} hours to {}, from {} in the pool. Ordered by outlets joining in the last day, then by recency; no outlet is rated.\n\n",
         n(recent.len(), "story"),
         window_hours,
         datetime(now),
@@ -135,11 +148,15 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         for (c, f) in &spreading {
             let _ = writeln!(
                 md,
-                "- [{}](/story/{}/) · {} in 6 h · {} in all · first: {}",
+                "- [{}](/story/{}/) · {} in 6 h{} · first: {}",
                 c.primary_title,
                 c.id,
                 n(f.outlets_6h as usize, "outlet"),
-                n(c.outlet_count as usize, "outlet"),
+                if c.outlet_count != f.outlets_6h {
+                    format!(" · {} in all", n(c.outlet_count as usize, "outlet"))
+                } else {
+                    String::new()
+                },
                 input.outlet_name(&c.origin_outlet_id)
             );
         }
@@ -194,9 +211,30 @@ mod tests {
         assert!(all.html.contains("\"@type\":\"ItemList\""));
         assert!(!all.html.contains("Rating"));
         // the export's last two hours hold the newest story only
+        // Same order as the main list: the spreading list is withheld.
         let t = home(&i, 6);
-        assert!(t.html.contains("<h2>Spreading now</h2>"));
+        assert!(!t.html.contains("<h2>Spreading now</h2>"));
+        assert!(t.json["spreading_now"].as_array().unwrap().is_empty());
+        assert!(!t.html.contains("No other ranking"));
+        // A story moving now but with fewer outlets over the day than
+        // another: the lists differ, so the spreading list appears.
+        let mut i = fixture_input();
+        let now = i.export_time;
+        for j in &mut i.clusters.get_mut(&1059).unwrap().timeline {
+            j.joined_at = now - 12 * HOUR;
+        }
+        i.clusters.get_mut(&1059).unwrap().last_active_at = now - 12 * HOUR;
+        for j in &mut i.clusters.get_mut(&1060).unwrap().timeline {
+            j.joined_at = now - HOUR;
+        }
+        let t = home(&i, 24);
+        assert!(t.html.contains("<h2>Spreading now</h2>"), "{}", t.html);
         assert_eq!(t.json["spreading_now"][0]["id"], 1060);
+        assert_eq!(t.json["stories"][0]["id"], 1059);
+        assert!(
+            t.html.contains("1 outlet in 6 h · first:"),
+            "equal counts shown once"
+        );
         assert!(t.md.contains("## Spreading now"));
     }
 }
