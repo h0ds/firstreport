@@ -26,6 +26,9 @@ Built from an export at {export}. Pages regenerate nightly.
 - `/` - stories in the window as cluster cards, then every outlet
 - `/story/<id>/` - one story: timeline in join order with headlines side by side, copies, changes, facts about each outlet present
 - `/outlet/<id>/` - every claim about one outlet with its provenance line, then its stories and counts over 30 days
+- `/search/` - outlets and stories; its `index.json` is the index
+- `/about/` - what each number means, what the site does not do, the sources with their licences
+- `/sitemap.xml` - every page
 
 Every page has two twins beside it with the same facts in the same order:
 `index.json` and `index.md`. Fetch `<page>index.md` for Markdown.

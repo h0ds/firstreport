@@ -27,10 +27,10 @@ fn run() -> Result<(), String> {
             ledger_export,
             out,
             window_hours,
-            ..
+            base_url,
         } => {
             let input = input::read(&feed_export, &ledger_export)?;
-            let (stories, outlets) = build::write_site(&input, &out, window_hours)?;
+            let (stories, outlets) = build::write_site(&input, &out, window_hours, &base_url)?;
             println!(
                 "built {} story pages and {} outlet pages into {}",
                 stories,

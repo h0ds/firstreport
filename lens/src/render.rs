@@ -119,7 +119,7 @@ pub fn html(p: &Page) -> String {
   <span class="kg-muted">{status}</span>
 </header>
 {body}
-<footer class="kg-muted">Every number on this page is a count from Kagami feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · Machine readers: <a href="{path}index.json">JSON</a> · <a href="{path}index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a></footer>
+<footer class="kg-muted">Every number on this page is a count from Kagami feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · <a href="/about/">About</a> · Machine readers: <a href="{path}index.json">JSON</a> · <a href="{path}index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a></footer>
 </main>
 </body>
 </html>

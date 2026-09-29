@@ -23,8 +23,31 @@ fn write_twins(dir: &Path, t: &Twins) -> Result<(), String> {
 /// Outlet pages cover the window ledger's feed_behaviour importer uses.
 pub const OUTLET_WINDOW_DAYS: i64 = 30;
 
+/// One `<url>` per page, in build order. `base_url` may be empty, in
+/// which case locations are site-relative, which most crawlers accept
+/// from a same-host sitemap.
+pub fn sitemap(pages: &[String], base_url: &str, export_time: i64) -> String {
+    let base = base_url.trim_end_matches('/');
+    let mut s = String::from("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n");
+    let lastmod = crate::render::date(export_time);
+    for p in pages {
+        s.push_str(&format!(
+            "  <url><loc>{}{}</loc><lastmod>{lastmod}</lastmod></url>\n",
+            crate::render::esc(base),
+            crate::render::esc(p)
+        ));
+    }
+    s.push_str("</urlset>\n");
+    s
+}
+
 /// Returns the number of story and outlet pages written.
-pub fn write_site(input: &Input, out: &Path, window_hours: i64) -> Result<(usize, usize), String> {
+pub fn write_site(
+    input: &Input,
+    out: &Path,
+    window_hours: i64,
+    base_url: &str,
+) -> Result<(usize, usize), String> {
     let tmp: PathBuf = out.with_file_name(format!(
         "{}.building-{}",
         out.file_name().and_then(|n| n.to_str()).unwrap_or("site"),
@@ -44,6 +67,8 @@ pub fn write_site(input: &Input, out: &Path, window_hours: i64) -> Result<(usize
         &tmp.join("search"),
         &crate::pages::search::search(input, window_hours),
     )?;
+    write_twins(&tmp.join("about"), &crate::pages::about::about(input))?;
+    let mut pages: Vec<String> = vec!["/".into(), "/search/".into(), "/about/".into()];
     let mut n = 0;
     for c in input.clusters.values() {
         if c.timeline.is_empty() {
@@ -51,6 +76,7 @@ pub fn write_site(input: &Input, out: &Path, window_hours: i64) -> Result<(usize
         }
         let t = crate::pages::story::story(input, c);
         write_twins(&tmp.join("story").join(c.id.to_string()), &t)?;
+        pages.push(format!("/story/{}/", c.id));
         n += 1;
     }
     let facts = crate::derive::outlet_facts(input, OUTLET_WINDOW_DAYS * crate::derive::DAY);
@@ -69,8 +95,14 @@ pub fn write_site(input: &Input, out: &Path, window_hours: i64) -> Result<(usize
         let f = facts.get(id).cloned().unwrap_or_default();
         let t = crate::pages::outlet::outlet(input, &o, &f, OUTLET_WINDOW_DAYS);
         write_twins(&tmp.join("outlet").join(id), &t)?;
+        pages.push(format!("/outlet/{id}/"));
         m += 1;
     }
+    std::fs::write(
+        tmp.join("sitemap.xml"),
+        sitemap(&pages, base_url, input.export_time),
+    )
+    .map_err(|e| e.to_string())?;
     if out.exists() {
         std::fs::remove_dir_all(out).map_err(|e| format!("{}: {e}", out.display()))?;
     }
@@ -87,7 +119,7 @@ mod tests {
     fn builds_every_story_with_its_twins() {
         let i = fixture_input();
         let out = std::env::temp_dir().join(format!("lens-site-{}", std::process::id()));
-        let (n, m) = write_site(&i, &out, 24).unwrap();
+        let (n, m) = write_site(&i, &out, 24, "https://kagami.example").unwrap();
         assert_eq!((n, m), (61, 3));
         assert!(out.join("tokens.css").exists());
         assert!(
@@ -108,7 +140,7 @@ mod tests {
             );
         }
         // a rebuild replaces, never accumulates
-        let again = write_site(&i, &out, 24).unwrap();
+        let again = write_site(&i, &out, 24, "https://kagami.example").unwrap();
         assert_eq!(again, (n, m));
         let r = crate::check::run(&out).unwrap();
         assert!(r.problems.is_empty(), "{:?}", r.problems);

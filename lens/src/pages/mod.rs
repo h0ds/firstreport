@@ -2,6 +2,7 @@
 //! HTML for people, JSON and Markdown for machines, same facts, same
 //! order.
 
+pub mod about;
 pub mod home;
 pub mod outlet;
 pub mod search;

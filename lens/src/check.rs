@@ -75,6 +75,25 @@ pub fn run(site: &Path) -> Result<Report, String> {
     let mut pages = Vec::new();
     walk(site, &mut pages)?;
     let mut r = Report::default();
+    // Every page is in the sitemap, when there is one.
+    if let Ok(sm) = std::fs::read_to_string(site.join("sitemap.xml")) {
+        for page in &pages {
+            let dir = page.parent().unwrap();
+            let rel = dir
+                .strip_prefix(site)
+                .unwrap_or(dir)
+                .to_string_lossy()
+                .replace('\\', "/");
+            let loc = if rel.is_empty() {
+                "/".to_string()
+            } else {
+                format!("/{rel}/")
+            };
+            if !sm.contains(&format!("{loc}</loc>")) {
+                r.problems.push(format!("{loc} is not in sitemap.xml"));
+            }
+        }
+    }
     for page in pages {
         r.pages += 1;
         let dir = page.parent().unwrap();
@@ -117,9 +136,15 @@ mod tests {
         std::fs::create_dir_all(site.join("story/1")).unwrap();
         std::fs::write(site.join("story/1/index.html"), "<a href=\"/story/2/\">").unwrap();
         std::fs::write(site.join("story/1/index.json"), "{}").unwrap();
+        std::fs::write(
+            site.join("sitemap.xml"),
+            "<urlset><url><loc>/other/</loc></url></urlset>",
+        )
+        .unwrap();
         let r = run(&site).unwrap();
         assert_eq!(r.pages, 1);
-        assert_eq!(r.problems.len(), 2, "{:?}", r.problems);
+        assert_eq!(r.problems.len(), 3, "{:?}", r.problems);
+        assert!(r.problems.iter().any(|p| p.contains("not in sitemap.xml")));
         assert!(r.problems.iter().any(|p| p.contains("no index.md")));
         assert!(r.problems.iter().any(|p| p.contains("/story/2/")));
         std::fs::remove_dir_all(&site).unwrap();
