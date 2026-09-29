@@ -5,6 +5,7 @@ mod api;
 mod behaviour;
 mod cli;
 mod export;
+mod guard;
 mod html;
 mod lookup;
 mod model;
@@ -79,12 +80,38 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                     c.field, c.source_id
                 );
             }
+            let reviews = guard::pending_reviews(&args.data_dir);
+            for (p, h) in &reviews {
+                println!(
+                    "review: {} held {}: {} of {} claims over {} outlets would change; apply with --write --force or fix the importer, then delete the file",
+                    p.display(),
+                    h.summary.source_id,
+                    h.summary.removed_or_changed,
+                    h.summary.existing,
+                    h.summary.outlets
+                );
+            }
+            let conflicts = guard::conflicts(&ledger);
+            for c in &conflicts {
+                println!(
+                    "conflict: {}/{}: {}",
+                    c.outlet_id,
+                    c.field,
+                    c.values
+                        .iter()
+                        .map(|(s, v)| format!("{s} says {v:?}"))
+                        .collect::<Vec<_>>()
+                        .join(", ")
+                );
+            }
             let due = store::due_sources(&ledger, now);
             println!(
-                "{} findings, {} errors, {} stale claims; sources due for refresh: {}",
+                "{} findings, {} errors, {} stale claims, {} held for review, {} conflicts between sources; sources due for refresh: {}",
                 findings.len(),
                 errors,
                 stale.len(),
+                reviews.len(),
+                conflicts.len(),
                 if due.is_empty() {
                     "none".to_string()
                 } else {
@@ -96,7 +123,8 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             }
             Ok(())
         }
-        cli::Command::Refresh { write } => {
+        cli::Command::Refresh { write, force } => {
+            let mode = guard::WriteMode::from_flags(write, force);
             let now = now_secs();
             let due = store::due_sources(&ledger, now);
             if due.is_empty() {
@@ -111,14 +139,14 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             for source_id in &due {
                 info!(source = %source_id, "due for refresh");
                 match source_id.as_str() {
-                    "wikidata" => import_wikidata(&args.data_dir, &ledger, &outlets, write).await?,
+                    "wikidata" => import_wikidata(&args.data_dir, &ledger, &outlets, mode).await?,
                     "wikipedia_rsp" => {
-                        import_perennial(&args.data_dir, &ledger, &outlets, write).await?
+                        import_perennial(&args.data_dir, &ledger, &outlets, mode).await?
                     }
-                    "rdap" => import_rdap(&args.data_dir, &ledger, &outlets, write).await?,
-                    "site" => import_site(&args.data_dir, &ledger, &outlets, write).await?,
+                    "rdap" => import_rdap(&args.data_dir, &ledger, &outlets, mode).await?,
+                    "site" => import_site(&args.data_dir, &ledger, &outlets, mode).await?,
                     "feed_behaviour" if args.feed_export.is_some() => {
-                        import_behaviour(&args, &ledger, &outlets, write)?
+                        import_behaviour(&args, &ledger, &outlets, mode)?
                     }
                     "feed_behaviour" => {
                         warn!("feed_behaviour due; pass --feed-export <dir> to refresh it")
@@ -160,7 +188,9 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             source,
             only,
             write,
+            force,
         } => {
+            let mode = guard::WriteMode::from_flags(write, force);
             let outlets_path = args.outlets.as_ref().ok_or(
                 "import needs --outlets <feed outlets.toml> to know which outlets to look up",
             )?;
@@ -189,13 +219,43 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
             }
             match source_id {
                 wikidata::SOURCE_ID => {
-                    import_wikidata(&args.data_dir, &ledger, &outlets, write).await
+                    import_wikidata(&args.data_dir, &ledger, &outlets, mode).await
                 }
-                rdap::SOURCE_ID => import_rdap(&args.data_dir, &ledger, &outlets, write).await,
-                site::SOURCE_ID => import_site(&args.data_dir, &ledger, &outlets, write).await,
-                behaviour::SOURCE_ID => import_behaviour(&args, &ledger, &outlets, write),
-                _ => import_perennial(&args.data_dir, &ledger, &outlets, write).await,
+                rdap::SOURCE_ID => import_rdap(&args.data_dir, &ledger, &outlets, mode).await,
+                site::SOURCE_ID => import_site(&args.data_dir, &ledger, &outlets, mode).await,
+                behaviour::SOURCE_ID => import_behaviour(&args, &ledger, &outlets, mode),
+                _ => import_perennial(&args.data_dir, &ledger, &outlets, mode).await,
             }
+        }
+    }
+}
+
+/// Say what the guard did with a run (docs/steward.md §4).
+fn report_commit(c: guard::Commit) {
+    match c {
+        guard::Commit::Written { outlets, summary } => info!(
+            source = %summary.source_id,
+            outlets,
+            kept = summary.kept,
+            changed = summary.removed_or_changed,
+            added = summary.added,
+            "written"
+        ),
+        guard::Commit::Held { path, summary } => {
+            warn!(
+                source = %summary.source_id,
+                existing = summary.existing,
+                changed = summary.removed_or_changed,
+                "held by the change guard: more than a third of the source's claims would change"
+            );
+            println!(
+                "# held for review: {} would remove or change {} of its {} claims over {} outlets.\n# nothing written; see {} and re-run with --write --force to apply",
+                summary.source_id,
+                summary.removed_or_changed,
+                summary.existing,
+                summary.outlets,
+                path.display()
+            );
         }
     }
 }
@@ -211,7 +271,7 @@ async fn import_wikidata(
     data_dir: &std::path::Path,
     ledger: &store::Ledger,
     outlets: &[store::FeedOutlet],
-    write: bool,
+    mode: guard::WriteMode,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let client = wikidata::client()?;
     let now = std::time::SystemTime::now()
@@ -220,6 +280,7 @@ async fn import_wikidata(
         .unwrap_or(0);
     let mut added = 0;
     let mut matched = 0;
+    let mut batch: Vec<(String, Vec<model::Claim>)> = Vec::new();
     for o in outlets {
         if o.domains.is_empty() {
             warn!(outlet = %o.id, "no domains; skipped");
@@ -250,11 +311,8 @@ async fn import_wikidata(
             }
             continue;
         }
-        if write {
-            let existing = ledger.claims.get(&o.id).cloned().unwrap_or_default();
-            let merged = store::merge_source(&existing, wikidata::SOURCE_ID, fresh);
-            store::write_outlet(data_dir, &o.id, merged)?;
-            info!(outlet = %o.id, "written");
+        if mode.writes() {
+            batch.push((o.id.clone(), fresh));
         } else {
             println!("# {}", o.id);
             for c in &fresh {
@@ -264,14 +322,24 @@ async fn import_wikidata(
         // Be a polite SPARQL client: one query a second is plenty.
         tokio::time::sleep(std::time::Duration::from_secs(1)).await;
     }
+    if mode.writes() {
+        report_commit(guard::commit_source(
+            data_dir,
+            ledger,
+            wikidata::SOURCE_ID,
+            batch,
+            mode.force(),
+            now_secs(),
+        )?);
+    }
     info!(
         matched,
         claims = added,
         outlets = outlets.len(),
-        written = write,
+        written = mode.writes(),
         "wikidata import done"
     );
-    if !write {
+    if !mode.writes() {
         println!("# re-run with --write to store these claims");
     }
     Ok(())
@@ -284,7 +352,7 @@ async fn import_perennial(
     data_dir: &std::path::Path,
     ledger: &store::Ledger,
     outlets: &[store::FeedOutlet],
-    write: bool,
+    mode: guard::WriteMode,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let client = perennial::client()?;
     let html = perennial::fetch(&client).await?;
@@ -296,6 +364,7 @@ async fn import_perennial(
         .unwrap_or(0);
     let mut matched_outlets = 0;
     let mut total = 0;
+    let mut batch: Vec<(String, Vec<model::Claim>)> = Vec::new();
     for o in outlets {
         let existing = ledger.claims.get(&o.id).cloned().unwrap_or_default();
         let articles: Vec<String> = existing
@@ -321,10 +390,8 @@ async fn import_perennial(
         }
         matched_outlets += 1;
         total += fresh.len();
-        if write {
-            let merged = store::merge_source(&existing, perennial::SOURCE_ID, fresh);
-            store::write_outlet(data_dir, &o.id, merged)?;
-            info!(outlet = %o.id, "written");
+        if mode.writes() {
+            batch.push((o.id.clone(), fresh));
         } else {
             println!("# {}", o.id);
             for c in &fresh {
@@ -346,14 +413,24 @@ async fn import_perennial(
             }
         }
     }
+    if mode.writes() {
+        report_commit(guard::commit_source(
+            data_dir,
+            ledger,
+            perennial::SOURCE_ID,
+            batch,
+            mode.force(),
+            now_secs(),
+        )?);
+    }
     info!(
         matched_outlets,
         claims = total,
         outlets = outlets.len(),
-        written = write,
+        written = mode.writes(),
         "perennial import done"
     );
-    if !write {
+    if !mode.writes() {
         println!("# re-run with --write to store these claims");
     }
     Ok(())
@@ -366,13 +443,14 @@ async fn import_rdap(
     data_dir: &std::path::Path,
     ledger: &store::Ledger,
     outlets: &[store::FeedOutlet],
-    write: bool,
+    mode: guard::WriteMode,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let client = rdap::client()?;
     let now = now_secs();
     let mut matched_outlets = 0;
     let mut total = 0;
     let mut first = true;
+    let mut batch: Vec<(String, Vec<model::Claim>)> = Vec::new();
     for o in outlets {
         let mut fresh = Vec::new();
         for domain in rdap::domains_for(o) {
@@ -408,11 +486,8 @@ async fn import_rdap(
         }
         matched_outlets += 1;
         total += fresh.len();
-        if write {
-            let existing = ledger.claims.get(&o.id).cloned().unwrap_or_default();
-            let merged = store::merge_source(&existing, rdap::SOURCE_ID, fresh);
-            store::write_outlet(data_dir, &o.id, merged)?;
-            info!(outlet = %o.id, "written");
+        if mode.writes() {
+            batch.push((o.id.clone(), fresh));
         } else {
             println!("# {}", o.id);
             for c in &fresh {
@@ -426,14 +501,24 @@ async fn import_rdap(
             }
         }
     }
+    if mode.writes() {
+        report_commit(guard::commit_source(
+            data_dir,
+            ledger,
+            rdap::SOURCE_ID,
+            batch,
+            mode.force(),
+            now_secs(),
+        )?);
+    }
     info!(
         matched_outlets,
         claims = total,
         outlets = outlets.len(),
-        written = write,
+        written = mode.writes(),
         "rdap import done"
     );
-    if !write {
+    if !mode.writes() {
         println!("# re-run with --write to store these claims");
     }
     Ok(())
@@ -445,7 +530,7 @@ fn import_behaviour(
     args: &cli::Args,
     ledger: &store::Ledger,
     outlets: &[store::FeedOutlet],
-    write: bool,
+    mode: guard::WriteMode,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let export_dir = args
         .feed_export
@@ -462,6 +547,7 @@ fn import_behaviour(
     let mut matched_outlets = 0;
     let mut thin = 0;
     let mut total = 0;
+    let mut batch: Vec<(String, Vec<model::Claim>)> = Vec::new();
     for o in outlets {
         let Some(counts) = report.outlets.get(&o.id) else {
             continue;
@@ -484,11 +570,8 @@ fn import_behaviour(
         }
         matched_outlets += 1;
         total += fresh.len();
-        if write {
-            let existing = ledger.claims.get(&o.id).cloned().unwrap_or_default();
-            let merged = store::merge_source(&existing, behaviour::SOURCE_ID, fresh);
-            store::write_outlet(&args.data_dir, &o.id, merged)?;
-            info!(outlet = %o.id, "written");
+        if mode.writes() {
+            batch.push((o.id.clone(), fresh));
         } else {
             println!("# {}  ({} items in window)", o.id, counts.items);
             for c in &fresh {
@@ -496,15 +579,25 @@ fn import_behaviour(
             }
         }
     }
+    if mode.writes() {
+        report_commit(guard::commit_source(
+            &args.data_dir,
+            ledger,
+            behaviour::SOURCE_ID,
+            batch,
+            mode.force(),
+            now_secs(),
+        )?);
+    }
     info!(
         matched_outlets,
         too_few_items = thin,
         claims = total,
         outlets = outlets.len(),
-        written = write,
+        written = mode.writes(),
         "feed_behaviour import done"
     );
-    if !write {
+    if !mode.writes() {
         println!("# re-run with --write to store these claims");
     }
     Ok(())
@@ -517,13 +610,14 @@ async fn import_site(
     data_dir: &std::path::Path,
     ledger: &store::Ledger,
     outlets: &[store::FeedOutlet],
-    write: bool,
+    mode: guard::WriteMode,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let client = site::client()?;
     let now = now_secs();
     let mut matched_outlets = 0;
     let mut total = 0;
     let mut first = true;
+    let mut batch: Vec<(String, Vec<model::Claim>)> = Vec::new();
     for o in outlets {
         let Some(domain) = rdap::domains_for(o).into_iter().next() else {
             warn!(outlet = %o.id, "no domain in the registry");
@@ -555,11 +649,8 @@ async fn import_site(
         }
         matched_outlets += 1;
         total += fresh.len();
-        if write {
-            let existing = ledger.claims.get(&o.id).cloned().unwrap_or_default();
-            let merged = store::merge_source(&existing, site::SOURCE_ID, fresh);
-            store::write_outlet(data_dir, &o.id, merged)?;
-            info!(outlet = %o.id, "written");
+        if mode.writes() {
+            batch.push((o.id.clone(), fresh));
         } else {
             println!("# {}  ({domain})", o.id);
             for c in &fresh {
@@ -567,14 +658,24 @@ async fn import_site(
             }
         }
     }
+    if mode.writes() {
+        report_commit(guard::commit_source(
+            data_dir,
+            ledger,
+            site::SOURCE_ID,
+            batch,
+            mode.force(),
+            now_secs(),
+        )?);
+    }
     info!(
         matched_outlets,
         claims = total,
         outlets = outlets.len(),
-        written = write,
+        written = mode.writes(),
         "site import done"
     );
-    if !write {
+    if !mode.writes() {
         println!("# re-run with --write to store these claims");
     }
     Ok(())

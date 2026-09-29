@@ -11,12 +11,14 @@ pub enum Command {
     /// NDJSON export.
     Export { out: PathBuf },
     /// Re-import every scheduled source that is due. `write` false lists them.
-    Refresh { write: bool },
+    Refresh { write: bool, force: bool },
     /// Pull claims from a source. `write` false prints the proposal.
     Import {
         source: String,
         only: Option<String>,
         write: bool,
+        /// Write past the change guard (docs/steward.md §4).
+        force: bool,
     },
 }
 
@@ -43,9 +45,11 @@ commands:
   check                              validate sources and claims
   serve                              read-only API (default 127.0.0.1:8081)
   export --out <dir>                 claims.ndjson, sources.ndjson, outlets.ndjson
-  refresh [--write]                  re-import scheduled sources that are due (list unless --write)
-  import <source> [--only <id>] [--write]
-                                     pull claims from a source; print unless --write
+  refresh [--write] [--force]        re-import scheduled sources that are due (list unless --write)
+  import <source> [--only <id>] [--write] [--force]
+                                     pull claims from a source; print unless --write.
+                                     A run that would change more than a third of the
+                                     source's claims is held in data/review/ unless --force
                                      sources: wikidata, wikipedia_rsp, rdap,
                                      feed_behaviour (needs --feed-export; --window default 90)
 ";
@@ -103,6 +107,7 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         "serve" => Command::Serve,
         "refresh" => Command::Refresh {
             write: rest.iter().any(|x| x == "--write"),
+            force: rest.iter().any(|x| x == "--force"),
         },
         "export" => Command::Export {
             out: flag("--out").ok_or("export requires --out <dir>")?.into(),
@@ -115,6 +120,7 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
                 .ok_or("import requires a source name, e.g. wikidata")?,
             only: flag("--only"),
             write: rest.iter().any(|x| x == "--write"),
+            force: rest.iter().any(|x| x == "--force"),
         },
         other => return Err(format!("unknown command {other:?}\n\n{USAGE}")),
     };
@@ -153,13 +159,26 @@ mod tests {
             Command::Import {
                 source: "wikidata".into(),
                 only: Some("bbc".into()),
-                write: true
+                write: true,
+                force: false
             }
         );
         assert_eq!(parse(argv("check")).unwrap().command, Command::Check);
         assert_eq!(
             parse(argv("refresh --write")).unwrap().command,
-            Command::Refresh { write: true }
+            Command::Refresh {
+                write: true,
+                force: false
+            }
+        );
+        assert_eq!(
+            parse(argv("import rdap --write --force")).unwrap().command,
+            Command::Import {
+                source: "rdap".into(),
+                only: None,
+                write: true,
+                force: true
+            }
         );
         let a = parse(argv("--feed-export out --window 30 import feed_behaviour")).unwrap();
         assert_eq!(a.feed_export, Some(PathBuf::from("out")));

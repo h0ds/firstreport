@@ -16,3 +16,6 @@ INFRA-PLAN.md
 
 # feed exports for ledger feed_behaviour imports
 /export/
+
+# ledger change-guard review files are read locally, then applied or discarded (docs/steward.md §4)
+ledger/data/review/
