@@ -56,7 +56,7 @@ url = "http://rss.cnn.com/rss/edition_world.rss"
 outlet = "cnn"
 
 [[feed]]
-url = "https://feeds.nbcnews.com/nbcnews/public/world"
+url = "https://www.nbcnews.com/feed"
 outlet = "nbcnews"
 
 [[feed]]
@@ -116,7 +116,7 @@ url = "https://www.washingtontimes.com/rss/headlines/news/world/"
 outlet = "washingtontimes"
 
 [[feed]]
-url = "https://dailycaller.com/feed/"
+url = "https://api.dailycaller.com/?feed=full&key=abad8678eeda58de4efcc7e9a704d008"
 outlet = "dailycaller"
 
 [[feed]]
@@ -304,15 +304,15 @@ url = "https://www.globaltimes.cn/rss/outbrain.xml"
 outlet = "globaltimes"
 
 [[feed]]
-url = "https://www.presstv.ir/rss"
+url = "https://www.presstv.ir/rss.xml"
 outlet = "presstv"
 
 [[feed]]
-url = "https://kyivindependent.com/feed/"
+url = "https://kyivindependent.com/news-archive/rss/"
 outlet = "kyivindependent"
 
 [[feed]]
-url = "https://meduza.io/rss/en"
+url = "https://meduza.io/rss/all"
 outlet = "meduza"
 
 [[feed]]
@@ -364,11 +364,11 @@ url = "https://toyokeizai.net/list/feed/rss"
 outlet = "toyokeizai"
 
 [[feed]]
-url = "https://diamond.jp/list/feed/rss"
+url = "https://diamond.jp/list/feed/rss/dol"
 outlet = "diamond"
 
 [[feed]]
-url = "https://president.jp/list/feed/rss"
+url = "https://president.jp/list/rss"
 outlet = "president"
 
 [[feed]]
@@ -376,7 +376,7 @@ url = "https://bunshun.jp/list/feed/rss"
 outlet = "bunshun"
 
 [[feed]]
-url = "https://lite-ra.com/feed"
+url = "https://lite-ra.com/index.xml"
 outlet = "litera"
 
 [[feed]]
@@ -388,7 +388,7 @@ url = "https://newsdig.tbs.co.jp/list/feed/rss"
 outlet = "tbsnewsdig"
 
 [[feed]]
-url = "https://www.fnn.jp/feed"
+url = "https://www.fnn.jp/list/feed/rss"
 outlet = "fnn"
 
 # Reuters publishes no feed; its Google News sitemap lists recent articles

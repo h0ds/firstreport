@@ -102,9 +102,9 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             "<li{} data-outlet=\"{}\"><span class=\"when\" title=\"{} after the first outlet\">{}</span><div><span class=\"outlet\">{}</span>{}",
             if k == 0 { " class=\"first\"" } else { "" },
             esc(outlet),
-            if k == 0 { "First".to_string() } else { delta(when(first) - t0) },
-            if k == 0 { "first".to_string() } else { delta(when(first) - t0) },
-            outlet_link(input, outlet),
+            if k == 0 { "0 min".to_string() } else { delta(when(first) - t0) },
+            delta(when(first) - t0),
+            if k == 0 { crate::render::origin_link(input, outlet) } else { outlet_link(input, outlet) },
             match f.copies_of.get(&first.id) {
                 Some(src) => format!(
                     " <span class=\"copy\" title=\"Same text as {}'s\">copy of {}</span>",
@@ -123,10 +123,10 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         );
         let mut times = Vec::new();
         if first.published_at > 0 {
-            times.push(format!("published {}", time_el(first.published_at)));
+            times.push(format!("published {}", time_el(first.published_at, input.export_time)));
         }
         if show_pickup || first.published_at == 0 {
-            times.push(format!("picked up {}", time_el(at)));
+            times.push(format!("picked up {}", time_el(at, input.export_time)));
         }
         let _ = write!(b, "<span class=\"times\">{}</span>", times.join(" · "));
         for alt in items.iter().skip(1).filter(|i| i.title != first.title) {
@@ -206,7 +206,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
                         "<span class=\"alt\">earlier text not in this export</span>".to_string(),
                     _ => String::new(),
                 },
-                time_el(e.ts)
+                time_el(e.ts, input.export_time)
             );
         }
         b.push_str("</ul>");

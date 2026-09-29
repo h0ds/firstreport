@@ -33,7 +33,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         "<h1>Stories</h1><p class=\"kg-muted\">{} active in the {} hours to {}, from {} in the pool. Ordered by outlets joining in the last day, then by recency.</p>",
         n(recent.len(), "story"),
         window_hours,
-        time_el(now),
+        time_el(now, now),
         n(input.outlets.len(), "outlet")
     );
     if recent.is_empty() {
@@ -64,7 +64,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         for (c, f) in &spreading {
             let _ = write!(
                 b,
-                "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\">{} in 6 h{} · first: {}</span></li>",
+                "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\">{} in 6 h{} · {}</span></li>",
                 c.id,
                 c.id,
                 esc(&c.primary_title),
@@ -74,7 +74,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
                 } else {
                     String::new()
                 },
-                outlet_link(input, &c.origin_outlet_id)
+                crate::render::origin_link(input, &c.origin_outlet_id)
             );
         }
         b.push_str("</ul><h2>All stories in the window</h2>");
@@ -232,7 +232,7 @@ mod tests {
         assert_eq!(t.json["spreading_now"][0]["id"], 1060);
         assert_eq!(t.json["stories"][0]["id"], 1059);
         assert!(
-            t.html.contains("1 outlet in 6 h · first:"),
+            t.html.contains("1 outlet in 6 h · <span class=\"kg-origin-name\">"),
             "equal counts shown once"
         );
         assert!(t.md.contains("## Spreading now"));
