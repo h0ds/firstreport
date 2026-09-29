@@ -195,6 +195,9 @@ pub struct Input {
     /// Newest `fetched_at` in the feed export: the "now" every window
     /// is measured from, so a build is a pure function of its inputs.
     pub export_time: i64,
+    /// Outlet id → icon file in the feed export's `icons/` (`feed icons`).
+    /// Copied into the site as `/icons/<file name>`; empty when none.
+    pub icons: BTreeMap<String, std::path::PathBuf>,
 }
 
 fn read_ndjson<T: serde::de::DeserializeOwned>(path: &Path) -> Result<Vec<T>, String> {
@@ -237,7 +240,15 @@ pub fn read(feed_export: &Path, ledger_export: &Path) -> Result<Input, String> {
         sources: sources.into_iter().map(|s| (s.id.clone(), s)).collect(),
         claims: BTreeMap::new(),
         export_time,
+        icons: BTreeMap::new(),
     };
+    if let Ok(entries) = std::fs::read_dir(feed_export.join("icons")) {
+        for p in entries.flatten().map(|e| e.path()) {
+            if let Some(stem) = p.file_stem().and_then(|s| s.to_str()) {
+                input.icons.insert(stem.to_string(), p.clone());
+            }
+        }
+    }
     for r in revisions {
         input.revisions.entry(r.item_id).or_default().push(r);
     }

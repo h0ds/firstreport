@@ -196,10 +196,71 @@ pub fn outlet_link(input: &Input, id: &str) -> String {
 
 /// The origin outlet's name inside the origin ring (design §10): no visible
 /// word "first", which stays in the accessible name and the twins.
-pub fn origin_link(input: &Input, id: &str) -> String {
+/// The outlet's own icon (design §10: its mark, in its colours, never a
+/// rating), or nothing when `feed icons` found none. `origin` adds the
+/// origin ring.
+pub fn outlet_icon(input: &Input, id: &str, origin: bool) -> Option<String> {
+    let file = input.icons.get(id)?.file_name()?.to_str()?.to_string();
+    Some(format!(
+        "<img class=\"kg-icon{}\" src=\"/icons/{}\" alt=\"\" width=\"16\" height=\"16\" decoding=\"async\">",
+        if origin { " kg-origin" } else { "" },
+        esc(&file)
+    ))
+}
+
+/// An outlet as it appears in a row: icon, then name.
+pub fn outlet_badge(input: &Input, id: &str) -> String {
     format!(
-        "<span class=\"kg-origin-name\"><span class=\"kg-sr\">first to publish: </span>{}</span>",
+        "<span class=\"kg-outlet\">{}{}</span>",
+        outlet_icon(input, id, false).unwrap_or_default(),
         outlet_link(input, id)
+    )
+}
+
+/// The origin outlet (design §10): its icon inside the origin ring, or
+/// its name inside the ring when it has no icon. No visible "first".
+pub fn origin_link(input: &Input, id: &str) -> String {
+    match outlet_icon(input, id, true) {
+        Some(icon) => format!(
+            "<span class=\"kg-outlet\">{icon}<span class=\"kg-sr\">first to publish: </span>{}</span>",
+            outlet_link(input, id)
+        ),
+        None => format!(
+            "<span class=\"kg-origin-name\"><span class=\"kg-sr\">first to publish: </span>{}</span>",
+            outlet_link(input, id)
+        ),
+    }
+}
+
+/// Icons of the outlets carrying a story, in the order they joined, the
+/// origin first and ringed; up to `max`, then "+N". Empty without icons.
+pub fn outlet_stack(input: &Input, c: &Cluster, max: usize) -> String {
+    let mut ids: Vec<&str> = Vec::new();
+    for j in &c.timeline {
+        if !ids.contains(&j.outlet_id.as_str()) {
+            ids.push(&j.outlet_id);
+        }
+    }
+    if let Some(p) = ids.iter().position(|i| *i == c.origin_outlet_id) {
+        let o = ids.remove(p);
+        ids.insert(0, o);
+    }
+    let shown: Vec<String> = ids
+        .iter()
+        .take(max)
+        .filter_map(|id| {
+            outlet_icon(input, id, *id == c.origin_outlet_id)
+                .map(|img| img.replace("<img ", &format!("<img title=\"{}\" ", esc(input.outlet_name(id)))))
+        })
+        .collect();
+    if shown.is_empty() {
+        return String::new();
+    }
+    let more = ids.len().saturating_sub(max);
+    format!(
+        "<span class=\"kg-stack\" aria-hidden=\"true\">{}{}</span>",
+        shown.join(""),
+        if more > 0 { format!("<span class=\"more\">+{more}</span>") } else { String::new() }
     )
 }
 
@@ -283,16 +344,18 @@ pub fn cluster_card(
     let mut s = String::new();
     let _ = write!(
         s,
-        "<article class=\"kg-cluster{}\" data-id=\"{}\"><p class=\"title\"><a href=\"/story/{}/\">{}</a></p><div class=\"meta kg-muted\">",
+        "<article class=\"kg-cluster{}\" data-id=\"{}\"{}><p class=\"title\"><a href=\"/story/{}/\">{}</a></p><div class=\"meta kg-muted\">",
         if enter { " kg-enter" } else { "" },
         c.id,
+        reach.map(|f| format!(" data-reach=\"{}\"", f.reach)).unwrap_or_default(),
         c.id,
         esc(&c.primary_title)
     );
     let _ = write!(
         s,
-        "<span class=\"kg-count\">{}</span><span class=\"sep\">·</span><span>{}</span><span class=\"sep\">·</span>{}<span class=\"sep\">·</span><span>first seen {}</span>",
+        "<span class=\"kg-count\">{}</span>{}<span class=\"sep\">·</span><span>{}</span><span class=\"sep\">·</span>{}<span class=\"sep\">·</span><span>first seen {}</span>",
         n(c.outlet_count as usize, "outlet"),
+        outlet_stack(input, c, 8),
         n(c.item_count as usize, "item"),
         origin_link(input, &c.origin_outlet_id),
         time_el(c.created_at, input.export_time)
@@ -304,17 +367,28 @@ pub fn cluster_card(
             n(c.syndication.len(), "syndication group")
         );
     }
-    // The counts that placed the card (docs/algorithms.md §4), so the
-    // order is checkable on the card itself.
+    // The counts that placed the card (docs/algorithms.md §4), said only
+    // where they add to the outlet count: independent reports when copies
+    // made some outlets not count, languages when there is more than one.
+    // The full reach is on the card as data-reach and in the JSON twin.
     if let Some(f) = reach {
-        let _ = write!(
-            s,
-            "<span class=\"sep\">·</span><span data-reach=\"{}\" title=\"reach = independent reports in the window + languages − 1\">reach {}: {}, {}</span>",
-            f.reach,
-            f.reach,
-            n(f.reports as usize, "independent report"),
-            n(f.languages as usize, "language")
-        );
+        let reports = f.reports as usize != c.outlet_count as usize;
+        let text = match (f.languages > 1, reports) {
+            (true, _) => Some(format!(
+                "reach {}: {} in {} languages",
+                f.reach,
+                n(f.reports as usize, "independent report"),
+                f.languages
+            )),
+            (false, true) => Some(n(f.reports as usize, "independent report")),
+            (false, false) => None,
+        };
+        if let Some(t) = text {
+            let _ = write!(
+                s,
+                "<span class=\"sep\">·</span><span title=\"reach = independent reports in the window + languages − 1\">{t}</span>"
+            );
+        }
     }
     s.push_str(&spark(spark_points, scale_max, large));
     s.push_str("</div></article>");

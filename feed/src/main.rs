@@ -84,6 +84,11 @@ async fn main() {
                 cluster::propagation::Thresholds::from_config(&cfg),
             )?;
             info!(items = s.items, clusters = s.clusters, events = s.events, revisions = s.revisions, outlets = s.outlets, out = %out.display(), "export complete");
+            // Outlet icons ride along for lens (`feed icons` fetches them).
+            let icons = copy_icons(&icons_dir(&cfg), &out.join("icons"))?;
+            if icons > 0 {
+                info!(icons, "icons exported");
+            }
             Ok(())
         })(),
         cli::Command::Prune {
@@ -103,6 +108,10 @@ async fn main() {
             );
         }),
         cli::Command::Eval { pairs, json } => eval::run(&cfg, &pairs, json),
+        cli::Command::Icons { refresh } => {
+            let dir = icons_dir(&cfg);
+            tooling::icons(&args.config_dir, &loaded.outlets, &dir, refresh).await
+        }
         cli::Command::Import { opml, write } => tooling::import_opml(
             &args.config_dir,
             &opml,
@@ -160,6 +169,32 @@ async fn main() {
         error!("{e}");
         std::process::exit(1);
     }
+}
+
+/// Where `feed icons` keeps outlet icons: beside the store.
+fn icons_dir(cfg: &config::Config) -> std::path::PathBuf {
+    cfg.store
+        .path
+        .parent()
+        .unwrap_or(std::path::Path::new("."))
+        .join("icons")
+}
+
+/// Copy the icon files into an export; none is fine.
+fn copy_icons(from: &std::path::Path, to: &std::path::Path) -> std::io::Result<usize> {
+    let Ok(entries) = std::fs::read_dir(from) else {
+        return Ok(0);
+    };
+    let mut n = 0;
+    for e in entries.flatten() {
+        let p = e.path();
+        if p.is_file() {
+            std::fs::create_dir_all(to)?;
+            std::fs::copy(&p, to.join(e.file_name()))?;
+            n += 1;
+        }
+    }
+    Ok(n)
 }
 
 async fn run(

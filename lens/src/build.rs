@@ -87,6 +87,16 @@ pub fn write_site(
     std::fs::write(tmp.join("tokens.css"), crate::render::TOKENS_CSS).map_err(|e| e.to_string())?;
     std::fs::write(tmp.join("lens.css"), crate::render::LENS_CSS).map_err(|e| e.to_string())?;
     copy_fonts(&tmp)?;
+    // Outlet icons, self-hosted so a reader's browser asks no third party.
+    if !input.icons.is_empty() {
+        let dir = tmp.join("icons");
+        std::fs::create_dir_all(&dir).map_err(|e| format!("{}: {e}", dir.display()))?;
+        for p in input.icons.values() {
+            if let Some(name) = p.file_name() {
+                std::fs::copy(p, dir.join(name)).map_err(|e| format!("{}: {e}", p.display()))?;
+            }
+        }
+    }
     std::fs::write(tmp.join("llms.txt"), crate::llms::llms_txt(input))
         .map_err(|e| e.to_string())?;
     std::fs::write(tmp.join("robots.txt"), crate::llms::ROBOTS_TXT).map_err(|e| e.to_string())?;

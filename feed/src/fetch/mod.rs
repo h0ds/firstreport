@@ -7,6 +7,7 @@ pub mod client;
 #[cfg(test)]
 mod client_test;
 pub mod discover;
+pub mod icons;
 pub mod opml;
 pub mod opt_out;
 pub mod robots;

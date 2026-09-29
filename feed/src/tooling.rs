@@ -239,6 +239,45 @@ pub fn pick_feeds(found: &[discover::Discovered], max: usize) -> Vec<discover::D
         .collect()
 }
 
+/// `feed icons`: each outlet's icon from its home page into `dir`,
+/// through the poller's client rules (robots.txt, opt-out list). Outlets
+/// with an icon already are skipped unless `refresh`. Prints one line per
+/// outlet; a missing icon is not an error.
+pub async fn icons(
+    config_dir: &Path,
+    outlets: &Outlets,
+    dir: &Path,
+    refresh: bool,
+) -> Result<(), Box<dyn std::error::Error>> {
+    use crate::fetch::icons;
+    std::fs::create_dir_all(dir)?;
+    let client = Client::new(8, 2)?.with_opt_outs(crate::fetch::opt_out::load(config_dir)?);
+    let (mut got, mut kept, mut missing) = (0, 0, 0);
+    for o in &outlets.outlets {
+        if !refresh && icons::existing(dir, &o.id).is_some() {
+            kept += 1;
+            continue;
+        }
+        let Some(domain) = o.domains.first() else { continue };
+        match icons::fetch_one(&client, domain).await {
+            Ok((bytes, ext)) => {
+                if let Some(old) = icons::existing(dir, &o.id) {
+                    let _ = std::fs::remove_file(old);
+                }
+                std::fs::write(dir.join(format!("{}.{ext}", o.id)), &bytes)?;
+                println!("{}	{ext}	{} bytes", o.id, bytes.len());
+                got += 1;
+            }
+            Err(e) => {
+                println!("{}	none	{e}", o.id);
+                missing += 1;
+            }
+        }
+    }
+    println!("# {got} fetched, {kept} already present, {missing} without an icon; in {}", dir.display());
+    Ok(())
+}
+
 pub async fn discover(
     config_dir: &Path,
     page: &str,

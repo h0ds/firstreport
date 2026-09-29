@@ -33,6 +33,9 @@ pub enum Command {
     /// The failing feeds from the store; `fix` looks for replacement
     /// URLs by discovery, `write` applies them to feeds.toml.
     Feeds { fix: bool, write: bool },
+    /// Fetch each outlet's icon into `<data>/icons/` for lens; outlets
+    /// that already have one are skipped unless `refresh`.
+    Icons { refresh: bool },
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -56,6 +59,7 @@ commands:
   discover --hosts <file> [--write] [--limit N] [--max-per-host N]
                                    same over a host list (one per line; aggregator-domains.txt works)
   eval --pairs <tsv> [--json]      precision/recall sweep on labelled pairs
+  icons [--refresh]                each outlet's icon into <data>/icons for lens (skips ones already fetched)
   feeds [--fix] [--write]          failing feeds from the store; --fix discovers replacement URLs, --write applies them
 ";
 
@@ -108,6 +112,9 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         "eval" => Command::Eval {
             pairs: flag("--pairs")?.into(),
             json: rest.iter().any(|x| x == "--json"),
+        },
+        "icons" => Command::Icons {
+            refresh: rest.iter().any(|x| x == "--refresh"),
         },
         "feeds" => Command::Feeds {
             fix: rest.iter().any(|x| x == "--fix" || x == "--write"),

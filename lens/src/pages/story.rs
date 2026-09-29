@@ -161,7 +161,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             esc(outlet),
             if k == 0 { "0 min".to_string() } else { delta(when(first) - t0) },
             delta(when(first) - t0),
-            if k == 0 { crate::render::origin_link(input, outlet) } else { outlet_link(input, outlet) },
+            if k == 0 { crate::render::origin_link(input, outlet) } else { crate::render::outlet_badge(input, outlet) },
             match f.copies_of.get(&first.id) {
                 Some(src) => format!(
                     " <span class=\"copy\" title=\"Same text as {}'s\">copy of {}</span>",

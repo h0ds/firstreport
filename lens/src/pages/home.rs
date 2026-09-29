@@ -9,7 +9,7 @@ use serde_json::json;
 use super::Twins;
 use crate::derive::{cluster_facts, HOUR};
 use crate::input::Input;
-use crate::render::{cluster_card, datetime, esc, html, n, outlet_link, time_el, Page};
+use crate::render::{cluster_card, datetime, esc, html, n, time_el, Page};
 
 /// Stories per page of the story list; page 1 is `/`, then `/page/N/`.
 pub const PAGE_SIZE: usize = 50;
@@ -258,7 +258,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         let _ = write!(
             b,
             "<li>{}<span class=\"kg-muted\">{}</span><span class=\"n kg-muted\">{}</span></li>",
-            outlet_link(input, &o.id),
+            crate::render::outlet_badge(input, &o.id),
             esc(&o.domains.join(", ")),
             if claims == 0 {
                 "not assessed yet".to_string()

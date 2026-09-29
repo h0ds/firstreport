@@ -248,9 +248,17 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 /* count chip (§5): the one number that ranks a row, as a highlight. */
 .kg-count { display: inline-block; padding: 0 var(--kg-s2); border-radius: var(--kg-radius-input); background: var(--kg-blue-soft); color: var(--kg-blue-ink); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
 
+/* outlet badge (§10): the outlet's own icon, then its name. No box; the
+   icon carries the outlet's colours, Kagami adds none. */
+.kg-outlet { display: inline-flex; align-items: center; gap: var(--kg-s1); white-space: nowrap; vertical-align: middle; }
+.kg-icon { width: 16px; height: 16px; border-radius: var(--kg-radius-input); object-fit: contain; background: var(--kg-bg); box-shadow: 0 0 0 1px var(--kg-line); flex: none; }
+/* icon row: the outlets carrying a story, joined order, origin first */
+.kg-stack { display: inline-flex; align-items: center; gap: var(--kg-s1); margin-left: var(--kg-s1); }
+.kg-stack .more { color: var(--kg-text-muted); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); margin-left: var(--kg-s1); }
+
 /* origin ring (§10): marks the outlet that published first. A ring, not a
    word and not blue; the accessible name comes from a .kg-sr span. */
-.kg-origin { border-radius: var(--kg-radius-input); box-shadow: 0 0 0 1.5px var(--kg-bg), 0 0 0 3px var(--kg-text); }
+.kg-origin, .kg-icon.kg-origin { border-radius: var(--kg-radius-input); box-shadow: 0 0 0 1.5px var(--kg-bg), 0 0 0 3px var(--kg-text); }
 .kg-origin-name { border-radius: var(--kg-radius-input); box-shadow: 0 0 0 1.5px var(--kg-text); padding: 0 var(--kg-s1); }
 .kg-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
