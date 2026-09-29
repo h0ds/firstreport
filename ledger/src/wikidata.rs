@@ -32,21 +32,35 @@ const SKIP_INSTANCES: &[&str] = &[
     "video game",
 ];
 
-/// SPARQL for one outlet: any item whose official website is on one of
-/// the outlet's domains, with the properties we record. Labels via the
-/// label service in English.
+/// SPARQL for one outlet: any item whose official website is the home
+/// page of one of the outlet's domains, with the properties we record.
+/// Labels via the label service in English.
+///
+/// The website is matched against an explicit list of home-page IRIs
+/// (http/https, with and without `www.`, with and without a trailing
+/// slash) so the endpoint answers from its index. A string FILTER over
+/// every P856 value scans the whole property and runs past the
+/// endpoint's 60 s limit.
 pub fn query(domains: &[String]) -> String {
-    let filters: Vec<String> = domains
-        .iter()
-        .map(|d| {
-            let d = d.trim().trim_start_matches("www.").to_ascii_lowercase().replace('"', "");
-            format!("CONTAINS(LCASE(STR(?website)), \"//{d}/\") || CONTAINS(LCASE(STR(?website)), \"//www.{d}/\") || STRENDS(LCASE(STR(?website)), \"//{d}\") || STRENDS(LCASE(STR(?website)), \"//www.{d}\")")
-        })
-        .collect();
+    let mut iris = Vec::new();
+    for d in domains {
+        let d = d
+            .trim()
+            .trim_start_matches("www.")
+            .to_ascii_lowercase()
+            .replace(['"', '<', '>', ' '], "");
+        for scheme in ["https", "http"] {
+            for host in [d.clone(), format!("www.{d}")] {
+                for slash in ["/", ""] {
+                    iris.push(format!("<{scheme}://{host}{slash}>"));
+                }
+            }
+        }
+    }
     format!(
         "SELECT ?item ?itemLabel ?website ?country ?countryLabel ?inception ?owner ?ownerLabel ?parent ?parentLabel ?instance ?instanceLabel ?article WHERE {{
+  VALUES ?website {{ {} }}
   ?item wdt:P856 ?website .
-  FILTER({})
   OPTIONAL {{ ?item wdt:P17 ?country . }}
   OPTIONAL {{ ?item wdt:P571 ?inception . }}
   OPTIONAL {{ ?item wdt:P127 ?owner . }}
@@ -55,7 +69,7 @@ pub fn query(domains: &[String]) -> String {
   OPTIONAL {{ ?article schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> . }}
   SERVICE wikibase:label {{ bd:serviceParam wikibase:language \"en\" . }}
 }} LIMIT 200",
-        filters.join(" || ")
+        iris.join(" ")
     )
 }
 
@@ -244,11 +258,12 @@ mod tests {
     #[test]
     fn query_matches_domains_with_and_without_www() {
         let q = query(&["bbc.co.uk".into(), "www.bbc.com".into()]);
-        assert!(q.contains("//bbc.co.uk/") && q.contains("//www.bbc.co.uk/"));
+        assert!(q.contains("<https://bbc.co.uk/>") && q.contains("<http://www.bbc.co.uk>"));
         assert!(
-            q.contains("//bbc.com/"),
-            "www. stripped before building the filter"
+            q.contains("<https://bbc.com/>") && !q.contains("www.www."),
+            "www. stripped before building the IRIs"
         );
+        assert!(!q.contains("FILTER"), "exact match, no scan");
         assert!(q.contains("wdt:P856") && q.contains("wdt:P127") && q.contains("schema:about"));
     }
 

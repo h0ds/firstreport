@@ -153,8 +153,11 @@ pub fn parse(html: &str) -> Result<Vec<Row>, String> {
             continue; // header or note row
         }
         let (src_attrs, src) = cells[0];
-        let status_text = text_of(cells[1].1);
-        let Some(status) = Status::from_text(&status_text) else {
+        // The live page renders the status as an icon whose words are only
+        // in the link `title` and image `alt`, so fall back to the raw cell.
+        let Some(status) =
+            Status::from_text(&text_of(cells[1].1)).or_else(|| Status::from_text(cells[1].1))
+        else {
             continue;
         };
         let source_links = links(src);
