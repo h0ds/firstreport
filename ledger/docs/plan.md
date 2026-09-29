@@ -197,7 +197,9 @@ GET /llms.txt, /robots.txt            for machine readers (design §11)
   the match recorded in the claim's `note` so a reviewer can reject it.
 - **Ownership chains.** P127 gives the direct owner; the ultimate owner
   needs a walk up P127/P749. Store the direct link and let `lens` walk;
-  or store the chain as `data.chain`. Decide when `lens` needs it.
+  or store the chain as `data.chain`. `lens/docs/plan.md` §10 does not
+  need the chain for N1; it links the direct owner when the owner is
+  itself a registry outlet. Decide when N3 is designed.
 - **Time.** Ownership changes. `as_of` carries what the source says;
   the retrieved date carries what we saw. Re-import periodically and
   keep old claims in git history rather than in the files.

@@ -14,10 +14,11 @@ Rust, single binary per tool, runs entirely locally. Three pillars, built in ord
 |---|---|---|
 | [`feed/`](feed/) | 1 | Ingest headlines, cluster them into stories, record propagation. Neutral by construction. |
 | [`ledger/`](ledger/) | 2 | Sourced facts about outlets keyed by outlet id: ownership, country, founding, third-party ratings, each with its source and licence. Never a score. |
-| `lens/` | 3 | Presentation over `feed` and `ledger`. Not started. |
+| [`lens/`](lens/) | 3 | Static site generated from `feed` and `ledger` exports: stories, outlets, coverage by a named source's labels. Planned; see `lens/docs/plan.md`. |
 
 `feed/docs/plan.md` is the full plan for pillar 1, including the project rules
-that apply to every pillar. `ledger/docs/plan.md` is pillar 2's.
+that apply to every pillar. `ledger/docs/plan.md` is pillar 2's and
+`lens/docs/plan.md` is pillar 3's.
 `docs/local-runbook.md` lists everything that has not yet run outside the
 sandbox it was built in, with the commands to do it.
 
