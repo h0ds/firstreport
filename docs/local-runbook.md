@@ -204,6 +204,16 @@ cargo run -- serve
 `http://127.0.0.1:8081/lookup` is the page; type an outlet and every
 claim appears with its provenance line. Commit `ledger/data/claims/`.
 
+If an import prints "held for review", the change guard tripped
+(`docs/steward.md` §4): more than a third of that source's claims would
+change. Read the file it names in `ledger/data/review/` against the
+store. A source page that changed shape looks exactly like this, and
+the fix is in the importer; a genuine change is applied with
+`--write --force`. Delete the file either way, or `check` keeps
+listing it. `check` also prints every field where two sources
+disagree; those are correct as they stand and appear side by side on
+the pages.
+
 Put `ledger refresh --write` (with `--outlets` and `--feed-export`) on
 a weekly schedule; it re-imports only sources that are due.
 

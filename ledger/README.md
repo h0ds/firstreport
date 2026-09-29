@@ -60,6 +60,12 @@ re-imports them. Put it on a schedule (weekly is plenty; the sources
 move slowly) and review the diff before merging: the files are the
 review surface.
 
+A run that would change more than a third of a source's claims is held
+in `data/review/` instead of written, and `check` says so until the
+file is dealt with; `--force` writes it anyway. `check` also lists
+fields where two sources disagree about an outlet (`../docs/steward.md`
+§4).
+
 ## Status
 
 L2e. Store, validation, refresh tracking, API with search and `/lookup`,

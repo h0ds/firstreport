@@ -90,7 +90,8 @@ runbook's job; `kagami doctor` reports what is still missing.
   refresh tracking, importers for Wikidata, Wikipedia's perennial
   sources list, domain registration via RDAP, the outlet's own site and
   feed behaviour from `feed`'s export, a read-only API with search,
-  Markdown twins, OpenAPI and a `/lookup` page. See
+  Markdown twins, OpenAPI and a `/lookup` page, and the steward's
+  change guard and conflict list (`docs/steward.md` S3). See
   `ledger/docs/plan.md` §8.
 - **lens** is at N3: front, story, outlet, search and about pages with
   JSON and Markdown twins, `llms.txt` and a sitemap, coverage by a named

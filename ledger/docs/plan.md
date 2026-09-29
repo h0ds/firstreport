@@ -155,13 +155,23 @@ ledger/
 ledger check                       validate data/ against sources and feed's outlets.toml
 ledger serve [--bind]              read-only API on 127.0.0.1:8081
 ledger export --out <dir>          claims.ndjson, sources.ndjson, outlets.ndjson
-ledger import <wikidata|wikipedia_rsp|rdap|site|feed_behaviour> [--outlets <feed outlets.toml>] [--only <id>] [--write]
+ledger import <wikidata|wikipedia_rsp|rdap|site|feed_behaviour> [--outlets <feed outlets.toml>] [--only <id>] [--write] [--force]
               feed_behaviour also needs --feed-export <dir> [--feed-api <url>] [--window <days>]
 ```
 
 `import` prints what it would add and writes only with `--write`, like
 `feed discover`. Imports replace an outlet's existing claims from the
 same source, so re-running refreshes rather than duplicates.
+
+**Change guard** (`docs/steward.md` §4). A run that would remove or
+change more than a third of the source's existing claims over the
+outlets in the run (once it has at least six) is not written: the
+fresh claims go to `data/review/<source>-<time>.toml` with the counts
+in its header, the run says so, and `check` lists the file until it is
+deleted. A source page whose structure changed produces exactly this;
+read the file against the store, fix the importer or re-run with
+`--write --force`. `check` also lists every field where two sources
+give different values for one outlet: the side by side, named.
 
 ## 7. API
 
@@ -185,6 +195,8 @@ GET /llms.txt, /robots.txt            for machine readers (design §11)
 - **L2c** RDAP domain registration importer: one lookup per registrable domain through the rdap.org redirector, `domain_registered` and `registrar` claims linking the registry record. Done, tested against a recorded record; not yet run live.
 - **L2d** Feed-behaviour importer from `feed export`: cadence, revision and withdrawal rates, syndication share, origin share, with window and counts on every claim. Done and verified offline end to end, since it needs no network.
 - **L2e** Site checks importer: HTTPS behaviour and accountability-page links from the home page. Done, parser tested against a recorded page; not yet run live.
+- **L2f** Steward guards (`docs/steward.md` S3): the change guard with
+  review files and `--force`, and the conflict list in `check`. Done.
 - **L3** AllSides, once terms are confirmed; a `licence` gate in `check`
   refuses to serve claims from a source whose terms field says
   `no-redistribution`.

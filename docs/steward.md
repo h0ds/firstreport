@@ -113,6 +113,12 @@ source registry and its licence. Added:
   line in `sources.toml` with a reason; the steward never adds or
   removes one.
 
+Done: `ledger/src/guard.rs`. The guard applies once a source has six
+or more claims over the outlets in the run, so a first import is never
+held; the review file carries the counts and the fresh claims;
+`--force` on `import` and `refresh` writes past it; `check` lists
+pending review files and conflicts and counts both in its summary.
+
 ## 5. Conduct and resources
 
 - robots.txt and Crawl-delay on every request, the User-Agent naming
@@ -142,7 +148,7 @@ page states it.
   a flood) wait on live data to record.
 - **S2** Clustering confidence in the contract as an addition, shown
   in lens twins. Done.
-- **S3** Ledger change guard and conflict list.
+- **S3** Ledger change guard and conflict list. Done.
 - **S4** Budgets and the opt-out list.
 
 S1 first, because the first live run over 96 feeds will meet junk
