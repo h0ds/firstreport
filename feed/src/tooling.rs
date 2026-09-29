@@ -459,3 +459,245 @@ mod tests {
         assert!(!o.contains("id = \"bbc\""));
     }
 }
+
+// ---- `feed feeds`: the failing feeds, and fixing their URLs
+
+/// A feed the poller could not read: failing now, or declared dead.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct Failing {
+    pub url: String,
+    pub outlet_id: String,
+    pub fail_count: u32,
+    pub dead: bool,
+    pub last_status: Option<u16>,
+    pub last_error: Option<String>,
+}
+
+/// Feeds whose last attempt failed, from the store's feed table. A feed
+/// that has never been fetched is not failing yet.
+pub fn failing_feeds(states: &[crate::store::writer::FeedState]) -> Vec<Failing> {
+    let mut out: Vec<Failing> = states
+        .iter()
+        .filter(|s| s.last_fetch_at.is_some() && (s.dead || s.fail_count > 0))
+        .map(|s| Failing {
+            url: s.url.clone(),
+            outlet_id: s.outlet_id.clone(),
+            fail_count: s.fail_count,
+            dead: s.dead,
+            last_status: s.last_status,
+            last_error: s.last_error.clone(),
+        })
+        .collect();
+    out.sort_by(|a, b| {
+        b.dead
+            .cmp(&a.dead)
+            .then(b.fail_count.cmp(&a.fail_count))
+            .then(a.url.cmp(&b.url))
+    });
+    out
+}
+
+/// `feeds.toml` with one entry's `url` replaced, everything else (order,
+/// comments, other keys) untouched. None when `old` is not an entry's
+/// url. Textual on purpose: the file is hand-edited and reviewed in git.
+pub fn replace_feed_url(toml_text: &str, old: &str, new: &str) -> Option<String> {
+    let needle_dq = format!("url = \"{old}\"");
+    let needle_sq = format!("url = '{old}'");
+    let mut out = String::with_capacity(toml_text.len() + 64);
+    let mut replaced = false;
+    for line in toml_text.split_inclusive('\n') {
+        let trimmed = line.trim_start();
+        let indent = &line[..line.len() - trimmed.len()];
+        let body = trimmed.trim_end_matches(['\r', '\n']);
+        let eol = &trimmed[body.len()..];
+        if !replaced && (body == needle_dq || body == needle_sq) {
+            out.push_str(&format!("{indent}url = \"{new}\"{eol}"));
+            replaced = true;
+        } else {
+            out.push_str(line);
+        }
+    }
+    replaced.then_some(out)
+}
+
+/// Print the failing feeds from the store, one per line.
+pub fn print_failing(failing: &[Failing]) {
+    if failing.is_empty() {
+        println!("no failing feeds");
+        return;
+    }
+    for f in failing {
+        println!(
+            "{}\t{}\t{}{}\t{}",
+            f.outlet_id,
+            f.url,
+            if f.dead { "dead, " } else { "" },
+            match f.last_status {
+                Some(s) => format!("http {s}, {} failures", f.fail_count),
+                None => format!("{} failures", f.fail_count),
+            },
+            f.last_error.as_deref().unwrap_or("")
+        );
+    }
+    println!(
+        "# {} failing; `feed feeds --fix` looks for replacements, `--write` applies them",
+        failing.len()
+    );
+}
+
+#[cfg(test)]
+mod feeds_tests {
+    use super::*;
+    use crate::store::writer::FeedState;
+
+    fn state(url: &str, fails: u32, dead: bool, status: Option<u16>) -> FeedState {
+        FeedState {
+            url: url.into(),
+            outlet_id: "o".into(),
+            kind: None,
+            base_interval_secs: 900,
+            interval_secs: 900,
+            etag: None,
+            last_modified: None,
+            next_fetch_at: 0,
+            fail_count: fails,
+            last_ok_at: None,
+            dead,
+            resolved_url: None,
+            last_fetch_at: Some(1),
+            last_status: status,
+            last_error: status.map(|s| format!("http {s}")),
+            last_items: 0,
+        }
+    }
+
+    #[test]
+    fn failing_feeds_are_the_failed_and_dead_ones_worst_first() {
+        let mut never = state("https://x/never", 0, false, None);
+        never.last_fetch_at = None;
+        let states = vec![
+            state("https://x/ok", 0, false, Some(200)),
+            state("https://x/gone", 3, false, Some(404)),
+            state("https://x/dead", 40, true, Some(403)),
+            never,
+        ];
+        let f = failing_feeds(&states);
+        let urls: Vec<&str> = f.iter().map(|x| x.url.as_str()).collect();
+        assert_eq!(urls, vec!["https://x/dead", "https://x/gone"]);
+        assert!(f[0].dead && f[1].last_status == Some(404));
+    }
+
+    #[test]
+    fn replace_keeps_everything_else() {
+        let toml = "# seed\n\n[[feed]]\nurl = \"https://a/old\"\noutlet = \"a\"\ninterval_secs = 600\n\n[[feed]]\nurl = \"https://b/feed\"\noutlet = \"b\"\n";
+        let out = replace_feed_url(toml, "https://a/old", "https://a/new").unwrap();
+        assert_eq!(out, "# seed\n\n[[feed]]\nurl = \"https://a/new\"\noutlet = \"a\"\ninterval_secs = 600\n\n[[feed]]\nurl = \"https://b/feed\"\noutlet = \"b\"\n");
+        assert!(replace_feed_url(toml, "https://a/missing", "x").is_none());
+        let crlf = "[[feed]]\r\nurl = \"https://a/old\"\r\noutlet = \"a\"\r\n";
+        assert_eq!(
+            replace_feed_url(crlf, "https://a/old", "https://a/new").unwrap(),
+            "[[feed]]\r\nurl = \"https://a/new\"\r\noutlet = \"a\"\r\n"
+        );
+    }
+}
+
+/// For each failing feed, ask the outlet's home page which feeds it
+/// advertises, verify the first candidate by fetching it, and propose
+/// it as the replacement. Prints old → new; `write` rewrites the
+/// entry in feeds.toml. A feed with no candidate is listed as such.
+pub async fn fix_feeds(
+    config_dir: &Path,
+    outlets: &Outlets,
+    failing: &[Failing],
+    write: bool,
+) -> Result<(), Box<dyn std::error::Error>> {
+    if failing.is_empty() {
+        println!("no failing feeds");
+        return Ok(());
+    }
+    let client = Client::new(4, 2)?;
+    let path = config_dir.join("feeds.toml");
+    let mut text = std::fs::read_to_string(&path)?;
+    let mut fixed = 0;
+    let mut unfixed = Vec::new();
+    for f in failing {
+        let Some(outlet) = outlets.outlets.iter().find(|o| o.id == f.outlet_id) else {
+            unfixed.push((f, "outlet not in outlets.toml".to_string()));
+            continue;
+        };
+        let Some(domain) = outlet.domains.first() else {
+            unfixed.push((f, "outlet has no domain".to_string()));
+            continue;
+        };
+        let home = format!("https://{domain}/");
+        let found = match discover_one(&client, &home).await {
+            Ok(v) => v,
+            Err(e) => {
+                unfixed.push((f, format!("{home}: {e}")));
+                continue;
+            }
+        };
+        let candidates: Vec<discover::Discovered> = pick_feeds(&found, 5)
+            .into_iter()
+            .filter(|d| d.url != f.url)
+            .collect();
+        let mut chosen = None;
+        for d in &candidates {
+            match client.fetch(&d.url, None, None).await {
+                Ok(r)
+                    if r.body
+                        .as_deref()
+                        .map(discover::looks_like_feed)
+                        .unwrap_or(false) =>
+                {
+                    chosen = Some(d.url.clone());
+                    break;
+                }
+                _ => continue,
+            }
+        }
+        match chosen {
+            Some(new) => {
+                println!("{}\t{}\t-> {}", f.outlet_id, f.url, new);
+                if write {
+                    match replace_feed_url(&text, &f.url, &new) {
+                        Some(t) => {
+                            text = t;
+                            fixed += 1;
+                        }
+                        None => {
+                            unfixed.push((f, "entry not found in feeds.toml (moved feed?)".into()))
+                        }
+                    }
+                } else {
+                    fixed += 1;
+                }
+            }
+            None => unfixed.push((
+                f,
+                if found.is_empty() {
+                    format!("{home} advertises no feed")
+                } else {
+                    "advertised feeds did not fetch as feeds".to_string()
+                },
+            )),
+        }
+    }
+    for (f, why) in &unfixed {
+        println!("{}\t{}\tno replacement: {why}", f.outlet_id, f.url);
+    }
+    if write {
+        std::fs::write(&path, &text)?;
+        println!(
+            "# {fixed} replaced in {}, {} left; review the diff, then restart feed",
+            path.display(),
+            unfixed.len()
+        );
+    } else {
+        println!(
+            "# {fixed} replacements found, {} without; re-run with --write to apply",
+            unfixed.len()
+        );
+    }
+    Ok(())
+}

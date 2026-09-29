@@ -140,6 +140,9 @@ async fn main() {
             .await
         }
         cli::Command::Discover { .. } => Err("discover needs a page URL or --hosts <file>".into()),
+        cli::Command::Feeds { fix, write } => {
+            feeds_command(&cfg, &args.config_dir, &loaded.outlets, fix, write).await
+        }
         cli::Command::Replay { fixtures } => {
             let scratch = replay::default_scratch();
             let out = replay::run(cfg, &fixtures, &scratch).await;
@@ -313,6 +316,25 @@ async fn run(
     drop(writer);
     let _ = writer_thread.join();
     Ok(())
+}
+
+/// `feed feeds`: the failing feeds from the store, or replacements for them.
+async fn feeds_command(
+    cfg: &config::Config,
+    config_dir: &std::path::Path,
+    outlets: &config::Outlets,
+    fix: bool,
+    write: bool,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let reader = store::Reader::open(&cfg.store.path)?;
+    let states = reader.with(store::reader::feed_states)?;
+    let failing = tooling::failing_feeds(&states);
+    if fix {
+        tooling::fix_feeds(config_dir, outlets, &failing, write).await
+    } else {
+        tooling::print_failing(&failing);
+        Ok(())
+    }
 }
 
 /// Download the model, its vocab, and the ONNX Runtime library into the

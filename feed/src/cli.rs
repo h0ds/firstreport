@@ -30,6 +30,9 @@ pub enum Command {
     },
     /// Precision/recall of the assignment step on a labelled pair set.
     Eval { pairs: PathBuf, json: bool },
+    /// The failing feeds from the store; `fix` looks for replacement
+    /// URLs by discovery, `write` applies them to feeds.toml.
+    Feeds { fix: bool, write: bool },
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -53,6 +56,7 @@ commands:
   discover --hosts <file> [--write] [--limit N] [--max-per-host N]
                                    same over a host list (one per line; aggregator-domains.txt works)
   eval --pairs <tsv> [--json]      precision/recall sweep on labelled pairs
+  feeds [--fix] [--write]          failing feeds from the store; --fix discovers replacement URLs, --write applies them
 ";
 
 pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
@@ -104,6 +108,10 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
         "eval" => Command::Eval {
             pairs: flag("--pairs")?.into(),
             json: rest.iter().any(|x| x == "--json"),
+        },
+        "feeds" => Command::Feeds {
+            fix: rest.iter().any(|x| x == "--fix" || x == "--write"),
+            write: rest.iter().any(|x| x == "--write"),
         },
         "discover" => {
             let hosts = flag("--hosts").ok().map(PathBuf::from);
@@ -175,6 +183,27 @@ mod tests {
     fn missing_required_flag_errors() {
         assert!(parse(argv("export --format ndjson")).is_err());
         assert!(parse(argv("discover --write")).is_err());
+        assert_eq!(
+            parse(argv("feeds")).unwrap().command,
+            Command::Feeds {
+                fix: false,
+                write: false
+            }
+        );
+        assert_eq!(
+            parse(argv("feeds --fix")).unwrap().command,
+            Command::Feeds {
+                fix: true,
+                write: false
+            }
+        );
+        assert_eq!(
+            parse(argv("feeds --write")).unwrap().command,
+            Command::Feeds {
+                fix: true,
+                write: true
+            }
+        );
     }
 
     #[test]
