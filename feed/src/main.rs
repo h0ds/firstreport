@@ -97,6 +97,8 @@ async fn main() {
                 events = p.events,
                 embeddings_cleared = p.embeddings_cleared,
                 snapshot_files = p.snapshot_files,
+                snapshot_budget_files = p.snapshot_budget_files,
+                snapshot_budget_bytes = p.snapshot_budget_bytes,
                 "prune complete"
             );
         }),

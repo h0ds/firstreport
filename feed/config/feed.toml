@@ -51,6 +51,7 @@ enabled = true
 dir = "data/snapshots"
 zstd_level = 3
 retention_days = 180
+max_bytes = 0                    # disk budget for snapshots, bytes; whole days go oldest first; 0 = none
 
 [syndication]
 hamming_threshold = 3

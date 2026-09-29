@@ -250,6 +250,28 @@ async fn site(root: &Path, out: &Path) -> Result<(), String> {
     Ok(())
 }
 
+/// Bytes and files under a directory, recursively; zero when absent.
+fn dir_usage(dir: &Path) -> (u64, usize) {
+    let mut bytes = 0;
+    let mut files = 0;
+    let mut stack = vec![dir.to_path_buf()];
+    while let Some(d) = stack.pop() {
+        let Ok(rd) = std::fs::read_dir(&d) else {
+            continue;
+        };
+        for e in rd.flatten() {
+            let Ok(m) = e.metadata() else { continue };
+            if m.is_dir() {
+                stack.push(e.path());
+            } else if m.is_file() {
+                bytes += m.len();
+                files += 1;
+            }
+        }
+    }
+    (bytes, files)
+}
+
 fn doctor(root: &Path) -> Result<(), String> {
     let ts = tools(root)?;
     let mut missing = 0;
@@ -313,6 +335,15 @@ fn doctor(root: &Path) -> Result<(), String> {
         "feed/data (store and snapshots)",
         "created on the first feed run",
     );
+    // Disk (docs/steward.md §5): what the snapshot archive takes now, so
+    // a budget in feed.toml can be set before the disk fills.
+    let (bytes, files) = dir_usage(&feed.join("data/snapshots"));
+    if files > 0 {
+        println!(
+            "ok   feed/data/snapshots holds {files} files, {:.1} MB (snapshots.max_bytes in feed.toml caps it)",
+            bytes as f64 / 1e6
+        );
+    }
     let ledger = root.join("ledger");
     line(
         ledger.join("data/sources.toml").is_file(),

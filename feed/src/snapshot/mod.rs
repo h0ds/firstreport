@@ -73,6 +73,79 @@ pub fn prune(dir: &Path, now: i64, retention_days: u32) -> std::io::Result<usize
     Ok(removed)
 }
 
+/// Bytes and files under the snapshot directory.
+pub fn usage(dir: &Path) -> std::io::Result<(u64, usize)> {
+    let mut bytes = 0;
+    let mut files = 0;
+    for d in day_dirs(dir)? {
+        for f in std::fs::read_dir(&d)?.flatten() {
+            if let Ok(m) = f.metadata() {
+                if m.is_file() {
+                    bytes += m.len();
+                    files += 1;
+                }
+            }
+        }
+    }
+    Ok((bytes, files))
+}
+
+/// Day directories, oldest first.
+fn day_dirs(dir: &Path) -> std::io::Result<Vec<PathBuf>> {
+    let mut out = Vec::new();
+    let Ok(years) = std::fs::read_dir(dir) else {
+        return Ok(out);
+    };
+    for y in years.flatten() {
+        for m in std::fs::read_dir(y.path())?.flatten() {
+            for d in std::fs::read_dir(m.path())?.flatten() {
+                if d.path().is_dir() {
+                    out.push(d.path());
+                }
+            }
+        }
+    }
+    out.sort();
+    Ok(out)
+}
+
+/// The disk budget (docs/steward.md §5): remove whole days, oldest
+/// first, until the directory is at or under `max_bytes`. 0 means no
+/// budget. The newest day is never removed. Returns (files, bytes) freed.
+pub fn enforce_budget(dir: &Path, max_bytes: u64) -> std::io::Result<(usize, u64)> {
+    if max_bytes == 0 {
+        return Ok((0, 0));
+    }
+    let (mut total, _) = usage(dir)?;
+    let days = day_dirs(dir)?;
+    let mut removed = (0, 0);
+    for d in days.iter().take(days.len().saturating_sub(1)) {
+        if total <= max_bytes {
+            break;
+        }
+        let (bytes, files) = usage_of_day(d)?;
+        std::fs::remove_dir_all(d)?;
+        total = total.saturating_sub(bytes);
+        removed.0 += files;
+        removed.1 += bytes;
+    }
+    Ok(removed)
+}
+
+fn usage_of_day(day: &Path) -> std::io::Result<(u64, usize)> {
+    let mut bytes = 0;
+    let mut files = 0;
+    for f in std::fs::read_dir(day)?.flatten() {
+        if let Ok(m) = f.metadata() {
+            if m.is_file() {
+                bytes += m.len();
+                files += 1;
+            }
+        }
+    }
+    Ok((bytes, files))
+}
+
 /// Howard Hinnant's civil-from-days, so we don't need a date crate.
 pub fn civil_from_unix(ts: i64) -> (i64, u32, u32) {
     let z = ts.div_euclid(86_400) + 719_468;
@@ -124,6 +197,31 @@ mod tests {
         assert_eq!(prune(&dir, 1_704_067_200 + 10 * 86_400, 30).unwrap(), 0);
         assert_eq!(prune(&dir, 1_704_067_200 + 40 * 86_400, 30).unwrap(), 1);
         assert!(read(&dir, &rel).is_err());
+        let _ = std::fs::remove_dir_all(&dir);
+    }
+
+    #[test]
+    fn disk_budget_removes_oldest_days_and_keeps_the_newest() {
+        let dir = std::env::temp_dir().join(format!("kg-snapbudget-{}", std::process::id()));
+        let _ = std::fs::remove_dir_all(&dir);
+        let day = 86_400;
+        let body = vec![b'x'; 4096]; // compresses small; sizes are what matter
+        for k in 0..4 {
+            let t = 1_704_067_200 + k * day;
+            write(&dir, snapshot_id("https://x/f", t), t, &body, 3).unwrap();
+        }
+        let (total, files) = usage(&dir).unwrap();
+        assert_eq!(files, 4);
+        let per = total / 4;
+        assert_eq!(enforce_budget(&dir, 0).unwrap(), (0, 0), "0 is no budget");
+        // Room for two days: the two oldest go.
+        let (f, b) = enforce_budget(&dir, per * 2 + 1).unwrap();
+        assert_eq!((f, b), (2, per * 2));
+        assert_eq!(usage(&dir).unwrap().1, 2);
+        // A budget no day fits still keeps the newest day.
+        assert_eq!(enforce_budget(&dir, 1).unwrap().0, 1);
+        assert_eq!(usage(&dir).unwrap().1, 1);
+        assert!(dir.join("2024/01/04").is_dir());
         let _ = std::fs::remove_dir_all(&dir);
     }
 }

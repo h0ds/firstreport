@@ -43,6 +43,9 @@ pub struct Pruned {
     pub events: usize,
     pub embeddings_cleared: usize,
     pub snapshot_files: usize,
+    /// Files removed by the disk budget, on top of retention.
+    pub snapshot_budget_files: usize,
+    pub snapshot_budget_bytes: u64,
 }
 
 /// Delete rows older than `cutoff`. Active clusters are never deleted
@@ -95,6 +98,9 @@ pub fn run(
     if cfg.snapshots.enabled && Path::new(&cfg.snapshots.dir).exists() {
         p.snapshot_files =
             crate::snapshot::prune(&cfg.snapshots.dir, now, cfg.snapshots.retention_days)?;
+        let (f, b) = crate::snapshot::enforce_budget(&cfg.snapshots.dir, cfg.snapshots.max_bytes)?;
+        p.snapshot_budget_files = f;
+        p.snapshot_budget_bytes = b;
     }
     // Reclaim the space; cheap on a small db, worth it after a big prune.
     conn.execute_batch("PRAGMA wal_checkpoint(TRUNCATE); VACUUM;")?;

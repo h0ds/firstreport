@@ -7,7 +7,7 @@ use std::sync::Arc;
 use std::time::Duration;
 
 use tokio::sync::watch;
-use tracing::{error, info};
+use tracing::{error, info, warn};
 
 use crate::config::Config;
 use crate::export::{self, Format};
@@ -50,6 +50,16 @@ pub fn run_once(
         let removed = crate::snapshot::prune(&cfg.snapshots.dir, ts, cfg.snapshots.retention_days)?;
         if removed > 0 {
             info!(removed, "snapshot retention applied");
+        }
+        let (files, bytes) =
+            crate::snapshot::enforce_budget(&cfg.snapshots.dir, cfg.snapshots.max_bytes)?;
+        if files > 0 {
+            warn!(
+                files,
+                bytes,
+                max_bytes = cfg.snapshots.max_bytes,
+                "snapshot disk budget reached; oldest days removed before their retention"
+            );
         }
     }
     Ok(summary)

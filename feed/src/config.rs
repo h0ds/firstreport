@@ -286,6 +286,10 @@ pub struct Snapshots {
     pub dir: PathBuf,
     pub zstd_level: i32,
     pub retention_days: u32,
+    /// Disk budget (docs/steward.md §5): whole days are dropped, oldest
+    /// first, to stay under it; 0 means none. Applied by prune and the
+    /// nightly job, after retention.
+    pub max_bytes: u64,
 }
 
 impl Default for Snapshots {
@@ -295,6 +299,7 @@ impl Default for Snapshots {
             dir: "data/snapshots".into(),
             zstd_level: 3,
             retention_days: 180,
+            max_bytes: 0,
         }
     }
 }
