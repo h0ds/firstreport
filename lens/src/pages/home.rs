@@ -232,7 +232,8 @@ mod tests {
         assert_eq!(t.json["spreading_now"][0]["id"], 1060);
         assert_eq!(t.json["stories"][0]["id"], 1059);
         assert!(
-            t.html.contains("1 outlet in 6 h · <span class=\"kg-origin-name\">"),
+            t.html
+                .contains("1 outlet in 6 h · <span class=\"kg-origin-name\">"),
             "equal counts shown once"
         );
         assert!(t.md.contains("## Spreading now"));

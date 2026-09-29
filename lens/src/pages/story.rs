@@ -123,7 +123,10 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         );
         let mut times = Vec::new();
         if first.published_at > 0 {
-            times.push(format!("published {}", time_el(first.published_at, input.export_time)));
+            times.push(format!(
+                "published {}",
+                time_el(first.published_at, input.export_time)
+            ));
         }
         if show_pickup || first.published_at == 0 {
             times.push(format!("picked up {}", time_el(at, input.export_time)));

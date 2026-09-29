@@ -57,12 +57,18 @@ pub fn iso(ts: i64) -> String {
 
 /// `22 Sep`, or `22 Sep 2025` when the year differs from `now`'s.
 fn day_month(ts: i64, now: i64) -> String {
-    const MONTHS: [&str; 12] = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const MONTHS: [&str; 12] = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    ];
     let (d, today) = (date(ts), date(now));
     let m: usize = d[5..7].parse().unwrap_or(1);
     let day: u32 = d[8..10].parse().unwrap_or(1);
     let md = format!("{day} {}", MONTHS[m.clamp(1, 12) - 1]);
-    if d[..4] == today[..4] { md } else { format!("{md} {}", &d[..4]) }
+    if d[..4] == today[..4] {
+        md
+    } else {
+        format!("{md} {}", &d[..4])
+    }
 }
 
 /// A time as a person reads it on the page (design §8): the clock time on
@@ -810,7 +816,10 @@ mod tests {
     fn unattributed_outlet_is_named_not_linked() {
         let i = fixture_input();
         let h = outlet_link(&i, "unknown:partner.example");
-        assert_eq!(h, "<span data-outlet=\"unknown:partner.example\">partner.example</span>");
+        assert_eq!(
+            h,
+            "<span data-outlet=\"unknown:partner.example\">partner.example</span>"
+        );
         assert!(outlet_link(&i, "wire").starts_with("<a href=\"/outlet/wire/\""));
     }
 
