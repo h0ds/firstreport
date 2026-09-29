@@ -8,20 +8,8 @@ field = "country"
 value = "Qatar"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
-
-[claim.data]
-qid = "Q846"
-
-[[claim]]
-outlet_id = "aljazeera"
-field = "country"
-value = "Qatar"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q4727585"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q4727585 (aljazeera.com)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
 [claim.data]
 qid = "Q846"
@@ -52,17 +40,8 @@ field = "founded"
 value = "1996-11-01"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
-
-[[claim]]
-outlet_id = "aljazeera"
-field = "founded"
-value = "2011-01-01"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q4727585"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q4727585 (aljazeera.com)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
 [[claim]]
 outlet_id = "aljazeera"
@@ -70,8 +49,8 @@ field = "legal_form"
 value = "broadcaster"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
 [claim.data]
 qid = "Q15265344"
@@ -82,8 +61,8 @@ field = "legal_form"
 value = "news website"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
 [claim.data]
 qid = "Q17232649"
@@ -91,23 +70,11 @@ qid = "Q17232649"
 [[claim]]
 outlet_id = "aljazeera"
 field = "legal_form"
-value = "online newspaper"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q4727585"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q4727585 (aljazeera.com)"
-
-[claim.data]
-qid = "Q1153191"
-
-[[claim]]
-outlet_id = "aljazeera"
-field = "legal_form"
 value = "television station"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
 [claim.data]
 qid = "Q1616075"
@@ -130,17 +97,8 @@ field = "name"
 value = "Al Jazeera"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
-
-[[claim]]
-outlet_id = "aljazeera"
-field = "name"
-value = "aljazeera.com"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q4727585"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q4727585 (aljazeera.com)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
 [[claim]]
 outlet_id = "aljazeera"
@@ -165,35 +123,11 @@ field = "owner"
 value = "Al Jazeera Media Network"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
 [claim.data]
 qid = "Q4704134"
-
-[[claim]]
-outlet_id = "aljazeera"
-field = "owner"
-value = "Al Jazeera Media Network"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q4727585"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q4727585 (aljazeera.com)"
-
-[claim.data]
-qid = "Q4704134"
-
-[[claim]]
-outlet_id = "aljazeera"
-field = "parent"
-value = "Al Jazeera"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q4727585"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q4727585 (aljazeera.com)"
-
-[claim.data]
-qid = "Q13477"
 
 [[claim]]
 outlet_id = "aljazeera"
@@ -201,8 +135,8 @@ field = "parent"
 value = "Al Jazeera Media Network"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
 [claim.data]
 qid = "Q4704134"
@@ -326,20 +260,11 @@ window_start = "2026-07-01"
 [[claim]]
 outlet_id = "aljazeera"
 field = "website"
-value = "https://www.aljazeera.com"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q4727585"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q4727585 (aljazeera.com)"
-
-[[claim]]
-outlet_id = "aljazeera"
-field = "website"
 value = "https://www.aljazeera.com/"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
 [[claim]]
 outlet_id = "aljazeera"
@@ -347,17 +272,11 @@ field = "wikidata_id"
 value = "Q13477"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
-[[claim]]
-outlet_id = "aljazeera"
-field = "wikidata_id"
-value = "Q4727585"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q4727585"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q4727585 (aljazeera.com)"
+[claim.data]
+candidates = ["Q4727585"]
 
 [[claim]]
 outlet_id = "aljazeera"
@@ -365,17 +284,8 @@ field = "wikipedia"
 value = "https://en.wikipedia.org/wiki/Al_Jazeera_Arabic"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q13477"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q13477 (Al Jazeera)"
-
-[[claim]]
-outlet_id = "aljazeera"
-field = "wikipedia"
-value = "https://en.wikipedia.org/wiki/Aljazeera.com"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q4727585"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q4727585 (aljazeera.com)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)"
 
 [[claim]]
 outlet_id = "aljazeera"

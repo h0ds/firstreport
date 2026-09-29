@@ -7,21 +7,9 @@ outlet_id = "rt"
 field = "country"
 value = "Russia"
 source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q111033569"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q111033569 (RT International)"
-
-[claim.data]
-qid = "Q159"
-
-[[claim]]
-outlet_id = "rt"
-field = "country"
-value = "Russia"
-source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [claim.data]
 qid = "Q159"
@@ -45,20 +33,11 @@ status = ["client transfer prohibited"]
 [[claim]]
 outlet_id = "rt"
 field = "founded"
-value = "2005-01-01"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q111033569"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q111033569 (RT International)"
-
-[[claim]]
-outlet_id = "rt"
-field = "founded"
 value = "2005-09-15"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [[claim]]
 outlet_id = "rt"
@@ -66,8 +45,8 @@ field = "legal_form"
 value = "foreign agent"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [claim.data]
 qid = "Q4201315"
@@ -75,35 +54,11 @@ qid = "Q4201315"
 [[claim]]
 outlet_id = "rt"
 field = "legal_form"
-value = "organization"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q111033569"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q111033569 (RT International)"
-
-[claim.data]
-qid = "Q43229"
-
-[[claim]]
-outlet_id = "rt"
-field = "legal_form"
-value = "television channel"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q111033569"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q111033569 (RT International)"
-
-[claim.data]
-qid = "Q2001305"
-
-[[claim]]
-outlet_id = "rt"
-field = "legal_form"
 value = "television network"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [claim.data]
 qid = "Q1254874"
@@ -114,8 +69,8 @@ field = "legal_form"
 value = "television station"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [claim.data]
 qid = "Q1616075"
@@ -126,8 +81,8 @@ field = "legal_form"
 value = "website"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [claim.data]
 qid = "Q35127"
@@ -150,17 +105,8 @@ field = "name"
 value = "RT"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
-
-[[claim]]
-outlet_id = "rt"
-field = "name"
-value = "RT International"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q111033569"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q111033569 (RT International)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [[claim]]
 outlet_id = "rt"
@@ -185,8 +131,8 @@ field = "owner"
 value = "RIA Novosti"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [claim.data]
 qid = "Q821172"
@@ -196,21 +142,9 @@ outlet_id = "rt"
 field = "owner"
 value = "Rossiya Segodnya"
 source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q111033569"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q111033569 (RT International)"
-
-[claim.data]
-qid = "Q15294742"
-
-[[claim]]
-outlet_id = "rt"
-field = "owner"
-value = "Rossiya Segodnya"
-source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [claim.data]
 qid = "Q15294742"
@@ -221,23 +155,11 @@ field = "parent"
 value = "ANO TV-Novosti"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [claim.data]
 qid = "Q111288811"
-
-[[claim]]
-outlet_id = "rt"
-field = "parent"
-value = "RT"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q111033569"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q111033569 (RT International)"
-
-[claim.data]
-qid = "Q22868"
 
 [[claim]]
 outlet_id = "rt"
@@ -366,27 +288,9 @@ outlet_id = "rt"
 field = "website"
 value = "https://www.rt.com"
 source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q111033569"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q111033569 (RT International)"
-
-[[claim]]
-outlet_id = "rt"
-field = "website"
-value = "https://www.rt.com"
-source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
-
-[[claim]]
-outlet_id = "rt"
-field = "wikidata_id"
-value = "Q111033569"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q111033569"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q111033569 (RT International)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [[claim]]
 outlet_id = "rt"
@@ -394,8 +298,11 @@ field = "wikidata_id"
 value = "Q22868"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
+
+[claim.data]
+candidates = ["Q111033569"]
 
 [[claim]]
 outlet_id = "rt"
@@ -403,8 +310,8 @@ field = "wikipedia"
 value = "https://en.wikipedia.org/wiki/RT_(TV_network)"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q22868"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q22868 (RT)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)"
 
 [[claim]]
 outlet_id = "rt"

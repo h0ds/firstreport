@@ -24,7 +24,7 @@ field = "legal_form"
 value = "news website"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q138330477"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q17232649"
@@ -47,7 +47,7 @@ field = "name"
 value = "APNews.com"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q138330477"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "ap"
@@ -168,7 +168,7 @@ field = "website"
 value = "https://apnews.com"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q138330477"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "ap"
@@ -176,7 +176,7 @@ field = "wikidata_id"
 value = "Q138330477"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q138330477"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "ap"
@@ -184,7 +184,7 @@ field = "wikipedia"
 value = "https://en.wikipedia.org/wiki/APNews.com"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q138330477"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "ap"

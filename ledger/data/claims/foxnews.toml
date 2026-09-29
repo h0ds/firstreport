@@ -8,7 +8,7 @@ field = "country"
 value = "United States"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q30"
@@ -40,7 +40,7 @@ field = "founded"
 value = "1996-10-07"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "foxnews"
@@ -48,7 +48,7 @@ field = "legal_form"
 value = "cable news in the United States"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q7892363"
@@ -59,7 +59,7 @@ field = "legal_form"
 value = "specialty channel"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q561068"
@@ -82,7 +82,7 @@ field = "name"
 value = "Fox News"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "foxnews"
@@ -107,7 +107,7 @@ field = "owner"
 value = "21st Century Fox"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q5476713"
@@ -118,7 +118,7 @@ field = "owner"
 value = "Fox Corporation"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q60238941"
@@ -129,7 +129,7 @@ field = "owner"
 value = "News Corporation"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q185278"
@@ -140,7 +140,7 @@ field = "parent"
 value = "Fox Broadcasting Company"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q166419"
@@ -316,7 +316,7 @@ field = "website"
 value = "https://foxnews.com"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "foxnews"
@@ -324,7 +324,7 @@ field = "wikidata_id"
 value = "Q186068"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "foxnews"
@@ -332,7 +332,7 @@ field = "wikipedia"
 value = "https://en.wikipedia.org/wiki/Fox_News"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q186068"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "foxnews"

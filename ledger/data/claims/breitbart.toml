@@ -8,7 +8,7 @@ field = "country"
 value = "United States"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4960434"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q30"
@@ -40,7 +40,7 @@ field = "founded"
 value = "2007-01-01"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4960434"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "breitbart"
@@ -48,7 +48,7 @@ field = "legal_form"
 value = "news website"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4960434"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q17232649"
@@ -59,7 +59,7 @@ field = "legal_form"
 value = "website"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4960434"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q35127"
@@ -82,7 +82,7 @@ field = "name"
 value = "Breitbart News"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4960434"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "breitbart"
@@ -107,7 +107,7 @@ field = "owner"
 value = "Andrew Breitbart"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4960434"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q503917"
@@ -232,7 +232,7 @@ field = "website"
 value = "https://breitbart.com"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4960434"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "breitbart"
@@ -240,7 +240,7 @@ field = "wikidata_id"
 value = "Q4960434"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4960434"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "breitbart"
@@ -248,7 +248,7 @@ field = "wikipedia"
 value = "https://en.wikipedia.org/wiki/Breitbart_News"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q4960434"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "breitbart"

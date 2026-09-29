@@ -8,7 +8,7 @@ field = "country"
 value = "United States"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q30"
@@ -39,7 +39,7 @@ field = "founded"
 value = "1970-02-26"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "npr"
@@ -47,7 +47,7 @@ field = "legal_form"
 value = "nonprofit corporation"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q17084016"
@@ -58,7 +58,7 @@ field = "legal_form"
 value = "nonprofit organization"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q163740"
@@ -69,7 +69,7 @@ field = "legal_form"
 value = "online newspaper without paywall"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q141255352"
@@ -80,7 +80,7 @@ field = "legal_form"
 value = "public broadcaster"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q1126006"
@@ -91,7 +91,7 @@ field = "legal_form"
 value = "radio network"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q1061197"
@@ -114,7 +114,7 @@ field = "name"
 value = "NPR"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "npr"
@@ -257,7 +257,7 @@ field = "website"
 value = "https://www.npr.org/"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "npr"
@@ -265,7 +265,7 @@ field = "wikidata_id"
 value = "Q671510"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "npr"
@@ -273,7 +273,7 @@ field = "wikipedia"
 value = "https://en.wikipedia.org/wiki/NPR"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q671510"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "npr"

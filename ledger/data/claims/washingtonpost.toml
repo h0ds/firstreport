@@ -8,7 +8,7 @@ field = "country"
 value = "United States"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q30"
@@ -40,7 +40,7 @@ field = "founded"
 value = "1877-01-01"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "washingtonpost"
@@ -48,7 +48,7 @@ field = "legal_form"
 value = "daily newspaper"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q1110794"
@@ -59,7 +59,7 @@ field = "legal_form"
 value = "newspaper"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q11032"
@@ -70,7 +70,7 @@ field = "legal_form"
 value = "website"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q35127"
@@ -81,7 +81,7 @@ field = "name"
 value = "The Washington Post"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "washingtonpost"
@@ -89,7 +89,7 @@ field = "owner"
 value = "Jeff Bezos"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [claim.data]
 qid = "Q312556"
@@ -128,7 +128,7 @@ field = "website"
 value = "http://www.washingtonpost.com/"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "washingtonpost"
@@ -136,7 +136,7 @@ field = "website"
 value = "https://washingtonpost.com"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "washingtonpost"
@@ -144,7 +144,7 @@ field = "wikidata_id"
 value = "Q166032"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446
 
 [[claim]]
 outlet_id = "washingtonpost"
@@ -152,4 +152,4 @@ field = "wikipedia"
 value = "https://en.wikipedia.org/wiki/The_Washington_Post"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q166032"
-retrieved_at = 1790650122
+retrieved_at = 1790661446

@@ -7,21 +7,9 @@ outlet_id = "nytimes"
 field = "country"
 value = "United States"
 source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q135925219"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q135925219 (nytimes.com)"
-
-[claim.data]
-qid = "Q30"
-
-[[claim]]
-outlet_id = "nytimes"
-field = "country"
-value = "United States"
-source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9684"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9684 (The New York Times)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)"
 
 [claim.data]
 qid = "Q30"
@@ -55,8 +43,8 @@ field = "founded"
 value = "1851-09-18"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9684"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9684 (The New York Times)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)"
 
 [[claim]]
 outlet_id = "nytimes"
@@ -64,47 +52,11 @@ field = "legal_form"
 value = "daily newspaper"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9684"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9684 (The New York Times)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)"
 
 [claim.data]
 qid = "Q1110794"
-
-[[claim]]
-outlet_id = "nytimes"
-field = "legal_form"
-value = "online database"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q135925219"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q135925219 (nytimes.com)"
-
-[claim.data]
-qid = "Q7094076"
-
-[[claim]]
-outlet_id = "nytimes"
-field = "legal_form"
-value = "online newspaper"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q135925219"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q135925219 (nytimes.com)"
-
-[claim.data]
-qid = "Q1153191"
-
-[[claim]]
-outlet_id = "nytimes"
-field = "legal_form"
-value = "online service"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q135925219"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q135925219 (nytimes.com)"
-
-[claim.data]
-qid = "Q19967801"
 
 [[claim]]
 outlet_id = "nytimes"
@@ -112,17 +64,8 @@ field = "name"
 value = "The New York Times"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9684"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9684 (The New York Times)"
-
-[[claim]]
-outlet_id = "nytimes"
-field = "name"
-value = "nytimes.com"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q135925219"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q135925219 (nytimes.com)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)"
 
 [[claim]]
 outlet_id = "nytimes"
@@ -146,21 +89,9 @@ outlet_id = "nytimes"
 field = "owner"
 value = "The New York Times Company"
 source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q135925219"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q135925219 (nytimes.com)"
-
-[claim.data]
-qid = "Q2529982"
-
-[[claim]]
-outlet_id = "nytimes"
-field = "owner"
-value = "The New York Times Company"
-source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9684"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9684 (The New York Times)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)"
 
 [claim.data]
 qid = "Q2529982"
@@ -265,27 +196,9 @@ outlet_id = "nytimes"
 field = "website"
 value = "https://nytimes.com"
 source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q135925219"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q135925219 (nytimes.com)"
-
-[[claim]]
-outlet_id = "nytimes"
-field = "website"
-value = "https://nytimes.com"
-source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9684"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9684 (The New York Times)"
-
-[[claim]]
-outlet_id = "nytimes"
-field = "wikidata_id"
-value = "Q135925219"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q135925219"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q135925219 (nytimes.com)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)"
 
 [[claim]]
 outlet_id = "nytimes"
@@ -293,8 +206,11 @@ field = "wikidata_id"
 value = "Q9684"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9684"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9684 (The New York Times)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)"
+
+[claim.data]
+candidates = ["Q135925219"]
 
 [[claim]]
 outlet_id = "nytimes"
@@ -302,8 +218,8 @@ field = "wikipedia"
 value = "https://en.wikipedia.org/wiki/The_New_York_Times"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9684"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9684 (The New York Times)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)"
 
 [[claim]]
 outlet_id = "nytimes"

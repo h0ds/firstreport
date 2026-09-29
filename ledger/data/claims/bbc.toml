@@ -7,21 +7,9 @@ outlet_id = "bbc"
 field = "country"
 value = "United Kingdom"
 source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q747860"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q747860 (BBC Online)"
-
-[claim.data]
-qid = "Q145"
-
-[[claim]]
-outlet_id = "bbc"
-field = "country"
-value = "United Kingdom"
-source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9531"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9531 (British Broadcasting Corporation)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)"
 
 [claim.data]
 qid = "Q145"
@@ -73,17 +61,8 @@ field = "founded"
 value = "1927-01-01"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9531"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9531 (British Broadcasting Corporation)"
-
-[[claim]]
-outlet_id = "bbc"
-field = "founded"
-value = "1997-01-01"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q747860"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q747860 (BBC Online)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)"
 
 [[claim]]
 outlet_id = "bbc"
@@ -91,8 +70,8 @@ field = "legal_form"
 value = "online newspaper without paywall"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9531"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9531 (British Broadcasting Corporation)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)"
 
 [claim.data]
 qid = "Q141255352"
@@ -103,23 +82,11 @@ field = "legal_form"
 value = "public broadcaster"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9531"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9531 (British Broadcasting Corporation)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)"
 
 [claim.data]
 qid = "Q1126006"
-
-[[claim]]
-outlet_id = "bbc"
-field = "legal_form"
-value = "web portal"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q747860"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q747860 (BBC Online)"
-
-[claim.data]
-qid = "Q186165"
 
 [[claim]]
 outlet_id = "bbc"
@@ -136,20 +103,11 @@ domain = "bbc.co.uk"
 [[claim]]
 outlet_id = "bbc"
 field = "name"
-value = "BBC Online"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q747860"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q747860 (BBC Online)"
-
-[[claim]]
-outlet_id = "bbc"
-field = "name"
 value = "British Broadcasting Corporation"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9531"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9531 (British Broadcasting Corporation)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)"
 
 [[claim]]
 outlet_id = "bbc"
@@ -170,24 +128,12 @@ window_start = "2026-07-01"
 
 [[claim]]
 outlet_id = "bbc"
-field = "owner"
-value = "British Broadcasting Corporation"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q747860"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q747860 (BBC Online)"
-
-[claim.data]
-qid = "Q9531"
-
-[[claim]]
-outlet_id = "bbc"
 field = "parent"
 value = "Department for Digital, Culture, Media and Sport"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9531"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9531 (British Broadcasting Corporation)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)"
 
 [claim.data]
 qid = "Q910019"
@@ -325,8 +271,8 @@ field = "website"
 value = "https://bbc.co.uk"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9531"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9531 (British Broadcasting Corporation)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)"
 
 [[claim]]
 outlet_id = "bbc"
@@ -334,35 +280,8 @@ field = "website"
 value = "https://bbc.com"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9531"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9531 (British Broadcasting Corporation)"
-
-[[claim]]
-outlet_id = "bbc"
-field = "website"
-value = "https://www.bbc.co.uk/"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q747860"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q747860 (BBC Online)"
-
-[[claim]]
-outlet_id = "bbc"
-field = "website"
-value = "https://www.bbc.com/"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q747860"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q747860 (BBC Online)"
-
-[[claim]]
-outlet_id = "bbc"
-field = "wikidata_id"
-value = "Q747860"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q747860"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q747860 (BBC Online)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)"
 
 [[claim]]
 outlet_id = "bbc"
@@ -370,8 +289,11 @@ field = "wikidata_id"
 value = "Q9531"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9531"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9531 (British Broadcasting Corporation)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)"
+
+[claim.data]
+candidates = ["Q747860"]
 
 [[claim]]
 outlet_id = "bbc"
@@ -379,17 +301,8 @@ field = "wikipedia"
 value = "https://en.wikipedia.org/wiki/BBC"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q9531"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q9531 (British Broadcasting Corporation)"
-
-[[claim]]
-outlet_id = "bbc"
-field = "wikipedia"
-value = "https://en.wikipedia.org/wiki/BBC_Online"
-source_id = "wikidata"
-ref_url = "https://www.wikidata.org/wiki/Q747860"
-retrieved_at = 1790650122
-note = "one of 2 items matching the domain; this is Q747860 (BBC Online)"
+retrieved_at = 1790661446
+note = "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)"
 
 [[claim]]
 outlet_id = "bbc"
