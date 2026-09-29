@@ -17,6 +17,14 @@
   --kg-text-secondary: #334155;
   --kg-text:           #0F172A;
 
+  /* lean scale (§2, §5): teal (left) to amber (right) through grey.
+     Not red and blue, whose left/right meaning flips between countries. */
+  --kg-lean-1: #0F766E;
+  --kg-lean-2: #2DA39A;
+  --kg-lean-3: #94A3B8;
+  --kg-lean-4: #E0A33A;
+  --kg-lean-5: #B45309;
+
   /* semantic: system status only, never content */
   --kg-ok:   #059669;
   --kg-warn: #D97706;
@@ -329,7 +337,9 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 .kg-legend { margin: 0 0 var(--kg-s2); }
 .kg-legend .key { display: inline-block; vertical-align: middle; margin-right: var(--kg-s1); color: var(--kg-text-secondary); font-weight: 500; }
 .kg-legend .key.spark { width: 24px; height: 8px; border-bottom: 1.5px solid var(--kg-blue); border-left: 1px solid var(--kg-line); vertical-align: baseline; }
-.kg-legend .key.lean { letter-spacing: 0.1em; }
+.kg-legend .key.lean { display: inline-flex; gap: var(--kg-s1); }
+.kg-legend .key.lean i { width: 8px; height: 8px; border-radius: 50%; }
+.kg-legend .key.lean .k1 { background: var(--kg-lean-1); } .kg-legend .key.lean .k3 { background: var(--kg-lean-3); } .kg-legend .key.lean .k5 { background: var(--kg-lean-5); }
 
 /* lean line under a card, and the audience strip (§5): greys only */
 .kg-lean { display: flex; flex-wrap: wrap; gap: var(--kg-s2) var(--kg-s5); align-items: center; margin-top: var(--kg-s2); }
@@ -337,9 +347,14 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 .kg-lean .src, .kg-audience .src { color: var(--kg-text-muted); }
 .kg-audience { display: inline-flex; align-items: center; gap: var(--kg-s1); }
 .kg-audience svg { display: block; overflow: visible; }
-.kg-audience .axis { stroke: var(--kg-line-strong); stroke-width: 1; }
+.kg-audience .axis { stroke: transparent; }
+.kg-audience .t1 { stroke: var(--kg-lean-1); } .kg-audience .t2 { stroke: var(--kg-lean-2); } .kg-audience .t3 { stroke: var(--kg-lean-3); }
+.kg-audience .t4 { stroke: var(--kg-lean-4); } .kg-audience .t5 { stroke: var(--kg-lean-5); }
+.kg-audience [class^="t"] { stroke-width: 2; stroke-opacity: 0.35; }
 .kg-audience .zero { stroke: var(--kg-text-muted); stroke-width: 1; }
-.kg-audience circle { fill: var(--kg-text-secondary); fill-opacity: 0.55; stroke: var(--kg-bg); stroke-width: 1; }
+.kg-audience circle { fill: var(--kg-text-secondary); fill-opacity: 0.85; stroke: var(--kg-bg); stroke-width: 1; }
+.kg-audience circle.b1 { fill: var(--kg-lean-1); } .kg-audience circle.b2 { fill: var(--kg-lean-2); } .kg-audience circle.b3 { fill: var(--kg-lean-3); }
+.kg-audience circle.b4 { fill: var(--kg-lean-4); } .kg-audience circle.b5 { fill: var(--kg-lean-5); }
 .kg-audience circle.unknown { fill: var(--kg-bg); fill-opacity: 1; stroke: var(--kg-text-muted); stroke-width: 1; stroke-dasharray: 2 1.5; }
 .kg-audience .unknown-group { margin-left: var(--kg-s2); }
 .kg-audience.none .lbl { margin-left: 0; color: var(--kg-text-muted); }

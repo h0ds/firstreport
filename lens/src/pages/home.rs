@@ -140,7 +140,7 @@ fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usi
     );
     let start = (page.max(1) - 1) * PAGE_SIZE;
     // The card's pictures, explained once rather than on every card.
-    let mut b = String::from("<p class=\"kg-muted kg-legend\"><span class=\"key spark\"></span>outlets carrying the story over its first day <span class=\"sep\">·</span> <span class=\"key lean\">D • R</span>where each outlet's audience sits, from links shared by Democrats to Republicans (<a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a>); hollow dots are outlets it does not score</p>");
+    let mut b = String::from("<p class=\"kg-muted kg-legend\"><span class=\"key spark\"></span>outlets carrying the story over its first day <span class=\"sep\">·</span> <span class=\"key lean\"><i class=\"k1\"></i><i class=\"k3\"></i><i class=\"k5\"></i></span>where each outlet's audience leans, left to right, from US sharing data (<a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a>); hollow dots are outlets it does not score</p>");
     for (k, (c, f)) in recent
         .iter()
         .chain(single.iter())
@@ -159,6 +159,40 @@ fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usi
         b.push_str(&cluster_card(input, c, &f.spark, scale, false, false, Some(f)));
     }
     b
+}
+
+/// `/outlets/`: every outlet in the pool with its domains and how much
+/// ledger knows about it. Its own page, so the front page is stories.
+pub fn outlets_page(input: &Input) -> Twins {
+    let now = input.export_time;
+    let mut b = format!(
+        "<h1>Outlets</h1><p class=\"kg-muted\">{} in the pool. Each outlet's page has what Kagami ledger records about it, with sources.</p><ul class=\"stories\">",
+        n(input.outlets.len(), "outlet")
+    );
+    let mut md = format!("# Outlets\n\n{} in the pool.\n\n", n(input.outlets.len(), "outlet"));
+    for o in input.outlets.values() {
+        let claims = input.claims.get(&o.id).map(|v| v.len()).unwrap_or(0);
+        let _ = write!(
+            b,
+            "<li>{}<span class=\"kg-muted\">{}</span><span class=\"n kg-muted\">{}</span></li>",
+            crate::render::outlet_badge(input, &o.id),
+            esc(&o.domains.join(", ")),
+            if claims == 0 { "not assessed yet".to_string() } else { n(claims, "fact") }
+        );
+        let _ = writeln!(md, "- [{}](/outlet/{}/) · {}", input.outlet_name(&o.id), o.id, o.domains.join(", "));
+    }
+    b.push_str("</ul>");
+    let html_page = html(&Page {
+        title: "Outlets",
+        description: "Every news outlet in Kagami's pool, with its domains. No outlet is rated.",
+        path: "/outlets/",
+        wide: false,
+        head: "",
+        body: &b,
+        status: &format!("outlets · built from an export at {}", datetime(now)),
+    });
+    let json = json!({"export_time": now, "outlets": input.outlets.values().collect::<Vec<_>>()});
+    Twins { html: html_page, json, md }
 }
 
 /// Page `page` (2 or more) of the story list, at `/page/N/`. Its twins
@@ -221,7 +255,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     let mut b = String::new();
     let _ = write!(
         b,
-        "<h1>Stories</h1><p class=\"kg-muted\">{} active in the {} hours to {}, from {} in the pool. Ordered by reach: independent reports in the window plus languages, then recency. <a href=\"/about/#reach\">How reach is counted</a>.</p>",
+        "<h1>Stories</h1><p class=\"kg-muted\">{} active in the {} hours to {}, from <a class=\"kg-link-quiet\" href=\"/outlets/\">{}</a> in the pool. Ordered by reach: independent reports in the window plus languages, then recency. <a href=\"/about/#reach\">How reach is counted</a>.</p>",
         n(active, "story"),
         window_hours,
         time_el(now, now),
@@ -278,23 +312,6 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     b.push_str(&pager(1, pages, active));
     b.push_str(&page_cards(input, &recent, &single, 1));
     b.push_str(&pager(1, pages, active));
-    b.push_str("<h2>Outlets</h2><ul class=\"stories\">");
-    for o in input.outlets.values() {
-        let claims = input.claims.get(&o.id).map(|v| v.len()).unwrap_or(0);
-        let _ = write!(
-            b,
-            "<li>{}<span class=\"kg-muted\">{}</span><span class=\"n kg-muted\">{}</span></li>",
-            crate::render::outlet_badge(input, &o.id),
-            esc(&o.domains.join(", ")),
-            if claims == 0 {
-                "not assessed yet".to_string()
-            } else {
-                n(claims, "claim")
-            }
-        );
-    }
-    b.push_str("</ul>");
-
     let head = format!(
         "<script type=\"application/ld+json\">{}</script>\n",
         json!({
@@ -409,11 +426,11 @@ mod tests {
         let i = fixture_input();
         let t = home(&i, 24);
         assert!(t.html.contains("<h1>Stories</h1>"));
-        assert!(
-            t.html.contains("/outlet/blog/"),
-            "unassessed outlets are listed"
-        );
-        assert!(t.html.contains("not assessed yet"));
+        assert!(t.html.contains("href=\"/outlets/\""), "the front page links the outlet list");
+        assert!(!t.html.contains("<h2>Outlets</h2>"), "the list is its own page");
+        let o = outlets_page(&i);
+        assert!(o.html.contains("/outlet/blog/"), "unassessed outlets are listed");
+        assert!(o.html.contains("not assessed yet"));
         let all = home(&i, 24 * 90);
         let stories = all.json["stories"].as_array().unwrap();
         let single = all.json["single_reports"].as_array().unwrap();

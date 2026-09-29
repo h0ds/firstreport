@@ -160,7 +160,7 @@ pub fn html(p: &Page) -> String {
   <span class="kg-muted">{status} · times in UTC</span>
 </header>
 {body}
-<footer class="kg-muted">Every number on this page is a count from Kagami feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · <a href="/about/">About</a> · Machine readers: <a href="{path}index.json">JSON</a> · <a href="{path}index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a></footer>
+<footer class="kg-muted">Every number on this page is a count from Kagami feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · <a href="/outlets/">Outlets</a> · <a href="/about/">About</a> · Machine readers: <a href="{path}index.json">JSON</a> · <a href="{path}index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a></footer>
 </main>
 </body>
 </html>
@@ -326,12 +326,29 @@ pub fn audience_strip(input: &Input, outlets: &[&str], large: bool) -> String {
     let r = if large { 3.5 } else { 3.0 };
     let x = |s: f64| pad + (s.clamp(-1.0, 1.0) + 1.0) / 2.0 * (w - 2.0 * pad);
     let mut dots = String::new();
+    // Each dot takes the colour of its fifth of the scale (design §5: a
+    // teal-to-amber scale, never red and blue, whose meaning flips between
+    // countries).
+    let bucket = |s: f64| ((s.clamp(-1.0, 1.0) + 1.0) / 2.0 * 5.0).floor().min(4.0) as usize + 1;
     for (id, s) in &scored {
         let _ = write!(
             dots,
-            "<circle cx=\"{:.1}\" cy=\"{mid}\" r=\"{r}\"><title>{} {s:+.2}</title></circle>",
+            "<circle class=\"b{}\" cx=\"{:.1}\" cy=\"{mid}\" r=\"{r}\"><title>{} {s:+.2}</title></circle>",
+            bucket(*s),
             x(*s),
             esc(input.outlet_name(id))
+        );
+    }
+    // The track in five coloured fifths under the dots.
+    let mut track = String::new();
+    let seg = (w - 2.0 * pad) / 5.0;
+    for k in 0..5 {
+        let _ = write!(
+            track,
+            "<line class=\"t{}\" x1=\"{:.1}\" y1=\"{mid}\" x2=\"{:.1}\" y2=\"{mid}\"/>",
+            k + 1,
+            pad + seg * k as f64,
+            pad + seg * (k + 1) as f64
         );
     }
     // Unknown outlets: hollow dots in their own group after R, never placed
@@ -380,7 +397,7 @@ pub fn audience_strip(input: &Input, outlets: &[&str], large: bool) -> String {
         String::new()
     };
     format!(
-        "<span class=\"kg-audience\" data-scored=\"{}\" data-unknown=\"{}\" title=\"Where each outlet's audience sits, D to R (Robertson et al. 2018): {} of {} scored\"><span class=\"end\">D</span><svg width=\"{w}\" height=\"{h}\" viewBox=\"0 0 {w} {h}\" role=\"img\" aria-label=\"Audience of {} outlets on -1 (links shared by Democrats) to +1 (by Republicans), Robertson et al. 2018: {}{}\"><line class=\"axis\" x1=\"{pad}\" y1=\"{mid}\" x2=\"{:.1}\" y2=\"{mid}\"/><line class=\"zero\" x1=\"{:.1}\" y1=\"1\" x2=\"{:.1}\" y2=\"{:.1}\"/>{dots}</svg><span class=\"end\">R</span>{unknown_svg}{text}</span>",
+        "<span class=\"kg-audience\" data-scored=\"{}\" data-unknown=\"{}\" title=\"Where each outlet's audience leans, left to right, from US sharing data (Robertson et al. 2018): {} of {} scored\"><span class=\"end\">L</span><svg width=\"{w}\" height=\"{h}\" viewBox=\"0 0 {w} {h}\" role=\"img\" aria-label=\"Audience lean of {} outlets, left to right (US sharing data: -1 shared by Democrats, +1 by Republicans; Robertson et al. 2018): {}{}\">{track}<line class=\"axis\" x1=\"{pad}\" y1=\"{mid}\" x2=\"{:.1}\" y2=\"{mid}\"/><line class=\"zero\" x1=\"{:.1}\" y1=\"1\" x2=\"{:.1}\" y2=\"{:.1}\"/>{dots}</svg><span class=\"end\">R</span>{unknown_svg}{text}</span>",
         scored.len(),
         unknown.len(),
         scored.len(),

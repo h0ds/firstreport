@@ -394,7 +394,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             b.push_str(&crate::render::label_bar_html(input, bar));
         }
         if !strip.is_empty() {
-            b.push_str("<div class=\"kg-audience-block\"><p class=\"kg-muted\" title=\"Who shared each outlet's links on Twitter in 2017, from -1 (Democrats) to +1 (Republicans): a measure of audiences, not of this story's coverage.\">Audience lean · <a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a>, CC0</p>");
+            b.push_str("<div class=\"kg-audience-block\"><p class=\"kg-muted\" title=\"Who shared each outlet's links among US Twitter users in 2017, from -1 (Democrats, left) to +1 (Republicans, right): a measure of audiences, not of this story's coverage, and a US measure even for outlets elsewhere.\">Audience lean, left to right · <a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a>, CC0</p>");
             b.push_str(&strip);
             b.push_str("</div>");
         }

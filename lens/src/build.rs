@@ -106,7 +106,8 @@ pub fn write_site(
         &crate::pages::search::search(input, window_hours),
     )?;
     write_twins(&tmp.join("about"), &crate::pages::about::about(input))?;
-    let mut pages: Vec<String> = vec!["/".into(), "/search/".into(), "/about/".into()];
+    write_twins(&tmp.join("outlets"), &crate::pages::home::outlets_page(input))?;
+    let mut pages: Vec<String> = vec!["/".into(), "/search/".into(), "/about/".into(), "/outlets/".into()];
     // The story list, 50 per page: page 1 is `/`, the rest `/page/N/`.
     for p in 2..=crate::pages::home::page_count(input, window_hours) {
         write_twins(

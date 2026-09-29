@@ -51,6 +51,18 @@ Cool-leaning greys, so they sit naturally next to the blue.
 
 Semantic colours are for **system status only** — never for characterizing content, outlets, or claims. A story is never red.
 
+### Lean scale (the one exception)
+
+| Token | Value | Position |
+|---|---|---|
+| `--kg-lean-1` | `#0F766E` | far left |
+| `--kg-lean-2` | `#2DA39A` | left |
+| `--kg-lean-3` | `#94A3B8` | centre |
+| `--kg-lean-4` | `#E0A33A` | right |
+| `--kg-lean-5` | `#B45309` | far right |
+
+A named source's left-right placement (today: Robertson et al.'s audience scores) is drawn on a teal-to-amber scale through grey. It colours a position on the source's scale, never an outlet's name, badge or card. Never red and blue: red is the left in much of Europe and the right in the US, so on an international site those colours say the opposite of what they mean to half the readers. Unscored outlets stay hollow grey.
+
 ### Dark mode
 
 Deferred. The white background is part of the identity for v1. When added: `--kg-bg` `#0B1120`, text `#E2E8F0`, blue lifts to `#3B82F6` for contrast. Not before pillar 3.
@@ -277,11 +289,11 @@ step since it was first seen. Spec:
 - On a story card the bar is compact: 8px tall, 120px wide, the counts as text beside it ("3 Left · 2 Center (AllSides)"), no legend. Same threshold: two rated outlets or no bar.
 
 **Audience strip** (a numeric scale: Robertson et al. 2018's audience partisanship)
-- A hairline from -1 to +1 with a centre mark, "D" and "R" at the ends, one grey dot per scored outlet in the story (translucent, so overlaps darken). On a card it is dots only, beside the sparkline on the card's one picture row; the list's legend line names the source once and the hover title gives the counts. On the story page it is 240px with "N of M scored · K unknown (Robertson et al. 2018)" beside it.
+- A track from -1 to +1 in the five lean colours with a centre mark, "L" and "R" at the ends, one dot per scored outlet coloured by its fifth of the scale. The source measures US audiences (links shared by Democrats vs Republicans); labelled left/right, with the hover and legend saying it is US sharing data, since it is that even for outlets elsewhere. On a card it is dots only, beside the sparkline on the card's one picture row; the list's legend line names the source once and the hover title gives the counts. On the story page it is 240px with "N of M scored · K unknown (Robertson et al. 2018)" beside it.
 - **Own reports against copies** on a card, when a story has copies: a 32×4px bar, dark for outlets that wrote their own report, light for outlets whose every item was another outlet's text, and the counts in words ("18 own reports · 5 copies"). It replaces "N syndication groups". Languages as "in N languages" when more than one.
 - **Timeline track** on the story page: outlet icons along a hairline by when each published, origin ringed, overlapping icons stacked into 20px lanes, the start time and "Nh later" at the ends; a grey dot for an outlet with no icon. The ordered list below stays the record; the track is its picture.
 - **Country spread** on a card: "in N countries" in the metadata when the outlets span more than one, from ledger's Wikidata country claims, the countries on hover. Words, not flags or a map.
-- It says what it measures: who shared an outlet's links, not what the outlet or the story says. Never bucketed into Left/Right labels by Kagami, never coloured red or blue.
+- It says what it measures: who shared an outlet's links, not what the outlet or the story says. Never bucketed into Left/Right words by Kagami, never coloured red or blue.
 - Unknown is shown, never hidden or averaged in: outlets the source does not score are hollow dashed dots in their own group after R, named on hover and in the aria-label, and counted in the text ("3 of 5 scored · 2 unknown"). A story with no scored outlet says "political lean unknown for N outlets" in place of the strip.
 
 ## 6. Wordmark & mark
