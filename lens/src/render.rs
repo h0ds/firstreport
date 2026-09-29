@@ -64,7 +64,13 @@ pub fn time_el(ts: i64) -> String {
 }
 
 pub fn n(k: usize, word: &str) -> String {
-    format!("{k} {word}{}", if k == 1 { "" } else { "s" })
+    if k == 1 {
+        format!("{k} {word}")
+    } else if let Some(stem) = word.strip_suffix('y') {
+        format!("{k} {stem}ies")
+    } else {
+        format!("{k} {word}s")
+    }
 }
 
 /// `+40m`, `+3.5h`, `+2d` after a reference time.
@@ -438,6 +444,8 @@ mod tests {
         assert_eq!(esc("a<b>&\"c\""), "a&lt;b&gt;&amp;&quot;c&quot;");
         assert_eq!(n(1, "outlet"), "1 outlet");
         assert_eq!(n(2, "outlet"), "2 outlets");
+        assert_eq!(n(2, "story"), "2 stories");
+        assert_eq!(n(1, "story"), "1 story");
     }
 
     #[test]

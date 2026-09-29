@@ -3,7 +3,7 @@
 
 use std::path::{Path, PathBuf};
 
-use crate::input::Input;
+use crate::input::{Input, Outlet};
 use crate::pages::Twins;
 
 fn write_twins(dir: &Path, t: &Twins) -> Result<(), String> {
@@ -20,8 +20,11 @@ fn write_twins(dir: &Path, t: &Twins) -> Result<(), String> {
     w("index.md", &t.md)
 }
 
-/// Returns the number of story pages written.
-pub fn write_site(input: &Input, out: &Path) -> Result<usize, String> {
+/// Outlet pages cover the window ledger's feed_behaviour importer uses.
+pub const OUTLET_WINDOW_DAYS: i64 = 30;
+
+/// Returns the number of story and outlet pages written.
+pub fn write_site(input: &Input, out: &Path) -> Result<(usize, usize), String> {
     let tmp: PathBuf = out.with_file_name(format!(
         "{}.building-{}",
         out.file_name().and_then(|n| n.to_str()).unwrap_or("site"),
@@ -42,11 +45,29 @@ pub fn write_site(input: &Input, out: &Path) -> Result<usize, String> {
         write_twins(&tmp.join("story").join(c.id.to_string()), &t)?;
         n += 1;
     }
+    let facts = crate::derive::outlet_facts(input, OUTLET_WINDOW_DAYS * crate::derive::DAY);
+    let mut m = 0;
+    // Every registry outlet gets a page, and so does any outlet ledger
+    // knows that feed does not poll.
+    let mut ids: Vec<&String> = input.outlets.keys().chain(input.claims.keys()).collect();
+    ids.sort();
+    ids.dedup();
+    for id in ids {
+        let o = input.outlets.get(id).cloned().unwrap_or_else(|| Outlet {
+            id: id.clone(),
+            name: String::new(),
+            domains: vec![],
+        });
+        let f = facts.get(id).cloned().unwrap_or_default();
+        let t = crate::pages::outlet::outlet(input, &o, &f, OUTLET_WINDOW_DAYS);
+        write_twins(&tmp.join("outlet").join(id), &t)?;
+        m += 1;
+    }
     if out.exists() {
         std::fs::remove_dir_all(out).map_err(|e| format!("{}: {e}", out.display()))?;
     }
     std::fs::rename(&tmp, out).map_err(|e| format!("rename to {}: {e}", out.display()))?;
-    Ok(n)
+    Ok((n, m))
 }
 
 #[cfg(test)]
@@ -58,9 +79,13 @@ mod tests {
     fn builds_every_story_with_its_twins() {
         let i = fixture_input();
         let out = std::env::temp_dir().join(format!("lens-site-{}", std::process::id()));
-        let n = write_site(&i, &out).unwrap();
-        assert_eq!(n, 61);
+        let (n, m) = write_site(&i, &out).unwrap();
+        assert_eq!((n, m), (61, 3));
         assert!(out.join("tokens.css").exists());
+        assert!(
+            out.join("outlet/blog/index.md").exists(),
+            "registry outlet without claims still has a page"
+        );
         for c in i.clusters.keys() {
             let d = out.join("story").join(c.to_string());
             assert!(
@@ -70,8 +95,8 @@ mod tests {
             );
         }
         // a rebuild replaces, never accumulates
-        let n2 = write_site(&i, &out).unwrap();
-        assert_eq!(n2, n);
+        let again = write_site(&i, &out).unwrap();
+        assert_eq!(again, (n, m));
         std::fs::remove_dir_all(&out).unwrap();
     }
 }

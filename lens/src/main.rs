@@ -26,11 +26,11 @@ fn run() -> Result<(), String> {
             ..
         } => {
             let input = input::read(&feed_export, &ledger_export)?;
-            let n = build::write_site(&input, &out)?;
+            let (stories, outlets) = build::write_site(&input, &out)?;
             println!(
-                "built {} story pages from {} clusters into {}",
-                n,
-                input.clusters.len(),
+                "built {} story pages and {} outlet pages into {}",
+                stories,
+                outlets,
                 out.display()
             );
             Ok(())

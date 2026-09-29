@@ -101,8 +101,6 @@ pub fn cluster_facts(c: &Cluster, events: &[Event], now: i64) -> ClusterFacts {
 
 /// What the outlet page needs: the outlet's stories in the window and
 /// the counts `ledger`'s feed_behaviour importer also reports.
-// Used by the outlet page, next commit.
-#[allow(dead_code)]
 #[derive(Debug, Clone, PartialEq, Eq, Default)]
 pub struct OutletFacts {
     /// Cluster ids the outlet joined in the window, most recently active first.
@@ -118,7 +116,6 @@ pub struct OutletFacts {
     pub copied: u32,
 }
 
-#[allow(dead_code)]
 pub fn outlet_facts(input: &Input, window_secs: i64) -> BTreeMap<String, OutletFacts> {
     let now = input.export_time;
     let start = now - window_secs;
