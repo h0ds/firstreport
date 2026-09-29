@@ -8,4 +8,5 @@ pub mod client;
 mod client_test;
 pub mod discover;
 pub mod opml;
+pub mod robots;
 pub mod scheduler;

@@ -68,6 +68,15 @@ fn serve() -> (String, Arc<AtomicUsize>) {
             h.fetch_add(1, Ordering::SeqCst);
             let req = read_req(&mut s);
             match req.path.as_str() {
+                // Our group may fetch anything but /private and must wait a
+                // second between requests; every other bot is kept out.
+                "/robots.txt" => respond(
+                    &mut s,
+                    "200 OK",
+                    &[],
+                    "User-agent: kagami-feed\nDisallow: /private\nCrawl-delay: 1\n\nUser-agent: *\nDisallow: /\n",
+                ),
+                "/private" => respond(&mut s, "200 OK", &[], RSS),
                 "/feed" => respond(&mut s, "200 OK", &[("ETag", "\"v1\"")], RSS),
                 "/conditional" if req.etag.as_deref() == Some("\"v1\"") => {
                     respond(&mut s, "304 Not Modified", &[], "")
@@ -206,15 +215,15 @@ async fn user_agent_fallback_is_tried_once_then_remembered() {
     assert_eq!(f.status, 200);
     assert_eq!(
         hits.load(Ordering::SeqCst),
-        2,
-        "product token first, compatible form second"
+        3,
+        "robots.txt, then the product token, then the compatible form"
     );
 
     let f = c.fetch(&format!("{base}/picky"), None, None).await.unwrap();
     assert_eq!(f.status, 200);
     assert_eq!(
         hits.load(Ordering::SeqCst),
-        3,
+        4,
         "the host is remembered; no second 403 round trip"
     );
 
@@ -227,7 +236,33 @@ async fn user_agent_fallback_is_tried_once_then_remembered() {
     assert_eq!(e.status(), Some(404));
     assert_eq!(
         hits2.load(Ordering::SeqCst),
-        1,
-        "only 403 triggers the fallback"
+        2,
+        "robots.txt and one request: only 403 triggers the fallback"
+    );
+}
+
+#[tokio::test]
+async fn robots_txt_is_honoured_and_fetched_once() {
+    let (base, hits) = serve();
+    let c = Client::new(4, 2).unwrap();
+    // The disallowed path is never requested: one hit, for robots.txt.
+    let r = c.fetch(&format!("{base}/private"), None, None).await;
+    assert!(matches!(r, Err(FetchError::Disallowed)), "{r:?}");
+    assert_eq!(hits.load(Ordering::SeqCst), 1);
+    // Allowed paths go through, robots.txt is not fetched again, and
+    // the crawl delay spaces the two requests.
+    let t0 = std::time::Instant::now();
+    c.fetch(&format!("{base}/feed"), None, None).await.unwrap();
+    c.fetch(&format!("{base}/feed"), None, None).await.unwrap();
+    assert_eq!(hits.load(Ordering::SeqCst), 3);
+    assert!(
+        t0.elapsed() >= std::time::Duration::from_secs(1),
+        "crawl delay honoured"
+    );
+    let d = c.allowed(&format!("{base}/private")).await.unwrap();
+    assert!(!d.allowed && d.crawl_delay == Some(1));
+    assert_eq!(
+        FetchError::Disallowed.to_string(),
+        "disallowed by the host's robots.txt"
     );
 }

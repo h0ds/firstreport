@@ -1,11 +1,15 @@
 //! HTTP client: conditional GET, gzip/brotli, global and per-host
 //! concurrency caps, response size cap, manual redirects so a permanent
-//! move is reported, `Retry-After` on 429/503, and a one-time
-//! User-Agent fallback for hosts that reject the bare product token.
+//! move is reported, `Retry-After` on 429/503, a one-time User-Agent
+//! fallback for hosts that reject the bare product token, and the
+//! publisher's robots.txt honoured on every request: a disallowed path
+//! is never fetched and `Crawl-delay` spaces requests to the host.
 
 use std::collections::{HashMap, HashSet};
 use std::sync::{Arc, Mutex};
-use std::time::Duration;
+use std::time::{Duration, Instant};
+
+use super::robots::{self, Robots};
 
 use bytes::Bytes;
 use reqwest::header::{
@@ -29,6 +33,15 @@ pub const COMPAT_USER_AGENT: &str = concat!(
 pub const MAX_BODY_BYTES: usize = 8 * 1024 * 1024;
 pub const TIMEOUT: Duration = Duration::from_secs(30);
 pub const MAX_REDIRECTS: usize = 5;
+/// How long a host's robots.txt is trusted before it is fetched again.
+pub const ROBOTS_TTL: Duration = Duration::from_secs(24 * 3600);
+/// A robots.txt that could not be read (network error, 5xx) is retried
+/// sooner; meanwhile the host is treated as allowing everything, as the
+/// RFC says for an unreachable file.
+pub const ROBOTS_RETRY: Duration = Duration::from_secs(3600);
+/// Longest `Crawl-delay` honoured; anything larger is capped so one
+/// host cannot stall the poller.
+pub const MAX_CRAWL_DELAY: Duration = Duration::from_secs(120);
 
 #[derive(Debug)]
 pub struct Fetched {
@@ -53,6 +66,8 @@ pub enum FetchError {
     },
     TooLarge(usize),
     Redirect(String),
+    /// The host's robots.txt disallows this path for us.
+    Disallowed,
 }
 
 impl FetchError {
@@ -96,6 +111,7 @@ impl std::fmt::Display for FetchError {
             FetchError::RateLimited { status, .. } => write!(f, "http {status}, rate limited"),
             FetchError::TooLarge(n) => write!(f, "body {n} bytes exceeds cap"),
             FetchError::Redirect(m) => write!(f, "redirect: {m}"),
+            FetchError::Disallowed => write!(f, "disallowed by the host's robots.txt"),
         }
     }
 }
@@ -110,6 +126,18 @@ pub struct Client {
     /// Hosts that answered 403 to the product token but not to the
     /// compatible form; they get the compatible form from then on.
     compat_hosts: Arc<Mutex<HashSet<String>>>,
+    /// Per host: the parsed robots.txt and when it was fetched.
+    robots: Arc<Mutex<HashMap<String, RobotsEntry>>>,
+    /// Per host: when the last request was sent, for Crawl-delay.
+    last_request: Arc<Mutex<HashMap<String, Instant>>>,
+}
+
+#[derive(Clone)]
+struct RobotsEntry {
+    rules: Arc<Robots>,
+    fetched: Instant,
+    /// False when the file could not be read; retried after ROBOTS_RETRY.
+    trusted: bool,
 }
 
 fn host_of(url: &str) -> String {
@@ -140,7 +168,99 @@ impl Client {
             per_host_cap: per_host_concurrency.max(1),
             per_host: Arc::new(Mutex::new(HashMap::new())),
             compat_hosts: Arc::new(Mutex::new(HashSet::new())),
+            robots: Arc::new(Mutex::new(HashMap::new())),
+            last_request: Arc::new(Mutex::new(HashMap::new())),
         })
+    }
+
+    /// The host's rules, fetched at most once per ROBOTS_TTL. A file
+    /// that answers 4xx counts as absent (everything allowed); a network
+    /// error or 5xx also allows for now and is retried sooner.
+    async fn robots_for(&self, site: &url::Url) -> Arc<Robots> {
+        // Keyed by scheme, host and port: the origin the file governs.
+        let key = format!(
+            "{}://{}:{}",
+            site.scheme(),
+            site.host_str().unwrap_or_default(),
+            site.port_or_known_default().unwrap_or(0)
+        );
+        if let Some(e) = self
+            .robots
+            .lock()
+            .unwrap_or_else(|p| p.into_inner())
+            .get(&key)
+            .cloned()
+        {
+            let ttl = if e.trusted { ROBOTS_TTL } else { ROBOTS_RETRY };
+            if e.fetched.elapsed() < ttl {
+                return e.rules;
+            }
+        }
+        let mut url = site.clone();
+        url.set_path("/robots.txt");
+        url.set_query(None);
+        url.set_fragment(None);
+        let (rules, trusted) = match self.fetch_once(url.as_str(), None, None, false).await {
+            Ok(Fetched {
+                status: 200,
+                body: Some(b),
+                ..
+            }) => (robots::parse(&String::from_utf8_lossy(&b)), true),
+            Ok(Fetched { status, .. }) if (400..500).contains(&status) => (Robots::default(), true),
+            Ok(_) => (Robots::default(), false),
+            Err(FetchError::Status(s)) if (400..500).contains(&s) => (Robots::default(), true),
+            Err(_) => (Robots::default(), false),
+        };
+        let rules = Arc::new(rules);
+        self.robots
+            .lock()
+            .unwrap_or_else(|p| p.into_inner())
+            .insert(
+                key,
+                RobotsEntry {
+                    rules: rules.clone(),
+                    fetched: Instant::now(),
+                    trusted,
+                },
+            );
+        rules
+    }
+
+    /// Wait out the host's Crawl-delay since our last request to it.
+    async fn honour_crawl_delay(&self, host: &str, delay: Option<u64>) {
+        let Some(secs) = delay else { return };
+        let delay = Duration::from_secs(secs).min(MAX_CRAWL_DELAY);
+        let last = self
+            .last_request
+            .lock()
+            .unwrap_or_else(|p| p.into_inner())
+            .get(host)
+            .copied();
+        if let Some(last) = last {
+            let elapsed = last.elapsed();
+            if elapsed < delay {
+                tokio::time::sleep(delay - elapsed).await;
+            }
+        }
+    }
+
+    fn note_request(&self, host: &str) {
+        self.last_request
+            .lock()
+            .unwrap_or_else(|p| p.into_inner())
+            .insert(host.to_string(), Instant::now());
+    }
+
+    /// The robots decision for a URL, for tests and for discovery.
+    pub async fn allowed(&self, url: &str) -> Result<robots::Decision, FetchError> {
+        let parsed =
+            url::Url::parse(url).map_err(|e| FetchError::Redirect(format!("bad url: {e}")))?;
+        let rules = self.robots_for(&parsed).await;
+        let path = match parsed.query() {
+            Some(q) => format!("{}?{q}", parsed.path()),
+            None => parsed.path().to_string(),
+        };
+        Ok(rules.check(robots::OUR_TOKEN, &path))
     }
 
     fn host_sem(&self, host: &str) -> Arc<Semaphore> {
@@ -167,6 +287,13 @@ impl Client {
         let host = host_of(url);
         let sem = self.host_sem(&host);
         let _h = sem.acquire().await.expect("semaphore closed");
+
+        let decision = self.allowed(url).await?;
+        if !decision.allowed {
+            return Err(FetchError::Disallowed);
+        }
+        self.honour_crawl_delay(&host, decision.crawl_delay).await;
+        self.note_request(&host);
 
         let compat = self.uses_compat(&host);
         match self.fetch_once(url, etag, last_modified, compat).await {
