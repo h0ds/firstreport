@@ -5,7 +5,7 @@
 
 use crate::parse::simhash::hamming;
 use crate::store::reader::ClusterRow;
-use crate::types::{Cluster, Item, Join, SynGroup, Velocity};
+use crate::types::{Cluster, Confidence, Item, Join, SynGroup, Velocity};
 
 pub fn timeline(items: &[Item]) -> Vec<Join> {
     let mut joins: Vec<(u32, Join)> = items
@@ -18,6 +18,7 @@ pub fn timeline(items: &[Item]) -> Vec<Join> {
                     outlet_id: i.outlet_id.clone(),
                     published_at: i.published_at,
                     joined_at: i.joined_at.unwrap_or(i.fetched_at),
+                    join_similarity: i.join_similarity,
                 },
             )
         })
@@ -110,8 +111,47 @@ pub fn syndication(items: &[Item], threshold: u32) -> Vec<SynGroup> {
         .collect()
 }
 
+/// The two thresholds an assembled cluster reports: the simhash
+/// distance for syndication groups and the cosine join threshold.
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub struct Thresholds {
+    pub hamming: u32,
+    pub join: f32,
+}
+
+impl Thresholds {
+    pub fn from_config(cfg: &crate::config::Config) -> Self {
+        Self {
+            hamming: cfg.syndication.hamming_threshold,
+            join: cfg.cluster.join_threshold,
+        }
+    }
+}
+
+/// Clustering confidence (docs/steward.md §3): how sure the method
+/// was, as counts over the members. Nothing about any outlet.
+pub fn confidence(row: &ClusterRow, items: &[Item], join_threshold: f32) -> Confidence {
+    let scored: Vec<f32> = items.iter().filter_map(|i| i.join_similarity).collect();
+    let weakest_join = scored.iter().copied().reduce(f32::min);
+    let mut languages: Vec<String> = items
+        .iter()
+        .map(|i| i.lang.clone())
+        .collect::<std::collections::BTreeSet<_>>()
+        .into_iter()
+        .collect();
+    languages.dedup();
+    Confidence {
+        join_threshold,
+        weakest_join,
+        join_margin: weakest_join.map(|w| w - join_threshold),
+        unscored: (items.len() - scored.len()) as u32,
+        merged: row.merged,
+        languages,
+    }
+}
+
 /// Assemble the contract `Cluster` from its row and items.
-pub fn assemble(row: &ClusterRow, items: &[Item], now: i64, hamming_threshold: u32) -> Cluster {
+pub fn assemble(row: &ClusterRow, items: &[Item], now: i64, th: Thresholds) -> Cluster {
     let tl = timeline(items);
     let o = origin(items);
     Cluster {
@@ -128,7 +168,8 @@ pub fn assemble(row: &ClusterRow, items: &[Item], now: i64, hamming_threshold: u
         origin_item_id: o.map(|i| i.id).unwrap_or(row.id),
         origin_outlet_id: o.map(|i| i.outlet_id.clone()).unwrap_or_default(),
         velocity: velocity(&tl, now),
-        syndication: syndication(items, hamming_threshold),
+        syndication: syndication(items, th.hamming),
+        confidence: confidence(row, items, th.join),
         timeline: tl,
     }
 }
@@ -151,8 +192,42 @@ mod tests {
             cluster_id: Some(1),
             cluster_rank: Some(rank),
             joined_at: Some(joined),
+            join_similarity: None,
             snapshot_id: 0,
         }
+    }
+
+    #[test]
+    fn confidence_is_counts_over_members() {
+        let row = ClusterRow {
+            id: 1,
+            created_at: 0,
+            last_active_at: 0,
+            item_count: 3,
+            outlet_count: 3,
+            primary_title: String::new(),
+            centroid: vec![],
+            expired: false,
+            merged: true,
+        };
+        let mut items = vec![
+            item(1, "a", 100, 100, 0, 0),
+            item(2, "b", 100, 100, 1, 0),
+            item(3, "c", 100, 100, 2, 0),
+        ];
+        items[1].join_similarity = Some(0.91);
+        items[2].join_similarity = Some(0.74);
+        items[2].lang = "ja".into();
+        let c = confidence(&row, &items, 0.72);
+        assert_eq!(c.join_threshold, 0.72);
+        assert_eq!(c.weakest_join, Some(0.74));
+        assert!((c.join_margin.unwrap() - 0.02).abs() < 1e-6);
+        assert_eq!(c.unscored, 1, "the seed has no similarity");
+        assert!(c.merged);
+        assert_eq!(c.languages, vec!["en", "ja"]);
+        // Nothing scored yet (rows from before the field): margin absent, not zero.
+        let c = confidence(&row, &items[..1], 0.72);
+        assert_eq!((c.weakest_join, c.join_margin, c.unscored), (None, None, 1));
     }
 
     #[test]

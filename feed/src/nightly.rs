@@ -39,7 +39,13 @@ pub fn run_once(
 ) -> Result<export::Summary, Box<dyn std::error::Error>> {
     let format: Format = cfg.export.format.parse()?;
     let dir = dated_dir(&cfg.export.out_dir, ts);
-    let summary = export::run(reader, format, &dir, ts, cfg.syndication.hamming_threshold)?;
+    let summary = export::run(
+        reader,
+        format,
+        &dir,
+        ts,
+        crate::cluster::propagation::Thresholds::from_config(cfg),
+    )?;
     if cfg.snapshots.enabled && cfg.snapshots.dir.exists() {
         let removed = crate::snapshot::prune(&cfg.snapshots.dir, ts, cfg.snapshots.retention_days)?;
         if removed > 0 {

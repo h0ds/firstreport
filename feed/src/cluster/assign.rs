@@ -21,7 +21,7 @@ pub struct Clusterer {
     index: HashMap<u64, usize>,
 }
 
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum Outcome {
     Created {
         cluster_id: u64,
@@ -29,6 +29,8 @@ pub enum Outcome {
     Joined {
         cluster_id: u64,
         rank: u32,
+        /// Cosine to the centroid before the item was added.
+        similarity: f32,
     },
     /// Language excluded from clustering by config.
     Skipped,
@@ -143,6 +145,7 @@ impl Clusterer {
                     outcome: Outcome::Joined {
                         cluster_id: c.id,
                         rank,
+                        similarity: s,
                     },
                     events,
                 };
@@ -308,6 +311,7 @@ mod tests {
             cluster_id: None,
             cluster_rank: None,
             joined_at: None,
+            join_similarity: None,
             snapshot_id: 0,
         }
     }
@@ -332,13 +336,14 @@ mod tests {
         let a = c.assign(&item(1, "x", 100, "en"), &unit(1.0, 0.0), 100);
         assert_eq!(a.outcome, Outcome::Created { cluster_id: 1 });
         let b = c.assign(&item(2, "y", 110, "en"), &unit(1.0, 0.1), 110);
-        assert_eq!(
-            b.outcome,
+        match b.outcome {
             Outcome::Joined {
                 cluster_id: 1,
-                rank: 1
-            }
-        );
+                rank: 1,
+                similarity,
+            } => assert!(similarity > 0.9 && similarity <= 1.0, "{similarity}"),
+            other => panic!("expected a join, got {other:?}"),
+        }
         assert_eq!(b.events[0].kind, EventKind::ItemAdded);
         let d = c.assign(&item(3, "z", 120, "en"), &unit(0.0, 1.0), 120);
         assert_eq!(d.outcome, Outcome::Created { cluster_id: 3 });

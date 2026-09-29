@@ -81,7 +81,7 @@ async fn main() {
                 format,
                 &out,
                 stats::now(),
-                cfg.syndication.hamming_threshold,
+                cluster::propagation::Thresholds::from_config(&cfg),
             )?;
             info!(items = s.items, clusters = s.clusters, events = s.events, revisions = s.revisions, outlets = s.outlets, out = %out.display(), "export complete");
             Ok(())
@@ -290,6 +290,7 @@ async fn run(
         stats: stats.clone(),
         snapshot_dir: cfg.snapshots.dir.clone(),
         hamming_threshold: cfg.syndication.hamming_threshold,
+        join_threshold: cfg.cluster.join_threshold,
         ledger_url: cfg.api.ledger_url.clone(),
     });
     let listener = tokio::net::TcpListener::bind(&cfg.api.bind).await?;

@@ -70,6 +70,9 @@ pub enum WriteMsg {
         cluster_id: u64,
         rank: u32,
         joined_at: i64,
+        /// Similarity to the centroid at the join; None keeps what the
+        /// row has (a seed, or an item moved by a merge).
+        similarity: Option<f32>,
     },
     ClusterUpsert(ClusterRow),
     /// A cluster was merged away: its row stays for history but is
@@ -203,7 +206,7 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
         )?;
         let mut up_emb = tx.prepare_cached("UPDATE item SET embedding=?2 WHERE id=?1")?;
         let mut up_assign = tx.prepare_cached(
-            "UPDATE item SET cluster_id=?2, cluster_rank=?3, joined_at=?4 WHERE id=?1",
+            "UPDATE item SET cluster_id=?2, cluster_rank=?3, joined_at=?4, join_sim=COALESCE(?5, join_sim) WHERE id=?1",
         )?;
         let mut up_cluster = tx.prepare_cached(
             "INSERT INTO cluster (id, created_at, last_active_at, item_count, outlet_count,
@@ -280,12 +283,14 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                     cluster_id,
                     rank,
                     joined_at,
+                    similarity,
                 } => {
                     up_assign.execute(params![
                         to_i64(item_id),
                         to_i64(cluster_id),
                         rank,
-                        joined_at
+                        joined_at,
+                        similarity
                     ])?;
                 }
                 WriteMsg::ClusterUpsert(c) => {
@@ -320,11 +325,12 @@ pub fn commit(conn: &mut Connection, batch: Vec<WriteMsg>) -> rusqlite::Result<(
                     }
                 }
                 WriteMsg::ClusterAbsorbed { id, into } => {
-                    let _ = into; // recorded on the merged event
                     tx.execute(
                         "UPDATE cluster SET expired=1, item_count=0, outlet_count=0 WHERE id=?1",
                         [to_i64(id)],
                     )?;
+                    // The survivor now carries a merge (contract `confidence.merged`).
+                    tx.execute("UPDATE cluster SET merged=1 WHERE id=?1", [to_i64(into)])?;
                 }
                 WriteMsg::Event(e) => {
                     let kind = serde_json::to_value(e.kind)

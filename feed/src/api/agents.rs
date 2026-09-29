@@ -176,6 +176,7 @@ mod tests {
             cluster_id: Some(1),
             cluster_rank: Some(0),
             joined_at: Some(t + 60),
+            join_similarity: None,
             snapshot_id: 1,
         }
     }
@@ -201,12 +202,14 @@ mod tests {
                     outlet_id: "wire".into(),
                     published_at: 1_704_098_400,
                     joined_at: 1_704_099_600,
+                    join_similarity: None,
                 },
                 Join {
                     item_id: 2,
                     outlet_id: "gazette".into(),
                     published_at: 1_704_100_200,
                     joined_at: 1_704_101_400,
+                    join_similarity: None,
                 },
             ],
             syndication: vec![SynGroup {
@@ -220,6 +223,7 @@ mod tests {
                 outlets_24h: 2,
                 ..Default::default()
             },
+            confidence: Default::default(),
         };
         let names = HashMap::from([("wire".to_string(), "The Wire".to_string())]);
         let md = cluster_markdown(&c, &items, &names, "http://ledger.test");

@@ -269,6 +269,7 @@ async fn fixture_through_store_and_api() {
         stats: stats.clone(),
         snapshot_dir: cfg.snapshots.dir.clone(),
         hamming_threshold: 3,
+        join_threshold: 0.72,
         ledger_url: "http://ledger.test".into(),
     });
     let get = |uri: &str| Request::builder().uri(uri).body(Body::empty()).unwrap();

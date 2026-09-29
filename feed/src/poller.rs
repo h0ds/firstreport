@@ -598,6 +598,7 @@ impl Poller {
                 cluster_id: None,
                 cluster_rank: None,
                 joined_at: None,
+                join_similarity: None,
                 snapshot_id: snap_id,
             });
         }

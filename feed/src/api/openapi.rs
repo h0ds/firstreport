@@ -301,6 +301,7 @@ mod tests {
             cluster_id: Some(1),
             cluster_rank: Some(0),
             joined_at: Some(2),
+            join_similarity: Some(0.8),
             snapshot_id: 4,
         };
         let json = serde_json::to_value(&item).unwrap();

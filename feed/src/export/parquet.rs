@@ -143,7 +143,7 @@ fn write_clusters(
     reader: &Reader,
     path: &Path,
     now: i64,
-    hamming: u32,
+    th: crate::cluster::propagation::Thresholds,
 ) -> Result<usize, Box<dyn std::error::Error>> {
     let schema = Arc::new(Schema::new(vec![
         Field::new("id", DataType::UInt64, false),
@@ -196,7 +196,7 @@ fn write_clusters(
     let mut syndication = StringBuilder::new();
     let mut centroid = ListBuilder::new(Float32Builder::new());
 
-    let n = for_each_cluster(reader, now, hamming, |c| {
+    let n = for_each_cluster(reader, now, th, |c| {
         let k = &c.cluster;
         id.append_value(k.id);
         created.append_value(k.created_at);
@@ -358,13 +358,13 @@ pub fn write(
     reader: &Reader,
     out_dir: &Path,
     now: i64,
-    hamming: u32,
+    th: crate::cluster::propagation::Thresholds,
 ) -> Result<Summary, Box<dyn std::error::Error>> {
     std::fs::create_dir_all(out_dir)?;
     let file = |n: &str| -> PathBuf { out_dir.join(format!("{n}.parquet")) };
     Ok(Summary {
         items: write_items(reader, &file("items"))?,
-        clusters: write_clusters(reader, &file("clusters"), now, hamming)?,
+        clusters: write_clusters(reader, &file("clusters"), now, th)?,
         events: write_events(reader, &file("events"))?,
         outlets: write_outlets(reader, &file("outlets"))?,
         files: ["items", "clusters", "events", "outlets"]
@@ -387,7 +387,16 @@ mod tests {
         std::fs::create_dir_all(&dir).unwrap();
         let (reader, _) = crate::export::fixture::populate(&dir);
         let out = dir.join("out");
-        let s = write(&reader, &out, 1000, 3).unwrap();
+        let s = write(
+            &reader,
+            &out,
+            1000,
+            crate::cluster::propagation::Thresholds {
+                hamming: 3,
+                join: 0.72,
+            },
+        )
+        .unwrap();
         assert_eq!((s.items, s.clusters, s.events, s.outlets), (3, 1, 3, 1));
 
         let f = std::fs::File::open(out.join("items.parquet")).unwrap();

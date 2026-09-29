@@ -329,7 +329,15 @@ async fn assemble(
         .call(move |c| reader::cluster_items(c, id))
         .await
         .map_err(db_err)?;
-    let cluster = crate::cluster::propagation::assemble(&row, &items, now, s.hamming_threshold);
+    let cluster = crate::cluster::propagation::assemble(
+        &row,
+        &items,
+        now,
+        crate::cluster::propagation::Thresholds {
+            hamming: s.hamming_threshold,
+            join: s.join_threshold,
+        },
+    );
     Ok(ClusterOut {
         cluster,
         items: with_items.then_some(items),

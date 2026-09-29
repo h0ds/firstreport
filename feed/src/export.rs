@@ -86,14 +86,14 @@ pub fn for_each_item(
 pub fn for_each_cluster(
     reader: &Reader,
     now: i64,
-    hamming: u32,
+    th: propagation::Thresholds,
     mut f: impl FnMut(ClusterOut) -> std::io::Result<()>,
 ) -> Result<usize, Box<dyn std::error::Error>> {
     let rows = reader.with(reader::all_clusters)?;
     let n = rows.len();
     for row in rows {
         let items = reader.with(|c| reader::cluster_items(c, row.id))?;
-        let cluster = propagation::assemble(&row, &items, now, hamming);
+        let cluster = propagation::assemble(&row, &items, now, th);
         f(ClusterOut {
             cluster,
             expired: row.expired,
@@ -164,7 +164,7 @@ pub fn write_ndjson(
     reader: &Reader,
     out_dir: &Path,
     now: i64,
-    hamming: u32,
+    th: propagation::Thresholds,
 ) -> Result<Summary, Box<dyn std::error::Error>> {
     std::fs::create_dir_all(out_dir)?;
     let mut s = Summary::default();
@@ -175,7 +175,7 @@ pub fn write_ndjson(
     s.files.push(p);
 
     let (p, mut w) = ndjson_file(out_dir, "clusters")?;
-    s.clusters = for_each_cluster(reader, now, hamming, |c| line(&mut w, &c))?;
+    s.clusters = for_each_cluster(reader, now, th, |c| line(&mut w, &c))?;
     w.flush()?;
     s.files.push(p);
 
@@ -205,12 +205,12 @@ pub fn run(
     format: Format,
     out_dir: &Path,
     now: i64,
-    hamming: u32,
+    th: propagation::Thresholds,
 ) -> Result<Summary, Box<dyn std::error::Error>> {
     match format {
-        Format::Ndjson => write_ndjson(reader, out_dir, now, hamming),
+        Format::Ndjson => write_ndjson(reader, out_dir, now, th),
         #[cfg(feature = "parquet")]
-        Format::Parquet => parquet::write(reader, out_dir, now, hamming),
+        Format::Parquet => parquet::write(reader, out_dir, now, th),
         #[cfg(not(feature = "parquet"))]
         Format::Parquet => {
             Err("built without the `parquet` feature; rebuild with --features parquet".into())
@@ -241,6 +241,7 @@ pub(crate) mod fixture {
             cluster_id: None,
             cluster_rank: None,
             joined_at: None,
+            join_similarity: None,
             snapshot_id: 1,
         }
     }
@@ -275,18 +276,21 @@ pub(crate) mod fixture {
                     primary_title: "title 1".into(),
                     centroid: vec![0.7, 0.7],
                     expired: false,
+                    merged: false,
                 }),
                 WriteMsg::ItemAssigned {
                     item_id: 1,
                     cluster_id: 1,
                     rank: 0,
                     joined_at: 101,
+                    similarity: None,
                 },
                 WriteMsg::ItemAssigned {
                     item_id: 2,
                     cluster_id: 1,
                     rank: 1,
                     joined_at: 201,
+                    similarity: None,
                 },
                 WriteMsg::Event(ClusterEvent {
                     ts: 101,
@@ -339,7 +343,16 @@ mod tests {
         std::fs::create_dir_all(&dir).unwrap();
         let (reader, _) = fixture::populate(&dir);
         let out = dir.join("out");
-        let s = write_ndjson(&reader, &out, 1000, 3).unwrap();
+        let s = write_ndjson(
+            &reader,
+            &out,
+            1000,
+            propagation::Thresholds {
+                hamming: 3,
+                join: 0.72,
+            },
+        )
+        .unwrap();
         assert_eq!((s.items, s.clusters, s.events, s.outlets), (3, 1, 3, 1));
         assert_eq!(s.revisions, 1);
         assert_eq!(s.files.len(), 5);

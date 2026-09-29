@@ -43,6 +43,8 @@ pub fn row_for(c: &ActiveCluster, expired: bool) -> ClusterRow {
         primary_title: c.primary_title().to_string(),
         centroid: c.centroid.clone(),
         expired,
+        // Not overwritten by the upsert; set by the absorb write.
+        merged: false,
     }
 }
 
@@ -85,12 +87,13 @@ pub fn boot(
     for (item, vector) in backlog {
         clock = clock.max(item.fetched_at);
         let a = clusterer.assign(&item, &vector, item.fetched_at);
-        if let Some((cluster_id, rank)) = assigned(&a.outcome) {
+        if let Some((cluster_id, rank, similarity)) = assigned(&a.outcome) {
             writes.push(WriteMsg::ItemAssigned {
                 item_id: item.id,
                 cluster_id,
                 rank,
                 joined_at: item.fetched_at,
+                similarity,
             });
             if let Some(c) = clusterer.get(cluster_id) {
                 writes.push(WriteMsg::ClusterUpsert(row_for(c, false)));
@@ -108,10 +111,15 @@ pub fn boot(
     (clusterer, writes)
 }
 
-fn assigned(o: &Outcome) -> Option<(u64, u32)> {
+/// (cluster, rank, similarity at the join; None for a seed).
+fn assigned(o: &Outcome) -> Option<(u64, u32, Option<f32>)> {
     match o {
-        Outcome::Created { cluster_id } => Some((*cluster_id, 0)),
-        Outcome::Joined { cluster_id, rank } => Some((*cluster_id, *rank)),
+        Outcome::Created { cluster_id } => Some((*cluster_id, 0, None)),
+        Outcome::Joined {
+            cluster_id,
+            rank,
+            similarity,
+        } => Some((*cluster_id, *rank, Some(*similarity))),
         Outcome::Skipped => None,
     }
 }
@@ -149,6 +157,7 @@ pub async fn persist_merges(
                     cluster_id: m.survivor,
                     rank,
                     joined_at: m.event.ts,
+                    similarity: None,
                 })
                 .await;
         }
@@ -176,13 +185,14 @@ impl Task {
         let a = self.clusterer.assign(&e.item, &e.vector, now);
         self.stats
             .record_assign(started.elapsed(), self.clusterer.len());
-        if let Some((cluster_id, rank)) = assigned(&a.outcome) {
+        if let Some((cluster_id, rank, similarity)) = assigned(&a.outcome) {
             self.writer
                 .send(WriteMsg::ItemAssigned {
                     item_id: e.item.id,
                     cluster_id,
                     rank,
                     joined_at: now,
+                    similarity,
                 })
                 .await;
             if let Some(c) = self.clusterer.get(cluster_id) {

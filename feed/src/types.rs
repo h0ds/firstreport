@@ -57,6 +57,11 @@ pub struct Item {
     /// 0 = first item in its cluster (origin), 1 = second, ...
     pub cluster_rank: Option<u32>,
     pub joined_at: Option<i64>,
+    /// Cosine similarity to the cluster centroid at the moment it joined
+    /// (docs/algorithms.md §1). None for a cluster's seed, for items
+    /// moved by a merge, and for rows from before this field existed.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub join_similarity: Option<f32>,
     pub snapshot_id: u64,
 }
 
@@ -66,6 +71,31 @@ pub struct Join {
     pub outlet_id: String,
     pub published_at: i64,
     pub joined_at: i64,
+    /// Similarity to the centroid when it joined; see `Item`.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub join_similarity: Option<f32>,
+}
+
+/// How sure the method was (docs/steward.md §3, docs/algorithms.md §1):
+/// facts about Kagami's clustering, never about an outlet.
+#[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize, JsonSchema)]
+pub struct Confidence {
+    /// The join threshold in force when the cluster was assembled.
+    pub join_threshold: f32,
+    /// The lowest join similarity among members that have one.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub weakest_join: Option<f32>,
+    /// `weakest_join - join_threshold`: how close the loosest member
+    /// came to not joining. Small means one borderline join holds it.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub join_margin: Option<f32>,
+    /// Members whose similarity is unknown (seed, moved by a merge,
+    /// clustered before this was recorded).
+    pub unscored: u32,
+    /// A merge pass folded another cluster into this one.
+    pub merged: bool,
+    /// Distinct item languages, sorted.
+    pub languages: Vec<String>,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
@@ -103,6 +133,8 @@ pub struct Cluster {
     pub timeline: Vec<Join>,
     pub syndication: Vec<SynGroup>,
     pub velocity: Velocity,
+    #[serde(default)]
+    pub confidence: Confidence,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]

@@ -50,6 +50,9 @@ pub struct ClusterRow {
     #[serde(skip)]
     pub centroid: Vec<f32>,
     pub expired: bool,
+    /// A merge pass folded another cluster into this one; never reset.
+    #[serde(default)]
+    pub merged: bool,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
@@ -122,7 +125,7 @@ impl Reader {
 
 const ITEM_COLS: &str =
     "id, outlet_id, canonical_url, title, summary, published_at, fetched_at, lang, \
-                         text_hash, cluster_id, cluster_rank, joined_at, snapshot_id";
+                         text_hash, cluster_id, cluster_rank, joined_at, snapshot_id, join_sim";
 
 fn row_item(r: &Row) -> rusqlite::Result<Item> {
     Ok(Item {
@@ -139,6 +142,7 @@ fn row_item(r: &Row) -> rusqlite::Result<Item> {
         cluster_rank: r.get(10)?,
         joined_at: r.get(11)?,
         snapshot_id: to_u64(r.get(12)?),
+        join_similarity: r.get::<_, Option<f32>>(13)?,
     })
 }
 
@@ -351,7 +355,7 @@ pub fn latest_snapshot(c: &Connection, feed: &str) -> rusqlite::Result<Option<Sn
 }
 
 const CLUSTER_COLS: &str =
-    "id, created_at, last_active_at, item_count, outlet_count, primary_title, centroid, expired";
+    "id, created_at, last_active_at, item_count, outlet_count, primary_title, centroid, expired, merged";
 
 fn row_cluster(r: &Row) -> rusqlite::Result<ClusterRow> {
     Ok(ClusterRow {
@@ -363,6 +367,7 @@ fn row_cluster(r: &Row) -> rusqlite::Result<ClusterRow> {
         primary_title: r.get(5)?,
         centroid: super::writer::embedding_from_blob(&r.get::<_, Vec<u8>>(6)?),
         expired: r.get::<_, i64>(7)? != 0,
+        merged: r.get::<_, i64>(8)? != 0,
     })
 }
 
@@ -460,7 +465,7 @@ pub fn list_items_with_embeddings(
     ))?;
     let rows = st.query_map(params![cf, ci, limit as i64], |r| {
         let item = row_item(r)?;
-        let blob: Option<Vec<u8>> = r.get(13)?;
+        let blob: Option<Vec<u8>> = r.get(14)?;
         Ok((item, blob.map(|b| super::writer::embedding_from_blob(&b))))
     })?;
     rows.collect()
@@ -475,7 +480,7 @@ pub fn embedded_items_since(c: &Connection, since: i64) -> rusqlite::Result<Vec<
     ))?;
     let rows = st.query_map([since], |r| {
         let item = row_item(r)?;
-        let blob: Vec<u8> = r.get(13)?;
+        let blob: Vec<u8> = r.get(14)?;
         Ok((item, super::writer::embedding_from_blob(&blob)))
     })?;
     rows.collect()
@@ -628,6 +633,7 @@ mod tests {
             cluster_id: None,
             cluster_rank: None,
             joined_at: None,
+            join_similarity: None,
             snapshot_id: 9,
         }
     }
@@ -703,6 +709,7 @@ mod tests {
             primary_title: format!("c{id}"),
             centroid: vec![0.6, 0.8],
             expired,
+            merged: false,
         };
         commit(
             &mut c,
@@ -714,18 +721,21 @@ mod tests {
                     cluster_id: 1,
                     rank: 0,
                     joined_at: 101,
+                    similarity: None,
                 },
                 WriteMsg::ItemAssigned {
                     item_id: 2,
                     cluster_id: 1,
                     rank: 1,
                     joined_at: 150,
+                    similarity: None,
                 },
                 WriteMsg::ItemAssigned {
                     item_id: 3,
                     cluster_id: 3,
                     rank: 0,
                     joined_at: 160,
+                    similarity: None,
                 },
                 WriteMsg::Embeddings(vec![(1, vec![1.0, 0.0]), (4, vec![0.0, 1.0])]),
                 WriteMsg::Event(ClusterEvent {
@@ -777,6 +787,10 @@ mod tests {
             vec![1, 4]
         );
         assert_eq!(emb[1].1, vec![0.0, 1.0]);
+        // The embedding sits after join_sim in ITEM_COLS on both paths.
+        let listed = list_items_with_embeddings(&c, None, 10).unwrap();
+        let with = listed.iter().find(|(i, _)| i.id == 4).unwrap();
+        assert_eq!(with.1.as_deref(), Some(&[0.0, 1.0][..]));
         let s = stats(&c, 200).unwrap();
         assert_eq!((s.clusters_total, s.clusters_active), (2, 1));
     }

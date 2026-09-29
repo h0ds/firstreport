@@ -145,9 +145,13 @@ pub async fn run(
             clock = clock.max(item.fetched_at);
             rows.push((item.id, vector.clone()));
             let a = clusterer.assign(item, &vector, item.fetched_at);
-            let (cluster_id, rank) = match a.outcome {
-                Outcome::Created { cluster_id } => (cluster_id, 0),
-                Outcome::Joined { cluster_id, rank } => (cluster_id, rank),
+            let (cluster_id, rank, similarity) = match a.outcome {
+                Outcome::Created { cluster_id } => (cluster_id, 0, None),
+                Outcome::Joined {
+                    cluster_id,
+                    rank,
+                    similarity,
+                } => (cluster_id, rank, Some(similarity)),
                 Outcome::Skipped => continue,
             };
             writer
@@ -156,6 +160,7 @@ pub async fn run(
                     cluster_id,
                     rank,
                     joined_at: item.fetched_at,
+                    similarity,
                 })
                 .await;
             if let Some(c) = clusterer.get(cluster_id) {

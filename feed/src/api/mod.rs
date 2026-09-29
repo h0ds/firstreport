@@ -18,6 +18,8 @@ pub struct AppState {
     pub snapshot_dir: PathBuf,
     /// Simhash distance for syndication grouping.
     pub hamming_threshold: u32,
+    /// Clustering join threshold, reported in each cluster's confidence.
+    pub join_threshold: f32,
     /// Ledger base URL for outlet links; empty for none.
     pub ledger_url: String,
 }
