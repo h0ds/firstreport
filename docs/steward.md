@@ -130,8 +130,10 @@ page states it.
 ## 7. Milestones
 
 - **S1** Feed health: signals, rules 1 to 5, quarantine on the feed
-  row, `/v1/feeds` and `doctor` show it. Fixtures: a lying feed, a
-  duplicating feed, a flood, an empty run.
+  row, `/v1/feeds` and `doctor` show it. Done in `feed/src/steward.rs`,
+  tested rule by rule on synthetic windows and end to end through the
+  poller; the recorded-feed fixtures (a lying feed, a duplicating feed,
+  a flood) wait on live data to record.
 - **S2** Clustering confidence in the contract as an addition, shown
   in lens twins.
 - **S3** Ledger change guard and conflict list.

@@ -24,7 +24,11 @@ exactly what is fetched and kept.
 After a live run, `cargo run -- feeds` lists the feeds that failed,
 `cargo run -- feeds --fix` asks each outlet's home page for a
 replacement and confirms it fetches as a feed, and `--write` rewrites
-that one line in `config/feeds.toml` for review.
+that one line in `config/feeds.toml` for review. The same command lists
+feeds the steward is holding (`../docs/steward.md`): a feed whose
+bodies stop parsing, that republishes its own items under new URLs, or
+that floods is quarantined for a day with the reason on its row, and
+lifts itself when the next fetch judges clean.
 
 ## Embedding model
 
@@ -61,7 +65,7 @@ Embed latency (amortized per item, p50 and p99) is reported in `/v1/stats`.
 | `GET /v1/clusters/{id}` | contract `Cluster` plus its items |
 | `GET /v1/clusters/{id}/timeline` | ordered joins only |
 | `GET /v1/events?after_seq=&limit=` | cluster event log for incremental sync |
-| `GET /v1/feeds?filter=all\|failing\|dead\|stale` | per-feed health: last status and error, adapted interval, fail count, permanent moves |
+| `GET /v1/feeds?filter=all\|failing\|dead\|stale\|quarantined` | per-feed health: last status and error, adapted interval, fail count, permanent moves, the steward's signals and quarantine |
 | `GET /v1/outlets` | registry with domains and feeds |
 | `GET /v1/stats` | process counters, store totals, embed and assign latency |
 | `GET /debug` | live page showing clusters form, styled from `design/tokens.css` |

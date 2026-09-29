@@ -82,7 +82,17 @@ Then, in another terminal or a browser:
   that fails consistently for another reason is a bug; note the URL and
   the `last_error`.
 - `http://127.0.0.1:8080/v1/stats` — `fetch_errors` and `parse_errors`
-  should be a small fraction of `fetches`.
+  should be a small fraction of `fetches`; `items_held` counts items
+  the steward kept out.
+- `http://127.0.0.1:8080/v1/feeds?filter=quarantined` — feeds the
+  steward is holding (`docs/steward.md` §2), each with the one-sentence
+  reason and the release time. Expect none on the first fetch and a
+  few after a day: a feed that republishes its items under new URLs,
+  or whose bodies stopped parsing. A quarantine is not a config
+  problem and lifts itself; a feed that is quarantined again and again
+  for the same reason is one to replace with `feeds --fix` or drop.
+  `health.timestamps_unreliable` on a feed means its claimed publish
+  times are days off; `lens` still shows both times.
 
 Let it run for at least a day before judging clustering. Then:
 

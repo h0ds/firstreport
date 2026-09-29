@@ -79,8 +79,10 @@ runbook's job; `kagami doctor` reports what is still missing.
   clustering with a merge pass, revision and withdrawal tracking,
   syndication groups, the read-only API with Markdown twins, OpenAPI
   and `llms.txt`, NDJSON and Parquet export including revisions, a
-  nightly job, feed discovery and OPML import, and `feed eval` over two
-  golden pair sets. See `feed/docs/plan.md` §11.
+  nightly job, feed discovery and OPML import, `feed eval` over three
+  golden pair sets, and the steward's feed health: five stated rules
+  that quarantine a broken feed for a day with the reason shown
+  (`docs/steward.md` S1). See `feed/docs/plan.md` §11.
 - **ledger** is at L2e: file-backed claim store with validation and
   refresh tracking, importers for Wikidata, Wikipedia's perennial
   sources list, domain registration via RDAP, the outlet's own site and
