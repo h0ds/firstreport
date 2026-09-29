@@ -46,9 +46,10 @@ outlet = "ap"
 
 # ---- added by hand, not yet polled. Feed URLs are from memory: after
 # the first poll, /v1/feeds?filter=failing lists any that are wrong, and
-# `feed discover <homepage>` finds the right one. Reuters, Nikkei (Japanese)
-# and Yahoo! Japan are absent on purpose: Reuters and Nikkei publish no
-# public feed, and Yahoo! Japan aggregates others' articles.
+# `feed discover <homepage>` finds the right one. Nikkei's Japanese edition
+# and Yahoo! Japan are absent on purpose: Nikkei publishes no public feed
+# (its news sitemap would work here; find the URL locally), and Yahoo! Japan
+# aggregates others' articles. Reuters is below, via its news sitemap.
 
 [[feed]]
 url = "http://rss.cnn.com/rss/edition_world.rss"
@@ -389,3 +390,11 @@ outlet = "tbsnewsdig"
 [[feed]]
 url = "https://www.fnn.jp/feed"
 outlet = "fnn"
+
+# Reuters publishes no feed; its Google News sitemap lists recent articles
+# with headline and time, which is all feed keeps (docs/publisher-rules.md).
+# Fetched only as reuters.com/robots.txt allows, at its Crawl-delay if any.
+[[feed]]
+url = "https://www.reuters.com/arc/outboundfeeds/news-sitemap/?outputType=xml"
+outlet = "reuters"
+interval_secs = 900

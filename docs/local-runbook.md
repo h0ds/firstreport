@@ -111,7 +111,9 @@ first live poll is the verification:
 curl -s 'localhost:8080/v1/feeds?filter=failing' | python3 -m json.tool | grep -E '"url"|last_error|last_status'
 ```
 
-For each failing feed, `cd feed && cargo run -- discover <homepage>`
+Reuters is in through its news sitemap; if `/v1/feeds` shows it as
+"disallowed by the host's robots.txt", Reuters has said no and the
+entry comes out. For each other failing feed, `cd feed && cargo run -- discover <homepage>`
 finds the feeds the site advertises; replace the URL in
 `config/feeds.toml`. A host answering 403 or 404 to every UA has no
 public feed; drop it or find a mirror. For Japanese clustering add

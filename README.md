@@ -31,6 +31,14 @@ component preview page. Each tool copies `tokens.css` rather than depending
 on it at runtime, and a test in `lens` fails if its copy drifts. The `lens`
 site, the `feed` debug page and the `ledger` lookup page are its consumers.
 
+## For publishers
+
+Kagami reads feeds and news sitemaps, keeps headline, link, summary
+and time, never fetches article pages, honours robots.txt and
+Crawl-delay on every request, and names this repository in its
+User-Agent. `docs/publisher-rules.md` states exactly what is fetched
+and the rules the fetcher enforces.
+
 ## For agents and bots
 
 Kagami is built to be read by machines as easily as by people, because

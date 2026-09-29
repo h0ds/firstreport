@@ -478,3 +478,8 @@ domains = ["newsdig.tbs.co.jp"]
 id = "fnn"
 name = "FNNプライムオンライン"
 domains = ["fnn.jp"]
+
+[[outlet]]
+id = "reuters"
+name = "Reuters"
+domains = ["reuters.com"]

@@ -12,6 +12,15 @@ cargo test
 
 Runtime state lives in `data/` (gitignored): `feed.db` and `snapshots/`.
 
+## Sources and the publisher's rules
+
+`config/feeds.toml` lists RSS, Atom and JSON feeds and, for publishers
+with no feed, Google News sitemaps, each with the outlet it belongs to.
+Every fetch honours the origin's robots.txt and Crawl-delay, sends
+conditional requests, identifies the project in its User-Agent, and
+never requests an article page. `../docs/publisher-rules.md` states
+exactly what is fetched and kept.
+
 ## Embedding model
 
 ```

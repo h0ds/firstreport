@@ -234,13 +234,84 @@ pub fn claims(outlet_id: &str, obs: &Observation, retrieved_at: i64) -> Vec<Clai
     out
 }
 
+/// Whether robots.txt lets our token (or everyone) fetch the home page:
+/// the group for `kagami-ledger`, else `*`; a `Disallow: /` in it means
+/// no. A small reading of RFC 9309 for the one path we request.
+pub fn robots_allows_home(robots_txt: &str) -> bool {
+    type Group = (Vec<String>, Vec<(bool, String)>);
+    let mut groups: Vec<Group> = Vec::new();
+    let mut last_agent = false;
+    for raw in robots_txt.lines() {
+        let line = raw.split('#').next().unwrap_or("").trim();
+        let Some((k, v)) = line.split_once(':') else {
+            continue;
+        };
+        let (k, v) = (k.trim().to_ascii_lowercase(), v.trim().to_string());
+        match k.as_str() {
+            "user-agent" => {
+                if !last_agent {
+                    groups.push((Vec::new(), Vec::new()));
+                }
+                if let Some(g) = groups.last_mut() {
+                    g.0.push(v.to_ascii_lowercase());
+                }
+                last_agent = true;
+            }
+            "allow" | "disallow" => {
+                if let Some(g) = groups.last_mut() {
+                    g.1.push((k == "allow", v));
+                }
+                last_agent = false;
+            }
+            _ => last_agent = false,
+        }
+    }
+    let group = groups
+        .iter()
+        .find(|g| {
+            g.0.iter()
+                .any(|a| a != "*" && "kagami-ledger".starts_with(a.as_str()))
+        })
+        .or_else(|| groups.iter().find(|g| g.0.iter().any(|a| a == "*")));
+    let Some((_, rules)) = group else { return true };
+    // longest match for "/": only "/" itself (or "/*", "/$") can match
+    let mut best: Option<(usize, bool)> = None;
+    for (allow, path) in rules {
+        let matches = path == "/" || path == "/*" || path == "/$";
+        if matches {
+            let len = path.len();
+            match best {
+                Some((l, a)) if l > len || (l == len && a) => {}
+                _ => best = Some((len, *allow)),
+            }
+        }
+    }
+    best.map(|(_, a)| a).unwrap_or(true)
+}
+
 /// Fetch and observe one domain: HTTPS home page, then plain HTTP to
 /// see where it lands. Network errors are observations, not failures.
+/// The domain's robots.txt is read first; a site that keeps us off its
+/// home page is left alone and reported as unreachable, never recorded.
 pub async fn observe(client: &reqwest::Client, domain: &str) -> Observation {
     let mut obs = Observation {
         domain: domain.to_string(),
         ..Default::default()
     };
+    if let Ok(resp) = client
+        .get(format!("https://{domain}/robots.txt"))
+        .send()
+        .await
+    {
+        if resp.status().is_success() {
+            if let Ok(text) = resp.text().await {
+                if !robots_allows_home(&text) {
+                    tracing::warn!(domain, "robots.txt disallows the home page; skipped");
+                    return obs;
+                }
+            }
+        }
+    }
     match client.get(format!("https://{domain}/")).send().await {
         Ok(resp) => {
             obs.status = Some(resp.status().as_u16());
@@ -341,6 +412,26 @@ mod tests {
                 x.field
             );
         }
+    }
+
+    #[test]
+    fn robots_rules_for_the_home_page() {
+        assert!(robots_allows_home(""));
+        assert!(robots_allows_home("User-agent: *\nDisallow: /admin/\n"));
+        assert!(!robots_allows_home("User-agent: *\nDisallow: /\n"));
+        assert!(
+            robots_allows_home(
+                "User-agent: *\nDisallow: /\n\nUser-agent: kagami-ledger\nDisallow: /private\n"
+            ),
+            "our own group wins"
+        );
+        assert!(!robots_allows_home(
+            "User-agent: kagami-ledger\nDisallow: /\n\nUser-agent: *\nDisallow:\n"
+        ));
+        assert!(
+            robots_allows_home("User-agent: *\nDisallow: /\nAllow: /\n"),
+            "allow wins at equal length"
+        );
     }
 
     #[test]
