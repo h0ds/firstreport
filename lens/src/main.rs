@@ -4,11 +4,14 @@
 //! `docs/plan.md`.
 
 mod build;
+mod check;
 mod cli;
 mod derive;
 mod input;
+mod llms;
 mod pages;
 mod render;
+mod serve;
 
 fn main() {
     if let Err(e) = run() {
@@ -23,10 +26,11 @@ fn run() -> Result<(), String> {
             feed_export,
             ledger_export,
             out,
+            window_hours,
             ..
         } => {
             let input = input::read(&feed_export, &ledger_export)?;
-            let (stories, outlets) = build::write_site(&input, &out)?;
+            let (stories, outlets) = build::write_site(&input, &out, window_hours)?;
             println!(
                 "built {} story pages and {} outlet pages into {}",
                 stories,
@@ -35,7 +39,23 @@ fn run() -> Result<(), String> {
             );
             Ok(())
         }
-        cli::Command::Serve { .. } => Err("serve: not written yet (N1)".into()),
-        cli::Command::Check { .. } => Err("check: not written yet (N1)".into()),
+        cli::Command::Serve { out, bind } => serve::run(&out, &bind),
+        cli::Command::Check { out } => {
+            let r = check::run(&out)?;
+            for p in &r.problems {
+                println!("{p}");
+            }
+            println!(
+                "{} pages, {} internal links, {} problems",
+                r.pages,
+                r.links,
+                r.problems.len()
+            );
+            if r.problems.is_empty() {
+                Ok(())
+            } else {
+                Err(format!("{} problems", r.problems.len()))
+            }
+        }
     }
 }
