@@ -345,43 +345,60 @@ const PAGE: &str = r##"<!doctype html>
 <link rel="alternate" type="application/json" href="/v1/log" title="Public log (JSON)">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this server">
 <style>
-:root{--kg-blue:#2563EB;--kg-blue-hover:#1D4ED8;--kg-blue-soft:#DBEAFE;--kg-blue-ink:#1E3A8A;--kg-bg:#FFFFFF;--kg-bg-subtle:#F8FAFC;--kg-line:#E2E8F0;--kg-line-strong:#CBD5E1;--kg-text-muted:#64748B;--kg-text-secondary:#334155;--kg-text:#0F172A;--kg-ok:#059669;--kg-warn:#D97706;--kg-err:#DC2626;--kg-font-serif:"Instrument Serif","Iowan Old Style","Times New Roman",serif;--kg-font-sans:Inter,-apple-system,"Segoe UI",system-ui,sans-serif;--kg-font-mono:"JetBrains Mono","SF Mono",Menlo,Consolas,monospace;--kg-t-base:200ms;--kg-ease:cubic-bezier(0.2,0,0,1)}
+:root{--kg-blue:#2563EB;--kg-blue-hover:#1D4ED8;--kg-blue-soft:#DBEAFE;--kg-blue-ink:#1E3A8A;--kg-bg:#FFFFFF;--kg-bg-subtle:#F8FAFC;--kg-line:#E2E8F0;--kg-line-strong:#CBD5E1;--kg-text-muted:#64748B;--kg-text-secondary:#334155;--kg-text:#0F172A;--kg-ok:#059669;--kg-warn:#D97706;--kg-err:#DC2626;--kg-font-serif:"Instrument Serif", "Iowan Old Style", "Times New Roman", serif;--kg-font-sans:Inter, -apple-system, "Segoe UI", system-ui, sans-serif;--kg-font-mono:"JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;--kg-fs-small:12px;--kg-fs-ui:13px;--kg-fs-body:15px;--kg-fs-body-lg:17px;--kg-fs-h3:20px;--kg-fs-h2:28px;--kg-lh-small:16px;--kg-lh-ui:20px;--kg-lh-body:24px;--kg-lh-body-lg:24px;--kg-lh-h3:28px;--kg-lh-h2:32px;--kg-lockup-wordmark:28px;--kg-lockup-kanji:17px;--kg-s1:4px;--kg-s2:8px;--kg-s3:12px;--kg-s4:16px;--kg-s5:24px;--kg-s6:32px;--kg-s7:48px;--kg-s8:64px;--kg-s9:96px;--kg-radius-input:4px;--kg-t-fast:120ms;--kg-t-base:200ms;--kg-ease:cubic-bezier(0.2, 0, 0, 1)}
 html{background:var(--kg-bg);color:var(--kg-text)}
-body{margin:0;font:15px/1.6 var(--kg-font-sans);font-feature-settings:"tnum","cv11","ss01";-webkit-font-smoothing:antialiased}
-main{max-width:880px;margin:0 auto;padding:32px 16px 96px}
-header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--kg-line)}
-.lockup{display:inline-flex;align-items:baseline;gap:12px;font-size:32px}
-.wordmark{font-family:var(--kg-font-serif);font-style:italic;letter-spacing:-0.01em}
-.wordmark .kanji{font-family:"Noto Serif JP",serif;font-style:normal;font-size:.6em;color:var(--kg-text-muted);margin-left:.25em}
+body{margin:0;font:400 var(--kg-fs-body)/var(--kg-lh-body) var(--kg-font-sans);font-feature-settings:"tnum","cv11","ss01";-webkit-font-smoothing:antialiased}
+p,ul,ol{margin:0}
+main{max-width:880px;margin:0 auto;padding:var(--kg-s6) var(--kg-s5) var(--kg-s9)}
+header{display:flex;align-items:baseline;justify-content:space-between;gap:var(--kg-s4);flex-wrap:wrap;padding-bottom:var(--kg-s4);border-bottom:1px solid var(--kg-line)}
+.lockup{display:inline-flex;align-items:baseline;gap:var(--kg-s3);font-size:var(--kg-lockup-wordmark);line-height:var(--kg-lh-h2)}
+.wordmark{font-family:var(--kg-font-serif);font-style:italic;letter-spacing:-0.01em;color:var(--kg-text)}
+.wordmark .kanji{font-family:"Noto Serif JP",serif;font-style:normal;font-size:var(--kg-lockup-kanji);color:var(--kg-text-muted);margin-left:var(--kg-s1)}
 .rule{align-self:stretch;width:1px;background:var(--kg-line-strong)}
-.tool{font-weight:500;font-size:16px}
-.muted{color:var(--kg-text-muted);font-size:12px;letter-spacing:.01em}
-.mono{font-family:var(--kg-font-mono);font-size:13px}
-a{color:var(--kg-blue);text-decoration:none;text-underline-offset:3px}a:hover{text-decoration:underline}
-h2{font-family:var(--kg-font-serif);font-weight:400;font-size:28px;line-height:1.15;margin:32px 0 8px}
-.entry{padding:20px 0;border-bottom:1px solid var(--kg-line)}
-.mention{font-size:13px;color:var(--kg-text-secondary)}
+.tool{font-weight:500;font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui);color:var(--kg-text-secondary)}
+.muted{color:var(--kg-text-muted);font-size:var(--kg-fs-small);line-height:var(--kg-lh-small);letter-spacing:.01em}
+.mono{font-family:var(--kg-font-mono);font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui)}
+h2{font-family:var(--kg-font-serif);font-weight:400;font-size:var(--kg-fs-h2);line-height:var(--kg-lh-h2);letter-spacing:-0.01em;margin:var(--kg-s6) 0 var(--kg-s2)}
+h3{font-size:var(--kg-fs-h3);line-height:var(--kg-lh-h3);font-weight:600;letter-spacing:-0.01em;margin:var(--kg-s5) 0 var(--kg-s2)}
+a{color:var(--kg-blue);text-decoration:none;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-skip-ink:auto;transition:color var(--kg-t-fast) var(--kg-ease),text-decoration-color var(--kg-t-fast) var(--kg-ease)}
+a:hover{text-decoration-line:underline;color:var(--kg-blue-hover)}
+.title-link a,a.title-link{color:inherit}
+.title-link a:hover,a.title-link:hover{color:var(--kg-blue)}
+.quiet a,a.quiet{color:inherit;text-decoration-line:underline;text-decoration-color:var(--kg-line-strong)}
+.quiet a:hover,a.quiet:hover{color:var(--kg-blue);text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--kg-blue);outline-offset:2px}
+input[type=search],input[type=number],select{font:400 var(--kg-fs-ui)/var(--kg-lh-ui) var(--kg-font-sans);height:36px;padding:0 var(--kg-s3);border:1px solid var(--kg-line-strong);border-radius:var(--kg-radius-input);background:var(--kg-bg);color:var(--kg-text);box-sizing:border-box}
+input[type=search]:focus,input[type=number]:focus,select:focus{outline:2px solid var(--kg-blue);outline-offset:0}
+.tag{font-family:var(--kg-font-mono);font-size:var(--kg-fs-small);line-height:var(--kg-lh-small);padding:2px var(--kg-s2);border:1px solid var(--kg-line);border-radius:var(--kg-radius-input);color:var(--kg-text-secondary);white-space:nowrap}
+.sep{color:var(--kg-line-strong)}
+.status{display:inline-flex;align-items:center;gap:var(--kg-s2);font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui)}
+.status::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.status.ok{color:var(--kg-ok)}.status.warn{color:var(--kg-warn)}.status.err{color:var(--kg-err)}
+.status span{color:var(--kg-text-secondary)}
+.empty{color:var(--kg-text-muted);padding:var(--kg-s5) 0}
+.foot{margin-top:var(--kg-s7)}
+@keyframes kg-fade-in{from{opacity:0}to{opacity:1}}
+.enter{animation:kg-fade-in var(--kg-t-base) var(--kg-ease)}
+@media (prefers-reduced-motion:reduce){.enter{animation:none}a{transition:none}}
+@media (max-width:720px){main{padding:var(--kg-s5) var(--kg-s4) var(--kg-s8)}}
+.entry{padding:var(--kg-s5) 0;border-bottom:1px solid var(--kg-line)}
+.mention{font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui);color:var(--kg-text-secondary)}
 .mention .who{font-weight:500;color:var(--kg-text)}
-.quote{margin:6px 0 0;padding-left:12px;border-left:2px solid var(--kg-line-strong);color:var(--kg-text-secondary);font-size:14px}
-.sentences{list-style:none;margin:12px 0 0;padding:0}
-.sentences li{display:grid;grid-template-columns:20px 1fr;gap:10px;align-items:start;padding:6px 0}
-.sentences input{margin:5px 0 0}
-.sentences .cite{display:block;font-size:12px;color:var(--kg-text-muted)}
-.sentences .cite .tag{font-family:var(--kg-font-mono);font-size:11px;padding:0 5px;border:1px solid var(--kg-line);border-radius:4px;margin-right:6px}
-.gaps{margin:8px 0 0;font-size:13px;color:var(--kg-text-secondary)}
+.quote{margin:var(--kg-s2) 0 0;padding-left:var(--kg-s3);border-left:2px solid var(--kg-line-strong);color:var(--kg-text-secondary)}
+.sentences{list-style:none;margin:var(--kg-s3) 0 0;padding:0}
+.sentences li{display:grid;grid-template-columns:var(--kg-s5) 1fr;gap:var(--kg-s2);align-items:start;padding:var(--kg-s1) 0}
+.sentences input{margin:var(--kg-s1) 0 0}
+.sentences .cite{display:flex;gap:var(--kg-s2);align-items:center;flex-wrap:wrap;margin-top:var(--kg-s1);font-size:var(--kg-fs-small);line-height:var(--kg-lh-small);color:var(--kg-text-muted)}
+.gaps{margin:var(--kg-s2) 0 0;font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui);color:var(--kg-text-secondary)}
 .gaps span::before{content:"gap · ";color:var(--kg-text-muted)}
-.actions{display:flex;gap:12px;align-items:center;margin-top:14px}
-button{font:500 14px var(--kg-font-sans);padding:8px 14px;border-radius:4px;border:1px solid var(--kg-line-strong);background:var(--kg-bg);color:var(--kg-text);cursor:pointer}
+.actions{display:flex;gap:var(--kg-s3);align-items:center;margin-top:var(--kg-s4)}
+button{font:500 var(--kg-fs-ui)/var(--kg-lh-ui) var(--kg-font-sans);padding:var(--kg-s1) var(--kg-s4);min-height:var(--kg-s6);border-radius:var(--kg-radius-input);border:1px solid var(--kg-line-strong);background:var(--kg-bg);color:var(--kg-text);cursor:pointer;transition:background var(--kg-t-fast) var(--kg-ease),border-color var(--kg-t-fast) var(--kg-ease)}
 button:hover{border-color:var(--kg-text-muted)}
 button.primary{background:var(--kg-blue);border-color:var(--kg-blue);color:#fff}button.primary:hover{background:var(--kg-blue-hover)}
 button:disabled{opacity:.5;cursor:default}
-.result{font-size:13px}.result.ok{color:var(--kg-ok)}.result.err{color:var(--kg-err)}
-.empty{color:var(--kg-text-muted);padding:24px 0}
-.log .entry{padding:12px 0}
-.log .posts{font-size:14px;color:var(--kg-text-secondary);margin:4px 0 0}
-.enter{animation:kg-fade-in var(--kg-t-base) var(--kg-ease)}
-@keyframes kg-fade-in{from{opacity:0}to{opacity:1}}
-@media (prefers-reduced-motion:reduce){.enter{animation:none}}
+.result{font-size:var(--kg-fs-ui);line-height:var(--kg-lh-ui)}.result.ok{color:var(--kg-ok)}.result.err{color:var(--kg-err)}
+.log .entry{padding:var(--kg-s3) 0}
+.log .posts{color:var(--kg-text-secondary);margin:var(--kg-s1) 0 0}
 </style>
 </head>
 <body>
@@ -395,7 +412,7 @@ button:disabled{opacity:.5;cursor:default}
 <div id="queue"></div>
 <h2>Public log</h2>
 <div id="log" class="log"></div>
-<p class="muted" style="margin-top:48px">Machine readers: the log is at <a href="/v1/log">/v1/log</a>. See <a href="/llms.txt">/llms.txt</a>.</p>
+<p class="muted quiet foot">Machine readers: the log is at <a href="/v1/log">/v1/log</a>. See <a href="/llms.txt">/llms.txt</a>.</p>
 </main>
 <script>
 const $ = s => document.querySelector(s);
@@ -409,14 +426,14 @@ async function load() {
     const m = e.facts.mention, d = e.draft, last = d.sentences.length - 1;
     const subj = e.facts.subject, about = subj.urls.length ? subj.urls[0] : (subj.text || '');
     return `<article class="entry enter" data-id="${esc(e.id)}">
-      <div class="mention"><span class="who">@${esc(m.author)}</span> on ${esc(m.platform)} · ${when(m.at)} · <a href="${esc(m.id)}" rel="noopener">mention</a> · subject from ${esc(subj.from)} · ${esc(d.lang)}${d.lang_fallback ? ` (no ${esc(m.lang)} templates)` : ''}</div>
+      <div class="mention quiet"><span class="who">@${esc(m.author)}</span> on ${esc(m.platform)} · ${when(m.at)} · <a href="${esc(m.id)}" rel="noopener">mention</a> · subject from ${esc(subj.from)} · ${esc(d.lang)}${d.lang_fallback ? ` (no ${esc(m.lang)} templates)` : ''}</div>
       <div class="quote">${esc(m.text)}${about ? `<br><span class="mono">${esc(about)}</span>` : ''}</div>
-      <ul class="sentences">${d.sentences.map((s, i) => { const c = d.cites.find(c => c.sentence === i) || {}; return `<li><input type="checkbox" checked ${i === last ? 'disabled' : ''} data-i="${i}"><div>${esc(s)}<span class="cite"><span class="tag">${esc(c.kind)}</span><a href="${esc(c.url)}" rel="noopener">${esc(c.reference)}</a> · ${esc(d.template_ids[i])}</span></div></li>`; }).join('')}</ul>
+      <ul class="sentences quiet">${d.sentences.map((s, i) => { const c = d.cites.find(c => c.sentence === i) || {}; return `<li><input type="checkbox" checked ${i === last ? 'disabled' : ''} data-i="${i}"><div>${esc(s)}<span class="cite"><span class="tag">${esc(c.kind)}</span><a href="${esc(c.url)}" rel="noopener">${esc(c.reference)}</a> · ${esc(d.template_ids[i])}</span></div></li>`; }).join('')}</ul>
       ${e.facts.gaps.length ? `<div class="gaps">${e.facts.gaps.map(g => `<span>${esc(g)}</span>`).join('<br>')}</div>` : ''}
       <div class="actions"><button class="primary" data-act="approve">Post reply</button><button data-act="decline">Decline</button><span class="result"></span></div>
     </article>`;
   }).join('');
-  $('#log').innerHTML = log.length ? log.slice(-20).reverse().map(e => `<div class="entry"><div class="mention">${esc(e.status)} · ${when(e.decided_at)} · ${esc(e.facts.mention.platform)} · ${esc(e.draft.template_ids.join(', '))} · <a href="/v1/log/${esc(e.id)}">record</a>${e.reply ? ` · ${esc(e.reply.reviewer)}` + e.reply.post_ids.map(p => ` · <a href="${esc(p)}" rel="noopener">post</a>`).join('') : ''}</div><div class="posts">${e.draft.posts.map(esc).join('<br>')}</div></div>`).join('') : '<div class="empty">No replies yet.</div>';
+  $('#log').innerHTML = log.length ? log.slice(-20).reverse().map(e => `<div class="entry"><div class="mention quiet">${esc(e.status)} · ${when(e.decided_at)} · ${esc(e.facts.mention.platform)} · ${esc(e.draft.template_ids.join(', '))} · <a href="/v1/log/${esc(e.id)}">record</a>${e.reply ? ` · ${esc(e.reply.reviewer)}` + e.reply.post_ids.map(p => ` · <a href="${esc(p)}" rel="noopener">post</a>`).join('') : ''}</div><div class="posts">${e.draft.posts.map(esc).join('<br>')}</div></div>`).join('') : '<div class="empty">No replies yet.</div>';
 }
 document.addEventListener('click', async ev => {
   const b = ev.target.closest('button[data-act]'); if (!b) return;
@@ -703,5 +720,112 @@ mod tests {
         assert!(over_limit(&[e.clone()], "a", l, 100 + 86_401).is_none());
         e.status = "declined".into();
         assert!(over_limit(&[e], "a", l, 200).is_none());
+    }
+}
+
+#[cfg(test)]
+mod design_tests {
+    //! Design conformance (design/DESIGN.md §3, §4, §12), modelled on lens's
+    //! `stylesheets_use_only_scale_values`. Copied per crate, not shared
+    //! (project rule).
+
+    const PAGE_HTML: &str = super::PAGE;
+
+    fn style_block() -> &'static str {
+        let a = PAGE_HTML.find("<style>").expect("<style>") + "<style>".len();
+        let b = PAGE_HTML.find("</style>").expect("</style>");
+        &PAGE_HTML[a..b]
+    }
+
+    /// `(selector, property, value)` for every declaration, including
+    /// inline `style=""` attributes (selector `style=`).
+    fn declarations() -> Vec<(String, String, String)> {
+        let mut out = Vec::new();
+        for block in style_block().split('}') {
+            let Some((sel, body)) = block.rsplit_once('{') else { continue };
+            let sel = sel.rsplit('{').next().unwrap_or(sel).trim().to_string();
+            for d in body.split(';') {
+                if let Some((p, v)) = d.split_once(':') {
+                    out.push((sel.clone(), p.trim().to_string(), v.trim().to_string()));
+                }
+            }
+        }
+        for part in PAGE_HTML.split("style=\"").skip(1) {
+            let body = part.split('"').next().unwrap_or("");
+            for d in body.split(';') {
+                if let Some((p, v)) = d.split_once(':') {
+                    out.push(("style=".into(), p.trim().to_string(), v.trim().to_string()));
+                }
+            }
+        }
+        out
+    }
+
+    #[test]
+    fn embedded_css_uses_only_scale_values() {
+        let spacing = ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px"];
+        for (sel, prop, val) in declarations() {
+            if sel == ":root" || prop.starts_with("--") {
+                continue; // token definitions, checked against design/ below
+            }
+            let at = format!("`{sel} {{ {prop}: {val} }}`");
+            if prop == "font-size" {
+                assert!(
+                    val.starts_with("var(--kg-fs-") || val.starts_with("var(--kg-lockup-"),
+                    "raw font size {at}"
+                );
+            }
+            if prop == "font" {
+                assert!(val.contains("var(--kg-fs-") && !val.contains("px"), "font shorthand off the scale {at}");
+            }
+            if prop == "line-height" {
+                assert!(val.starts_with("var(--kg-lh-"), "line height not a grid token {at}");
+            }
+            if prop.starts_with("margin") || prop.starts_with("padding") || prop == "gap" {
+                for tok in val.split_whitespace() {
+                    let ok = tok == "0"
+                        || tok == "auto"
+                        || tok.starts_with("var(--kg-s")
+                        || spacing.contains(&tok)
+                        || (tok == "2px" && sel == ".tag");
+                    assert!(ok, "spacing off the 4px scale {at}");
+                }
+            }
+        }
+        assert!(
+            !PAGE_HTML.contains("font-size=\""),
+            "SVG text sizes come from a class on the scale, not a font-size attribute"
+        );
+        assert!(
+            !PAGE_HTML.contains("preserveAspectRatio=\"none\""),
+            "charts are drawn at size, never stretched"
+        );
+    }
+
+    #[test]
+    fn embedded_tokens_match_design() {
+        let design = std::fs::read_to_string(
+            std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../design/tokens.css"),
+        )
+        .expect("design/tokens.css");
+        let defs = |css: &str| -> Vec<(String, String)> {
+            css.split(|c| c == ';' || c == '{' || c == '}' || c == '\n')
+                .filter_map(|d| {
+                    let d = d.trim();
+                    let d = d.split("/*").next().unwrap_or(d).trim();
+                    d.strip_prefix("--kg-").and_then(|r| r.split_once(':')).map(|(k, v)| {
+                        (k.trim().to_string(), v.trim().to_string())
+                    })
+                })
+                .collect()
+        };
+        let want: std::collections::HashMap<String, String> = defs(&design).into_iter().collect();
+        let root = style_block().split(":root{").nth(1).expect(":root").split('}').next().unwrap();
+        let have = defs(&format!("{{{root}}}"));
+        assert!(have.len() > 20, "tokens block present");
+        for (k, v) in have {
+            let w = want.get(&k).unwrap_or_else(|| panic!("--kg-{k} is not a design token"));
+            assert_eq!(&v, w, "--kg-{k} differs from design/tokens.css");
+        }
     }
 }
