@@ -1,0 +1,98 @@
+{
+  "claims": {
+    "japanforward": [
+      {
+        "data": {
+          "domain": "japan-forward.com",
+          "expires": "2026-11-21",
+          "last_changed": "2025-11-05",
+          "registrar": "GMO Internet Group, Inc. d/b/a Onamae.com",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "japanforward",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/japan-forward.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2016-11-21"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653949,
+    "expired": false,
+    "id": 6126366559603894296,
+    "item_count": 1,
+    "last_active_at": 1790653949,
+    "origin_item_id": 6126366559603894296,
+    "origin_outlet_id": "japanforward",
+    "outlet_count": 1,
+    "primary_title": "Long-Term Interest Rate Climbs to 30-Year High Amid Inflation Concerns",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 6126366559603894296,
+        "joined_at": 1790653949,
+        "outlet_id": "japanforward",
+        "published_at": 1790315700
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japanforward": "Japan Forward"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japan-forward.com/long-term-interest-rate-30-year-high-inflation/",
+          "cluster_id": 6126366559603894296,
+          "fetched_at": 1790653949,
+          "id": 6126366559603894296,
+          "joined_at": 1790653949,
+          "lang": "en",
+          "outlet_id": "japanforward",
+          "published_at": 1790315700,
+          "summary": "Rising oil prices and expectations of further Federal Reserve tightening are pushing global bond yields higher, now affecting Japan's mortgage market. The post Long-Term Interest Rate Climbs to 30-Year High Amid Inflation Concerns first appeared on Japan Forward .",
+          "text_hash": 1413092857342852129,
+          "title": "Long-Term Interest Rate Climbs to 30-Year High Amid Inflation Concerns"
+        }
+      ],
+      "outlet_id": "japanforward"
+    }
+  ],
+  "withdrawals": []
+}

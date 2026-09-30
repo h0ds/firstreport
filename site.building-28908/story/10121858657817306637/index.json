@@ -1,0 +1,244 @@
+{
+  "claims": {
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "nytimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nytimes.com",
+          "expires": "2027-01-19",
+          "last_changed": "2024-12-18",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nytimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nytimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-01-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1851-09-18"
+      },
+      {
+        "data": {
+          "qid": "Q2529982"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The New York Times Company"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_244#RfC:_Wound_characteristics_of_military-style_rifles",
+            "#cite_note-70"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New York Times (NYT)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New York Times is generally reliable. WP:RSOPINION should be used to evaluate opinion columns, while WP:NEWSBLOG should be used for the blogs on The New York Times's website. The 2018 RfC cites WP:MEDPOP to establish that popular press sources such as The New York Times should generally not be used to support medical claims."
+        },
+        "field": "reliability",
+        "outlet_id": "nytimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": null
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 10121858657817306637,
+    "item_count": 2,
+    "last_active_at": 1790653944,
+    "origin_item_id": 10121858657817306637,
+    "origin_outlet_id": "nytimes",
+    "outlet_count": 2,
+    "primary_title": "Yemen’s army says 476 Houthis killed or wounded in 356 operations over 24 hours",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 10121858657817306637,
+        "joined_at": 1790633633,
+        "outlet_id": "nytimes",
+        "published_at": 1790612437
+      },
+      {
+        "item_id": 2411068989719495416,
+        "joined_at": 1790653944,
+        "outlet_id": "anadolu",
+        "published_at": 1790629930
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "nytimes"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "anadolu": "Anadolu Agency",
+    "nytimes": "The New York Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nytimes.com/2026/09/28/world/middleeast/yemen-war-800-dead.html",
+          "cluster_id": 10121858657817306637,
+          "fetched_at": 1790633633,
+          "id": 10121858657817306637,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "nytimes",
+          "published_at": 1790612437,
+          "summary": "The fighting between the Iran-backed Houthi militia and Saudi-backed government forces has exacerbated one of the world’s worst humanitarian crises, the World Health Organization said.",
+          "text_hash": 14001973857577533081,
+          "title": "Over 800 Killed in Renewed Houthi-Saudi War in Yemen, W.H.O. Says"
+        }
+      ],
+      "outlet_id": "nytimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/middle-east/yemen-s-army-says-476-houthis-killed-or-wounded-in-356-operations-over-24-hours/4072064",
+          "cluster_id": 10121858657817306637,
+          "fetched_at": 1790653944,
+          "id": 2411068989719495416,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790629930,
+          "summary": "Operations took place on 10 fronts across country, says army",
+          "text_hash": 8016519431915660519,
+          "title": "Yemen’s army says 476 Houthis killed or wounded in 356 operations over 24 hours"
+        }
+      ],
+      "outlet_id": "anadolu"
+    }
+  ],
+  "withdrawals": []
+}

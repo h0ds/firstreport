@@ -1,0 +1,100 @@
+{
+  "claims": {
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653946,
+    "expired": false,
+    "id": 7111970774736166146,
+    "item_count": 1,
+    "last_active_at": 1790653946,
+    "origin_item_id": 7111970774736166146,
+    "origin_outlet_id": "japantimes",
+    "outlet_count": 1,
+    "primary_title": "Residents of Polish region key for NATO try to live normally despite threat",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 7111970774736166146,
+        "joined_at": 1790653946,
+        "outlet_id": "japantimes",
+        "published_at": 1790653320
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japantimes": "The Japan Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/news/2026/09/29/world/society/residents-calm-nato-chokepoint/",
+          "cluster_id": 7111970774736166146,
+          "fetched_at": 1790653946,
+          "id": 7111970774736166146,
+          "joined_at": 1790653946,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790653320,
+          "summary": "The 104-kilometer Suwalki Gap is one of the most strategic points along the military alliance's eastern flank.",
+          "text_hash": 6111995452646470008,
+          "title": "Residents of Polish region key for NATO try to live normally despite threat"
+        }
+      ],
+      "outlet_id": "japantimes"
+    }
+  ],
+  "withdrawals": []
+}

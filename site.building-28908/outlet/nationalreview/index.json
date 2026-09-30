@@ -1,0 +1,510 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "nationalreview.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.6361
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.64 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://www.wikidata.org/wiki/Q1699649",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "nationalreview.com",
+          "expires": "2031-07-17",
+          "last_changed": "2026-05-20",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nationalreview.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-07-18"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://www.wikidata.org/wiki/Q1699649",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1955-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q41298"
+        },
+        "field": "legal_form",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://www.wikidata.org/wiki/Q1699649",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "magazine"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "nationalreview.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://www.nationalreview.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "National Review"
+      },
+      {
+        "field": "name",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://www.wikidata.org/wiki/Q1699649",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "National Review"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "nationalreview",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nationalreview",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.2 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "nationalreview.com"
+        },
+        "field": "registrar",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nationalreview.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Network Solutions, LLC"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_60#National_Review_a_reliable_source_on_China?_MA_thesis_cites_primary_sources--okay_or_not?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_82#Ion_Mihai_Pacepa,_National_Review_Online,_Pave_the_Way_Foundation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_128#Stanley_Kurtz_National_Review_article_about_Obama_and_the_New_Party",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_153#National_Review_opinion_rant",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_214#Can_National_Review_be_considered_a_RS_in_the_following_context_re_Hillary_Clinton's_cattle_trading?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#RFC:_National_Review"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "National Review (NR)",
+          "status": "no_consensus",
+          "summary": "There is no consensus on the reliability of National Review. Most editors consider National Review a partisan source whose statements should be attributed. The publication's opinion pieces should be handled with the appropriate guideline. Take care to ensure that content from the National Review constitutes due weight in the article and conforms to the biographies of living persons policy."
+        },
+        "field": "reliability",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "nationalreview",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nationalreview",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "nationalreview.com",
+          "final_url": "https://www.nationalreview.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://www.nationalreview.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "domain": "nationalreview.com",
+          "missing": [
+            "about",
+            "contact",
+            "privacy",
+            "corrections",
+            "ethics",
+            "masthead"
+          ]
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://www.nationalreview.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "none of the usual accountability pages linked from its home page"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "nationalreview",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nationalreview",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://www.wikidata.org/wiki/Q1699649",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.nationalreview.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://www.wikidata.org/wiki/Q1699649",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q1699649"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "nationalreview",
+        "ref_url": "https://www.wikidata.org/wiki/Q1699649",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/National_Review"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "nationalreview",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nationalreview",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 30,
+  "outlet": {
+    "domains": [
+      "nationalreview.com"
+    ],
+    "id": "nationalreview",
+    "name": "National Review"
+  },
+  "shared_stories": 0,
+  "stories": [
+    {
+      "created_at": 1790724790,
+      "first": true,
+      "id": 11145480062507280448,
+      "outlet_count": 1,
+      "title": "The World Runs on Diesel"
+    },
+    {
+      "created_at": 1790720520,
+      "first": true,
+      "id": 11416589697332902339,
+      "outlet_count": 1,
+      "title": "In Britain, the Terror Question Remains the Same: War or Crime?"
+    },
+    {
+      "created_at": 1790715375,
+      "first": true,
+      "id": 16214010298392929494,
+      "outlet_count": 1,
+      "title": "China’s German Roadkill"
+    },
+    {
+      "created_at": 1790715375,
+      "first": true,
+      "id": 11140184409599632659,
+      "outlet_count": 1,
+      "title": "The Parade of Hormuz Horribles Fizzles Out"
+    },
+    {
+      "created_at": 1790715375,
+      "first": true,
+      "id": 2325581257532560059,
+      "outlet_count": 1,
+      "title": "A War Rejected by the People"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 13925913901795289977,
+      "outlet_count": 1,
+      "title": "Doctors Didn’t Leave Idaho Because of Its Abortion Law"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 11222163438606778874,
+      "outlet_count": 1,
+      "title": "Not All ‘Classical’ Schools Are Created Equal"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 9720234021228811795,
+      "outlet_count": 1,
+      "title": "Against the Hollywood Bailout"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 5159923177825012925,
+      "outlet_count": 1,
+      "title": "Make American Democracy Great Again"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 2022841560128532887,
+      "outlet_count": 1,
+      "title": "James Talarico’s Unconvincing Christian Progressivism"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 17669875482836332242,
+      "outlet_count": 1,
+      "title": "Tending the Landscapes of Our Imaginations"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 17128120999206123204,
+      "outlet_count": 1,
+      "title": "A Tale of Two Jurors"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 15625418277236824993,
+      "outlet_count": 1,
+      "title": "My ‘Buddy’ System: The Nickname I Vowed Never to Call My Sons"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 15492152074948483264,
+      "outlet_count": 1,
+      "title": "Flattering a Faltering China: Trump Misreads a Country in Decline"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 14021128182262841313,
+      "outlet_count": 1,
+      "title": "The Growing Houthi Threat Presents an Opportunity"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 13579833045183234074,
+      "outlet_count": 1,
+      "title": "The State Department’s Passport to Patriotism Is a Junk Show"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 13238321821727396101,
+      "outlet_count": 1,
+      "title": "Republicans Facing the High Political Cost of Tariffs"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 11521566100777923508,
+      "outlet_count": 1,
+      "title": "The Quiet Rise of the German Far Left"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 11325970728621133113,
+      "outlet_count": 1,
+      "title": "Trump Strikes Blow Against Gender Experiments on Minors"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 9412919983652341004,
+      "outlet_count": 1,
+      "title": "Nikole Hannah-Jones’s Daughter Is Not the Only Victim"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 8094254913908326475,
+      "outlet_count": 1,
+      "title": "Fulton Sheen Was More Than an Influencer Saint"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 7885038468789397715,
+      "outlet_count": 1,
+      "title": "Michael McCaul, Citizen Servant"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 7719372154058588023,
+      "outlet_count": 1,
+      "title": "Only Congress Can Intervene on Trump’s Truth Social Profiteering"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 7123114715366788037,
+      "outlet_count": 1,
+      "title": "The Country Beneath the Political Noise"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 7064165110713680524,
+      "outlet_count": 1,
+      "title": "The Revolt Against Tariffs"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 5258729003783386953,
+      "outlet_count": 1,
+      "title": "What the ‘Anti-Woke’ Crowd Gets Wrong"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 4272954037062435676,
+      "outlet_count": 1,
+      "title": "What Is and Isn’t Illiberalism"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 3503444375771749934,
+      "outlet_count": 1,
+      "title": "The Week: Xi Comes to D.C."
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 1811622429725794881,
+      "outlet_count": 1,
+      "title": "Get Government Out of the Kitchen"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 583140600661470810,
+      "outlet_count": 1,
+      "title": "The Underfunding Myth Is Exposed"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

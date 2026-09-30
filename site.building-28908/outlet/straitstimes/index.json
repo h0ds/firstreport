@@ -1,0 +1,679 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "straitstimes.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.1507
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.15 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1110794"
+        },
+        "field": "legal_form",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "daily newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "straitstimes.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.straitstimes.com/global",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "The Straits Times"
+      },
+      {
+        "field": "name",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Straits Times"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 63,
+          "origin_of": 10,
+          "shared_stories": 31,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "straitstimes",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/straitstimes",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 32% of 31 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 63,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "straitstimes",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/straitstimes",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.7 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "straitstimes.com"
+        },
+        "field": "registrar",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "CSC Corporate Domains, Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 63,
+          "revised": 3,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "straitstimes",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/straitstimes",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "5% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "final_url": "https://www.straitstimes.com/global",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.straitstimes.com/global",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://vt.tiktok.com/ZSMr24eyF/?ref=headstart-navbar",
+          "domain": "straitstimes.com",
+          "missing": [
+            "contact",
+            "privacy",
+            "corrections",
+            "ethics",
+            "masthead"
+          ]
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.straitstimes.com/global",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about pages from its home page; no contact, privacy, corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 63,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "straitstimes",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/straitstimes",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.straitstimes.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q498921"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Straits_Times"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 63,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 3
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "straitstimes",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/straitstimes",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "5% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 23,
+  "items": 138,
+  "outlet": {
+    "domains": [
+      "straitstimes.com"
+    ],
+    "id": "straitstimes",
+    "name": "The Straits Times"
+  },
+  "shared_stories": 67,
+  "stories": [
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 5623028648086973051,
+      "outlet_count": 7,
+      "title": "US forces exit Iraq after two decades, leaving opening for Iran"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 3373977240165332470,
+      "outlet_count": 8,
+      "title": "Venezuelan man shot by ICE officer in Texas is charged with assault"
+    },
+    {
+      "created_at": 1790715378,
+      "first": false,
+      "id": 6644257237448895193,
+      "outlet_count": 14,
+      "title": "Trump: Tech Leaders Signed Accord to 'Self-Police' AI Development"
+    },
+    {
+      "created_at": 1790725113,
+      "first": true,
+      "id": 10475242091245672301,
+      "outlet_count": 1,
+      "title": "US says two Indian nationals indicted in counterfeit Ozempic smuggling scheme"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 3043460793184237497,
+      "outlet_count": 10,
+      "title": "Hurricane Polo threatens Southwest U.S. with flooding. See its path."
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 3322863658697567134,
+      "outlet_count": 18,
+      "title": "Justices Let Deportations to 3rd Countries Resume While Weighing Policy"
+    },
+    {
+      "created_at": 1790715371,
+      "first": true,
+      "id": 12673064130074651214,
+      "outlet_count": 2,
+      "title": "Romanian court rules to detain pro-Russian former presidential candidate pending fraud probe"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 11726634235689167800,
+      "outlet_count": 13,
+      "title": "Morocco’s king appoints the country’s first woman prime minister"
+    },
+    {
+      "created_at": 1790723528,
+      "first": true,
+      "id": 9189223027001241157,
+      "outlet_count": 1,
+      "title": "Antisemitism at UK universities is increasing, security charity says"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 3372583884509813153,
+      "outlet_count": 13,
+      "title": "OpenAI cancels release of newest model due to safety concerns"
+    },
+    {
+      "created_at": 1790715371,
+      "first": false,
+      "id": 7553827412345677229,
+      "outlet_count": 4,
+      "title": "US sanctions 10 over allegedly procuring weapons for Iran"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 925583014156697947,
+      "outlet_count": 12,
+      "title": "French far-right’s Bardella denies alleged antisemitic comments, files defamation lawsuit"
+    },
+    {
+      "created_at": 1790715371,
+      "first": true,
+      "id": 7172764593455172329,
+      "outlet_count": 2,
+      "title": "UN renews Haiti force mandate for six months after fresh gang killings"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15587760235900320854,
+      "outlet_count": 26,
+      "title": "5 men released on bail in UK over suspected US-run airbase plot"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 4130165621540026667,
+      "outlet_count": 1,
+      "title": "While You Were Sleeping: 5 stories you might have missed, Sept 29, 2026"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 2687155261920818657,
+      "outlet_count": 10,
+      "title": "UAE, Israel both confirm Netanyahu's Abu Dhabi trip after reports"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18293615436391779908,
+      "outlet_count": 17,
+      "title": "New York prosecutors reopen investigation into alleged rape at Cornell University"
+    },
+    {
+      "created_at": 1790715371,
+      "first": true,
+      "id": 5738979473323118593,
+      "outlet_count": 1,
+      "title": "At UN, developing nations call for bigger say in shaping AI future"
+    },
+    {
+      "created_at": 1790653848,
+      "first": false,
+      "id": 12392621956996144113,
+      "outlet_count": 10,
+      "title": "Rubio says UK airbase incident involved a foreign state"
+    },
+    {
+      "created_at": 1790679062,
+      "first": true,
+      "id": 12916877823827640315,
+      "outlet_count": 5,
+      "title": "French students and police clash as school blockades turn violent"
+    },
+    {
+      "created_at": 1790716260,
+      "first": false,
+      "id": 9564534923915615296,
+      "outlet_count": 2,
+      "title": "Ceuta mass migrant crossing handling 'responsibility of all EU,' Spanish king says"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 8522530705406292751,
+      "outlet_count": 4,
+      "title": "Saudi crown prince welcomes UAE vice president in Riyadh"
+    },
+    {
+      "created_at": 1790717360,
+      "first": true,
+      "id": 17406273417002796869,
+      "outlet_count": 1,
+      "title": "Costa Rica's Grynspan narrowly ahead in race to be next UN chief, sources say"
+    },
+    {
+      "created_at": 1790716891,
+      "first": true,
+      "id": 17207371783701496932,
+      "outlet_count": 1,
+      "title": "Trump says he does not know if Iran is going to 'give up yet'"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11230258509063452999,
+      "outlet_count": 18,
+      "title": "87-year-old woman whose eviction sparked protests in Spain is returning home"
+    },
+    {
+      "created_at": 1790653936,
+      "first": false,
+      "id": 16109613403163530335,
+      "outlet_count": 5,
+      "title": "Taxpayer-Funded Trump Ad Violates the Hatch Act"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 12183864648573350673,
+      "outlet_count": 9,
+      "title": "3 News Outlets Seek Court Order Against Trump's White House Ban"
+    },
+    {
+      "created_at": 1790715371,
+      "first": false,
+      "id": 11498917335133207289,
+      "outlet_count": 10,
+      "title": "Eiffel Tower chief to step down after exclusion of female staff during Hindu delegation visit"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 2328662350960157817,
+      "outlet_count": 6,
+      "title": "A TV journalist is crowned king of a traditional monarchy in Uganda"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 1812193344952732728,
+      "outlet_count": 5,
+      "title": "Suspected ShinyHunters hacker arrested after FBI data breach"
+    },
+    {
+      "created_at": 1790670817,
+      "first": false,
+      "id": 9923827709977922517,
+      "outlet_count": 3,
+      "title": "Russia ‘not interested’ in serious talks to end its war in Ukraine, says Germany’s Merz"
+    },
+    {
+      "created_at": 1790715371,
+      "first": false,
+      "id": 4171261342992099727,
+      "outlet_count": 3,
+      "title": "Belgium to transfer 3 F-16 fighter jets to Ukraine by end of 2026, Zelensky says"
+    },
+    {
+      "created_at": 1790715371,
+      "first": true,
+      "id": 8324438044210794929,
+      "outlet_count": 2,
+      "title": "Greece agrees to return remains of medieval tsar to Bulgaria"
+    },
+    {
+      "created_at": 1790715371,
+      "first": true,
+      "id": 8130742170536893742,
+      "outlet_count": 2,
+      "title": "Italy completes troop withdrawal from Iraq"
+    },
+    {
+      "created_at": 1790679062,
+      "first": true,
+      "id": 7978507866460908506,
+      "outlet_count": 2,
+      "title": "Soldiers and mercenaries killed at least 34 civilians in Mali, Amnesty report says"
+    },
+    {
+      "created_at": 1790715371,
+      "first": true,
+      "id": 7178353252972061550,
+      "outlet_count": 2,
+      "title": "Swiss archaeologists redraw Roman maps after drought discoveries"
+    },
+    {
+      "created_at": 1790679061,
+      "first": false,
+      "id": 6800150837118356285,
+      "outlet_count": 9,
+      "title": "Slovak school stabbing kills teacher, injures two"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 6236339129075470018,
+      "outlet_count": 8,
+      "title": "3 Egyptian Officials Convicted of Kidnapping Slain Italian Student"
+    },
+    {
+      "created_at": 1790679062,
+      "first": true,
+      "id": 954552317328920245,
+      "outlet_count": 2,
+      "title": "Iraq War film 'Atonement' tells story of US Marine seeking Iraqi family's forgiveness"
+    },
+    {
+      "created_at": 1790665583,
+      "first": false,
+      "id": 6976649014365615021,
+      "outlet_count": 6,
+      "title": "Israel kills senior Hamas commander in Gaza strike"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 14776272129164761012,
+      "outlet_count": 21,
+      "title": "Trump Denies Offering to Sell Arms to China's Xi"
+    },
+    {
+      "created_at": 1790668765,
+      "first": false,
+      "id": 15012738059663545664,
+      "outlet_count": 10,
+      "title": "Estonia blames Russia for arson attack on defense company that provides vehicles to Ukraine"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 5543202539112511581,
+      "outlet_count": 4,
+      "title": "At UN, Denmark says Greenland pact benefits all parties involved"
+    },
+    {
+      "created_at": 1790679062,
+      "first": true,
+      "id": 12275314763615734997,
+      "outlet_count": 2,
+      "title": "Lukashenko proposes US join Belarus-Gazprom fertilizer project, Belta reports"
+    },
+    {
+      "created_at": 1790653944,
+      "first": false,
+      "id": 11885385319615779539,
+      "outlet_count": 6,
+      "title": "Lula widens first-round lead over Flavio Bolsonaro as runoff polls point to tight race in Brazil"
+    },
+    {
+      "created_at": 1790654763,
+      "first": false,
+      "id": 6516553864041570504,
+      "outlet_count": 2,
+      "title": "Russia to cut welfare, education funding in 2027, as spending soars on war in Ukraine"
+    },
+    {
+      "created_at": 1790679060,
+      "first": false,
+      "id": 9892254173691011547,
+      "outlet_count": 7,
+      "title": "Israeli settlers attack West Bank village, blocking family's return home"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 15802106796458350074,
+      "outlet_count": 6,
+      "title": "Mystery over UK airbase scare as police find petrol, not explosives"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 16346503716596623632,
+      "outlet_count": 13,
+      "title": "Pope Leo says concerns about AI doom scenarios are not ‘fake news’"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 12045931927882661973,
+      "outlet_count": 3,
+      "title": "Russia strikes two Kyiv data centres, cargo vessels in the Black Sea"
+    }
+  ],
+  "story_pages": 3,
+  "window_days": 30
+}

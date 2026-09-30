@@ -1,0 +1,1047 @@
+{
+  "claims": {
+    "abcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "abcnews.com",
+          "expires": "2027-04-21",
+          "last_changed": "2026-03-22",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/abcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-20"
+      },
+      {
+        "data": {
+          "domain": "go.com",
+          "expires": "2027-01-08",
+          "last_changed": "2025-12-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/go.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-01-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1945-06-15"
+      },
+      {
+        "data": {
+          "qid": "Q169889"
+        },
+        "field": "owner",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "American Broadcasting Company"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "ABC News (USA)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+        },
+        "field": "reliability",
+        "outlet_id": "abcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "mirror": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "mirror.co.uk",
+          "expires": "2027-09-08",
+          "last_changed": "2026-09-04",
+          "registrar": "CSC Corporate Domains, Inc",
+          "status": [
+            "server delete prohibited",
+            "renew period",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "mirror",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/mirror.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-08"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1636545"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Reach plc"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_160#Huffington_Post/Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#The_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Daily_Express_and_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Daily_Mirror"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Mirror (Mirror)",
+          "status": "no_consensus",
+          "summary": "The Daily Mirror, also known just as the Mirror, is a tabloid newspaper that publishes tabloid journalism. There is no consensus on whether its reliability is comparable to that of British tabloids such as the Daily Mail and The Sun."
+        },
+        "field": "reliability",
+        "outlet_id": "mirror",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "nypost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pagesix.com",
+          "expires": "2027-09-12",
+          "last_changed": "2026-08-11",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/pagesix.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-13"
+      },
+      {
+        "data": {
+          "domain": "nypost.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-08-27",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nypost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1801-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q14289857"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corp"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_312#RFC:_New_York_Post_(nypost.com)",
+            "#cite_note-69"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six) (excluding entertainment)",
+          "status": "generally_unreliable",
+          "summary": "There is consensus the New York Post is generally unreliable for factual reporting, especially with regard to politics, particularly New York City politics. A tabloid newspaper, editors criticise its lack of concern for fact-checking or corrections, including examples of outright fabrication. Editors consider the New York Post more reliable before it changed ownership in 1976, and particularly unr"
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_436#RfC:_Entertainment_coverage_of_the_New_York_Post_(including_Decider_and_Page_Six)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_348#Using_a_Decider.com_interview",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_371#Decider.com_/_Jimmy_DiResta_/_Naomi_Wu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_431#Using_Decider_/_Decider.com_for_interviews_and_reviews"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six, Decider) (entertainment)",
+          "status": "no_consensus",
+          "summary": "There is consensus that the New York Post (nypost.com) and its sub-publications Decider (decider.com) and Page Six are considered to be marginally reliable sources for entertainment coverage, including reviews, but should not be used for controversial statements related to living persons."
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "washingtontimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtontimes.com",
+          "expires": "2027-09-13",
+          "last_changed": "2026-07-30",
+          "registrar": "DNC Holdings, Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtontimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1982-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      },
+      {
+        "data": {
+          "qid": "Q217059"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Unification Church"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_328#RfC:_The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_209#Is_the_Washington_Times_an_acceptable_source_for_statements_of_fact_related_to_student_protesters/black_lives_matter/Milo_Yiannopoulos?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_316#Rebel_News"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Times",
+          "status": "no_consensus",
+          "summary": "There is consensus that The Washington Times is a marginally reliable source for politics and science. Most editors agree that it is a partisan source. Some editors noted a history of publishing inaccurate or false information, of being slow to issue retractions or corrections, and of sometimes only doing so under the threat of legal action; a considerable minority favored deprecation on these gro"
+        },
+        "field": "reliability",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.051508188247680664,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7715082168579102
+    },
+    "created_at": 1790679061,
+    "expired": false,
+    "id": 6800150837118356285,
+    "item_count": 9,
+    "last_active_at": 1790715392,
+    "origin_item_id": 6800150837118356285,
+    "origin_outlet_id": "mirror",
+    "outlet_count": 9,
+    "primary_title": "Slovak school stabbing kills teacher, injures two",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 6800150837118356285,
+        "joined_at": 1790679061,
+        "outlet_id": "mirror",
+        "published_at": 1790677027
+      },
+      {
+        "item_id": 1999288415271060943,
+        "joined_at": 1790681730,
+        "outlet_id": "nypost",
+        "published_at": 1790681581
+      },
+      {
+        "item_id": 4501655666575809667,
+        "joined_at": 1790682685,
+        "outlet_id": "anadolu",
+        "published_at": 1790682627
+      },
+      {
+        "item_id": 15112237526268969939,
+        "joined_at": 1790682789,
+        "outlet_id": "abcnews",
+        "published_at": 1790680794
+      },
+      {
+        "item_id": 6526737691651166613,
+        "joined_at": 1790715370,
+        "outlet_id": "aljazeera",
+        "published_at": 1790704999
+      },
+      {
+        "item_id": 17186731471950593955,
+        "joined_at": 1790715370,
+        "outlet_id": "independent",
+        "published_at": 1790689336
+      },
+      {
+        "item_id": 11949318989661405093,
+        "joined_at": 1790715371,
+        "outlet_id": "straitstimes",
+        "published_at": 1790688120
+      },
+      {
+        "item_id": 15864549562851796807,
+        "joined_at": 1790715379,
+        "outlet_id": "washingtontimes",
+        "published_at": 1790689725
+      },
+      {
+        "item_id": 16576495707542393464,
+        "joined_at": 1790715392,
+        "outlet_id": "arabnews",
+        "published_at": 1790712874
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "abcnews",
+            "aljazeera",
+            "independent",
+            "straitstimes"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews",
+            "mirror",
+            "washingtontimes"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu",
+            "nypost"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcnews": "ABC News",
+    "aljazeera": "Al Jazeera",
+    "anadolu": "Anadolu Agency",
+    "arabnews": "Arab News",
+    "independent": "The Independent",
+    "mirror": "Daily Mirror",
+    "nypost": "New York Post",
+    "straitstimes": "The Straits Times",
+    "washingtontimes": "The Washington Times"
+  },
+  "outlets_24h": 9,
+  "outlets_6h": 5,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 6800150837118356285,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4247,
+      "snapshot_id": 11859162621545782292,
+      "ts": 1790680780
+    }
+  ],
+  "spark": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://mirror.co.uk/news/world-news/slovakia-primary-school-attack-teacher-37713464",
+          "cluster_id": 6800150837118356285,
+          "fetched_at": 1790679061,
+          "id": 6800150837118356285,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "mirror",
+          "published_at": 1790677027,
+          "summary": "An attack at a school in north-west Slovakia left one person dead and two others injured, authorities said - the suspect is a teenage pupil",
+          "text_hash": 17214766691062726961,
+          "title": "Teacher dead and children injured as pupil 'storms school with sharp object' in Slovakia"
+        }
+      ],
+      "outlet_id": "mirror"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/pupil-fatally-stabs-teacher-elementary-school-slovakia-injuring-136846193",
+          "cluster_id": 6800150837118356285,
+          "fetched_at": 1790682789,
+          "id": 15112237526268969939,
+          "joined_at": 1790682789,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790680794,
+          "summary": "A pupil at an elementary school in northwestern Slovakia fatally stabbed a teacher on Tuesday and injured at least two others",
+          "text_hash": 15871588956983536206,
+          "title": "A pupil fatally stabs a teacher at an elementary school in Slovakia, injuring 2 others"
+        }
+      ],
+      "outlet_id": "abcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nypost.com/2026/09/29/world-news/slovakia-elementary-school-student-fatally-stabs-teacher-injures-at-least-two-others/",
+          "cluster_id": 6800150837118356285,
+          "fetched_at": 1790681730,
+          "id": 1999288415271060943,
+          "joined_at": 1790681730,
+          "lang": "en",
+          "outlet_id": "nypost",
+          "published_at": 1790681581,
+          "summary": "A pupil at an elementary school in northwestern Slovakia fatally stabbed a teacher on Tuesday and injured at least two other people, authorities said.",
+          "text_hash": 11331961636328115835,
+          "title": "Slovakia elementary school student fatally stabs teacher, injures at least two others"
+        }
+      ],
+      "outlet_id": "nypost"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/europe/knife-attack-at-slovak-school-leaves-1-dead-2-injured/4072582",
+          "cluster_id": 6800150837118356285,
+          "fetched_at": 1790682685,
+          "id": 4501655666575809667,
+          "joined_at": 1790682685,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790682627,
+          "summary": "Eighth-grader attacks 2 teachers, 1 student",
+          "text_hash": 12455645044046688038,
+          "title": "Knife attack at Slovak school leaves 1 dead, 2 injured"
+        }
+      ],
+      "outlet_id": "anadolu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/slovak-school-stabbing-kills-teacher-injures-two",
+          "cluster_id": 6800150837118356285,
+          "fetched_at": 1790715371,
+          "id": 11949318989661405093,
+          "joined_at": 1790715371,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790688120,
+          "summary": "A 13-year-old schoolboy was detained over the attack, police said.",
+          "text_hash": 8408911831469467643,
+          "title": "Slovak school stabbing kills teacher, injures two"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/europe/slovakia-staskov-school-stabbing-b3058306.html",
+          "cluster_id": 6800150837118356285,
+          "fetched_at": 1790715370,
+          "id": 17186731471950593955,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790689336,
+          "summary": "President Peter Pellegrini said he was ‘deeply saddened by the tragic incident’",
+          "text_hash": 11899074077475772553,
+          "title": "Teacher stabbed to death in Slovakia after student attacks class with knife"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtontimes.com/news/2026/sep/29/teacher-killed-student-attack-elementary-school-slovakia-two-others/",
+          "cluster_id": 6800150837118356285,
+          "fetched_at": 1790715379,
+          "id": 15864549562851796807,
+          "joined_at": 1790715379,
+          "lang": "en",
+          "outlet_id": "washingtontimes",
+          "published_at": 1790689725,
+          "summary": "A teacher was fatally stabbed by a pupil at an elementary school in northwestern Slovakia on Tuesday during an attack in which two other people were seriously injured, authorities said.",
+          "text_hash": 17942957834381828803,
+          "title": "Teacher killed in student attack at an elementary school in Slovakia, 2 others injured"
+        }
+      ],
+      "outlet_id": "washingtontimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/29/slovakia-teacher-killed-in-stabbing-by-student?traffic_source=rss",
+          "cluster_id": 6800150837118356285,
+          "fetched_at": 1790715370,
+          "id": 6526737691651166613,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790704999,
+          "summary": "Police detain the 13-year-old in the northwestern village of Staskov, launch investigation into 'premeditated murder'.",
+          "text_hash": 9119345881335792247,
+          "title": "Schoolboy kills teacher, injures two in Slovakia school stabbing"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/world/slovak-school-stabbing-kills-teacher-injures-two-3003789",
+          "cluster_id": 6800150837118356285,
+          "fetched_at": 1790715392,
+          "id": 16576495707542393464,
+          "joined_at": 1790715392,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790712874,
+          "summary": "A 13-year-old boy in Slovakia attacked a school, resulting in the death of a teacher and injuries to another teacher and a student. The incident took place in the village of Staskov, near the Czech border, and the boy has been detained by police for investigation.",
+          "text_hash": 16433970505227269743,
+          "title": "Slovak school stabbing kills teacher, injures two"
+        }
+      ],
+      "outlet_id": "arabnews"
+    }
+  ],
+  "withdrawals": []
+}

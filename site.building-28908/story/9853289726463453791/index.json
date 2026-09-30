@@ -1,0 +1,117 @@
+{
+  "claims": {
+    "ap": [
+      {
+        "data": {
+          "domain": "apnews.com",
+          "expires": "2027-07-11",
+          "last_changed": "2026-05-12",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ap",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/apnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-07-12"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "#cite_note-7"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Associated Press (AP)",
+          "status": "generally_reliable",
+          "summary": "The Associated Press is a news agency. There is consensus that the Associated Press is generally reliable. Syndicated reports from the Associated Press that are published in other sources are also considered generally reliable."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "ap",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790633851,
+    "expired": false,
+    "id": 9853289726463453791,
+    "item_count": 1,
+    "last_active_at": 1790633851,
+    "origin_item_id": 9853289726463453791,
+    "origin_outlet_id": "ap",
+    "outlet_count": 1,
+    "primary_title": "It’s ‘Pitt’ vs ‘Pluribus’ in drama and ‘Hacks’ vs ‘Widow’s Bay’ in comedy at the upcoming Emmys",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9853289726463453791,
+        "joined_at": 1790633851,
+        "outlet_id": "ap",
+        "published_at": 1788956582
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "ap": "Associated Press"
+  },
+  "outlets_24h": 0,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://apnews.com/article/emmys-pitt-pluribus-hacks-widows-bay-wyle-5d9b89c9c548665b4c9d1345976286ae",
+          "cluster_id": 9853289726463453791,
+          "fetched_at": 1790633851,
+          "id": 9853289726463453791,
+          "joined_at": 1790633851,
+          "lang": "en",
+          "outlet_id": "ap",
+          "published_at": 1788956582,
+          "summary": "Noah Wyle poses in the press room during night two of the Creative Arts Emmy Awards on Sunday, Sept. 6, 2026, in Los Angeles. (AP Photo/Chris Pizzello) 2026-09-09T12:01:46Z LOS ANGELES (AP) — It’s “The Pitt” versus “Pluribus” and “Hacks” against “Widow’s Bay” at the 78th Emmy Awards on Monday night. The stars of all four shows — Noah Wyle in “The Pitt,” Rhea Seehorn in “Pluribus,” Jean Smart in “Hacks” and Matthew Rhys in “Widow’s Bay” — look to be runaway favorites for the top acting awards. And…",
+          "text_hash": 4388689404816895246,
+          "title": "It’s ‘Pitt’ vs ‘Pluribus’ in drama and ‘Hacks’ vs ‘Widow’s Bay’ in comedy at the upcoming Emmys"
+        }
+      ],
+      "outlet_id": "ap"
+    }
+  ],
+  "withdrawals": []
+}

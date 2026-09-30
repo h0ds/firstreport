@@ -1,0 +1,275 @@
+{
+  "claims": {
+    "rt": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "rt.com",
+          "expires": "2027-09-22",
+          "last_changed": "2026-09-21",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rt",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rt.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-09-23"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-09-15"
+      },
+      {
+        "data": {
+          "qid": "Q821172"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "RIA Novosti"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#RfC:_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Enquiry_concerning_the_RT_Network",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_168#RT_news_and_Crimean_status_referendum,_2014",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_173#Russia_Today",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Attributed_statement_sourced_by_RT_news_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_231#RT_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#On_Contact_/_RT",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Ruptly,_subsidiary_of_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)",
+          "status": "deprecated",
+          "summary": "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
+        },
+        "field": "reliability",
+        "outlet_id": "rt",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": null
+    },
+    "created_at": 1790633639,
+    "expired": false,
+    "id": 2867917043866756561,
+    "item_count": 2,
+    "last_active_at": 1790653942,
+    "origin_item_id": 2867917043866756561,
+    "origin_outlet_id": "rt",
+    "outlet_count": 2,
+    "primary_title": "US tech titans attend Trump-Xi dinner. Who wasn’t invited?",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 2867917043866756561,
+        "joined_at": 1790633639,
+        "outlet_id": "rt",
+        "published_at": 1790304386
+      },
+      {
+        "item_id": 10061347516098396702,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790590728
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "thehindu"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "rt"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "rt": "RT",
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rt.com/news/646222-trump-xi-dinner-tech-ai-giants/",
+          "cluster_id": 2867917043866756561,
+          "fetched_at": 1790633639,
+          "id": 2867917043866756561,
+          "joined_at": 1790633639,
+          "lang": "en",
+          "outlet_id": "rt",
+          "published_at": 1790304386,
+          "summary": "The White House guest list featured leaders of America’s top AI firms as Washington and Beijing grapple with an intensifying tech rivalry Read Full Article at RT.com",
+          "text_hash": 7012252173021681860,
+          "title": "US tech titans attend Trump-Xi dinner. Who wasn’t invited?"
+        }
+      ],
+      "outlet_id": "rt"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/from-elon-musk-to-tim-cook-who-attended-donald-trump-xi-jinping-state-dinner-in-white-house/article71507635.ece",
+          "cluster_id": 2867917043866756561,
+          "fetched_at": 1790653942,
+          "id": 10061347516098396702,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790590728,
+          "summary": "Several U.S. technology industry leaders attended the state dinner, underscoring the importance of trade and artificial intelligence during Mr. Xi’s visit to Washington",
+          "text_hash": 3975046715223187420,
+          "title": "Trump-Xi state dinner: From Elon Musk to Tim Cook, who attended the White House banquet?"
+        }
+      ],
+      "outlet_id": "thehindu"
+    }
+  ],
+  "withdrawals": []
+}

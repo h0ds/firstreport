@@ -1,0 +1,141 @@
+{
+  "claims": {
+    "france24": [
+      {
+        "data": {
+          "domain": "france24.com",
+          "expires": "2026-12-01",
+          "last_changed": "2026-04-21",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "france24",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/france24.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-12-01"
+      },
+      {
+        "data": {
+          "qid": "Q166180"
+        },
+        "field": "owner",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France 24"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.2799999713897705,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 1.0
+    },
+    "created_at": 1790716848,
+    "expired": false,
+    "id": 16509772853753607212,
+    "item_count": 2,
+    "last_active_at": 1790716848,
+    "origin_item_id": 15699680337548027078,
+    "origin_outlet_id": "france24",
+    "outlet_count": 1,
+    "primary_title": "Safeguards 'build a moat' around US AI firms, prevent open-source models from advancing, expert says",
+    "syndication": [
+      {
+        "first_outlet_id": "france24",
+        "item_ids": [
+          16509772853753607212,
+          15699680337548027078
+        ],
+        "spread_secs": 132,
+        "text_hash": 7154047476350084267
+      }
+    ],
+    "timeline": [
+      {
+        "item_id": 16509772853753607212,
+        "joined_at": 1790716848,
+        "outlet_id": "france24",
+        "published_at": 1790715626
+      },
+      {
+        "item_id": 15699680337548027078,
+        "joined_at": 1790716848,
+        "outlet_id": "france24",
+        "published_at": 1790715494
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "france24": "France 24"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://france24.com/en/safeguards-build-a-moat-around-us-ai-firms-prevent-open-source-models-from-advancing-expert-says",
+          "cluster_id": 16509772853753607212,
+          "fetched_at": 1790716848,
+          "id": 15699680337548027078,
+          "joined_at": 1790716848,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790715494,
+          "summary": "US President Donald Trump on Tuesday said the tech executives gathered at the White House to discuss regulating AI had signed a \"morally binding\" commitment to build adequate safeguards on the fast-moving technology. Speaking with FRANCE 24's Monte Francis, Harrison Rolfes, Senior Research Analyst at PitchBook, says that the push for safeguards \"prevents open-source models from taking over the competition as well as new incumbents from coming in with a new frontier model\", explaining that the measures…",
+          "text_hash": 7154047476350084267,
+          "title": "Safeguards 'build a moat' around US AI firms, prevent open-source models from advancing, expert says"
+        },
+        {
+          "canonical_url": "https://france24.com/en/tv-shows/a-propos/20260929-safeguards-build-a-moat-around-us-ai-firms-prevent-open-source-models-from-advancing-expert-says",
+          "cluster_id": 16509772853753607212,
+          "fetched_at": 1790716848,
+          "id": 16509772853753607212,
+          "joined_at": 1790716848,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790715626,
+          "summary": "US President Donald Trump on Tuesday said the tech executives gathered at the White House to discuss regulating AI had signed a \"morally binding\" commitment to build adequate safeguards on the fast-moving technology. Speaking with FRANCE 24's Monte Francis, Harrison Rolfes, Senior Research Analyst at PitchBook, says that the push for safeguards \"prevents open-source models from taking over the competition as well as new incumbents from coming in with a new frontier model\", explaining that the measures…",
+          "text_hash": 7154047476350084267,
+          "title": "Safeguards 'build a moat' around US AI firms, prevent open-source models from advancing, expert says"
+        }
+      ],
+      "outlet_id": "france24"
+    }
+  ],
+  "withdrawals": []
+}

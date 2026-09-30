@@ -1,0 +1,488 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "commondreams.org",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.6526
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "commondreams",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.65 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q35127"
+        },
+        "field": "legal_form",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "website"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "commondreams.org"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.commondreams.org/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "Common Dreams"
+      },
+      {
+        "field": "name",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Common Dreams"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "origin_of": 1,
+          "shared_stories": 2,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "commondreams",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/commondreams",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 50% of 2 stories other outlets also carried"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "commondreams",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/commondreams",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.3 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "commondreams.org"
+        },
+        "field": "registrar",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Squarespace Domains II LLC"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "commondreams",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/commondreams",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "final_url": "https://www.commondreams.org/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.commondreams.org/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://archive.ph/o/iLqCM/https://www.cdc.gov/about/leadership/index.html",
+          "contact": "https://www.commondreams.org/contact-us",
+          "domain": "commondreams.org",
+          "ethics": "https://www.commondreams.org/newswire/fuel-economy-standards-axed-by-trump-administration",
+          "masthead": "https://www.commondreams.org/organization/leadership-conference-civil-and-human-rights",
+          "missing": [
+            "corrections"
+          ],
+          "privacy": "https://www.commondreams.org/organization/privacy-international"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.commondreams.org/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, ethics, masthead pages from its home page; no corrections link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "commondreams",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/commondreams",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "http://commondreams.org/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q5153336"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Common_Dreams"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "commondreams",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/commondreams",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 1,
+  "items": 32,
+  "outlet": {
+    "domains": [
+      "commondreams.org"
+    ],
+    "id": "commondreams",
+    "name": "Common Dreams"
+  },
+  "shared_stories": 2,
+  "stories": [
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 16109613403163530335,
+      "outlet_count": 5,
+      "title": "Taxpayer-Funded Trump Ad Violates the Hatch Act"
+    },
+    {
+      "created_at": 1790715390,
+      "first": true,
+      "id": 429124909392413767,
+      "outlet_count": 1,
+      "title": "Senate Expected to Vote on Israel Human Rights Abuse Report"
+    },
+    {
+      "created_at": 1790653936,
+      "first": false,
+      "id": 9266162190657067868,
+      "outlet_count": 2,
+      "title": "Fuel-Economy Standards Axed by Trump Administration"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 17668774125761999378,
+      "outlet_count": 1,
+      "title": "New Report “High Flyers 2026” Reveals How Private Jets Costs Taxpayers and the Planet"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 17169149847486460597,
+      "outlet_count": 1,
+      "title": "Sanders, Casar Introduce Legislation to Create New Federal Agency to Ban Artificial Superintelligence, Pause Advanced AI Development"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 17058273718316179815,
+      "outlet_count": 1,
+      "title": "Trump Administration Directive Would Allow Killing of Endangered Wildlife"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 16976080729501799145,
+      "outlet_count": 1,
+      "title": "Here We Remain: A World That Abides Slaughter"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 16915013990350848306,
+      "outlet_count": 1,
+      "title": "In UN Speech, Trump Brags About Fossil Fuel Resource Grabs"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15386486733072706105,
+      "outlet_count": 1,
+      "title": "UN Secretary-General Guterres calls for future beyond fossil fuels"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15099287184782204499,
+      "outlet_count": 1,
+      "title": "45 Organizations Urge House Democratic Leadership to Call a Vote on Cuba War Powers Resolution"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15033709609666659305,
+      "outlet_count": 1,
+      "title": "Groundwork Reveals the Hidden Cost of AI"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15022125893120114778,
+      "outlet_count": 1,
+      "title": "Statement: don’t trust the AI bros. But take the danger of AI seriously."
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 14460081331549565729,
+      "outlet_count": 1,
+      "title": "Attorney General Bonta Caves to Pressure from Billionaires and Gavin Newsom, Paves Way for Disastrous Paramount-Warner Bros. Mega-Merger"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 12859979385140467455,
+      "outlet_count": 1,
+      "title": "Press-Freedom Coalition Calls for the Immediate Release of ICE-Detained Journalist Luis Galeano"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 12106106094106328891,
+      "outlet_count": 1,
+      "title": "Guterres’ final UN speech calls for \"polluters to pay\" as campaigners present over 2 million signatures at the UNGA"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 11770634528682423236,
+      "outlet_count": 1,
+      "title": "Groundwork Unveils a Bill of Rights to Give Shoppers a Fair Shot in the 21st Century Marketplace"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 9938973157608995466,
+      "outlet_count": 1,
+      "title": "A Certain Weeping: Beyond Bin Laden’s Wildest Dreams"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 8708045208679886415,
+      "outlet_count": 1,
+      "title": "On Unseriousness: Digging More Bonkers GOP Holes"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 8058756460246866929,
+      "outlet_count": 1,
+      "title": "Trump’s Desperate Attempt to Bribe Voters Ahead of Election is a New Low"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 7898599113000469208,
+      "outlet_count": 1,
+      "title": "EPA to Allow Power Plants to Accelerate Global Warming"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 6936621983496082196,
+      "outlet_count": 1,
+      "title": "SCOTUS Greenlights the Misuse of Social Security Data"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 5845823352616667383,
+      "outlet_count": 1,
+      "title": "New ACLU and AFL-CIO Report Shows Deportations Lower Wages and Raise Costs for America’s Workers"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 5452662523796948754,
+      "outlet_count": 1,
+      "title": "August CPI Report Shows Price Hikes Accelerating as Trump Brushes Off Working Families’ Affordability Worries"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 5270665110149397881,
+      "outlet_count": 1,
+      "title": "Trump Moves to Strip EPA of Authority to Limit Power Plant Carbon Pollution"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 3907387399567567354,
+      "outlet_count": 1,
+      "title": "Following SCOTUS Ruling, Common Cause Vows Immediate Legal Action Against Any Attempts to Disenfranchise Voters Using Flawed System"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 3751367354520800949,
+      "outlet_count": 1,
+      "title": "Trump Administration Will Roll Back Climate Rules"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 3716774004416368265,
+      "outlet_count": 1,
+      "title": "FPF comments on White House's defiance of judge's media ban smackdown"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 3278373796392979401,
+      "outlet_count": 1,
+      "title": "RootsAction and Progressive Democrats of America Announce Campaign Urging AOC and Ro Khanna to Run for 2028 Democratic Presidential Nomination"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 1345347957451562160,
+      "outlet_count": 1,
+      "title": "Senate Investigation Into OpenAI Is an Important First Step, But CEOs Must Testify Under Oath"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

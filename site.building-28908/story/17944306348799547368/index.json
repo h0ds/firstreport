@@ -1,0 +1,149 @@
+{
+  "claims": {
+    "pbs": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pbs.org",
+          "expires": "2027-04-20",
+          "last_changed": "2026-08-12",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "pbs",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/pbs.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1969-11-03"
+      },
+      {
+        "as_of": "2016",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_101#Emme_(model)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_135#Judaism:_The_oldest_monotheistic_religion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_150#Center_for_Investigative_Reporting",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_153#thinkprogress.org_as_a_generally_accepted_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_206#Pbs.org"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "PBS (Public Broadcasting Service)",
+          "status": "generally_reliable",
+          "summary": "The Public Broadcasting Service is an American public broadcaster. It is considered generally reliable by editors."
+        },
+        "field": "reliability",
+        "outlet_id": "pbs",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790722476,
+    "expired": false,
+    "id": 17944306348799547368,
+    "item_count": 1,
+    "last_active_at": 1790722476,
+    "origin_item_id": 17944306348799547368,
+    "origin_outlet_id": "pbs",
+    "outlet_count": 1,
+    "primary_title": "Affordability and accountability top priorities if Democrats take House, Jeffries says",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 17944306348799547368,
+        "joined_at": 1790722476,
+        "outlet_id": "pbs",
+        "published_at": 1790721355
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "pbs": "PBS NewsHour"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://pbs.org/newshour/show/affordability-and-accountability-top-priorities-if-democrats-take-house-jeffries-says",
+          "cluster_id": 17944306348799547368,
+          "fetched_at": 1790722476,
+          "id": 17944306348799547368,
+          "joined_at": 1790722476,
+          "lang": "en",
+          "outlet_id": "pbs",
+          "published_at": 1790721355,
+          "summary": "The latest polling shows Democrats with a solid shot of regaining control of the House of Representatives in the midterm elections. If they do, House Minority Leader Hakeem Jeffries could become Speaker of the House, with debates over the economy, government spending, and President Trump's agenda all unfolding. Jeffries joined Geoff Bennett to discuss those issues.",
+          "text_hash": 674156172558873744,
+          "title": "Affordability and accountability top priorities if Democrats take House, Jeffries says"
+        }
+      ],
+      "outlet_id": "pbs"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 17944306348799547368,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5874,
+      "snapshot_id": 11238533449962063793,
+      "ts": 1790724004
+    }
+  ]
+}

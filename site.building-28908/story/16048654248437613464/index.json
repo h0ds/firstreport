@@ -1,0 +1,363 @@
+{
+  "claims": {
+    "gbnews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      },
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.01636064052581787,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7363606691360474
+    },
+    "created_at": 1790658738,
+    "expired": false,
+    "id": 16048654248437613464,
+    "item_count": 5,
+    "last_active_at": 1790717725,
+    "origin_item_id": 16048654248437613464,
+    "origin_outlet_id": "guardian",
+    "outlet_count": 2,
+    "primary_title": "Burnham to signal willingness to look at scrapping pension triple lock to fund social care",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16048654248437613464,
+        "joined_at": 1790658738,
+        "outlet_id": "guardian",
+        "published_at": 1790658054
+      },
+      {
+        "item_id": 16964377261662432492,
+        "joined_at": 1790670622,
+        "outlet_id": "guardian",
+        "published_at": 1790670175
+      },
+      {
+        "item_id": 16844178345417171316,
+        "joined_at": 1790715376,
+        "outlet_id": "gbnews",
+        "published_at": 1790711992
+      },
+      {
+        "item_id": 6197463414642992469,
+        "joined_at": 1790715376,
+        "outlet_id": "gbnews",
+        "published_at": 1790707323
+      },
+      {
+        "item_id": 9745293311747427810,
+        "joined_at": 1790717725,
+        "outlet_id": "gbnews",
+        "published_at": 1790717555
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "guardian"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "gbnews"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "gbnews": "GB News",
+    "guardian": "The Guardian"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/society/2026/sep/29/labour-insiders-confident-burnham-can-sell-social-care-reforms",
+          "cluster_id": 16048654248437613464,
+          "fetched_at": 1790658738,
+          "id": 16048654248437613464,
+          "joined_at": 1790658738,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790658054,
+          "summary": "Analysts believe PM has a ‘golden opportunity’ to offer older people better protection in return for weakening the triple lock guarantee It is a brave party leader who is prepared to go into an election promising a multibillion-pound new public service – likely to be funded by tax rises or holding back increases in the state pension. But Andy Burnham’s colleagues are excited about the confident promise of new social care system that seven previous prime ministers have failed to deliver. Continue reading...",
+          "text_hash": 21437097486531912,
+          "title": "‘We have time to make our case’: Labour insiders are confident Burnham can sell his social care reforms"
+        },
+        {
+          "canonical_url": "https://theguardian.com/politics/2026/sep/29/andy-burnham-labour-conference-pension-triple-lock-social-care",
+          "cluster_id": 16048654248437613464,
+          "fetched_at": 1790670622,
+          "id": 16964377261662432492,
+          "joined_at": 1790670622,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790670175,
+          "summary": "PM to tell Labour conference he is prepared to make difficult arguments and have ‘honest conversation’ UK politics live – latest updates Andy Burnham will signal he is prepared to look at scrapping the pensions triple lock to fund a national care service, telling the Labour conference he will be willing to make difficult arguments to tackle the UK’s intractable issues such as social care. Government sources have suggested the prime minister would signal his willingness to review the policy but stop short…",
+          "text_hash": 3805500055742064,
+          "title": "Burnham to signal willingness to look at scrapping pension triple lock to fund social care"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://gbnews.com/politics/andy-burnham-accused-turning-on-pensioners-decision-scrap-triple-lock",
+          "cluster_id": 16048654248437613464,
+          "fetched_at": 1790715376,
+          "id": 6197463414642992469,
+          "joined_at": 1790715376,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790707323,
+          "summary": "Robert Jenrick has launched a scathing attack on Andy Burnham's decision to scrap the triple lock, accusing the Prime Minister of \"turning on pensioners\". Speaking to GB News, the Reform UK Treasury Spokesman declared it a \"complete lie\" to target pensioners in favour of funding a new social care project. Announcing the changes at the Labour Party Conference , Mr Burnham said: \"So this is the deal. A state pension that rises every year, no care charges and a high quality national care service to give peace…",
+          "text_hash": 1732186115731417901,
+          "title": "Andy Burnham accused of 'turning on pensioners' over decision to scrap triple lock: 'Complete lies!'"
+        },
+        {
+          "canonical_url": "https://gbnews.com/politics/andy-burnham-social-care-system-expiry-date-ex-labour-minister",
+          "cluster_id": 16048654248437613464,
+          "fetched_at": 1790715376,
+          "id": 16844178345417171316,
+          "joined_at": 1790715376,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790711992,
+          "summary": "Andy Burnham's newly announced plans for a National Care Service has been handed an expiry date by a former Labour Cabinet Minister. Speaking to GB News, Shaun Woodward pinpointed just how long the Prime Minister has to set out an implement his reforms of the care system. Announcing the changes at the Labour Party Conference , Mr Burnham announced plans to axe the triple lock in favour of \"no care charges\" and a \"high quality national care service to give peace of mind in later life\". He said: \"Conference,…",
+          "text_hash": 1485504761731500637,
+          "title": "Andy Burnham's new social care system handed expiry date by ex-Labour minister"
+        },
+        {
+          "canonical_url": "https://gbnews.com/opinion/andy-burnham-triple-lock-pensioners-wasting-billions-pounds-year-patrick-christys",
+          "cluster_id": 16048654248437613464,
+          "fetched_at": 1790717725,
+          "id": 9745293311747427810,
+          "joined_at": 1790717725,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790717555,
+          "summary": "Andy Burnham's triple lock announcement is already unraveling. Today during his party conference speech, he said this: \"We promised in our manifesto to keep the triple lock unchanged throughout this Parliament. I will honour that promise and I will do more from there. \"In April 2030, we will adjust it. The state pension will continue to rise every year, at least by prices, or 2.5 per cent, and it will hold its value relative to earnings over time, so that pensioners will always share in the rising…",
+          "text_hash": 10342663415024290651,
+          "title": "Andy Burnham shouldn't be taking a single penny off pensioners while wasting billions of pounds a year, says Patrick Christys"
+        }
+      ],
+      "outlet_id": "gbnews"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 16048654248437613464,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3652,
+      "snapshot_id": 6936217350698030417,
+      "ts": 1790669159
+    },
+    {
+      "cluster_id": null,
+      "item_id": 16964377261662432492,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3780,
+      "snapshot_id": 14614480373335041781,
+      "ts": 1790679060
+    }
+  ]
+}

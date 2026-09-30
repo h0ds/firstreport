@@ -1,0 +1,675 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "theglobeandmail.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.2402
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.24 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1110794"
+        },
+        "field": "legal_form",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "daily newspaper"
+      },
+      {
+        "data": {
+          "qid": "Q1416653"
+        },
+        "field": "legal_form",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "newspaper of record"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "theglobeandmail.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.theglobeandmail.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "The Globe and Mail"
+      },
+      {
+        "field": "name",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Globe and Mail"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 100,
+          "origin_of": 7,
+          "shared_stories": 23,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "globeandmail",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/globeandmail",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 30% of 23 stories other outlets also carried"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 100,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "globeandmail",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/globeandmail",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "1.1 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "theglobeandmail.com"
+        },
+        "field": "registrar",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Webnames.ca Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 100,
+          "revised": 1,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "globeandmail",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/globeandmail",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "1% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "final_url": "https://www.theglobeandmail.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.theglobeandmail.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.theglobeandmail.com/sports/article-arizona-state-hockey-players-send-letter-to-school-president-about/",
+          "domain": "theglobeandmail.com",
+          "ethics": "https://www.theglobeandmail.com/opinion/article-canadian-medical-association-cultural-safety-code-of-ethics-indigenous/",
+          "masthead": "https://theglobeleadershipinstitute.com/",
+          "missing": [
+            "contact",
+            "corrections"
+          ],
+          "privacy": "https://www.theglobeandmail.com/privacy-terms/terms-and-conditions/?intcmp=footer"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.theglobeandmail.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, privacy, ethics, masthead pages from its home page; no contact, corrections link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 100,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "globeandmail",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/globeandmail",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.theglobeandmail.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q604525"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Globe_and_Mail"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 100,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "globeandmail",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/globeandmail",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 12,
+  "items": 115,
+  "outlet": {
+    "domains": [
+      "theglobeandmail.com"
+    ],
+    "id": "globeandmail",
+    "name": "The Globe and Mail"
+  },
+  "shared_stories": 34,
+  "stories": [
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 3373977240165332470,
+      "outlet_count": 8,
+      "title": "Venezuelan man shot by ICE officer in Texas is charged with assault"
+    },
+    {
+      "created_at": 1790715378,
+      "first": false,
+      "id": 6644257237448895193,
+      "outlet_count": 14,
+      "title": "Trump: Tech Leaders Signed Accord to 'Self-Police' AI Development"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 3043460793184237497,
+      "outlet_count": 10,
+      "title": "Hurricane Polo threatens Southwest U.S. with flooding. See its path."
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 3322863658697567134,
+      "outlet_count": 18,
+      "title": "Justices Let Deportations to 3rd Countries Resume While Weighing Policy"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 3372583884509813153,
+      "outlet_count": 13,
+      "title": "OpenAI cancels release of newest model due to safety concerns"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15587760235900320854,
+      "outlet_count": 26,
+      "title": "5 men released on bail in UK over suspected US-run airbase plot"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18293615436391779908,
+      "outlet_count": 17,
+      "title": "New York prosecutors reopen investigation into alleged rape at Cornell University"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 9330732918201289314,
+      "outlet_count": 7,
+      "title": "What happened when Trump met Xi: big fanfare, but no breakthrough"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 270612440624308507,
+      "outlet_count": 13,
+      "title": "China, US Can Continue Dialogue on AI to Weigh Risks, Benefits - Xi"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 2931301599306692089,
+      "outlet_count": 8,
+      "title": "Tennessee to execute a woman for first time in 200 years after governor denies clemency"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 9378438701147307814,
+      "outlet_count": 10,
+      "title": "Lindsay Clancy's lawyer makes stunning argument in first hearing since recent mistrial"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 12183864648573350673,
+      "outlet_count": 9,
+      "title": "3 News Outlets Seek Court Order Against Trump's White House Ban"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 14776272129164761012,
+      "outlet_count": 21,
+      "title": "Trump Denies Offering to Sell Arms to China's Xi"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 13809834417185423872,
+      "outlet_count": 2,
+      "title": "Zelensky warns Russia of consequences if energy truce talks fail"
+    },
+    {
+      "created_at": 1790715378,
+      "first": true,
+      "id": 18016531439053388489,
+      "outlet_count": 1,
+      "title": "No explosives found after arrests near a U.S.-run military base, British police say"
+    },
+    {
+      "created_at": 1790715378,
+      "first": true,
+      "id": 17262328853407171800,
+      "outlet_count": 1,
+      "title": "Inside Iowa's rising cancer crisis and its grip on the 2026 midterms"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16126029408899543548,
+      "outlet_count": 17,
+      "title": "Iran awaits US response on plan to reopen Strait of Hormuz"
+    },
+    {
+      "created_at": 1790653938,
+      "first": false,
+      "id": 16070166833583881419,
+      "outlet_count": 2,
+      "title": "Trump family business empire faces subpoena blitz if Democrats take Congress: report"
+    },
+    {
+      "created_at": 1790715378,
+      "first": true,
+      "id": 15179362336241832357,
+      "outlet_count": 1,
+      "title": "Former Trump prosecutor defends investigations as Republicans criticize his tactics at Senate hearing"
+    },
+    {
+      "created_at": 1790715371,
+      "first": true,
+      "id": 14279310083449989620,
+      "outlet_count": 2,
+      "title": "AI may be pricing your Big Mac"
+    },
+    {
+      "created_at": 1790715378,
+      "first": true,
+      "id": 11509966465269098985,
+      "outlet_count": 1,
+      "title": "Data centres draw ire from voters across the U.S. ahead of midterms"
+    },
+    {
+      "created_at": 1790715378,
+      "first": true,
+      "id": 1256949120492005443,
+      "outlet_count": 1,
+      "title": "Trump hosts AI leaders at White House"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 1915453072919720181,
+      "outlet_count": 7,
+      "title": "SpaceX’s Starship reaches orbit for the first time"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 10969125623470226463,
+      "outlet_count": 12,
+      "title": "Trump expects more talks after rejecting latest Iranian proposal"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 3648993111915773406,
+      "outlet_count": 2,
+      "title": "Delegates walk out as Netanyahu addresses UN"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 10220048785832836552,
+      "outlet_count": 14,
+      "title": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 13261141543183765197,
+      "outlet_count": 2,
+      "title": "FBI investigates hackers’ claim to have stolen sensitive employee data"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 879591048792657354,
+      "outlet_count": 9,
+      "title": "OpenAI agent hacks into an Australian government site"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 1941916908583497565,
+      "outlet_count": 2,
+      "title": "President Pezeshkian UN speech"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 12233296185065528414,
+      "outlet_count": 3,
+      "title": "Hurricane Nolo still threatens Hawaii as Mexico’s Baja braces for Hurricane Polo"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 15903034560460251028,
+      "outlet_count": 2,
+      "title": "\"We have a choice\": AI leaders sound alarm at UN"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 14381769683683026550,
+      "outlet_count": 2,
+      "title": "India’s ‘cockroach’ youth movement threatens protests if poll panel chief doesn’t quit in 48 hours"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 13900378166459793076,
+      "outlet_count": 2,
+      "title": "Scoop: Trump's Board of Peace to unveil $2.45 billion Gaza recovery plan"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15326836451892574789,
+      "outlet_count": 11,
+      "title": "At least 27 killed in 2 mass shootings in South Africa"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 16352855730270607310,
+      "outlet_count": 4,
+      "title": "Pope Leo criticizes legalization of assisted dying as \"false compassion\""
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 10913449311655102264,
+      "outlet_count": 3,
+      "title": "China to cut tariffs on U.S. farm goods, but soybeans excluded"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 18440462712722000837,
+      "outlet_count": 1,
+      "title": "Allies unite behind Saudi Arabia as Houthis step up attacks"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 18422314456950845743,
+      "outlet_count": 1,
+      "title": "How two Ukrainian children, taken to Russia, fought their way back home"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 18359369729458316319,
+      "outlet_count": 1,
+      "title": "Why the surging conflict in northern Ethiopia could spill across borders"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 18307136558511933021,
+      "outlet_count": 1,
+      "title": "Vietnam upgrades Canada to strategic partner during state visit"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 17930781504186680786,
+      "outlet_count": 1,
+      "title": "Canada signs international statement on AI safety, joining calls for stronger oversight"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 17651095970220212982,
+      "outlet_count": 1,
+      "title": "In French wine country, climate change and dwindling demand are a recipe for trouble"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 17323048349880729334,
+      "outlet_count": 1,
+      "title": "Trump uses UN address to threaten and deride foes and allies alike, as usual"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 17210667035906967975,
+      "outlet_count": 1,
+      "title": "‘Zero chance’ U.S. attacks Canada, Alaska governor tells business conference"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 17019563860460605526,
+      "outlet_count": 1,
+      "title": "Full results from Russia’s parliamentary election confirm Kremlin’s dominance"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 16476493399972517047,
+      "outlet_count": 1,
+      "title": "Susan Sarandon among actors, politicians arrested while protesting Netanyahu's speech"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 15600436268883579355,
+      "outlet_count": 1,
+      "title": "Trump rolls out the red carpet for China’s Xi as both sides seek stability"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 15396228509032404862,
+      "outlet_count": 1,
+      "title": "Iran’s President vows not to surrender to U.S., but says country is ready for talks"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 14932010028541426994,
+      "outlet_count": 1,
+      "title": "Man shot during 2024 Trump campaign rally in Butler, Pa., has died"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 14537118524376547851,
+      "outlet_count": 1,
+      "title": "Russian strikes kill eight in Ukraine after Zelensky appeals for Russia sanctions at UN"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

@@ -1,0 +1,1125 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "bloomberg": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "bloomberg.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-09-24",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bloomberg.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1990-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q13977"
+        },
+        "field": "owner",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg L.P."
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_151#Bloomberg_on_Microsoft",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_270#Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bloomberg_News_/_Decision_not_to_investigate_Michael_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_499#Omitting_Bloomberg_from_India-Pak_Conflicts"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg (Bloomberg News, Bloomberg Businessweek)",
+          "status": "generally_reliable",
+          "summary": "Bloomberg publications, including Bloomberg News and Bloomberg Businessweek, are considered generally reliable for news and business topics. See also: Bloomberg profiles."
+        },
+        "field": "reliability",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#User_submitted_Executive_Profiles_on_Bloomberg.com"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg profiles",
+          "status": "no_consensus",
+          "summary": "Bloomberg company and executive profiles are generally considered to be based on company press releases and should only be used as a source for uncontroversial information. There is consensus that these profiles should not be used to establish notability. Some editors consider these profiles to be akin to self-published sources. See also: Bloomberg."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "dailysabah": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      },
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "ndtv": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "ndtv.com",
+          "expires": "2032-09-25",
+          "last_changed": "2026-09-26",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "pending transfer"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ndtv",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/ndtv.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1988-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q4680631"
+        },
+        "field": "owner",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Adani Group"
+      }
+    ],
+    "sputnik": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "sputniknews.com",
+          "expires": "2028-10-24",
+          "last_changed": "2022-03-04",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputniknews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2011-10-24"
+      },
+      {
+        "data": {
+          "domain": "sputnikglobe.com",
+          "expires": "2028-03-29",
+          "last_changed": "2023-03-30",
+          "registrar": "Domain.com - Network Solutions, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputnikglobe.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2023-03-29"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-11-10"
+      },
+      {
+        "data": {
+          "qid": "Q1140115"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Government of Russia"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#RfC:_Sputnik",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Sputnik_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_212#Source_being_used_in_the_S-400_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_246#Sputnik_(news_agency)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_337#Sputnik-Abkhazia",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_367#Sputnik,_kind_of"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sputnik",
+          "status": "deprecated",
+          "summary": "There is consensus that Sputnik is an unreliable source that publishes false or fabricated information, and should be deprecated as in the 2017 RfC of the Daily Mail. Sputnik is considered a Russian propaganda outlet that engages in bias and disinformation, [ 25 ] a significant proportion of editors endorse that view, with some editors considering it less reliable than Breitbart News. See also: RI"
+        },
+        "field": "reliability",
+        "outlet_id": "sputnik",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.03216242790222168,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 6,
+      "weakest_join": 0.7521624565124512
+    },
+    "created_at": 1790633634,
+    "expired": false,
+    "id": 2687155261920818657,
+    "item_count": 12,
+    "last_active_at": 1790722477,
+    "origin_item_id": 12717646659068163118,
+    "origin_outlet_id": "dailysabah",
+    "outlet_count": 10,
+    "primary_title": "UAE, Israel both confirm Netanyahu's Abu Dhabi trip after reports",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 2687155261920818657,
+        "joined_at": 1790633634,
+        "outlet_id": "aljazeera",
+        "published_at": 1790624550
+      },
+      {
+        "item_id": 15914616893171219391,
+        "joined_at": 1790653933,
+        "outlet_id": "bloomberg",
+        "published_at": 1790635547
+      },
+      {
+        "item_id": 7137933232283866776,
+        "joined_at": 1790653941,
+        "outlet_id": "straitstimes",
+        "published_at": 1790624671
+      },
+      {
+        "item_id": 12071627108289272759,
+        "joined_at": 1790653941,
+        "outlet_id": "ndtv",
+        "published_at": 1790630717
+      },
+      {
+        "item_id": 13674119557020079014,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790596204
+      },
+      {
+        "item_id": 12717646659068163118,
+        "joined_at": 1790653944,
+        "outlet_id": "dailysabah",
+        "published_at": 1790575440
+      },
+      {
+        "item_id": 9408112675924505123,
+        "joined_at": 1790659141,
+        "outlet_id": "arabnews",
+        "published_at": 1790657394
+      },
+      {
+        "item_id": 9417901941674903236,
+        "joined_at": 1790659142,
+        "outlet_id": "sputnik",
+        "published_at": 1790653080
+      },
+      {
+        "item_id": 3203010481920449594,
+        "joined_at": 1790669232,
+        "outlet_id": "euronews",
+        "published_at": 1790667671
+      },
+      {
+        "item_id": 17350147757537572125,
+        "joined_at": 1790679062,
+        "outlet_id": "dailysabah",
+        "published_at": 1790674680
+      },
+      {
+        "item_id": 10649265790455602706,
+        "joined_at": 1790715392,
+        "outlet_id": "arabnews",
+        "published_at": 1790702790
+      },
+      {
+        "item_id": 8846617712283982562,
+        "joined_at": 1790722477,
+        "outlet_id": "anadolu",
+        "published_at": 1790721417
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "bloomberg",
+            "thehindu",
+            "straitstimes"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu",
+            "dailysabah"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "sputnik"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews",
+        "ndtv"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "anadolu": "Anadolu Agency",
+    "arabnews": "Arab News",
+    "bloomberg": "Bloomberg",
+    "dailysabah": "Daily Sabah",
+    "euronews": "Euronews",
+    "ndtv": "NDTV",
+    "sputnik": "Sputnik",
+    "straitstimes": "The Straits Times",
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 9,
+  "outlets_6h": 2,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 15914616893171219391,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3305,
+      "snapshot_id": 8829628284926050065,
+      "ts": 1790662840
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    6,
+    8,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailysabah.com/world/mid-east/netanyahu-reportedly-makes-unannounced-trip-to-uaes-abu-dhabi",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790653944,
+          "id": 12717646659068163118,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790575440,
+          "summary": "Israeli Prime Minister Benjamin Netanyahu made an unannounced visit to Abu Dhabi and met with UAE President Sheikh Mohammed bin Zayed Al Nahyan Sunday, according to a senior Israel...",
+          "text_hash": 12568675472810734385,
+          "title": "Netanyahu reportedly makes unannounced trip to UAE's Abu Dhabi"
+        },
+        {
+          "canonical_url": "https://dailysabah.com/world/mid-east/uae-israel-both-confirm-netanyahus-abu-dhabi-trip-after-reports",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790679062,
+          "id": 17350147757537572125,
+          "joined_at": 1790679062,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790674680,
+          "summary": "The United Arab Emirates and Israel have both confirmed Prime Minister Benjamin Netanyahu's unannounced Sunday trip to the Gulf country to meet its president. President Mohammed bi...",
+          "text_hash": 3363634050914058920,
+          "title": "UAE, Israel both confirm Netanyahu's Abu Dhabi trip after reports"
+        }
+      ],
+      "outlet_id": "dailysabah"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/israeli-media-says-netanyahu-made-unannounced-visit-to-uae/article71517298.ece",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790653942,
+          "id": 13674119557020079014,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790596204,
+          "summary": "The premier's office did not immediately comment",
+          "text_hash": 15620183645975683512,
+          "title": "Netanyahu makes unannounced UAE visit, says Israeli media"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/28/uae-confirms-netanyahu-visit-to-abu-dhabi?traffic_source=rss",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790633634,
+          "id": 2687155261920818657,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790624550,
+          "summary": "The visit took place as the Israeli prime minister battles domestic turmoil ahead of October's Knesset elections.",
+          "text_hash": 12972590586057569848,
+          "title": "UAE confirms Israel PM Netanyahu’s visit to Abu Dhabi"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/middle-east/uae-president-discussed-bilateral-relations-with-israels-netanyahu",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790653941,
+          "id": 7137933232283866776,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790624671,
+          "summary": "UAE President Sheikh Mohamed bin Zayed Al Nahyan discussed bilateral relations during a visit on Sept 27 by Israeli PM Benjamin Netanyahu.",
+          "text_hash": 1455216667170314,
+          "title": "UAE President discussed bilateral relations with Israel's Netanyahu"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://ndtv.com/world-news/benjamin-netanyahu-uae-president-meet-in-abu-dhabi-discuss-bilateral-ties-12111867",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790653941,
+          "id": 12071627108289272759,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790630717,
+          "summary": "Netanyahu's office also confirmed the trip, saying the visit \"focused on strengthening relations between the two countries and on regional challenges\" amid delicate US-backed diplomacy on the Iran war.",
+          "text_hash": 15601884835472831034,
+          "title": "Netanyahu, UAE President Meet In Abu Dhabi, Discuss Bilateral Ties"
+        }
+      ],
+      "outlet_id": "ndtv"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bloomberg.com/news/articles/2026-09-28/netanyahu-mbz-discuss-ways-to-bolster-ties-during-visit-to-uae",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790653933,
+          "id": 15914616893171219391,
+          "joined_at": 1790653933,
+          "lang": "en",
+          "outlet_id": "bloomberg",
+          "published_at": 1790635547,
+          "summary": "Israel’s Prime Minister Benjamin Netanyahu visited the United Arab Emirates where he held talks with the Gulf nation’s president, Sheikh Mohamed bin Zayed Al Nahyan, according to the Israeli premier’s office and the UAE’s state news agency.",
+          "text_hash": 9477338492771370013,
+          "title": "Netanyahu, MBZ Discuss Ways to Bolster Ties During Visit to UAE"
+        }
+      ],
+      "outlet_id": "bloomberg"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://sputnikglobe.com/20260929/netanyahus-office-confirms-israeli-prime-minister-visited-uae-on-sunday-to-enhance-ties-1124805772.html",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790659142,
+          "id": 9417901941674903236,
+          "joined_at": 1790659142,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790653080,
+          "summary": "The office of Israeli Prime Minister Benjamin Netanyahu confirmed his visit to the UAE on Sunday, noting that it focused on strengthening relations between the two countries and addressing regional issues.",
+          "text_hash": 3750763539465053821,
+          "title": "Netanyahu’s Office Confirms Israeli Prime Minister Visited UAE on Sunday to Enhance Ties"
+        }
+      ],
+      "outlet_id": "sputnik"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/middle-east/uae-president-discussed-bilateral-relations-with-israels-netanyahu-state-news-agency-says-3003669",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790659141,
+          "id": 9408112675924505123,
+          "joined_at": 1790659141,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790657394,
+          "summary": "CAIRO: UAE President Sheikh Mohamed bin Zayed Al Nahyan discussed bilateral relations during a visit on Sunday by Israeli Prime Minister Benjamin Netanyahu to the Gulf country, the Emirati state news agency WAM reported on Monday. The report by WAM was the first UAE confirmation of Netanyahu's visit. T he Israeli prime minister's office said on Monday that Netanyahu visited at the invitation of the UAE president. It said the visit \"focused on strengthening relations between the two countr",
+          "text_hash": 9242564562518082090,
+          "title": "UAE president discussed bilateral relations with Israel's Netanyahu, state news agency says"
+        },
+        {
+          "canonical_url": "https://arabnews.com/saudi-arabia/saudi-arabia-denies-representatives-attended-israel-uae-meeting-3003768",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790715392,
+          "id": 10649265790455602706,
+          "joined_at": 1790715392,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790702790,
+          "summary": "RIYADH: Saudi Arabia on Tuesday denied reports that representatives from the Kingdom attended a meeting between Israeli Prime Minister Benjamin Netanyahu and UAE President Sheikh Mohammed bin Zayed Al-Nahyan in Abu Dhabi at the weekend.Israeli journalist Dror Balazada on Monday posted on social media that Saudi representatives joined an expanded meeting after Netanyahu met Sheikh Mohamed, with discussions reportedly focusing on security cooperation, Iran, the Houthis and regional defense systems",
+          "text_hash": 14048032822271955505,
+          "title": "Saudi Arabia denies representatives attended Israel-UAE meeting"
+        }
+      ],
+      "outlet_id": "arabnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/29/uae-confirms-president-met-with-israels-pm-netanyahu-in-abu-dhabi-on-sunday",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790669232,
+          "id": 3203010481920449594,
+          "joined_at": 1790669232,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790667671,
+          "summary": "The visit came weeks after a bombshell Israeli media report that the Emirati president had warned Netanyahu ahead of the Hamas-led attack on Israel in 2023, which the Israeli premier did not pass on to the security services.",
+          "text_hash": 311511781107714628,
+          "title": "UAE confirms president met with Israel's PM Netanyahu in Abu Dhabi on Sunday"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/middle-east/netanyahu-uae-president-hold-expanded-meeting-with-officials-from-10-countries-report/4073176",
+          "cluster_id": 2687155261920818657,
+          "fetched_at": 1790722477,
+          "id": 8846617712283982562,
+          "joined_at": 1790722477,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790721417,
+          "summary": "Israel’s Channel 14 says second session included representatives from US, Saudi Arabia, Morocco, Egypt, Kuwait, Bahrain, Libya and Oman",
+          "text_hash": 9233437671408540163,
+          "title": "Netanyahu, UAE president hold expanded meeting with officials from 10 countries: Report"
+        }
+      ],
+      "outlet_id": "anadolu"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 9408112675924505123,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3619,
+      "snapshot_id": 17764475287792221130,
+      "ts": 1790668806
+    },
+    {
+      "cluster_id": null,
+      "item_id": 15914616893171219391,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3851,
+      "snapshot_id": 6259742575928514645,
+      "ts": 1790679060
+    }
+  ]
+}

@@ -1,0 +1,735 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "bloomberg.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.0792
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.08 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "bloomberg.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-09-24",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bloomberg.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-29"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1990-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q192283"
+        },
+        "field": "legal_form",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news agency"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "bloomberg.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.bloomberg.com/jp",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "Bloomberg.com"
+      },
+      {
+        "field": "name",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg News"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "origin_of": 7,
+          "shared_stories": 16,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "bloomberg",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bloomberg",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 44% of 16 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q13977"
+        },
+        "field": "owner",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg L.P."
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q13977"
+        },
+        "field": "parent",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg L.P."
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "bloomberg",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bloomberg",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.3 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "bloomberg.com"
+        },
+        "field": "registrar",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bloomberg.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "CSC Corporate Domains, Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_151#Bloomberg_on_Microsoft",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_270#Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bloomberg_News_/_Decision_not_to_investigate_Michael_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_499#Omitting_Bloomberg_from_India-Pak_Conflicts"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg (Bloomberg News, Bloomberg Businessweek)",
+          "status": "generally_reliable",
+          "summary": "Bloomberg publications, including Bloomberg News and Bloomberg Businessweek, are considered generally reliable for news and business topics. See also: Bloomberg profiles."
+        },
+        "field": "reliability",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#User_submitted_Executive_Profiles_on_Bloomberg.com"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg profiles",
+          "status": "no_consensus",
+          "summary": "Bloomberg company and executive profiles are generally considered to be based on company press releases and should only be used as a source for uncontroversial information. There is consensus that these profiles should not be used to establish notability. Some editors consider these profiles to be akin to self-published sources. See also: Bloomberg."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "revised": 2,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "bloomberg",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bloomberg",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "7% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "bloomberg.com",
+          "final_url": "https://www.bloomberg.com/jp",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.bloomberg.com/jp",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.bloomberg.com/company/?utm_source=bloomberg-menu&utm_medium=bcom",
+          "contact": "https://www.bloomberg.com/professional/contact-menu/?utm_source=bloomberg-menu&utm_medium=bcom&bbgsum=DG-WS-PROF-DEMO-bbgmenu",
+          "domain": "bloomberg.com",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.bloomberg.com/notices/jp/privacy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.bloomberg.com/jp",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "bloomberg",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bloomberg",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.bloomberg.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q107188753",
+            "Q112610835",
+            "Q13977",
+            "Q93359263",
+            "Q93360342"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q14270642"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Bloomberg_News"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 11
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "bloomberg",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bloomberg",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "37% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 17,
+  "items": 70,
+  "outlet": {
+    "domains": [
+      "bloomberg.com"
+    ],
+    "id": "bloomberg",
+    "name": "Bloomberg"
+  },
+  "shared_stories": 31,
+  "stories": [
+    {
+      "created_at": 1790715378,
+      "first": true,
+      "id": 6644257237448895193,
+      "outlet_count": 14,
+      "title": "Trump: Tech Leaders Signed Accord to 'Self-Police' AI Development"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 3322863658697567134,
+      "outlet_count": 18,
+      "title": "Justices Let Deportations to 3rd Countries Resume While Weighing Policy"
+    },
+    {
+      "created_at": 1790680910,
+      "first": true,
+      "id": 2144685897655024128,
+      "outlet_count": 5,
+      "title": "Trump Launches America.gov AI Tool to Simplify User Navigation of Online Government Services"
+    },
+    {
+      "created_at": 1790716255,
+      "first": true,
+      "id": 17795546613081922634,
+      "outlet_count": 2,
+      "title": "Trump to Tout $54 Billion Alaska LNG Plan Amid Midterm Woes"
+    },
+    {
+      "created_at": 1790721167,
+      "first": true,
+      "id": 16142980050979256805,
+      "outlet_count": 2,
+      "title": "Bloomberg Businessweek Daily: OpenAI Dev Day (Podcast)"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 925583014156697947,
+      "outlet_count": 12,
+      "title": "French far-right’s Bardella denies alleged antisemitic comments, files defamation lawsuit"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15587760235900320854,
+      "outlet_count": 26,
+      "title": "5 men released on bail in UK over suspected US-run airbase plot"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 2687155261920818657,
+      "outlet_count": 10,
+      "title": "UAE, Israel both confirm Netanyahu's Abu Dhabi trip after reports"
+    },
+    {
+      "created_at": 1790722208,
+      "first": true,
+      "id": 14204395466901348284,
+      "outlet_count": 1,
+      "title": "AI Trade & OpenAI Developer Day"
+    },
+    {
+      "created_at": 1790715379,
+      "first": true,
+      "id": 7695855586285115353,
+      "outlet_count": 5,
+      "title": "Hegseth to Cut Pentagon Posts Held for Generals, Admirals"
+    },
+    {
+      "created_at": 1790721820,
+      "first": true,
+      "id": 7803252885963298794,
+      "outlet_count": 1,
+      "title": "Tech Leaders Agree AI Is Risky, Has to Be Safe"
+    },
+    {
+      "created_at": 1790721820,
+      "first": true,
+      "id": 1180361926704683418,
+      "outlet_count": 1,
+      "title": "Florida Senate Nominee Nixon Draws Lines With DSA, Dems"
+    },
+    {
+      "created_at": 1790721167,
+      "first": true,
+      "id": 12168669219079489641,
+      "outlet_count": 1,
+      "title": "Sen. Paul: 'Too Soon' for 'Crazy' AI Regulation"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 13866602592389928610,
+      "outlet_count": 13,
+      "title": "Senate passes bipartisan Protect College Sports Act amid ‘chaos’ in industry"
+    },
+    {
+      "created_at": 1790680910,
+      "first": true,
+      "id": 15931418630873916793,
+      "outlet_count": 3,
+      "title": "South Africa announces measures to tackle violence against women after series of killings"
+    },
+    {
+      "created_at": 1790665825,
+      "first": true,
+      "id": 9838628483592835776,
+      "outlet_count": 2,
+      "title": "Trump is proving that Iran CAN’T control the global oil supply — a win for the world"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 5580719812924862564,
+      "outlet_count": 1,
+      "title": "IIF CEO on Rising Rates, Emerging Markets and Tariffs"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 38450887423748957,
+      "outlet_count": 1,
+      "title": "Boeing Beats Northrop for Next Navy Jet Contract to Replace F-18"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 8752237013316849826,
+      "outlet_count": 2,
+      "title": "Trump Loses Bid to Pause Judge’s Sanctions in IRS Case Fight"
+    },
+    {
+      "created_at": 1790668765,
+      "first": true,
+      "id": 15012738059663545664,
+      "outlet_count": 10,
+      "title": "Estonia blames Russia for arson attack on defense company that provides vehicles to Ukraine"
+    },
+    {
+      "created_at": 1790655372,
+      "first": true,
+      "id": 14858190639268489308,
+      "outlet_count": 7,
+      "title": "Malaysia starts sending Myanmar migrants home"
+    },
+    {
+      "created_at": 1790653944,
+      "first": false,
+      "id": 11885385319615779539,
+      "outlet_count": 6,
+      "title": "Lula widens first-round lead over Flavio Bolsonaro as runoff polls point to tight race in Brazil"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 18132623728524899389,
+      "outlet_count": 1,
+      "title": "South Africa Steps Up GBV Fight After 11th Woman Found Dead"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 16001060273956550496,
+      "outlet_count": 1,
+      "title": "Cuomo Seeks Clarity, Bitget Hacked, Peirce's Exit Interview"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 15802106796458350074,
+      "outlet_count": 6,
+      "title": "Mystery over UK airbase scare as police find petrol, not explosives"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 15351265644088131071,
+      "outlet_count": 1,
+      "title": "Trump Former Antitrust Chief Slater Heads to White & Case"
+    },
+    {
+      "created_at": 1790679060,
+      "first": false,
+      "id": 14774766661040220925,
+      "outlet_count": 2,
+      "title": "French civil servants strike, demand additional budgetary resources"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 12835474910299945890,
+      "outlet_count": 1,
+      "title": "Trump Hosts AI Summit"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 12667577667554103152,
+      "outlet_count": 1,
+      "title": "Rollout of NYC’s Pied-a-Terre Tax Suffers Setback in Lawsuit"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 12336513687248946967,
+      "outlet_count": 1,
+      "title": "Trump Hits Campaign Trail to Sell Economy to Anxious Voters"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 12078947501410788437,
+      "outlet_count": 1,
+      "title": "Burnham Rolls Dice on Radical UK Policies He Knows May Backfire"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 10759615798982436552,
+      "outlet_count": 1,
+      "title": "South Africa Summons US Envoy Again Over Remarks, N24 Reports"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 9438593316819776287,
+      "outlet_count": 4,
+      "title": "European Commission asks United States not to ban diesel supplies to Europe"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 8909748555677657231,
+      "outlet_count": 1,
+      "title": "The Iran Standoff Is Far From Settled"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 5183944707279295174,
+      "outlet_count": 1,
+      "title": "Trump Slaps New Banking Restrictions on Cuba’s Private Sector"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 4775487349281769868,
+      "outlet_count": 1,
+      "title": "US Sanctions Dozens of Suspects From Mexico’s Sinaloa Cartel"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 3800823061881401483,
+      "outlet_count": 1,
+      "title": "OpenAI Targets $30 Billion in New Funding"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 438485275905814643,
+      "outlet_count": 1,
+      "title": "Americans Want More Balance Of Power: Cuomo"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 14438000136465300896,
+      "outlet_count": 4,
+      "title": "US revokes visas from Latin American officials and families over accusations of corruption"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16126029408899543548,
+      "outlet_count": 17,
+      "title": "Iran awaits US response on plan to reopen Strait of Hormuz"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 5005141211514085734,
+      "outlet_count": 2,
+      "title": "Ukraine to Have $54 Billion Funding Gap by 2029, IMF Predicts"
+    },
+    {
+      "created_at": 1790680910,
+      "first": true,
+      "id": 4771033669079411364,
+      "outlet_count": 1,
+      "title": "Quebec Separatists Near Power With Plan for Vote on Breaking Up Canada"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 13411558797431022102,
+      "outlet_count": 1,
+      "title": "Fake News Again Shakes Up Brazil’s Lula-Bolsonaro Presidential Election"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 13064521056191965813,
+      "outlet_count": 1,
+      "title": "UK Needs 'Sovereign Level of Compute,' AI Minister Says"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 12458045821888303624,
+      "outlet_count": 1,
+      "title": "Merz Rival Stokes German Succession Talk With Visit to Turkey"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 6150980776379824007,
+      "outlet_count": 5,
+      "title": "Iran Officials Pessimistic About US Deal Before Midterms"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 5961006631120888268,
+      "outlet_count": 1,
+      "title": "UK Eyes Tougher Benefit Rules to Cut Soaring Welfare Bill"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 5833596311476844434,
+      "outlet_count": 1,
+      "title": "South Africa Defers Paris Club Bid, Turns to Borrowers’ Platform"
+    },
+    {
+      "created_at": 1790653946,
+      "first": false,
+      "id": 4086956260175498864,
+      "outlet_count": 2,
+      "title": "Top Chinese diplomat tells ex-Japanese foreign minister ties must be ‘normalized’"
+    },
+    {
+      "created_at": 1790668765,
+      "first": true,
+      "id": 17791640964825617691,
+      "outlet_count": 1,
+      "title": "China Offers Cheap Loans to Help State Firms Pay Overdue Bills"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

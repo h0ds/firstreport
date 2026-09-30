@@ -1,0 +1,121 @@
+{
+  "claims": {
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790715393,
+    "expired": false,
+    "id": 13521682838471858316,
+    "item_count": 1,
+    "last_active_at": 1790715393,
+    "origin_item_id": 13521682838471858316,
+    "origin_outlet_id": "anadolu",
+    "outlet_count": 1,
+    "primary_title": "European stocks close mixed as bond yields rise, euro weakens",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 13521682838471858316,
+        "joined_at": 1790715393,
+        "outlet_id": "anadolu",
+        "published_at": 1790704350
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "anadolu": "Anadolu Agency"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/economy/european-stocks-close-mixed-as-bond-yields-rise-euro-weakens/4073001",
+          "cluster_id": 13521682838471858316,
+          "fetched_at": 1790715393,
+          "id": 13521682838471858316,
+          "joined_at": 1790715393,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790704350,
+          "summary": "STOXX 600 gives up earlier gains; euro hits 3-month low against dollar as energy costs, US rate expectations weigh on markets",
+          "text_hash": 9309061676735209610,
+          "title": "European stocks close mixed as bond yields rise, euro weakens"
+        }
+      ],
+      "outlet_id": "anadolu"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,139 @@
+{
+  "claims": {
+    "gatewaypundit": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thegatewaypundit.com",
+          "expires": "2031-01-27",
+          "last_changed": "2026-01-20",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thegatewaypundit.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2011-01-27"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2004-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_278#RfC:_\"The_Gateway_Pundit\"_(October)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_256#Among_low-quality_sources,_the_most_popular_websites_are_right-wing_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Gateway Pundit (TGP)",
+          "status": "deprecated",
+          "summary": "The Gateway Pundit was deprecated in the 2019 RfC, which showed consensus that the site is unacceptable as a source. It is unreliable for statements of fact, and given to publishing hoax articles and reporting conspiracy theories as fact."
+        },
+        "field": "reliability",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790715370,
+    "expired": false,
+    "id": 13626484458541225472,
+    "item_count": 1,
+    "last_active_at": 1790715370,
+    "origin_item_id": 13626484458541225472,
+    "origin_outlet_id": "gatewaypundit",
+    "outlet_count": 1,
+    "primary_title": "Widow Whose Husband “Suffocated Slowly” Tells Senate How Doctors Killed Him After Ivermectin Started Working",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 13626484458541225472,
+        "joined_at": 1790715370,
+        "outlet_id": "gatewaypundit",
+        "published_at": 1790714720
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "gatewaypundit": "The Gateway Pundit"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thegatewaypundit.com/2026/09/widow-whose-husband-suffocated-slowly-tells-senate-how/",
+          "cluster_id": 13626484458541225472,
+          "fetched_at": 1790715370,
+          "id": 13626484458541225472,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "gatewaypundit",
+          "published_at": 1790714720,
+          "summary": "This article originally appeared on vigilantfox.com and was republished with permission. The post Widow Whose Husband “Suffocated Slowly” Tells Senate How Doctors Killed Him After Ivermectin Started Working appeared first on The Gateway Pundit .",
+          "text_hash": 3313897162246032672,
+          "title": "Widow Whose Husband “Suffocated Slowly” Tells Senate How Doctors Killed Him After Ivermectin Started Working"
+        }
+      ],
+      "outlet_id": "gatewaypundit"
+    }
+  ],
+  "withdrawals": []
+}

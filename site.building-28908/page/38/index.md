@@ -1,0 +1,54 @@
+# Stories, page 38 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Russian drones hammer apartments, offices and a cultural landmark in Ukraine, killing 7](/story/8322614968272789682/) · 1 outlet · reach 1
+- [Lebanese Forces chief says Hezbollah arms prolong Israeli presence in the south](/story/8404023393713356588/) · 1 outlet · reach 1
+- [Pope Leo XIV urges Europeans to welcome migrants](/story/8689860549580787330/) · 1 outlet · reach 1
+- [US Military healthcare fraud scheme paid for gold-plated Tesla, lavish parties and hotels](/story/8850675884555630449/) · 1 outlet · reach 1
+- [Saudi camel trading rules protect buyers, animals](/story/9501061731543862361/) · 1 outlet · reach 1
+- [Himalayan floods highlight urgent need for regional disaster preparedness: Safi Ahsan Rizvi](/story/9573371545065749934/) · 1 outlet · reach 1
+- [A 1914 Massachusetts mansion built after a high-society scandal is listed for $3.5 million](/story/9717726257251694958/) · 1 outlet · reach 1
+- [Muslim World League calls for Palestinian state, urgent end to Gaza suffering](/story/10340287630548035944/) · 1 outlet · reach 1
+- [NYT tech executive shot dead allegedly by Chinese in-laws at California sports complex; shooters took turns to spray bullets](/story/10367865077154430474/) · 1 outlet · reach 1
+- [Natural beauty](/story/10508793191802413521/) · 1 outlet · reach 1
+- [Donald Trump shares Shehbaz Sharif’s UN speech thanking him for ‘halting’ Operation Sindoor](/story/10557343783776003577/) · 1 outlet · reach 1
+- [What We Are Reading Today: ‘How Our Climate Works’ by Paul I. Palmer](/story/10831086758323027289/) · 1 outlet · reach 1
+- [UEFA Nations League: Ireland players agree to play Israel fixtures, plan black armbands](/story/10841214997014635025/) · 1 outlet · reach 1
+- [Spelling challenge](/story/10960638158549922826/) · 1 outlet · reach 1
+- [Owens Faces Defamation Suits: Right-wing host presses Kirk theories; family fears grow](/story/11201365025151633318/) · 1 outlet · reach 1
+- [Switzerland rejects stricter interpretation of its neutrality](/story/11337633027840784093/) · 2 outlets · reach 1
+- [In 2000, Bruce Willis bought 7.3 acres on Parrot Cay; over four years he built three homes](/story/11773412480506265484/) · 1 outlet · reach 1
+- [Rock and roll](/story/12055590859182204606/) · 1 outlet · reach 1
+- [In 2003, Sean and Melodye Rooney bought Montana land; 23 years later, their 57 acres were protected](/story/12447480470475748241/) · 1 outlet · reach 1
+- [More heavy hitters in US Jewish establishment joining J Street in sign of changing times](/story/12484071362520569812/) · 1 outlet · reach 1
+- [Live in Jerusalem, be surrounded by nature - Sponsored Content](/story/12599977562731836486/) · 1 outlet · reach 1
+- [NASA ramps up support to get Boeing’s astronaut capsule flying after Butch and Suni fiasco](/story/13101773028445450174/) · 1 outlet · reach 1
+- [Ex-Shin Bet chief says he’ll sue Netanyahu for claim he withheld pre-Oct. 7 warnings](/story/13136813744813464871/) · 1 outlet · reach 1
+- [Sudan criticizes US over failure to grant UN entry to leader](/story/13379095139110912433/) · 1 outlet · reach 1
+- [Making room](/story/13404164096798525798/) · 1 outlet · reach 1
+- [Afghanistan says 28 fighters killed after crossing from Pakistan](/story/13982404524150083617/) · 1 outlet · reach 1
+- [Lebanese PM meets Rubio, stresses need for IDF withdrawal, Hezbollah disarmament](/story/14260318719683838725/) · 1 outlet · reach 1
+- [12 dead, dozens missing after vessel capsizes in eastern Congo’s Lake Kivu](/story/14695487159301853451/) · 1 outlet · reach 1
+- [Cholera and measles threaten displaced in Yemen after renewed fighting uproots 142,000, UN warns](/story/15116390644093510539/) · 1 outlet · reach 1
+- [Pope Leo XIV to meet clerical sex abuse victims during France visit](/story/15637418530808086991/) · 2 outlets · reach 1
+- [Why Israel banned Arab parties ahead of polls](/story/15663977974358905849/) · 1 outlet · reach 1
+- [Life returns to submerged Bangkok markets after deadly flooding](/story/15724304339353336283/) · 1 outlet · reach 1
+- [Boeing finds software glitch in automated flight guidance system of MAX planes](/story/16247325549716703236/) · 1 outlet · reach 1
+- [A Texas oil geologist first saw McKittrick Canyon in 1921, later bought the land for a private retreat](/story/16323850987763714794/) · 1 outlet · reach 1
+- [UAE urges diplomacy, stronger international action on Gaza and regional crises at UN](/story/16328271100377266648/) · 2 outlets · reach 1
+- [8.3 mn refugees at risk due to ‘severe’ funding cuts: UN](/story/16589424761394905038/) · 1 outlet · reach 1
+- [US military to guard midterms after Trump gutted agency that protects elections](/story/17005531633924781705/) · 1 outlet · reach 1
+- [Maryland couple transforms 116-acre hunting property into a protected wildlife haven](/story/17287009151303676019/) · 1 outlet · reach 1
+- [Indian Green Card applicants see mysterious USCIS status change, immigration lawyer says it must be a 'system glitch'](/story/17928701044248376204/) · 1 outlet · reach 1
+- [Fighter jets, drones in heavy Somalia fighting](/story/17970877969810349422/) · 1 outlet · reach 1
+- [Russia backs India’s candidature for UNSC permanent seat](/story/18102733844754602870/) · 1 outlet · reach 1
+- [3 people killed, 4 injured in shooting at Detroit strip club, police say](/story/18159919650728931533/) · 1 outlet · reach 1
+- [Russia's top diplomat rejects German calls to ease off its 'dangerous' escalation toward it](/story/18208018354641083891/) · 1 outlet · reach 1
+- [Riyadh to host global WPC Energy Congress in October](/story/18247329558464791593/) · 1 outlet · reach 1
+- [Syria moves to restore Latakia International Airport after Russian handover agreement](/story/18276234125511111093/) · 1 outlet · reach 1
+- [China, U.S. agree to establish AI safety channel after summit](/story/9866422309000156/) · 1 outlet · reach 1
+- [Shares of fast-fashion platform Shein fall 6% after quarterly profit slides 67%](/story/16580393413747462/) · 1 outlet · reach 1
+- [Trump says Canada is ‘destroying itself’ with ‘unchecked’ immigration](/story/210708723452828392/) · 1 outlet · reach 1
+- [Twice's Tzuyu to visit Singapore as part of collaboration with Williams F1 and anime Dan Da Dan](/story/551864998135321136/) · 1 outlet · reach 1
+- [Chinese chip foundry CanSemi’s IPO oversubscribed 2,360 times as investors chase AI boom](/story/895188842071912469/) · 1 outlet · reach 1

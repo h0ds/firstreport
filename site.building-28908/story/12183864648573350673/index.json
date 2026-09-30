@@ -1,0 +1,1020 @@
+{
+  "claims": {
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "democracynow": [
+      {
+        "data": {
+          "domain": "democracynow.org",
+          "expires": "2027-09-10",
+          "last_changed": "2026-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "auto renew period"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "democracynow",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/democracynow.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-09-10"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard#RfC:_update_Democracy_Now!_from_WP:MREL_to_WP:GENREL?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_40#Democracy_Now!",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_71#Democracy_Now_source_article_\"Cheering_Movers_and_Art_Student_Spies\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_84#Democracy_Now!_and_CounterPunch",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_96#Democracy_Now",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_144#Democracy_Now!_in_general"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Democracy Now!",
+          "status": "no_consensus",
+          "summary": "There is no consensus on the reliability of Democracy Now!. Most editors consider Democracy Now! a partisan source whose statements should be attributed. Syndicated content published by Democracy Now! should be evaluated by the reliability of its original publisher."
+        },
+        "field": "reliability",
+        "outlet_id": "democracynow",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "globeandmail": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      },
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "ndtv": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "ndtv.com",
+          "expires": "2032-09-25",
+          "last_changed": "2026-09-26",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "pending transfer"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ndtv",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/ndtv.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1988-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q4680631"
+        },
+        "field": "owner",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Adani Group"
+      }
+    ],
+    "newsmax": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "newsmax.com",
+          "expires": "2027-07-17",
+          "last_changed": "2026-07-17",
+          "registrar": "SafeNames Ltd.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "newsmax",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/newsmax.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-07-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1998-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_297#Is_Newsmax_reliable_for_the_best_Catholic_Colleges?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#Newsmax_interviewee's_opinions"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Newsmax",
+          "status": "deprecated",
+          "summary": "Newsmax was deprecated by snowball clause consensus in the November 2020 RfC. Concerns of editors included that Newsmax lacks adherence to journalistic standards, launders propaganda, promulgates misinformation, promotes conspiracy theories and false information for political purposes, and promotes medical misinformation such as COVID-19 -related falsehoods, climate change denialism, conspiracy th"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "newsmax",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.008747875690460205,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": true,
+      "unscored": 5,
+      "weakest_join": 0.7287479043006897
+    },
+    "created_at": 1790653931,
+    "expired": false,
+    "id": 12183864648573350673,
+    "item_count": 13,
+    "last_active_at": 1790716035,
+    "origin_item_id": 8854665302025352804,
+    "origin_outlet_id": "democracynow",
+    "outlet_count": 9,
+    "primary_title": "3 News Outlets Seek Court Order Against Trump's White House Ban",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 12183864648573350673,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790256180
+      },
+      {
+        "item_id": 16618128916735358362,
+        "joined_at": 1790654492,
+        "outlet_id": "axios",
+        "published_at": 1790198674
+      },
+      {
+        "item_id": 18061569567161478302,
+        "joined_at": 1790659140,
+        "outlet_id": "straitstimes",
+        "published_at": 1790658000
+      },
+      {
+        "item_id": 11529056294613851715,
+        "joined_at": 1790661156,
+        "outlet_id": "arabnews",
+        "published_at": 1790661088
+      },
+      {
+        "item_id": 10059193020269294407,
+        "joined_at": 1790661156,
+        "outlet_id": "globeandmail",
+        "published_at": 1790242780
+      },
+      {
+        "item_id": 5584595836617357357,
+        "joined_at": 1790661744,
+        "outlet_id": "arabnews",
+        "published_at": 1790661088
+      },
+      {
+        "item_id": 8854665302025352804,
+        "joined_at": 1790661855,
+        "outlet_id": "democracynow",
+        "published_at": 1789993108
+      },
+      {
+        "item_id": 87978841535013983,
+        "joined_at": 1790679061,
+        "outlet_id": "ndtv",
+        "published_at": 1790672791
+      },
+      {
+        "item_id": 13456436153832752059,
+        "joined_at": 1790679062,
+        "outlet_id": "globeandmail",
+        "published_at": 1790678831
+      },
+      {
+        "item_id": 7852020777037154033,
+        "joined_at": 1790683293,
+        "outlet_id": "newsmax",
+        "published_at": 1790679544
+      },
+      {
+        "item_id": 17306029509162428094,
+        "joined_at": 1790715370,
+        "outlet_id": "independent",
+        "published_at": 1790694682
+      },
+      {
+        "item_id": 3009191664834727855,
+        "joined_at": 1790715381,
+        "outlet_id": "breitbart",
+        "published_at": 1790676869
+      },
+      {
+        "item_id": 14660329006127654772,
+        "joined_at": 1790716035,
+        "outlet_id": "globeandmail",
+        "published_at": 1790159026
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "axios",
+            "globeandmail",
+            "independent",
+            "straitstimes"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews",
+            "democracynow"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "newsmax"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [
+        "ndtv"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "arabnews": "Arab News",
+    "axios": "Axios",
+    "breitbart": "Breitbart",
+    "democracynow": "Democracy Now!",
+    "globeandmail": "The Globe and Mail",
+    "independent": "The Independent",
+    "ndtv": "NDTV",
+    "newsmax": "Newsmax",
+    "straitstimes": "The Straits Times"
+  },
+  "outlets_24h": 9,
+  "outlets_6h": 3,
+  "revisions": [],
+  "spark": [
+    2,
+    5,
+    5,
+    6,
+    7,
+    7,
+    7,
+    7,
+    9,
+    9,
+    9,
+    9
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "http://democracynow.org/2026/9/21/white_house_press",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790653938,
+          "id": 8854665302025352804,
+          "joined_at": 1790661855,
+          "lang": "en",
+          "outlet_id": "democracynow",
+          "published_at": 1789993108,
+          "summary": "News organizations CNN , MS NOW and Politico are suing the Trump administration over the banning of their reporters from the White House on Friday. Their credentials were confiscated or deactivated when they attempted to enter White House grounds over the weekend. Trump’s decision is “sending the message that if you write stories that are critical of the president, you’re going to lose your access,” says Katie Fallow, a deputy litigation director at Columbia University’s Knight First Amendment Institute,…",
+          "text_hash": 14839689953551477131,
+          "title": "\"War on the Press\": Trump Bans CNN, MS NOW & Politico from White House over Critical Coverage"
+        }
+      ],
+      "outlet_id": "democracynow"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-news-outlets-cnn-ms-now-politico-hearing-trump-white-house-ban/",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790653941,
+          "id": 14660329006127654772,
+          "joined_at": 1790716035,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790159026,
+          "summary": "Judge does not immediately rule on bid by CNN, MS NOW and Politico for temporary restraining order lifting ban, but says he will soon",
+          "text_hash": 6444562492140714261,
+          "title": "Trump’s White House media ban may not comply with legal precedents, judge says"
+        },
+        {
+          "canonical_url": "https://theglobeandmail.com/world/us-politics/article-judge-orders-white-house-restore-access-cnn-ms-now-politico/",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790653941,
+          "id": 10059193020269294407,
+          "joined_at": 1790661156,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790242780,
+          "summary": "U.S. President first announced he was banning reporters from three outlets on Friday, prompting a lawsuit",
+          "text_hash": 7264924182126682426,
+          "title": "CNN, MS NOW and Politico journalists return to White House after judge blocks Trump’s ban"
+        },
+        {
+          "canonical_url": "https://theglobeandmail.com/world/us-politics/article-news-outlets-white-house-access-ban/",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790679062,
+          "id": 13456436153832752059,
+          "joined_at": 1790679062,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790678831,
+          "summary": "Outlets say administration has ‘persisted in unpredictably and inconsistently implementing its ban’ despite a judge’s restraining order",
+          "text_hash": 5566746680538230097,
+          "title": "CNN, MS NOW and Politico ask court to extend block on White House ban until case is resolved"
+        }
+      ],
+      "outlet_id": "globeandmail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/23/white-house-press-ban-access",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790653931,
+          "id": 16618128916735358362,
+          "joined_at": 1790654492,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790198674,
+          "summary": "A judge on Wednesday appeared skeptical of Trump administration arguments justifying the White House barring CNN, MS NOW and Politico, but he did not immediately grant the news outlets' request for a temporary restraining order. Why it matters: In declining to rule right now, the White House has no legal mandate to remove the ban. That means the broader press boycott will likely drag on, leaving the American public without key visual coverage of the White House. Outlets that weren't banned stood in…",
+          "text_hash": 15526039286802245044,
+          "title": "White House press ban set to continue for now after hearing ends without ruling"
+        },
+        {
+          "canonical_url": "https://axios.com/2026/09/24/cnn-white-house-ms-politico-access",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790653931,
+          "id": 12183864648573350673,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790256180,
+          "summary": "A district court judge ruled the White House violated the Fifth Amendment rights of CNN, MS NOW and Politico by banning them, and granted the plaintiffs a temporary restraining order that forces the White House to immediately reinstate their press access for 14 days. But both CNN and Politico said their reporters were denied access to the White House Thursday morning after the ruling. Why it matters: Had a judge ruled against them, the broader press boycott could've dragged on, leaving the American public…",
+          "text_hash": 3719193766022180244,
+          "title": "White House ordered to restore access to banned news outlets"
+        }
+      ],
+      "outlet_id": "axios"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/united-states/cnn-ms-now-politico-ask-judge-to-extend-block-on-white-house-ban",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790659140,
+          "id": 18061569567161478302,
+          "joined_at": 1790659140,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790658000,
+          "summary": "A US district judge previously issued a 14-day temporary restraining order blocking the bans.",
+          "text_hash": 7599978050122697102,
+          "title": "CNN, MS NOW, Politico ask judge to extend block on White House ban"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/media/news-organizations-ask-court-to-bar-white-house-enforcement-of-access-ban-until-case-is-resolved-3003672",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790661156,
+          "id": 11529056294613851715,
+          "joined_at": 1790661156,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790661088,
+          "summary": "Three news outlets are challenging the Trump administration’s enforcement of a ban from White House grounds, citing First Amendment violations. A court has been asked to intervene following inconsistent application despite an existing judge’s order.",
+          "text_hash": 9687632567731897654,
+          "title": "News organizations ask court to bar White House enforcement of access ban until case is resolved"
+        },
+        {
+          "canonical_url": "https://arabnews.com/media/us-news-organizations-ask-court-to-bar-white-house-enforcement-of-access-ban-until-case-is-resolved-3003672",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790661744,
+          "id": 5584595836617357357,
+          "joined_at": 1790661744,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790661088,
+          "summary": "Three news outlets are challenging the Trump administration’s enforcement of a ban from White House grounds, citing First Amendment violations. A court has been asked to intervene following inconsistent application despite an existing judge’s order.",
+          "text_hash": 464260427763827990,
+          "title": "US news organizations ask court to bar White House enforcement of access ban until case is resolved"
+        }
+      ],
+      "outlet_id": "arabnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://ndtv.com/world-news/3-news-outlets-cnn-politico-ms-now-seek-court-order-against-trumps-white-house-ban-12113776",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790679061,
+          "id": 87978841535013983,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790672791,
+          "summary": "\"The White House's words and actions leave little doubt that it will immediately reinstitute a complete ban of CNN, MS NOW, and POLITICO if allowed the opportunity,\" lawyers for CNN, MS NOW and Politico wrote.",
+          "text_hash": 10858540529005651206,
+          "title": "3 News Outlets Seek Court Order Against Trump's White House Ban"
+        }
+      ],
+      "outlet_id": "ndtv"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/politics/2026/09/29/cnn-ms-now-and-politico-seek-court-intervention-to-block-trump-from-stripping-white-house-credentials/",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790715381,
+          "id": 3009191664834727855,
+          "joined_at": 1790715381,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790676869,
+          "summary": "Three news outlets President Donald Trump stripped of White House credentials were back before a federal court Monday night seeking to temporarily restore their access until the case is resolved. The post CNN, MS NOW and Politico Seek Court Intervention to Block Trump from Stripping White House Credentials appeared first on Breitbart .",
+          "text_hash": 16269599287385729281,
+          "title": "CNN, MS NOW and Politico Seek Court Intervention to Block Trump from Stripping White House Credentials"
+        }
+      ],
+      "outlet_id": "breitbart"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://newsmax.com/politics/trump-media-cnn/2026/09/29/id/1271013",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790683293,
+          "id": 7852020777037154033,
+          "joined_at": 1790683293,
+          "lang": "en",
+          "outlet_id": "newsmax",
+          "published_at": 1790679544,
+          "summary": "Three news outlets that President Donald Trump barred from White House grounds this month asked a federal court to block the ban until the case is resolved.CNN, MS NOW and Politico say the administration has \"persisted in unpredictably and inconsistently implementing its...",
+          "text_hash": 8592904501765884295,
+          "title": "News Outlets Seek Court Block on White House Ban"
+        }
+      ],
+      "outlet_id": "newsmax"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/americas/us-politics/trump-white-house-media-ban-lawsuit-b3058382.html",
+          "cluster_id": 12183864648573350673,
+          "fetched_at": 1790715370,
+          "id": 17306029509162428094,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790694682,
+          "summary": "Trump’s attempts to justify press ban are being used as ‘weapons’ against due process, lawyers say",
+          "text_hash": 11639419535828602248,
+          "title": "Media outlets say White House will impose a ‘complete ban’ if Trump wins legal battle"
+        }
+      ],
+      "outlet_id": "independent"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 11529056294613851715,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3277,
+      "snapshot_id": 6022230046656098068,
+      "ts": 1790661744
+    },
+    {
+      "cluster_id": null,
+      "item_id": 7852020777037154033,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4546,
+      "snapshot_id": 6466808075266309492,
+      "ts": 1790715392
+    },
+    {
+      "cluster_id": null,
+      "item_id": 3009191664834727855,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5660,
+      "snapshot_id": 3236693464818417352,
+      "ts": 1790720969
+    }
+  ]
+}

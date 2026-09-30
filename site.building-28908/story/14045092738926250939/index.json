@@ -1,0 +1,226 @@
+{
+  "claims": {
+    "dailysabah": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      },
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "ndtv": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "ndtv.com",
+          "expires": "2032-09-25",
+          "last_changed": "2026-09-26",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "pending transfer"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ndtv",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/ndtv.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1988-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q4680631"
+        },
+        "field": "owner",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Adani Group"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.0461498498916626,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7661498785018921
+    },
+    "created_at": 1790715372,
+    "expired": false,
+    "id": 14045092738926250939,
+    "item_count": 2,
+    "last_active_at": 1790715384,
+    "origin_item_id": 14045092738926250939,
+    "origin_outlet_id": "dailysabah",
+    "outlet_count": 2,
+    "primary_title": "Brexit did 'more harm than good': British PM Burnham",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 14045092738926250939,
+        "joined_at": 1790715372,
+        "outlet_id": "dailysabah",
+        "published_at": 1790694000
+      },
+      {
+        "item_id": 759279884818003918,
+        "joined_at": 1790715384,
+        "outlet_id": "ndtv",
+        "published_at": 1790700143
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "dailysabah": "Daily Sabah",
+    "ndtv": "NDTV"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailysabah.com/world/europe/brexit-did-more-harm-than-good-british-pm-burnham",
+          "cluster_id": 14045092738926250939,
+          "fetched_at": 1790715372,
+          "id": 14045092738926250939,
+          "joined_at": 1790715372,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790694000,
+          "summary": "British Prime Minister Andy Burnham said Tuesday that Brexit had done “more harm than good,” pledging to present the public with options for reshaping the country’s long-term relat...",
+          "text_hash": 12791677758666178565,
+          "title": "Brexit did 'more harm than good': British PM Burnham"
+        }
+      ],
+      "outlet_id": "dailysabah"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://ndtv.com/world-news/brexit-has-done-more-harm-than-good-uk-pm-andy-burnham-seeks-new-eu-ties-12116438",
+          "cluster_id": 14045092738926250939,
+          "fetched_at": 1790715384,
+          "id": 759279884818003918,
+          "joined_at": 1790715384,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790700143,
+          "summary": "Britain's membership of the EU has long been a thorny and highly divisive subject after a knife-edge majority voted to leave in a landmark referendum a decade ago.",
+          "text_hash": 618546114964652114,
+          "title": "\"Brexit Has Done More Harm Than Good\": UK PM Andy Burnham Seeks New EU Ties"
+        }
+      ],
+      "outlet_id": "ndtv"
+    }
+  ],
+  "withdrawals": []
+}

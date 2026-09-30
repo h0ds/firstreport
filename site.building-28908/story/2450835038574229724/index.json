@@ -1,0 +1,178 @@
+{
+  "claims": {
+    "timesofindia": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "indiatimes.com",
+          "expires": "2026-11-21",
+          "last_changed": "2025-10-23",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/indiatimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-11-22"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1838-01-01"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1898-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q139935842"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q139935842"
+      },
+      {
+        "data": {
+          "qid": "Q972645"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Times Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_287#Times_of_India_RFC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_447#RfC:_The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_320#The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_342#Valid_Sources?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_353#Circular_references_from_The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_364#Times_of_India_is_not_that_pro-government_as_mentioned_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_442#Times_of_India_running_AI-generated_articles?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_493#Another_AI-generated_article_from_The_Times_of_India"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Times of India (post-1950) (TOI)",
+          "status": "no_consensus",
+          "summary": "Additional considerations apply to articles published in The Times of India (TOI) after 1950. TOI has sometimes had a poor reputation for fact-checking and its use should be evaluated with caution. Editors should ensure that they do not use paid advertorials —which were first published in TOI in 1950 at the earliest—to verify information or establish notability. Paid advertorials may be of particu"
+        },
+        "field": "reliability",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790715370,
+    "expired": false,
+    "id": 2450835038574229724,
+    "item_count": 1,
+    "last_active_at": 1790715370,
+    "origin_item_id": 2450835038574229724,
+    "origin_outlet_id": "timesofindia",
+    "outlet_count": 1,
+    "primary_title": "Forty-five North Carolina property owners sued over roads planned through their neighborhoods",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 2450835038574229724,
+        "joined_at": 1790715370,
+        "outlet_id": "timesofindia",
+        "published_at": 1790706735
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "timesofindia": "The Times of India"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://timesofindia.indiatimes.com/world/us/forty-five-north-carolina-property-owners-sued-over-roads-planned-through-their-neighborhoods-for-the-1800-home-hilton-bluffs-project-the-developer-removed-both-links-then-the-county-denied-its-revised-one-access-plan/articleshow/134571862.cms",
+          "cluster_id": 2450835038574229724,
+          "fetched_at": 1790715370,
+          "id": 2450835038574229724,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "timesofindia",
+          "published_at": 1790706735,
+          "summary": "The Hilton Bluffs project in North Carolina is facing legal challenges regarding access road routes. Local residents have filed a lawsuit against Copper Builders, objecting to pathways that intrude on private land. Even after revised plans were submitted, local authorities deemed them unsafe, leading to continued construction delays. As both sides gear up for legal hearings, the situation underscores the intense demand for housing in the area.",
+          "text_hash": 15812849633552060735,
+          "title": "Forty-five North Carolina property owners sued over roads planned through their neighborhoods"
+        }
+      ],
+      "outlet_id": "timesofindia"
+    }
+  ],
+  "withdrawals": []
+}

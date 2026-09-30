@@ -1,0 +1,129 @@
+{
+  "export_time": 1790725421,
+  "outlet": "rt",
+  "page": 3,
+  "page_size": 50,
+  "pages": 3,
+  "stories": [
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 2972966147582955061,
+      "outlet_count": 1,
+      "title": "Netanyahu brings ‘killer pager’ to UN (VIDEO)"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 2823725831048044917,
+      "outlet_count": 1,
+      "title": "Trump left Saudi Arabia to face Houthis alone – Mearsheimer to RT (VIDEO)"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 2529943875670185886,
+      "outlet_count": 1,
+      "title": "Participants at the BRICS+ Fashion Summit discuss AI’s influence on the consumer journey"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 2149378219499602180,
+      "outlet_count": 1,
+      "title": "Lavrov warns UN over EU warmongering: As it happened"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 1890773215523600691,
+      "outlet_count": 1,
+      "title": "Attacks on Ukrainians in Poland growing – envoy"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 1538291133882869913,
+      "outlet_count": 1,
+      "title": "Trump vs Xi: Who holds the cards ahead of high-stakes talks?"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 1456237986257820393,
+      "outlet_count": 1,
+      "title": "Is Israel committing genocide in Lebanon? (VIDEO)"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 1309361187125771843,
+      "outlet_count": 1,
+      "title": "Israeli minister storms Al-Aqsa compound and threatens prisoner"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 1207883482283396910,
+      "outlet_count": 1,
+      "title": "This is how we lose control of AI – one successful task at a time"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 1185113823724196067,
+      "outlet_count": 1,
+      "title": "Europe’s largest automaker recalls 4 million cars over safety concerns"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 1180962205272174043,
+      "outlet_count": 1,
+      "title": "Kiev deliberately destabilizing global energy markets, Lavrov tells Rubio"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 928803714216923846,
+      "outlet_count": 1,
+      "title": "Why the US and Russia are fighting diabetes differently"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 600197306431596335,
+      "outlet_count": 1,
+      "title": "Merz government wants ‘secret police’ – opposition"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 426943224290420820,
+      "outlet_count": 1,
+      "title": "US Navy admits suicide attempts on carrier strike group"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 373479602634434443,
+      "outlet_count": 1,
+      "title": "The next war will be fought here. America and Europe will be enemies"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 256356860279086683,
+      "outlet_count": 1,
+      "title": "EU seeking to curb Russian athletes’ return to international competitions – media"
+    },
+    {
+      "created_at": 1790633639,
+      "first": true,
+      "id": 38725424120641924,
+      "outlet_count": 1,
+      "title": "US and China establish ‘AI incidents’ hotline"
+    }
+  ],
+  "window_days": 30
+}

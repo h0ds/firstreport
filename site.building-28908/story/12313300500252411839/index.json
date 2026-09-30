@@ -1,0 +1,80 @@
+{
+  "claims": {
+    "unknown:lendingtree.com": []
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653928,
+    "expired": false,
+    "id": 12313300500252411839,
+    "item_count": 1,
+    "last_active_at": 1790653928,
+    "origin_item_id": 12313300500252411839,
+    "origin_outlet_id": "unknown:lendingtree.com",
+    "outlet_count": 1,
+    "primary_title": "Dream Big with a Home Equity Loan",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 12313300500252411839,
+        "joined_at": 1790653928,
+        "outlet_id": "unknown:lendingtree.com",
+        "published_at": 0
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "unknown:lendingtree.com": "unknown:lendingtree.com"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://lendingtree.com/?ad_headline=dreambighomeequity&ad_image_name=housemoneystack&bdst=revshare&cchannel=content&ccreative=dreambighomeequity_housemoneystack&cmethod=heform&cproduct=he&csource=cnn&ctype=sectionfronts&esourceid=6348616&mtaid=AC53E&placement_name=sectionfronts&splitterid=home-equity",
+          "cluster_id": 12313300500252411839,
+          "fetched_at": 1790653928,
+          "id": 12313300500252411839,
+          "joined_at": 1790653928,
+          "lang": "en",
+          "outlet_id": "unknown:lendingtree.com",
+          "published_at": 0,
+          "summary": "",
+          "text_hash": 9368389031698645318,
+          "title": "Dream Big with a Home Equity Loan"
+        }
+      ],
+      "outlet_id": "unknown:lendingtree.com"
+    }
+  ],
+  "withdrawals": []
+}

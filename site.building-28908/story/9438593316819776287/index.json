@@ -1,0 +1,547 @@
+{
+  "claims": {
+    "bloomberg": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "bloomberg.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-09-24",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bloomberg.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1990-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q13977"
+        },
+        "field": "owner",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg L.P."
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_151#Bloomberg_on_Microsoft",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_270#Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bloomberg_News_/_Decision_not_to_investigate_Michael_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_499#Omitting_Bloomberg_from_India-Pak_Conflicts"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg (Bloomberg News, Bloomberg Businessweek)",
+          "status": "generally_reliable",
+          "summary": "Bloomberg publications, including Bloomberg News and Bloomberg Businessweek, are considered generally reliable for news and business topics. See also: Bloomberg profiles."
+        },
+        "field": "reliability",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#User_submitted_Executive_Profiles_on_Bloomberg.com"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg profiles",
+          "status": "no_consensus",
+          "summary": "Bloomberg company and executive profiles are generally considered to be based on company press releases and should only be used as a source for uncontroversial information. There is consensus that these profiles should not be used to establish notability. Some editors consider these profiles to be akin to self-published sources. See also: Bloomberg."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "sputnik": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "sputniknews.com",
+          "expires": "2028-10-24",
+          "last_changed": "2022-03-04",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputniknews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2011-10-24"
+      },
+      {
+        "data": {
+          "domain": "sputnikglobe.com",
+          "expires": "2028-03-29",
+          "last_changed": "2023-03-30",
+          "registrar": "Domain.com - Network Solutions, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputnikglobe.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2023-03-29"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-11-10"
+      },
+      {
+        "data": {
+          "qid": "Q1140115"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Government of Russia"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#RfC:_Sputnik",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Sputnik_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_212#Source_being_used_in_the_S-400_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_246#Sputnik_(news_agency)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_337#Sputnik-Abkhazia",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_367#Sputnik,_kind_of"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sputnik",
+          "status": "deprecated",
+          "summary": "There is consensus that Sputnik is an unreliable source that publishes false or fabricated information, and should be deprecated as in the 2017 RfC of the Daily Mail. Sputnik is considered a Russian propaganda outlet that engages in bias and disinformation, [ 25 ] a significant proportion of editors endorse that view, with some editors considering it less reliable than Breitbart News. See also: RI"
+        },
+        "field": "reliability",
+        "outlet_id": "sputnik",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "tass": [
+      {
+        "data": {
+          "domain": "tass.com",
+          "expires": "2027-09-16",
+          "last_changed": "2026-09-15",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "tass",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/tass.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-17"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#RfC:_TASS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_378#RfC_on_TASS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Use_of_TASS_for_Ukranian_refugee_figures",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_377#TASS,_Interfax_(russian_version)_and_RIA_Novosti's_reliability_on_the_2022_Russian_invasion_of_Ukraine_(especially_on_alleged_attacks_in_Russia)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "TASS (ITAR-TASS, Telegraph Agency of the Soviet Union, Information Telegraph Agency of Russia)",
+          "status": "generally_unreliable",
+          "summary": "In a 2022 RfC, editors achieved a strong consensus that TASS is a biased source with respect to topics in which the Russian government may have an interest and that the source is generally unreliable for providing contentious facts in that context. Editors attained a rough consensus that TASS should not be deprecated at this time and a rough consensus that TASS is generally unreliable more broadly"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "tass",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "washingtonpost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q166032",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtonpost.com",
+          "expires": "2026-11-12",
+          "last_changed": "2025-11-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtonpost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-11-13"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q166032",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1877-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q312556"
+        },
+        "field": "owner",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q166032",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Jeff Bezos"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "#cite_note-92"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Post (The Post, WaPo, TWP)",
+          "status": "generally_reliable",
+          "summary": "Most editors consider The Washington Post generally reliable. Some editors note that WP:NEWSBLOG should be used to evaluate blog posts on The Washington Post's website."
+        },
+        "field": "reliability",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.03422945737838745,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": 0.7542294859886169
+    },
+    "created_at": 1790653933,
+    "expired": false,
+    "id": 9438593316819776287,
+    "item_count": 6,
+    "last_active_at": 1790715382,
+    "origin_item_id": 17464869755565518518,
+    "origin_outlet_id": "sputnik",
+    "outlet_count": 4,
+    "primary_title": "European Commission asks United States not to ban diesel supplies to Europe",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9438593316819776287,
+        "joined_at": 1790653933,
+        "outlet_id": "bloomberg",
+        "published_at": 1790628627
+      },
+      {
+        "item_id": 1276362931433370972,
+        "joined_at": 1790653945,
+        "outlet_id": "tass",
+        "published_at": 1790604836
+      },
+      {
+        "item_id": 17464869755565518518,
+        "joined_at": 1790654492,
+        "outlet_id": "sputnik",
+        "published_at": 1790265199
+      },
+      {
+        "item_id": 1197621814120320495,
+        "joined_at": 1790659143,
+        "outlet_id": "tass",
+        "published_at": 1790656949
+      },
+      {
+        "item_id": 11273862202692798482,
+        "joined_at": 1790679062,
+        "outlet_id": "tass",
+        "published_at": 1790672267
+      },
+      {
+        "item_id": 3450043064892566555,
+        "joined_at": 1790715382,
+        "outlet_id": "washingtonpost",
+        "published_at": 1790698200
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "bloomberg",
+            "washingtonpost"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "tass"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "sputnik"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "bloomberg": "Bloomberg",
+    "sputnik": "Sputnik",
+    "tass": "TASS",
+    "washingtonpost": "The Washington Post"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://sputnikglobe.com/20260924/eu-concerned-over-possible-us-ban-on-diesel-exports--commission-spokesman-1124783064.html",
+          "cluster_id": 9438593316819776287,
+          "fetched_at": 1790653945,
+          "id": 17464869755565518518,
+          "joined_at": 1790654492,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790265199,
+          "summary": "MOSCOW, (Sputnik) - The European Union is concerned by reports of a possible US ban on diesel exports, including to EU countries, and is in contact with the US administration on the matter, European Commission spokesman Olof Gill said on Thursday.",
+          "text_hash": 8144548996512779632,
+          "title": "EU Concerned Over Possible US Ban on Diesel Exports – Commission Spokesman"
+        }
+      ],
+      "outlet_id": "sputnik"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://tass.com/economy/2194011",
+          "cluster_id": 9438593316819776287,
+          "fetched_at": 1790653945,
+          "id": 1276362931433370972,
+          "joined_at": 1790653945,
+          "lang": "en",
+          "outlet_id": "tass",
+          "published_at": 1790604836,
+          "summary": "Oleg Nikolayev does not expect the potential export restriction to bring significant benefit to the United States itself",
+          "text_hash": 10485577129475771713,
+          "title": "Possible ban on US diesel exports to be killer for Europe — expert"
+        },
+        {
+          "canonical_url": "https://tass.com/economy/2194277",
+          "cluster_id": 9438593316819776287,
+          "fetched_at": 1790659143,
+          "id": 1197621814120320495,
+          "joined_at": 1790659143,
+          "lang": "en",
+          "outlet_id": "tass",
+          "published_at": 1790656949,
+          "summary": "CNBC noted that most oil traders in Europe doubt Washington will take this step",
+          "text_hash": 9055655913645695432,
+          "title": "US export ban would send European diesel prices to unprecedented levels"
+        },
+        {
+          "canonical_url": "https://tass.com/economy/2194369",
+          "cluster_id": 9438593316819776287,
+          "fetched_at": 1790679062,
+          "id": 11273862202692798482,
+          "joined_at": 1790679062,
+          "lang": "en",
+          "outlet_id": "tass",
+          "published_at": 1790672267,
+          "summary": "US President Donald Trump said earlier that he was very seriously considering imposing a ban on the export of diesel fuel due to rising prices in the country",
+          "text_hash": 11547568412985715803,
+          "title": "European Commission asks United States not to ban diesel supplies to Europe"
+        }
+      ],
+      "outlet_id": "tass"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bloomberg.com/news/articles/2026-09-28/uk-lobbies-us-to-exempt-it-from-any-potential-diesel-export-ban",
+          "cluster_id": 9438593316819776287,
+          "fetched_at": 1790653933,
+          "id": 9438593316819776287,
+          "joined_at": 1790653933,
+          "lang": "en",
+          "outlet_id": "bloomberg",
+          "published_at": 1790628627,
+          "summary": "The UK government is privately lobbying the Trump administration for an exemption from any potential US diesel export ban.",
+          "text_hash": 2707186786678408089,
+          "title": "UK Lobbies US to Exempt It From Any Potential Diesel Export Ban"
+        }
+      ],
+      "outlet_id": "bloomberg"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtonpost.com/world/2026/09/29/european-fears-energy-crunch-over-trumps-proposed-ban-diesel-exports/",
+          "cluster_id": 9438593316819776287,
+          "fetched_at": 1790715382,
+          "id": 3450043064892566555,
+          "joined_at": 1790715382,
+          "lang": "en",
+          "outlet_id": "washingtonpost",
+          "published_at": 1790698200,
+          "summary": "The European Union's energy commissioner sent a letter to the bloc's 27 member states recommending that they all cut gas and electricity consumption “for as long as necessary.”",
+          "text_hash": 6568500966003837138,
+          "title": "Trump’s proposed diesel export ban spurs fear of energy crunch in Europe"
+        }
+      ],
+      "outlet_id": "washingtonpost"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 9438593316819776287,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3473,
+      "snapshot_id": 5651827492160607435,
+      "ts": 1790666765
+    }
+  ]
+}

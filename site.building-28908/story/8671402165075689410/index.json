@@ -1,0 +1,458 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "france24": [
+      {
+        "data": {
+          "domain": "france24.com",
+          "expires": "2026-12-01",
+          "last_changed": "2026-04-21",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "france24",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/france24.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-12-01"
+      },
+      {
+        "data": {
+          "qid": "Q166180"
+        },
+        "field": "owner",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France 24"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "mirror": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "mirror.co.uk",
+          "expires": "2027-09-08",
+          "last_changed": "2026-09-04",
+          "registrar": "CSC Corporate Domains, Inc",
+          "status": [
+            "server delete prohibited",
+            "renew period",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "mirror",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/mirror.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-08"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1636545"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Reach plc"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_160#Huffington_Post/Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#The_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Daily_Express_and_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Daily_Mirror"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Mirror (Mirror)",
+          "status": "no_consensus",
+          "summary": "The Daily Mirror, also known just as the Mirror, is a tabloid newspaper that publishes tabloid journalism. There is no consensus on whether its reliability is comparable to that of British tabloids such as the Daily Mail and The Sun."
+        },
+        "field": "reliability",
+        "outlet_id": "mirror",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.05956578254699707,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7795658111572266
+    },
+    "created_at": 1790653938,
+    "expired": false,
+    "id": 8671402165075689410,
+    "item_count": 4,
+    "last_active_at": 1790715385,
+    "origin_item_id": 8671402165075689410,
+    "origin_outlet_id": "independent",
+    "outlet_count": 4,
+    "primary_title": "Satellite images show Gaza in ruins three years into Israel’s genocidal war",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8671402165075689410,
+        "joined_at": 1790653938,
+        "outlet_id": "independent",
+        "published_at": 1790607482
+      },
+      {
+        "item_id": 10050977871205629693,
+        "joined_at": 1790668521,
+        "outlet_id": "aljazeera",
+        "published_at": 1790667719
+      },
+      {
+        "item_id": 2699462804194326376,
+        "joined_at": 1790679060,
+        "outlet_id": "france24",
+        "published_at": 1790677503
+      },
+      {
+        "item_id": 11928267107765226934,
+        "joined_at": 1790715385,
+        "outlet_id": "mirror",
+        "published_at": 1790691129
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "independent"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "mirror"
+          ]
+        }
+      ],
+      "not_rated": [
+        "france24"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "france24": "France 24",
+    "independent": "The Independent",
+    "mirror": "Daily Mirror"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 1,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 10050977871205629693,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3774,
+      "snapshot_id": 10583158598562582627,
+      "ts": 1790679060
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/middle-east/google-earth-gaza-images-update-b3057562.html",
+          "cluster_id": 8671402165075689410,
+          "fetched_at": 1790653938,
+          "id": 8671402165075689410,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790607482,
+          "summary": "Google Earth shows the unprecedented devastation in Gaza, illustrating the scale of the wreckage",
+          "text_hash": 15760507694420361232,
+          "title": "Google Earth exposes devastation in Gaza with new updated images"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/29/satellite-images-show-gaza-in-ruins-three-years-into-israels-genocidal-war?traffic_source=rss",
+          "cluster_id": 8671402165075689410,
+          "fetched_at": 1790668521,
+          "id": 10050977871205629693,
+          "joined_at": 1790668521,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790667719,
+          "summary": "Google Maps images show scale of Israel's destruction of Gaza, where more than 74,000 Palestinians have been killed.",
+          "text_hash": 2047616606339151961,
+          "title": "Satellite images show Gaza in ruins three years into Israel’s genocidal war"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://france24.com/en/video/20260929-gaza-s-humanitarian-crisis-deepens-as-new-satellite-images-show-scale-of-destruction",
+          "cluster_id": 8671402165075689410,
+          "fetched_at": 1790679060,
+          "id": 2699462804194326376,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790677503,
+          "summary": "Google Maps has updated its satellite imagery of the territory for the first time since the Israel-Hamas war began nearly three years ago. The images show vast areas reduced to rubble, highlighting the extent of the devastation caused by the conflict. Meanwhile, the humanitarian situation in Gaza remains dire, with Israeli strikes continuing across the territory.",
+          "text_hash": 17932507989437916877,
+          "title": "Gaza’s humanitarian crisis deepens as new satellite images show scale of destruction"
+        }
+      ],
+      "outlet_id": "france24"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://mirror.co.uk/news/world-news/gallery/gaza-horror-google-earth-updates-37714796",
+          "cluster_id": 8671402165075689410,
+          "fetched_at": 1790715385,
+          "id": 11928267107765226934,
+          "joined_at": 1790715385,
+          "lang": "en",
+          "outlet_id": "mirror",
+          "published_at": 1790691129,
+          "summary": "Tens of thousands of Palestinians have been killed in the years since Israel launched its military campaign in the Gaza Strip following the October 7 massacre of its own citizens",
+          "text_hash": 14521861165126147689,
+          "title": "Gaza horror as Google Earth updates satellite photos showing full scale of devastation"
+        }
+      ],
+      "outlet_id": "mirror"
+    }
+  ],
+  "withdrawals": []
+}

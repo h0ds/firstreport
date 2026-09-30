@@ -1,0 +1,614 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "cbsnews.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.017
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.02 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "cbsnews.com",
+          "expires": "2027-10-03",
+          "last_changed": "2026-09-01",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cbsnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-10-04"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-09-18"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q561068"
+        },
+        "field": "legal_form",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "specialty channel"
+      },
+      {
+        "data": {
+          "qid": "Q10689397"
+        },
+        "field": "legal_form",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "television production company"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "cbsnews.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.cbsnews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "CBS News"
+      },
+      {
+        "field": "name",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q861764"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "origin_of": 1,
+          "shared_stories": 14,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "cbsnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cbsnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 7% of 14 stories other outlets also carried"
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q2207140"
+        },
+        "field": "parent",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "CBS News and Stations"
+      },
+      {
+        "data": {
+          "qid": "Q76846862"
+        },
+        "field": "parent",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paramount Global"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "cbsnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cbsnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.3 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "cbsnews.com"
+        },
+        "field": "registrar",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cbsnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "MarkMonitor Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_522#Request_for_Comment:_Reliability_of_CBS_News_under_Bari_Weiss",
+            "#cite_note-20"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CBS News",
+          "status": "generally_reliable",
+          "summary": "CBS News is the news division of CBS. It is considered generally reliable. Some editors note, however, that its television content may include superficial coverage, which might not qualify under WP:MEDRS. Editors also note that CBS has undergone intensified political bias after Bari Weiss became editor-in-chief in late 2025, and supression of reporting critical of the Trump administration has been"
+        },
+        "field": "reliability",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "revised": 2,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "cbsnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cbsnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "7% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "cbsnews.com",
+          "final_url": "https://www.cbsnews.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.cbsnews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.cbsnews.com/news/thinking-about-gold-ira-what-to-know-first/",
+          "contact": "https://ombudsman.cbsnews.com/",
+          "domain": "cbsnews.com",
+          "ethics": "https://www.cbsnews.com/news/trump-fuel-economy-standards-biden-rules/",
+          "missing": [
+            "corrections",
+            "masthead"
+          ],
+          "privacy": "https://www.viacomcbsprivacy.com/policy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.cbsnews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "cbsnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cbsnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://cbsnews.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q861764"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/CBS_News"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "cbsnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cbsnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 1,
+  "items": 44,
+  "outlet": {
+    "domains": [
+      "cbsnews.com"
+    ],
+    "id": "cbsnews",
+    "name": "CBS News"
+  },
+  "shared_stories": 17,
+  "stories": [
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 3043460793184237497,
+      "outlet_count": 10,
+      "title": "Hurricane Polo threatens Southwest U.S. with flooding. See its path."
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 4654905170282648890,
+      "outlet_count": 1,
+      "title": "Charles Spencer says Buckingham Palace \"has to gaslight\" him in response to Diana book claims"
+    },
+    {
+      "created_at": 1790724933,
+      "first": true,
+      "id": 9381138443662507046,
+      "outlet_count": 1,
+      "title": "Troops say Army ignored request for more medical support before deadly attack"
+    },
+    {
+      "created_at": 1790724933,
+      "first": true,
+      "id": 9302358721562535342,
+      "outlet_count": 1,
+      "title": "Afghan girls who study in secret want you to read their \"letters to the world\""
+    },
+    {
+      "created_at": 1790724933,
+      "first": true,
+      "id": 6774250682648260129,
+      "outlet_count": 1,
+      "title": "Loopholes and shady practices taint U.S. surrogacy industry"
+    },
+    {
+      "created_at": 1790723005,
+      "first": true,
+      "id": 18165958605410780946,
+      "outlet_count": 1,
+      "title": "U.S. to welcome up to 17,500 more White South Africans as refugees"
+    },
+    {
+      "created_at": 1790653939,
+      "first": false,
+      "id": 12064630524344156370,
+      "outlet_count": 2,
+      "title": "The US lays groundwork for possible military action in Cuba, according to 'CBS News'"
+    },
+    {
+      "created_at": 1790723005,
+      "first": true,
+      "id": 9100877280489991114,
+      "outlet_count": 1,
+      "title": "ICE deportees in Africa describe being stranded \"on the other side of the world\""
+    },
+    {
+      "created_at": 1790723005,
+      "first": true,
+      "id": 5942879970481155300,
+      "outlet_count": 1,
+      "title": "Photos show widespread damage at U.S. positions caused by Iranian attacks"
+    },
+    {
+      "created_at": 1790723005,
+      "first": true,
+      "id": 3566743586597358743,
+      "outlet_count": 1,
+      "title": "The story behind the first CIA officers in Afghanistan after 9/11"
+    },
+    {
+      "created_at": 1790723005,
+      "first": true,
+      "id": 660556435615629866,
+      "outlet_count": 1,
+      "title": "Commander rejected plans to rebase before deadly drone strike, sources say"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15587760235900320854,
+      "outlet_count": 26,
+      "title": "5 men released on bail in UK over suspected US-run airbase plot"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 270612440624308507,
+      "outlet_count": 13,
+      "title": "China, US Can Continue Dialogue on AI to Weigh Risks, Benefits - Xi"
+    },
+    {
+      "created_at": 1790653848,
+      "first": false,
+      "id": 12392621956996144113,
+      "outlet_count": 10,
+      "title": "Rubio says UK airbase incident involved a foreign state"
+    },
+    {
+      "created_at": 1790715389,
+      "first": true,
+      "id": 13830759927939113370,
+      "outlet_count": 1,
+      "title": "British farmer speaks out about alleged U.K. terror plot near U.S. base"
+    },
+    {
+      "created_at": 1790653938,
+      "first": false,
+      "id": 11187380030572242577,
+      "outlet_count": 5,
+      "title": "Dutch Doctors Euthanize Two-Year-Old Toddler In First Case Of Its Kind"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16126029408899543548,
+      "outlet_count": 17,
+      "title": "Iran awaits US response on plan to reopen Strait of Hormuz"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 16664745717732133943,
+      "outlet_count": 5,
+      "title": "Delta Air Lines flight to Boston forced to make emergency landing in Portugal after smoke in cabin"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 10969125623470226463,
+      "outlet_count": 12,
+      "title": "Trump expects more talks after rejecting latest Iranian proposal"
+    },
+    {
+      "created_at": 1790682638,
+      "first": true,
+      "id": 3236877073646032016,
+      "outlet_count": 1,
+      "title": "Search for missing students leads to human remains, 17 suspects"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 10220048785832836552,
+      "outlet_count": 14,
+      "title": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15326836451892574789,
+      "outlet_count": 11,
+      "title": "At least 27 killed in 2 mass shootings in South Africa"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 9532632070516774090,
+      "outlet_count": 7,
+      "title": "Two giant pandas arrive in Atlanta from China after Xi-Trump summit"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 16352855730270607310,
+      "outlet_count": 4,
+      "title": "Pope Leo criticizes legalization of assisted dying as \"false compassion\""
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 16620301112849022727,
+      "outlet_count": 2,
+      "title": "Northern Ireland: 2,000 protesters block disputed Portadown march"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 7373724280152448660,
+      "outlet_count": 2,
+      "title": "Accused drug lord \"The Spider\" extradited to U.S. from Colombia"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18178820504319923867,
+      "outlet_count": 3,
+      "title": "Rescue teams search for 12 people missing after deadly Nepal avalanche"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 11239626729317346667,
+      "outlet_count": 2,
+      "title": "Colombian police capture wife and daughter of Ecuadorian gang leader extradited to the United States"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 17075777758167621430,
+      "outlet_count": 1,
+      "title": "Transcript: Rep. Jim Himes on \"Face the Nation with Margaret Brennan,\" Sept. 27, 2026"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 12539811155377143094,
+      "outlet_count": 1,
+      "title": "Transcript: Alexander Yui, Taiwan's representative to the U.S., on \"Face the Nation with Margaret Brennan,\" Sept. 27, 2026"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 10666080275739914608,
+      "outlet_count": 1,
+      "title": "9/27: Sunday Morning"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 10271990376644755322,
+      "outlet_count": 1,
+      "title": "Benjamin Satterley, pro wrestler known as \"Pac,\" dies at 40"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 10271503670255744593,
+      "outlet_count": 1,
+      "title": "9/20/2026: Patrick Clancy; AI Data Centers; Shergar, Where are you?"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 8732151209475404325,
+      "outlet_count": 1,
+      "title": "9/28: CBS Evening News"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 7105212241693115242,
+      "outlet_count": 1,
+      "title": "Fears of serial killer rise in South Africa after body of 10th woman found"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 4379091922343399775,
+      "outlet_count": 1,
+      "title": "9/28: The Takeout with Major Garrett"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 1491763230277161278,
+      "outlet_count": 1,
+      "title": "Pope Leo draws massive crowds in France. Is Catholicism making a comeback?"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

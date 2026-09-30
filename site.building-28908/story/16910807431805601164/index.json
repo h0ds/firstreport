@@ -1,0 +1,779 @@
+{
+  "claims": {
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "justthenews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "justthenews.com",
+          "expires": "2028-07-23",
+          "last_changed": "2026-08-28",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "justthenews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/justthenews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-07-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2020-01-01"
+      }
+    ],
+    "nbcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nbcnews.com",
+          "expires": "2027-06-25",
+          "last_changed": "2025-05-24",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nbcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-06-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1940-02-21"
+      },
+      {
+        "data": {
+          "qid": "Q724759"
+        },
+        "field": "owner",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "NBCUniversal"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_186#Column_on_Donors_Trust_on_(but_not_by)_NBC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Is_NBC_a_reliable_sources_for_the_Wikipedia_The_Epoch_Times_(ET)_article?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_314#NBC_News-_'Undecided_voters'_at_NBC's_Biden_town_hall_were_featured_on_MSNBC_as_Biden_voters",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_424#NBC_News_for_Wąsosz_pogrom"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NBC News",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NBC News is generally reliable for news. See also: MS NOW (formerly MSNBC)"
+        },
+        "field": "reliability",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "politico": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "politico.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-18",
+          "registrar": "Register.com - Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "politico",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/politico.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-23"
+      },
+      {
+        "data": {
+          "qid": "Q163560"
+        },
+        "field": "owner",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Axel Springer SE"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_363#RfC:_Politico_update?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_11#Politico.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#DataTreasury",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_50#Politico;_Also_for_Book_reviews:_New_Engish_Review_and_Pajamas_Media",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#self-published?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Is_an_SPLC_report_a_reliable_source_for_List_of_Confederate_monuments_and_memorials?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_241#Statements_of_Fact_Based_on_One_Report_from_One_Media_Outlet,_Sourced_to_Anonymous_Sources",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_458#Politico_status_update"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Politico",
+          "status": "generally_reliable",
+          "summary": "Politico is considered generally reliable for American politics. A small number of editors say that Politico is a biased source."
+        },
+        "field": "reliability",
+        "outlet_id": "politico",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "rawstory": [
+      {
+        "data": {
+          "domain": "rawstory.com",
+          "expires": "2031-01-29",
+          "last_changed": "2026-01-29",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rawstory",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rawstory.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2004-01-29"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#RfC_-_The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_12#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_17#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_112#The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_202#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#Raw_story_a_RS_for_details_on_this_obscure_death?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Raw Story",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that Raw Story is generally unreliable for factual reporting, based upon a pattern of publishing false and sensationalized stories. Editors almost unanimously agree that the source is biased and that in-text attribution should accompany each use of the source."
+        },
+        "field": "reliability",
+        "outlet_id": "rawstory",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "thehill": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.20599520206451416,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 6,
+      "weakest_join": 0.9259952306747437
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 16910807431805601164,
+    "item_count": 7,
+    "last_active_at": 1790660768,
+    "origin_item_id": 2025924982165801908,
+    "origin_outlet_id": "justthenews",
+    "outlet_count": 7,
+    "primary_title": "Justice Alito Recuses Himself from Major Climate Lawsuit Against Oil Companies",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16910807431805601164,
+        "joined_at": 1790633633,
+        "outlet_id": "guardian",
+        "published_at": 1790632061
+      },
+      {
+        "item_id": 18227476432037089712,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790620041
+      },
+      {
+        "item_id": 5935504877449011220,
+        "joined_at": 1790653932,
+        "outlet_id": "politico",
+        "published_at": 1790620111
+      },
+      {
+        "item_id": 2025924982165801908,
+        "joined_at": 1790653935,
+        "outlet_id": "justthenews",
+        "published_at": 1790553600
+      },
+      {
+        "item_id": 16822046051310738777,
+        "joined_at": 1790653935,
+        "outlet_id": "rawstory",
+        "published_at": 1790621576
+      },
+      {
+        "item_id": 9179445322490032651,
+        "joined_at": 1790654748,
+        "outlet_id": "nbcnews",
+        "published_at": 1790619042
+      },
+      {
+        "item_id": 6030553743771530513,
+        "joined_at": 1790660768,
+        "outlet_id": "breitbart",
+        "published_at": 1790647644
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "nbcnews",
+            "politico",
+            "guardian",
+            "thehill"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "rawstory"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [
+        "justthenews"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "breitbart": "Breitbart",
+    "guardian": "The Guardian",
+    "justthenews": "Just the News",
+    "nbcnews": "NBC News",
+    "politico": "Politico",
+    "rawstory": "Raw Story",
+    "thehill": "The Hill"
+  },
+  "outlets_24h": 6,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 16910807431805601164,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 375,
+      "snapshot_id": 13552890862359050238,
+      "ts": 1790636108
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    6,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://justthenews.com/government/courts-law/alito-recuses-self-climate-suit",
+          "cluster_id": 16910807431805601164,
+          "fetched_at": 1790653935,
+          "id": 2025924982165801908,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "justthenews",
+          "published_at": 1790553600,
+          "summary": "The issue at hand is whether the city of Boulder, Colo., may sue oil companies over climate change.",
+          "text_hash": 1164236737218230393,
+          "title": "Alito recuses self in climate suit"
+        }
+      ],
+      "outlet_id": "justthenews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nbcnews.com/politics/supreme-court/reversal-justice-samuel-alito-steps-major-climate-case-rcna600318",
+          "cluster_id": 16910807431805601164,
+          "fetched_at": 1790654748,
+          "id": 9179445322490032651,
+          "joined_at": 1790654748,
+          "lang": "en",
+          "outlet_id": "nbcnews",
+          "published_at": 1790619042,
+          "summary": "Alito will sit out the first case the Supreme Court hears this term after facing calls from the left to do so because he owns stock in oil companies. He had previously pushed back.",
+          "text_hash": 16147120987444777014,
+          "title": "In reversal, Justice Samuel Alito steps aside from major climate case"
+        }
+      ],
+      "outlet_id": "nbcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehill.com/regulation/court-battles/6115797-alito-recuses-climate-change-lawsuits-suncor-v-boulder/",
+          "cluster_id": 16910807431805601164,
+          "fetched_at": 1790653930,
+          "id": 18227476432037089712,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790620041,
+          "summary": "Justice Samuel Alito on Monday recused from a major climate case set to be heard next week, stepping aside with no explanation after previously participating in the vote to take up the dispute. Alito has long held financial interests in the oil and gas sector, and as one of the only justices to own individual…",
+          "text_hash": 15138420143271348108,
+          "title": "Alito recuses from case that could toss climate suits against oil companies"
+        }
+      ],
+      "outlet_id": "thehill"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://politico.com/news/2026/09/28/supreme-court-alito-climate-case-01095470",
+          "cluster_id": 16910807431805601164,
+          "fetched_at": 1790653932,
+          "id": 5935504877449011220,
+          "joined_at": 1790653932,
+          "lang": "en",
+          "outlet_id": "politico",
+          "published_at": 1790620111,
+          "summary": "The conservative justice had previously resisted calls from environmentalists to recuse himself.",
+          "text_hash": 2717105643497482987,
+          "title": "Alito bows out of blockbuster Supreme Court climate case"
+        }
+      ],
+      "outlet_id": "politico"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rawstory.com/alito-2677955018/",
+          "cluster_id": 16910807431805601164,
+          "fetched_at": 1790653935,
+          "id": 16822046051310738777,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "rawstory",
+          "published_at": 1790621576,
+          "summary": "Supreme Court Justice Samuel Alito has abruptly reversed course and will now sit out a major climate case just days before the high court opens its new term. Alito will not participate when the justices hear Suncor Energy v. Boulder County on Oct. 5 — the first case scheduled for oral arguments this term. “Justice Alito has determined that he will not continue to participate in this case,” a letter sent to lawyers involved in the case said, according to NBC News . Senior Supreme Court reporter Lawrence…",
+          "text_hash": 18121216979543083703,
+          "title": "Alito makes ‘major U-turn’ days before Supreme Court opens new term"
+        }
+      ],
+      "outlet_id": "rawstory"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/us-news/2026/sep/28/samuel-alito-supreme-court-oil-climate-case",
+          "cluster_id": 16910807431805601164,
+          "fetched_at": 1790633633,
+          "id": 16910807431805601164,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790632061,
+          "summary": "Decision from conservative justice comes before court hears case on whether fossil-fuel firms deceived US public Supreme court justice Samuel Alito recused himself on Monday from a major climate-change case after facing calls to step aside due to stock holdings in oil companies. A letter posted in the case did not specify a reason, but the conservative justice has previously recused himself from other cases involving companies where he holds stock. Continue reading...",
+          "text_hash": 8853506184434706689,
+          "title": "Samuel Alito steps aside in a major climate case amid scrutiny over oil stock holdings"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/politics/2026/09/28/justice-alito-recuses-himself-major-climate-lawsuit-oil-companies/",
+          "cluster_id": 16910807431805601164,
+          "fetched_at": 1790660768,
+          "id": 6030553743771530513,
+          "joined_at": 1790660768,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790647644,
+          "summary": "Supreme Court Justice Samuel Alito will not take part in a climate change case involving two oil companies and local governments in Colorado, the court announced Monday, one week before the justices are scheduled to hear arguments. The post Justice Alito Recuses Himself from Major Climate Lawsuit Against Oil Companies appeared first on Breitbart .",
+          "text_hash": 14578706714577743741,
+          "title": "Justice Alito Recuses Himself from Major Climate Lawsuit Against Oil Companies"
+        }
+      ],
+      "outlet_id": "breitbart"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 16910807431805601164,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 387,
+      "snapshot_id": 2090063479153616082,
+      "ts": 1790637985
+    },
+    {
+      "cluster_id": null,
+      "item_id": 16910807431805601164,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3786,
+      "snapshot_id": 14614480373335041781,
+      "ts": 1790679060
+    },
+    {
+      "cluster_id": null,
+      "item_id": 9179445322490032651,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4249,
+      "snapshot_id": 8271237446383961253,
+      "ts": 1790680780
+    },
+    {
+      "cluster_id": null,
+      "item_id": 5935504877449011220,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4526,
+      "snapshot_id": 847114271999319624,
+      "ts": 1790715388
+    },
+    {
+      "cluster_id": null,
+      "item_id": 6030553743771530513,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5671,
+      "snapshot_id": 3236693464818417352,
+      "ts": 1790720969
+    }
+  ]
+}

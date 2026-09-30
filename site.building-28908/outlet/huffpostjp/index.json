@@ -1,0 +1,162 @@
+{
+  "claims": {
+    "country": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.wikidata.org/wiki/Q44128263",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.wikidata.org/wiki/Q44128263",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2013-04-23"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1153191"
+        },
+        "field": "legal_form",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.wikidata.org/wiki/Q44128263",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "online newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "huffingtonpost.jp"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.huffingtonpost.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "ハフポスト"
+      },
+      {
+        "field": "name",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.wikidata.org/wiki/Q44128263",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "HuffPost Japan"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q444649"
+        },
+        "field": "owner",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.wikidata.org/wiki/Q44128263",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Asahi Shimbun Company"
+      },
+      {
+        "data": {
+          "qid": "Q18049522"
+        },
+        "field": "owner",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.wikidata.org/wiki/Q44128263",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "HuffPost"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "huffingtonpost.jp",
+          "final_url": "https://www.huffingtonpost.jp/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.huffingtonpost.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.huffingtonpost.jp/static/huffingtonpostjp-about-us/",
+          "contact": "https://www.huffingtonpost.jp/static/huffingtonpostjp-contact-us/",
+          "domain": "huffingtonpost.jp",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.huffingtonpost.jp/static/huffingtonpostjp-privacy-policy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.huffingtonpost.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.wikidata.org/wiki/Q44128263",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "http://www.huffingtonpost.jp/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "huffpostjp",
+        "ref_url": "https://www.wikidata.org/wiki/Q44128263",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q44128263"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 0,
+  "outlet": {
+    "domains": [
+      "huffingtonpost.jp"
+    ],
+    "id": "huffpostjp",
+    "name": "ハフポスト日本版"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

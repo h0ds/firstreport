@@ -1,0 +1,141 @@
+{
+  "claims": {
+    "zerohedge": [
+      {
+        "data": {
+          "domain": "zerohedge.com",
+          "expires": "2027-01-11",
+          "last_changed": "2026-01-10",
+          "registrar": "easyDNS Technologies Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/zerohedge.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2009-01-11"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2009-01-09"
+      },
+      {
+        "data": {
+          "qid": "Q56547225"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daniel Ivandjiiski"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_302#RfC:_Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_199#ZeroHedge_Blog_post_by_\"Tyler_Durden\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_238#Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#rate_\"Zero_Hedge\""
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Zero Hedge (ZeroHedge, ZH)",
+          "status": "deprecated",
+          "summary": "Zero Hedge was deprecated in the 2020 RfC due to its propagation of conspiracy theories. It is a self-published blog that is biased or opinionated."
+        },
+        "field": "reliability",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790715381,
+    "expired": false,
+    "id": 15712599572825867837,
+    "item_count": 1,
+    "last_active_at": 1790715381,
+    "origin_item_id": 15712599572825867837,
+    "origin_outlet_id": "zerohedge",
+    "outlet_count": 1,
+    "primary_title": "FICO Crashes Most Since 2004 As Pulte's Mortgage Score Shakeup Threatens Its Moat",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15712599572825867837,
+        "joined_at": 1790715381,
+        "outlet_id": "zerohedge",
+        "published_at": 1790693700
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "zerohedge": "ZeroHedge"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://zerohedge.com/markets/fico-crashes-most-2004-pultes-mortgage-score-shakeup-threatens-its-moat",
+          "cluster_id": 15712599572825867837,
+          "fetched_at": 1790715381,
+          "id": 15712599572825867837,
+          "joined_at": 1790715381,
+          "lang": "en",
+          "outlet_id": "zerohedge",
+          "published_at": 1790693700,
+          "summary": "FICO Crashes Most Since 2004 As Pulte's Mortgage Score Shakeup Threatens Its Moat Fair Isaac, the company that produces FICO scores, saw its shares crash the most in 22 years early Tuesday in cash trading after Federal Housing Finance Agency Director Bill Pulte announced on X that a mortgage-pricing change that Wall Street analysts say could accelerate adoption of rival VantageScore and undermine FICO's moat . \" We are Simplifying Mortgage Pricing following feedback from lenders and consumers . Instead of…",
+          "text_hash": 6685285525269737270,
+          "title": "FICO Crashes Most Since 2004 As Pulte's Mortgage Score Shakeup Threatens Its Moat"
+        }
+      ],
+      "outlet_id": "zerohedge"
+    }
+  ],
+  "withdrawals": []
+}

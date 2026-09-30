@@ -1,0 +1,54 @@
+# Stories, page 41 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Thai man’s jet ski stunt fuels anger in ‘unequal’ Bangkok as poor hit hardest by floods](/story/17781213834677898710/) · 1 outlet · reach 1
+- [Hong Kong finds gold-trading leader in former exchange executive Bryan Chan](/story/17817298271989254026/) · 1 outlet · reach 1
+- [Canada signs international statement on AI safety, joining calls for stronger oversight](/story/17930781504186680786/) · 1 outlet · reach 1
+- [VW, Gotion ramp up battery production in Europe, Morocco amid rising EV demand](/story/17953164875048402994/) · 1 outlet · reach 1
+- [Italy decree limiting foreign pupils in classrooms could have near-zero impact](/story/18149253089418289626/) · 1 outlet · reach 1
+- [Working women face different challenges across life stages: PAP Women’s Wing survey](/story/18235683972276169499/) · 1 outlet · reach 1
+- [Apple ordered to pay $5.7bn in patent infringement case](/story/18254033148954010512/) · 2 outlets · reach 1
+- [Colombia holds IMF financing talks as fiscal strain mounts, sources say](/story/18303205289986067169/) · 1 outlet · reach 1
+- [Vietnam upgrades Canada to strategic partner during state visit](/story/18307136558511933021/) · 1 outlet · reach 1
+- [Why the surging conflict in northern Ethiopia could spill across borders](/story/18359369729458316319/) · 1 outlet · reach 1
+- [How two Ukrainian children, taken to Russia, fought their way back home](/story/18422314456950845743/) · 1 outlet · reach 1
+- [Allies unite behind Saudi Arabia as Houthis step up attacks](/story/18440462712722000837/) · 1 outlet · reach 1
+- [Russia under Putin lost nearly half its schools — war propaganda fills the rest](/story/14483913872403521/) · 1 outlet · reach 1
+- [Ukraine: Kharkiv apartment block hit by Russian strike, 25 injured](/story/184752849764768984/) · 1 outlet · reach 1
+- [Coach goes viral after smearing player's blood on own face](/story/320333400096264442/) · 1 outlet · reach 1
+- [Monday evening news briefing: UK to stop exporting some arms to Israel](/story/391824211080733371/) · 1 outlet · reach 1
+- [Friday evening news briefing: Grenfell victims criticise lack of prosecutions as cost of preserving ruins hits £340m](/story/455264992428886972/) · 1 outlet · reach 1
+- [Man killed in Nottinghamshire gas explosion](/story/470630991343428034/) · 1 outlet · reach 1
+- [Stand-up comic released after being convicted of insulting Erdoğan](/story/785001445115155322/) · 2 outlets · reach 1
+- [Matty Johns breaks down in tears after Knights end NRL grand final drought](/story/937188363839620086/) · 1 outlet · reach 1
+- [What is killing whale calves in Patagonia? bacteria under suspicion](/story/970291589655735889/) · 1 outlet · reach 1
+- [Listen: The tech boss who was Russia’s secret spy](/story/998709229625611268/) · 1 outlet · reach 1
+- [Thursday evening news briefing: I worry we overstated danger of Covid at start of pandemic, says Chris Whitty](/story/1339933792875902609/) · 1 outlet · reach 1
+- [Second person killed in Storm Darragh after tree falls on car](/story/1465190371889575718/) · 1 outlet · reach 1
+- [BBC Breakfast boss cleared of bullying allegations](/story/1550680967917865582/) · 1 outlet · reach 1
+- [Serbia's politicians return to TV debates ahead of parliamentary election](/story/1578230654574277685/) · 1 outlet · reach 1
+- [At least 11 dead following suicide bomb attack in northwestern Pakistan](/story/1650162676472507455/) · 1 outlet · reach 1
+- [RAF Fairford: AI-enhanced photos of suspects fuel false claims about their religion](/story/1729590954530882332/) · 1 outlet · reach 1
+- [British resident slips from top of waterfall and plunges to her death in front of horrified friend](/story/1881475066098986328/) · 1 outlet · reach 1
+- [Sandon Smith leads Newcastle out of an Immortal shadow](/story/2231002069056689920/) · 1 outlet · reach 1
+- [Security guards bundled Leicester Square stabbing suspect to ground before arrest](/story/2284741222084328967/) · 1 outlet · reach 1
+- [Wednesday evening news briefing: Bodies of Mike Lynch and his daughter found on superyacht wreck](/story/2317759262157548356/) · 1 outlet · reach 1
+- [Crossland expected to miss grand final with guilty plea over Cleary tackle](/story/2366581419033432979/) · 1 outlet · reach 1
+- [Thursday evening news briefing: Starmer will not allow far-Right to co-ordinate ‘summer of riots’](/story/2379081903161617947/) · 1 outlet · reach 1
+- [One last 'last' for Broncos legend Ali Brigginshaw in NRLW grand final](/story/2385166539339934455/) · 1 outlet · reach 1
+- [Tuesday evening news briefing: US Secret Service director quits over Trump shooting](/story/2402272948840505426/) · 1 outlet · reach 1
+- [King and Prince of Wales join forces at reception for war heroes](/story/2404011971968877283/) · 1 outlet · reach 1
+- [Watch: Moment fire breaks out at nuclear submarine shipyard](/story/2467016690522540312/) · 1 outlet · reach 1
+- [Friday evening news briefing: Family and friends pay tribute to Hannah Lynch](/story/2496971649814607075/) · 1 outlet · reach 1
+- [Rod Stewart could sell his luxury sports cars because of potholes](/story/2682573062592538588/) · 1 outlet · reach 1
+- [Tuesday evening news briefing: Families pay tribute to three girls killed in knife attack](/story/2698617066279243085/) · 1 outlet · reach 1
+- [EU tells countries to curb energy demand as gas prices face winter squeeze](/story/2753206224964127879/) · 1 outlet · reach 1
+- [Massive manhunt after four people shot dead on Caribbean island St. Vincent](/story/2769761519437983064/) · 1 outlet · reach 1
+- [Fourth person confirmed dead in Storm Bert as body found in search for missing dog walker](/story/2808392979454469599/) · 1 outlet · reach 1
+- [Eight people injured in Glasgow bus crash](/story/2818922832593833194/) · 1 outlet · reach 1
+- [Jay Slater's mum Debbie Duncan returns to Tenerife mountains to seek closure for tragic son](/story/2998216824883164457/) · 1 outlet · reach 1
+- [Anti-migrant riots erupt in Northern Ireland after alleged sexual assault](/story/3267969199292083877/) · 1 outlet · reach 1
+- [Tuesday evening news briefing: Leicester Square victim stabbed eight times, court hears](/story/3307135295040139824/) · 1 outlet · reach 1
+- [Freo finds joy in AFLW win, Pies finally off the mark](/story/3420877435744004839/) · 1 outlet · reach 1
+- [Can you crack our new word game, Mini Cogs?](/story/3462981858974328264/) · 1 outlet · reach 1

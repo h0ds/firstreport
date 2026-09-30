@@ -1,0 +1,691 @@
+{
+  "export_time": 1790725421,
+  "outlets": [
+    {
+      "domains": [
+        "abc.net.au"
+      ],
+      "id": "abcau",
+      "name": "ABC News (Australia)"
+    },
+    {
+      "domains": [
+        "abcnews.com",
+        "abcnews.go.com"
+      ],
+      "id": "abcnews",
+      "name": "ABC News"
+    },
+    {
+      "domains": [
+        "aljazeera.com"
+      ],
+      "id": "aljazeera",
+      "name": "Al Jazeera"
+    },
+    {
+      "domains": [
+        "aa.com.tr"
+      ],
+      "id": "anadolu",
+      "name": "Anadolu Agency"
+    },
+    {
+      "domains": [
+        "apnews.com"
+      ],
+      "id": "ap",
+      "name": "Associated Press"
+    },
+    {
+      "domains": [
+        "arabnews.com"
+      ],
+      "id": "arabnews",
+      "name": "Arab News"
+    },
+    {
+      "domains": [
+        "asahi.com"
+      ],
+      "id": "asahi",
+      "name": "朝日新聞"
+    },
+    {
+      "domains": [
+        "axios.com"
+      ],
+      "id": "axios",
+      "name": "Axios"
+    },
+    {
+      "domains": [
+        "bbc.co.uk",
+        "bbc.com"
+      ],
+      "id": "bbc",
+      "name": "BBC"
+    },
+    {
+      "domains": [
+        "bloomberg.com"
+      ],
+      "id": "bloomberg",
+      "name": "Bloomberg"
+    },
+    {
+      "domains": [
+        "breitbart.com"
+      ],
+      "id": "breitbart",
+      "name": "Breitbart"
+    },
+    {
+      "domains": [
+        "bunshun.jp"
+      ],
+      "id": "bunshun",
+      "name": "文春オンライン"
+    },
+    {
+      "domains": [
+        "cbc.ca"
+      ],
+      "id": "cbc",
+      "name": "CBC News"
+    },
+    {
+      "domains": [
+        "cbsnews.com"
+      ],
+      "id": "cbsnews",
+      "name": "CBS News"
+    },
+    {
+      "domains": [
+        "cgtn.com"
+      ],
+      "id": "cgtn",
+      "name": "CGTN"
+    },
+    {
+      "domains": [
+        "channelnewsasia.com"
+      ],
+      "id": "cna",
+      "name": "CNA"
+    },
+    {
+      "domains": [
+        "cnn.com",
+        "edition.cnn.com"
+      ],
+      "id": "cnn",
+      "name": "CNN"
+    },
+    {
+      "domains": [
+        "commondreams.org"
+      ],
+      "id": "commondreams",
+      "name": "Common Dreams"
+    },
+    {
+      "domains": [
+        "thedailybeast.com"
+      ],
+      "id": "dailybeast",
+      "name": "The Daily Beast"
+    },
+    {
+      "domains": [
+        "dailycaller.com"
+      ],
+      "id": "dailycaller",
+      "name": "The Daily Caller"
+    },
+    {
+      "domains": [
+        "dailymail.co.uk",
+        "dailymail.com"
+      ],
+      "id": "dailymail",
+      "name": "Daily Mail"
+    },
+    {
+      "domains": [
+        "dailysabah.com"
+      ],
+      "id": "dailysabah",
+      "name": "Daily Sabah"
+    },
+    {
+      "domains": [
+        "democracynow.org"
+      ],
+      "id": "democracynow",
+      "name": "Democracy Now!"
+    },
+    {
+      "domains": [
+        "diamond.jp"
+      ],
+      "id": "diamond",
+      "name": "ダイヤモンド・オンライン"
+    },
+    {
+      "domains": [
+        "dw.com"
+      ],
+      "id": "dw",
+      "name": "Deutsche Welle"
+    },
+    {
+      "domains": [
+        "theepochtimes.com"
+      ],
+      "id": "epochtimes",
+      "name": "The Epoch Times"
+    },
+    {
+      "domains": [
+        "euronews.com"
+      ],
+      "id": "euronews",
+      "name": "Euronews"
+    },
+    {
+      "domains": [
+        "express.co.uk"
+      ],
+      "id": "express",
+      "name": "Daily Express"
+    },
+    {
+      "domains": [
+        "fnn.jp"
+      ],
+      "id": "fnn",
+      "name": "FNNプライムオンライン"
+    },
+    {
+      "domains": [
+        "forbes.com"
+      ],
+      "id": "forbes",
+      "name": "Forbes"
+    },
+    {
+      "domains": [
+        "foxnews.com"
+      ],
+      "id": "foxnews",
+      "name": "Fox News"
+    },
+    {
+      "domains": [
+        "france24.com"
+      ],
+      "id": "france24",
+      "name": "France 24"
+    },
+    {
+      "domains": [
+        "thegatewaypundit.com"
+      ],
+      "id": "gatewaypundit",
+      "name": "The Gateway Pundit"
+    },
+    {
+      "domains": [
+        "gbnews.com"
+      ],
+      "id": "gbnews",
+      "name": "GB News"
+    },
+    {
+      "domains": [
+        "globaltimes.cn"
+      ],
+      "id": "globaltimes",
+      "name": "Global Times"
+    },
+    {
+      "domains": [
+        "theglobeandmail.com"
+      ],
+      "id": "globeandmail",
+      "name": "The Globe and Mail"
+    },
+    {
+      "domains": [
+        "theguardian.com"
+      ],
+      "id": "guardian",
+      "name": "The Guardian"
+    },
+    {
+      "domains": [
+        "huffpost.com"
+      ],
+      "id": "huffpost",
+      "name": "HuffPost"
+    },
+    {
+      "domains": [
+        "huffingtonpost.jp"
+      ],
+      "id": "huffpostjp",
+      "name": "ハフポスト日本版"
+    },
+    {
+      "domains": [
+        "independent.co.uk"
+      ],
+      "id": "independent",
+      "name": "The Independent"
+    },
+    {
+      "domains": [
+        "jacobin.com"
+      ],
+      "id": "jacobin",
+      "name": "Jacobin"
+    },
+    {
+      "domains": [
+        "japan-forward.com"
+      ],
+      "id": "japanforward",
+      "name": "Japan Forward"
+    },
+    {
+      "domains": [
+        "japantimes.co.jp"
+      ],
+      "id": "japantimes",
+      "name": "The Japan Times"
+    },
+    {
+      "domains": [
+        "jiji.com"
+      ],
+      "id": "jiji",
+      "name": "時事通信"
+    },
+    {
+      "domains": [
+        "jpost.com"
+      ],
+      "id": "jpost",
+      "name": "The Jerusalem Post"
+    },
+    {
+      "domains": [
+        "justthenews.com"
+      ],
+      "id": "justthenews",
+      "name": "Just the News"
+    },
+    {
+      "domains": [
+        "kyivindependent.com"
+      ],
+      "id": "kyivindependent",
+      "name": "The Kyiv Independent"
+    },
+    {
+      "domains": [
+        "47news.jp",
+        "english.kyodonews.net",
+        "kyodonews.net"
+      ],
+      "id": "kyodo",
+      "name": "Kyodo News"
+    },
+    {
+      "domains": [
+        "latimes.com"
+      ],
+      "id": "latimes",
+      "name": "Los Angeles Times"
+    },
+    {
+      "domains": [
+        "lite-ra.com"
+      ],
+      "id": "litera",
+      "name": "リテラ"
+    },
+    {
+      "domains": [
+        "mainichi.jp"
+      ],
+      "id": "mainichi",
+      "name": "毎日新聞"
+    },
+    {
+      "domains": [
+        "meduza.io"
+      ],
+      "id": "meduza",
+      "name": "Meduza"
+    },
+    {
+      "domains": [
+        "mirror.co.uk"
+      ],
+      "id": "mirror",
+      "name": "Daily Mirror"
+    },
+    {
+      "domains": [
+        "motherjones.com"
+      ],
+      "id": "motherjones",
+      "name": "Mother Jones"
+    },
+    {
+      "domains": [
+        "nationalreview.com"
+      ],
+      "id": "nationalreview",
+      "name": "National Review"
+    },
+    {
+      "domains": [
+        "nbcnews.com"
+      ],
+      "id": "nbcnews",
+      "name": "NBC News"
+    },
+    {
+      "domains": [
+        "ndtv.com"
+      ],
+      "id": "ndtv",
+      "name": "NDTV"
+    },
+    {
+      "domains": [
+        "newsmax.com"
+      ],
+      "id": "newsmax",
+      "name": "Newsmax"
+    },
+    {
+      "domains": [
+        "nhk.or.jp",
+        "www3.nhk.or.jp"
+      ],
+      "id": "nhk",
+      "name": "NHK"
+    },
+    {
+      "domains": [
+        "asia.nikkei.com",
+        "nikkei.com"
+      ],
+      "id": "nikkeiasia",
+      "name": "Nikkei Asia"
+    },
+    {
+      "domains": [
+        "nippon.com"
+      ],
+      "id": "nipponcom",
+      "name": "nippon.com"
+    },
+    {
+      "domains": [
+        "npr.org"
+      ],
+      "id": "npr",
+      "name": "NPR"
+    },
+    {
+      "domains": [
+        "nypost.com",
+        "pagesix.com"
+      ],
+      "id": "nypost",
+      "name": "New York Post"
+    },
+    {
+      "domains": [
+        "nytimes.com"
+      ],
+      "id": "nytimes",
+      "name": "The New York Times"
+    },
+    {
+      "domains": [
+        "nzherald.co.nz"
+      ],
+      "id": "nzherald",
+      "name": "The New Zealand Herald"
+    },
+    {
+      "domains": [
+        "pbs.org"
+      ],
+      "id": "pbs",
+      "name": "PBS NewsHour"
+    },
+    {
+      "domains": [
+        "politico.com"
+      ],
+      "id": "politico",
+      "name": "Politico"
+    },
+    {
+      "domains": [
+        "president.jp"
+      ],
+      "id": "president",
+      "name": "PRESIDENT Online"
+    },
+    {
+      "domains": [
+        "presstv.co.uk",
+        "presstv.ir"
+      ],
+      "id": "presstv",
+      "name": "Press TV"
+    },
+    {
+      "domains": [
+        "rawstory.com"
+      ],
+      "id": "rawstory",
+      "name": "Raw Story"
+    },
+    {
+      "domains": [
+        "reason.com"
+      ],
+      "id": "reason",
+      "name": "Reason"
+    },
+    {
+      "domains": [
+        "reuters.com"
+      ],
+      "id": "reuters",
+      "name": "Reuters"
+    },
+    {
+      "domains": [
+        "rt.com"
+      ],
+      "id": "rt",
+      "name": "RT"
+    },
+    {
+      "domains": [
+        "sankei.com"
+      ],
+      "id": "sankei",
+      "name": "産経新聞"
+    },
+    {
+      "domains": [
+        "scmp.com"
+      ],
+      "id": "scmp",
+      "name": "South China Morning Post"
+    },
+    {
+      "domains": [
+        "news.sky.com",
+        "sky.com"
+      ],
+      "id": "skynews",
+      "name": "Sky News"
+    },
+    {
+      "domains": [
+        "sputnikglobe.com",
+        "sputniknews.com"
+      ],
+      "id": "sputnik",
+      "name": "Sputnik"
+    },
+    {
+      "domains": [
+        "straitstimes.com"
+      ],
+      "id": "straitstimes",
+      "name": "The Straits Times"
+    },
+    {
+      "domains": [
+        "tass.com"
+      ],
+      "id": "tass",
+      "name": "TASS"
+    },
+    {
+      "domains": [
+        "newsdig.tbs.co.jp"
+      ],
+      "id": "tbsnewsdig",
+      "name": "TBS NEWS DIG"
+    },
+    {
+      "domains": [
+        "telegraph.co.uk"
+      ],
+      "id": "telegraph",
+      "name": "The Telegraph"
+    },
+    {
+      "domains": [
+        "theblaze.com"
+      ],
+      "id": "theblaze",
+      "name": "TheBlaze"
+    },
+    {
+      "domains": [
+        "thehill.com"
+      ],
+      "id": "thehill",
+      "name": "The Hill"
+    },
+    {
+      "domains": [
+        "thehindu.com"
+      ],
+      "id": "thehindu",
+      "name": "The Hindu"
+    },
+    {
+      "domains": [
+        "theintercept.com"
+      ],
+      "id": "theintercept",
+      "name": "The Intercept"
+    },
+    {
+      "domains": [
+        "indiatimes.com",
+        "timesofindia.indiatimes.com",
+        "toi.li"
+      ],
+      "id": "timesofindia",
+      "name": "The Times of India"
+    },
+    {
+      "domains": [
+        "timesofisrael.com"
+      ],
+      "id": "timesofisrael",
+      "name": "The Times of Israel"
+    },
+    {
+      "domains": [
+        "toyokeizai.net"
+      ],
+      "id": "toyokeizai",
+      "name": "東洋経済オンライン"
+    },
+    {
+      "domains": [
+        "upi.com"
+      ],
+      "id": "upi",
+      "name": "UPI"
+    },
+    {
+      "domains": [
+        "usnews.com"
+      ],
+      "id": "usnews",
+      "name": "U.S. News & World Report"
+    },
+    {
+      "domains": [
+        "vox.com"
+      ],
+      "id": "vox",
+      "name": "Vox"
+    },
+    {
+      "domains": [
+        "washingtonpost.com"
+      ],
+      "id": "washingtonpost",
+      "name": "The Washington Post"
+    },
+    {
+      "domains": [
+        "washingtontimes.com"
+      ],
+      "id": "washingtontimes",
+      "name": "The Washington Times"
+    },
+    {
+      "domains": [
+        "wsj.com"
+      ],
+      "id": "wsj",
+      "name": "The Wall Street Journal"
+    },
+    {
+      "domains": [
+        "yomiuri.co.jp"
+      ],
+      "id": "yomiuri",
+      "name": "読売新聞"
+    },
+    {
+      "domains": [
+        "zerohedge.com"
+      ],
+      "id": "zerohedge",
+      "name": "ZeroHedge"
+    }
+  ]
+}

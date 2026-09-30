@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790654926,
+    "expired": false,
+    "id": 10463826055709981065,
+    "item_count": 1,
+    "last_active_at": 1790654926,
+    "origin_item_id": 10463826055709981065,
+    "origin_outlet_id": "japantimes",
+    "outlet_count": 1,
+    "primary_title": "Nidec’s unending turmoil raises specter of breakup or takeover",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 10463826055709981065,
+        "joined_at": 1790654926,
+        "outlet_id": "japantimes",
+        "published_at": 1790654640
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japantimes": "The Japan Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 10463826055709981065,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4179,
+      "snapshot_id": 11118372638692708528,
+      "ts": 1790679472
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/business/2026/09/29/companies/nidec-turmoil-breakup-risk/",
+          "cluster_id": 10463826055709981065,
+          "fetched_at": 1790654926,
+          "id": 10463826055709981065,
+          "joined_at": 1790654926,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790654640,
+          "summary": "The crisis puts Nidec at risk of joining the ranks of companies that fell from grace due to management upheaval and weak corporate governance.",
+          "text_hash": 6201598275152408810,
+          "title": "Nidec’s unending turmoil raises specter of breakup or takeover"
+        }
+      ],
+      "outlet_id": "japantimes"
+    }
+  ],
+  "withdrawals": []
+}

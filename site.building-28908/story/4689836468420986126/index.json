@@ -1,0 +1,156 @@
+{
+  "claims": {
+    "theblaze": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "theblaze.com",
+          "expires": "2027-09-26",
+          "last_changed": "2026-08-25",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "theblaze",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theblaze.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2000-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2011-09-12"
+      },
+      {
+        "data": {
+          "qid": "Q6818648"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mercury Radio Arts"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Is_The_Blaze_a_WP:RS_for_America_(2014_film)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_227#Newsbusters_and_The_Blaze_at_WP:BLP_page_Malcolm_Nance_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_239#TheBlaze_show_Dana_etc._w_rgd_Dana_Loesch"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Blaze Media (BlazeTV, Conservative Review, CRTV, TheBlaze)",
+          "status": "generally_unreliable",
+          "summary": "Blaze Media (including TheBlaze) is considered generally unreliable for facts. In some cases, it may be usable for attributed opinions. In 2018, TheBlaze merged with Conservative Review (CRTV) to form Blaze Media. [ 3 ]"
+        },
+        "field": "reliability",
+        "outlet_id": "theblaze",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653933,
+    "expired": false,
+    "id": 4689836468420986126,
+    "item_count": 1,
+    "last_active_at": 1790653933,
+    "origin_item_id": 4689836468420986126,
+    "origin_outlet_id": "theblaze",
+    "outlet_count": 1,
+    "primary_title": "Sara Gonzales mocks media outrage over White House ban: 'You are literally covering him right now'",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 4689836468420986126,
+        "joined_at": 1790653933,
+        "outlet_id": "theblaze",
+        "published_at": 1790604000
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "theblaze": "TheBlaze"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theblaze.com/shows/sara-gonzales-unfiltered/sara-gonzales-mocks-media-outrage-over-white-house-ban-you-are-literally-covering-him-right-now",
+          "cluster_id": 4689836468420986126,
+          "fetched_at": 1790653933,
+          "id": 4689836468420986126,
+          "joined_at": 1790653933,
+          "lang": "en",
+          "outlet_id": "theblaze",
+          "published_at": 1790604000,
+          "summary": "The mainstream media outlets are in shambles after President Trump banned CNN, MS NOW, and Politico from White House access, with some claiming the move goes against their constitutional right to cover him. But BlazeTV host Sara Gonzales explains they're framing it all wrong. “I regret to inform you that the fake news media has a new thing that they are clutching their pearls about. You know, they just love to be the victims. They actually really enjoy any time that they can paint themselves as some little…",
+          "text_hash": 984893081789362677,
+          "title": "Sara Gonzales mocks media outrage over White House ban: 'You are literally covering him right now'"
+        }
+      ],
+      "outlet_id": "theblaze"
+    }
+  ],
+  "withdrawals": []
+}

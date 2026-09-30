@@ -1,0 +1,415 @@
+{
+  "claims": {
+    "abcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "abcnews.com",
+          "expires": "2027-04-21",
+          "last_changed": "2026-03-22",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/abcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-20"
+      },
+      {
+        "data": {
+          "domain": "go.com",
+          "expires": "2027-01-08",
+          "last_changed": "2025-12-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/go.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-01-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1945-06-15"
+      },
+      {
+        "data": {
+          "qid": "Q169889"
+        },
+        "field": "owner",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "American Broadcasting Company"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "ABC News (USA)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+        },
+        "field": "reliability",
+        "outlet_id": "abcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "bloomberg": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "bloomberg.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-09-24",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bloomberg.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1990-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q13977"
+        },
+        "field": "owner",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg L.P."
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_151#Bloomberg_on_Microsoft",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_270#Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bloomberg_News_/_Decision_not_to_investigate_Michael_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_499#Omitting_Bloomberg_from_India-Pak_Conflicts"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg (Bloomberg News, Bloomberg Businessweek)",
+          "status": "generally_reliable",
+          "summary": "Bloomberg publications, including Bloomberg News and Bloomberg Businessweek, are considered generally reliable for news and business topics. See also: Bloomberg profiles."
+        },
+        "field": "reliability",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#User_submitted_Executive_Profiles_on_Bloomberg.com"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg profiles",
+          "status": "no_consensus",
+          "summary": "Bloomberg company and executive profiles are generally considered to be based on company press releases and should only be used as a source for uncontroversial information. There is consensus that these profiles should not be used to establish notability. Some editors consider these profiles to be akin to self-published sources. See also: Bloomberg."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "skynews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "sky.com",
+          "expires": "2027-06-17",
+          "last_changed": "2019-08-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "skynews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sky.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1988-03-31"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1989-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q918390"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Sky Group"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Alleged_war_crimes_by_Russians_in_Syria",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_334#Sky_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#LBC_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_458#Sky_News_caught_manipulating_footage"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sky News (UK)",
+          "status": "generally_reliable",
+          "summary": "Sky News (UK) is considered an ordinary WP:NEWSORG and is thus presumed generally reliable. Sky News UK is unaffiliated with Sky News Australia. Sky News UK has partial ownership of Sky News Arabia."
+        },
+        "field": "reliability",
+        "outlet_id": "skynews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.013660073280334473,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.733660101890564
+    },
+    "created_at": 1790680910,
+    "expired": false,
+    "id": 15931418630873916793,
+    "item_count": 3,
+    "last_active_at": 1790720285,
+    "origin_item_id": 15931418630873916793,
+    "origin_outlet_id": "bloomberg",
+    "outlet_count": 3,
+    "primary_title": "South Africa announces measures to tackle violence against women after series of killings",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15931418630873916793,
+        "joined_at": 1790680910,
+        "outlet_id": "bloomberg",
+        "published_at": 1790680198
+      },
+      {
+        "item_id": 1065464827983197016,
+        "joined_at": 1790715390,
+        "outlet_id": "abcnews",
+        "published_at": 1790711667
+      },
+      {
+        "item_id": 4093455230828124603,
+        "joined_at": 1790720285,
+        "outlet_id": "skynews",
+        "published_at": 1790714040
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "abcnews",
+            "bloomberg",
+            "skynews"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcnews": "ABC News",
+    "bloomberg": "Bloomberg",
+    "skynews": "Sky News"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bloomberg.com/news/articles/2026-09-29/south-african-president-to-address-nation-on-gender-violence",
+          "cluster_id": 15931418630873916793,
+          "fetched_at": 1790680910,
+          "id": 15931418630873916793,
+          "joined_at": 1790680910,
+          "lang": "en",
+          "outlet_id": "bloomberg",
+          "published_at": 1790680198,
+          "summary": "South African President Cyril Ramaphosa will address the nation Tuesday evening on the steps being taken by the government to confront gender-based violence and femicide, his office said in a statement.",
+          "text_hash": 13280611433814564877,
+          "title": "South African President to Address Nation on Gender Violence"
+        }
+      ],
+      "outlet_id": "bloomberg"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/south-africa-announces-measures-tackle-violence-women-after-136867186",
+          "cluster_id": 15931418630873916793,
+          "fetched_at": 1790715390,
+          "id": 1065464827983197016,
+          "joined_at": 1790715390,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790711667,
+          "summary": "South African President Cyril Ramaphosa has announced new measures to combat violence against women",
+          "text_hash": 17960905769186423081,
+          "title": "South Africa announces measures to tackle violence against women after series of killings"
+        }
+      ],
+      "outlet_id": "abcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://news.sky.com/story/south-africa-unveils-plan-to-combat-violence-against-women-after-11-killings-13593446",
+          "cluster_id": 15931418630873916793,
+          "fetched_at": 1790720285,
+          "id": 4093455230828124603,
+          "joined_at": 1790720285,
+          "lang": "en",
+          "outlet_id": "skynews",
+          "published_at": 1790714040,
+          "summary": "South Africa's president has announced urgent action after the killing of at least 11 women in just two months.",
+          "text_hash": 7010210103819180067,
+          "title": "South Africa unveils plan to combat violence against women after 11 killings"
+        }
+      ],
+      "outlet_id": "skynews"
+    }
+  ],
+  "withdrawals": []
+}

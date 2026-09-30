@@ -1,0 +1,54 @@
+# Stories, page 30 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Right-wing conservatives push to shut down the last active Jan. 6 prosecution](/story/2193073821922598778/) · 1 outlet · reach 1
+- [Stocks fall, bond yields surge and oil fluctuates as war keeps markets on edge](/story/2431269673000867663/) · 1 outlet · reach 1
+- [The best first aid kits to have on hand for non-hospital emergencies](/story/3780785115162103128/) · 1 outlet · reach 1
+- [Russia Strikes Ukraine's Logistics Centers, Port Infrastructure](/story/6957930229248472671/) · 1 outlet · reach 1
+- [Your winter emergency car kit isn’t complete without this item](/story/9613606381122890208/) · 1 outlet · reach 1
+- [How an American teacher’s $5,000 donation helped turn a Chinese desert into a lush forest](/story/9702062368576827613/) · 1 outlet · reach 1
+- [A search for their loved ones’ remains, three months after Venezuela earthquakes](/story/11170577257179732798/) · 1 outlet · reach 1
+- [New data shows most women in the Marines passing toughened fitness tests for combat roles](/story/13073999536877692606/) · 1 outlet · reach 1
+- [Europe frets as the Kremlin pushes the limits of its hybrid warfare](/story/13509445194625089082/) · 1 outlet · reach 1
+- [Common Ground: The ever-expanding NFL community](/story/13634094474237622352/) · 1 outlet · reach 1
+- [New early October Prime Day deals just dropped — I hand-picked 41+ actually worth shopping](/story/14176461585065306952/) · 1 outlet · reach 1
+- [Lawmakers slam Trump’s ‘unlawful’ move to cut $810 million in federal funds](/story/16870438897585301032/) · 1 outlet · reach 1
+- [KitchenAid appliances are over 65% off on Amazon, and it’s more than just the stand mixer](/story/16875747171792567385/) · 1 outlet · reach 1
+- [Labour told to scrap fuel duty hike as John Healey warned over 'worst timing possible'](/story/12429632998214329030/) · 1 outlet · reach 1
+- [Russian Deputy Defense Minister Osmakov arrives in Mongolia for visit](/story/16753631290986565208/) · 1 outlet · reach 1
+- [JTN Exclusive: Rep. Cloud urges White House action on 1.4 billion gun records on Americans](/story/2171103670021882292/) · 1 outlet · reach 1
+- [America is running out of weapons. Blame Congress.](/story/9459313540858848146/) · 1 outlet · reach 1
+- [GCSE results day 2024: Grade boundaries explained](/story/1403176762817689481/) · 1 outlet · reach 1
+- [United Cultures Forum in St. Petersberg Brings Cultures Together Beyond Politics - Putin](/story/2630559022434900051/) · 1 outlet · reach 1
+- [Meta's new motto: we care about privacy](/story/3048155169677059585/) · 1 outlet · reach 1
+- [AI labs are cutting model costs - and it could help them slow down safely](/story/4250732272000881338/) · 1 outlet · reach 1
+- [Hamas Releases Four Female Israeli Soldiers Under Gaza Cease-Fire Deal](/story/5474979838228354599/) · 1 outlet · reach 1
+- [Can Democrats flip the House? Here's the latest in key races](/story/6444911863508373031/) · 1 outlet · reach 1
+- [Ucas Clearing 2025: How to get a last-minute university place](/story/6659918200993077010/) · 1 outlet · reach 1
+- [Trump’s China reversal](/story/6891017150960625733/) · 1 outlet · reach 1
+- [Boy, 16, arrested for 'raping two women in brutal attacks that have shaken small Arizona community'](/story/7017149130097399540/) · 1 outlet · reach 1
+- [Trump to meet with Zelensky as Russia-Ukraine attacks intensify](/story/7925780795317403430/) · 2 outlets · reach 1
+- [Monday evening news briefing: Countries warn against visiting UK amid riots](/story/7959007602367640774/) · 1 outlet · reach 1
+- [Welcome to the October issue of The Highlight](/story/9529440428549072451/) · 1 outlet · reach 1
+- [AI could ‘cause a billion deaths’ – Bill Gates](/story/9759523798683197459/) · 2 outlets · reach 1
+- [2 dead, 4 missing after explosion collapses Athens building](/story/10365554248622795770/) · 3 outlets · reach 1
+- [Flock cameras are creepy. They might still be worth it.](/story/14385141363839983839/) · 1 outlet · reach 1
+- [Trump’s taxpayer-funded propaganda blitz](/story/17142238068976448230/) · 1 outlet · reach 1
+- [Chinese scientists document first evidence of tool use in giant pandas](/story/130283788718802212/) · 1 outlet · reach 1
+- [DC gala shooting suspect voices grievances against US administration in writings to family: media reports](/story/1260296125162737024/) · 1 outlet · reach 1
+- [From Pegasus to Blades of the Guardians, film IPs fuel Xinjiang's tourism boom, NPC deputy tells GT](/story/1308606503281313630/) · 1 outlet · reach 1
+- [Over 3,000 protests staged across US on one month of strikes against Iran, scale 'suggests mounting public dissatisfaction that risks more chaos': expert](/story/1488494946988795539/) · 1 outlet · reach 1
+- [GT investigates: How Japan's PM revives bellicism mindset, perpetuates 'victim narrative' pushed by right-wing forces since WWI](/story/1853408899561004733/) · 1 outlet · reach 1
+- [NPC deputy suggests better informing patients of fertility risks before treatment](/story/2701592492978612504/) · 1 outlet · reach 1
+- [Tokyo Trial debunks notorious Yasukuni Shrine's inverted narrative](/story/2724860477232123763/) · 1 outlet · reach 1
+- [GT on the spot: UN officials praise bird conservation efforts at Poyang Lake in Jiangxi](/story/3095784835260665078/) · 1 outlet · reach 1
+- [Local Insights: At the 13th Baku Global Forum, global participants look to China for new path of multilateralism and stability](/story/4359349387405153207/) · 1 outlet · reach 1
+- [Civic groups in Taiwan protest Lai's arms push, oppose being dragged toward battlefield](/story/4422090521935018315/) · 1 outlet · reach 1
+- [Never alone in times of crisis: HK and mainland stand in solidarity to aid rescue and relief in high-rise fire](/story/4622425499936972378/) · 1 outlet · reach 1
+- [South Africa freedom day memorial gathering reveals its pursuit of dignity and inclusive governance in post apartheid era](/story/5683324353366331811/) · 1 outlet · reach 1
+- [China, Russia conduct strategic alignment on issues related to Japan](/story/5924263768653977004/) · 1 outlet · reach 1
+- [NPC deputy suggests optimizing vacations, breaks to stimulate domestic consumption](/story/6670486059814160097/) · 1 outlet · reach 1
+- [China's astronaut center addresses challenges of long-term human survival on exoplanets: political advisor and China's first female taikonaut to enter space station](/story/6985535198409928805/) · 1 outlet · reach 1
+- [Chinese FM strongly condemns $11b US arms sales to Taiwan; DPP authorities 'thanking' Washington slammed by island netizens](/story/8362484081723889336/) · 1 outlet · reach 1
+- [Shenzhou-20 taikonauts make 1st public appearance after safe return following debris incident, recounts details](/story/9019976957486766185/) · 1 outlet · reach 1

@@ -1,0 +1,265 @@
+{
+  "claims": {
+    "cgtn": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "cgtn.com",
+          "expires": "2026-11-15",
+          "last_changed": "2025-11-01",
+          "registrar": "Alibaba Cloud Computing (Beijing) Co., Ltd.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cgtn",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cgtn.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2002-11-15"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1997-09-20"
+      },
+      {
+        "data": {
+          "qid": "Q207936"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "China Central Television"
+      },
+      {
+        "data": {
+          "qid": "Q51675998"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "China Media Group"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": null
+    },
+    "created_at": 1790653941,
+    "expired": false,
+    "id": 3800060910128402530,
+    "item_count": 2,
+    "last_active_at": 1790653944,
+    "origin_item_id": 5833039511835097032,
+    "origin_outlet_id": "cgtn",
+    "outlet_count": 2,
+    "primary_title": "Sweden's Andersson says she cannot form govt in current situation",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3800060910128402530,
+        "joined_at": 1790653941,
+        "outlet_id": "scmp",
+        "published_at": 1790591277
+      },
+      {
+        "item_id": 5833039511835097032,
+        "joined_at": 1790653944,
+        "outlet_id": "cgtn",
+        "published_at": 1790580862
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "cgtn": "CGTN",
+    "scmp": "South China Morning Post"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://news.cgtn.com/news/2026-09-28/news-1QO2Gaq19sY/p.html",
+          "cluster_id": 3800060910128402530,
+          "fetched_at": 1790653944,
+          "id": 5833039511835097032,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "cgtn",
+          "published_at": 1790580862,
+          "summary": "Sweden's Andersson says she cannot form govt in current situation",
+          "text_hash": 580522776688762969,
+          "title": "Sweden's Andersson says she cannot form govt in current situation"
+        }
+      ],
+      "outlet_id": "cgtn"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/world/europe/article/3369077/swedens-magdalena-andersson-ends-government-formation-talks-no-result",
+          "cluster_id": 3800060910128402530,
+          "fetched_at": 1790653941,
+          "id": 3800060910128402530,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790591277,
+          "summary": "Sweden’s election winner Magdalena Andersson said she is not currently able to form a government, underscoring the difficulty of building a coalition in the fragmented parliament after the election earlier this month. The Social Democrat leader returned her mandate to explore forming a government after the Left Party decided to support a centre-right candidate for parliament speaker in a vote later on Monday, she told reporters. The move does not necessarily mean Andersson will not be the next...",
+          "text_hash": 12434229621706303968,
+          "title": "Sweden’s Magdalena Andersson ends government-formation talks with no result"
+        }
+      ],
+      "outlet_id": "scmp"
+    }
+  ],
+  "withdrawals": []
+}

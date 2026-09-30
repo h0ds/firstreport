@@ -1,0 +1,384 @@
+{
+  "claims": {
+    "bloomberg": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "bloomberg.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-09-24",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bloomberg.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1990-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q13977"
+        },
+        "field": "owner",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg L.P."
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_151#Bloomberg_on_Microsoft",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_270#Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bloomberg_News_/_Decision_not_to_investigate_Michael_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_499#Omitting_Bloomberg_from_India-Pak_Conflicts"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg (Bloomberg News, Bloomberg Businessweek)",
+          "status": "generally_reliable",
+          "summary": "Bloomberg publications, including Bloomberg News and Bloomberg Businessweek, are considered generally reliable for news and business topics. See also: Bloomberg profiles."
+        },
+        "field": "reliability",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#User_submitted_Executive_Profiles_on_Bloomberg.com"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg profiles",
+          "status": "no_consensus",
+          "summary": "Bloomberg company and executive profiles are generally considered to be based on company press releases and should only be used as a source for uncontroversial information. There is consensus that these profiles should not be used to establish notability. Some editors consider these profiles to be akin to self-published sources. See also: Bloomberg."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "newsmax": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "newsmax.com",
+          "expires": "2027-07-17",
+          "last_changed": "2026-07-17",
+          "registrar": "SafeNames Ltd.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "newsmax",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/newsmax.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-07-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1998-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_297#Is_Newsmax_reliable_for_the_best_Catholic_Colleges?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#Newsmax_interviewee's_opinions"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Newsmax",
+          "status": "deprecated",
+          "summary": "Newsmax was deprecated by snowball clause consensus in the November 2020 RfC. Concerns of editors included that Newsmax lacks adherence to journalistic standards, launders propaganda, promulgates misinformation, promotes conspiracy theories and false information for political purposes, and promotes medical misinformation such as COVID-19 -related falsehoods, climate change denialism, conspiracy th"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "newsmax",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "thehill": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": null
+    },
+    "created_at": 1790653930,
+    "expired": false,
+    "id": 9889831105738716716,
+    "item_count": 3,
+    "last_active_at": 1790653934,
+    "origin_item_id": 17675723390993488170,
+    "origin_outlet_id": "bloomberg",
+    "outlet_count": 3,
+    "primary_title": "Sen. Thune: Taxpayers Shouldn't Pay for Trump Ads",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9889831105738716716,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790634914
+      },
+      {
+        "item_id": 17675723390993488170,
+        "joined_at": 1790653933,
+        "outlet_id": "bloomberg",
+        "published_at": 1790624063
+      },
+      {
+        "item_id": 5127812724828311415,
+        "joined_at": 1790653934,
+        "outlet_id": "newsmax",
+        "published_at": 1790629339
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "bloomberg",
+            "thehill"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "newsmax"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "bloomberg": "Bloomberg",
+    "newsmax": "Newsmax",
+    "thehill": "The Hill"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bloomberg.com/news/articles/2026-09-28/gop-leader-thune-says-taxpayers-shouldn-t-pay-for-trump-tv-ads",
+          "cluster_id": 9889831105738716716,
+          "fetched_at": 1790653933,
+          "id": 17675723390993488170,
+          "joined_at": 1790653933,
+          "lang": "en",
+          "outlet_id": "bloomberg",
+          "published_at": 1790624063,
+          "summary": "Senate Republican Leader John Thune said taxpayers shouldn’t be footing the bill for video advertisements lauding President Donald Trump that the administration has called “presidential public service announcements.”",
+          "text_hash": 4409307283543648721,
+          "title": "GOP Leader Thune Says Taxpayers Shouldn’t Pay for Trump TV Ads"
+        }
+      ],
+      "outlet_id": "bloomberg"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://newsmax.com/politics/john-thune-donald-trump-federally-funded-campaign-ads/2026/09/28/id/1270978",
+          "cluster_id": 9889831105738716716,
+          "fetched_at": 1790653934,
+          "id": 5127812724828311415,
+          "joined_at": 1790653934,
+          "lang": "en",
+          "outlet_id": "newsmax",
+          "published_at": 1790629339,
+          "summary": "Senate Majority Leader John Thune, R-S.D., said that new GOP campaign advertisements promoting President Donald Trump \"shouldn't be paid for with taxpayer dollars.\"",
+          "text_hash": 3071456718413647345,
+          "title": "Sen. Thune: Taxpayers Shouldn't Pay for Trump Ads"
+        }
+      ],
+      "outlet_id": "newsmax"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehill.com/homenews/senate/6116369-thune-criticizes-trump-ads/",
+          "cluster_id": 9889831105738716716,
+          "fetched_at": 1790653930,
+          "id": 9889831105738716716,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790634914,
+          "summary": "Senate Majority Leader John Thune (R-S.D.) told reporters Monday that while he likes President Trump’s new ads pledging to “cast out the communists, Marxists and fascists,” they “shouldn’t be paid for by taxpayer dollars.” Thune warned Trump about using taxpayer money for ads that resemble the political ads he ran online during the 2024 presidential…",
+          "text_hash": 10063715876139304877,
+          "title": "Thune: Ads promoting Trump political message ‘shouldn’t be paid for by taxpayer dollars’"
+        }
+      ],
+      "outlet_id": "thehill"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 17675723390993488170,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3440,
+      "snapshot_id": 10340573024969697227,
+      "ts": 1790665825
+    }
+  ]
+}

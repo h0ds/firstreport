@@ -1,0 +1,654 @@
+{
+  "claims": {
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ],
+    "nikkeiasia": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q1077694 (Nihon Keizai Shimbun); also Q17216388 (Nikkei Asia), Q55710642 (Nikkei)",
+        "outlet_id": "nikkeiasia",
+        "ref_url": "https://www.wikidata.org/wiki/Q1077694",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "data": {
+          "domain": "nikkei.com",
+          "expires": "2027-05-10",
+          "last_changed": "2026-05-08",
+          "registrar": "Japan Registry Services Co., Ltd.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nikkeiasia",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nikkei.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-05-09"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q1077694 (Nihon Keizai Shimbun); also Q17216388 (Nikkei Asia), Q55710642 (Nikkei)",
+        "outlet_id": "nikkeiasia",
+        "ref_url": "https://www.wikidata.org/wiki/Q1077694",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1876-12-02"
+      }
+    ],
+    "thehill": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "zerohedge": [
+      {
+        "data": {
+          "domain": "zerohedge.com",
+          "expires": "2027-01-11",
+          "last_changed": "2026-01-10",
+          "registrar": "easyDNS Technologies Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/zerohedge.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2009-01-11"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2009-01-09"
+      },
+      {
+        "data": {
+          "qid": "Q56547225"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daniel Ivandjiiski"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_302#RfC:_Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_199#ZeroHedge_Blog_post_by_\"Tyler_Durden\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_238#Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#rate_\"Zero_Hedge\""
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Zero Hedge (ZeroHedge, ZH)",
+          "status": "deprecated",
+          "summary": "Zero Hedge was deprecated in the 2020 RfC due to its propagation of conspiracy theories. It is a self-published blog that is biased or opinionated."
+        },
+        "field": "reliability",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.0127716064453125,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 5,
+      "weakest_join": 0.732771635055542
+    },
+    "created_at": 1790653930,
+    "expired": false,
+    "id": 10343460793907305299,
+    "item_count": 7,
+    "last_active_at": 1790715381,
+    "origin_item_id": 17292355632458021199,
+    "origin_outlet_id": "nikkeiasia",
+    "outlet_count": 7,
+    "primary_title": "US, China agree to cut tariffs on $60B worth of products",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 10343460793907305299,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790599358
+      },
+      {
+        "item_id": 899816574637910394,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790420591
+      },
+      {
+        "item_id": 2182839649946013509,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790613154
+      },
+      {
+        "item_id": 3407856307936196376,
+        "joined_at": 1790653946,
+        "outlet_id": "japantimes",
+        "published_at": 1790642460
+      },
+      {
+        "item_id": 17292355632458021199,
+        "joined_at": 1790653947,
+        "outlet_id": "nikkeiasia",
+        "published_at": 0
+      },
+      {
+        "item_id": 186582785666842542,
+        "joined_at": 1790715370,
+        "outlet_id": "independent",
+        "published_at": 1790699610
+      },
+      {
+        "item_id": 5723510221194997104,
+        "joined_at": 1790715381,
+        "outlet_id": "zerohedge",
+        "published_at": 1790702400
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "axios",
+            "thehill",
+            "thehindu",
+            "independent"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "zerohedge"
+          ]
+        }
+      ],
+      "not_rated": [
+        "nikkeiasia",
+        "japantimes"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "axios": "Axios",
+    "independent": "The Independent",
+    "japantimes": "The Japan Times",
+    "nikkeiasia": "Nikkei Asia",
+    "thehill": "The Hill",
+    "thehindu": "The Hindu",
+    "zerohedge": "ZeroHedge"
+  },
+  "outlets_24h": 7,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    7,
+    7,
+    7,
+    7
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://asia.nikkei.com/spotlight/trump-xi-summit/us-and-china-agree-on-tariff-relief-for-30bn-of-nonsensitive-goods-each",
+          "cluster_id": 10343460793907305299,
+          "fetched_at": 1790653947,
+          "id": 17292355632458021199,
+          "joined_at": 1790653947,
+          "lang": "en",
+          "outlet_id": "nikkeiasia",
+          "published_at": 0,
+          "summary": "",
+          "text_hash": 15657925876589822031,
+          "title": "US and China agree on tariff relief for $30bn of nonsensitive goods each"
+        }
+      ],
+      "outlet_id": "nikkeiasia"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/26/us-china-tariffs-trade-30-billion",
+          "cluster_id": 10343460793907305299,
+          "fetched_at": 1790653931,
+          "id": 899816574637910394,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790420591,
+          "summary": "The U.S. and China have reached a deal to lower tariffs on $30 billion of \"non-sensitive goods\" as part of a trade package agreed at this week's summit between President Trump and Xi Jinping, the White House said. Why it matters: Such a deal would mark a thaw in the trade war that engulfed the two countries last year. As laid out by the White House, it would also potentially lower prices on a variety of consumer goods where American shoppers have felt the pinch of inflation. How it works: The Trump…",
+          "text_hash": 3483329108677174614,
+          "title": "U.S., China reach $30 billion tariff deal after Trump-Xi summit"
+        }
+      ],
+      "outlet_id": "axios"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehill.com/policy/international/6114572-trump-xi-us-china-trade-deal-30-for-30-lesser-tariffs/",
+          "cluster_id": 10343460793907305299,
+          "fetched_at": 1790653930,
+          "id": 10343460793907305299,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790599358,
+          "summary": "The U.S. and Chinese governments each unveiled $30 billion worth of products subject to lower tariffs, after President Trump and Chinese President Xi Jinping met last week in Washington, according to the White House. Chinese products subject to lower tariffs under the new “30-by-30” framework include fireworks, kitchenware, flashlights, baseballs and softballs and fishhooks, as…",
+          "text_hash": 1284779656026113107,
+          "title": "US, China agree to cut tariffs on $60B worth of products"
+        }
+      ],
+      "outlet_id": "thehill"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/us-and-china-release-60-billion-nonsensitive-product-lists-for-tariff-cuts-after-trump-xi-meeting/article71521075.ece",
+          "cluster_id": 10343460793907305299,
+          "fetched_at": 1790653942,
+          "id": 2182839649946013509,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790613154,
+          "summary": "The details came days after Chinese President Xi Jinping met with President Donald Trump in Washington in his first state visit to the U.S. since 2015",
+          "text_hash": 2838188189029641298,
+          "title": "U.S. and China release $60 billion nonsensitive product lists for tariff cuts after Trump-Xi meeting"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/business/2026/09/29/china-us-tariff-cuts/",
+          "cluster_id": 10343460793907305299,
+          "fetched_at": 1790653946,
+          "id": 3407856307936196376,
+          "joined_at": 1790653946,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790642460,
+          "summary": "The U.S. and China both did not indicate the extent of the tariff reductions, nor any timing for implementation.",
+          "text_hash": 3435968264598985050,
+          "title": "China and U.S. pledge tariff cuts on $60 billion of goods"
+        }
+      ],
+      "outlet_id": "japantimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/americas/us-politics/trump-china-tariffs-cuts-products-b3058463.html",
+          "cluster_id": 10343460793907305299,
+          "fetched_at": 1790715370,
+          "id": 186582785666842542,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790699610,
+          "summary": "The products range from timber and medical equipment to fireworks and dolls",
+          "text_hash": 12648932213689721270,
+          "title": "The $60 billion products receiving tariff cuts after Trump-Xi meeting"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://zerohedge.com/geopolitical/5-takeaways-new-us-china-tariff-relief-product-lists",
+          "cluster_id": 10343460793907305299,
+          "fetched_at": 1790715381,
+          "id": 5723510221194997104,
+          "joined_at": 1790715381,
+          "lang": "en",
+          "outlet_id": "zerohedge",
+          "published_at": 1790702400,
+          "summary": "5 Takeaways From The New US-China Tariff-Relief Product Lists Authored by Arthur Zhang via The Epoch Times , The United States and China have released product lists covering about $30 billion in imports in each direction that could receive lower tariffs under an agreement reached after Chinese leader Xi Jinping's visit to Washington. The lists cover 77 categories of Chinese goods entering the United States and 1,619 categories of U.S. goods entering China. Here are five takeaways from the agreement.…",
+          "text_hash": 6328274149543797185,
+          "title": "5 Takeaways From The New US-China Tariff-Relief Product Lists"
+        }
+      ],
+      "outlet_id": "zerohedge"
+    }
+  ],
+  "withdrawals": []
+}

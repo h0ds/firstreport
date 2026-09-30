@@ -1,0 +1,235 @@
+{
+  "claims": {
+    "nypost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pagesix.com",
+          "expires": "2027-09-12",
+          "last_changed": "2026-08-11",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/pagesix.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-13"
+      },
+      {
+        "data": {
+          "domain": "nypost.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-08-27",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nypost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1801-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q14289857"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corp"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_312#RFC:_New_York_Post_(nypost.com)",
+            "#cite_note-69"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six) (excluding entertainment)",
+          "status": "generally_unreliable",
+          "summary": "There is consensus the New York Post is generally unreliable for factual reporting, especially with regard to politics, particularly New York City politics. A tabloid newspaper, editors criticise its lack of concern for fact-checking or corrections, including examples of outright fabrication. Editors consider the New York Post more reliable before it changed ownership in 1976, and particularly unr"
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_436#RfC:_Entertainment_coverage_of_the_New_York_Post_(including_Decider_and_Page_Six)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_348#Using_a_Decider.com_interview",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_371#Decider.com_/_Jimmy_DiResta_/_Naomi_Wu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_431#Using_Decider_/_Decider.com_for_interviews_and_reviews"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six, Decider) (entertainment)",
+          "status": "no_consensus",
+          "summary": "There is consensus that the New York Post (nypost.com) and its sub-publications Decider (decider.com) and Page Six are considered to be marginally reliable sources for entertainment coverage, including reviews, but should not be used for controversial statements related to living persons."
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790717299,
+    "expired": false,
+    "id": 5836372043994667138,
+    "item_count": 1,
+    "last_active_at": 1790717299,
+    "origin_item_id": 5836372043994667138,
+    "origin_outlet_id": "nypost",
+    "outlet_count": 1,
+    "primary_title": "Hollywood makeup artists love this hydrating serum— and it has thousands of five-star reviews",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 5836372043994667138,
+        "joined_at": 1790717299,
+        "outlet_id": "nypost",
+        "published_at": 1790717162
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "nypost": "New York Post"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 5836372043994667138,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5506,
+      "snapshot_id": 16417180279132336528,
+      "ts": 1790717628
+    },
+    {
+      "cluster_id": null,
+      "item_id": 5836372043994667138,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5530,
+      "snapshot_id": 5230970808821136714,
+      "ts": 1790718011
+    },
+    {
+      "cluster_id": null,
+      "item_id": 5836372043994667138,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5544,
+      "snapshot_id": 13959790259451507397,
+      "ts": 1790718300
+    },
+    {
+      "cluster_id": null,
+      "item_id": 5836372043994667138,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5556,
+      "snapshot_id": 7419368768397627482,
+      "ts": 1790718628
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://pagesix.com/2026/09/29/style/why-hollywood-makeup-artists-love-beauty-pie-hydrating-serum/",
+          "cluster_id": 5836372043994667138,
+          "fetched_at": 1790717299,
+          "id": 5836372043994667138,
+          "joined_at": 1790717299,
+          "lang": "en",
+          "outlet_id": "nypost",
+          "published_at": 1790717162,
+          "summary": "Kate Hudson's makeup artist said she loves collaborating with the brand.",
+          "text_hash": 1584493604141944835,
+          "title": "Hollywood makeup artists love this hydrating serum— and it has thousands of five-star reviews"
+        }
+      ],
+      "outlet_id": "nypost"
+    }
+  ],
+  "withdrawals": []
+}

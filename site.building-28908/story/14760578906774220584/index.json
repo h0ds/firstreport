@@ -1,0 +1,158 @@
+{
+  "claims": {
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790667411,
+    "expired": false,
+    "id": 14760578906774220584,
+    "item_count": 1,
+    "last_active_at": 1790667411,
+    "origin_item_id": 14760578906774220584,
+    "origin_outlet_id": "euronews",
+    "outlet_count": 1,
+    "primary_title": "Euronews Travel & Tourism Summit 2026: Watch live today from Brussels",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 14760578906774220584,
+        "joined_at": 1790667411,
+        "outlet_id": "euronews",
+        "published_at": 1790661658
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "euronews": "Euronews"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 14760578906774220584,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3658,
+      "snapshot_id": 5145179925941247203,
+      "ts": 1790669232
+    },
+    {
+      "cluster_id": null,
+      "item_id": 14760578906774220584,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4438,
+      "snapshot_id": 17463763119576269744,
+      "ts": 1790715377
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/29/euronews-travel-tourism-summit-2026-watch-live-today-from-brussels",
+          "cluster_id": 14760578906774220584,
+          "fetched_at": 1790667411,
+          "id": 14760578906774220584,
+          "joined_at": 1790667411,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790661658,
+          "summary": "The Euronews Travel & Tourism Summit 2026 in Brussels brought together political leaders, policymakers and industry experts to debate the biggest issues shaping the future of travel.",
+          "text_hash": 2990606016364941514,
+          "title": "Euronews Travel & Tourism Summit 2026 – watch again"
+        }
+      ],
+      "outlet_id": "euronews"
+    }
+  ],
+  "withdrawals": []
+}

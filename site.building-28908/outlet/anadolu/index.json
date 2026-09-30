@@ -1,0 +1,581 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "aa.com.tr",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.0954
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "anadolu",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.10 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "origin_of": 3,
+          "shared_stories": 21,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "anadolu",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/anadolu",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 14% of 21 stories other outlets also carried"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "anadolu",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/anadolu",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.5 items/day"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "anadolu",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/anadolu",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "aa.com.tr",
+          "final_url": "https://aa.com.tr/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "anadolu",
+        "ref_url": "https://aa.com.tr/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "domain": "aa.com.tr",
+          "missing": [
+            "about",
+            "contact",
+            "privacy",
+            "corrections",
+            "ethics",
+            "masthead"
+          ]
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "anadolu",
+        "ref_url": "https://aa.com.tr/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "none of the usual accountability pages linked from its home page"
+      }
+    ],
+    "state_media": [
+      {
+        "as_of": "2026",
+        "data": {
+          "code": "SC"
+        },
+        "field": "state_media",
+        "note": "State Media Monitor's category, not Kagami's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0.",
+        "outlet_id": "anadolu",
+        "ref_url": "https://statemediamonitor.com/2025/09/anadolu-agency/",
+        "retrieved_at": 1790722331,
+        "source_id": "state_media_monitor",
+        "value": "State-Controlled (SC)"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 47,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "anadolu",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/anadolu",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 2
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "anadolu",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/anadolu",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "4% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 8,
+  "items": 125,
+  "outlet": {
+    "domains": [
+      "aa.com.tr"
+    ],
+    "id": "anadolu",
+    "name": "Anadolu Agency"
+  },
+  "shared_stories": 52,
+  "stories": [
+    {
+      "created_at": 1790725397,
+      "first": true,
+      "id": 3314197145141237494,
+      "outlet_count": 1,
+      "title": "US Navy awards Boeing more than $20B contract for next-generation fighter"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 18145423920728228428,
+      "outlet_count": 4,
+      "title": "Man City guilty of all serious financial breach charges: Premier League"
+    },
+    {
+      "created_at": 1790715378,
+      "first": false,
+      "id": 6644257237448895193,
+      "outlet_count": 14,
+      "title": "Trump: Tech Leaders Signed Accord to 'Self-Police' AI Development"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 17314204335772072738,
+      "outlet_count": 7,
+      "title": "North Korea denies South's claim it was behind DMZ mine blasts"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 15065261947489113789,
+      "outlet_count": 5,
+      "title": "Trump says he will sign executive order naming AI as Super Intelligence"
+    },
+    {
+      "created_at": 1790715392,
+      "first": false,
+      "id": 10592617896016852205,
+      "outlet_count": 2,
+      "title": "Syria dismantles Hezbollah-linked cell in southern Daraa province"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 11726634235689167800,
+      "outlet_count": 13,
+      "title": "Morocco’s king appoints the country’s first woman prime minister"
+    },
+    {
+      "created_at": 1790724004,
+      "first": true,
+      "id": 11437973191519584514,
+      "outlet_count": 1,
+      "title": "UN holds 4th straw poll in race to succeed Secretary-General Guterres"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 3372583884509813153,
+      "outlet_count": 13,
+      "title": "OpenAI cancels release of newest model due to safety concerns"
+    },
+    {
+      "created_at": 1790715371,
+      "first": true,
+      "id": 7553827412345677229,
+      "outlet_count": 4,
+      "title": "US sanctions 10 over allegedly procuring weapons for Iran"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 2687155261920818657,
+      "outlet_count": 10,
+      "title": "UAE, Israel both confirm Netanyahu's Abu Dhabi trip after reports"
+    },
+    {
+      "created_at": 1790715379,
+      "first": false,
+      "id": 7695855586285115353,
+      "outlet_count": 5,
+      "title": "Hegseth to Cut Pentagon Posts Held for Generals, Admirals"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 270612440624308507,
+      "outlet_count": 13,
+      "title": "China, US Can Continue Dialogue on AI to Weigh Risks, Benefits - Xi"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 9811700178444612757,
+      "outlet_count": 8,
+      "title": "Congo’s Ebola outbreak tops 8,000 confirmed cases as disease remains out of control"
+    },
+    {
+      "created_at": 1790720481,
+      "first": true,
+      "id": 3505082845254256043,
+      "outlet_count": 1,
+      "title": "Anthropic CEO highlights AI’s benefits and risks after White House meeting"
+    },
+    {
+      "created_at": 1790718724,
+      "first": true,
+      "id": 10586946213919361768,
+      "outlet_count": 1,
+      "title": "Turkish sides Anadolu Efes, Fenerbahce Tarfin claim EuroLeague wins"
+    },
+    {
+      "created_at": 1790718234,
+      "first": true,
+      "id": 6620621494619440327,
+      "outlet_count": 1,
+      "title": "Germany blocks Chinese company from acquiring stake in Hamburg logistic firm: Report"
+    },
+    {
+      "created_at": 1790716260,
+      "first": true,
+      "id": 9564534923915615296,
+      "outlet_count": 2,
+      "title": "Ceuta mass migrant crossing handling 'responsibility of all EU,' Spanish king says"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 8522530705406292751,
+      "outlet_count": 4,
+      "title": "Saudi crown prince welcomes UAE vice president in Riyadh"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11230258509063452999,
+      "outlet_count": 18,
+      "title": "87-year-old woman whose eviction sparked protests in Spain is returning home"
+    },
+    {
+      "created_at": 1790715968,
+      "first": true,
+      "id": 12353674881172747612,
+      "outlet_count": 1,
+      "title": "US stocks end lower as Treasury yields rise"
+    },
+    {
+      "created_at": 1790670935,
+      "first": false,
+      "id": 6870823133732014281,
+      "outlet_count": 7,
+      "title": "U.S. ban on $1 billion worth of Canadian imports, from motorcycles to booze, goes into effect"
+    },
+    {
+      "created_at": 1790715670,
+      "first": true,
+      "id": 1756655309237078291,
+      "outlet_count": 1,
+      "title": "Senior US official tells Canadian lobbyists to 'get the hell out of our country'"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 17442408799148967605,
+      "outlet_count": 1,
+      "title": "UN chief 'strongly condemns' deadly Myanmar airstrike, voices alarm about casualties"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 17243735779648051855,
+      "outlet_count": 1,
+      "title": "Kazakh president calls for freeze of Ukraine war"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 16645866496650881523,
+      "outlet_count": 1,
+      "title": "Norwegian parliament to question 11 ministers about Epstein-linked foreign ministry revelations"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 14690703441272321035,
+      "outlet_count": 1,
+      "title": "Sweden’s new parliament formally opens amid government formation deadlock"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 14684194512959703096,
+      "outlet_count": 1,
+      "title": "Türkiye’s Vatican envoy stresses human dignity, dialogue as foundations for peace"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 13665644576255247267,
+      "outlet_count": 1,
+      "title": "Japan, Mongolia vow to boost ties with focus on AI, security, energy"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 13521682838471858316,
+      "outlet_count": 1,
+      "title": "European stocks close mixed as bond yields rise, euro weakens"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 11398117564617934488,
+      "outlet_count": 1,
+      "title": "Italy must keep channels with Egypt open to pursue truth in Giulio Regeni case: Meloni"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 10056962074948356247,
+      "outlet_count": 1,
+      "title": "Spanish Senate rejects friendship treaty with France as Macron visits Madrid"
+    },
+    {
+      "created_at": 1790670817,
+      "first": false,
+      "id": 9923827709977922517,
+      "outlet_count": 3,
+      "title": "Russia ‘not interested’ in serious talks to end its war in Ukraine, says Germany’s Merz"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 8463541315636934907,
+      "outlet_count": 2,
+      "title": "Palestine urges companies to review ties with businesses linked to illegal Israeli settlements"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 7071134358189416716,
+      "outlet_count": 1,
+      "title": "60% of leaders mention AI at UN General Assembly speech"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 6504733831969597986,
+      "outlet_count": 1,
+      "title": "Kazakh president meets German counterpart, chancellor to discuss bilateral ties"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 6184425897430810783,
+      "outlet_count": 1,
+      "title": "Trump claims US took more oil out of Strait of Hormuz than ever before"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 6098734218810602919,
+      "outlet_count": 1,
+      "title": "Turkish stock exchange ends Tuesday in red"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 5208220268061370635,
+      "outlet_count": 1,
+      "title": "German state premier calls for reform of EU-Türkiye Customs Union"
+    },
+    {
+      "created_at": 1790715371,
+      "first": false,
+      "id": 4171261342992099727,
+      "outlet_count": 3,
+      "title": "Belgium to transfer 3 F-16 fighter jets to Ukraine by end of 2026, Zelensky says"
+    },
+    {
+      "created_at": 1790654765,
+      "first": false,
+      "id": 4164559015774421651,
+      "outlet_count": 2,
+      "title": "Cuba's health system severely struggling due to US sanctions"
+    },
+    {
+      "created_at": 1790715393,
+      "first": true,
+      "id": 2809939749900543212,
+      "outlet_count": 1,
+      "title": "OpenAI unveils always-on Dots agent, $500 monthly ChatGPT plan"
+    },
+    {
+      "created_at": 1790653945,
+      "first": false,
+      "id": 2540694848936038641,
+      "outlet_count": 2,
+      "title": "Iraq’s national carrier to resume Iran flights in October after sanctions exemption"
+    },
+    {
+      "created_at": 1790653945,
+      "first": false,
+      "id": 1441902663526226748,
+      "outlet_count": 2,
+      "title": "Japan signals support to Syria under al-Sharaa, lifts sanctions"
+    },
+    {
+      "created_at": 1790679061,
+      "first": false,
+      "id": 6800150837118356285,
+      "outlet_count": 9,
+      "title": "Slovak school stabbing kills teacher, injures two"
+    },
+    {
+      "created_at": 1790683329,
+      "first": true,
+      "id": 124376117096974884,
+      "outlet_count": 2,
+      "title": "Yemen health system at ‘breaking point’: WHO"
+    },
+    {
+      "created_at": 1790668765,
+      "first": false,
+      "id": 15012738059663545664,
+      "outlet_count": 10,
+      "title": "Estonia blames Russia for arson attack on defense company that provides vehicles to Ukraine"
+    },
+    {
+      "created_at": 1790655372,
+      "first": false,
+      "id": 14858190639268489308,
+      "outlet_count": 7,
+      "title": "Malaysia starts sending Myanmar migrants home"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 8740613920876251500,
+      "outlet_count": 4,
+      "title": "Israel's Gaza genocide death toll passes 74,000 as killings continue"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 14976319985450857727,
+      "outlet_count": 5,
+      "title": "New Russian mobilisation: Putin signs decree adding 15,500 troops to army"
+    }
+  ],
+  "story_pages": 3,
+  "window_days": 30
+}

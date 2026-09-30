@@ -1,0 +1,54 @@
+# Stories, page 39 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Pope Leo opens France trip with visit to Notre-Dame, warns UN faces ‘crisis of effectiveness’](/story/973431904485772874/) · 1 outlet · reach 1
+- [Florida authorities arrest NC State’s ex-head trainer accused of sex abuse of Wolfpack male athletes](/story/1249098103341308509/) · 1 outlet · reach 1
+- [China wife donates kidney to husband, defying sub 10% match rate for non-blood relatives](/story/1464345583093288516/) · 1 outlet · reach 1
+- [Samsung Electronics says HBM to account for nearly 30% of industry DRAM capacity next year](/story/1656370764329377984/) · 1 outlet · reach 1
+- [U.S. proposes meeting with Ukraine, Russia in UAE, Zelensky says](/story/2122074022083373606/) · 1 outlet · reach 1
+- [Trump pushes to obtain sensitive voter data ahead of U.S. midterms despite repeated setbacks](/story/2308429573450423088/) · 1 outlet · reach 1
+- [U.S. to release details on trade talks with China on Monday, Greer says](/story/2648505469353422768/) · 1 outlet · reach 1
+- [U.S., Iran hold first shuttle talks in months, but remain far apart on terms](/story/2975169796840806647/) · 1 outlet · reach 1
+- [Xi expects to meet Trump twice more this year after touring U.S. archives on state visit](/story/3018683362719859003/) · 1 outlet · reach 1
+- [China targets AI and frontier tech in newly unveiled innovation blueprint](/story/3437167379936169755/) · 1 outlet · reach 1
+- [Exclusive-Anthropic leaders to control AI lab via 'Founder LLC' to promote public good over market forces](/story/3911142817271541221/) · 1 outlet · reach 1
+- [Chinese team sets world record with swarm of 116 underwater drones](/story/4169183661793137426/) · 1 outlet · reach 1
+- [Dolly Parton’s estate granted temporary restraining order against late singer’s nephew](/story/4191777353323653360/) · 1 outlet · reach 1
+- [Worker dies after falling from height at Tanjong Rhu BTO construction site](/story/4275609966177457951/) · 1 outlet · reach 1
+- [Xi Jinping demands ‘safer’ China as Communist Party prepares for leadership reshuffle](/story/4309312100675681066/) · 1 outlet · reach 1
+- [Cars Under Water, Snakes On Street: Relentless Weekend Rain Drowns Bangkok](/story/4463401196434311410/) · 1 outlet · reach 1
+- [China is no longer just the world’s factory. It’s the HQ](/story/4526773649049324797/) · 1 outlet · reach 1
+- [China deploys advanced WZ-7 drone for first time near Scarborough Shoal](/story/4556031082659884295/) · 1 outlet · reach 1
+- [China pledges to ‘firmly support’ Cuba as US escalates pressure on Havana](/story/4669021927479794657/) · 2 outlets · reach 1
+- [Pope Leo meets abuse survivors in France](/story/4737632583811456236/) · 1 outlet · reach 1
+- [Ukraine expects no Black Sea ceasefire in coming months](/story/4738326933699988887/) · 1 outlet · reach 1
+- [US Fed watchdog flags apparent data breaches by retiring staff member](/story/4806450537776514303/) · 1 outlet · reach 1
+- [South Korean exports seen rising for 16th month on solid AI chip demand: Reuters poll](/story/5104460149739387633/) · 1 outlet · reach 1
+- [Son of Israel’s ambassador to U.S. critically injured in West Bank ramming attack](/story/5118680679535910789/) · 1 outlet · reach 1
+- [Rising seas threaten spread of marine invaders, scientists say](/story/5184812914151503083/) · 1 outlet · reach 1
+- [AI bosses to attend meeting with Trump as safety pressure builds](/story/5469637717561890371/) · 1 outlet · reach 1
+- [Can Hong Kong protect its eco-sensitive sites amid ‘golden week’ overtourism fears?](/story/5753141488907980528/) · 1 outlet · reach 1
+- [Taylor Swift makes VMA history](/story/5770061685241712912/) · 1 outlet · reach 1
+- [Venturing Beyond Arabian Sea Only Brought Harm To US: Mojtaba Khamenei](/story/5846630611788065669/) · 1 outlet · reach 1
+- [AIIB plans to double financing by 2030. Can it bridge Asia’s infrastructure gap?](/story/5915871786815939779/) · 1 outlet · reach 1
+- [Pentagon can label Anthropic a supply-chain risk, U.S. court rules](/story/6059129130007680870/) · 1 outlet · reach 1
+- [Canadians support access to abortion services at home and abroad, poll shows](/story/6231887464615469588/) · 1 outlet · reach 1
+- [In China’s tough job market, foreign degrees may be a hindrance, not a help](/story/6271450433414321306/) · 1 outlet · reach 1
+- [More than 50 members of Niger's security forces killed in attacks, sources say](/story/6466219868057645221/) · 1 outlet · reach 1
+- [Singapore supports 243 human rights recommendations, including stronger migrant worker protections](/story/6470469944547183152/) · 1 outlet · reach 1
+- [Iranian flights to Gulf neighbours cancelled as new U.S. sanctions take effect](/story/7066875811635069572/) · 1 outlet · reach 1
+- [What is a ‘super El Niño’ and how could it affect the weather?](/story/7215376508570356793/) · 1 outlet · reach 1
+- [Harvey Weinstein sentenced to 15 years in prison for 2006 sexual assault](/story/7227163804541768506/) · 1 outlet · reach 1
+- [Hong Kong wage index rises 3.4% in June, with government expecting further gains](/story/7336727264994131138/) · 1 outlet · reach 1
+- [Ex-NFL star Antonio Brown to accept plea deal on attempted murder charge, his lawyer says](/story/7388476026841654077/) · 1 outlet · reach 1
+- [Japan enlists royal visit, subsidies to revive tourism in quake-hit Kyushu](/story/7720800716098239691/) · 1 outlet · reach 1
+- [Palestinian President addresses UN on prerecorded video after visa denied](/story/7829073882535899918/) · 1 outlet · reach 1
+- [Powerful nor’easter disrupts flights, leaves over 100,000 without power in U.S.](/story/7878935777004083049/) · 1 outlet · reach 1
+- [Hungary’s Deputy PM endorses deepening Canada’s economic, political ties with EU](/story/8389329315183616686/) · 1 outlet · reach 1
+- [Vulnerable woman evicted and left to sleep in a car shows depth of Spain's housing crisis](/story/8549801477751216547/) · 1 outlet · reach 1
+- [Behind the scenes, U.S.’s Board of Peace sees role for UNRWA in Gaza, ex-agency chief says](/story/8559938537916483324/) · 1 outlet · reach 1
+- [Italy's Meloni passes by-election test against new far-right rival](/story/8769205046782181555/) · 1 outlet · reach 1
+- [Trump administration to join Elon Musk in challenging EU’s fine on X](/story/9105194825009332631/) · 1 outlet · reach 1
+- [Why U.S. troops may one day occupy this desolate Arctic outpost](/story/9111573515488766548/) · 1 outlet · reach 1
+- [Mexico shuts Pacific ports as Hurricane Polo churns offshore](/story/9197565694489429817/) · 1 outlet · reach 1

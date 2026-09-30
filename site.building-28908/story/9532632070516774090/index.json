@@ -1,0 +1,773 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "cbsnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "cbsnews.com",
+          "expires": "2027-10-03",
+          "last_changed": "2026-09-01",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cbsnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-10-04"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-09-18"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_522#Request_for_Comment:_Reliability_of_CBS_News_under_Bari_Weiss",
+            "#cite_note-20"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CBS News",
+          "status": "generally_reliable",
+          "summary": "CBS News is the news division of CBS. It is considered generally reliable. Some editors note, however, that its television content may include superficial coverage, which might not qualify under WP:MEDRS. Editors also note that CBS has undergone intensified political bias after Bari Weiss became editor-in-chief in late 2025, and supression of reporting critical of the Trump administration has been"
+        },
+        "field": "reliability",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "cgtn": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "cgtn.com",
+          "expires": "2026-11-15",
+          "last_changed": "2025-11-01",
+          "registrar": "Alibaba Cloud Computing (Beijing) Co., Ltd.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cgtn",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cgtn.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2002-11-15"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1997-09-20"
+      },
+      {
+        "data": {
+          "qid": "Q207936"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "China Central Television"
+      },
+      {
+        "data": {
+          "qid": "Q51675998"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "China Media Group"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "nytimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nytimes.com",
+          "expires": "2027-01-19",
+          "last_changed": "2024-12-18",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nytimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nytimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-01-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1851-09-18"
+      },
+      {
+        "data": {
+          "qid": "Q2529982"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The New York Times Company"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_244#RfC:_Wound_characteristics_of_military-style_rifles",
+            "#cite_note-70"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New York Times (NYT)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New York Times is generally reliable. WP:RSOPINION should be used to evaluate opinion columns, while WP:NEWSBLOG should be used for the blogs on The New York Times's website. The 2018 RfC cites WP:MEDPOP to establish that popular press sources such as The New York Times should generally not be used to support medical claims."
+        },
+        "field": "reliability",
+        "outlet_id": "nytimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehill": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 7,
+      "weakest_join": null
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 9532632070516774090,
+    "item_count": 7,
+    "last_active_at": 1790653944,
+    "origin_item_id": 9405719764337901815,
+    "origin_outlet_id": "cgtn",
+    "outlet_count": 7,
+    "primary_title": "Two giant pandas arrive in Atlanta from China after Xi-Trump summit",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9532632070516774090,
+        "joined_at": 1790633633,
+        "outlet_id": "guardian",
+        "published_at": 1790514882
+      },
+      {
+        "item_id": 10346774823254572795,
+        "joined_at": 1790633633,
+        "outlet_id": "nytimes",
+        "published_at": 1790583026
+      },
+      {
+        "item_id": 10918874148854519589,
+        "joined_at": 1790633634,
+        "outlet_id": "aljazeera",
+        "published_at": 1790628833
+      },
+      {
+        "item_id": 3957358962933599932,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790606293
+      },
+      {
+        "item_id": 7655934600780792201,
+        "joined_at": 1790653930,
+        "outlet_id": "cbsnews",
+        "published_at": 1790638462
+      },
+      {
+        "item_id": 5718330907195937869,
+        "joined_at": 1790653938,
+        "outlet_id": "independent",
+        "published_at": 1790594264
+      },
+      {
+        "item_id": 9405719764337901815,
+        "joined_at": 1790653944,
+        "outlet_id": "cgtn",
+        "published_at": 1790466017
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "cbsnews",
+            "guardian",
+            "thehill",
+            "independent",
+            "nytimes"
+          ]
+        }
+      ],
+      "not_rated": [
+        "cgtn"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "cbsnews": "CBS News",
+    "cgtn": "CGTN",
+    "guardian": "The Guardian",
+    "independent": "The Independent",
+    "nytimes": "The New York Times",
+    "thehill": "The Hill"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://news.cgtn.com/news/2026-09-27/China-sends-pair-of-giant-pandas-to-US-1QLPORaY5wc/p.html",
+          "cluster_id": 9532632070516774090,
+          "fetched_at": 1790653944,
+          "id": 9405719764337901815,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "cgtn",
+          "published_at": 1790466017,
+          "summary": "China sends pair of giant pandas to Zoo Atlanta",
+          "text_hash": 15610405446931412175,
+          "title": "China sends pair of giant pandas to Zoo Atlanta"
+        }
+      ],
+      "outlet_id": "cgtn"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/us-news/2026/sep/27/giant-pandas-atlanta-zoo-china-xi-trump-summit",
+          "cluster_id": 9532632070516774090,
+          "fetched_at": 1790633633,
+          "id": 9532632070516774090,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790514882,
+          "summary": "Ping Ping and Fu Shuang to live at Atlanta zoo in Georgia as part of loan deal between Chinese and US governments Two giant pandas from China arrived in Atlanta , Georgia, on Sunday morning as part of an agreement between the Chinese and US governments. While in Washington DC for a three - day summit with Donald Trump , the Chinese president, Xi Jinping , announced that the pandas would arrive in Atlanta in the coming days. The loan of the pandas to the Atlanta zoo was one of the few concrete outcomes of…",
+          "text_hash": 6063963946517486319,
+          "title": "Two giant pandas arrive in Atlanta from China after Xi-Trump summit"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nytimes.com/2026/09/27/us/panda-zoo-atlanta-china-xi.html",
+          "cluster_id": 9532632070516774090,
+          "fetched_at": 1790633633,
+          "id": 10346774823254572795,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "nytimes",
+          "published_at": 1790583026,
+          "summary": "A male named Ping Ping and a female named Fu Shuang landed on Sunday, days after China’s leader said he would dispatch “envoys of friendship” to the United States.",
+          "text_hash": 3614038710254916720,
+          "title": "Giant Pandas, Icons of China’s Soft Diplomacy, Arrive in Atlanta"
+        }
+      ],
+      "outlet_id": "nytimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/americas/panda-us-china-ping-ping-fu-shuang-b3057505.html",
+          "cluster_id": 9532632070516774090,
+          "fetched_at": 1790653938,
+          "id": 5718330907195937869,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790594264,
+          "summary": "‘The giant panda has been an envoy of friendship between the Chinese and the Americans,’ Chinese President Xi Jinping said",
+          "text_hash": 7711919833321892144,
+          "title": "Meet Ping Ping and Fu Shuang – the two pandas loaned to the US by China"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehill.com/policy/international/6115047-giant-pandas-arrive-zoo-atlanta/",
+          "cluster_id": 9532632070516774090,
+          "fetched_at": 1790653930,
+          "id": 3957358962933599932,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790606293,
+          "summary": "Two giant pandas touched down in Atlanta on Sunday, three days after Chinese President Xi Jinping announced their impending arrival. The pandas, male Ping Ping and female Fu Shuang, arrived at Hartsfield-Jackson Atlanta International Airport, according to Zoo Atlanta. The bears arrived via a FedEx-donated Boeing 777 aircraft that features a panda eating bamboo painted…",
+          "text_hash": 6945734930230811033,
+          "title": "Giant pandas arrive in Atlanta after Trump-Xi meeting"
+        }
+      ],
+      "outlet_id": "thehill"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/video/newsfeed/2026/9/28/friendship-pandas-arrive-in-atlanta-marking-us-china-relations-moment?traffic_source=rss",
+          "cluster_id": 9532632070516774090,
+          "fetched_at": 1790633634,
+          "id": 10918874148854519589,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790628833,
+          "summary": "Two giant pandas from China have landed in the United States and are heading to Zoo Atlanta.",
+          "text_hash": 577605213028408369,
+          "title": "‘Friendship pandas’ arrive in Atlanta, marking US-China relations moment"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://cbsnews.com/video/giant-pandas-settle-zoo-atlanta-journey-china/",
+          "cluster_id": 9532632070516774090,
+          "fetched_at": 1790653930,
+          "id": 7655934600780792201,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790638462,
+          "summary": "After a 16-hour flight from China on a custom plane and a police escort from the airport to an Atlanta zoo, America's newest giant pandas are in their new home and are getting ready to meet the public. Skyler Henry is there.",
+          "text_hash": 12462111947017226,
+          "title": "Giant pandas settle into Zoo Atlanta home after journey from China"
+        }
+      ],
+      "outlet_id": "cbsnews"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 5718330907195937869,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4258,
+      "snapshot_id": 3266027846458197235,
+      "ts": 1790680836
+    }
+  ]
+}

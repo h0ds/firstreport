@@ -1,0 +1,170 @@
+{
+  "claims": {
+    "bbc": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "bbc.com",
+          "expires": "2030-07-14",
+          "last_changed": "2021-07-06",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1989-07-15"
+      },
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "expires": "2034-12-13",
+          "last_changed": "2025-10-29",
+          "registrar": "British Broadcasting Corporation",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-13"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_495#RfC:_reliability_of_the_BBC",
+            "#cite_note-9"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "BBC (British Broadcasting Corporation)",
+          "status": "generally_reliable",
+          "summary": "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
+        },
+        "field": "reliability",
+        "outlet_id": "bbc",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 14354233828147591767,
+    "item_count": 1,
+    "last_active_at": 1790633633,
+    "origin_item_id": 14354233828147591767,
+    "origin_outlet_id": "bbc",
+    "outlet_count": 1,
+    "primary_title": "Nigerian attempts to break world record by dancing non-stop for seven days",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 14354233828147591767,
+        "joined_at": 1790633633,
+        "outlet_id": "bbc",
+        "published_at": 1790609959
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "bbc": "BBC"
+  },
+  "outlets_24h": 0,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bbc.co.uk/news/articles/cq8r6z2gjzd1o",
+          "cluster_id": 14354233828147591767,
+          "fetched_at": 1790633633,
+          "id": 14354233828147591767,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "bbc",
+          "published_at": 1790609959,
+          "summary": "Crowds have gathered in Lagos to watch Ben Dancer, who says he will carry on dancing until Tuesday morning.",
+          "text_hash": 9256762940712861848,
+          "title": "Nigerian attempts to break world record by dancing non-stop for seven days"
+        }
+      ],
+      "outlet_id": "bbc"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 14354233828147591767,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3755,
+      "snapshot_id": 9722525986195862396,
+      "ts": 1790671077
+    }
+  ]
+}

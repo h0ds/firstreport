@@ -1,0 +1,157 @@
+{
+  "claims": {
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.0007634162902832031,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7207634449005127
+    },
+    "created_at": 1790653942,
+    "expired": false,
+    "id": 477357649390160860,
+    "item_count": 2,
+    "last_active_at": 1790715378,
+    "origin_item_id": 477357649390160860,
+    "origin_outlet_id": "thehindu",
+    "outlet_count": 1,
+    "primary_title": "Days after India-Pakistan sparring at UN, senior Indian official visits Islamabad for SCO planning meet",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 477357649390160860,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790646846
+      },
+      {
+        "item_id": 2220448437337107708,
+        "joined_at": 1790715378,
+        "outlet_id": "thehindu",
+        "published_at": 1790702668
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/sco-national-coordinators-meeting-pakistan/article71522336.ece",
+          "cluster_id": 477357649390160860,
+          "fetched_at": 1790653942,
+          "id": 477357649390160860,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790646846,
+          "summary": "The delegation from India, a key member of the SCO, is being led by its National Coordinator Alok Dimri",
+          "text_hash": 15564891285085395939,
+          "title": "SCO national coordinators’ meeting begins in Pakistan; India among participants"
+        },
+        {
+          "canonical_url": "https://thehindu.com/news/national/days-after-india-pakistan-sparring-at-un-senior-indian-official-visits-islamabad-for-sco-planning-meet/article71525343.ece",
+          "cluster_id": 477357649390160860,
+          "fetched_at": 1790715378,
+          "id": 2220448437337107708,
+          "joined_at": 1790715378,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790702668,
+          "summary": "First such official visit by Indian delegation since Operation Indoor; Senior External Affair Ministry official leads team at three-day SCO preparatory meeting",
+          "text_hash": 389579986995939432,
+          "title": "Days after India-Pakistan sparring at UN, senior Indian official visits Islamabad for SCO planning meet"
+        }
+      ],
+      "outlet_id": "thehindu"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,124 @@
+{
+  "claims": {
+    "rawstory": [
+      {
+        "data": {
+          "domain": "rawstory.com",
+          "expires": "2031-01-29",
+          "last_changed": "2026-01-29",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rawstory",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rawstory.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2004-01-29"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#RfC_-_The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_12#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_17#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_112#The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_202#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#Raw_story_a_RS_for_details_on_this_obscure_death?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Raw Story",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that Raw Story is generally unreliable for factual reporting, based upon a pattern of publishing false and sensationalized stories. Editors almost unanimously agree that the source is biased and that in-text attribution should accompany each use of the source."
+        },
+        "field": "reliability",
+        "outlet_id": "rawstory",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790715373,
+    "expired": false,
+    "id": 3549269328910586946,
+    "item_count": 1,
+    "last_active_at": 1790715373,
+    "origin_item_id": 3549269328910586946,
+    "origin_outlet_id": "rawstory",
+    "outlet_count": 1,
+    "primary_title": "Trump quietly caves on $5.6M payout as E. Jean Carroll case ends: 'A first'",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3549269328910586946,
+        "joined_at": 1790715373,
+        "outlet_id": "rawstory",
+        "published_at": 1790706265
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "rawstory": "Raw Story"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rawstory.com/trump-caves-e-jean-carroll/",
+          "cluster_id": 3549269328910586946,
+          "fetched_at": 1790715373,
+          "id": 3549269328910586946,
+          "joined_at": 1790715373,
+          "lang": "en",
+          "outlet_id": "rawstory",
+          "published_at": 1790706265,
+          "summary": "President Donald Trump dropped his final challenge to the $5.6 million payout to writer E. Jean Carroll, ending the case she won against him in 2023. Trump agreed to dismiss his appeal \"with prejudice,\" meaning he can never bring it again, according to a Sept. 25 order from the U.S. Court of Appeals for the 2nd Circuit. The president also withdrew his bid to make Carroll return the money, according to the 70-word agreement his attorney, Josh Halpern, signed with her lawyers. The appeals court's order…",
+          "text_hash": 6525001093862029843,
+          "title": "Trump quietly caves on $5.6M payout as E. Jean Carroll case ends: 'A first'"
+        }
+      ],
+      "outlet_id": "rawstory"
+    }
+  ],
+  "withdrawals": []
+}

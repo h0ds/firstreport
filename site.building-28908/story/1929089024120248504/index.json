@@ -1,0 +1,284 @@
+{
+  "claims": {
+    "dailysabah": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      },
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "rt": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "rt.com",
+          "expires": "2027-09-22",
+          "last_changed": "2026-09-21",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rt",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rt.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-09-23"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-09-15"
+      },
+      {
+        "data": {
+          "qid": "Q821172"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "RIA Novosti"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#RfC:_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Enquiry_concerning_the_RT_Network",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_168#RT_news_and_Crimean_status_referendum,_2014",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_173#Russia_Today",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Attributed_statement_sourced_by_RT_news_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_231#RT_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#On_Contact_/_RT",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Ruptly,_subsidiary_of_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)",
+          "status": "deprecated",
+          "summary": "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
+        },
+        "field": "reliability",
+        "outlet_id": "rt",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.15150803327560425,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.8715080618858337
+    },
+    "created_at": 1790715372,
+    "expired": false,
+    "id": 1929089024120248504,
+    "item_count": 2,
+    "last_active_at": 1790715383,
+    "origin_item_id": 4225552852084056765,
+    "origin_outlet_id": "rt",
+    "outlet_count": 2,
+    "primary_title": "US state recognizes Eid as official holiday",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 1929089024120248504,
+        "joined_at": 1790715372,
+        "outlet_id": "dailysabah",
+        "published_at": 1790707560
+      },
+      {
+        "item_id": 4225552852084056765,
+        "joined_at": 1790715383,
+        "outlet_id": "rt",
+        "published_at": 1790700523
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "dailysabah"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "rt"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "dailysabah": "Daily Sabah",
+    "rt": "RT"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rt.com/news/646416-us-california-muslims-eid/",
+          "cluster_id": 1929089024120248504,
+          "fetched_at": 1790715383,
+          "id": 4225552852084056765,
+          "joined_at": 1790715383,
+          "lang": "en",
+          "outlet_id": "rt",
+          "published_at": 1790700523,
+          "summary": "California has become the second US state to officially recognize the major Muslim festivals Eid al-Fitr and Eid al-Adha as state holidays Read Full Article at RT.com",
+          "text_hash": 7686536482635005024,
+          "title": "US state recognizes Eid as official holiday"
+        }
+      ],
+      "outlet_id": "rt"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailysabah.com/world/americas/california-becomes-1st-us-state-to-officially-recognize-muslim-holidays",
+          "cluster_id": 1929089024120248504,
+          "fetched_at": 1790715372,
+          "id": 1929089024120248504,
+          "joined_at": 1790715372,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790707560,
+          "summary": "California has formally recognized Eid al-Fitr and Eid al-Adha, Islam’s two major religious holidays, under legislation signed by Gov. Gavin Newsom, marking a significant step towa...",
+          "text_hash": 16967123842689145578,
+          "title": "California becomes 1st US state to officially recognize Muslim holidays"
+        }
+      ],
+      "outlet_id": "dailysabah"
+    }
+  ],
+  "withdrawals": []
+}

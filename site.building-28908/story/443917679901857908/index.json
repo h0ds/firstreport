@@ -1,0 +1,100 @@
+{
+  "claims": {
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653946,
+    "expired": false,
+    "id": 443917679901857908,
+    "item_count": 1,
+    "last_active_at": 1790653946,
+    "origin_item_id": 443917679901857908,
+    "origin_outlet_id": "japantimes",
+    "outlet_count": 1,
+    "primary_title": "Maple Leafs acquire Kirill Marchenko in blockbuster with Blue Jackets",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 443917679901857908,
+        "joined_at": 1790653946,
+        "outlet_id": "japantimes",
+        "published_at": 1790647200
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japantimes": "The Japan Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/sports/2026/09/29/more-sports/leafs-marchenko-trade/",
+          "cluster_id": 443917679901857908,
+          "fetched_at": 1790653946,
+          "id": 443917679901857908,
+          "joined_at": 1790653946,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790647200,
+          "summary": "The Russian winger gives new Maple Leafs general manager John Chayka another proven scorer after an offseason filled with roster turnover.",
+          "text_hash": 3293052817157592577,
+          "title": "Maple Leafs acquire Kirill Marchenko in blockbuster with Blue Jackets"
+        }
+      ],
+      "outlet_id": "japantimes"
+    }
+  ],
+  "withdrawals": []
+}

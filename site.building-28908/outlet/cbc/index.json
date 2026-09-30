@@ -1,0 +1,193 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "cbc.ca",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.23
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "cbc",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.23 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "cbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q5008982",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "cbc.ca",
+          "expires": "2026-11-24",
+          "last_changed": "2025-11-24",
+          "registrar": "Authentic Web Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cbc",
+        "ref_url": "https://rdap.ca.fury.ca/rdap/domain/cbc.ca",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2000-10-16"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "cbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q5008982",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1153191"
+        },
+        "field": "legal_form",
+        "outlet_id": "cbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q5008982",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "online newspaper"
+      },
+      {
+        "data": {
+          "qid": "Q35127"
+        },
+        "field": "legal_form",
+        "outlet_id": "cbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q5008982",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "website"
+      }
+    ],
+    "name": [
+      {
+        "field": "name",
+        "outlet_id": "cbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q5008982",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "CBC.ca"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q461761"
+        },
+        "field": "owner",
+        "outlet_id": "cbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q5008982",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canadian Broadcasting Corporation"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "cbc.ca"
+        },
+        "field": "registrar",
+        "outlet_id": "cbc",
+        "ref_url": "https://rdap.ca.fury.ca/rdap/domain/cbc.ca",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Authentic Web Inc."
+      }
+    ],
+    "state_media": [
+      {
+        "as_of": "2026",
+        "data": {
+          "code": "ISF"
+        },
+        "field": "state_media",
+        "note": "State Media Monitor's category, not Kagami's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0.",
+        "outlet_id": "cbc",
+        "ref_url": "https://statemediamonitor.com/2026/06/canadian-broadcasting-corporation-radio-canada-cbc/",
+        "retrieved_at": 1790722341,
+        "source_id": "state_media_monitor",
+        "value": "Independent State-Funded (ISF)"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "cbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q5008982",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.cbc.ca/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "cbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q5008982",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q5008982"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "cbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q5008982",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/CBC.ca"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 0,
+  "outlet": {
+    "domains": [
+      "cbc.ca"
+    ],
+    "id": "cbc",
+    "name": "CBC News"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

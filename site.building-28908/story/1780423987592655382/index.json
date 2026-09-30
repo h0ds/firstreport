@@ -1,0 +1,156 @@
+{
+  "claims": {
+    "mirror": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "mirror.co.uk",
+          "expires": "2027-09-08",
+          "last_changed": "2026-09-04",
+          "registrar": "CSC Corporate Domains, Inc",
+          "status": [
+            "server delete prohibited",
+            "renew period",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "mirror",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/mirror.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-08"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1636545"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Reach plc"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_160#Huffington_Post/Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#The_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Daily_Express_and_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Daily_Mirror"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Mirror (Mirror)",
+          "status": "no_consensus",
+          "summary": "The Daily Mirror, also known just as the Mirror, is a tabloid newspaper that publishes tabloid journalism. There is no consensus on whether its reliability is comparable to that of British tabloids such as the Daily Mail and The Sun."
+        },
+        "field": "reliability",
+        "outlet_id": "mirror",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790715385,
+    "expired": false,
+    "id": 1780423987592655382,
+    "item_count": 1,
+    "last_active_at": 1790715385,
+    "origin_item_id": 1780423987592655382,
+    "origin_outlet_id": "mirror",
+    "outlet_count": 1,
+    "primary_title": "Daughter of Brit missing in France gives theory for disappearance",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 1780423987592655382,
+        "joined_at": 1790715385,
+        "outlet_id": "mirror",
+        "published_at": 1790691612
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "mirror": "Daily Mirror"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://mirror.co.uk/news/world-news/daughter-brit-missing-france-gives-37715106",
+          "cluster_id": 1780423987592655382,
+          "fetched_at": 1790715385,
+          "id": 1780423987592655382,
+          "joined_at": 1790715385,
+          "lang": "en",
+          "outlet_id": "mirror",
+          "published_at": 1790691612,
+          "summary": "After not hearing from her father in a week, Gabrielle fears her dad could be in danger as his 'manic episodes' could see him becoming aggressive to strangers when someone disagrees with him",
+          "text_hash": 8687043373998196852,
+          "title": "Daughter of Brit missing in France gives theory for disappearance"
+        }
+      ],
+      "outlet_id": "mirror"
+    }
+  ],
+  "withdrawals": []
+}

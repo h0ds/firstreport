@@ -1,0 +1,120 @@
+{
+  "claims": {
+    "justthenews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "justthenews.com",
+          "expires": "2028-07-23",
+          "last_changed": "2026-08-28",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "justthenews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/justthenews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-07-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2020-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653935,
+    "expired": false,
+    "id": 4047193135000388918,
+    "item_count": 1,
+    "last_active_at": 1790653935,
+    "origin_item_id": 4047193135000388918,
+    "origin_outlet_id": "justthenews",
+    "outlet_count": 1,
+    "primary_title": "You Vote: With 5 Brits suspected of planning terror attack at base released on bond, what say you?",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 4047193135000388918,
+        "joined_at": 1790653935,
+        "outlet_id": "justthenews",
+        "published_at": 1790553600
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "justthenews": "Just the News"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://justthenews.com/nation/extremism/you-vote-5-brits-suspected-planning-terror-attack-base-released-bond-what-say-you",
+          "cluster_id": 4047193135000388918,
+          "fetched_at": 1790653935,
+          "id": 4047193135000388918,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "justthenews",
+          "published_at": 1790553600,
+          "summary": "British authorities confirmed that the men had been released, but said they were still under investigation.",
+          "text_hash": 14702864112213561910,
+          "title": "You Vote: With 5 Brits suspected of planning terror attack at base released on bond, what say you?"
+        }
+      ],
+      "outlet_id": "justthenews"
+    }
+  ],
+  "withdrawals": []
+}

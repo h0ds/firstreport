@@ -1,0 +1,217 @@
+{
+  "claims": {
+    "ndtv": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "ndtv.com",
+          "expires": "2032-09-25",
+          "last_changed": "2026-09-26",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "pending transfer"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ndtv",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/ndtv.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1988-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q4680631"
+        },
+        "field": "owner",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Adani Group"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": null
+    },
+    "created_at": 1790653941,
+    "expired": false,
+    "id": 3469675072348297849,
+    "item_count": 2,
+    "last_active_at": 1790653942,
+    "origin_item_id": 16456783008934139634,
+    "origin_outlet_id": "thehindu",
+    "outlet_count": 2,
+    "primary_title": "12 missing after avalanche strikes Himlung Himal peak in Nepal",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3469675072348297849,
+        "joined_at": 1790653941,
+        "outlet_id": "ndtv",
+        "published_at": 1790620407
+      },
+      {
+        "item_id": 16456783008934139634,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790512559
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "ndtv": "NDTV",
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/people-missing-after-avalanche-strikes-himlung-himal-peak-in-nepal/article71515685.ece",
+          "cluster_id": 3469675072348297849,
+          "fetched_at": 1790653942,
+          "id": 16456783008934139634,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790512559,
+          "summary": "The avalanche at the base camp of the 7,126 metre Himlung Himal peak in the Nar Phu area buried a tent where nine climbers and 13 support staff, were taking shelter",
+          "text_hash": 180697147991143855,
+          "title": "12 missing after avalanche strikes Himlung Himal peak in Nepal"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://ndtv.com/world-news/video-emerges-from-snow-covered-nepal-peak-where-4-died-in-avalanche-12111559",
+          "cluster_id": 3469675072348297849,
+          "fetched_at": 1790653941,
+          "id": 3469675072348297849,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790620407,
+          "summary": "The avalanche struck the base camp of the 7,126-metre Himlung Himal peak in the Nar Phu area of Nepal's Manang district on Sunday.",
+          "text_hash": 3752595879677015079,
+          "title": "Video Emerges From Snow-Covered Nepal Peak Where 4 Died In Avalanche"
+        }
+      ],
+      "outlet_id": "ndtv"
+    }
+  ],
+  "withdrawals": []
+}

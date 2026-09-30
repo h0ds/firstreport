@@ -1,0 +1,120 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 16976080729501799145,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 16976080729501799145,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "Here We Remain: A World That Abides Slaughter",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16976080729501799145,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1790594062
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 16976080729501799145,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4535,
+      "snapshot_id": 895308587548799316,
+      "ts": 1790715390
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/further/here-we-remain-a-world-that-abides-slaughter",
+          "cluster_id": 16976080729501799145,
+          "fetched_at": 1790653936,
+          "id": 16976080729501799145,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1790594062,
+          "summary": "Atop all the others inflicted on us came last week's sickening spectacle of two vengeful, lying, broken old men - one a longtime killer of children, one a petty useful idiot abetting him - alternately celebrating and threatening genocide before \"we the peoples of the United Nat i ons .\" Born of \"the defiance of hope\" to enable us to \"live together in peace,\" the forum now hosts the perpetrators of unspeakable atrocities. Omar El Akkad: \"One day everyone will have always been against this.\" Even before war…",
+          "text_hash": 2925106032640034870,
+          "title": "Here We Remain: A World That Abides Slaughter"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

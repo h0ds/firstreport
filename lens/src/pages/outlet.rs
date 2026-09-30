@@ -152,7 +152,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         head: &head,
         body: &b,
         status: &format!(
-            "outlet · built from an export at {}",
+            "Updated {}",
             datetime(input.export_time)
         ),
     });
@@ -311,7 +311,7 @@ pub fn stories_page(input: &Input, o: &Outlet, facts: &OutletFacts, window_days:
         wide: false,
         head: "",
         body: &b,
-        status: &format!("outlet · built from an export at {}", datetime(input.export_time)),
+        status: &format!("Updated {}", datetime(input.export_time)),
     });
     let json = json!({
         "outlet": o.id, "page": page, "pages": pages, "page_size": STORIES_PER_PAGE,

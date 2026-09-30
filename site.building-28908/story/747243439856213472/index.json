@@ -1,0 +1,138 @@
+{
+  "claims": {
+    "reason": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "reason.com",
+          "expires": "2034-08-21",
+          "last_changed": "2024-08-21",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "reason",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/reason.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1968-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_200#Reason_Magazine_at_David_Lisak",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_291#Reason_Magazine_and_reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_352#Reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_500#Reason_(magazine)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Reason",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Reason is generally reliable for news and facts. Editors consider Reason to be a biased or opinionated source that primarily publishes commentary, analysis, and opinion articles. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "reason",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 747243439856213472,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 747243439856213472,
+    "origin_outlet_id": "reason",
+    "outlet_count": 1,
+    "primary_title": "In Chicago, Putting a Hot Dog in a Bun Can Get You in Trouble",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 747243439856213472,
+        "joined_at": 1790653936,
+        "outlet_id": "reason",
+        "published_at": 1790420452
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "reason": "Reason"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://reason.com/2026/09/26/in-chicago-putting-a-hot-dog-in-a-bun-can-get-you-in-trouble/",
+          "cluster_id": 747243439856213472,
+          "fetched_at": 1790653936,
+          "id": 747243439856213472,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "reason",
+          "published_at": 1790420452,
+          "summary": "I've been working in law and public policy for over 15 years, and even I had a hard time making sense of Chicago's permit rules for food vendors.",
+          "text_hash": 8253367282776764479,
+          "title": "In Chicago, Putting a Hot Dog in a Bun Can Get You in Trouble"
+        }
+      ],
+      "outlet_id": "reason"
+    }
+  ],
+  "withdrawals": []
+}

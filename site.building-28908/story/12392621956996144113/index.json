@@ -1,0 +1,1152 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "cbsnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "cbsnews.com",
+          "expires": "2027-10-03",
+          "last_changed": "2026-09-01",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cbsnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-10-04"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-09-18"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_522#Request_for_Comment:_Reliability_of_CBS_News_under_Bari_Weiss",
+            "#cite_note-20"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CBS News",
+          "status": "generally_reliable",
+          "summary": "CBS News is the news division of CBS. It is considered generally reliable. Some editors note, however, that its television content may include superficial coverage, which might not qualify under WP:MEDRS. Editors also note that CBS has undergone intensified political bias after Bari Weiss became editor-in-chief in late 2025, and supression of reporting critical of the Trump administration has been"
+        },
+        "field": "reliability",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "gbnews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      },
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "newsmax": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "newsmax.com",
+          "expires": "2027-07-17",
+          "last_changed": "2026-07-17",
+          "registrar": "SafeNames Ltd.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "newsmax",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/newsmax.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-07-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1998-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_297#Is_Newsmax_reliable_for_the_best_Catholic_Colleges?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#Newsmax_interviewee's_opinions"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Newsmax",
+          "status": "deprecated",
+          "summary": "Newsmax was deprecated by snowball clause consensus in the November 2020 RfC. Concerns of editors included that Newsmax lacks adherence to journalistic standards, launders propaganda, promulgates misinformation, promotes conspiracy theories and false information for political purposes, and promotes medical misinformation such as COVID-19 -related falsehoods, climate change denialism, conspiracy th"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "newsmax",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "nytimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nytimes.com",
+          "expires": "2027-01-19",
+          "last_changed": "2024-12-18",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nytimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nytimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-01-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1851-09-18"
+      },
+      {
+        "data": {
+          "qid": "Q2529982"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The New York Times Company"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_244#RfC:_Wound_characteristics_of_military-style_rifles",
+            "#cite_note-70"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New York Times (NYT)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New York Times is generally reliable. WP:RSOPINION should be used to evaluate opinion columns, while WP:NEWSBLOG should be used for the blogs on The New York Times's website. The 2018 RfC cites WP:MEDPOP to establish that popular press sources such as The New York Times should generally not be used to support medical claims."
+        },
+        "field": "reliability",
+        "outlet_id": "nytimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "tass": [
+      {
+        "data": {
+          "domain": "tass.com",
+          "expires": "2027-09-16",
+          "last_changed": "2026-09-15",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "tass",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/tass.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-17"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#RfC:_TASS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_378#RfC_on_TASS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Use_of_TASS_for_Ukranian_refugee_figures",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_377#TASS,_Interfax_(russian_version)_and_RIA_Novosti's_reliability_on_the_2022_Russian_invasion_of_Ukraine_(especially_on_alleged_attacks_in_Russia)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "TASS (ITAR-TASS, Telegraph Agency of the Soviet Union, Information Telegraph Agency of Russia)",
+          "status": "generally_unreliable",
+          "summary": "In a 2022 RfC, editors achieved a strong consensus that TASS is a biased source with respect to topics in which the Russian government may have an interest and that the source is generally unreliable for providing contentious facts in that context. Editors attained a rough consensus that TASS should not be deprecated at this time and a rough consensus that TASS is generally unreliable more broadly"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "tass",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.007709205150604248,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": 0.7277092337608337
+    },
+    "created_at": 1790653848,
+    "expired": false,
+    "id": 12392621956996144113,
+    "item_count": 11,
+    "last_active_at": 1790720969,
+    "origin_item_id": 676563154741237689,
+    "origin_outlet_id": "gbnews",
+    "outlet_count": 10,
+    "primary_title": "Rubio says UK airbase incident involved a foreign state",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 12392621956996144113,
+        "joined_at": 1790653848,
+        "outlet_id": "guardian",
+        "published_at": 1790652573
+      },
+      {
+        "item_id": 676563154741237689,
+        "joined_at": 1790653938,
+        "outlet_id": "gbnews",
+        "published_at": 1790645625
+      },
+      {
+        "item_id": 13273546787442517952,
+        "joined_at": 1790659143,
+        "outlet_id": "tass",
+        "published_at": 1790657424
+      },
+      {
+        "item_id": 1714340354509032686,
+        "joined_at": 1790670622,
+        "outlet_id": "guardian",
+        "published_at": 1790669874
+      },
+      {
+        "item_id": 15381863621053088389,
+        "joined_at": 1790670673,
+        "outlet_id": "straitstimes",
+        "published_at": 1790670467
+      },
+      {
+        "item_id": 1191133926217981318,
+        "joined_at": 1790679060,
+        "outlet_id": "aljazeera",
+        "published_at": 1790673157
+      },
+      {
+        "item_id": 1899168516320730893,
+        "joined_at": 1790679060,
+        "outlet_id": "thehindu",
+        "published_at": 1790677140
+      },
+      {
+        "item_id": 14207397141893706457,
+        "joined_at": 1790679061,
+        "outlet_id": "nytimes",
+        "published_at": 1790678662
+      },
+      {
+        "item_id": 7966231910160630917,
+        "joined_at": 1790683293,
+        "outlet_id": "newsmax",
+        "published_at": 1790679610
+      },
+      {
+        "item_id": 8195646042316468031,
+        "joined_at": 1790715389,
+        "outlet_id": "cbsnews",
+        "published_at": 1790690275
+      },
+      {
+        "item_id": 6955570981964739996,
+        "joined_at": 1790720969,
+        "outlet_id": "breitbart",
+        "published_at": 1790687224
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "cbsnews",
+            "guardian",
+            "thehindu",
+            "nytimes",
+            "straitstimes"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "gbnews",
+            "tass"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "newsmax"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "breitbart": "Breitbart",
+    "cbsnews": "CBS News",
+    "gbnews": "GB News",
+    "guardian": "The Guardian",
+    "newsmax": "Newsmax",
+    "nytimes": "The New York Times",
+    "straitstimes": "The Straits Times",
+    "tass": "TASS",
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 10,
+  "outlets_6h": 2,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 12392621956996144113,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3392,
+      "snapshot_id": 16198071419885421171,
+      "ts": 1790664889
+    },
+    {
+      "cluster_id": null,
+      "item_id": 12392621956996144113,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3651,
+      "snapshot_id": 6936217350698030417,
+      "ts": 1790669159
+    },
+    {
+      "cluster_id": null,
+      "item_id": 1714340354509032686,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3781,
+      "snapshot_id": 14614480373335041781,
+      "ts": 1790679060
+    },
+    {
+      "cluster_id": null,
+      "item_id": 15381863621053088389,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3876,
+      "snapshot_id": 7051471473262024982,
+      "ts": 1790679062
+    },
+    {
+      "cluster_id": null,
+      "item_id": 1714340354509032686,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4170,
+      "snapshot_id": 4532026368929717868,
+      "ts": 1790679368
+    },
+    {
+      "cluster_id": null,
+      "item_id": 1714340354509032686,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4298,
+      "snapshot_id": 6589546433336633550,
+      "ts": 1790681719
+    },
+    {
+      "cluster_id": null,
+      "item_id": 1714340354509032686,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4378,
+      "snapshot_id": 11087345660703764411,
+      "ts": 1790683555
+    }
+  ],
+  "spark": [
+    3,
+    3,
+    4,
+    7,
+    8,
+    8,
+    8,
+    8,
+    9,
+    10,
+    10,
+    10
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://gbnews.com/news/raf-fairford-us-blames-foreign-actor-base-incident",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790653938,
+          "id": 676563154741237689,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790645625,
+          "summary": "Marco Rubio has blamed the incident at RAF Fairford on a \"foreign actor\", and has warned that \"a lot more news\" about the circumstances will come to light in the near future. Speaking on Monday night, the US Secretary of State described the alleged terror plot as \"very serious\". Five men - all from London and aged in their 20s - were arrested on suspicion of terrorism and explosives offences after three vans were found close to the Gloucestershire base used by US forces. Mr Rubio told Fox News it \"clearly…",
+          "text_hash": 2294525002870298935,
+          "title": "US blames 'foreign actor' for RAF Fairford incident and warns 'there's a lot more news coming'"
+        }
+      ],
+      "outlet_id": "gbnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/uk-news/2026/sep/29/raf-fairford-uk-bomb-plot-marco-rubio-claims-foreign-actor",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790653848,
+          "id": 12392621956996144113,
+          "joined_at": 1790653848,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790652573,
+          "summary": "US secretary of state, who offered no evidence for claims, also says many people ‘disturbed’ that five suspects released on bail A counter-terrorism operation near RAF Fairford in the UK was mired in confusion on Tuesday after police released five suspects on bail, prompting concern and surprise from the US president and secretary of state. Five British nationals from London were detained on suspicion of explosives offences and terrorism after three suspicious vans were reported to police in the early…",
+          "text_hash": 1424277484286681164,
+          "title": "Rubio says foreign actor was ‘clearly’ behind suspected RAF Fairford plot"
+        },
+        {
+          "canonical_url": "https://theguardian.com/uk-news/live/2026/sep/29/raf-fairford-counter-terror-suspected-plot-iran-donald-trump-marco-rubio-latest-news-updates",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790670622,
+          "id": 1714340354509032686,
+          "joined_at": 1790670622,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790669874,
+          "summary": "US secretary of state and Donald Trump express concerns about decision to bail suspects; some residents reported as hesitant to return home Rubio says foreign actor was ‘clearly’ behind suspected RAF Fairford plot Tell us: have you been affected by the incident at RAF Fairford? Jason Rodrigues is a researcher and writer in the Guardian’s research department Having an RAF base on its doorstep keeps residents of Fairford on alert, particularly when military aircraft use it to fly to war zones, as now, with…",
+          "text_hash": 1226604270248932166,
+          "title": "RAF Fairford: Rubio says ‘foreign actor’ behind suspected plot as some evacuated residents begin to return home – latest updates"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://tass.com/world/2194279",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790659143,
+          "id": 13273546787442517952,
+          "joined_at": 1790659143,
+          "lang": "en",
+          "outlet_id": "tass",
+          "published_at": 1790657424,
+          "summary": "The US secretary of state qualified the situation as \"very serious\"",
+          "text_hash": 6867436364178523236,
+          "title": "Foreign actor involved in RAF Fairford incident — Rubio"
+        }
+      ],
+      "outlet_id": "tass"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/rubio-says-uk-airbase-incident-involved-a-foreign-state",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790670673,
+          "id": 15381863621053088389,
+          "joined_at": 1790670673,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790670467,
+          "summary": "Five men were arrested on suspected explosives and terrorism offences near the airbase.",
+          "text_hash": 1608500480513090153,
+          "title": "Rubio says British airbase incident involved a foreign state"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/29/uss-marco-rubio-says-uk-airbase-incident-involved-foreign-actor?traffic_source=rss",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790679060,
+          "id": 1191133926217981318,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790673157,
+          "summary": "Washington's top diplomat calls the suspected plot 'a very serious situation' after five were arrested over the weekend.",
+          "text_hash": 2122105537344853517,
+          "title": "US’s Marco Rubio says UK airbase incident involved ‘foreign actor’"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/rubio-says-uk-airbase-incident-involved-a-foreign-state/article71523199.ece",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790679060,
+          "id": 1899168516320730893,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790677140,
+          "summary": "British ⁠police declared a major incident at the RAF Fairford base in western England following the arrests early on September 27, and the government held a national emergency meeting",
+          "text_hash": 11039178095166386246,
+          "title": "Rubio says U.K. airbase incident involved a foreign state"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nytimes.com/2026/09/29/world/europe/uk-raf-fairford-air-base-incident-rubio-us.html",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790679061,
+          "id": 14207397141893706457,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "nytimes",
+          "published_at": 1790678662,
+          "summary": "The U.S. secretary of state, Marco Rubio, told Fox News that what happened at a base used by U.S. bombers flying to Iran was “very serious,” without providing details.",
+          "text_hash": 2205427531965208419,
+          "title": "Rubio Says Incident at UK Air Base RAF Fairford ‘Clearly Involved’ a Foreign Actor"
+        }
+      ],
+      "outlet_id": "nytimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://newsmax.com/politics/rubio-uk-airbase-foreign-state/2026/09/29/id/1271014",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790683293,
+          "id": 7966231910160630917,
+          "joined_at": 1790683293,
+          "lang": "en",
+          "outlet_id": "newsmax",
+          "published_at": 1790679610,
+          "summary": "Secretary of State Marco Rubio said the \"hands of a foreign actor\" were involved in an incident in which five men were arrested on suspected explosives and terrorism offenses near a British airbase used by U.S. forces to strike Iran. British police declared a major incident ...",
+          "text_hash": 1609344980740087889,
+          "title": "Rubio Says UK Airbase Incident Involved Foreign State"
+        }
+      ],
+      "outlet_id": "newsmax"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/europe/2026/09/29/rubio-confirms-foreign-actor-in-confused-british-airbase-terror-case/",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790720969,
+          "id": 6955570981964739996,
+          "joined_at": 1790720969,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790687224,
+          "summary": "Secretary of State Rubio said alleged averted attack against the U.S. Air Force Base in England, was \"clearly\" involving \"a foreign actor\". The post Marco Rubio Confirms ‘Foreign Actor Clearly Involved’ in Confused British Airbase ‘Terror’ Case appeared first on Breitbart .",
+          "text_hash": 597719790380332835,
+          "title": "Marco Rubio Confirms 'Foreign Actor Clearly Involved' in Confused British Airbase 'Terror' Case"
+        }
+      ],
+      "outlet_id": "breitbart"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://cbsnews.com/news/trump-uk-raf-fairford-air-base-arrests-release-bail-rubio/",
+          "cluster_id": 12392621956996144113,
+          "fetched_at": 1790715389,
+          "id": 8195646042316468031,
+          "joined_at": 1790715389,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790690275,
+          "summary": "Rubio claims a possible terror plot against a U.K. air base used by U.S. forces \"clearly involved\" a foreign actor, but there are few facts to support that.",
+          "text_hash": 1899696464276263847,
+          "title": "Trump and Rubio question U.K. handling of possible plot against air base"
+        }
+      ],
+      "outlet_id": "cbsnews"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 12392621956996144113,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3724,
+      "snapshot_id": 7283399550857561019,
+      "ts": 1790670622
+    },
+    {
+      "cluster_id": null,
+      "item_id": 1714340354509032686,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4421,
+      "snapshot_id": 13468597432063914469,
+      "ts": 1790715373
+    },
+    {
+      "cluster_id": null,
+      "item_id": 7966231910160630917,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4545,
+      "snapshot_id": 6466808075266309492,
+      "ts": 1790715392
+    }
+  ]
+}

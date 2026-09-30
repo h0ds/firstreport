@@ -1,0 +1,125 @@
+{
+  "claims": {
+    "democracynow": [
+      {
+        "data": {
+          "domain": "democracynow.org",
+          "expires": "2027-09-10",
+          "last_changed": "2026-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "auto renew period"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "democracynow",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/democracynow.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-09-10"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard#RfC:_update_Democracy_Now!_from_WP:MREL_to_WP:GENREL?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_40#Democracy_Now!",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_71#Democracy_Now_source_article_\"Cheering_Movers_and_Art_Student_Spies\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_84#Democracy_Now!_and_CounterPunch",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_96#Democracy_Now",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_144#Democracy_Now!_in_general"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Democracy Now!",
+          "status": "no_consensus",
+          "summary": "There is no consensus on the reliability of Democracy Now!. Most editors consider Democracy Now! a partisan source whose statements should be attributed. Syndicated content published by Democracy Now! should be evaluated by the reliability of its original publisher."
+        },
+        "field": "reliability",
+        "outlet_id": "democracynow",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653938,
+    "expired": false,
+    "id": 1415382982578558456,
+    "item_count": 1,
+    "last_active_at": 1790653938,
+    "origin_item_id": 1415382982578558456,
+    "origin_outlet_id": "democracynow",
+    "outlet_count": 1,
+    "primary_title": "\"Stop Arming Israel\": 100+ Arrested at Jewish Voice for Peace Sit-In Outside Netanyahu U.N. Speech",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 1415382982578558456,
+        "joined_at": 1790653938,
+        "outlet_id": "democracynow",
+        "published_at": 1790338433
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "democracynow": "Democracy Now!"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "http://democracynow.org/2026/9/25/jewish_voice_for_peace_protests_netanyahu",
+          "cluster_id": 1415382982578558456,
+          "fetched_at": 1790653938,
+          "id": 1415382982578558456,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "democracynow",
+          "published_at": 1790338433,
+          "summary": "Over 100 protesters were arrested near the United Nations in New York on Thursday ahead of Israeli Prime Minister Benjamin Netanyahu’s speech to the General Assembly. The sit-in, organized by Jewish Voice for Peace, denounced Netanyahu for perpetrating a genocide against Palestinians in Gaza, building more illegal settlements in the West Bank, occupying parts of Lebanon and bombing Iran alongside the United States. Democracy Now! spoke with participants, including some congressional candidates and other…",
+          "text_hash": 445073424052984241,
+          "title": "\"Stop Arming Israel\": 100+ Arrested at Jewish Voice for Peace Sit-In Outside Netanyahu U.N. Speech"
+        }
+      ],
+      "outlet_id": "democracynow"
+    }
+  ],
+  "withdrawals": []
+}

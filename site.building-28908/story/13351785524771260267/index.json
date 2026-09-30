@@ -1,0 +1,98 @@
+{
+  "claims": {
+    "japanforward": [
+      {
+        "data": {
+          "domain": "japan-forward.com",
+          "expires": "2026-11-21",
+          "last_changed": "2025-11-05",
+          "registrar": "GMO Internet Group, Inc. d/b/a Onamae.com",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "japanforward",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/japan-forward.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2016-11-21"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790659142,
+    "expired": false,
+    "id": 13351785524771260267,
+    "item_count": 1,
+    "last_active_at": 1790659142,
+    "origin_item_id": 13351785524771260267,
+    "origin_outlet_id": "japanforward",
+    "outlet_count": 1,
+    "primary_title": "White House Summit Document Calls US and China WWII Allies, Stirring Concern in Tokyo",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 13351785524771260267,
+        "joined_at": 1790659142,
+        "outlet_id": "japanforward",
+        "published_at": 1790656200
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japanforward": "Japan Forward"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japan-forward.com/us-china-summit-document-wwii-allies-japan-concern/",
+          "cluster_id": 13351785524771260267,
+          "fetched_at": 1790659142,
+          "id": 13351785524771260267,
+          "joined_at": 1790659142,
+          "lang": "en",
+          "outlet_id": "japanforward",
+          "published_at": 1790656200,
+          "summary": "Even as wartime \"ally\" language raises eyebrows in Tokyo, the same document reaffirms Abe's free and open Indo-Pacific as central to US strategy. The post White House Summit Document Calls US and China WWII Allies, Stirring Concern in Tokyo first appeared on Japan Forward .",
+          "text_hash": 18289427153047368893,
+          "title": "White House Summit Document Calls US and China WWII Allies, Stirring Concern in Tokyo"
+        }
+      ],
+      "outlet_id": "japanforward"
+    }
+  ],
+  "withdrawals": []
+}

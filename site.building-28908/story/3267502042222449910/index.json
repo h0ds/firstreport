@@ -1,0 +1,301 @@
+{
+  "claims": {
+    "rt": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "rt.com",
+          "expires": "2027-09-22",
+          "last_changed": "2026-09-21",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rt",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rt.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-09-23"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-09-15"
+      },
+      {
+        "data": {
+          "qid": "Q821172"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "RIA Novosti"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#RfC:_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Enquiry_concerning_the_RT_Network",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_168#RT_news_and_Crimean_status_referendum,_2014",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_173#Russia_Today",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Attributed_statement_sourced_by_RT_news_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_231#RT_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#On_Contact_/_RT",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Ruptly,_subsidiary_of_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)",
+          "status": "deprecated",
+          "summary": "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
+        },
+        "field": "reliability",
+        "outlet_id": "rt",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "washingtontimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtontimes.com",
+          "expires": "2027-09-13",
+          "last_changed": "2026-07-30",
+          "registrar": "DNC Holdings, Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtontimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1982-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      },
+      {
+        "data": {
+          "qid": "Q217059"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Unification Church"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_328#RfC:_The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_209#Is_the_Washington_Times_an_acceptable_source_for_statements_of_fact_related_to_student_protesters/black_lives_matter/Milo_Yiannopoulos?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_316#Rebel_News"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Times",
+          "status": "no_consensus",
+          "summary": "There is consensus that The Washington Times is a marginally reliable source for politics and science. Most editors agree that it is a partisan source. Some editors noted a history of publishing inaccurate or false information, of being slow to issue retractions or corrections, and of sometimes only doing so under the threat of legal action; a considerable minority favored deprecation on these gro"
+        },
+        "field": "reliability",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.015592694282531738,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7355927228927612
+    },
+    "created_at": 1790633639,
+    "expired": false,
+    "id": 3267502042222449910,
+    "item_count": 2,
+    "last_active_at": 1790715379,
+    "origin_item_id": 3267502042222449910,
+    "origin_outlet_id": "rt",
+    "outlet_count": 2,
+    "primary_title": "Hormuz traffic nears prewar levels as Iran war simmers",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3267502042222449910,
+        "joined_at": 1790633639,
+        "outlet_id": "rt",
+        "published_at": 1790257059
+      },
+      {
+        "item_id": 16644915022935953094,
+        "joined_at": 1790715379,
+        "outlet_id": "washingtontimes",
+        "published_at": 1790709540
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "No consensus",
+          "outlets": [
+            "washingtontimes"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "rt"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "rt": "RT",
+    "washingtontimes": "The Washington Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rt.com/news/646198-us-military-activity-iran/",
+          "cluster_id": 3267502042222449910,
+          "fetched_at": 1790633639,
+          "id": 3267502042222449910,
+          "joined_at": 1790633639,
+          "lang": "en",
+          "outlet_id": "rt",
+          "published_at": 1790257059,
+          "summary": "US military activity has reportedly increased around the Strait of Hormuz as oil tanker traffic through the key waterway rises Read Full Article at RT.com",
+          "text_hash": 9644078406161499337,
+          "title": "US steps up military activity near Iran – media"
+        }
+      ],
+      "outlet_id": "rt"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtontimes.com/news/2026/sep/29/hormuz-traffic-nears-prewar-levels-iran-war-simmers/",
+          "cluster_id": 3267502042222449910,
+          "fetched_at": 1790715379,
+          "id": 16644915022935953094,
+          "joined_at": 1790715379,
+          "lang": "en",
+          "outlet_id": "washingtontimes",
+          "published_at": 1790709540,
+          "summary": "Commercial traffic through the Strait of Hormuz increased dramatically in September, according to maritime tracking firms on Tuesday, inching closer to prewar levels as some speculate that Iran is losing leverage against the U.S. in the seven-month-long war.",
+          "text_hash": 9190811115363456657,
+          "title": "Hormuz traffic nears prewar levels as Iran war simmers"
+        }
+      ],
+      "outlet_id": "washingtontimes"
+    }
+  ],
+  "withdrawals": []
+}

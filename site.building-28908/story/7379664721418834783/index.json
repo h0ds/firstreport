@@ -1,0 +1,112 @@
+{
+  "claims": {
+    "france24": [
+      {
+        "data": {
+          "domain": "france24.com",
+          "expires": "2026-12-01",
+          "last_changed": "2026-04-21",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "france24",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/france24.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-12-01"
+      },
+      {
+        "data": {
+          "qid": "Q166180"
+        },
+        "field": "owner",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France 24"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790715376,
+    "expired": false,
+    "id": 7379664721418834783,
+    "item_count": 1,
+    "last_active_at": 1790715376,
+    "origin_item_id": 7379664721418834783,
+    "origin_outlet_id": "france24",
+    "outlet_count": 1,
+    "primary_title": "Spanish royals welcome French President Macron in official ceremony",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 7379664721418834783,
+        "joined_at": 1790715376,
+        "outlet_id": "france24",
+        "published_at": 1790690901
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "france24": "France 24"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://france24.com/en/video/20260929-spanish-royals-welcome-french-president-macron-in-official-ceremony",
+          "cluster_id": 7379664721418834783,
+          "fetched_at": 1790715376,
+          "id": 7379664721418834783,
+          "joined_at": 1790715376,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790690901,
+          "summary": "Spain's King Felipe VI and Queen Letizia welcomed French President Emmanuel Macron and his wife Brigitte Macron during an official ceremony upon their arrival at Madrid's Royal Palace. French President Macron is on a two-day official visit in Spain. This state visit will serve to highlight and strengthen the ties and bilateral relations between the two countries. FRANCE 24's Sarah Morris reports from Madrid, Spain.",
+          "text_hash": 16944691464278269463,
+          "title": "Spanish royals welcome French President Macron in official ceremony"
+        }
+      ],
+      "outlet_id": "france24"
+    }
+  ],
+  "withdrawals": []
+}

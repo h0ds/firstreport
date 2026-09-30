@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 17169149847486460597,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 17169149847486460597,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "Sanders, Casar Introduce Legislation to Create New Federal Agency to Ban Artificial Superintelligence, Pause Advanced AI Development",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 17169149847486460597,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1790182572
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/sanders-casar-introduce-legislation-to-create-new-federal-agency-to-ban-artificial-superintelligence-pause-advanced-ai-development",
+          "cluster_id": 17169149847486460597,
+          "fetched_at": 1790653936,
+          "id": 17169149847486460597,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1790182572,
+          "summary": "Sen. Bernie Sanders (I-Vt.) and Rep. Greg Casar (D-Texas) today introduced the Ban Artificial Superintelligence Act — legislation to stop artificial intelligence (AI) oligarchs from building machines humans cannot control and to pause advanced AI development until we have put in place rigorous federal testing and oversight to ensure AI does not harm humanity. “When you are racing towards a cliff, you don’t just ease up on the gas pedal. You hit the brakes. When the future of humanity is at stake, we cannot…",
+          "text_hash": 1073451450094683314,
+          "title": "Sanders, Casar Introduce Legislation to Create New Federal Agency to Ban Artificial Superintelligence, Pause Advanced AI Development"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,80 @@
+{
+  "claims": {
+    "unknown:fool.com": []
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653928,
+    "expired": false,
+    "id": 3090297133174966384,
+    "item_count": 1,
+    "last_active_at": 1790653928,
+    "origin_item_id": 3090297133174966384,
+    "origin_outlet_id": "unknown:fool.com",
+    "outlet_count": 1,
+    "primary_title": "0% intro APR until 2024 is 100% insane",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3090297133174966384,
+        "joined_at": 1790653928,
+        "outlet_id": "unknown:fool.com",
+        "published_at": 0
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "unknown:fool.com": "unknown:fool.com"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://fool.com/the-ascent/credit-cards/landing/wells-fargo-reflect-review/",
+          "cluster_id": 3090297133174966384,
+          "fetched_at": 1790653928,
+          "id": 3090297133174966384,
+          "joined_at": 1790653928,
+          "lang": "en",
+          "outlet_id": "unknown:fool.com",
+          "published_at": 0,
+          "summary": "",
+          "text_hash": 9719141882969919520,
+          "title": "0% intro APR until 2024 is 100% insane"
+        }
+      ],
+      "outlet_id": "unknown:fool.com"
+    }
+  ],
+  "withdrawals": []
+}

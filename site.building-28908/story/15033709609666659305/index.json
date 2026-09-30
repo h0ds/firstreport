@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 15033709609666659305,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 15033709609666659305,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "Groundwork Reveals the Hidden Cost of AI",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15033709609666659305,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1790173295
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/groundwork-reveals-the-hidden-cost-of-ai",
+          "cluster_id": 15033709609666659305,
+          "fetched_at": 1790653936,
+          "id": 15033709609666659305,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1790173295,
+          "summary": "Today, Groundwork Collaborative and Reset Tech released a new report, “ The Hidden Costs of AI for American Households ,” which exposes how artificial intelligence (AI) is already increasing costs for every American in nearly every line of the budget – and how that toll will only grow. AI is already increasing prices for American families, with electronics and electricity bills on the rise due to the AI data center buildout, to groceries and other retail purchases plagued by AI-powered pricing abuses. AI…",
+          "text_hash": 6765817092369404227,
+          "title": "Groundwork Reveals the Hidden Cost of AI"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

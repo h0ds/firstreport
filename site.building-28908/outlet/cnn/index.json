@@ -1,0 +1,542 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "cnn.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.1183
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "cnn",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.12 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "cnn.com",
+          "expires": "2027-09-21",
+          "last_changed": "2025-04-22",
+          "registrar": "Nom-iq Ltd. dba COM LAUDE",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cnn",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cnn.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-22"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1980-06-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q7892363"
+        },
+        "field": "legal_form",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "cable news in the United States"
+      },
+      {
+        "data": {
+          "qid": "Q1762059"
+        },
+        "field": "legal_form",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "film production company"
+      },
+      {
+        "data": {
+          "qid": "Q17232649"
+        },
+        "field": "legal_form",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news website"
+      },
+      {
+        "data": {
+          "qid": "Q561068"
+        },
+        "field": "legal_form",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "specialty channel"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "cnn.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "cnn",
+        "ref_url": "https://edition.cnn.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "CNN"
+      },
+      {
+        "field": "name",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "CNN"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q107074885"
+        },
+        "field": "owner",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Warner Bros. Discovery"
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q107074885"
+        },
+        "field": "parent",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Warner Bros. Discovery"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 23,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "cnn",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cnn",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.3 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "cnn.com"
+        },
+        "field": "registrar",
+        "outlet_id": "cnn",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cnn.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Nom-iq Ltd. dba COM LAUDE"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_274#RfC:_\"CNN\"_(October)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_307#RFC_on_CNN",
+            "#cite_note-25"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CNN (Cable News Network)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that news broadcast or published by CNN is generally reliable. However, iReport consists solely of user-generated content, and talk show content should be treated as opinion pieces. Some editors consider CNN biased, though not to the extent that it affects reliability."
+        },
+        "field": "reliability",
+        "outlet_id": "cnn",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 23,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "cnn",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cnn",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "cnn.com",
+          "final_url": "https://edition.cnn.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "cnn",
+        "ref_url": "https://edition.cnn.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "domain": "cnn.com",
+          "missing": [
+            "about",
+            "contact",
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.cnn.com/privacy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "cnn",
+        "ref_url": "https://edition.cnn.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links privacy pages from its home page; no about, contact, corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 23,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "cnn",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cnn",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://cnn.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q12217473",
+            "Q1282786",
+            "Q5013138"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q48340"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/CNN"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 23,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "cnn",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cnn",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 23,
+  "outlet": {
+    "domains": [
+      "cnn.com",
+      "edition.cnn.com"
+    ],
+    "id": "cnn",
+    "name": "CNN"
+  },
+  "shared_stories": 0,
+  "stories": [
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 14979428309686545555,
+      "outlet_count": 1,
+      "title": "CNN Heroes: Sharing the Spotlight"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 13984058183822323363,
+      "outlet_count": 1,
+      "title": "They bought an abandoned 'ghost house' in the Japanese countryside"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 13151065365746250266,
+      "outlet_count": 1,
+      "title": "Still haven't filed your taxes? Here's what you need to know"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 12844595133915709067,
+      "outlet_count": 1,
+      "title": "Sign up to our newsletter for a weekly roundup of travel news"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 12088242755664642012,
+      "outlet_count": 1,
+      "title": "These were the best and worst places for air quality in 2021, new report shows"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 11656608397998813244,
+      "outlet_count": 1,
+      "title": "Not only is Lake Powell's water level plummeting because of drought, its total capacity is shrinking, too"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 10307903746402613634,
+      "outlet_count": 1,
+      "title": "How Playboy cut ties with Hugh Hefner to create a post-MeToo brand"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 10022865270603607358,
+      "outlet_count": 1,
+      "title": "'A definitive backslide.' Inside fashion's worrying runway trend"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 9562054669150551079,
+      "outlet_count": 1,
+      "title": "Markets digest bank earnings after recent turmoil"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 9404297960432575191,
+      "outlet_count": 1,
+      "title": "The surreal facades of America's strip clubs"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 9005159520142242031,
+      "outlet_count": 1,
+      "title": "The most beautiful sections of China's Great Wall"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 8142421141474369639,
+      "outlet_count": 1,
+      "title": "'I was up to my waist down a hippo's throat.' He survived, and here's his advice"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 6328563521951960488,
+      "outlet_count": 1,
+      "title": "Michael Jordan's 1998 NBA Finals sneakers sell for a record $2.2 million"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 5226048862419153004,
+      "outlet_count": 1,
+      "title": "Analysis: Fox News is about to enter the true No Spin Zone"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 5221876257786908862,
+      "outlet_count": 1,
+      "title": "Here's the real reason to turn on airplane mode when you fly"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 4912590227149093164,
+      "outlet_count": 1,
+      "title": "Nelly Cheboi, who creates computer labs for Kenyan schoolchildren, is CNN's Hero of the Year"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 4865712445061605468,
+      "outlet_count": 1,
+      "title": "Retail spending fell in March as consumers pull back"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 3659021335171391666,
+      "outlet_count": 1,
+      "title": "Scientists identify secret ingredient in Leonardo da Vinci paintings"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 3299225555620159166,
+      "outlet_count": 1,
+      "title": "Silicon Valley Bank collapse renews calls to address disparities impacting entrepreneurs of color"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 2535343319592407869,
+      "outlet_count": 1,
+      "title": "Donate now to a Top 10 CNN Hero"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 996620587462700882,
+      "outlet_count": 1,
+      "title": "Look of the Week: Blackpink headline Coachella in Korean hanboks"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 206118466432258980,
+      "outlet_count": 1,
+      "title": "Relaxed entry rules make it easier than ever to visit this stunning Asian nation"
+    },
+    {
+      "created_at": 1790653928,
+      "first": true,
+      "id": 57857380921561690,
+      "outlet_count": 1,
+      "title": "Big-box stores could help slash emissions and save millions by putting solar panels on roofs. Why aren't more of them doing it?"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

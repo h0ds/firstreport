@@ -1,0 +1,643 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "france24.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.1466
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "france24",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.15 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "france24.com",
+          "expires": "2026-12-01",
+          "last_changed": "2026-04-21",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "france24",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/france24.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-12-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1153191"
+        },
+        "field": "legal_form",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "online newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "france24.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "france24",
+        "ref_url": "https://www.france24.com/en/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "France 24"
+      },
+      {
+        "field": "name",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France24.com"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 27,
+          "origin_of": 1,
+          "shared_stories": 12,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "france24",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/france24",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 8% of 12 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q166180"
+        },
+        "field": "owner",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France 24"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 27,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "france24",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/france24",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.3 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "france24.com"
+        },
+        "field": "registrar",
+        "outlet_id": "france24",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/france24.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Gandi SAS"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 27,
+          "revised": 2,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "france24",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/france24",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "7% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "france24.com",
+          "final_url": "https://www.france24.com/en/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "france24",
+        "ref_url": "https://www.france24.com/en/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.france24.com/en/raf-fairford-ai-enhanced-photos-of-suspects-fuel-false-claims-about-their-religion-1",
+          "contact": "https://www.francemm.com/en/contact?brand=f24",
+          "domain": "france24.com",
+          "ethics": "https://www.francemediasmonde.com/en/our-commitments/ethics-and-transparency/",
+          "missing": [
+            "corrections",
+            "masthead"
+          ],
+          "privacy": "https://www.francemm.com/en/privacy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "france24",
+        "ref_url": "https://www.france24.com/en/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+      }
+    ],
+    "state_media": [
+      {
+        "as_of": "2026",
+        "data": {
+          "code": "ISFM",
+          "entity": "France Médias Monde"
+        },
+        "field": "state_media",
+        "note": "SMM's entry for France Médias Monde, which runs this outlet; State Media Monitor's category, not Kagami's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0.",
+        "outlet_id": "france24",
+        "ref_url": "https://statemediamonitor.com/2026/09/france-medias-monde-fmm/",
+        "retrieved_at": 1790722338,
+        "source_id": "state_media_monitor",
+        "value": "Independent State-Funded and State-Managed (ISFM)"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 27,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "france24",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/france24",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.france24.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q30097304"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 27,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "france24",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/france24",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 3,
+  "items": 70,
+  "outlet": {
+    "domains": [
+      "france24.com"
+    ],
+    "id": "france24",
+    "name": "France 24"
+  },
+  "shared_stories": 28,
+  "stories": [
+    {
+      "created_at": 1790715378,
+      "first": false,
+      "id": 6644257237448895193,
+      "outlet_count": 14,
+      "title": "Trump: Tech Leaders Signed Accord to 'Self-Police' AI Development"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 12368115546343778984,
+      "outlet_count": 8,
+      "title": "Netanyahu Said to Have Been Warned by Emirati Leader About Hamas Attack Before Oct. 7"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 3322863658697567134,
+      "outlet_count": 18,
+      "title": "Justices Let Deportations to 3rd Countries Resume While Weighing Policy"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 11726634235689167800,
+      "outlet_count": 13,
+      "title": "Morocco’s king appoints the country’s first woman prime minister"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 3372583884509813153,
+      "outlet_count": 13,
+      "title": "OpenAI cancels release of newest model due to safety concerns"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 925583014156697947,
+      "outlet_count": 12,
+      "title": "French far-right’s Bardella denies alleged antisemitic comments, files defamation lawsuit"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15587760235900320854,
+      "outlet_count": 26,
+      "title": "5 men released on bail in UK over suspected US-run airbase plot"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18293615436391779908,
+      "outlet_count": 17,
+      "title": "New York prosecutors reopen investigation into alleged rape at Cornell University"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 270612440624308507,
+      "outlet_count": 13,
+      "title": "China, US Can Continue Dialogue on AI to Weigh Risks, Benefits - Xi"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 9811700178444612757,
+      "outlet_count": 8,
+      "title": "Congo’s Ebola outbreak tops 8,000 confirmed cases as disease remains out of control"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11230258509063452999,
+      "outlet_count": 18,
+      "title": "87-year-old woman whose eviction sparked protests in Spain is returning home"
+    },
+    {
+      "created_at": 1790716848,
+      "first": true,
+      "id": 16509772853753607212,
+      "outlet_count": 1,
+      "title": "Safeguards 'build a moat' around US AI firms, prevent open-source models from advancing, expert says"
+    },
+    {
+      "created_at": 1790653936,
+      "first": false,
+      "id": 16109613403163530335,
+      "outlet_count": 5,
+      "title": "Taxpayer-Funded Trump Ad Violates the Hatch Act"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 12821000870318830533,
+      "outlet_count": 6,
+      "title": "PM Burnham vows big shake-up for UK in high-risk political speech"
+    },
+    {
+      "created_at": 1790715371,
+      "first": false,
+      "id": 11498917335133207289,
+      "outlet_count": 10,
+      "title": "Eiffel Tower chief to step down after exclusion of female staff during Hindu delegation visit"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 2328662350960157817,
+      "outlet_count": 6,
+      "title": "A TV journalist is crowned king of a traditional monarchy in Uganda"
+    },
+    {
+      "created_at": 1790653938,
+      "first": false,
+      "id": 8671402165075689410,
+      "outlet_count": 4,
+      "title": "Satellite images show Gaza in ruins three years into Israel’s genocidal war"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 11336663336944555363,
+      "outlet_count": 8,
+      "title": "Argentina threatens legal action against UK over Falkland Islands oil exploration"
+    },
+    {
+      "created_at": 1790679060,
+      "first": false,
+      "id": 9892254173691011547,
+      "outlet_count": 7,
+      "title": "Israeli settlers attack West Bank village, blocking family's return home"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 15802106796458350074,
+      "outlet_count": 6,
+      "title": "Mystery over UK airbase scare as police find petrol, not explosives"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 14774766661040220925,
+      "outlet_count": 2,
+      "title": "French civil servants strike, demand additional budgetary resources"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 12045931927882661973,
+      "outlet_count": 3,
+      "title": "Russia strikes two Kyiv data centres, cargo vessels in the Black Sea"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16126029408899543548,
+      "outlet_count": 17,
+      "title": "Iran awaits US response on plan to reopen Strait of Hormuz"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 14009725239594855130,
+      "outlet_count": 1,
+      "title": "Legion of Honour: Police investigate corruption claims for France’s top award"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 13649231429980739068,
+      "outlet_count": 1,
+      "title": "France intends to borrow record €340 billion as Covid-era debt comes due"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 12868957911353727305,
+      "outlet_count": 1,
+      "title": "A view from Brazil: The fight for the favela vote"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 12326291793909183770,
+      "outlet_count": 1,
+      "title": "Interpol reflect on dystopian times on new album 'This Mirror Weighs a Ton'"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 7379664721418834783,
+      "outlet_count": 1,
+      "title": "Spanish royals welcome French President Macron in official ceremony"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 5145925392923337960,
+      "outlet_count": 3,
+      "title": "Child and 2 women ‘crushed to death’ during France to UK sea crossing"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 4336179563464726041,
+      "outlet_count": 1,
+      "title": "Can Parisians really teach us to be happier?"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 3260554608008759485,
+      "outlet_count": 1,
+      "title": "'Putin's goal is to prolong his power in Russia': Journalist Roman Badanin"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 1238886046274485642,
+      "outlet_count": 1,
+      "title": "One in eight cancers worldwide linked to infections, WHO agency says"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 9173216557242331624,
+      "outlet_count": 1,
+      "title": "Controversial Northern Ireland Protestant parade hits stalemate amid fresh talks"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 6593110229169619622,
+      "outlet_count": 1,
+      "title": "FRANCE 24 report: Anxious Ukrainian arms makers wait to sell abroad"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 5503496227400152081,
+      "outlet_count": 1,
+      "title": "Olise wonder strike gives Zidane's France win in Belgium"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 5236516868446031405,
+      "outlet_count": 1,
+      "title": "Spain's housing crisis: Protests continue, keep heat on government"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 1153561522922861284,
+      "outlet_count": 1,
+      "title": "Video shows Iranian police beating, sexually humiliating teenage detainee"
+    },
+    {
+      "created_at": 1790669195,
+      "first": true,
+      "id": 13914677192649522008,
+      "outlet_count": 1,
+      "title": "'Class sizes of more than 36 people': student protests continue in Paris and beyond"
+    },
+    {
+      "created_at": 1790660695,
+      "first": true,
+      "id": 17418979317787825889,
+      "outlet_count": 1,
+      "title": "Nations League: Promising France defeat Belgium thanks to Olise"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18042936254357745621,
+      "outlet_count": 7,
+      "title": "Pope Leo wraps up France visit, urging Europe to help combat 'lies and deceit'"
+    },
+    {
+      "created_at": 1790653939,
+      "first": false,
+      "id": 13545662959960034108,
+      "outlet_count": 3,
+      "title": "US deportations are triggering a 'cascade' of rights abuses, UN experts warn"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 11505086290865121159,
+      "outlet_count": 2,
+      "title": "France puts out massive fire that torched 42,000 hectares and smouldered for 69 days"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 16232127479981370230,
+      "outlet_count": 2,
+      "title": "French student protests fuel political clash ahead of 2027 Presidential vote"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15864917143949116968,
+      "outlet_count": 1,
+      "title": "Trump ‘flips & flops’ with Iran between making a deal and threats to attack in ‘devastating fashion’"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15634389975889733943,
+      "outlet_count": 1,
+      "title": "Israel's opposition bloc, Netanyahu’s coalition in dead heat, election poll finds"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12196402778614433144,
+      "outlet_count": 1,
+      "title": "French hotels, souvenir shops benefit from pope business boost"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 9348602515902058479,
+      "outlet_count": 1,
+      "title": "France braces for a day of strikes and protests over civil servants' pay"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 7518023800749792187,
+      "outlet_count": 1,
+      "title": "Ethiopian forces claim Tigray town"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 6850309554904789783,
+      "outlet_count": 1,
+      "title": "Nations League: Italy rebound in Turkey as France snatch late win in Belgium"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 5361405206405583151,
+      "outlet_count": 1,
+      "title": "As midterms approach, does GOP have a Trump problem?"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

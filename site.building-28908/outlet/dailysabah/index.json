@@ -1,0 +1,695 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "dailysabah.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.3087
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.31 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q11032"
+        },
+        "field": "legal_form",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "newspaper"
+      },
+      {
+        "data": {
+          "qid": "Q1002697"
+        },
+        "field": "legal_form",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "periodical"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "dailysabah.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.dailysabah.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "Daily Sabah"
+      },
+      {
+        "field": "name",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daily Sabah"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 44,
+          "origin_of": 7,
+          "shared_stories": 22,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "dailysabah",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/dailysabah",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 32% of 22 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q574575"
+        },
+        "field": "parent",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Sabah"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 44,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "dailysabah",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/dailysabah",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.5 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "dailysabah.com"
+        },
+        "field": "registrar",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Squarespace Domains II LLC"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 44,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "dailysabah",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/dailysabah",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "final_url": "https://www.dailysabah.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.dailysabah.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.dailysabah.com/about-us",
+          "contact": "https://www.dailysabah.com/contact-us",
+          "domain": "dailysabah.com",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.dailysabah.com/privacy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.dailysabah.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 44,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "dailysabah",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/dailysabah",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "http://www.dailysabah.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q18639164"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Daily_Sabah"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 44,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "dailysabah",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/dailysabah",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 10,
+  "items": 59,
+  "outlet": {
+    "domains": [
+      "dailysabah.com"
+    ],
+    "id": "dailysabah",
+    "name": "Daily Sabah"
+  },
+  "shared_stories": 30,
+  "stories": [
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 5623028648086973051,
+      "outlet_count": 7,
+      "title": "US forces exit Iraq after two decades, leaving opening for Iran"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 3322863658697567134,
+      "outlet_count": 18,
+      "title": "Justices Let Deportations to 3rd Countries Resume While Weighing Policy"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 11726634235689167800,
+      "outlet_count": 13,
+      "title": "Morocco’s king appoints the country’s first woman prime minister"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 2687155261920818657,
+      "outlet_count": 10,
+      "title": "UAE, Israel both confirm Netanyahu's Abu Dhabi trip after reports"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 9330732918201289314,
+      "outlet_count": 7,
+      "title": "What happened when Trump met Xi: big fanfare, but no breakthrough"
+    },
+    {
+      "created_at": 1790653931,
+      "first": true,
+      "id": 9811700178444612757,
+      "outlet_count": 8,
+      "title": "Congo’s Ebola outbreak tops 8,000 confirmed cases as disease remains out of control"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 14776272129164761012,
+      "outlet_count": 21,
+      "title": "Trump Denies Offering to Sell Arms to China's Xi"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 8740613920876251500,
+      "outlet_count": 4,
+      "title": "Israel's Gaza genocide death toll passes 74,000 as killings continue"
+    },
+    {
+      "created_at": 1790715372,
+      "first": true,
+      "id": 14045092738926250939,
+      "outlet_count": 2,
+      "title": "Brexit did 'more harm than good': British PM Burnham"
+    },
+    {
+      "created_at": 1790715372,
+      "first": false,
+      "id": 1929089024120248504,
+      "outlet_count": 2,
+      "title": "US state recognizes Eid as official holiday"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 15802106796458350074,
+      "outlet_count": 6,
+      "title": "Mystery over UK airbase scare as police find petrol, not explosives"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 4555465433342937664,
+      "outlet_count": 13,
+      "title": "Bangkok declares flood disaster as torrential rain inundates city"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16126029408899543548,
+      "outlet_count": 17,
+      "title": "Iran awaits US response on plan to reopen Strait of Hormuz"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 12492774096871122684,
+      "outlet_count": 8,
+      "title": "UK detains 5, probe Iran link to foiled attack near US-run air base"
+    },
+    {
+      "created_at": 1790715372,
+      "first": true,
+      "id": 8427382409614146053,
+      "outlet_count": 1,
+      "title": "Trump weighs 10-member committee to oversee US AI sector"
+    },
+    {
+      "created_at": 1790715372,
+      "first": true,
+      "id": 6497567503379009001,
+      "outlet_count": 1,
+      "title": "Israeli opposition forms joint teams in bid to oust Netanyahu"
+    },
+    {
+      "created_at": 1790715372,
+      "first": true,
+      "id": 6103271837517287239,
+      "outlet_count": 1,
+      "title": "Syria urges EU to pressure Israel to halt attacks"
+    },
+    {
+      "created_at": 1790715372,
+      "first": true,
+      "id": 4689909943157968832,
+      "outlet_count": 1,
+      "title": "Qatar continues US-Iran shuttle diplomacy to end Middle east war"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 10969125623470226463,
+      "outlet_count": 12,
+      "title": "Trump expects more talks after rejecting latest Iranian proposal"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 17665525782816535922,
+      "outlet_count": 3,
+      "title": "Monsoon floods, landslides kill 68 across India, Nepal in 72 hours"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11603208240114099487,
+      "outlet_count": 8,
+      "title": "Myanmar airstrike kills 33 in Rohingya-majority Rakhine state"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 15240037775334421365,
+      "outlet_count": 2,
+      "title": "AI, immigration rhetoric fuel anti-South Asian online hate by 240%"
+    },
+    {
+      "created_at": 1790639336,
+      "first": true,
+      "id": 10306277323124204780,
+      "outlet_count": 15,
+      "title": "Trump denies he offered Iran sanctions relief, release of frozen funds"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 5420364431891774930,
+      "outlet_count": 2,
+      "title": "Record heat grips European seas, threatens fisheries, marine life"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 4085781351675851944,
+      "outlet_count": 8,
+      "title": "Mediators reportedly continue work with Iran, US toward likely deal"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 12233296185065528414,
+      "outlet_count": 3,
+      "title": "Hurricane Nolo still threatens Hawaii as Mexico’s Baja braces for Hurricane Polo"
+    },
+    {
+      "created_at": 1790653936,
+      "first": false,
+      "id": 10980737569429867374,
+      "outlet_count": 3,
+      "title": "May President Trump Exclude CNN from Air Force One? Very Likely Yes"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18042936254357745621,
+      "outlet_count": 7,
+      "title": "Pope Leo wraps up France visit, urging Europe to help combat 'lies and deceit'"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 14381769683683026550,
+      "outlet_count": 2,
+      "title": "India’s ‘cockroach’ youth movement threatens protests if poll panel chief doesn’t quit in 48 hours"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 10365554248622795770,
+      "outlet_count": 3,
+      "title": "2 dead, 4 missing after explosion collapses Athens building"
+    },
+    {
+      "created_at": 1790633635,
+      "first": true,
+      "id": 4462053429150698604,
+      "outlet_count": 3,
+      "title": "Powerful nor'easter threatens US Northeast with floods, high winds"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 17919202268746052880,
+      "outlet_count": 5,
+      "title": "14 killed at fireworks factory in Russia's Yaroslavl region"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 16933839351630260269,
+      "outlet_count": 1,
+      "title": "US university ends cadaver transfers for Israeli military training"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 15949335070777388404,
+      "outlet_count": 1,
+      "title": "Russia, Ukraine trade deadly strikes as 7 people are killed"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 15818231516860582591,
+      "outlet_count": 1,
+      "title": "Death threats against Muslims sent to 9 schools across Canada"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15326836451892574789,
+      "outlet_count": 11,
+      "title": "At least 27 killed in 2 mass shootings in South Africa"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 14676486561002775211,
+      "outlet_count": 1,
+      "title": "EU security protocol must complement NATO, not duplicate it: Kallas"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 13974142606089420712,
+      "outlet_count": 1,
+      "title": "Finnish intelligence warns of Russian sabotage threat across Europe"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 12246988293799998038,
+      "outlet_count": 1,
+      "title": "Hamas blasts Israel for war crimes against Palestinian journalists"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 7692339925722612655,
+      "outlet_count": 1,
+      "title": "Hollywood stars among arrested in New York anti-Netanyahu protest"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 5291209044890790986,
+      "outlet_count": 1,
+      "title": "Pope Leo urges peace in Mideast, warns against ‘paradise of machines’"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 4887175170172654043,
+      "outlet_count": 1,
+      "title": "Israeli extremists call to renew Gaza settlements, West bank war"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 3671420371486801068,
+      "outlet_count": 1,
+      "title": "'No lie' will change Netanyahu's ICC arrest warrant: NY Mayor Mamdani"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 3638381018432316187,
+      "outlet_count": 1,
+      "title": "Russia ignores German de-escalation calls as strikes kill 2 in Kyiv"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 2826706911955230753,
+      "outlet_count": 3,
+      "title": "Hungary's Parliament suspends immunity for PM Magyar and two Orbán-era ministers"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 2019932155528147417,
+      "outlet_count": 1,
+      "title": "Türkiye pursues dialogue, diplomacy at UN General Assembly"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 1587672806089346080,
+      "outlet_count": 1,
+      "title": "Macron denies US intel warned France of Russian drone attack"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 910770610832167658,
+      "outlet_count": 1,
+      "title": "Heavy clashes, internet blackout as Ethiopia conflict reignites"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 597133236137541651,
+      "outlet_count": 1,
+      "title": "Germany's ex-Vice Chancellor Habeck accuses Israel of Gaza war crimes"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

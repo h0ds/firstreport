@@ -1,0 +1,272 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.11630725860595703,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.8363072872161865
+    },
+    "created_at": 1790718367,
+    "expired": false,
+    "id": 4426038608937777973,
+    "item_count": 2,
+    "last_active_at": 1790723374,
+    "origin_item_id": 4426038608937777973,
+    "origin_outlet_id": "aljazeera",
+    "outlet_count": 2,
+    "primary_title": "Yamal inspires Spain to Croatia romp on World Cup homecoming",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 4426038608937777973,
+        "joined_at": 1790718367,
+        "outlet_id": "aljazeera",
+        "published_at": 1790717397
+      },
+      {
+        "item_id": 13638559892722146330,
+        "joined_at": 1790723374,
+        "outlet_id": "arabnews",
+        "published_at": 1790721474
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "arabnews": "Arab News"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/sports/2026/9/29/yamal-stars-as-spain-thrash-croatia?traffic_source=rss",
+          "cluster_id": 4426038608937777973,
+          "fetched_at": 1790718367,
+          "id": 4426038608937777973,
+          "joined_at": 1790718367,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790717397,
+          "summary": "Lamine Yamal scores twice and assists another as Spain beat Croatia 4-1 in UEFA Nations League Group A3",
+          "text_hash": 4841101473258812727,
+          "title": "Yamal stars as Spain thrash Croatia"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/football/yamal-inspires-spain-to-croatia-romp-on-world-cup-homecoming-3003825",
+          "cluster_id": 4426038608937777973,
+          "fetched_at": 1790723374,
+          "id": 13638559892722146330,
+          "joined_at": 1790723374,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790721474,
+          "summary": "SEVILLE, Spain: Lamine Yamal scored two goals and set up another as Spain hammered Croatia 4-1 on Tuesday in the Nations League in their first home game since lifting the World Cup. Yamal, 19, was joined on the scoresheet by Marc Pubill and Nico Williams as they extended their unbeaten run to 40 matches, which includes June’s final triumph over Argentina in the United States. La Roja next play Czech Republic on Saturday in Group A3. Yamal’s contribution strengthened his case for the Ballon d’Or,",
+          "text_hash": 3303544835575181795,
+          "title": "Yamal inspires Spain to Croatia romp on World Cup homecoming"
+        }
+      ],
+      "outlet_id": "arabnews"
+    }
+  ],
+  "withdrawals": []
+}

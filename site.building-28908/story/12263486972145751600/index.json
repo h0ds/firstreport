@@ -1,0 +1,772 @@
+{
+  "claims": {
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "huffpost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "huffpost.com",
+          "expires": "2028-03-10",
+          "last_changed": "2026-02-06",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "huffpost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/huffpost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-03-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-05-01"
+      },
+      {
+        "data": {
+          "qid": "Q5003490"
+        },
+        "field": "owner",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "BuzzFeed"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-52"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost (excluding politics) (The Huffington Post)",
+          "status": "generally_reliable",
+          "summary": "A 2020 RfC found HuffPost staff writers fairly reliable for factual reporting on non-political topics, but notes that they may give prominence to topics that support their political bias and less prominence to, or omit, things that contradict it. HuffPost's reliability has increased since 2012; articles before 2012 are less reliable and should be treated with more caution. HuffPost uses clickbait "
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-54"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost contributors (The Huffington Post)",
+          "status": "generally_unreliable",
+          "summary": "Until 2018, the U.S. edition of HuffPost published content written by contributors with near-zero editorial oversight. These contributors generally did not have a reputation for fact-checking, and most editors consider them highly variable in quality. Editors show consensus for treating HuffPost contributor articles as self-published sources, unless the article was written by a subject-matter expe"
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-53"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost (politics) (The Huffington Post)",
+          "status": "no_consensus",
+          "summary": "In the 2020 RfC, there was no consensus on HuffPost staff writers' reliability for political topics. The community considers HuffPost openly biased on American politics. There is no consensus on its reliability for international politics. See also: HuffPost (excluding politics), HuffPost contributors."
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "nypost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pagesix.com",
+          "expires": "2027-09-12",
+          "last_changed": "2026-08-11",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/pagesix.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-13"
+      },
+      {
+        "data": {
+          "domain": "nypost.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-08-27",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nypost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1801-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q14289857"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corp"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_312#RFC:_New_York_Post_(nypost.com)",
+            "#cite_note-69"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six) (excluding entertainment)",
+          "status": "generally_unreliable",
+          "summary": "There is consensus the New York Post is generally unreliable for factual reporting, especially with regard to politics, particularly New York City politics. A tabloid newspaper, editors criticise its lack of concern for fact-checking or corrections, including examples of outright fabrication. Editors consider the New York Post more reliable before it changed ownership in 1976, and particularly unr"
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_436#RfC:_Entertainment_coverage_of_the_New_York_Post_(including_Decider_and_Page_Six)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_348#Using_a_Decider.com_interview",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_371#Decider.com_/_Jimmy_DiResta_/_Naomi_Wu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_431#Using_Decider_/_Decider.com_for_interviews_and_reviews"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six, Decider) (entertainment)",
+          "status": "no_consensus",
+          "summary": "There is consensus that the New York Post (nypost.com) and its sub-publications Decider (decider.com) and Page Six are considered to be marginally reliable sources for entertainment coverage, including reviews, but should not be used for controversial statements related to living persons."
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "pbs": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pbs.org",
+          "expires": "2027-04-20",
+          "last_changed": "2026-08-12",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "pbs",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/pbs.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1969-11-03"
+      },
+      {
+        "as_of": "2016",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_101#Emme_(model)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_135#Judaism:_The_oldest_monotheistic_religion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_150#Center_for_Investigative_Reporting",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_153#thinkprogress.org_as_a_generally_accepted_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_206#Pbs.org"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "PBS (Public Broadcasting Service)",
+          "status": "generally_reliable",
+          "summary": "The Public Broadcasting Service is an American public broadcaster. It is considered generally reliable by editors."
+        },
+        "field": "reliability",
+        "outlet_id": "pbs",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "washingtontimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtontimes.com",
+          "expires": "2027-09-13",
+          "last_changed": "2026-07-30",
+          "registrar": "DNC Holdings, Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtontimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1982-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      },
+      {
+        "data": {
+          "qid": "Q217059"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Unification Church"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_328#RfC:_The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_209#Is_the_Washington_Times_an_acceptable_source_for_statements_of_fact_related_to_student_protesters/black_lives_matter/Milo_Yiannopoulos?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_316#Rebel_News"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Times",
+          "status": "no_consensus",
+          "summary": "There is consensus that The Washington Times is a marginally reliable source for politics and science. Most editors agree that it is a partisan source. Some editors noted a history of publishing inaccurate or false information, of being slow to issue retractions or corrections, and of sometimes only doing so under the threat of legal action; a considerable minority favored deprecation on these gro"
+        },
+        "field": "reliability",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.05904299020767212,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7790430188179016
+    },
+    "created_at": 1790682645,
+    "expired": false,
+    "id": 12263486972145751600,
+    "item_count": 6,
+    "last_active_at": 1790720969,
+    "origin_item_id": 12263486972145751600,
+    "origin_outlet_id": "huffpost",
+    "outlet_count": 6,
+    "primary_title": "Iran's currency hits a new record low as war erodes the country's economic stability",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 12263486972145751600,
+        "joined_at": 1790682645,
+        "outlet_id": "huffpost",
+        "published_at": 1790679464
+      },
+      {
+        "item_id": 3963325614554924697,
+        "joined_at": 1790715371,
+        "outlet_id": "nypost",
+        "published_at": 1790713730
+      },
+      {
+        "item_id": 13707673095908132735,
+        "joined_at": 1790715375,
+        "outlet_id": "pbs",
+        "published_at": 1790697487
+      },
+      {
+        "item_id": 3181583556328134924,
+        "joined_at": 1790715379,
+        "outlet_id": "washingtontimes",
+        "published_at": 1790683031
+      },
+      {
+        "item_id": 12940521858756586961,
+        "joined_at": 1790718663,
+        "outlet_id": "arabnews",
+        "published_at": 1790716335
+      },
+      {
+        "item_id": 2143545421635333005,
+        "joined_at": 1790720969,
+        "outlet_id": "breitbart",
+        "published_at": 1790699634
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "huffpost",
+            "pbs"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews",
+            "washingtontimes"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "nypost"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "arabnews": "Arab News",
+    "breitbart": "Breitbart",
+    "huffpost": "HuffPost",
+    "nypost": "New York Post",
+    "pbs": "PBS NewsHour",
+    "washingtontimes": "The Washington Times"
+  },
+  "outlets_24h": 6,
+  "outlets_6h": 5,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    4,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://huffpost.com/entry/iran-currency-hits-record-low_n_6abb980fe4b0cdca1abe73eb",
+          "cluster_id": 12263486972145751600,
+          "fetched_at": 1790682645,
+          "id": 12263486972145751600,
+          "joined_at": 1790682645,
+          "lang": "en",
+          "outlet_id": "huffpost",
+          "published_at": 1790679464,
+          "summary": "The latest decline came just 27 days after the rial hit its previous record of 2.2 million to the dollar on Sept. 2.",
+          "text_hash": 15360641701040939280,
+          "title": "Iran's Currency Hits New Record Low As War Erodes Its Economic Stability"
+        }
+      ],
+      "outlet_id": "huffpost"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtontimes.com/news/2026/sep/29/irans-currency-hits-another-record-low-war-erodes-countrys-economic/",
+          "cluster_id": 12263486972145751600,
+          "fetched_at": 1790715379,
+          "id": 3181583556328134924,
+          "joined_at": 1790715379,
+          "lang": "en",
+          "outlet_id": "washingtontimes",
+          "published_at": 1790683031,
+          "summary": "Iran's currency fell to a new record low on Tuesday, with traders in Tehran exchanging more than 2.5 million rials to the U.S. dollar in a stark reflection of how the war in the Middle East has steadily eroded the Iranian economy.",
+          "text_hash": 1621420339927872338,
+          "title": "Iran's currency hits a new record low as war erodes the country's economic stability"
+        }
+      ],
+      "outlet_id": "washingtontimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://pbs.org/newshour/world/irans-currency-hits-a-new-record-low-as-war-erodes-the-countrys-economic-stability",
+          "cluster_id": 12263486972145751600,
+          "fetched_at": 1790715375,
+          "id": 13707673095908132735,
+          "joined_at": 1790715375,
+          "lang": "en",
+          "outlet_id": "pbs",
+          "published_at": 1790697487,
+          "summary": "The Iranian economy has been under duress for years in the face of international sanctions. A U.S. naval blockade on Iranian oil and new sanctions imposed since the start of the war have sent it into freefall.",
+          "text_hash": 4523974812518008842,
+          "title": "Iran's currency hits a new record low as war erodes the country's economic stability"
+        }
+      ],
+      "outlet_id": "pbs"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/middle-east/2026/09/29/iran-warns-of-gas-shortages-as-currency-hits-record-low-under-u-s-blockade/",
+          "cluster_id": 12263486972145751600,
+          "fetched_at": 1790720969,
+          "id": 2143545421635333005,
+          "joined_at": 1790720969,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790699634,
+          "summary": "A spokeswoman for the Iranian regime warned on Monday supply problems and wartime damage to Iran’s refineries could cause fuel supply problems in northern Iran during the winter. On Tuesday, the Islamic dictatorship's currency fell to a record low of 2.5 million rials to the U.S. dollar. The post Iran Warns of Gas Shortages as Currency Hits Record Low Under U.S. Blockade appeared first on Breitbart .",
+          "text_hash": 1497236049749307984,
+          "title": "Iran Warns of Gas Shortages as Currency Hits Record Low Under U.S. Blockade"
+        }
+      ],
+      "outlet_id": "breitbart"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nypost.com/2026/09/29/world-news/irans-currency-hits-new-record-low-as-war-destroys-countrys-economy/",
+          "cluster_id": 12263486972145751600,
+          "fetched_at": 1790715371,
+          "id": 3963325614554924697,
+          "joined_at": 1790715371,
+          "lang": "en",
+          "outlet_id": "nypost",
+          "published_at": 1790713730,
+          "summary": "The latest decline came just 27 days after the rial hit its previous record low of 2.2 million to the US dollar on Sept. 2.",
+          "text_hash": 13198421281415422274,
+          "title": "Iran’s currency hits new record low as war destroys country’s economy"
+        }
+      ],
+      "outlet_id": "nypost"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/middle-east/irans-currency-hits-a-new-record-low-as-war-erodes-the-countrys-economic-stability-3003799",
+          "cluster_id": 12263486972145751600,
+          "fetched_at": 1790718663,
+          "id": 12940521858756586961,
+          "joined_at": 1790718663,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790716335,
+          "summary": "TEHRAN: Iran’s currency fell to a new record low on Tuesday, with traders in Tehran exchanging more than 2.5 million rials to the US dollar in a stark reflection of how the war in the Middle East has steadily eroded the Iranian economy. The latest decline came just 27 days after the rial hit its previous record low of 2.2 million to the dollar on Sept. 2. The currency has repeatedly reached new lows since the war began in February. The Iranian economy has been under duress for years in the fa",
+          "text_hash": 11394637280386543955,
+          "title": "Iran’s currency hits a new record low as war erodes the country’s economic stability"
+        }
+      ],
+      "outlet_id": "arabnews"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 12263486972145751600,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4518,
+      "snapshot_id": 5493563297656270219,
+      "ts": 1790715387
+    }
+  ]
+}

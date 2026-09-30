@@ -1,0 +1,152 @@
+{
+  "claims": {
+    "gbnews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      },
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790679061,
+    "expired": false,
+    "id": 13056078464287903558,
+    "item_count": 1,
+    "last_active_at": 1790679061,
+    "origin_item_id": 13056078464287903558,
+    "origin_outlet_id": "gbnews",
+    "outlet_count": 1,
+    "primary_title": "Labour told to hit Iran hard after falling victim to 'bullying' tactics: 'They only understand the language of force!'",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 13056078464287903558,
+        "joined_at": 1790679061,
+        "outlet_id": "gbnews",
+        "published_at": 1790676122
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "gbnews": "GB News"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://gbnews.com/news/labour-told-hit-iran-fall-victim-bullying-tactics",
+          "cluster_id": 13056078464287903558,
+          "fetched_at": 1790679061,
+          "id": 13056078464287903558,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790676122,
+          "summary": "Britain's Government has failed to get to grips with the \"bullying\" tactics of Iran’s evil regime, rebels inside the country have warned GB News. And they say we must hit back hard if Iran is proven to be behind more terror plots on British soil, saying: \"They only understand the language of force!\" Five men were detained early on Sunday morning after police and counter terror officers were alerted to suspicious vehicles near RAF Fairford in Gloucestershire. Nearby homes were evacuated after the…",
+          "text_hash": 2647266366195023943,
+          "title": "Labour told to hit Iran hard after falling victim to 'bullying' tactics: 'They only understand the language of force!'"
+        }
+      ],
+      "outlet_id": "gbnews"
+    }
+  ],
+  "withdrawals": []
+}

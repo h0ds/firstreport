@@ -1,0 +1,268 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "upi.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.0385
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "upi",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.04 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q29"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Spain"
+      },
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "upi.com",
+          "expires": "2027-04-20",
+          "last_changed": "2026-03-21",
+          "registrar": "NameCheap, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "upi",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/upi.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-19"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1907-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q4830453"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "business"
+      },
+      {
+        "data": {
+          "qid": "Q6881511"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "enterprise"
+      },
+      {
+        "data": {
+          "qid": "Q192283"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news agency"
+      },
+      {
+        "data": {
+          "qid": "Q43229"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "organization"
+      }
+    ],
+    "name": [
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Press International"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q850178"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bettmann Archive"
+      },
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "parent",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "upi.com"
+        },
+        "field": "registrar",
+        "outlet_id": "upi",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/upi.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "NameCheap, Inc."
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "upi.com",
+          "final_url": "https://upi.com/",
+          "http_redirects_to_https": false,
+          "http_status": 403,
+          "https": false,
+          "status": 403
+        },
+        "field": "site_https",
+        "outlet_id": "upi",
+        "ref_url": "https://upi.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https not served (status 403)"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.upi.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q3153288"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q493845"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q493845 (United Press International); also Q3153288 (International News Service)",
+        "outlet_id": "upi",
+        "ref_url": "https://www.wikidata.org/wiki/Q493845",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/United_Press_International"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 0,
+  "outlet": {
+    "domains": [
+      "upi.com"
+    ],
+    "id": "upi",
+    "name": "UPI"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

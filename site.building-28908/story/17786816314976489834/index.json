@@ -1,0 +1,152 @@
+{
+  "claims": {
+    "gbnews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      },
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790679061,
+    "expired": false,
+    "id": 17786816314976489834,
+    "item_count": 1,
+    "last_active_at": 1790679061,
+    "origin_item_id": 17786816314976489834,
+    "origin_outlet_id": "gbnews",
+    "outlet_count": 1,
+    "primary_title": "Lucy Powell insists Labour are ‘committed to the triple lock’ amid fear Andy Burnham will scrap pension protections",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 17786816314976489834,
+        "joined_at": 1790679061,
+        "outlet_id": "gbnews",
+        "published_at": 1790676073
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "gbnews": "GB News"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://gbnews.com/politics/triple-lock-scrap-andy-burnham-lucy-powell",
+          "cluster_id": 17786816314976489834,
+          "fetched_at": 1790679061,
+          "id": 17786816314976489834,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790676073,
+          "summary": "Lucy Powell has insisted Labour is “committed to the triple lock” amid fears Andy Burnham will scrap the protection on pensions. Speaking to GB News, the Education Secretary addresses the issue as the Prime Minister is expected to tell the Labour Party conference “we can’t carry on as we are”. Introduced in 2010 by the Tory-Lib Dem coalition, the triple lock binds the Government to increase the state pension each April by whichever is highest: CPI inflation, average earnings growth, or 2.5 per cent. Mr…",
+          "text_hash": 12496807320414237642,
+          "title": "Lucy Powell insists Labour are ‘committed to the triple lock’ amid fear Andy Burnham will scrap pension protections"
+        }
+      ],
+      "outlet_id": "gbnews"
+    }
+  ],
+  "withdrawals": []
+}

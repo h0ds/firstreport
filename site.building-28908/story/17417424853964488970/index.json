@@ -1,0 +1,531 @@
+{
+  "claims": {
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "kyivindependent": [
+      {
+        "data": {
+          "qid": "Q212"
+        },
+        "field": "country",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Ukraine"
+      },
+      {
+        "data": {
+          "domain": "kyivindependent.com",
+          "expires": "2031-11-19",
+          "last_changed": "2025-11-23",
+          "registrar": "Instra Corporation Pty Ltd.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/kyivindependent.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2021-11-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-11-01"
+      }
+    ],
+    "ndtv": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "ndtv.com",
+          "expires": "2032-09-25",
+          "last_changed": "2026-09-26",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "pending transfer"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ndtv",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/ndtv.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1988-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q4680631"
+        },
+        "field": "owner",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Adani Group"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.16147315502166748,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 5,
+      "weakest_join": 0.881473183631897
+    },
+    "created_at": 1790653938,
+    "expired": false,
+    "id": 17417424853964488970,
+    "item_count": 6,
+    "last_active_at": 1790663560,
+    "origin_item_id": 3118189526061945448,
+    "origin_outlet_id": "kyivindependent",
+    "outlet_count": 4,
+    "primary_title": "Ukraine’s Zelensky says North Korea prepares to deploy another 10,000 troops to Russia",
+    "syndication": [
+      {
+        "first_outlet_id": "independent",
+        "item_ids": [
+          17417424853964488970,
+          17149762085024838158
+        ],
+        "spread_secs": 1015,
+        "text_hash": 163122264920932787
+      }
+    ],
+    "timeline": [
+      {
+        "item_id": 17417424853964488970,
+        "joined_at": 1790653938,
+        "outlet_id": "independent",
+        "published_at": 1790652908
+      },
+      {
+        "item_id": 760775659694858951,
+        "joined_at": 1790653941,
+        "outlet_id": "straitstimes",
+        "published_at": 1790636865
+      },
+      {
+        "item_id": 954897324118692020,
+        "joined_at": 1790653941,
+        "outlet_id": "ndtv",
+        "published_at": 1790641062
+      },
+      {
+        "item_id": 17149762085024838158,
+        "joined_at": 1790654583,
+        "outlet_id": "independent",
+        "published_at": 1790653923
+      },
+      {
+        "item_id": 3118189526061945448,
+        "joined_at": 1790654763,
+        "outlet_id": "kyivindependent",
+        "published_at": 1790626859
+      },
+      {
+        "item_id": 8433957571560230138,
+        "joined_at": 1790663560,
+        "outlet_id": "independent",
+        "published_at": 1790662786
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "independent",
+            "straitstimes"
+          ]
+        }
+      ],
+      "not_rated": [
+        "ndtv",
+        "kyivindependent"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "independent": "The Independent",
+    "kyivindependent": "The Kyiv Independent",
+    "ndtv": "NDTV",
+    "straitstimes": "The Straits Times"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 17149762085024838158,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3099,
+      "snapshot_id": 5410876935907481467,
+      "ts": 1790659140
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17149762085024838158,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3178,
+      "snapshot_id": 3166268630816726725,
+      "ts": 1790659803
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17149762085024838158,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3811,
+      "snapshot_id": 9866918698071066920,
+      "ts": 1790679060
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17149762085024838158,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4257,
+      "snapshot_id": 3266027846458197235,
+      "ts": 1790680836
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17149762085024838158,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5713,
+      "snapshot_id": 6418188663829066243,
+      "ts": 1790720996
+    }
+  ],
+  "spark": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://kyivindependent.com/russia-beginning-additional-mobilization-of-troops-north-korean-recruitment-zelensky-warns/",
+          "cluster_id": 17417424853964488970,
+          "fetched_at": 1790654763,
+          "id": 3118189526061945448,
+          "joined_at": 1790654763,
+          "lang": "en",
+          "outlet_id": "kyivindependent",
+          "published_at": 1790626859,
+          "summary": "The president said that Russia is looking to \"increase the involvement of foreigners\" in its armed forces. North Korea is preparing to deploy another 10,000 troops against Ukraine, in addition to the more than 8,000 military personnel currently stationed in Russia.",
+          "text_hash": 8937217819055106673,
+          "title": "Russia beginning 'additional mobilization' of troops, North Korean recruitment, Zelensky warns"
+        }
+      ],
+      "outlet_id": "kyivindependent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/ukraines-zelenskiy-says-north-korea-prepares-to-deploy-another-10000-troops-to-russia",
+          "cluster_id": 17417424853964488970,
+          "fetched_at": 1790653941,
+          "id": 760775659694858951,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790636865,
+          "summary": "North Korea has sent an estimated 14,000 to 15,000 troops to support Russia’s war in Ukraine.",
+          "text_hash": 4509335571995880882,
+          "title": "Ukraine’s Zelensky says North Korea prepares to deploy another 10,000 troops to Russia"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://ndtv.com/world-news/north-korea-prepares-to-deploy-another-10-000-troops-to-russia-volodymyr-zelensky-12112046",
+          "cluster_id": 17417424853964488970,
+          "fetched_at": 1790653941,
+          "id": 954897324118692020,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790641062,
+          "summary": "The Ukrainian president said in August that up to 50,000 North Korean soldiers could be sent to fight for Russia, and called on South Korea to provide support for Ukraine's air defence.",
+          "text_hash": 10274789434819114568,
+          "title": "North Korea Prepares To Deploy Another 10,000 Troops To Russia: Zelensky"
+        }
+      ],
+      "outlet_id": "ndtv"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/europe/ukraine-russia-war-live-latest-putin-attack-uk-nato-europe-b3057463.html",
+          "cluster_id": 17417424853964488970,
+          "fetched_at": 1790653938,
+          "id": 17417424853964488970,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790652908,
+          "summary": "Zelensky said the plan is ‘how evil encroaches’",
+          "text_hash": 163122264920932787,
+          "title": "Ukraine-Russia war latest: Zelensky claims North Korea is preparing to deploy 10,000 more troops to Russia"
+        },
+        {
+          "canonical_url": "https://independent.co.uk/news/world/europe/ukraine-russia-war-live-putin-zelensky-north-korea-nato-b3057938.html",
+          "cluster_id": 17417424853964488970,
+          "fetched_at": 1790654583,
+          "id": 17149762085024838158,
+          "joined_at": 1790654583,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790653923,
+          "summary": "A number of Tu-95 aircrafts suffered damage after Ukraine’s ‘Spiderweb’ operation in June 2025",
+          "text_hash": 163122264920932787,
+          "title": "Ukraine-Russia war latest: Six dead after Russian bomber crashes during training exercise"
+        },
+        {
+          "canonical_url": "https://independent.co.uk/news/world/europe/russia-ukraine-war-north-korean-troop-zelensky-b3057951.html",
+          "cluster_id": 17417424853964488970,
+          "fetched_at": 1790663560,
+          "id": 8433957571560230138,
+          "joined_at": 1790663560,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790662786,
+          "summary": "North Korean troops were ‘being selected for training and subsequent deployment’ to Russia",
+          "text_hash": 165093072297549952,
+          "title": "Russia preparing to deploy 10,000 North Korean troops, warns Zelensky"
+        }
+      ],
+      "outlet_id": "independent"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 17417424853964488970,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 2849,
+      "snapshot_id": 4843784291715991895,
+      "ts": 1790654583
+    },
+    {
+      "cluster_id": null,
+      "item_id": 3118189526061945448,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4504,
+      "snapshot_id": 15323768833995399665,
+      "ts": 1790715385
+    }
+  ]
+}

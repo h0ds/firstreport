@@ -1,0 +1,166 @@
+{
+  "claims": {
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": null
+    },
+    "created_at": 1790653931,
+    "expired": false,
+    "id": 3048155169677059585,
+    "item_count": 2,
+    "last_active_at": 1790654492,
+    "origin_item_id": 17169156777470785435,
+    "origin_outlet_id": "axios",
+    "outlet_count": 1,
+    "primary_title": "Meta's new motto: we care about privacy",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3048155169677059585,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790586007
+      },
+      {
+        "item_id": 17169156777470785435,
+        "joined_at": 1790654492,
+        "outlet_id": "axios",
+        "published_at": 1790326805
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "axios": "Axios"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/25/meta-ai-muse-privacy",
+          "cluster_id": 3048155169677059585,
+          "fetched_at": 1790653931,
+          "id": 17169156777470785435,
+          "joined_at": 1790654492,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790326805,
+          "summary": "Meta is seeking to make privacy protections a centerpiece of new products including its viral assistant Muse , marking a major shift for a company built on extensive use of customer data. Why it matters: The radical turnaround is an acknowledgment that the winner of AI's new assistant race will have to reassure users that they can turn over their emails, finances, health data and other sensitive information. Without that, a super-intelligent personal agent is essentially useless. Driving the news: Meta,…",
+          "text_hash": 14026853115894212394,
+          "title": "Meta's new motto: we care about privacy"
+        },
+        {
+          "canonical_url": "https://axios.com/2026/09/28/meta-ai-muse-privacy-zuckerberg",
+          "cluster_id": 3048155169677059585,
+          "fetched_at": 1790653931,
+          "id": 3048155169677059585,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790586007,
+          "summary": "Meta is finally promising the one feature that has long kept me away from its AI services: Privacy . Why it matters: In a world with many models capable of meeting my needs, knowing how my data will be used is a key factor, especially with sensitive information. Driving the news: The Facebook-parent, which once called dibs on nearly any data one shared with Meta AI, has in recent months begun to sing a new tune. In a 6,500-word August manifesto , CEO Mark Zuckerberg laid out a broad promise. \" People…",
+          "text_hash": 14387321402744134888,
+          "title": "Why I'm finally giving Meta AI a chance"
+        }
+      ],
+      "outlet_id": "axios"
+    }
+  ],
+  "withdrawals": []
+}

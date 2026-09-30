@@ -1,0 +1,175 @@
+{
+  "claims": {
+    "country": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q645218 (Yomiuri Shimbun); also Q11255121 (Yomiuri Online), Q97379198 (Yomiuri Shimbun, Tokyo)",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.wikidata.org/wiki/Q645218",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q645218 (Yomiuri Shimbun); also Q11255121 (Yomiuri Online), Q97379198 (Yomiuri Shimbun, Tokyo)",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.wikidata.org/wiki/Q645218",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1874-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1110794"
+        },
+        "field": "legal_form",
+        "note": "3 Wikidata items match the domain; this is Q645218 (Yomiuri Shimbun); also Q11255121 (Yomiuri Online), Q97379198 (Yomiuri Shimbun, Tokyo)",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.wikidata.org/wiki/Q645218",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "daily newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "yomiuri.co.jp"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.yomiuri.co.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "読売新聞"
+      },
+      {
+        "field": "name",
+        "note": "3 Wikidata items match the domain; this is Q645218 (Yomiuri Shimbun); also Q11255121 (Yomiuri Online), Q97379198 (Yomiuri Shimbun, Tokyo)",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.wikidata.org/wiki/Q645218",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Yomiuri Shimbun"
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q11101101"
+        },
+        "field": "parent",
+        "note": "3 Wikidata items match the domain; this is Q645218 (Yomiuri Shimbun); also Q11255121 (Yomiuri Online), Q97379198 (Yomiuri Shimbun, Tokyo)",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.wikidata.org/wiki/Q645218",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Yomiuri Shimbun Holdings"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "yomiuri.co.jp",
+          "final_url": "https://www.yomiuri.co.jp/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.yomiuri.co.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://info.yomiuri.co.jp/privacypolicy/about.html",
+          "contact": "https://info.yomiuri.co.jp/contact.html",
+          "domain": "yomiuri.co.jp",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://info.yomiuri.co.jp/privacypolicy/datapolicy.html"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.yomiuri.co.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "3 Wikidata items match the domain; this is Q645218 (Yomiuri Shimbun); also Q11255121 (Yomiuri Online), Q97379198 (Yomiuri Shimbun, Tokyo)",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.wikidata.org/wiki/Q645218",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.yomiuri.co.jp/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q11255121",
+            "Q97379198"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "3 Wikidata items match the domain; this is Q645218 (Yomiuri Shimbun); also Q11255121 (Yomiuri Online), Q97379198 (Yomiuri Shimbun, Tokyo)",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.wikidata.org/wiki/Q645218",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q645218"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "3 Wikidata items match the domain; this is Q645218 (Yomiuri Shimbun); also Q11255121 (Yomiuri Online), Q97379198 (Yomiuri Shimbun, Tokyo)",
+        "outlet_id": "yomiuri",
+        "ref_url": "https://www.wikidata.org/wiki/Q645218",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Yomiuri_Shimbun"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 0,
+  "outlet": {
+    "domains": [
+      "yomiuri.co.jp"
+    ],
+    "id": "yomiuri",
+    "name": "読売新聞"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

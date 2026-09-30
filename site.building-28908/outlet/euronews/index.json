@@ -1,0 +1,692 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "euronews.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.2407
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "euronews",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.24 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q561068"
+        },
+        "field": "legal_form",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "specialty channel"
+      },
+      {
+        "data": {
+          "qid": "Q1616075"
+        },
+        "field": "legal_form",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "television station"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "euronews.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.euronews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "euronews"
+      },
+      {
+        "field": "name",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Euronews"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 58,
+          "origin_of": 6,
+          "shared_stories": 23,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "euronews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/euronews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 26% of 23 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "parent",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 58,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "euronews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/euronews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.6 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "euronews.com"
+        },
+        "field": "registrar",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Hogan Lovells International LLP"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 58,
+          "revised": 1,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "euronews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/euronews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "2% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "euronews.com",
+          "final_url": "https://www.euronews.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.euronews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.euronews.com/2026/09/24/the-eu-wants-to-protect-children-online-what-about-everyone-else",
+          "contact": "https://www.euronews.com/contact",
+          "domain": "euronews.com",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.euronews.com/terms-and-conditions/#privacypolicy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.euronews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 58,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "euronews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/euronews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "http://www.euronews.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q8478"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Euronews"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 58,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "euronews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/euronews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 10,
+  "items": 75,
+  "outlet": {
+    "domains": [
+      "euronews.com"
+    ],
+    "id": "euronews",
+    "name": "Euronews"
+  },
+  "shared_stories": 33,
+  "stories": [
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 12368115546343778984,
+      "outlet_count": 8,
+      "title": "Netanyahu Said to Have Been Warned by Emirati Leader About Hamas Attack Before Oct. 7"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 3043460793184237497,
+      "outlet_count": 10,
+      "title": "Hurricane Polo threatens Southwest U.S. with flooding. See its path."
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 17314204335772072738,
+      "outlet_count": 7,
+      "title": "North Korea denies South's claim it was behind DMZ mine blasts"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 11028257054862133353,
+      "outlet_count": 3,
+      "title": "Sabotage on east Syria pipeline halts gas flow: state media"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12064630524344156370,
+      "outlet_count": 2,
+      "title": "The US lays groundwork for possible military action in Cuba, according to 'CBS News'"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 2687155261920818657,
+      "outlet_count": 10,
+      "title": "UAE, Israel both confirm Netanyahu's Abu Dhabi trip after reports"
+    },
+    {
+      "created_at": 1790679062,
+      "first": false,
+      "id": 12916877823827640315,
+      "outlet_count": 5,
+      "title": "French students and police clash as school blockades turn violent"
+    },
+    {
+      "created_at": 1790715377,
+      "first": true,
+      "id": 10024435858674349502,
+      "outlet_count": 2,
+      "title": "Iran's stranglehold on the Strait of Hormuz continues to erode — and crude oil exports are rebounding"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 10317763272925147596,
+      "outlet_count": 9,
+      "title": "Russian Tu-95 nuclear-capable bomber plane crashes, killing six people"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 5358762436334000209,
+      "outlet_count": 2,
+      "title": "Iranian airliner with passengers on board seized at Istanbul over €3-million debt"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 14776272129164761012,
+      "outlet_count": 21,
+      "title": "Trump Denies Offering to Sell Arms to China's Xi"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 14976319985450857727,
+      "outlet_count": 5,
+      "title": "New Russian mobilisation: Putin signs decree adding 15,500 troops to army"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 16346503716596623632,
+      "outlet_count": 13,
+      "title": "Pope Leo says concerns about AI doom scenarios are not ‘fake news’"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 4555465433342937664,
+      "outlet_count": 13,
+      "title": "Bangkok declares flood disaster as torrential rain inundates city"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16126029408899543548,
+      "outlet_count": 17,
+      "title": "Iran awaits US response on plan to reopen Strait of Hormuz"
+    },
+    {
+      "created_at": 1790715377,
+      "first": true,
+      "id": 17653613439786168292,
+      "outlet_count": 1,
+      "title": "Celine Dion surprises Paris Fashion Week with performance at L'Oréal show"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15395387421556818130,
+      "outlet_count": 1,
+      "title": "Latest news bulletin | September 27th, 2026 – Evening"
+    },
+    {
+      "created_at": 1790715377,
+      "first": true,
+      "id": 13049059427879583412,
+      "outlet_count": 1,
+      "title": "Protesters march for unrestricted abortion access in Chile and Colombia"
+    },
+    {
+      "created_at": 1790715377,
+      "first": true,
+      "id": 10146480868397335408,
+      "outlet_count": 1,
+      "title": "Counterfeit medicine trade: how online pharmacies are selling deadly fake painkillers across Europe"
+    },
+    {
+      "created_at": 1790663056,
+      "first": false,
+      "id": 6897739538149328160,
+      "outlet_count": 3,
+      "title": "Tokyo sets a new record with 34 straight days of rain"
+    },
+    {
+      "created_at": 1790715377,
+      "first": true,
+      "id": 5770422700729060357,
+      "outlet_count": 1,
+      "title": "Global economic impact of Iran war ‘unbearable,’ Qatar warns as talks continue"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 1915453072919720181,
+      "outlet_count": 7,
+      "title": "SpaceX’s Starship reaches orbit for the first time"
+    },
+    {
+      "created_at": 1790653931,
+      "first": true,
+      "id": 3966912277761637371,
+      "outlet_count": 5,
+      "title": "Ethiopia's army chief accuses Eritrea, Sudan and Egypt of supporting Tigray rebels"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11603208240114099487,
+      "outlet_count": 8,
+      "title": "Myanmar airstrike kills 33 in Rohingya-majority Rakhine state"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 10220048785832836552,
+      "outlet_count": 14,
+      "title": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack"
+    },
+    {
+      "created_at": 1790658673,
+      "first": true,
+      "id": 14703132148845938949,
+      "outlet_count": 2,
+      "title": "Trump revenge plot implodes as multiple insiders jump ship"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 2242127798201699017,
+      "outlet_count": 1,
+      "title": "Iran warns no regional oil is safe as IRGC touts new weapons"
+    },
+    {
+      "created_at": 1790670677,
+      "first": true,
+      "id": 14380088064644796586,
+      "outlet_count": 1,
+      "title": "Madrid housing activists occupy agency amid eviction protests"
+    },
+    {
+      "created_at": 1790669232,
+      "first": true,
+      "id": 1891045615067529814,
+      "outlet_count": 1,
+      "title": "Powerful nor’easter uncovers 19th-century shipwreck on US island"
+    },
+    {
+      "created_at": 1790667411,
+      "first": true,
+      "id": 14760578906774220584,
+      "outlet_count": 1,
+      "title": "Euronews Travel & Tourism Summit 2026: Watch live today from Brussels"
+    },
+    {
+      "created_at": 1790667411,
+      "first": true,
+      "id": 3191409198007379397,
+      "outlet_count": 1,
+      "title": "Firefighters protest at Eiffel Tower demanding more resources"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 13803706751423165780,
+      "outlet_count": 3,
+      "title": "Iran captures another US spy drone in Hormuz (VIDEO)"
+    },
+    {
+      "created_at": 1790653939,
+      "first": false,
+      "id": 10380401967280745517,
+      "outlet_count": 2,
+      "title": "Ireland team to wear black armbands as players vote to go ahead with Israel game"
+    },
+    {
+      "created_at": 1790653939,
+      "first": false,
+      "id": 521198666323221816,
+      "outlet_count": 3,
+      "title": "Seven killed, dozens hurt in Saudi airstrike on Yemen market"
+    },
+    {
+      "created_at": 1790633635,
+      "first": false,
+      "id": 12381899204697281607,
+      "outlet_count": 7,
+      "title": "South Korea demands Ukraine apology over denial of confidential deal on North’s prisoners of war"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18042936254357745621,
+      "outlet_count": 7,
+      "title": "Pope Leo wraps up France visit, urging Europe to help combat 'lies and deceit'"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 15326836451892574789,
+      "outlet_count": 11,
+      "title": "At least 27 killed in 2 mass shootings in South Africa"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 5197472090990872700,
+      "outlet_count": 2,
+      "title": "Pope Leo leads candlelight procession in Lourdes"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 3077533432725699246,
+      "outlet_count": 4,
+      "title": "Pope Leo draws staggering 800,000 faithful to heart of Paris for massive outdoor Mass"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 18080965626697770271,
+      "outlet_count": 1,
+      "title": "Azerbaijan agrees multi-billion-dollar deals with investment giants"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 16620301112849022727,
+      "outlet_count": 2,
+      "title": "Northern Ireland: 2,000 protesters block disputed Portadown march"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15066399088849697194,
+      "outlet_count": 1,
+      "title": "Jet ski rider cruises through flooded streets of Bangkok"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 11791266161281023541,
+      "outlet_count": 1,
+      "title": "Saudi coalition says it intercepted Houthi drones and missiles bound for Saudi Arabia"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 10652779534187887134,
+      "outlet_count": 1,
+      "title": "Israeli settlers seizing natural springs in the West Bank"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 10259972233437103333,
+      "outlet_count": 1,
+      "title": "Baku's week of F1 racing, global security, and record investments"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 10125590451671420070,
+      "outlet_count": 1,
+      "title": "How Russia recruits Belarusians for war in Ukraine: Methods and consequences"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 9507017112201562356,
+      "outlet_count": 1,
+      "title": "Ukraine's city of Oleshky faces starvation as Russia blocks all aid"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 8674624798236642278,
+      "outlet_count": 1,
+      "title": "London’s Southwark Bridge turns into woolly parade at annual Sheep Drive charity event"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 7352539375495800945,
+      "outlet_count": 1,
+      "title": "Russia plans seven new 'superprisons' despite war recruitment emptying its jails"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 6765229408014807307,
+      "outlet_count": 1,
+      "title": "Russia strikes Ukraine as Putin denies plans to attack Europe amid growing tensions"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

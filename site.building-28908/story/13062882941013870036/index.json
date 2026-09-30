@@ -1,0 +1,587 @@
+{
+  "claims": {
+    "abcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "abcnews.com",
+          "expires": "2027-04-21",
+          "last_changed": "2026-03-22",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/abcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-20"
+      },
+      {
+        "data": {
+          "domain": "go.com",
+          "expires": "2027-01-08",
+          "last_changed": "2025-12-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/go.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-01-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1945-06-15"
+      },
+      {
+        "data": {
+          "qid": "Q169889"
+        },
+        "field": "owner",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "American Broadcasting Company"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "ABC News (USA)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+        },
+        "field": "reliability",
+        "outlet_id": "abcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "foxnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "foxnews.com",
+          "expires": "2031-06-20",
+          "last_changed": "2022-09-20",
+          "registrar": "GoDaddy Corporate Domains, LLC",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "foxnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/foxnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-06-21"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-10-07"
+      },
+      {
+        "data": {
+          "qid": "Q5476713"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "21st Century Fox"
+      },
+      {
+        "data": {
+          "qid": "Q60238941"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Fox Corporation"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_73#Request_for_Comment_on_Fox_News_Channel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_303#RfC:_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_385#RFC:_Fox_News_(news):_politics_&_science",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_406#RfC:_downgrade_Fox_News_for_politics?",
+            "#cite_note-44"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (politics and science)",
+          "status": "generally_unreliable",
+          "summary": "There is consensus Fox News is generally unreliable for the reporting of politics, especially from November 2020 onwards. On the matter of science, and on the matter of pre-November 2020 politics, there is a consensus that the reliability of Fox News is unclear and that additional considerations apply to its use. As a result, Fox News is considered marginally reliable and generally does not qualif"
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#The_status_of_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#Is_Fox_News_a_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_257#Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#Fox_News_redux",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_264#Fox_News_-_sources_for_future_discussion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_276#Litmus_test_for_source_reliability_in_the_AmPol2_area",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_278#Suggestion:_comparing_Fox_News_real-time_coverage_of_the_impeachment_inquiry_with_other_outlets'",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Fox_News_and_COVID-19",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Why_does_Fox_News_talk_shows_have_it's_own_section_in_the_list?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (talk shows)",
+          "status": "generally_unreliable",
+          "summary": "Fox News talk shows, including Hannity, Tucker Carlson Tonight, The Ingraham Angle, and Fox & Friends, should not be used for statements of fact but can sometimes be used for attributed opinions. See also: Fox News (news excluding politics and science), Fox News (politics and science)."
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_73#Request_for_Comment_on_Fox_News_Channel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_303#RfC:_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_406#RfC:_downgrade_Fox_News_for_politics?",
+            "#cite_note-43"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (news excluding politics and science)",
+          "status": "no_consensus",
+          "summary": "Historically, there has been consensus that Fox News is generally reliable for news coverage on topics other than politics and science. However, many editors expressed concerns about the reliability of Fox News for any topic in a 2023 RFC. No formal consensus was reached on the matter, though. See also: Fox News (politics and science), Fox News (talk shows)."
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "nypost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pagesix.com",
+          "expires": "2027-09-12",
+          "last_changed": "2026-08-11",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/pagesix.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-13"
+      },
+      {
+        "data": {
+          "domain": "nypost.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-08-27",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nypost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1801-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q14289857"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corp"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_312#RFC:_New_York_Post_(nypost.com)",
+            "#cite_note-69"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six) (excluding entertainment)",
+          "status": "generally_unreliable",
+          "summary": "There is consensus the New York Post is generally unreliable for factual reporting, especially with regard to politics, particularly New York City politics. A tabloid newspaper, editors criticise its lack of concern for fact-checking or corrections, including examples of outright fabrication. Editors consider the New York Post more reliable before it changed ownership in 1976, and particularly unr"
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_436#RfC:_Entertainment_coverage_of_the_New_York_Post_(including_Decider_and_Page_Six)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_348#Using_a_Decider.com_interview",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_371#Decider.com_/_Jimmy_DiResta_/_Naomi_Wu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_431#Using_Decider_/_Decider.com_for_interviews_and_reviews"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six, Decider) (entertainment)",
+          "status": "no_consensus",
+          "summary": "There is consensus that the New York Post (nypost.com) and its sub-publications Decider (decider.com) and Page Six are considered to be marginally reliable sources for entertainment coverage, including reviews, but should not be used for controversial statements related to living persons."
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.051529645919799805,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": 0.7715296745300293
+    },
+    "created_at": 1790653931,
+    "expired": false,
+    "id": 13062882941013870036,
+    "item_count": 4,
+    "last_active_at": 1790679063,
+    "origin_item_id": 13062882941013870036,
+    "origin_outlet_id": "abcnews",
+    "outlet_count": 4,
+    "primary_title": "40 rescued, 2 dead after boat capsizes west of Puerto Rico",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 13062882941013870036,
+        "joined_at": 1790653931,
+        "outlet_id": "abcnews",
+        "published_at": 1790640490
+      },
+      {
+        "item_id": 6277692113833994761,
+        "joined_at": 1790653933,
+        "outlet_id": "nypost",
+        "published_at": 1790647689
+      },
+      {
+        "item_id": 2604256363524622865,
+        "joined_at": 1790668332,
+        "outlet_id": "foxnews",
+        "published_at": 1790664787
+      },
+      {
+        "item_id": 4696462955088988078,
+        "joined_at": 1790679063,
+        "outlet_id": "anadolu",
+        "published_at": 1790672764
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "abcnews"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu",
+            "foxnews",
+            "nypost"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcnews": "ABC News",
+    "anadolu": "Anadolu Agency",
+    "foxnews": "Fox News",
+    "nypost": "New York Post"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/40-people-rescued-missing-after-boat-capsizes-waters-136838659",
+          "cluster_id": 13062882941013870036,
+          "fetched_at": 1790653931,
+          "id": 13062882941013870036,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790640490,
+          "summary": "The U.S. Coast Guard says it has rescued at least 40 people in open waters after their boat capsized several miles from a tiny, uninhabited island west of Puerto Rico",
+          "text_hash": 2485662615128444855,
+          "title": "40 people rescued, several missing after boat capsizes in waters west of Puerto Rico"
+        }
+      ],
+      "outlet_id": "abcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nypost.com/2026/09/28/world-news/2-dead-40-rescued-several-missing-after-boat-capsizes-near-puerto-rico/",
+          "cluster_id": 13062882941013870036,
+          "fetched_at": 1790653933,
+          "id": 6277692113833994761,
+          "joined_at": 1790653933,
+          "lang": "en",
+          "outlet_id": "nypost",
+          "published_at": 1790647689,
+          "summary": "This incident marks the latest deadly migrant voyage in the treacherous Mona Passage, often used by those fleeing Haiti.",
+          "text_hash": 1159249005053285911,
+          "title": "2 dead, 40 rescued, several missing after boat capsizes in waters west of Puerto Rico"
+        }
+      ],
+      "outlet_id": "nypost"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://foxnews.com/world/least-40-rescued-2-dead-boat-capsizes-machete-fight-near-puerto-rico",
+          "cluster_id": 13062882941013870036,
+          "fetched_at": 1790668332,
+          "id": 2604256363524622865,
+          "joined_at": 1790668332,
+          "lang": "en",
+          "outlet_id": "foxnews",
+          "published_at": 1790664787,
+          "summary": "A machete fight aboard a makeshift migrant boat near Mona Island caused it to capsize, leaving survivors stranded in open waters for over 12 hours.",
+          "text_hash": 16111527435646956120,
+          "title": "At least 40 rescued, 2 dead as boat capsizes after machete fight near Puerto Rico"
+        }
+      ],
+      "outlet_id": "foxnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/americas/40-rescued-2-dead-after-boat-capsizes-west-of-puerto-rico/4072374",
+          "cluster_id": 13062882941013870036,
+          "fetched_at": 1790679063,
+          "id": 4696462955088988078,
+          "joined_at": 1790679063,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790672764,
+          "summary": "Several remain missing after makeshift vessel carrying estimated 60 people overturns near Mona Island",
+          "text_hash": 3319385131499385,
+          "title": "40 rescued, 2 dead after boat capsizes west of Puerto Rico"
+        }
+      ],
+      "outlet_id": "anadolu"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 13062882941013870036,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5496,
+      "snapshot_id": 8606245320753665216,
+      "ts": 1790717480
+    }
+  ]
+}

@@ -1,0 +1,467 @@
+{
+  "claims": {
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "jacobin",
+        "ref_url": "https://www.wikidata.org/wiki/Q6119666",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "jacobin.com",
+          "expires": "2027-04-05",
+          "last_changed": "2022-10-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "jacobin",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/jacobin.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2001-04-05"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "jacobin",
+        "ref_url": "https://www.wikidata.org/wiki/Q6119666",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2011-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q41298"
+        },
+        "field": "legal_form",
+        "outlet_id": "jacobin",
+        "ref_url": "https://www.wikidata.org/wiki/Q6119666",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "magazine"
+      },
+      {
+        "data": {
+          "qid": "Q847906"
+        },
+        "field": "legal_form",
+        "outlet_id": "jacobin",
+        "ref_url": "https://www.wikidata.org/wiki/Q6119666",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "online magazine"
+      },
+      {
+        "data": {
+          "qid": "Q16155149"
+        },
+        "field": "legal_form",
+        "outlet_id": "jacobin",
+        "ref_url": "https://www.wikidata.org/wiki/Q6119666",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "radical media"
+      }
+    ],
+    "name": [
+      {
+        "field": "name",
+        "outlet_id": "jacobin",
+        "ref_url": "https://www.wikidata.org/wiki/Q6119666",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Jacobin"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "jacobin",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/jacobin",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.2 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "jacobin.com"
+        },
+        "field": "registrar",
+        "outlet_id": "jacobin",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/jacobin.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "GoDaddy.com, LLC"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_351#Rfc:_Jacobin_(magazine)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_467#RfC:_Jacobin",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_297#Questions_about_the_addition_of_the_Praise_&_Criticism_section_to_Jacobin_(magazine)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_302#Jacobin",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Jacobin",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_384#Jacobin,_RfC_closing_review",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#Jacobin"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Jacobin",
+          "status": "no_consensus",
+          "summary": "Jacobin is a U.S.-based magazine that describes itself as a @media screen{html.skin-theme-clientpref-night.mw-parser-output.inline-quote-talk{color:#00B785}}@media screen and (prefers-color-scheme:dark){html.skin-theme-clientpref-os.mw-parser-output.inline-quote-talk{color:#00B785}}.mw-parser-output.inline-quote-talk{font-family:Georgia,\"DejaVu Serif\",serif;color:#008560;quotes:none}.mw-parser-out"
+        },
+        "field": "reliability",
+        "outlet_id": "jacobin",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "jacobin",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/jacobin",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "jacobin.com",
+          "final_url": "https://jacobin.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "jacobin",
+        "ref_url": "https://jacobin.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://jacobin.com/about",
+          "contact": "https://jacobin.com/contact",
+          "domain": "jacobin.com",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://jacobin.com/privacy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "jacobin",
+        "ref_url": "https://jacobin.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "jacobin",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/jacobin",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "jacobin",
+        "ref_url": "https://www.wikidata.org/wiki/Q6119666",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://jacobin.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "jacobin",
+        "ref_url": "https://www.wikidata.org/wiki/Q6119666",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q6119666"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "jacobin",
+        "ref_url": "https://www.wikidata.org/wiki/Q6119666",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Jacobin_(magazine)"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "jacobin",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/jacobin",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 1,
+  "items": 25,
+  "outlet": {
+    "domains": [
+      "jacobin.com"
+    ],
+    "id": "jacobin",
+    "name": "Jacobin"
+  },
+  "shared_stories": 2,
+  "stories": [
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 12614436417935565269,
+      "outlet_count": 2,
+      "title": "Primetime Turns Chris Hansen Into a Horror Show"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 14994079291308108060,
+      "outlet_count": 1,
+      "title": "Economic Democracy Is at the Heart of Socialism"
+    },
+    {
+      "created_at": 1790653944,
+      "first": false,
+      "id": 11885385319615779539,
+      "outlet_count": 6,
+      "title": "Lula widens first-round lead over Flavio Bolsonaro as runoff polls point to tight race in Brazil"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 11007946676451960126,
+      "outlet_count": 1,
+      "title": "Britain Used Modern Advertising to Sell Its Empire"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 8990216418448555354,
+      "outlet_count": 1,
+      "title": "Amazon Is Perfecting Total Surveillance of Its Workforce"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 18365026343572960057,
+      "outlet_count": 1,
+      "title": "The Dilemmas of Socialist Governance of a Capitalist State"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 18288836073282297238,
+      "outlet_count": 1,
+      "title": "How Brazilian Cinema Survived Fascism"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 17764729663291150079,
+      "outlet_count": 1,
+      "title": "In Italy’s Financial Capital, Socialism Is Back in the Air"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 17019368547561952016,
+      "outlet_count": 1,
+      "title": "A Union Feud Shouldn’t Sink California’s Billionaire Tax"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 15192046833097381411,
+      "outlet_count": 1,
+      "title": "We Can’t Blame the Supreme Court for Congress’s Problems"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 14218340286668361492,
+      "outlet_count": 1,
+      "title": "A Labour Prime Minister Inaugurated Britain’s Neoliberal Era"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 11776812557871223478,
+      "outlet_count": 1,
+      "title": "Literacy Is Another Casualty of the Decline of Democracy"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 11628693054310627537,
+      "outlet_count": 1,
+      "title": "Mark Carney Is Taking Aim at Canada’s Labor Movement"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 10046430022137520309,
+      "outlet_count": 1,
+      "title": "We Have to Figure Out How to Design a Warming Planet"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 9516070872355054477,
+      "outlet_count": 1,
+      "title": "Trump’s Greenland Deal Puts His Annexation Plans on Ice"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 9283639925474061796,
+      "outlet_count": 1,
+      "title": "Video Game Workers at Blizzard Won First Union Contracts"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 8928488612537184068,
+      "outlet_count": 1,
+      "title": "Greed and Economic Desperation Are Fueling Sudan’s Civil War"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 8697469229468968228,
+      "outlet_count": 1,
+      "title": "Saudi Arabia’s Yemen Strategy Has Fallen to Pieces"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 8538053654963412131,
+      "outlet_count": 1,
+      "title": "The United Arab Emirates Is Devastating Sudan for Profit"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 6824719560104508874,
+      "outlet_count": 1,
+      "title": "Greece’s Neo-Nazis Are Back"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 6674176575454506260,
+      "outlet_count": 1,
+      "title": "The First Walmart Union Contract in North America"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 4506979954204139066,
+      "outlet_count": 1,
+      "title": "According to Polls, Americans Like Socialism a Lot"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 4491156598818427588,
+      "outlet_count": 1,
+      "title": "The Beatles Belong to the Left"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 4244328659405013235,
+      "outlet_count": 1,
+      "title": "Who Killed Asylum?"
+    },
+    {
+      "created_at": 1790653937,
+      "first": true,
+      "id": 613974978524498948,
+      "outlet_count": 1,
+      "title": "Their Internationalism and Ours"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

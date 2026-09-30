@@ -1,0 +1,1220 @@
+{
+  "claims": {
+    "abcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "abcnews.com",
+          "expires": "2027-04-21",
+          "last_changed": "2026-03-22",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/abcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-20"
+      },
+      {
+        "data": {
+          "domain": "go.com",
+          "expires": "2027-01-08",
+          "last_changed": "2025-12-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/go.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-01-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1945-06-15"
+      },
+      {
+        "data": {
+          "qid": "Q169889"
+        },
+        "field": "owner",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "American Broadcasting Company"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "ABC News (USA)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+        },
+        "field": "reliability",
+        "outlet_id": "abcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "cbsnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "cbsnews.com",
+          "expires": "2027-10-03",
+          "last_changed": "2026-09-01",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cbsnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-10-04"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-09-18"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_522#Request_for_Comment:_Reliability_of_CBS_News_under_Bari_Weiss",
+            "#cite_note-20"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CBS News",
+          "status": "generally_reliable",
+          "summary": "CBS News is the news division of CBS. It is considered generally reliable. Some editors note, however, that its television content may include superficial coverage, which might not qualify under WP:MEDRS. Editors also note that CBS has undergone intensified political bias after Bari Weiss became editor-in-chief in late 2025, and supression of reporting critical of the Trump administration has been"
+        },
+        "field": "reliability",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "dailysabah": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      },
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "globeandmail": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      },
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "npr": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "npr",
+        "ref_url": "https://www.wikidata.org/wiki/Q671510",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "npr.org",
+          "expires": "2027-12-12",
+          "last_changed": "2026-08-11",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "npr",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/npr.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-12-13"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "npr",
+        "ref_url": "https://www.wikidata.org/wiki/Q671510",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1970-02-26"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_139#NPR_reference_in_War_On_Women",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_149#NPR_religion_program_claim_from_Judy_Valente_about_membership_estimate_from_Christian_Science_church",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_292#NPR",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_322#Using_an_NPR_report_in_the_article_Misinformation_related_to_the_COVID-19_pandemic",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_448#Is_NPR_a_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NPR (National Public Radio)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NPR, an American public service broadcaster, is generally reliable for news and statements of fact. NPR's opinion pieces should only be used with attribution."
+        },
+        "field": "reliability",
+        "outlet_id": "npr",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "nytimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nytimes.com",
+          "expires": "2027-01-19",
+          "last_changed": "2024-12-18",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nytimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nytimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-01-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1851-09-18"
+      },
+      {
+        "data": {
+          "qid": "Q2529982"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The New York Times Company"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_244#RfC:_Wound_characteristics_of_military-style_rifles",
+            "#cite_note-70"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New York Times (NYT)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New York Times is generally reliable. WP:RSOPINION should be used to evaluate opinion columns, while WP:NEWSBLOG should be used for the blogs on The New York Times's website. The 2018 RfC cites WP:MEDPOP to establish that popular press sources such as The New York Times should generally not be used to support medical claims."
+        },
+        "field": "reliability",
+        "outlet_id": "nytimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "nzherald": [
+      {
+        "data": {
+          "qid": "Q664"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New Zealand"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1863-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7759231"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New Zealand Media and Entertainment"
+      },
+      {
+        "data": {
+          "qid": "Q115613014"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Wilson & Horton"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_New_Zealand_Herald",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#New_Zealand_Herald,_Whanganui_Chronicle,_opinion_piece?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New Zealand Herald (NZ Herald)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New Zealand Herald is generally reliable."
+        },
+        "field": "reliability",
+        "outlet_id": "nzherald",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "skynews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "sky.com",
+          "expires": "2027-06-17",
+          "last_changed": "2019-08-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "skynews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sky.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1988-03-31"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1989-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q918390"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Sky Group"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Alleged_war_crimes_by_Russians_in_Syria",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_334#Sky_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#LBC_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_458#Sky_News_caught_manipulating_footage"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sky News (UK)",
+          "status": "generally_reliable",
+          "summary": "Sky News (UK) is considered an ordinary WP:NEWSORG and is thus presumed generally reliable. Sky News UK is unaffiliated with Sky News Australia. Sky News UK has partial ownership of Sky News Arabia."
+        },
+        "field": "reliability",
+        "outlet_id": "skynews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 13,
+      "weakest_join": null
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 15326836451892574789,
+    "item_count": 13,
+    "last_active_at": 1790653944,
+    "origin_item_id": 12262088087226337526,
+    "origin_outlet_id": "euronews",
+    "outlet_count": 11,
+    "primary_title": "At least 27 killed in 2 mass shootings in South Africa",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15326836451892574789,
+        "joined_at": 1790633633,
+        "outlet_id": "guardian",
+        "published_at": 1790516809
+      },
+      {
+        "item_id": 5083186231584967140,
+        "joined_at": 1790633633,
+        "outlet_id": "nytimes",
+        "published_at": 1790509040
+      },
+      {
+        "item_id": 17486761897172052620,
+        "joined_at": 1790633634,
+        "outlet_id": "npr",
+        "published_at": 1790514087
+      },
+      {
+        "item_id": 833847689930420253,
+        "joined_at": 1790653930,
+        "outlet_id": "cbsnews",
+        "published_at": 1790496055
+      },
+      {
+        "item_id": 14876035819495503084,
+        "joined_at": 1790653931,
+        "outlet_id": "abcnews",
+        "published_at": 1790588321
+      },
+      {
+        "item_id": 7741456050469864700,
+        "joined_at": 1790653931,
+        "outlet_id": "abcnews",
+        "published_at": 1790543924
+      },
+      {
+        "item_id": 7204821172978739239,
+        "joined_at": 1790653939,
+        "outlet_id": "euronews",
+        "published_at": 1790579048
+      },
+      {
+        "item_id": 12262088087226337526,
+        "joined_at": 1790653939,
+        "outlet_id": "euronews",
+        "published_at": 1790493955
+      },
+      {
+        "item_id": 6417845735929583674,
+        "joined_at": 1790653939,
+        "outlet_id": "skynews",
+        "published_at": 1790532300
+      },
+      {
+        "item_id": 12398273031597704347,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790526904
+      },
+      {
+        "item_id": 16544775394174140948,
+        "joined_at": 1790653942,
+        "outlet_id": "nzherald",
+        "published_at": 1790616413
+      },
+      {
+        "item_id": 16409335964555364796,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790518045
+      },
+      {
+        "item_id": 15086076883999884908,
+        "joined_at": 1790653944,
+        "outlet_id": "dailysabah",
+        "published_at": 1790503740
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "abcnews",
+            "cbsnews",
+            "npr",
+            "skynews",
+            "globeandmail",
+            "guardian",
+            "thehindu",
+            "nytimes",
+            "nzherald"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "dailysabah"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcnews": "ABC News",
+    "cbsnews": "CBS News",
+    "dailysabah": "Daily Sabah",
+    "euronews": "Euronews",
+    "globeandmail": "The Globe and Mail",
+    "guardian": "The Guardian",
+    "npr": "NPR",
+    "nytimes": "The New York Times",
+    "nzherald": "The New Zealand Herald",
+    "skynews": "Sky News",
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 8,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/27/two-mass-shootings-in-south-africa-leave-at-least-27-dead",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790653939,
+          "id": 12262088087226337526,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790493955,
+          "summary": "Seventeen people were killed in a shooting at a bar to the west of Johannesburg, while 10 people were fatally shot in an attack outside of Cape Town, police said.",
+          "text_hash": 15246057003707911035,
+          "title": "Two mass shootings in South Africa leave at least 27 dead"
+        },
+        {
+          "canonical_url": "https://euronews.com/2026/09/28/death-toll-in-south-africa-bar-shooting-rises-to-18-police-say",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790653939,
+          "id": 7204821172978739239,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790579048,
+          "summary": "South Africa is awash with legal and illegal firearms, and shootings are common, often fuelled by gang rivalry, extortion and competition between informal businesses.",
+          "text_hash": 289412381591475073,
+          "title": "Death toll in South Africa bar shooting rises to 18, police say"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://cbsnews.com/news/mass-shooting-south-africa-johannesburg-capetown/",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790653930,
+          "id": 833847689930420253,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790496055,
+          "summary": "The attacks come as South Africa grapples with persistent gun violence often linked to gang rivalries.",
+          "text_hash": 9277935448332109090,
+          "title": "At least 27 killed in 2 mass shootings in South Africa"
+        }
+      ],
+      "outlet_id": "cbsnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailysabah.com/world/africa/s-africa-launches-manhunt-after-27-killed-in-2-mass-shootings",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790653944,
+          "id": 15086076883999884908,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790503740,
+          "summary": "South African police Sunday hunted the perpetrators of two separate shootings that killed 27 people within hours, highlighting the country’s persistent gun violence problem. The mo...",
+          "text_hash": 1185521504021335334,
+          "title": "S. Africa launches manhunt after 27 killed in 2 mass shootings"
+        }
+      ],
+      "outlet_id": "dailysabah"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nytimes.com/2026/09/27/world/africa/south-africa-mass-shootings-tavern.html",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790633633,
+          "id": 5083186231584967140,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "nytimes",
+          "published_at": 1790509040,
+          "summary": "These were the latest deadly incidents at bars or taverns in a nation with one of the world’s highest murder rates.",
+          "text_hash": 293117720377749868,
+          "title": "At Least 27 Killed in 2 Overnight Mass Shootings in South Africa"
+        }
+      ],
+      "outlet_id": "nytimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://npr.org/2026/09/27/nx-s1-5982488/south-africa-mass-shootings-killed-38-week",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790633634,
+          "id": 17486761897172052620,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "npr",
+          "published_at": 1790514087,
+          "summary": "On Saturday night, there were separate mass shootings near South Africa's two largest cities.",
+          "text_hash": 11713155187978147360,
+          "title": "South Africa reels from spate of mass shootings that killed 38 people in a week"
+        }
+      ],
+      "outlet_id": "npr"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/world/2026/sep/27/mass-shootings-south-africa-johannesburg-cape-town",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790633633,
+          "id": 15326836451892574789,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790516809,
+          "summary": "Seventeen people killed near Johannesburg in suspected ‘illegal goldmining turf war’, as 10 killed in separate incident at barbecue venue near Cape Town Two separate mass shootings near South Africa’s two biggest cities killed at least 27 people, as the country grapples with one of the world’s highest murder rates amid investigations into corruption and criminality within the police. The South African police service said on Sunday that 17 people were killed on Saturday night when eight suspects armed with…",
+          "text_hash": 6955626025812152784,
+          "title": "At least 27 dead after two mass shootings in South Africa, police say"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/south-africa-mass-shootings-update-toll-september-27-2026/article71515410.ece",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790653942,
+          "id": 16409335964555364796,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790518045,
+          "summary": "Eight gunmen armed with assault rifles opened fire at a bar west of Johannesburg, in the latest of two mass shootings reported in the country this weekend",
+          "text_hash": 3603990104838112742,
+          "title": "Separate mass shootings in South Africa townships leave at least 27 people dead"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-south-africa-mass-shooting-johannesburg-cape-town/",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790653941,
+          "id": 12398273031597704347,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790526904,
+          "summary": "Recent shooting incidents have shocked a country used to some of the highest homicide rates in the world",
+          "text_hash": 5890922001632290240,
+          "title": "Two mass shootings in South Africa leave at least 28 dead"
+        }
+      ],
+      "outlet_id": "globeandmail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://news.sky.com/story/two-mass-shootings-kill-at-least-27-people-in-south-africa-13592523",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790653939,
+          "id": 6417845735929583674,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "skynews",
+          "published_at": 1790532300,
+          "summary": "At least 27 people have been killed in two separate mass shootings within hours of each other in South Africa.",
+          "text_hash": 93811460585456803,
+          "title": "Two mass shootings kill at least 27 people in South Africa"
+        }
+      ],
+      "outlet_id": "skynews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/south-africas-mass-shootings-lone-gunman-attacks-136803150",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790653931,
+          "id": 7741456050469864700,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790543924,
+          "summary": "A total of at least 38 people were killed and nearly 30 were wounded in three separate mass shootings in South Africa this week",
+          "text_hash": 145792182391283105,
+          "title": "What's behind South Africa's mass shootings and how they're often different to lone gunman attacks"
+        },
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/south-africas-death-toll-weekend-mass-shootings-rises-136815484",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790653931,
+          "id": 14876035819495503084,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790588321,
+          "summary": "South African authorities have raised the death toll from two weekend mass shootings to 28 after another victim died in hospital",
+          "text_hash": 10409359331278670634,
+          "title": "South Africa's death toll from mass shootings rises to 28 after another victim dies"
+        }
+      ],
+      "outlet_id": "abcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nzherald.co.nz/world/death-toll-in-two-weekend-mass-shootings-in-south-africa-rises-to-28/VZQWJ25UNJFOBHZ54HXLC4TPYU/",
+          "cluster_id": 15326836451892574789,
+          "fetched_at": 1790653942,
+          "id": 16544775394174140948,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "nzherald",
+          "published_at": 1790616413,
+          "summary": "The Wedela tavern attack has killed 18 people, police say.",
+          "text_hash": 13462870344385892329,
+          "title": "Death toll in two weekend mass shootings in South Africa rises to 28"
+        }
+      ],
+      "outlet_id": "nzherald"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 7741456050469864700,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 2832,
+      "snapshot_id": 16259587415221708872,
+      "ts": 1790654502
+    },
+    {
+      "cluster_id": null,
+      "item_id": 7741456050469864700,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3206,
+      "snapshot_id": 10946002617610371495,
+      "ts": 1790660256
+    },
+    {
+      "cluster_id": null,
+      "item_id": 7741456050469864700,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3309,
+      "snapshot_id": 12672165657524460919,
+      "ts": 1790662841
+    },
+    {
+      "cluster_id": null,
+      "item_id": 833847689930420253,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5811,
+      "snapshot_id": 5043388731282179069,
+      "ts": 1790723005
+    }
+  ]
+}

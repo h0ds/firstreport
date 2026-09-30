@@ -1,0 +1,187 @@
+{
+  "claims": {
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790679060,
+    "expired": false,
+    "id": 1512473153402237717,
+    "item_count": 1,
+    "last_active_at": 1790679060,
+    "origin_item_id": 1512473153402237717,
+    "origin_outlet_id": "guardian",
+    "outlet_count": 1,
+    "primary_title": "Death of Tenessee sheriff’s office canine leads to criminal investigation",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 1512473153402237717,
+        "joined_at": 1790679060,
+        "outlet_id": "guardian",
+        "published_at": 1790672461
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "guardian": "The Guardian"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 1512473153402237717,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4301,
+      "snapshot_id": 6589546433336633550,
+      "ts": 1790681719
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/us-news/2026/sep/29/tenessee-sheriff-canine-death-criminal-investigation",
+          "cluster_id": 1512473153402237717,
+          "fetched_at": 1790679060,
+          "id": 1512473153402237717,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790672461,
+          "summary": "Dog’s handler resigned from sheriff’s office after it emerged Bart had died due to severe dehydration in nearly 101F heat The recent death of a Tennessee sheriff’s office dog after being left in an outdoor kennel without water for a day and a half in excessive heat has prompted the animal’s handler to resign amid administrative and criminal investigations, according to authorities. Bart had been a patrol dog specializing in suspect apprehension, tracking, searches and drug detection before his handler…",
+          "text_hash": 5921189047044588443,
+          "title": "Police dog’s heatstroke death prompts criminal investigation in Tennessee"
+        }
+      ],
+      "outlet_id": "guardian"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 1512473153402237717,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4429,
+      "snapshot_id": 13468597432063914469,
+      "ts": 1790715373
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "mainichi.jp",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.4552
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "mainichi",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.46 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q1136866 (Mainichi Shimbun); also Q11547261 (mainichi.jp)",
+        "outlet_id": "mainichi",
+        "ref_url": "https://www.wikidata.org/wiki/Q1136866",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q1136866 (Mainichi Shimbun); also Q11547261 (mainichi.jp)",
+        "outlet_id": "mainichi",
+        "ref_url": "https://www.wikidata.org/wiki/Q1136866",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1872-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1110794"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q1136866 (Mainichi Shimbun); also Q11547261 (mainichi.jp)",
+        "outlet_id": "mainichi",
+        "ref_url": "https://www.wikidata.org/wiki/Q1136866",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "daily newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "mainichi.jp"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "mainichi",
+        "ref_url": "https://mainichi.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "毎日新聞"
+      },
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q1136866 (Mainichi Shimbun); also Q11547261 (mainichi.jp)",
+        "outlet_id": "mainichi",
+        "ref_url": "https://www.wikidata.org/wiki/Q1136866",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mainichi Shimbun"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "mainichi",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/mainichi",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.5 items/day"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "mainichi",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/mainichi",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "mainichi.jp",
+          "final_url": "https://mainichi.jp/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "mainichi",
+        "ref_url": "https://mainichi.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "contact": "https://www.mainichi.co.jp/contact/personal_information.html",
+          "domain": "mainichi.jp",
+          "missing": [
+            "about",
+            "privacy",
+            "corrections",
+            "ethics",
+            "masthead"
+          ]
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "mainichi",
+        "ref_url": "https://mainichi.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links contact pages from its home page; no about, privacy, corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 47,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "mainichi",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/mainichi",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q1136866 (Mainichi Shimbun); also Q11547261 (mainichi.jp)",
+        "outlet_id": "mainichi",
+        "ref_url": "https://www.wikidata.org/wiki/Q1136866",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://mainichi.jp/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q11547261"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q1136866 (Mainichi Shimbun); also Q11547261 (mainichi.jp)",
+        "outlet_id": "mainichi",
+        "ref_url": "https://www.wikidata.org/wiki/Q1136866",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q1136866"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q1136866 (Mainichi Shimbun); also Q11547261 (mainichi.jp)",
+        "outlet_id": "mainichi",
+        "ref_url": "https://www.wikidata.org/wiki/Q1136866",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Mainichi_Shimbun"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 5
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "mainichi",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/mainichi",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "11% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 106,
+  "outlet": {
+    "domains": [
+      "mainichi.jp"
+    ],
+    "id": "mainichi",
+    "name": "毎日新聞"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

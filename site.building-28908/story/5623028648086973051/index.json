@@ -1,0 +1,818 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "dailysabah": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      },
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "npr": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "npr",
+        "ref_url": "https://www.wikidata.org/wiki/Q671510",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "npr.org",
+          "expires": "2027-12-12",
+          "last_changed": "2026-08-11",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "npr",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/npr.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-12-13"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "npr",
+        "ref_url": "https://www.wikidata.org/wiki/Q671510",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1970-02-26"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_139#NPR_reference_in_War_On_Women",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_149#NPR_religion_program_claim_from_Judy_Valente_about_membership_estimate_from_Christian_Science_church",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_292#NPR",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_322#Using_an_NPR_report_in_the_article_Misinformation_related_to_the_COVID-19_pandemic",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_448#Is_NPR_a_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NPR (National Public Radio)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NPR, an American public service broadcaster, is generally reliable for news and statements of fact. NPR's opinion pieces should only be used with attribution."
+        },
+        "field": "reliability",
+        "outlet_id": "npr",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "skynews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "sky.com",
+          "expires": "2027-06-17",
+          "last_changed": "2019-08-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "skynews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sky.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1988-03-31"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1989-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q918390"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Sky Group"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Alleged_war_crimes_by_Russians_in_Syria",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_334#Sky_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#LBC_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_458#Sky_News_caught_manipulating_footage"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sky News (UK)",
+          "status": "generally_reliable",
+          "summary": "Sky News (UK) is considered an ordinary WP:NEWSORG and is thus presumed generally reliable. Sky News UK is unaffiliated with Sky News Australia. Sky News UK has partial ownership of Sky News Arabia."
+        },
+        "field": "reliability",
+        "outlet_id": "skynews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.008119583129882812,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7281196117401123
+    },
+    "created_at": 1790633634,
+    "expired": false,
+    "id": 5623028648086973051,
+    "item_count": 8,
+    "last_active_at": 1790725358,
+    "origin_item_id": 5623028648086973051,
+    "origin_outlet_id": "npr",
+    "outlet_count": 7,
+    "primary_title": "US forces exit Iraq after two decades, leaving opening for Iran",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 5623028648086973051,
+        "joined_at": 1790633634,
+        "outlet_id": "npr",
+        "published_at": 1790543683
+      },
+      {
+        "item_id": 10397191155660816585,
+        "joined_at": 1790662991,
+        "outlet_id": "straitstimes",
+        "published_at": 1790662065
+      },
+      {
+        "item_id": 1925709218103911198,
+        "joined_at": 1790665587,
+        "outlet_id": "scmp",
+        "published_at": 1790665390
+      },
+      {
+        "item_id": 1144581414446914648,
+        "joined_at": 1790679061,
+        "outlet_id": "skynews",
+        "published_at": 1790666580
+      },
+      {
+        "item_id": 6276185979610452323,
+        "joined_at": 1790715372,
+        "outlet_id": "dailysabah",
+        "published_at": 1790688180
+      },
+      {
+        "item_id": 13982519316138425111,
+        "joined_at": 1790715392,
+        "outlet_id": "arabnews",
+        "published_at": 1790709881
+      },
+      {
+        "item_id": 6534559041154896786,
+        "joined_at": 1790715695,
+        "outlet_id": "aljazeera",
+        "published_at": 1790712031
+      },
+      {
+        "item_id": 4268920764776197131,
+        "joined_at": 1790725358,
+        "outlet_id": "aljazeera",
+        "published_at": 1790723213
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "npr",
+            "skynews",
+            "scmp",
+            "straitstimes"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "dailysabah"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "arabnews": "Arab News",
+    "dailysabah": "Daily Sabah",
+    "npr": "NPR",
+    "scmp": "South China Morning Post",
+    "skynews": "Sky News",
+    "straitstimes": "The Straits Times"
+  },
+  "outlets_24h": 6,
+  "outlets_6h": 3,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 10397191155660816585,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3506,
+      "snapshot_id": 4910350633388462190,
+      "ts": 1790667325
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    7
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://npr.org/2026/09/27/nx-s1-5981123/after-more-than-two-decades-u-s-forces-prepare-to-leave-iraq",
+          "cluster_id": 5623028648086973051,
+          "fetched_at": 1790633634,
+          "id": 5623028648086973051,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "npr",
+          "published_at": 1790543683,
+          "summary": "The U.S. military formally ends a more than two-decade-long presence in Iraq this week.",
+          "text_hash": 6064734015455700240,
+          "title": "After more than two decades, U.S. forces prepare to leave Iraq"
+        }
+      ],
+      "outlet_id": "npr"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/middle-east/us-forces-exit-iraq-after-two-decades-leaving-opening-for-iran",
+          "cluster_id": 5623028648086973051,
+          "fetched_at": 1790662991,
+          "id": 10397191155660816585,
+          "joined_at": 1790662991,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790662065,
+          "summary": "Iraqi security experts say the withdrawal could give Tehran and its powerful allies free rein.",
+          "text_hash": 5138473891840312933,
+          "title": "US forces exit Iraq after two decades, leaving opening for Iran"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/world/middle-east/article/3369168/us-forces-set-complete-withdrawal-iraq-after-2-decades",
+          "cluster_id": 5623028648086973051,
+          "fetched_at": 1790665587,
+          "id": 1925709218103911198,
+          "joined_at": 1790665587,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790665390,
+          "summary": "US forces are set ⁠to pull out from their last bases in Iraq by Wednesday, a departure celebrated as a victory by Iran and its allies who now have deep influence in the country where 4,500 Americans died during more than two decades of war. Iraqi security experts say the withdrawal – agreed in 2024 under President Joe Biden and carried out by Donald Trump’s administration even as it wages war against Iran – could give Tehran and its powerful allies free rein, while also allowing other US enemies...",
+          "text_hash": 9388680113194824677,
+          "title": "US forces set to complete withdrawal from Iraq after 2 decades"
+        }
+      ],
+      "outlet_id": "scmp"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://news.sky.com/story/us-forces-to-leave-last-bases-in-iraq-despite-fears-iran-will-exploit-withdrawal-13593112",
+          "cluster_id": 5623028648086973051,
+          "fetched_at": 1790679061,
+          "id": 1144581414446914648,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "skynews",
+          "published_at": 1790666580,
+          "summary": "US forces are set to pull out from their last bases in Iraq, leaving the country where 4,500 of their comrades died over more than 20 years of war.",
+          "text_hash": 3044856219053706831,
+          "title": "US forces to leave last bases in Iraq despite fears Iran will exploit withdrawal"
+        }
+      ],
+      "outlet_id": "skynews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailysabah.com/world/mid-east/us-completes-iraq-pull-out-after-2-decades-leaving-void-for-iran",
+          "cluster_id": 5623028648086973051,
+          "fetched_at": 1790715372,
+          "id": 6276185979610452323,
+          "joined_at": 1790715372,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790688180,
+          "summary": "U.S. forces are scheduled to withdraw from their final bases in Iraq by Wednesday, a departure celebrated as a victory by Iran and its allies, who now hold deep influence in the co...",
+          "text_hash": 8559731832084497664,
+          "title": "US completes Iraq pull out after 2 decades, leaving void for Iran"
+        }
+      ],
+      "outlet_id": "dailysabah"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/middle-east/can-iraq-contain-its-security-threats-after-the-us-coalitions-withdrawal-3003694",
+          "cluster_id": 5623028648086973051,
+          "fetched_at": 1790715392,
+          "id": 13982519316138425111,
+          "joined_at": 1790715392,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790709881,
+          "summary": "When the last US troops leave their remaining bases in Iraq on Sept. 30, Baghdad will assume greater responsibility for a security landscape that remains complicated by two concurrent threats — the remnants of Daesh and powerful armed groups aligned with Iran. The withdrawal marks the end of the US-led coalition’s military mission against Daesh in Iraq. Most US forces had already left bases elsewhere in the country, with the remaining contingent concentrated in the Kurdistan Region. The US says",
+          "text_hash": 6703756279495426597,
+          "title": "Can Iraq contain its security threats after the US coalition’s withdrawal?"
+        }
+      ],
+      "outlet_id": "arabnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/video/newsfeed/2026/9/29/us-troops-fully-withdraw-from-baghdad-base-after-two-decades?traffic_source=rss",
+          "cluster_id": 5623028648086973051,
+          "fetched_at": 1790715695,
+          "id": 6534559041154896786,
+          "joined_at": 1790715695,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790712031,
+          "summary": "US Army soldiers have fully withdrawn from the US base in Baghdad.",
+          "text_hash": 10435130141219142274,
+          "title": "US troops fully withdraw from Baghdad base after two decades"
+        },
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/29/iraq-begins-high-stakes-security-balancing-act-as-us-troops-withdraw?traffic_source=rss",
+          "cluster_id": 5623028648086973051,
+          "fetched_at": 1790725358,
+          "id": 4268920764776197131,
+          "joined_at": 1790725358,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790723213,
+          "summary": "Iraq marks national 'Sovereignty Days' as US troops depart, but must navigate risks of new security landscape.",
+          "text_hash": 2009078261430548791,
+          "title": "Iraq begins high-stakes security balancing act as US troops withdraw"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    }
+  ],
+  "withdrawals": []
+}

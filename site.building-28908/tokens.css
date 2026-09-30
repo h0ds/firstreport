@@ -1,0 +1,435 @@
+/* Kagami design tokens. Source of truth: design/DESIGN.md.
+   Each tool copies this file; no shared runtime dependency. */
+
+:root {
+  /* accent */
+  --kg-blue:        #2563EB;
+  --kg-blue-hover:  #1D4ED8;
+  --kg-blue-soft:   #DBEAFE;
+  --kg-blue-ink:    #1E3A8A;
+
+  /* neutrals, cool-leaning */
+  --kg-bg:             #FFFFFF;
+  --kg-bg-subtle:      #F8FAFC;
+  --kg-line:           #E2E8F0;
+  --kg-line-strong:    #CBD5E1;
+  --kg-text-muted:     #64748B;
+  --kg-text-secondary: #334155;
+  --kg-text:           #0F172A;
+
+  /* lean scale (§2, §5), owner's decision: red is left, blue is right,
+     as comparison sites commonly draw it; white/grey is centre. */
+  --kg-lean-1: #8B1E1E;
+  --kg-lean-2: #C75A5A;
+  --kg-lean-3: #94A3B8;
+  --kg-lean-4: #5B82C2;
+  --kg-lean-5: #1E4B8F;
+
+  /* semantic: system status only, never content */
+  --kg-ok:   #059669;
+  --kg-warn: #D97706;
+  --kg-err:  #DC2626;
+
+  /* type */
+  --kg-font-serif: "Instrument Serif", "Iowan Old Style", "Times New Roman", serif;
+  --kg-font-sans:  Inter, -apple-system, "Segoe UI", system-ui, sans-serif;
+  --kg-font-mono:  "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+
+  --kg-fs-small:   12px;
+  --kg-fs-ui:      13px;
+  --kg-fs-body:    15px;
+  --kg-fs-body-lg: 17px;
+  --kg-fs-h3:      20px;
+  --kg-fs-h2:      28px;
+  --kg-fs-h1:      40px;
+  --kg-fs-display: 56px;
+
+  /* line heights, each a multiple of 4 (DESIGN.md §3) */
+  --kg-lh-small:   16px;
+  --kg-lh-ui:      20px;
+  --kg-lh-body:    24px;
+  --kg-lh-body-lg: 24px;
+  --kg-lh-h3:      28px;
+  --kg-lh-h2:      32px;
+  --kg-lh-h1:      44px;
+  --kg-lh-display: 60px;
+
+  /* lockup (§6) */
+  --kg-lockup-wordmark: 28px;
+  --kg-lockup-kanji:    17px;
+
+  /* spacing, base 4 */
+  --kg-s1: 4px;  --kg-s2: 8px;  --kg-s3: 12px; --kg-s4: 16px; --kg-s5: 24px;
+  --kg-s6: 32px; --kg-s7: 48px; --kg-s8: 64px; --kg-s9: 96px;
+
+  /* shape */
+  --kg-radius-input: 4px;
+  --kg-radius-card:  6px;
+  --kg-shadow-float: 0 1px 2px rgba(15, 23, 42, 0.06);
+
+  /* layout */
+  --kg-measure: 720px;
+  --kg-measure-wide: 1200px;
+
+  /* motion */
+  --kg-t-fast: 120ms;
+  --kg-t-base: 200ms;
+  --kg-ease:   cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* Fonts: self-hosted, subset, swap. Files live in design/fonts/ (gitignored;
+   see design/fonts/README.md). Tools that embed tokens.css adjust the paths. */
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("fonts/InstrumentSerif-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("fonts/InstrumentSerif-Italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-Variable.woff2") format("woff2");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono-Variable.woff2") format("woff2");
+  font-weight: 100 800; font-style: normal; font-display: swap;
+}
+
+/* base */
+html { background: var(--kg-bg); color: var(--kg-text); }
+body {
+  margin: 0;
+  font-family: var(--kg-font-sans);
+  font-size: var(--kg-fs-body);
+  line-height: var(--kg-lh-body);
+  font-feature-settings: "tnum", "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2 {
+  font-family: var(--kg-font-serif);
+  font-weight: 400;
+  margin: 0;
+}
+h1 { font-size: var(--kg-fs-h1); line-height: var(--kg-lh-h1); letter-spacing: -0.02em; }
+h2 { font-size: var(--kg-fs-h2); line-height: var(--kg-lh-h2); letter-spacing: -0.01em; }
+h3 { font-size: var(--kg-fs-h3); line-height: var(--kg-lh-h3); font-weight: 600; letter-spacing: -0.01em; margin: 0; }
+.kg-display { font-family: var(--kg-font-serif); font-size: var(--kg-fs-display); line-height: var(--kg-lh-display); letter-spacing: -0.02em; font-weight: 400; }
+code, pre, .kg-mono {
+  font-family: var(--kg-font-mono);
+  font-size: var(--kg-fs-ui);
+  line-height: var(--kg-lh-ui);
+  font-weight: 400;
+}
+p, ul, ol { margin: 0; }
+
+/* links: four kinds (DESIGN.md §5). Default is the action link. */
+a {
+  color: var(--kg-blue);
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: auto;
+  transition: color var(--kg-t-fast) var(--kg-ease), text-decoration-color var(--kg-t-fast) var(--kg-ease);
+}
+a:hover { text-decoration-line: underline; color: var(--kg-blue-hover); }
+a.kg-link-title, .kg-link-title a { color: inherit; }
+a.kg-link-title:hover, .kg-link-title a:hover { color: var(--kg-blue); }
+a.kg-link-quiet, .kg-link-quiet a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--kg-line-strong);
+}
+a.kg-link-quiet:hover, .kg-link-quiet a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+.kg-prose a { text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
+.kg-prose a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--kg-blue); outline-offset: 2px; }
+hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
+
+/* prose: running text, capped measure */
+.kg-prose { max-width: 68ch; }
+.kg-prose p, .kg-prose ul, .kg-prose ol { margin: 0 0 var(--kg-s4); }
+.kg-prose ul, .kg-prose ol { padding-left: var(--kg-s5); }
+.kg-prose li + li { margin-top: var(--kg-s1); }
+
+.kg-muted { color: var(--kg-text-muted); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); letter-spacing: 0.01em; }
+.kg-secondary { color: var(--kg-text-secondary); }
+.kg-break { overflow-wrap: anywhere; }
+
+/* wordmark and lockup */
+.kg-wordmark {
+  font-family: var(--kg-font-serif);
+  font-style: italic;
+  letter-spacing: -0.01em;
+  color: var(--kg-text);
+}
+.kg-wordmark .kanji {
+  font-family: "Noto Serif JP", serif;
+  font-style: normal;
+  font-size: var(--kg-lockup-kanji);
+  color: var(--kg-text-muted);
+  margin-left: var(--kg-s1);
+}
+.kg-lockup { display: inline-flex; align-items: baseline; gap: var(--kg-s3); font-size: var(--kg-lockup-wordmark); line-height: var(--kg-lh-h2); }
+.kg-lockup .kg-wordmark { color: var(--kg-text); }
+.kg-lockup .rule { align-self: stretch; width: 1px; background: var(--kg-line-strong); }
+.kg-lockup .tool { font-family: var(--kg-font-sans); font-weight: 500; font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); color: var(--kg-text-secondary); }
+
+/* buttons */
+.kg-btn {
+  font: 500 var(--kg-fs-ui)/var(--kg-lh-ui) var(--kg-font-sans);
+  padding: var(--kg-s1) var(--kg-s4);
+  min-height: var(--kg-s6);
+  border-radius: var(--kg-radius-input);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background var(--kg-t-fast) var(--kg-ease), border-color var(--kg-t-fast) var(--kg-ease);
+}
+.kg-btn-primary { background: var(--kg-blue); color: #fff; }
+.kg-btn-primary:hover { background: var(--kg-blue-hover); }
+.kg-btn-secondary { background: var(--kg-bg); color: var(--kg-text); border-color: var(--kg-line-strong); }
+.kg-btn-secondary:hover { border-color: var(--kg-text-muted); }
+.kg-btn-ghost { background: transparent; color: var(--kg-blue); }
+.kg-btn-ghost:hover { color: var(--kg-blue-hover); }
+
+/* inputs */
+.kg-input {
+  font: 400 var(--kg-fs-ui)/var(--kg-lh-ui) var(--kg-font-sans);
+  height: 36px;
+  padding: 0 var(--kg-s3);
+  border: 1px solid var(--kg-line-strong);
+  border-radius: var(--kg-radius-input);
+  background: var(--kg-bg);
+  color: var(--kg-text);
+  box-sizing: border-box;
+}
+.kg-input:focus { outline: 2px solid var(--kg-blue); outline-offset: 0; }
+
+/* tables */
+.kg-table { width: 100%; border-collapse: collapse; }
+.kg-table th {
+  font: 500 var(--kg-fs-small)/var(--kg-lh-small) var(--kg-font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--kg-text-muted);
+  text-align: left;
+  padding: var(--kg-s2) var(--kg-s3);
+  border-bottom: 1px solid var(--kg-line-strong);
+}
+.kg-table td {
+  height: 40px;
+  padding: 0 var(--kg-s3);
+  border-bottom: 1px solid var(--kg-line);
+  color: var(--kg-text-secondary);
+  box-sizing: border-box;
+}
+.kg-table tbody tr:hover td { background: var(--kg-bg-subtle); }
+.kg-table tr.is-selected td { background: var(--kg-blue-soft); color: var(--kg-blue-ink); }
+.kg-table tr.is-selected td:first-child { box-shadow: inset 2px 0 0 var(--kg-blue); }
+.kg-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.kg-table .id { font-family: var(--kg-font-mono); font-size: var(--kg-fs-ui); }
+
+/* cluster card */
+.kg-cluster { padding: var(--kg-s4) 0; border-bottom: 1px solid var(--kg-line); }
+.kg-cluster .title { font-size: var(--kg-fs-body-lg); line-height: var(--kg-lh-body-lg); font-weight: 600; letter-spacing: -0.005em; margin: 0 0 var(--kg-s1); }
+.kg-cluster .title a { color: inherit; }
+.kg-cluster .title a:hover { color: var(--kg-blue); }
+.kg-cluster .meta { display: flex; gap: var(--kg-s2); align-items: center; flex-wrap: wrap; }
+.kg-cluster .meta a { color: inherit; text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
+.kg-cluster .meta a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+.kg-cluster .meta .sep { color: var(--kg-line-strong); }
+.kg-cluster .origin, .kg-tag {
+  font-family: var(--kg-font-mono);
+  font-size: var(--kg-fs-small);
+  line-height: var(--kg-lh-small);
+  padding: 2px var(--kg-s2); /* the one off-grid value: keeps a bordered tag inside a 20px line */
+  border: 1px solid var(--kg-line);
+  border-radius: var(--kg-radius-input);
+  color: var(--kg-text-secondary);
+  white-space: nowrap;
+}
+
+/* count chip (§5): the one number that ranks a row, as a highlight. */
+.kg-count { display: inline-block; padding: 0 var(--kg-s2); border-radius: var(--kg-radius-input); background: var(--kg-blue-soft); color: var(--kg-blue-ink); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* outlet badge (§10): the outlet's own icon, then its name. No box; the
+   icon carries the outlet's colours, Kagami adds none. */
+.kg-outlet { display: inline-flex; align-items: center; gap: var(--kg-s2); white-space: nowrap; vertical-align: middle; }
+/* an outlet with no icon: its first letter on a light 16px tile */
+.kg-icon.kg-letter { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); font-weight: 600; color: var(--kg-text-secondary); background: var(--kg-bg-subtle); }
+.kg-icon { width: 16px; height: 16px; border-radius: var(--kg-radius-input); object-fit: contain; background: var(--kg-bg); box-shadow: 0 0 0 1px var(--kg-line); flex: none; }
+/* icon row: the outlets carrying a story, joined order, origin first */
+.kg-stack { display: inline-flex; align-items: center; gap: var(--kg-s1); margin-left: var(--kg-s1); }
+.kg-stack .more { color: var(--kg-text-muted); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); margin-left: var(--kg-s1); }
+
+/* origin ring (§10): marks the outlet that published first. A ring, not a
+   word and not blue; the accessible name comes from a .kg-sr span. */
+.kg-origin, .kg-icon.kg-origin { border-radius: var(--kg-radius-input); box-shadow: 0 0 0 1.5px var(--kg-bg), 0 0 0 3px var(--kg-text); }
+.kg-origin-name { border-radius: var(--kg-radius-input); box-shadow: 0 0 0 1.5px var(--kg-text); padding: 0 var(--kg-s1); }
+.kg-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* sparkline (§5): shared y scale per page, drawn at size, never stretched */
+.kg-spark-wrap { display: inline-flex; align-items: center; gap: var(--kg-s2); }
+.kg-spark { width: 80px; height: 20px; display: block; overflow: visible; }
+.kg-spark.lg { width: 160px; height: 32px; }
+.kg-spark path, .kg-spark line, .kg-spark circle { vector-effect: non-scaling-stroke; }
+.kg-spark .line { fill: none; stroke: var(--kg-blue); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+.kg-spark .area { fill: var(--kg-blue-soft); fill-opacity: 0.4; stroke: none; }
+.kg-spark .base { stroke: var(--kg-line); stroke-width: 1; }
+.kg-spark .end { fill: var(--kg-blue); stroke: none; }
+.kg-spark-n { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-secondary); font-variant-numeric: tabular-nums; min-width: 2ch; }
+
+/* claim card and provenance line (ledger's core object) */
+.kg-claim { padding: var(--kg-s3) 0; border-bottom: 1px solid var(--kg-line); }
+.kg-claim .value { font-size: var(--kg-fs-body-lg); line-height: var(--kg-lh-body-lg); font-weight: 600; letter-spacing: -0.005em; }
+.kg-claim .scope { color: var(--kg-text-secondary); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); margin-top: var(--kg-s1); }
+.kg-claim .note { color: var(--kg-text-secondary); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); margin-top: var(--kg-s2); }
+.kg-claim .note a { color: inherit; text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
+.kg-claim .note a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+.kg-provenance {
+  display: flex; gap: var(--kg-s2); flex-wrap: wrap; align-items: center;
+  margin-top: var(--kg-s1);
+  color: var(--kg-text-muted); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); letter-spacing: 0.01em;
+}
+.kg-provenance a { color: inherit; text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
+.kg-provenance a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+.kg-provenance .sep { color: var(--kg-line-strong); }
+
+/* label bar: a named source's labels across the outlets in a story.
+   Segments in the source's own scale order, greys of different weight,
+   the label text on every segment, the unrated remainder drawn empty.
+   Never a hue per side (DESIGN.md §5). */
+.kg-labelbar { margin: var(--kg-s2) 0 var(--kg-s1); }
+.kg-labelbar .bar { display: flex; height: var(--kg-s6); border-radius: var(--kg-radius-input); overflow: hidden; border: 1px solid var(--kg-line); }
+.kg-labelbar .seg { display: flex; align-items: center; justify-content: center; gap: var(--kg-s1); min-width: 0; padding: 0 var(--kg-s2); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kg-labelbar .seg + .seg { border-left: 1px solid var(--kg-bg); }
+.kg-labelbar .seg.w1 { background: var(--kg-text); color: var(--kg-bg); }
+.kg-labelbar .seg.w2 { background: var(--kg-text-secondary); color: var(--kg-bg); }
+.kg-labelbar .seg.w3 { background: var(--kg-text-muted); color: var(--kg-bg); }
+.kg-labelbar .seg.w4 { background: var(--kg-line-strong); color: var(--kg-text); }
+.kg-labelbar .seg.w5 { background: var(--kg-line); color: var(--kg-text); }
+.kg-labelbar .seg.none { background: transparent; color: var(--kg-text-muted); border-left: 1px dashed var(--kg-line-strong); }
+/* compact bar for cards: 8px tall, counts as text beside it */
+.kg-labelbar.compact { display: inline-flex; align-items: center; gap: var(--kg-s2); margin: 0; }
+.kg-labelbar.compact .bar { width: 120px; height: var(--kg-s2); border: 0; background: var(--kg-bg-subtle); }
+.kg-labelbar.compact .seg { padding: 0; }
+.kg-labelbar.compact .seg.none { border: 1px dashed var(--kg-line-strong); }
+
+/* a card's picture row: sparkline, then the lean strip (§5) */
+.kg-visuals { display: flex; flex-wrap: wrap; align-items: center; gap: var(--kg-s2) var(--kg-s6); margin-top: var(--kg-s2); }
+/* own reports against copies (§5): dark = own, light = copy */
+.kg-split { display: inline-flex; align-items: center; gap: var(--kg-s1); }
+.kg-split .bar { display: inline-block; width: 32px; height: var(--kg-s1); border-radius: 2px; background: var(--kg-line-strong); overflow: hidden; }
+.kg-split .own { display: block; height: 100%; background: var(--kg-text-secondary); }
+
+/* timeline track on the story page (§5) */
+.kg-track { margin: var(--kg-s3) 0 var(--kg-s4); }
+.kg-track .lanes { position: relative; margin: 0 var(--kg-s2); border-bottom: 1px solid var(--kg-line-strong); padding-bottom: var(--kg-s1); box-sizing: content-box; }
+.kg-track .pt { position: absolute; transform: translateX(-50%); display: flex; }
+.kg-track .pt:hover { text-decoration: none; }
+.kg-track .pt:hover .kg-icon { box-shadow: 0 0 0 1px var(--kg-blue); }
+.kg-track .dot { width: var(--kg-s2); height: var(--kg-s2); margin: var(--kg-s1); border-radius: 50%; background: var(--kg-text-muted); }
+.kg-track .axis { display: flex; justify-content: space-between; margin-top: var(--kg-s1); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); }
+
+/* AllSides coverage bar on a card (§5): Left / Center / Right with percents */
+.kg-coverage { display: inline-flex; align-items: center; gap: var(--kg-s2); }
+.kg-coverage .bar { display: flex; width: 200px; height: 16px; border-radius: var(--kg-radius-input); overflow: hidden; border: 1px solid var(--kg-line-strong); }
+.kg-coverage .seg { display: flex; align-items: center; justify-content: center; min-width: 0; overflow: hidden; }
+.kg-coverage .seg .t { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: clip; }
+.kg-coverage .seg.left { background: var(--kg-lean-1); color: var(--kg-bg); }
+.kg-coverage .seg.center { background: var(--kg-bg); color: var(--kg-text); }
+.kg-coverage .seg.right { background: var(--kg-lean-5); color: var(--kg-bg); }
+.kg-coverage .lbl { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); }
+
+/* an outlet AllSides rates carries its lean as the icon's border */
+.kg-icon.lean-left { box-shadow: 0 0 0 2px var(--kg-lean-1); }
+.kg-icon.lean-lean-left { box-shadow: 0 0 0 2px var(--kg-lean-2); }
+.kg-icon.lean-center { box-shadow: 0 0 0 2px var(--kg-lean-3); }
+.kg-icon.lean-lean-right { box-shadow: 0 0 0 2px var(--kg-lean-4); }
+.kg-icon.lean-right { box-shadow: 0 0 0 2px var(--kg-lean-5); }
+/* with the origin ring outside the lean border */
+.kg-icon.kg-origin.lean-left { box-shadow: 0 0 0 2px var(--kg-lean-1), 0 0 0 3.5px var(--kg-bg), 0 0 0 5px var(--kg-text); }
+.kg-icon.kg-origin.lean-lean-left { box-shadow: 0 0 0 2px var(--kg-lean-2), 0 0 0 3.5px var(--kg-bg), 0 0 0 5px var(--kg-text); }
+.kg-icon.kg-origin.lean-center { box-shadow: 0 0 0 2px var(--kg-lean-3), 0 0 0 3.5px var(--kg-bg), 0 0 0 5px var(--kg-text); }
+.kg-icon.kg-origin.lean-lean-right { box-shadow: 0 0 0 2px var(--kg-lean-4), 0 0 0 3.5px var(--kg-bg), 0 0 0 5px var(--kg-text); }
+.kg-icon.kg-origin.lean-right { box-shadow: 0 0 0 2px var(--kg-lean-5), 0 0 0 3.5px var(--kg-bg), 0 0 0 5px var(--kg-text); }
+
+/* the full AllSides bar on a story page takes the lean colours */
+.kg-labelbar[data-source="allsides"] .seg.w1 { background: var(--kg-lean-1); color: var(--kg-bg); }
+.kg-labelbar[data-source="allsides"] .seg.w2 { background: var(--kg-lean-2); color: var(--kg-bg); }
+.kg-labelbar[data-source="allsides"] .seg.w3 { background: var(--kg-bg); color: var(--kg-text); }
+.kg-labelbar[data-source="allsides"] .seg.w4 { background: var(--kg-lean-4); color: var(--kg-bg); }
+.kg-labelbar[data-source="allsides"] .seg.w5 { background: var(--kg-lean-5); color: var(--kg-bg); }
+
+/* the list's legend: the card pictures explained once */
+.kg-legend { margin: 0 0 var(--kg-s2); }
+.kg-legend .key { display: inline-block; vertical-align: middle; margin-right: var(--kg-s1); color: var(--kg-text-secondary); font-weight: 500; }
+.kg-legend .key.spark { width: 24px; height: 8px; border-bottom: 1.5px solid var(--kg-blue); border-left: 1px solid var(--kg-line); vertical-align: baseline; }
+.kg-legend .key.lean { display: inline-flex; gap: var(--kg-s1); }
+.kg-legend .key.lean i { width: 8px; height: 8px; border-radius: 50%; }
+.kg-legend .key.lean .k1 { background: var(--kg-lean-1); } .kg-legend .key.lean .k3 { background: var(--kg-lean-3); } .kg-legend .key.lean .k5 { background: var(--kg-lean-5); }
+
+/* lean line under a card, and the audience strip (§5): greys only */
+.kg-lean { display: flex; flex-wrap: wrap; gap: var(--kg-s2) var(--kg-s5); align-items: center; margin-top: var(--kg-s2); }
+.kg-lean .lbl, .kg-audience .lbl { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-secondary); }
+.kg-lean .src, .kg-audience .src { color: var(--kg-text-muted); }
+.kg-audience { display: inline-flex; align-items: center; gap: var(--kg-s1); }
+.kg-audience svg { display: block; overflow: visible; }
+.kg-audience .axis { stroke: transparent; }
+.kg-audience .t1 { stroke: var(--kg-lean-1); } .kg-audience .t2 { stroke: var(--kg-lean-2); } .kg-audience .t3 { stroke: var(--kg-lean-3); }
+.kg-audience .t4 { stroke: var(--kg-lean-4); } .kg-audience .t5 { stroke: var(--kg-lean-5); }
+.kg-audience [class^="t"] { stroke-width: 2; stroke-opacity: 0.35; }
+.kg-audience .zero { stroke: var(--kg-text-muted); stroke-width: 1; }
+.kg-audience circle { fill: var(--kg-text-secondary); fill-opacity: 0.85; stroke: var(--kg-bg); stroke-width: 1; }
+.kg-audience circle.b1 { fill: var(--kg-lean-1); } .kg-audience circle.b2 { fill: var(--kg-lean-2); } .kg-audience circle.b3 { fill: var(--kg-lean-3); }
+.kg-audience circle.b4 { fill: var(--kg-lean-4); } .kg-audience circle.b5 { fill: var(--kg-lean-5); }
+.kg-audience circle.unknown { fill: var(--kg-bg); fill-opacity: 1; stroke: var(--kg-text-muted); stroke-width: 1; stroke-dasharray: 2 1.5; }
+.kg-audience .unknown-group { margin-left: var(--kg-s2); }
+.kg-audience.none .lbl { margin-left: 0; color: var(--kg-text-muted); }
+.kg-audience .end { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); font-weight: 500; }
+.kg-audience .lbl { margin-left: var(--kg-s2); }
+.kg-audience-block { margin: var(--kg-s3) 0; }
+.kg-labelbar .seg .n { font-variant-numeric: tabular-nums; font-weight: 600; }
+.kg-labelbar .legend { display: flex; flex-wrap: wrap; gap: var(--kg-s2) var(--kg-s4); margin-top: var(--kg-s2); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-secondary); }
+.kg-labelbar .legend b { font-weight: 600; color: var(--kg-text); }
+
+/* status dots */
+.kg-status { display: inline-flex; align-items: center; gap: var(--kg-s2); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); }
+.kg-status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.kg-status.ok   { color: var(--kg-ok); }
+.kg-status.warn { color: var(--kg-warn); }
+.kg-status.err  { color: var(--kg-err); }
+.kg-status span { color: var(--kg-text-secondary); }
+
+/* floating elements */
+.kg-float {
+  background: var(--kg-bg);
+  border: 1px solid var(--kg-line);
+  border-radius: var(--kg-radius-card);
+  box-shadow: var(--kg-shadow-float);
+}
+
+/* live rows */
+@keyframes kg-fade-in { from { opacity: 0; } to { opacity: 1; } }
+.kg-enter { animation: kg-fade-in var(--kg-t-base) var(--kg-ease); }
+@media (prefers-reduced-motion: reduce) {
+  .kg-enter { animation: none; }
+  a { transition: none; }
+}
+
+/* phones (§4 breakpoints): same page, narrower */
+@media (max-width: 720px) {
+  h1 { font-size: var(--kg-fs-h2); line-height: var(--kg-lh-h2); }
+  .kg-display { font-size: var(--kg-fs-h1); line-height: var(--kg-lh-h1); }
+}
+
+/* designations (§5): named sources' words beside an outlet's name.
+   State: outlined grey. Sanctioned / Deprecated: solid near-black.
+   Never red or a status colour: those mean lean and system state. */
+.kg-flag { font-family: var(--kg-font-mono); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; padding: 0 var(--kg-s1); border: 1px solid var(--kg-line-strong); border-radius: var(--kg-radius-input); color: var(--kg-text-secondary); cursor: help; white-space: nowrap; }
+.kg-flag.warn { background: var(--kg-text); border-color: var(--kg-text); color: var(--kg-bg); }
+.kg-flags { display: flex; gap: var(--kg-s2); margin: 0 0 var(--kg-s2); }

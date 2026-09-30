@@ -1,0 +1,257 @@
+{
+  "claims": {
+    "bbc": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "bbc.com",
+          "expires": "2030-07-14",
+          "last_changed": "2021-07-06",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1989-07-15"
+      },
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "expires": "2034-12-13",
+          "last_changed": "2025-10-29",
+          "registrar": "British Broadcasting Corporation",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-13"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_495#RfC:_reliability_of_the_BBC",
+            "#cite_note-9"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "BBC (British Broadcasting Corporation)",
+          "status": "generally_reliable",
+          "summary": "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
+        },
+        "field": "reliability",
+        "outlet_id": "bbc",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": null
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 785001445115155322,
+    "item_count": 2,
+    "last_active_at": 1790653939,
+    "origin_item_id": 15486557873182992211,
+    "origin_outlet_id": "euronews",
+    "outlet_count": 2,
+    "primary_title": "Stand-up comic released after being convicted of insulting Erdoğan",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 785001445115155322,
+        "joined_at": 1790633633,
+        "outlet_id": "bbc",
+        "published_at": 1790626992
+      },
+      {
+        "item_id": 15486557873182992211,
+        "joined_at": 1790653939,
+        "outlet_id": "euronews",
+        "published_at": 1790585635
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "bbc": "BBC",
+    "euronews": "Euronews"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/28/turkish-comedian-deniz-goktas-on-trial-for-insulting-president-erdogan-in-standup-show",
+          "cluster_id": 785001445115155322,
+          "fetched_at": 1790653939,
+          "id": 15486557873182992211,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790585635,
+          "summary": "Göktaş's arrest was the latest in a widening crackdown on anyone seen as critical of Turkey's conservative government or its values, which has netted hundreds of politicians, artists, musicians, journalists and LGBTQ+ activists.",
+          "text_hash": 10465664675933020575,
+          "title": "Turkish comedian Deniz Göktaş on trial for insulting President Erdoğan in standup show"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bbc.co.uk/news/articles/c8zxzlqwzw0eo",
+          "cluster_id": 785001445115155322,
+          "fetched_at": 1790633633,
+          "id": 785001445115155322,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "bbc",
+          "published_at": 1790626992,
+          "summary": "Turkish comedian Deniz Göktaş also faces a travel ban but has been released due to time served.",
+          "text_hash": 8351903032442170528,
+          "title": "Stand-up comic released after being convicted of insulting Erdoğan"
+        }
+      ],
+      "outlet_id": "bbc"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 785001445115155322,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4490,
+      "snapshot_id": 16462822106586126355,
+      "ts": 1790715382
+    }
+  ]
+}

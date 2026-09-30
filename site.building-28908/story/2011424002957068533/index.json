@@ -1,0 +1,319 @@
+{
+  "claims": {
+    "justthenews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "justthenews.com",
+          "expires": "2028-07-23",
+          "last_changed": "2026-08-28",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "justthenews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/justthenews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-07-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2020-01-01"
+      }
+    ],
+    "newsmax": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "newsmax.com",
+          "expires": "2027-07-17",
+          "last_changed": "2026-07-17",
+          "registrar": "SafeNames Ltd.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "newsmax",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/newsmax.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-07-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1998-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_297#Is_Newsmax_reliable_for_the_best_Catholic_Colleges?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#Newsmax_interviewee's_opinions"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Newsmax",
+          "status": "deprecated",
+          "summary": "Newsmax was deprecated by snowball clause consensus in the November 2020 RfC. Concerns of editors included that Newsmax lacks adherence to journalistic standards, launders propaganda, promulgates misinformation, promotes conspiracy theories and false information for political purposes, and promotes medical misinformation such as COVID-19 -related falsehoods, climate change denialism, conspiracy th"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "newsmax",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "thehill": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": null
+    },
+    "created_at": 1790653930,
+    "expired": false,
+    "id": 2011424002957068533,
+    "item_count": 3,
+    "last_active_at": 1790653935,
+    "origin_item_id": 12320268668141137264,
+    "origin_outlet_id": "justthenews",
+    "outlet_count": 3,
+    "primary_title": "Vance, RFK Jr. to Headline MAHA Summit Amid Rift",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 2011424002957068533,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790636770
+      },
+      {
+        "item_id": 17764755686757086403,
+        "joined_at": 1790653934,
+        "outlet_id": "newsmax",
+        "published_at": 1790648621
+      },
+      {
+        "item_id": 12320268668141137264,
+        "joined_at": 1790653935,
+        "outlet_id": "justthenews",
+        "published_at": 1790553600
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "thehill"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "newsmax"
+          ]
+        }
+      ],
+      "not_rated": [
+        "justthenews"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "justthenews": "Just the News",
+    "newsmax": "Newsmax",
+    "thehill": "The Hill"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://justthenews.com/government/federal-agencies/vance-kennedy-headline-make-america-healthy-again-summit-week",
+          "cluster_id": 2011424002957068533,
+          "fetched_at": 1790653935,
+          "id": 12320268668141137264,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "justthenews",
+          "published_at": 1790553600,
+          "summary": "The all-day event will also feature other members of President Donald Trump's administration, including Secretary of Agriculture Brooke Rollins, CMS Administrator Dr. Mehmet Oz and EPA Administrator Lee Zeldin.",
+          "text_hash": 11318853212718497994,
+          "title": "Vance, Kennedy to headline 'Make America Healthy Again' summit this week"
+        }
+      ],
+      "outlet_id": "justthenews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehill.com/homenews/administration/6116342-vance-kennedy-maha-summit/",
+          "cluster_id": 2011424002957068533,
+          "fetched_at": 1790653930,
+          "id": 2011424002957068533,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790636770,
+          "summary": "Vice President Vance, Health and Human Services (HHS) Secretary Robert F. Kennedy Jr. and former boxing heavyweight Mike Tyson are slated to speak Tuesday for the second Make America Healthy Again (MAHA) Summit in Washington, D.C. The event will conclude with a “fireside chat” between Vance and Kennedy, the summit’s agenda online shows. Organizers told…",
+          "text_hash": 9549690613354742818,
+          "title": "Vance, RFK Jr., Mike Tyson to speak at MAHA Summit in DC"
+        }
+      ],
+      "outlet_id": "thehill"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://newsmax.com/politics/jd-vance-rfk-jr-maha/2026/09/28/id/1271000",
+          "cluster_id": 2011424002957068533,
+          "fetched_at": 1790653934,
+          "id": 17764755686757086403,
+          "joined_at": 1790653934,
+          "lang": "en",
+          "outlet_id": "newsmax",
+          "published_at": 1790648621,
+          "summary": "Vice President JD Vance and Health Secretary Robert F. Kennedy Jr. will speak at Tuesday's Make America Healthy Again summit, which some supporters say has forsaken the movement's original priorities.",
+          "text_hash": 14164741839410061394,
+          "title": "Vance, RFK Jr. to Headline MAHA Summit Amid Rift"
+        }
+      ],
+      "outlet_id": "newsmax"
+    }
+  ],
+  "withdrawals": []
+}

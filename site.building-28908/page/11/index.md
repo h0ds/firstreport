@@ -1,0 +1,54 @@
+# Stories, page 11 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Debunking Netanyahu’s Christian safe haven claim](/story/331017052896934917/) · 1 outlet · reach 1
+- [Helberg: US Building Factories Again - Who Will Run Them?](/story/1037072447496890259/) · 1 outlet · reach 1
+- [Saudi Arabia strengthens AI governance with unified risk framework](/story/1221769939853584985/) · 1 outlet · reach 1
+- [Berlin Marathon winner Tigst Assefa 'completely destroyed' her Achilles chasing world record](/story/1349679504382994013/) · 1 outlet · reach 1
+- [Ruthless An retains Asian Games badminton crown as Kunlavut triumphs](/story/2020501215471647891/) · 1 outlet · reach 1
+- [Spain, Portugal and Luxembourg push for 2040 EU renewable energy target](/story/3002022698040391699/) · 1 outlet · reach 1
+- [Islamic coalition, Senegal discuss security ties](/story/3746460575097637147/) · 1 outlet · reach 1
+- [IRS Drafts Citizenship Question for 2027 Tax Returns](/story/4083491035186173449/) · 1 outlet · reach 1
+- [EU top diplomat says bloc wants to ‘upgrade’ Syria partnership](/story/4541822688850091085/) · 1 outlet · reach 1
+- [Rasmussen: Dems Hold 6-Point Edge on Immigration](/story/4694231318533964217/) · 1 outlet · reach 1
+- [Italian food exports to Saudi Arabia near SR2.2b as 37 companies head to Jeddah](/story/4964419730994951740/) · 1 outlet · reach 1
+- [Senators Urge Rubio to Recognize Winner of Brazil's 2026 Presidential Vote](/story/5448595736776516389/) · 1 outlet · reach 1
+- [Rep. Roy to Newsmax: Stock Trading by Lawmakers Is 'Wrong'](/story/5976204128368825794/) · 1 outlet · reach 1
+- [Brazil come from behind to beat Australia 4-2 in friendly](/story/7589678494436894558/) · 1 outlet · reach 1
+- [100 days to go: Saudi Arabia showcases readiness for AFC Asian Cup 2027](/story/7967029603139251214/) · 1 outlet · reach 1
+- [Kingdom introduces all-inclusive Hajj package for 2027](/story/8219853661833304387/) · 1 outlet · reach 1
+- [Axios: Vance Ally Sen. Schmitt Emerges as 2028 VP Prospect](/story/8633413525159092456/) · 1 outlet · reach 1
+- [UN should move its headquarters from the US to Middle East](/story/8961830429398429750/) · 1 outlet · reach 1
+- [Saudi FM meets with heads of two US Senate committees in Washington](/story/9242111305910964489/) · 1 outlet · reach 1
+- [Sen. Hawley: Hold AI Companies Accountable](/story/11330406781265125400/) · 1 outlet · reach 1
+- [Where We Are Going Today: Kungfu 1919’s beef noodle soup will leave you craving more](/story/11454582511529522431/) · 1 outlet · reach 1
+- [Watchdog: Trump Can't Cancel $800 Million in Spending OK'd by Congress](/story/11493541706769748254/) · 1 outlet · reach 1
+- [SAB partners with Swift to enhance cross-border payments](/story/12627203330768233379/) · 1 outlet · reach 1
+- [White House Urges EU to Draw Down Diesel Inventories](/story/13073263591523916964/) · 1 outlet · reach 1
+- [Rep. Meuser to Newsmax: Unhappy Voters Won't Go 'Socialist'](/story/13596027598884798232/) · 1 outlet · reach 1
+- [Cartoon by Amjad Rasmi. (Courtesy of Asharq Al-Awsat)](/story/14409675516241058513/) · 1 outlet · reach 1
+- [Flippant response to Ben-Gvir’s vile idea a grave concern](/story/15082212044037247297/) · 1 outlet · reach 1
+- [Saudi Cabinet stresses importance of ensuring freedom of navigation in vital waterways](/story/15198984378949373088/) · 1 outlet · reach 1
+- [Saudi Embassy honors Kingdom’s candidate for WHO director general in Washington](/story/15484306957026177269/) · 1 outlet · reach 1
+- [Turkiye arrests president of football refereeing body](/story/15686112681895505188/) · 1 outlet · reach 1
+- [Lauren Bis to Newsmax: Caravan 'Will Not Be Allowed' Into US](/story/16265045873554880108/) · 1 outlet · reach 1
+- [Iraq begins importing gasoline via Syrian port to bypass the closed Strait of Hormuz](/story/16533903157304924163/) · 1 outlet · reach 1
+- [Joao Felix steps out of Ronaldo’s shadow for Al-Nassr and Portugal](/story/16844703644500887654/) · 1 outlet · reach 1
+- [Why we could not stop cholera in Sudan](/story/17629658595313966630/) · 1 outlet · reach 1
+- [Saudi and Bulgarian defense ministers discuss military cooperation and regional security](/story/17757636065600841753/) · 1 outlet · reach 1
+- [Turkey, now a major power in Somalia, dragged into internal conflicts](/story/17786009933868979804/) · 1 outlet · reach 1
+- [Closing Bell: Saudi main market slips 1.17%](/story/18019892712182308118/) · 1 outlet · reach 1
+- [Houthi missile hits Yemen government base in Lahj as mountain battles intensify](/story/18245226222243910694/) · 1 outlet · reach 1
+- [Iran’s Tabas UNESCO Global Geopark wins top two prizes in international competition](/story/2802360247287910485/) · 1 outlet · reach 1
+- [Iran’s Ali Alipour wins Asian Games gold in weightlifting with world-record total](/story/3495675399693647480/) · 1 outlet · reach 1
+- [Russia holds events under title of Iran’s Culture Week](/story/3991158286463411475/) · 1 outlet · reach 1
+- [Iran: Trump caught in ‘quagmire,’ unable to decide](/story/4002639716505774720/) · 1 outlet · reach 1
+- [Exclusive-Anthropic says rogue AI agents pose uncertain legal risk for the company](/story/5152110483377919104/) · 1 outlet · reach 1
+- [AI sector signed 'accord' with on technology standards, US House speaker says](/story/6243883782824551554/) · 1 outlet · reach 1
+- [Australian regulator to review banking sector AI use and customer impacts](/story/6719800928727761499/) · 1 outlet · reach 1
+- [Iranian engineering students hold lectures at US-bombed B1 mega-bridge](/story/6774411438643066736/) · 1 outlet · reach 1
+- [Republicans distancing themselves from Trump ahead of US midterms](/story/7985038059682693836/) · 1 outlet · reach 1
+- [Israel PM says 'indications' enemies will try to attack ahead of elections](/story/9562225389730256661/) · 1 outlet · reach 1
+- [OpenAI takes on Meta with dots agent in enterprise AI push](/story/14019128708471115170/) · 1 outlet · reach 1
+- [‘Wake up and wrest back control from corrupt politicians’: Snippets from IRGC’s letter to Americans](/story/15042933076120984483/) · 1 outlet · reach 1

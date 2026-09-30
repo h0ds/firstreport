@@ -1,0 +1,300 @@
+{
+  "claims": {
+    "bloomberg": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "bloomberg.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-09-24",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bloomberg.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1990-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q13977"
+        },
+        "field": "owner",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg L.P."
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_151#Bloomberg_on_Microsoft",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_270#Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bloomberg_News_/_Decision_not_to_investigate_Michael_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_499#Omitting_Bloomberg_from_India-Pak_Conflicts"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg (Bloomberg News, Bloomberg Businessweek)",
+          "status": "generally_reliable",
+          "summary": "Bloomberg publications, including Bloomberg News and Bloomberg Businessweek, are considered generally reliable for news and business topics. See also: Bloomberg profiles."
+        },
+        "field": "reliability",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#User_submitted_Executive_Profiles_on_Bloomberg.com"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg profiles",
+          "status": "no_consensus",
+          "summary": "Bloomberg company and executive profiles are generally considered to be based on company press releases and should only be used as a source for uncontroversial information. There is consensus that these profiles should not be used to establish notability. Some editors consider these profiles to be akin to self-published sources. See also: Bloomberg."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "newsmax": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "newsmax.com",
+          "expires": "2027-07-17",
+          "last_changed": "2026-07-17",
+          "registrar": "SafeNames Ltd.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "newsmax",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/newsmax.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-07-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1998-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_297#Is_Newsmax_reliable_for_the_best_Catholic_Colleges?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#Newsmax_interviewee's_opinions"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Newsmax",
+          "status": "deprecated",
+          "summary": "Newsmax was deprecated by snowball clause consensus in the November 2020 RfC. Concerns of editors included that Newsmax lacks adherence to journalistic standards, launders propaganda, promulgates misinformation, promotes conspiracy theories and false information for political purposes, and promotes medical misinformation such as COVID-19 -related falsehoods, climate change denialism, conspiracy th"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "newsmax",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.09971141815185547,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.819711446762085
+    },
+    "created_at": 1790715382,
+    "expired": false,
+    "id": 8752237013316849826,
+    "item_count": 2,
+    "last_active_at": 1790715392,
+    "origin_item_id": 8752237013316849826,
+    "origin_outlet_id": "bloomberg",
+    "outlet_count": 2,
+    "primary_title": "Trump Loses Bid to Pause Judge’s Sanctions in IRS Case Fight",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8752237013316849826,
+        "joined_at": 1790715382,
+        "outlet_id": "bloomberg",
+        "published_at": 1790702429
+      },
+      {
+        "item_id": 463405208669908769,
+        "joined_at": 1790715392,
+        "outlet_id": "newsmax",
+        "published_at": 1790705603
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "bloomberg"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "newsmax"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "bloomberg": "Bloomberg",
+    "newsmax": "Newsmax"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bloomberg.com/news/articles/2026-09-29/trump-loses-bid-to-pause-judge-s-sanctions-in-irs-case-fight",
+          "cluster_id": 8752237013316849826,
+          "fetched_at": 1790715382,
+          "id": 8752237013316849826,
+          "joined_at": 1790715382,
+          "lang": "en",
+          "outlet_id": "bloomberg",
+          "published_at": 1790702429,
+          "summary": "A US appeals court has refused to halt a Florida federal judge’s decision to penalize President Donald Trump and his lawyers for “bad faith” conduct in his $10 billion lawsuit against the Internal Revenue Service while he appeals.",
+          "text_hash": 104751585518438521,
+          "title": "Trump Loses Bid to Pause Judge’s Sanctions in IRS Case Fight"
+        }
+      ],
+      "outlet_id": "bloomberg"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://newsmax.com/politics/trump-irs-lawsuit/2026/09/29/id/1271097",
+          "cluster_id": 8752237013316849826,
+          "fetched_at": 1790715392,
+          "id": 463405208669908769,
+          "joined_at": 1790715392,
+          "lang": "en",
+          "outlet_id": "newsmax",
+          "published_at": 1790705603,
+          "summary": "A U.S. appeals court declined on Tuesday to immediately block sanctions against lawyers for President Donald Trump who a judge accused of misusing the court system in settling a lawsuit the president filed against the Internal Revenue Service.",
+          "text_hash": 3626580284732090454,
+          "title": "Appeals Court Denies Sanctions Pause Against Trump Lawyers in IRS Settlement"
+        }
+      ],
+      "outlet_id": "newsmax"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 8752237013316849826,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5429,
+      "snapshot_id": 1890353206085523820,
+      "ts": 1790716255
+    }
+  ]
+}

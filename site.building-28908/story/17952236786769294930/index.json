@@ -1,0 +1,150 @@
+{
+  "claims": {
+    "ndtv": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "ndtv.com",
+          "expires": "2032-09-25",
+          "last_changed": "2026-09-26",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "pending transfer"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ndtv",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/ndtv.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1988-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q4680631"
+        },
+        "field": "owner",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Adani Group"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.271425724029541,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.9914257526397705
+    },
+    "created_at": 1790715384,
+    "expired": false,
+    "id": 17952236786769294930,
+    "item_count": 2,
+    "last_active_at": 1790715384,
+    "origin_item_id": 1742446187582000549,
+    "origin_outlet_id": "ndtv",
+    "outlet_count": 1,
+    "primary_title": "9 Pak Soldiers Killed After First Woman Unit Of Baloch Rebels Attacks Convoy",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 17952236786769294930,
+        "joined_at": 1790715384,
+        "outlet_id": "ndtv",
+        "published_at": 1790687413
+      },
+      {
+        "item_id": 1742446187582000549,
+        "joined_at": 1790715384,
+        "outlet_id": "ndtv",
+        "published_at": 1790684795
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "ndtv": "NDTV"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://ndtv.com/world-news/9-pakistan-soldiers-killed-after-first-woman-unit-of-balochistan-rebels-attack-convoy-12114843",
+          "cluster_id": 17952236786769294930,
+          "fetched_at": 1790715384,
+          "id": 1742446187582000549,
+          "joined_at": 1790715384,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790684795,
+          "summary": "The footage shows first-person shots of a mission in Turbat during which Karima Armed Assault Division (KAAD) fighters holding rifles fired towards a three-vehicle Quick Response Force (QRF) convoy in Balochistan province on September 22.",
+          "text_hash": 2738807289766089896,
+          "title": "9 Pak Soldiers Killed After First Woman Unit Of Baloch Rebels Attack Convoy"
+        },
+        {
+          "canonical_url": "https://ndtv.com/world-news/9-pakistan-soldiers-killed-after-first-woman-unit-of-balochistan-rebels-attack-convoy-12114860",
+          "cluster_id": 17952236786769294930,
+          "fetched_at": 1790715384,
+          "id": 17952236786769294930,
+          "joined_at": 1790715384,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790687413,
+          "summary": "The footage shows first-person shots of a mission in Turbat during which Karima Armed Assault Division (KAAD) fighters holding rifles fired towards a three-vehicle Quick Response Force (QRF) convoy in Balochistan province on September 22.",
+          "text_hash": 2774800902362633384,
+          "title": "9 Pak Soldiers Killed After First Woman Unit Of Baloch Rebels Attacks Convoy"
+        }
+      ],
+      "outlet_id": "ndtv"
+    }
+  ],
+  "withdrawals": []
+}

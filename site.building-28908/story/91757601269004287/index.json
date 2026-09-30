@@ -1,0 +1,131 @@
+{
+  "claims": {
+    "ndtv": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "ndtv.com",
+          "expires": "2032-09-25",
+          "last_changed": "2026-09-26",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "pending transfer"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ndtv",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/ndtv.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1988-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q4680631"
+        },
+        "field": "owner",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Adani Group"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790659140,
+    "expired": false,
+    "id": 91757601269004287,
+    "item_count": 1,
+    "last_active_at": 1790659140,
+    "origin_item_id": 91757601269004287,
+    "origin_outlet_id": "ndtv",
+    "outlet_count": 1,
+    "primary_title": "Who Is Chirantan Desai? All About Meta's New Enterprise Platform Head",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 91757601269004287,
+        "joined_at": 1790659140,
+        "outlet_id": "ndtv",
+        "published_at": 1790653839
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "ndtv": "NDTV"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://ndtv.com/world-news/who-is-chirantan-desai-all-about-metas-new-enterprise-platform-head-12112456",
+          "cluster_id": 91757601269004287,
+          "fetched_at": 1790659140,
+          "id": 91757601269004287,
+          "joined_at": 1790659140,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790653839,
+          "summary": "Chirantan Desai will lead Meta Enterprise Platform in his new role. Meta said on Monday it would bring its AI models, agents and tools to businesses under its new Meta Enterprise Platform.",
+          "text_hash": 17155769494959131816,
+          "title": "Who Is Chirantan Desai? All About Meta's New Enterprise Platform Head"
+        }
+      ],
+      "outlet_id": "ndtv"
+    }
+  ],
+  "withdrawals": []
+}

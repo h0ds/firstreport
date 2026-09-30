@@ -1,0 +1,438 @@
+{
+  "claims": {
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehill": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "washingtontimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtontimes.com",
+          "expires": "2027-09-13",
+          "last_changed": "2026-07-30",
+          "registrar": "DNC Holdings, Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtontimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1982-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      },
+      {
+        "data": {
+          "qid": "Q217059"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Unification Church"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_328#RfC:_The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_209#Is_the_Washington_Times_an_acceptable_source_for_statements_of_fact_related_to_student_protesters/black_lives_matter/Milo_Yiannopoulos?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_316#Rebel_News"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Times",
+          "status": "no_consensus",
+          "summary": "There is consensus that The Washington Times is a marginally reliable source for politics and science. Most editors agree that it is a partisan source. Some editors noted a history of publishing inaccurate or false information, of being slow to issue retractions or corrections, and of sometimes only doing so under the threat of legal action; a considerable minority favored deprecation on these gro"
+        },
+        "field": "reliability",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 4,
+      "weakest_join": null
+    },
+    "created_at": 1790653930,
+    "expired": false,
+    "id": 16506327252844129190,
+    "item_count": 4,
+    "last_active_at": 1790653944,
+    "origin_item_id": 9969707678131489034,
+    "origin_outlet_id": "axios",
+    "outlet_count": 4,
+    "primary_title": "Hegseth instructs Pentagon to defend 2026 elections from ‘foreign actors’",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16506327252844129190,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790637983
+      },
+      {
+        "item_id": 9969707678131489034,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790624933
+      },
+      {
+        "item_id": 14813958931674449951,
+        "joined_at": 1790653933,
+        "outlet_id": "washingtontimes",
+        "published_at": 1790633702
+      },
+      {
+        "item_id": 16382721705662224998,
+        "joined_at": 1790653944,
+        "outlet_id": "anadolu",
+        "published_at": 1790642327
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "axios",
+            "thehill"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "washingtontimes"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "anadolu": "Anadolu Agency",
+    "axios": "Axios",
+    "thehill": "The Hill",
+    "washingtontimes": "The Washington Times"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/28/hegseth-elections-security-order",
+          "cluster_id": 16506327252844129190,
+          "fetched_at": 1790653931,
+          "id": 9969707678131489034,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790624933,
+          "summary": "Defense Secretary Pete Hegseth has assigned personnel to use \"advanced intelligence and cyber capabilities to identify, disrupt, and neutralize foreign interference\" in the upcoming elections, Axios has learned. Why it matters: The threat of foreign election interference has been a biennial U.S. concern for the past decade. This effort will use the most advanced artificial intelligence capabilities to date, officials said. Hegseth's order does not direct military personnel to the polls, but President Trump…",
+          "text_hash": 9876472419363913810,
+          "title": "Exclusive: Hegseth directs Defense Dept. to fight foreigners who \"meddle\" in U.S. elections"
+        }
+      ],
+      "outlet_id": "axios"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtontimes.com/news/2026/sep/28/pete-hegseth-memo-lays-pentagon-plan-protect-elections-foreign/",
+          "cluster_id": 16506327252844129190,
+          "fetched_at": 1790653933,
+          "id": 14813958931674449951,
+          "joined_at": 1790653933,
+          "lang": "en",
+          "outlet_id": "washingtontimes",
+          "published_at": 1790633702,
+          "summary": "Defense Secretary Pete Hegseth issued a memo Monday laying out what he said is the Defense Department's plan to protect the 2026 midterm elections from \"external manipulation and disruption from foreign actors.\"",
+          "text_hash": 10485282473366314081,
+          "title": "Hegseth memo lays out Pentagon plan to protect elections from foreign interference"
+        }
+      ],
+      "outlet_id": "washingtontimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehill.com/policy/defense/6116486-hegseth-prioritizes-cyber-election-security/",
+          "cluster_id": 16506327252844129190,
+          "fetched_at": 1790653930,
+          "id": 16506327252844129190,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790637983,
+          "summary": "Defense Secretary Pete Hegseth instructed the Pentagon last week to prioritize and deploy “advanced intelligence and cyber capabilities” to track down, disrupt and neutralize “foreign actors to protect the 2026 midterm elections” while “maintaining the fundamental freedoms that characterize our country.” “Commander U.S. Cyber Command and the Directors of the Combat Support Agencies will prioritize…",
+          "text_hash": 4974557264561130512,
+          "title": "Hegseth instructs Pentagon to defend 2026 elections from ‘foreign actors’"
+        }
+      ],
+      "outlet_id": "thehill"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/americas/us-defense-secretary-directs-pentagon-to-defend-midterm-elections-from-foreign-threats/4072097",
+          "cluster_id": 16506327252844129190,
+          "fetched_at": 1790653944,
+          "id": 16382721705662224998,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790642327,
+          "summary": "Directive calls on US Cyber Command and Pentagon’s combat support agencies to prioritize intelligence and cyber capabilities, statement says",
+          "text_hash": 2887248644489419921,
+          "title": "US defense secretary directs Pentagon to defend midterm elections from 'foreign threats'"
+        }
+      ],
+      "outlet_id": "anadolu"
+    }
+  ],
+  "withdrawals": []
+}

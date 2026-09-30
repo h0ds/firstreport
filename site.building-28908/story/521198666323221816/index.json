@@ -1,0 +1,349 @@
+{
+  "claims": {
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "presstv": [
+      {
+        "data": {
+          "qid": "Q794"
+        },
+        "field": "country",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Iran"
+      },
+      {
+        "data": {
+          "domain": "presstv.co.uk",
+          "expires": "2026-11-05",
+          "last_changed": "2024-11-04",
+          "registrar": "Ionos SE",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "presstv",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/presstv.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2006-11-05"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-07-08"
+      },
+      {
+        "data": {
+          "qid": "Q1674127"
+        },
+        "field": "owner",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Islamic Republic of Iran Broadcasting"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_Press_TV_on_Saudi_Arabian_protests",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_42#Press_TV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_108#Alex_Jones,_Mathaba,_Pravda,_and_PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_139#Press_TV_and_Veterans_Today_RS_for_their_contibutors",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_175#Using_Press_TV_for_reporting_Hamas_claims",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_190#Press_TV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Press_TV's_website"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Press TV",
+          "status": "deprecated",
+          "summary": "In the 2020 RfC, editors found a clear consensus to deprecate Press TV, owing to its status as an Iranian government propaganda outlet that publishes disinformation, conspiracy theories, antisemitic content including Holocaust denial, [ 24 ] and a host of other problematic content."
+        },
+        "field": "reliability",
+        "outlet_id": "presstv",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": null
+    },
+    "created_at": 1790653939,
+    "expired": false,
+    "id": 521198666323221816,
+    "item_count": 3,
+    "last_active_at": 1790654765,
+    "origin_item_id": 8155556248030045388,
+    "origin_outlet_id": "presstv",
+    "outlet_count": 3,
+    "primary_title": "Seven killed, dozens hurt in Saudi airstrike on Yemen market",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 521198666323221816,
+        "joined_at": 1790653939,
+        "outlet_id": "euronews",
+        "published_at": 1790519421
+      },
+      {
+        "item_id": 7964745059155813958,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790529834
+      },
+      {
+        "item_id": 8155556248030045388,
+        "joined_at": 1790654765,
+        "outlet_id": "presstv",
+        "published_at": 0
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "thehindu"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "presstv"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "euronews": "Euronews",
+    "presstv": "Press TV",
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://presstv.co.uk/Detail/2026/09/27/777131/Yemen-Saudi-attacks-market-Taiz",
+          "cluster_id": 521198666323221816,
+          "fetched_at": 1790654765,
+          "id": 8155556248030045388,
+          "joined_at": 1790654765,
+          "lang": "en",
+          "outlet_id": "presstv",
+          "published_at": 0,
+          "summary": "Saudi Arabia launched two attacks on a marketplace in the Yemeni city of Ta'iz, leaving some 50 people killed and injured.",
+          "text_hash": 8557076463003399311,
+          "title": "Saudi attacks on market in Yemen's Ta’iz leave 50 killed, injured"
+        }
+      ],
+      "outlet_id": "presstv"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/video/2026/09/27/seven-killed-dozens-hurt-in-saudi-airstrike-on-yemen-market",
+          "cluster_id": 521198666323221816,
+          "fetched_at": 1790653939,
+          "id": 521198666323221816,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790519421,
+          "summary": "Seven people were killed and 40 injured in a Saudi airstrike on a market in Yemen’s Taiz province, as Houthi forces advance and Saudi-led air raids intensify.",
+          "text_hash": 1110382293876722463,
+          "title": "Seven killed, dozens hurt in Saudi airstrike on Yemen market"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/people-killed-in-strike-on-market-in-yemen-houthi-run-health-ministry-says/article71515951.ece",
+          "cluster_id": 521198666323221816,
+          "fetched_at": 1790653942,
+          "id": 7964745059155813958,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790529834,
+          "summary": "Yemen’s internationally ‌recognised government ​said its forces had targeted a ⁠Houthi military camp and vehicles ‌at the same junction",
+          "text_hash": 14372321907700711687,
+          "title": "Seven people killed in strike on market in Yemen, Houthi-run health ministry says"
+        }
+      ],
+      "outlet_id": "thehindu"
+    }
+  ],
+  "withdrawals": []
+}

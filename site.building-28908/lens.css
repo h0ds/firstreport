@@ -1,0 +1,119 @@
+/* lens layouts on top of tokens.css (copied from design/). Three
+   layouts, no new objects: the timeline list, the label table, the
+   outlet story list. Sizes, line heights and spacing come only from
+   tokens (design/DESIGN.md §3, §4); the lens tests reject raw values. */
+main { max-width: var(--kg-measure); margin: 0 auto; padding: var(--kg-s6) var(--kg-s5) var(--kg-s9); }
+main.wide { max-width: var(--kg-measure-wide); }
+header.chrome { display: flex; align-items: baseline; justify-content: space-between; gap: var(--kg-s4); flex-wrap: wrap; padding-bottom: var(--kg-s4); margin-bottom: var(--kg-s6); border-bottom: 1px solid var(--kg-line); }
+header.chrome .kg-wordmark:hover { color: var(--kg-text); text-decoration: none; }
+
+/* headings: more space above than below (§4) */
+h1 { margin: 0 0 var(--kg-s2); }
+h2 { margin: var(--kg-s6) 0 var(--kg-s2); }
+h3 { margin: var(--kg-s5) 0 var(--kg-s2); }
+h1 + .kg-muted, h2 + .kg-muted { margin-bottom: var(--kg-s4); }
+
+/* prose: paragraphs and lists written straight into the page */
+/* Lists of stories or outlets (.stories) are not prose: their links are title links. */
+main > p:not(.kg-muted), main > ul:not(.stories), main > ol { max-width: 68ch; margin: 0 0 var(--kg-s4); }
+main > ul:not(.stories), main > ol { padding-left: var(--kg-s5); }
+main > ul:not(.stories) li + li, main > ol li + li { margin-top: var(--kg-s1); }
+main > p a, main > ul:not(.stories) a { text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
+main > p a:hover, main > ul:not(.stories) a:hover { text-decoration-color: currentColor; }
+
+.sep { color: var(--kg-line-strong); }
+
+/* timeline: one outlet per row, time column then content */
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li { display: grid; grid-template-columns: var(--kg-s8) 1fr; gap: var(--kg-s3); padding: var(--kg-s2) 0; border-top: 1px solid var(--kg-line); }
+.timeline .when { font-family: var(--kg-font-mono); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-body); color: var(--kg-text-secondary); }
+.timeline li.first .when { color: var(--kg-blue); }
+.timeline .outlet { font-weight: 600; color: var(--kg-text); margin-right: var(--kg-s2); }
+.timeline .outlet a { color: inherit; }
+.timeline .outlet a:hover { color: var(--kg-blue); }
+.timeline .hl { color: var(--kg-text); }
+.timeline .hl a { color: inherit; }
+.timeline .hl a:hover { color: var(--kg-blue); }
+.timeline .alt, .timeline .times { display: block; font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); margin-top: var(--kg-s1); }
+.timeline .alt a { color: inherit; text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
+.timeline .alt a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+
+.copy { font-family: var(--kg-font-mono); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-secondary); }
+
+/* story list: headline is a title link, counts sit right */
+.stories { list-style: none; margin: 0; padding: 0; }
+.stories li { display: flex; gap: var(--kg-s3); align-items: baseline; padding: var(--kg-s2) 0; border-top: 1px solid var(--kg-line); }
+.stories li > a { color: var(--kg-text); }
+.stories li > a:hover { color: var(--kg-blue); }
+.stories .n { margin-left: auto; white-space: nowrap; }
+.stories .n a, .stories .kg-muted a { color: inherit; text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
+.stories .n a:hover, .stories .kg-muted a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+.changes .alt { display: block; font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); }
+
+/* outlet names used as headings are title links */
+h3 a { color: inherit; }
+h3 a:hover { color: var(--kg-blue); }
+
+.kg-input.wide, input.wide { width: 100%; box-sizing: border-box; }
+.empty { color: var(--kg-text-muted); padding: var(--kg-s5) 0; }
+
+/* A section set apart on a tinted panel: "Spreading now". */
+.panel { background: var(--kg-bg-subtle); border: 1px solid var(--kg-line); border-radius: var(--kg-radius-card); padding: 0 var(--kg-s5) var(--kg-s3); margin-top: var(--kg-s6); }
+.panel h2 { margin-top: var(--kg-s5); }
+.panel .stories li:first-child { border-top: 0; }
+/* Spreading now: headline, then the chip and first outlet on the next line */
+.stories li.spread { flex-direction: column; align-items: flex-start; gap: var(--kg-s1); }
+.stories li.spread .n { margin-left: 0; display: inline-flex; align-items: center; gap: var(--kg-s2); white-space: normal; }
+
+/* Story list pager (design §5): arrowed text steps, mono page numbers with
+   the current one underlined like a tab, and a rail showing where this page
+   sits in the whole list. No boxes. */
+.pager { margin: var(--kg-s5) 0; }
+.pager .row { display: flex; align-items: center; justify-content: space-between; gap: var(--kg-s3); flex-wrap: wrap; font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); }
+.pager .step { min-height: var(--kg-s6); display: inline-flex; align-items: center; font-weight: 500; }
+.pager .step.off { color: var(--kg-line-strong); }
+.pager .pages { display: flex; align-items: center; gap: var(--kg-s1); font-family: var(--kg-font-mono); font-variant-numeric: tabular-nums; }
+.pager .pages a, .pager .pages .cur { min-width: var(--kg-s6); min-height: var(--kg-s6); display: inline-flex; align-items: center; justify-content: center; border-bottom: 2px solid transparent; color: var(--kg-text-secondary); }
+.pager .pages a:hover { color: var(--kg-blue); border-bottom-color: var(--kg-blue-soft); text-decoration: none; }
+.pager .pages .cur { color: var(--kg-text); font-weight: 600; border-bottom-color: var(--kg-blue); }
+.pager .gap { color: var(--kg-text-muted); }
+.pager .where { display: flex; align-items: center; gap: var(--kg-s3); margin-top: var(--kg-s2); }
+.pager .rail { position: relative; flex: 1; height: 2px; background: var(--kg-line); border-radius: 1px; }
+.pager .rail .pos { position: absolute; top: 0; bottom: 0; background: var(--kg-blue); border-radius: 1px; min-width: var(--kg-s1); }
+.pager .range { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Outlet page: fields as rows (design §5, dense claims) */
+.kg-field { display: grid; grid-template-columns: 176px 1fr; gap: var(--kg-s4); padding: var(--kg-s3) 0; border-top: 1px solid var(--kg-line); }
+.kg-field .fname { font-size: var(--kg-fs-ui); line-height: var(--kg-lh-body); font-weight: 500; color: var(--kg-text-secondary); }
+.kg-field .kg-claim { padding: 0; border-bottom: 0; }
+.kg-field .kg-claim + .kg-claim { margin-top: var(--kg-s3); }
+.kg-field .kg-claim .value { font-size: var(--kg-fs-body); line-height: var(--kg-lh-body); }
+@media (max-width: 720px) { .kg-field { grid-template-columns: 1fr; gap: var(--kg-s1); } }
+
+/* About the outlets on a story page: one row per outlet (design §5) */
+.kg-outlet-facts { list-style: none; margin: 0; padding: 0; }
+.kg-outlet-facts li { display: grid; grid-template-columns: 200px 1fr; gap: var(--kg-s3); padding: var(--kg-s2) 0; border-top: 1px solid var(--kg-line); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); }
+.kg-outlet-facts .facts { color: var(--kg-text-secondary); }
+.kg-outlet-facts .fact { color: var(--kg-text); text-decoration-line: underline; text-decoration-color: var(--kg-line); }
+.kg-outlet-facts .fact:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+.kg-outlet-facts .none { color: var(--kg-text-muted); }
+.kg-outlet-facts .sep { color: var(--kg-line-strong); }
+@media (max-width: 720px) { .kg-outlet-facts li { grid-template-columns: 1fr; gap: var(--kg-s1); } }
+
+/* Method, collapsed */
+.kg-method { margin-top: var(--kg-s6); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); color: var(--kg-text-secondary); }
+.kg-method summary { cursor: pointer; color: var(--kg-text-muted); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); }
+.kg-method ul { margin: var(--kg-s2) 0; padding-left: var(--kg-s5); }
+.kg-method li + li { margin-top: var(--kg-s1); }
+
+footer { margin-top: var(--kg-s8); padding-top: var(--kg-s4); border-top: 1px solid var(--kg-line); }
+footer a { color: inherit; text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
+footer a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+
+/* phones (§4): gutter drops to s4, two-column rows stack */
+@media (max-width: 720px) {
+  main { padding: var(--kg-s5) var(--kg-s4) var(--kg-s8); }
+  .stories li { flex-wrap: wrap; }
+  .stories .n { margin-left: 0; white-space: normal; }
+  .timeline li { grid-template-columns: 1fr; gap: var(--kg-s1); }
+}

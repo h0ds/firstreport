@@ -1,0 +1,593 @@
+{
+  "claims": {
+    "bloomberg": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "bloomberg.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-09-24",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bloomberg.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1990-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q13977"
+        },
+        "field": "owner",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg L.P."
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_151#Bloomberg_on_Microsoft",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_270#Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bloomberg_News_/_Decision_not_to_investigate_Michael_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_499#Omitting_Bloomberg_from_India-Pak_Conflicts"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg (Bloomberg News, Bloomberg Businessweek)",
+          "status": "generally_reliable",
+          "summary": "Bloomberg publications, including Bloomberg News and Bloomberg Businessweek, are considered generally reliable for news and business topics. See also: Bloomberg profiles."
+        },
+        "field": "reliability",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#User_submitted_Executive_Profiles_on_Bloomberg.com"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg profiles",
+          "status": "no_consensus",
+          "summary": "Bloomberg company and executive profiles are generally considered to be based on company press releases and should only be used as a source for uncontroversial information. There is consensus that these profiles should not be used to establish notability. Some editors consider these profiles to be akin to self-published sources. See also: Bloomberg."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "newsmax": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "newsmax.com",
+          "expires": "2027-07-17",
+          "last_changed": "2026-07-17",
+          "registrar": "SafeNames Ltd.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "newsmax",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/newsmax.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-07-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1998-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_297#Is_Newsmax_reliable_for_the_best_Catholic_Colleges?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#Newsmax_interviewee's_opinions"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Newsmax",
+          "status": "deprecated",
+          "summary": "Newsmax was deprecated by snowball clause consensus in the November 2020 RfC. Concerns of editors included that Newsmax lacks adherence to journalistic standards, launders propaganda, promulgates misinformation, promotes conspiracy theories and false information for political purposes, and promotes medical misinformation such as COVID-19 -related falsehoods, climate change denialism, conspiracy th"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "newsmax",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "pbs": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pbs.org",
+          "expires": "2027-04-20",
+          "last_changed": "2026-08-12",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "pbs",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/pbs.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1969-11-03"
+      },
+      {
+        "as_of": "2016",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_101#Emme_(model)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_135#Judaism:_The_oldest_monotheistic_religion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_150#Center_for_Investigative_Reporting",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_153#thinkprogress.org_as_a_generally_accepted_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_206#Pbs.org"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "PBS (Public Broadcasting Service)",
+          "status": "generally_reliable",
+          "summary": "The Public Broadcasting Service is an American public broadcaster. It is considered generally reliable by editors."
+        },
+        "field": "reliability",
+        "outlet_id": "pbs",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "theblaze": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "theblaze.com",
+          "expires": "2027-09-26",
+          "last_changed": "2026-08-25",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "theblaze",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theblaze.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2000-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2011-09-12"
+      },
+      {
+        "data": {
+          "qid": "Q6818648"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mercury Radio Arts"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Is_The_Blaze_a_WP:RS_for_America_(2014_film)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_227#Newsbusters_and_The_Blaze_at_WP:BLP_page_Malcolm_Nance_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_239#TheBlaze_show_Dana_etc._w_rgd_Dana_Loesch"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Blaze Media (BlazeTV, Conservative Review, CRTV, TheBlaze)",
+          "status": "generally_unreliable",
+          "summary": "Blaze Media (including TheBlaze) is considered generally unreliable for facts. In some cases, it may be usable for attributed opinions. In 2018, TheBlaze merged with Conservative Review (CRTV) to form Blaze Media. [ 3 ]"
+        },
+        "field": "reliability",
+        "outlet_id": "theblaze",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.05233520269393921,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": true,
+      "unscored": 2,
+      "weakest_join": 0.7723352313041687
+    },
+    "created_at": 1790680910,
+    "expired": false,
+    "id": 2144685897655024128,
+    "item_count": 5,
+    "last_active_at": 1790724344,
+    "origin_item_id": 2144685897655024128,
+    "origin_outlet_id": "bloomberg",
+    "outlet_count": 5,
+    "primary_title": "Trump Launches America.gov AI Tool to Simplify User Navigation of Online Government Services",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 2144685897655024128,
+        "joined_at": 1790680910,
+        "outlet_id": "bloomberg",
+        "published_at": 1790680297
+      },
+      {
+        "item_id": 11163486099796256299,
+        "joined_at": 1790715381,
+        "outlet_id": "breitbart",
+        "published_at": 1790702445
+      },
+      {
+        "item_id": 2325468563367275184,
+        "joined_at": 1790715392,
+        "outlet_id": "newsmax",
+        "published_at": 1790708938
+      },
+      {
+        "item_id": 7763635472620381662,
+        "joined_at": 1790723830,
+        "outlet_id": "theblaze",
+        "published_at": 1790721595
+      },
+      {
+        "item_id": 5997283679987127992,
+        "joined_at": 1790724344,
+        "outlet_id": "pbs",
+        "published_at": 1790698309
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "bloomberg",
+            "pbs"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "theblaze"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "newsmax"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "bloomberg": "Bloomberg",
+    "breitbart": "Breitbart",
+    "newsmax": "Newsmax",
+    "pbs": "PBS NewsHour",
+    "theblaze": "TheBlaze"
+  },
+  "outlets_24h": 5,
+  "outlets_6h": 4,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    3,
+    4,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bloomberg.com/news/newsletters/2026-09-29/trump-gathers-with-tech-leaders-and-unveils-ai-tool",
+          "cluster_id": 2144685897655024128,
+          "fetched_at": 1790680910,
+          "id": 2144685897655024128,
+          "joined_at": 1790680910,
+          "lang": "en",
+          "outlet_id": "bloomberg",
+          "published_at": 1790680297,
+          "summary": "A new government website touts streamlined services, but tests how much Americans trust AI.",
+          "text_hash": 4733720657400064259,
+          "title": "Trump Gathers With Tech Leaders and Unveils AI Tool"
+        }
+      ],
+      "outlet_id": "bloomberg"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://pbs.org/newshour/politics/watch-trump-launches-ai-powered-government-website-america-gov",
+          "cluster_id": 2144685897655024128,
+          "fetched_at": 1790715375,
+          "id": 5997283679987127992,
+          "joined_at": 1790724344,
+          "lang": "en",
+          "outlet_id": "pbs",
+          "published_at": 1790698309,
+          "summary": "The president said the site is \"glamorizing\" the federal bureaucracy — but it doesn't agree with him on many key issues.",
+          "text_hash": 2907786753083425465,
+          "title": "WATCH: Trump launches AI-powered government website America.gov"
+        }
+      ],
+      "outlet_id": "pbs"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/politics/2026/09/29/trump-launches-america-gov-ai-tool-to-simplify-user-navigation-of-online-government-services/",
+          "cluster_id": 2144685897655024128,
+          "fetched_at": 1790715381,
+          "id": 11163486099796256299,
+          "joined_at": 1790715381,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790702445,
+          "summary": "President Donald Trump launched a user-friendly AI tool, America.gov, on Tuesday to make online government services much easier for citizens to navigate. The post Trump Launches America.gov AI Tool to Simplify User Navigation of Online Government Services appeared first on Breitbart .",
+          "text_hash": 4974838783676449172,
+          "title": "Trump Launches America.gov AI Tool to Simplify User Navigation of Online Government Services"
+        }
+      ],
+      "outlet_id": "breitbart"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://newsmax.com/politics/donald-trump-america-gov-artificial-intelligence/2026/09/29/id/1271108",
+          "cluster_id": 2144685897655024128,
+          "fetched_at": 1790715392,
+          "id": 2325468563367275184,
+          "joined_at": 1790715392,
+          "lang": "en",
+          "outlet_id": "newsmax",
+          "published_at": 1790708938,
+          "summary": "Trump Unveils America.gov, Says AI Portal Could Transform How Americans Deal With GovernmentPresident Donald Trump on Tuesday unveiled America.gov, an artificial intelligence-powered portal designed to give Americans a single entry point for navigating federal government...",
+          "text_hash": 957059925246030191,
+          "title": "Trump: New AI Website Could Change How Americans Deal With Government"
+        }
+      ],
+      "outlet_id": "newsmax"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theblaze.com/news/trump-ai-website-access-govt",
+          "cluster_id": 2144685897655024128,
+          "fetched_at": 1790723830,
+          "id": 7763635472620381662,
+          "joined_at": 1790723830,
+          "lang": "en",
+          "outlet_id": "theblaze",
+          "published_at": 1790721595,
+          "summary": "The White House announced the launch of a new website powered by artificial intelligence that streamlines access to services offered by the federal government. The \"America.gov\" website includes a chatbot of which users can ask questions and get directed to government resources from hundreds of agencies. 'We’re simplifying it. We’re glamorizing it. We’re making it what it should be.' President Donald Trump signed an order directing government agencies to connect to the website on Friday. \"With America.gov,…",
+          "text_hash": 5437018068316061635,
+          "title": "Trump launches new AI-powered website to streamline access to the federal government"
+        }
+      ],
+      "outlet_id": "theblaze"
+    }
+  ],
+  "withdrawals": []
+}

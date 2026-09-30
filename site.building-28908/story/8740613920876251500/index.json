@@ -1,0 +1,421 @@
+{
+  "claims": {
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "dailysabah": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      },
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "democracynow": [
+      {
+        "data": {
+          "domain": "democracynow.org",
+          "expires": "2027-09-10",
+          "last_changed": "2026-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "auto renew period"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "democracynow",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/democracynow.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-09-10"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard#RfC:_update_Democracy_Now!_from_WP:MREL_to_WP:GENREL?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_40#Democracy_Now!",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_71#Democracy_Now_source_article_\"Cheering_Movers_and_Art_Student_Spies\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_84#Democracy_Now!_and_CounterPunch",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_96#Democracy_Now",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_144#Democracy_Now!_in_general"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Democracy Now!",
+          "status": "no_consensus",
+          "summary": "There is no consensus on the reliability of Democracy Now!. Most editors consider Democracy Now! a partisan source whose statements should be attributed. Syndicated content published by Democracy Now! should be evaluated by the reliability of its original publisher."
+        },
+        "field": "reliability",
+        "outlet_id": "democracynow",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.0043182373046875,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": 0.724318265914917
+    },
+    "created_at": 1790653942,
+    "expired": false,
+    "id": 8740613920876251500,
+    "item_count": 5,
+    "last_active_at": 1790715386,
+    "origin_item_id": 8740613920876251500,
+    "origin_outlet_id": "thehindu",
+    "outlet_count": 4,
+    "primary_title": "Israel's Gaza genocide death toll passes 74,000 as killings continue",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8740613920876251500,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790502348
+      },
+      {
+        "item_id": 11186092015145190985,
+        "joined_at": 1790653944,
+        "outlet_id": "dailysabah",
+        "published_at": 1790503860
+      },
+      {
+        "item_id": 17207904253655208883,
+        "joined_at": 1790679063,
+        "outlet_id": "anadolu",
+        "published_at": 1790671312
+      },
+      {
+        "item_id": 16525530672443484486,
+        "joined_at": 1790715372,
+        "outlet_id": "dailysabah",
+        "published_at": 1790683620
+      },
+      {
+        "item_id": 13595449505303389347,
+        "joined_at": 1790715386,
+        "outlet_id": "democracynow",
+        "published_at": 1790685012
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "thehindu"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "democracynow"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu",
+            "dailysabah"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "anadolu": "Anadolu Agency",
+    "dailysabah": "Daily Sabah",
+    "democracynow": "Democracy Now!",
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/palestinian-death-toll-in-gaza-war-crosses-74000-health-ministry/article71515541.ece",
+          "cluster_id": 8740613920876251500,
+          "fetched_at": 1790653942,
+          "id": 8740613920876251500,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790502348,
+          "summary": "A ceasefire that took effect on October 10 has halted the heaviest fighting, Israeli strikes have continued, with the military saying they are in response to threats or attacks",
+          "text_hash": 2345295940471561559,
+          "title": "Palestinian death toll in Gaza war crosses 74,000: Health Ministry"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailysabah.com/world/mid-east/israels-gaza-genocide-death-toll-passes-74000-as-killings-continue",
+          "cluster_id": 8740613920876251500,
+          "fetched_at": 1790653944,
+          "id": 11186092015145190985,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790503860,
+          "summary": "The Palestinian death toll in Israel's genocidal war on Gaza has crossed 74,000, with one more person killed Sunday in Israeli attacks that also injured seven others, medical sourc...",
+          "text_hash": 1498215701591689301,
+          "title": "Israel's Gaza genocide death toll passes 74,000 as killings continue"
+        },
+        {
+          "canonical_url": "https://dailysabah.com/world/mid-east/israel-continues-violence-intimidation-across-palestinian-territories",
+          "cluster_id": 8740613920876251500,
+          "fetched_at": 1790715372,
+          "id": 16525530672443484486,
+          "joined_at": 1790715372,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790683620,
+          "summary": "Israel killed three more Palestinians in Gaza on Tuesday, marking its continued violation of a U.S.-backed truce, while extremist Jewish groups stormed the Ibrahimi and Al-Aqsa mos...",
+          "text_hash": 1403387149231265616,
+          "title": "Israel continues violence, intimidation across Palestinian territories"
+        }
+      ],
+      "outlet_id": "dailysabah"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/middle-east/gaza-authorities-report-over-5-100-israeli-ceasefire-violations-warn-of-imminent-catastrophe-as-winter-approaches/4072341",
+          "cluster_id": 8740613920876251500,
+          "fetched_at": 1790679063,
+          "id": 17207904253655208883,
+          "joined_at": 1790679063,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790671312,
+          "summary": "Violations since Oct. 10 killed 1,421 Palestinians as humanitarian conditions worsen nearly a year into ceasefire, Government Media Office says",
+          "text_hash": 3283464555216821095,
+          "title": "Gaza authorities report over 5,100 Israeli ceasefire violations, warn of ‘imminent catastrophe’ as winter approaches"
+        }
+      ],
+      "outlet_id": "anadolu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "http://democracynow.org/2026/9/29/muhammad_shehada",
+          "cluster_id": 8740613920876251500,
+          "fetched_at": 1790715386,
+          "id": 13595449505303389347,
+          "joined_at": 1790715386,
+          "lang": "en",
+          "outlet_id": "democracynow",
+          "published_at": 1790685012,
+          "summary": "The Palestinian death toll from Israel’s war on Gaza has surpassed 74,000, according to the Ministry of Health in Gaza. While this figure represents the official death toll as confirmed by local authorities, the true number could be much higher when missing people and indirect deaths are taken into account, such as from disease, exposure, denial of medical treatment and the destruction of civic infrastructure. And since the so-called ceasefire brokered by Trump last October, nearly 1,400 Palestinians have…",
+          "text_hash": 7399532003964063055,
+          "title": "\"Buying More Time for the Genocide\": Muhammad Shehada on Trump's Gaza Plan 1 Year Later"
+        }
+      ],
+      "outlet_id": "democracynow"
+    }
+  ],
+  "withdrawals": []
+}

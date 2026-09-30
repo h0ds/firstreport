@@ -1,0 +1,100 @@
+{
+  "claims": {
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790654497,
+    "expired": false,
+    "id": 9459313540858848146,
+    "item_count": 1,
+    "last_active_at": 1790654497,
+    "origin_item_id": 9459313540858848146,
+    "origin_outlet_id": "japantimes",
+    "outlet_count": 1,
+    "primary_title": "America is running out of weapons. Blame Congress.",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9459313540858848146,
+        "joined_at": 1790654497,
+        "outlet_id": "japantimes",
+        "published_at": 1790654040
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japantimes": "The Japan Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/commentary/2026/09/29/world/us-running-out-of-weapons/",
+          "cluster_id": 9459313540858848146,
+          "fetched_at": 1790654497,
+          "id": 9459313540858848146,
+          "joined_at": 1790654497,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790654040,
+          "summary": "The U.S. is facing a \"munitions shortage,\" with stockpiles of critical offensive and defensive missiles severely depleted and shrinking.",
+          "text_hash": 10847462198905193382,
+          "title": "America is running out of weapons. Blame Congress."
+        }
+      ],
+      "outlet_id": "japantimes"
+    }
+  ],
+  "withdrawals": []
+}

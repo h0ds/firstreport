@@ -1,0 +1,623 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "thegatewaypundit.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.8635
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.86 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "thegatewaypundit.com",
+          "expires": "2031-01-27",
+          "last_changed": "2026-01-20",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thegatewaypundit.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2011-01-27"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2004-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q27881073"
+        },
+        "field": "legal_form",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "fake news website"
+      },
+      {
+        "data": {
+          "qid": "Q7210258"
+        },
+        "field": "legal_form",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "political blog"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "thegatewaypundit.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.thegatewaypundit.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "The Gateway Pundit"
+      },
+      {
+        "field": "name",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Gateway Pundit"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 17,
+          "origin_of": 0,
+          "shared_stories": 4,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/gatewaypundit",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 0% of 4 stories other outlets also carried"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 17,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/gatewaypundit",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.2 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "thegatewaypundit.com"
+        },
+        "field": "registrar",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thegatewaypundit.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "GoDaddy.com, LLC"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_278#RfC:_\"The_Gateway_Pundit\"_(October)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_256#Among_low-quality_sources,_the_most_popular_websites_are_right-wing_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Gateway Pundit (TGP)",
+          "status": "deprecated",
+          "summary": "The Gateway Pundit was deprecated in the 2019 RfC, which showed consensus that the site is unacceptable as a source. It is unreliable for statements of fact, and given to publishing hoax articles and reporting conspiracy theories as fact."
+        },
+        "field": "reliability",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 17,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/gatewaypundit",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "thegatewaypundit.com",
+          "final_url": "https://www.thegatewaypundit.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.thegatewaypundit.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.thegatewaypundit.com/about/",
+          "contact": "https://www.thegatewaypundit.com/contact/",
+          "domain": "thegatewaypundit.com",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.thegatewaypundit.com/privacy-policy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.thegatewaypundit.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 17,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/gatewaypundit",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.thegatewaypundit.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q30589935"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Gateway_Pundit"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 17,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/gatewaypundit",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 2,
+  "items": 42,
+  "outlet": {
+    "domains": [
+      "thegatewaypundit.com"
+    ],
+    "id": "gatewaypundit",
+    "name": "The Gateway Pundit"
+  },
+  "shared_stories": 16,
+  "stories": [
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 3373977240165332470,
+      "outlet_count": 8,
+      "title": "Venezuelan man shot by ICE officer in Texas is charged with assault"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 3322863658697567134,
+      "outlet_count": 18,
+      "title": "Justices Let Deportations to 3rd Countries Resume While Weighing Policy"
+    },
+    {
+      "created_at": 1790715371,
+      "first": false,
+      "id": 12673064130074651214,
+      "outlet_count": 2,
+      "title": "Romanian court rules to detain pro-Russian former presidential candidate pending fraud probe"
+    },
+    {
+      "created_at": 1790723122,
+      "first": true,
+      "id": 13967508967591839478,
+      "outlet_count": 1,
+      "title": "Washington’s Counter-ISIS Partner in Syria Built Its Army Around Jihadists"
+    },
+    {
+      "created_at": 1790715379,
+      "first": false,
+      "id": 7695855586285115353,
+      "outlet_count": 5,
+      "title": "Hegseth to Cut Pentagon Posts Held for Generals, Admirals"
+    },
+    {
+      "created_at": 1790721299,
+      "first": true,
+      "id": 3249630829195059196,
+      "outlet_count": 1,
+      "title": "RAF Fairford Does Not Add Up: U.K. Bails Terror Suspects as Trump Says He Would Not"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 8106670854367570244,
+      "outlet_count": 2,
+      "title": "WATCH: DHS Says New Honduran Migrant Caravan Has ‘Zero Chance’ of Reaching the U.S. Border"
+    },
+    {
+      "created_at": 1790720189,
+      "first": false,
+      "id": 11569771414248437199,
+      "outlet_count": 2,
+      "title": "Judge orders Mamdani to redo pied-à-terre tax rollout"
+    },
+    {
+      "created_at": 1790720207,
+      "first": true,
+      "id": 9990627192340123016,
+      "outlet_count": 1,
+      "title": "EXCLUSIVE VIDEO: California Man Drives To Washington, DC To Advocate Against The Surveillance State"
+    },
+    {
+      "created_at": 1790717963,
+      "first": true,
+      "id": 16493378847662401362,
+      "outlet_count": 1,
+      "title": "Explosive Court Documents Reveal Disturbing New Details Regarding Transgender New York Times Employee Allegedly Murdered by His In-Laws"
+    },
+    {
+      "created_at": 1790717963,
+      "first": true,
+      "id": 14541863655146765347,
+      "outlet_count": 1,
+      "title": "Time Is Running Out on These 0% APR Offers – Here’s What You Could Miss"
+    },
+    {
+      "created_at": 1790717963,
+      "first": true,
+      "id": 13033231475899039759,
+      "outlet_count": 1,
+      "title": "DEVELOPING: Flash Flood Emergency Issued in New Mexico Over “Imminent Failure” of Major Dam – “SEEK HIGHER GROUND NOW”"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 9378438701147307814,
+      "outlet_count": 10,
+      "title": "Lindsay Clancy's lawyer makes stunning argument in first hearing since recent mistrial"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 6756377619052216904,
+      "outlet_count": 2,
+      "title": "UNBELIEVABLE: Fox News Hires Disgraced Cuomo Aide Who Covered Up COVID Nursing Home Deaths to Co-Host New Podcast"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 6145015774610586088,
+      "outlet_count": 2,
+      "title": "Rubio says Americans will be able to apply for passports online next year through new portal"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 15612404507510769058,
+      "outlet_count": 5,
+      "title": "NFL asks Department of Homeland Security to remove Brian Dawkins video from immigration post"
+    },
+    {
+      "created_at": 1790659140,
+      "first": false,
+      "id": 5662166384588561854,
+      "outlet_count": 6,
+      "title": "Dennis Haskins, Best Known For Playing Mr. Belding in “Saved by the Bell” Dead at 75"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 15758310140143522130,
+      "outlet_count": 1,
+      "title": "Attorney Kurt Olsen Resigns from RICO Grande Case – Will Remain at DOJ"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 14213582414411273073,
+      "outlet_count": 1,
+      "title": "Oops! Adam Schiff Accidentally Shows Image of Murder of Trump Supporter Roseanne Boyland by Cops on Steps of US Capitol During Jack Smith Hearing"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 13626484458541225472,
+      "outlet_count": 1,
+      "title": "Widow Whose Husband “Suffocated Slowly” Tells Senate How Doctors Killed Him After Ivermectin Started Working"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 10669228834903513728,
+      "outlet_count": 1,
+      "title": "Arkansas Governor Sarah Huckabee Sanders Sparks Massive Conservative Uproar After Releasing This Politically Correct Anti-Welfare Ad (VIDEO)"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 9326158079578778599,
+      "outlet_count": 1,
+      "title": "Watch Live: Jack Smith Collected PERSONAL Checks From Americans Who Donated to Trump – Seized Records of Communication Between Journalists and Trump Officials and More! The WAR Zone Podcast With Wayne Allyn Root Presented by The Gateway Pundit"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 8072304496884125502,
+      "outlet_count": 2,
+      "title": "Holdout Juror’s Lawyer Tells Kayleigh McEnany He Will File Bar Complaint Against Lindsay Clancy Attorney: “100%” — Says Reddington “Lost His Mind”"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 7976303052765856954,
+      "outlet_count": 1,
+      "title": "Rep. Anna Paulina Luna Threatens US Entry Ban on Germany’s Anti-Democratic AfD-Ban Advocates"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 6369854986363722778,
+      "outlet_count": 1,
+      "title": "WATCH: Trump Says Nobody Can Complain About Voter ID With America.gov, “Nobody Will Have Any Excuse” on the SAVE America Act"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 567295233623426158,
+      "outlet_count": 1,
+      "title": "The Best Conservative Ad for the Midterms Is Not an Ad – It’s a Video by Conservative Momma on X"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 272387524877392378,
+      "outlet_count": 1,
+      "title": "Syrian Kurds Face Uncertain Future as U.S. Military Presence Recedes and SDF Dissolves"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 15750130260219553612,
+      "outlet_count": 2,
+      "title": "Kentucky State Trooper Fatally Shot During Traffic Stop – Armed and Dangerous Suspect Taken Into Custody Following Statewide Manhunt"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 18016220423477242902,
+      "outlet_count": 1,
+      "title": "James Talarico ONCE AGAIN Invokes the Name of Jesus to Push Far Left Political Policies (VIDEO)"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 16432992179846152346,
+      "outlet_count": 1,
+      "title": "WHAT’S HAPPENING: 5 Suicides Reported in 5 Weeks at U.S. Cyber Command in Fort Meade"
+    },
+    {
+      "created_at": 1790633635,
+      "first": false,
+      "id": 16085861509285035954,
+      "outlet_count": 2,
+      "title": "Democrat Rep. Kevin Mullin Pushes Bill to Redefine BB Guns as Firearms"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 13879467630585859846,
+      "outlet_count": 1,
+      "title": "Surgeon at Hospital That Treated First U.S. COVID Patient Claims Fraud, Deadly Protocols and Retaliation — Says Infectious Disease Chief Worked With State to “Restrict the Civil Rights of Unvaccinated People”"
+    },
+    {
+      "created_at": 1790649504,
+      "first": false,
+      "id": 13072744713268953058,
+      "outlet_count": 2,
+      "title": "Boston Mayor Michelle Wu Pays Illegals $575 to Take Political Activism Class, U.S.-Born Residents Not Allowed"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 13052548091719364372,
+      "outlet_count": 1,
+      "title": "“THAT WAS STUPID”: Leftist Professor Scott Galloway Dumped All His Stocks Out of Trump Derangement Syndrome — Then Cost Himself a Fortune"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 12597014330773324715,
+      "outlet_count": 1,
+      "title": "“NEED HELP”: Widow Delivers Harrowing Testimony at Sen. Ron Johnson’s COVID Hospital Roundtable — Says Husband Was Ventilated Without Consent and Repeatedly Written Off Because He Was Unvaccinated"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 11970009620792044627,
+      "outlet_count": 1,
+      "title": "Former Congressman George Santos Just Torched the Uniparty: “They’re All Full of Absolute Sh*t… at the End of the Day, it Ends in Pizza”"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 11483547720295536293,
+      "outlet_count": 1,
+      "title": "WATCH: Lone Holdout Clancy Juror Breaks His Silence in Video Message"
+    },
+    {
+      "created_at": 1790633635,
+      "first": false,
+      "id": 10701196854035563241,
+      "outlet_count": 2,
+      "title": "AOC Suggests 'Tuition-Free Public Colleges' to 'Rein In Runaway Cost at Private Institutions'"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 9828877006485567842,
+      "outlet_count": 1,
+      "title": "Victor Reacts: Mass Deportations and Border Security Are the Moderate Solutions to Foreign Invasion (VIDEO)"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 7306190504395206405,
+      "outlet_count": 1,
+      "title": "Tom Homan Fires Warning Shot to Illegals in Migrant Caravan Marching Toward US Border (VIDEO)"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 4033998899398293970,
+      "outlet_count": 1,
+      "title": "Huckabee Announces Update on New US Embassy in Jerusalem Project"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 477272413933402324,
+      "outlet_count": 1,
+      "title": "Biden-Appointed Canadian-born Judge Blocks Trump Administration From Tying FEMA Anti-Terrorism Grants to Election Security Requirements"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

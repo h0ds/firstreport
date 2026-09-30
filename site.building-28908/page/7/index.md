@@ -1,0 +1,54 @@
+# Stories, page 7 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Loopholes and shady practices taint U.S. surrogacy industry](/story/6774250682648260129/) · 1 outlet · reach 1
+- [Afghan girls who study in secret want you to read their "letters to the world"](/story/9302358721562535342/) · 1 outlet · reach 1
+- [Troops say Army ignored request for more medical support before deadly attack](/story/9381138443662507046/) · 1 outlet · reach 1
+- [The World Runs on Diesel](/story/11145480062507280448/) · 1 outlet · reach 1
+- [Pentagon Signs $20 Billion Boeing Deal For 6th-Generation Strike Fighter](/story/4273596407911619241/) · 1 outlet · reach 1
+- [Monster hurricane barrels toward US with ‘34 trillion gallons of rainfall’ — and what it means for California](/story/7402232894165223311/) · 1 outlet · reach 1
+- [NYU professor Scott Galloway regrets ‘stupid’ decision to sell off stocks following Trump 2016 win: ‘Biggest investment mistake’](/story/9993422553086054588/) · 1 outlet · reach 1
+- [Scientists identify new species of penguin in subantarctic waters — the first in over a century](/story/11034620562646679598/) · 1 outlet · reach 1
+- [Yankees vs. Red Sox: Channel, Where To Watch Yanks-Sox For Free](/story/15687274501194307063/) · 1 outlet · reach 1
+- [Prince Harry and Meghan Markle’s plans for $14M Montecito mansion revealed after UK move](/story/16239723841664121585/) · 1 outlet · reach 1
+- [Waste Of The Day: Trips To Tiki Bar, Nightclubs](/story/10956080323118575090/) · 1 outlet · reach 1
+- [Lakers roll with changes to kick off Luka Doncic era: ‘A great first day’](/story/4126884943973365629/) · 1 outlet · reach 1
+- [Andre Drummond feels custom-built to fill Knicks’ Mitchell Robinson void](/story/6632213732480206482/) · 1 outlet · reach 1
+- [Don Mattingly explains decision that backfired in Phillies’ heartbreaking wild-card loss to Braves](/story/17085013801786807396/) · 1 outlet · reach 1
+- [Ex-Council Speaker Christine Quinn may be out of politics — but she’s still ready to help NYC](/story/17832586779042696119/) · 1 outlet · reach 1
+- [Jacob & Co’s new watch plays two melodies from The Godfather](/story/16461194989139088051/) · 1 outlet · reach 1
+- [Ayad Akhtar blurs fiction and reality in new novel, 'The Radiance'](/story/9882592149322182749/) · 1 outlet · reach 1
+- [UN holds 4th straw poll in race to succeed Secretary-General Guterres](/story/11437973191519584514/) · 1 outlet · reach 1
+- [Obama wants the filibuster gone and speech ruled: ‘What’s going to change isn’t the change you want’](/story/14778102807080342154/) · 1 outlet · reach 1
+- [Sen. Paul to Newsmax: GOP Faces 'Triple Whammy'](/story/5379333180753558480/) · 1 outlet · reach 1
+- [Dershowitz to Newsmax: High Court Owes Litigants 'Reasoned Judgments'](/story/15615623643656182605/) · 1 outlet · reach 1
+- [Jake Tapper chides Trump's 'pinky promise to behave' with AI leaders](/story/4588665052546235852/) · 1 outlet · reach 1
+- [Former Connecticut housing authority exec charged with $16.2 million loan fraud](/story/12197790411942780837/) · 1 outlet · reach 1
+- [Antisemitism at UK universities is increasing, security charity says](/story/9189223027001241157/) · 1 outlet · reach 1
+- [Athletics player Zack Gelof sues Detroit Tigers after getting hurt in their stadium](/story/4044276342834569745/) · 1 outlet · reach 1
+- [England break down stubborn Czechs to claim first Nations League win](/story/3414528666523961638/) · 1 outlet · reach 1
+- [Carney accuses U.S. steelmaker of betraying Canadian workers after layoffs tied to Trump tariffs](/story/17324161224980023135/) · 1 outlet · reach 1
+- [Trader Joe’s, Welch’s slapped with lawsuits over ingredients lurking in ‘sugar-free’ foods](/story/15614457686519167052/) · 1 outlet · reach 1
+- [Feds urged to crack down on fake passports, green cards along NYC’s Roosevelt Avenue](/story/16928900047401732749/) · 1 outlet · reach 1
+- [Ex-GOP strategist warns Republicans 'caught in a trap' as Trump comes to their districts](/story/5216678059378275797/) · 1 outlet · reach 1
+- [Washington’s Counter-ISIS Partner in Syria Built Its Army Around Jihadists](/story/13967508967591839478/) · 1 outlet · reach 1
+- [Hochul dodges weighing in on Mamdani’s antisemitism plan](/story/8968815468225251143/) · 1 outlet · reach 1
+- [49ers work out multiple players, including Jerry Rice’s son and former UCLA quarterback](/story/16467135255742006852/) · 1 outlet · reach 1
+- [Commander rejected plans to rebase before deadly drone strike, sources say](/story/660556435615629866/) · 1 outlet · reach 1
+- [The story behind the first CIA officers in Afghanistan after 9/11](/story/3566743586597358743/) · 1 outlet · reach 1
+- [Photos show widespread damage at U.S. positions caused by Iranian attacks](/story/5942879970481155300/) · 1 outlet · reach 1
+- [ICE deportees in Africa describe being stranded "on the other side of the world"](/story/9100877280489991114/) · 1 outlet · reach 1
+- [U.S. to welcome up to 17,500 more White South Africans as refugees](/story/18165958605410780946/) · 1 outlet · reach 1
+- [Xavier Becerra mocked migrant kids as ‘little Juanitos’, ex-Biden official claims](/story/2593592592009303773/) · 1 outlet · reach 1
+- [NYC charity God’s Love We Deliver receives gift from Global Citizen Festival — after concert was canceled from storm](/story/8649093995537105040/) · 1 outlet · reach 1
+- [Iran publishes propaganda letter urging US voters to punish Trump in midterm elections](/story/18314383115149408367/) · 1 outlet · reach 1
+- [The best early deals to shop ahead of Walmart Deal Days](/story/4391157335382435581/) · 1 outlet · reach 1
+- [While You Were Sleeping: 5 stories you might have missed, Sept 29, 2026](/story/4130165621540026667/) · 1 outlet · reach 1
+- [Yankees must use their biggest advantage in lefty-heavy series with Red Sox](/story/15118518192902377665/) · 1 outlet · reach 1
+- [Affordability and accountability top priorities if Democrats take House, Jeffries says](/story/17944306348799547368/) · 1 outlet · reach 1
+- [Democrats gear up to tank data center legislation](/story/9780382616921361693/) · 1 outlet · reach 1
+- [AI Trade & OpenAI Developer Day](/story/14204395466901348284/) · 1 outlet · reach 1
+- [Arvell Reese was EVERYWHERE in Giants win over Titans | Blue Rush](/story/280320627331682902/) · 1 outlet · reach 1
+- [Joe Buck speaks out on simmering Troy Aikman-ESPN contract drama](/story/9728103830924094288/) · 1 outlet · reach 1
+- [UAE's Next $25 Billion Bet On India Includes Energy Sector](/story/9888368247593937239/) · 1 outlet · reach 1

@@ -1,0 +1,187 @@
+{
+  "claims": {
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790658738,
+    "expired": false,
+    "id": 15643348190125304175,
+    "item_count": 1,
+    "last_active_at": 1790658738,
+    "origin_item_id": 15643348190125304175,
+    "origin_outlet_id": "guardian",
+    "outlet_count": 1,
+    "primary_title": "Sarah Hanson-Young announces Greens leadership tilt after MPs blindsided by Larissa Waters’ shock resignation",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15643348190125304175,
+        "joined_at": 1790658738,
+        "outlet_id": "guardian",
+        "published_at": 1790656725
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "guardian": "The Guardian"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 15643348190125304175,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3535,
+      "snapshot_id": 7594052691693507672,
+      "ts": 1790667673
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/australia-news/2026/sep/29/larissa-waters-resignation-greens-leadership-contenders",
+          "cluster_id": 15643348190125304175,
+          "fetched_at": 1790658738,
+          "id": 15643348190125304175,
+          "joined_at": 1790658738,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790656725,
+          "summary": "New leader expected to be chosen imminently, with David Shoebridge, Faruqi and Hanson-Young among frontrunners Follow our Australia news live blog for latest updates Get our breaking news email , free app or daily news podcast Greens Sarah Hanson-Young and Mehreen Faruqi look set to face off for the party’s leadership, with the pair both promising to bring the fight to Labor and One Nation after Larissa Waters’ shock resignation . Hanson-Young confirmed on social media she was discussing a tilt at the…",
+          "text_hash": 11242486457648110257,
+          "title": "Sarah Hanson-Young and Mehreen Faruqi announce Greens leadership tilt after Larissa Waters’ shock resignation"
+        }
+      ],
+      "outlet_id": "guardian"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 15643348190125304175,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4169,
+      "snapshot_id": 4532026368929717868,
+      "ts": 1790679368
+    }
+  ]
+}

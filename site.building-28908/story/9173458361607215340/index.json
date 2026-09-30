@@ -1,0 +1,399 @@
+{
+  "claims": {
+    "abcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "abcnews.com",
+          "expires": "2027-04-21",
+          "last_changed": "2026-03-22",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/abcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-20"
+      },
+      {
+        "data": {
+          "domain": "go.com",
+          "expires": "2027-01-08",
+          "last_changed": "2025-12-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/go.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-01-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1945-06-15"
+      },
+      {
+        "data": {
+          "qid": "Q169889"
+        },
+        "field": "owner",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "American Broadcasting Company"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "ABC News (USA)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+        },
+        "field": "reliability",
+        "outlet_id": "abcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "gbnews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      },
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": null
+    },
+    "created_at": 1790653931,
+    "expired": false,
+    "id": 9173458361607215340,
+    "item_count": 3,
+    "last_active_at": 1790653938,
+    "origin_item_id": 9173458361607215340,
+    "origin_outlet_id": "abcnews",
+    "outlet_count": 3,
+    "primary_title": "Australian court rejects activist’s bid to prosecute King Charles for genocide",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9173458361607215340,
+        "joined_at": 1790653931,
+        "outlet_id": "abcnews",
+        "published_at": 1790595935
+      },
+      {
+        "item_id": 7682319024062226461,
+        "joined_at": 1790653938,
+        "outlet_id": "gbnews",
+        "published_at": 1790598688
+      },
+      {
+        "item_id": 4794525498312832001,
+        "joined_at": 1790653938,
+        "outlet_id": "independent",
+        "published_at": 1790599289
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "abcnews",
+            "independent"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "gbnews"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcnews": "ABC News",
+    "gbnews": "GB News",
+    "independent": "The Independent"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/australian-court-rejects-activists-bid-prosecute-britains-king-136817323",
+          "cluster_id": 9173458361607215340,
+          "fetched_at": 1790653931,
+          "id": 9173458361607215340,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790595935,
+          "summary": "Three Australian appellate judges have rejected an activist’s landmark bid to prosecute Britain’s King Charles III over the alleged genocide of Indigenous people",
+          "text_hash": 7879636070961816018,
+          "title": "Australian court rejects bid to prosecute Britain's King Charles for genocide"
+        }
+      ],
+      "outlet_id": "abcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://gbnews.com/royal/royal-news-activist-prosecute-king-charles-alleged-genocide-appeal-rejected-courts",
+          "cluster_id": 9173458361607215340,
+          "fetched_at": 1790653938,
+          "id": 7682319024062226461,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790598688,
+          "summary": "An Indigenous elder activist trying to prosecute King Charles for alleged genocide against Aboriginal people has had his appeal rejected by a panel of three judges in the Australian state of Victoria. The decision, made by the Court of Appeal, represents the third time Uncle Robbie Thorpe has faced defeat in his legal campaign. The honorific \"uncle\" is a term of respect accorded to elders within Indigenous Australian communities. It began in 2023, when he first sought to launch a private prosecution…",
+          "text_hash": 2456737136125761029,
+          "title": "Activist trying to prosecute King Charles for alleged genocide has appeal rejected by courts"
+        }
+      ],
+      "outlet_id": "gbnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/australasia/king-charles-genocide-australia-court-b3057594.html",
+          "cluster_id": 9173458361607215340,
+          "fetched_at": 1790653938,
+          "id": 4794525498312832001,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790599289,
+          "summary": "The ruling by three judges leaves Uncle Robbie Thorpe with one final domestic option",
+          "text_hash": 12851029031304955934,
+          "title": "Australian court rejects activist’s bid to prosecute King Charles for genocide"
+        }
+      ],
+      "outlet_id": "independent"
+    }
+  ],
+  "withdrawals": []
+}

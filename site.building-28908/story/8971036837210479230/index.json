@@ -1,0 +1,409 @@
+{
+  "claims": {
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": null
+    },
+    "created_at": 1790653941,
+    "expired": false,
+    "id": 8971036837210479230,
+    "item_count": 3,
+    "last_active_at": 1790653942,
+    "origin_item_id": 6072749686645361289,
+    "origin_outlet_id": "straitstimes",
+    "outlet_count": 3,
+    "primary_title": "US to grant sanctions waiver for flights between Iran and Iraq’s Najaf, source says",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8971036837210479230,
+        "joined_at": 1790653941,
+        "outlet_id": "scmp",
+        "published_at": 1790620109
+      },
+      {
+        "item_id": 6072749686645361289,
+        "joined_at": 1790653941,
+        "outlet_id": "straitstimes",
+        "published_at": 1790617962
+      },
+      {
+        "item_id": 16912753682673161057,
+        "joined_at": 1790653942,
+        "outlet_id": "arabnews",
+        "published_at": 1790629992
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "scmp",
+            "straitstimes"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "arabnews": "Arab News",
+    "scmp": "South China Morning Post",
+    "straitstimes": "The Straits Times"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 8971036837210479230,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3271,
+      "snapshot_id": 11948770510014339861,
+      "ts": 1790661469
+    },
+    {
+      "cluster_id": null,
+      "item_id": 16912753682673161057,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3415,
+      "snapshot_id": 6521313604474705576,
+      "ts": 1790665583
+    }
+  ],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/middle-east/us-to-grant-sanctions-waiver-for-flights-between-iran-and-iraqs-najaf-source-says",
+          "cluster_id": 8971036837210479230,
+          "fetched_at": 1790653941,
+          "id": 6072749686645361289,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790617962,
+          "summary": "Sept 28 - US President Donald Trump's administration was set to grant a limited waiver to its Iran sanctions program on Monday to allow for flights carrying Shi'ite Muslim religious pilgrims between Iran and Iraq, a person with direct knowledge of the matter said.",
+          "text_hash": 3427580253646779627,
+          "title": "US to grant sanctions waiver for flights between Iran and Iraq's Najaf, source says"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/world/middle-east/article/3369111/us-grant-sanctions-waiver-flights-between-iran-and-iraqs-najaf-source-says",
+          "cluster_id": 8971036837210479230,
+          "fetched_at": 1790653941,
+          "id": 8971036837210479230,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790620109,
+          "summary": "US President Donald Trump’s administration was set to grant a limited waiver to its Iran sanctions programme on Monday to allow for flights carrying Shiite Muslim religious pilgrims between Iran and Iraq, a person with direct knowledge of the matter said. The source, who is involved ‌in the deliberations, said the US Treasury Department waiver would allow Iraqi Airways to fly back and forth between Iran and the Shiite holy city of Najaf in Iraq for one month, with a more permanent waiver...",
+          "text_hash": 3437150476138853835,
+          "title": "US set to grant sanctions waiver for Iran-Iraq pilgrim flights"
+        }
+      ],
+      "outlet_id": "scmp"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/middle-east/us-to-grant-sanctions-waiver-for-flights-between-iran-and-iraqs-najaf-source-says-3003630",
+          "cluster_id": 8971036837210479230,
+          "fetched_at": 1790653942,
+          "id": 16912753682673161057,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790629992,
+          "summary": "BAGHDAD: US President Donald Trump’s administration ​was set to grant a limited waiver to its Iran sanctions program on Monday to allow for flights carrying Shiite Muslim religious pilgrims between Iran and Iraq, a person with direct knowledge of the matter said. The source, who is involved in the deliberations, said the US Treasury Department waiver would allow Iraqi Airways to fly back and forth between Iran and the Shiite holy city of Najaf in Iraq for one month, with a more permanent waiver",
+          "text_hash": 3425891339614729611,
+          "title": "US to grant sanctions waiver for flights between Iran and Iraq’s Najaf, source says"
+        }
+      ],
+      "outlet_id": "arabnews"
+    }
+  ],
+  "withdrawals": []
+}

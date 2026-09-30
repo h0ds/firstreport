@@ -1,0 +1,871 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "bbc": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "bbc.com",
+          "expires": "2030-07-14",
+          "last_changed": "2021-07-06",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1989-07-15"
+      },
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "expires": "2034-12-13",
+          "last_changed": "2025-10-29",
+          "registrar": "British Broadcasting Corporation",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-13"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_495#RfC:_reliability_of_the_BBC",
+            "#cite_note-9"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "BBC (British Broadcasting Corporation)",
+          "status": "generally_reliable",
+          "summary": "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
+        },
+        "field": "reliability",
+        "outlet_id": "bbc",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "france24": [
+      {
+        "data": {
+          "domain": "france24.com",
+          "expires": "2026-12-01",
+          "last_changed": "2026-04-21",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "france24",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/france24.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-12-01"
+      },
+      {
+        "data": {
+          "qid": "Q166180"
+        },
+        "field": "owner",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France 24"
+      }
+    ],
+    "gbnews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      },
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "rt": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "rt.com",
+          "expires": "2027-09-22",
+          "last_changed": "2026-09-21",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rt",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rt.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-09-23"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-09-15"
+      },
+      {
+        "data": {
+          "qid": "Q821172"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "RIA Novosti"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#RfC:_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Enquiry_concerning_the_RT_Network",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_168#RT_news_and_Crimean_status_referendum,_2014",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_173#Russia_Today",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Attributed_statement_sourced_by_RT_news_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_231#RT_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#On_Contact_/_RT",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Ruptly,_subsidiary_of_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)",
+          "status": "deprecated",
+          "summary": "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
+        },
+        "field": "reliability",
+        "outlet_id": "rt",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "skynews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "sky.com",
+          "expires": "2027-06-17",
+          "last_changed": "2019-08-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "skynews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sky.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1988-03-31"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1989-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q918390"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Sky Group"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Alleged_war_crimes_by_Russians_in_Syria",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_334#Sky_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#LBC_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_458#Sky_News_caught_manipulating_footage"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sky News (UK)",
+          "status": "generally_reliable",
+          "summary": "Sky News (UK) is considered an ordinary WP:NEWSORG and is thus presumed generally reliable. Sky News UK is unaffiliated with Sky News Australia. Sky News UK has partial ownership of Sky News Arabia."
+        },
+        "field": "reliability",
+        "outlet_id": "skynews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "washingtontimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtontimes.com",
+          "expires": "2027-09-13",
+          "last_changed": "2026-07-30",
+          "registrar": "DNC Holdings, Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtontimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1982-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      },
+      {
+        "data": {
+          "qid": "Q217059"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Unification Church"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_328#RfC:_The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_209#Is_the_Washington_Times_an_acceptable_source_for_statements_of_fact_related_to_student_protesters/black_lives_matter/Milo_Yiannopoulos?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_316#Rebel_News"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Times",
+          "status": "no_consensus",
+          "summary": "There is consensus that The Washington Times is a marginally reliable source for politics and science. Most editors agree that it is a partisan source. Some editors noted a history of publishing inaccurate or false information, of being slow to issue retractions or corrections, and of sometimes only doing so under the threat of legal action; a considerable minority favored deprecation on these gro"
+        },
+        "field": "reliability",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.1352131962776184,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 5,
+      "weakest_join": 0.8552132248878479
+    },
+    "created_at": 1790653933,
+    "expired": false,
+    "id": 11336663336944555363,
+    "item_count": 8,
+    "last_active_at": 1790715383,
+    "origin_item_id": 11336663336944555363,
+    "origin_outlet_id": "washingtontimes",
+    "outlet_count": 8,
+    "primary_title": "Argentina threatens legal action against UK over Falkland Islands oil exploration",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 11336663336944555363,
+        "joined_at": 1790653933,
+        "outlet_id": "washingtontimes",
+        "published_at": 1790634070
+      },
+      {
+        "item_id": 1447405718553618394,
+        "joined_at": 1790653938,
+        "outlet_id": "gbnews",
+        "published_at": 1790642778
+      },
+      {
+        "item_id": 17821695194686267172,
+        "joined_at": 1790653939,
+        "outlet_id": "france24",
+        "published_at": 1790648020
+      },
+      {
+        "item_id": 13085490520352388554,
+        "joined_at": 1790653944,
+        "outlet_id": "anadolu",
+        "published_at": 1790649881
+      },
+      {
+        "item_id": 14563350976650740058,
+        "joined_at": 1790654964,
+        "outlet_id": "bbc",
+        "published_at": 1790653840
+      },
+      {
+        "item_id": 17229253087858131282,
+        "joined_at": 1790679060,
+        "outlet_id": "aljazeera",
+        "published_at": 1790673442
+      },
+      {
+        "item_id": 16764512987516061552,
+        "joined_at": 1790679061,
+        "outlet_id": "skynews",
+        "published_at": 1790669880
+      },
+      {
+        "item_id": 865730131926087473,
+        "joined_at": 1790715383,
+        "outlet_id": "rt",
+        "published_at": 1790683239
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "bbc",
+            "skynews"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "washingtontimes"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu",
+            "gbnews"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "rt"
+          ]
+        }
+      ],
+      "not_rated": [
+        "france24"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "anadolu": "Anadolu Agency",
+    "bbc": "BBC",
+    "france24": "France 24",
+    "gbnews": "GB News",
+    "rt": "RT",
+    "skynews": "Sky News",
+    "washingtontimes": "The Washington Times"
+  },
+  "outlets_24h": 8,
+  "outlets_6h": 1,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 17821695194686267172,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3716,
+      "snapshot_id": 4536792467572262101,
+      "ts": 1790670510
+    }
+  ],
+  "spark": [
+    5,
+    5,
+    5,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8,
+    8,
+    8,
+    8
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtontimes.com/news/2026/sep/28/argentinas-president-javier-milei-threatens-international-legal/",
+          "cluster_id": 11336663336944555363,
+          "fetched_at": 1790653933,
+          "id": 11336663336944555363,
+          "joined_at": 1790653933,
+          "lang": "en",
+          "outlet_id": "washingtontimes",
+          "published_at": 1790634070,
+          "summary": "Argentine President Javier Milei said Monday that his government would seek international arbitration against the U.K. over an oil project off the disputed, U.K.-controlled Falkland Islands, escalating a clash over resources that could transform the economy of the sparsely populated South Atlantic archipelago.",
+          "text_hash": 6404361052345740062,
+          "title": "Argentina's President Milei threatens international legal action over Falklands oilfield"
+        }
+      ],
+      "outlet_id": "washingtontimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://gbnews.com/news/falkland-islands-argentina-britain-chagos-islands",
+          "cluster_id": 11336663336944555363,
+          "fetched_at": 1790653938,
+          "id": 1447405718553618394,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790642778,
+          "summary": "Argentina has given Britain a two-week deadline to stop any oil drilling off the coast of the Falkland Islands or risk a legal battle under \"international law\". In his latest furious intervention, President Javier Milei said he had told Government lawyers to start proceedings under the UN Convention on the Law of the Sea. His threat centres on the Sea Lion project in the North Falkland basin , run by Israeli firm Navitas Petroleum with the UK's Rockhopper Exploration as a minority partner. He claimed the…",
+          "text_hash": 7436060208622594995,
+          "title": "Argentina vows to haul Britain to court over Falklands after watching Labour try to 'surrender' Chagos Islands"
+        }
+      ],
+      "outlet_id": "gbnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://france24.com/en/americas/20260929-argentina-milei-arbitration-falklands-oil-project",
+          "cluster_id": 11336663336944555363,
+          "fetched_at": 1790653939,
+          "id": 17821695194686267172,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790648020,
+          "summary": "Argentine President Javier Milei on Monday threatened to sue the UK over the Sea Lion oil project near the disputed Falkland Islands. Argentina claims sovereignty over the British-administered territory, where a 1982 war killed 255 British and 649 Argentine troops. Developers Navitas and Rockhopper say they hold valid British-issued exploration licences.",
+          "text_hash": 5784297981134167355,
+          "title": "Argentina’s Milei threatens to sue UK over Falkland Islands oil project"
+        }
+      ],
+      "outlet_id": "france24"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/americas/argentina-warns-uk-over-oil-project-around-falkland-islands/4072105",
+          "cluster_id": 11336663336944555363,
+          "fetched_at": 1790653944,
+          "id": 13085490520352388554,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790649881,
+          "summary": "President Javier Milei says Buenos Aires will take legal action over what it considers illegal exploitation of natural resources",
+          "text_hash": 7070921306771083792,
+          "title": "Argentina warns UK over oil project around Falkland Islands"
+        }
+      ],
+      "outlet_id": "anadolu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bbc.co.uk/news/articles/cq5yj1835y1wo",
+          "cluster_id": 11336663336944555363,
+          "fetched_at": 1790654964,
+          "id": 14563350976650740058,
+          "joined_at": 1790654964,
+          "lang": "en",
+          "outlet_id": "bbc",
+          "published_at": 1790653840,
+          "summary": "President Javier Milei set a two-week deadline for the Sea Lion oilfield project to be scrapped.",
+          "text_hash": 8310752597856074570,
+          "title": "Argentina threatens legal action against UK over Falkland Islands oil exploration"
+        }
+      ],
+      "outlet_id": "bbc"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://news.sky.com/story/argentina-threatens-uk-with-legal-action-over-falklands-oil-exploration-13593128",
+          "cluster_id": 11336663336944555363,
+          "fetched_at": 1790679061,
+          "id": 16764512987516061552,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "skynews",
+          "published_at": 1790669880,
+          "summary": "Argentina's president has threatened the UK with legal action over an oil project off the coast of the Falklands.",
+          "text_hash": 18088211284947996691,
+          "title": "Argentina threatens UK with legal action over Falklands oil exploration"
+        }
+      ],
+      "outlet_id": "skynews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/29/argentinas-milei-threatens-legal-action-over-falklands-oil-project?traffic_source=rss",
+          "cluster_id": 11336663336944555363,
+          "fetched_at": 1790679060,
+          "id": 17229253087858131282,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790673442,
+          "summary": "Argentina gives UK two weeks to cease operations or face maritime court action.",
+          "text_hash": 9235824977250139087,
+          "title": "Argentina’s Milei threatens legal action over Falklands oil project"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rt.com/news/646406-argentina-uk-falklands-oil/",
+          "cluster_id": 11336663336944555363,
+          "fetched_at": 1790715383,
+          "id": 865730131926087473,
+          "joined_at": 1790715383,
+          "lang": "en",
+          "outlet_id": "rt",
+          "published_at": 1790683239,
+          "summary": "Argentinian President Javier Milei has demanded that the UK stop oil exploration near the disputed Falkland Islands Read Full Article at RT.com",
+          "text_hash": 5326974292330053217,
+          "title": "Argentina demands UK halt Malvinas/Falklands oil project"
+        }
+      ],
+      "outlet_id": "rt"
+    }
+  ],
+  "withdrawals": []
+}

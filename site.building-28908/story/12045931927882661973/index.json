@@ -1,0 +1,319 @@
+{
+  "claims": {
+    "france24": [
+      {
+        "data": {
+          "domain": "france24.com",
+          "expires": "2026-12-01",
+          "last_changed": "2026-04-21",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "france24",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/france24.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-12-01"
+      },
+      {
+        "data": {
+          "qid": "Q166180"
+        },
+        "field": "owner",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France 24"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "zerohedge": [
+      {
+        "data": {
+          "domain": "zerohedge.com",
+          "expires": "2027-01-11",
+          "last_changed": "2026-01-10",
+          "registrar": "easyDNS Technologies Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/zerohedge.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2009-01-11"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2009-01-09"
+      },
+      {
+        "data": {
+          "qid": "Q56547225"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daniel Ivandjiiski"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_302#RfC:_Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_199#ZeroHedge_Blog_post_by_\"Tyler_Durden\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_238#Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#rate_\"Zero_Hedge\""
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Zero Hedge (ZeroHedge, ZH)",
+          "status": "deprecated",
+          "summary": "Zero Hedge was deprecated in the 2020 RfC due to its propagation of conspiracy theories. It is a self-published blog that is biased or opinionated."
+        },
+        "field": "reliability",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.03445315361022949,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.754453182220459
+    },
+    "created_at": 1790653941,
+    "expired": false,
+    "id": 12045931927882661973,
+    "item_count": 3,
+    "last_active_at": 1790715381,
+    "origin_item_id": 12045931927882661973,
+    "origin_outlet_id": "straitstimes",
+    "outlet_count": 3,
+    "primary_title": "Russia strikes two Kyiv data centres, cargo vessels in the Black Sea",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 12045931927882661973,
+        "joined_at": 1790653941,
+        "outlet_id": "straitstimes",
+        "published_at": 1790610447
+      },
+      {
+        "item_id": 3729831340717248537,
+        "joined_at": 1790679060,
+        "outlet_id": "france24",
+        "published_at": 1790678157
+      },
+      {
+        "item_id": 1510311280714233144,
+        "joined_at": 1790715381,
+        "outlet_id": "zerohedge",
+        "published_at": 1790695800
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "straitstimes"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "zerohedge"
+          ]
+        }
+      ],
+      "not_rated": [
+        "france24"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "france24": "France 24",
+    "straitstimes": "The Straits Times",
+    "zerohedge": "ZeroHedge"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/russia-says-it-hit-cargo-vessels-bound-for-ukraine-telecoms-infrastructure-in-kyiv",
+          "cluster_id": 12045931927882661973,
+          "fetched_at": 1790653941,
+          "id": 12045931927882661973,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790610447,
+          "summary": "MOSCOW, Sept 28 - Russia's Defence Ministry said on Monday its forces had struck fuel and telecommunications infrastructure in Kyiv, as well as several cargo vessels that it alleged were supplying the Ukrainian military.",
+          "text_hash": 7464996751750204616,
+          "title": "Russia says it hit cargo vessels bound for Ukraine, telecoms infrastructure in Kyiv"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://france24.com/en/europe/20260929-russia-strikes-two-kyiv-data-centres-cargo-vessels-in-the-black-sea",
+          "cluster_id": 12045931927882661973,
+          "fetched_at": 1790679060,
+          "id": 3729831340717248537,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790678157,
+          "summary": "Ukrainian President Volodymyr Zelensky said Tuesday that Russia launched a wave of overnight strikes across Ukraine, hitting two foreign-flagged vessels in the Black Sea and targets in Kyiv. The strikes come as Russia ramps up its pressure campaign intended to make Ukraine buckle under near-constant bombardment of its capital and other cities.",
+          "text_hash": 15066892514287022834,
+          "title": "Russia strikes two Kyiv data centres, cargo vessels in the Black Sea"
+        }
+      ],
+      "outlet_id": "france24"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://zerohedge.com/geopolitical/russias-drones-zero-ukraines-data-centers-mobile-providers",
+          "cluster_id": 12045931927882661973,
+          "fetched_at": 1790715381,
+          "id": 1510311280714233144,
+          "joined_at": 1790715381,
+          "lang": "en",
+          "outlet_id": "zerohedge",
+          "published_at": 1790695800,
+          "summary": "Russia's Drones Zero In On Ukraine's Data Centers, Mobile Providers The Russian defense ministry on Tuesday indicated that it attacked and struck two military cargo vessels in the Black Sea as well as two data centers in the Ukrainian capital overnight. The vessels, which were sailing foreign flags, were struck off Odessa, President Zelensky also confirmed in a Tuesday statement. DSNS Ukraine The Kyiv region along with ten other areas came under attack overnight, Zelensky acknowledged. But it is the…",
+          "text_hash": 14732521264352197881,
+          "title": "Russia's Drones Zero In On Ukraine's Data Centers, Mobile Providers"
+        }
+      ],
+      "outlet_id": "zerohedge"
+    }
+  ],
+  "withdrawals": []
+}

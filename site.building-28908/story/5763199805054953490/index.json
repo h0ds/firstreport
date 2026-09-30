@@ -1,0 +1,218 @@
+{
+  "claims": {
+    "abcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "abcnews.com",
+          "expires": "2027-04-21",
+          "last_changed": "2026-03-22",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/abcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-20"
+      },
+      {
+        "data": {
+          "domain": "go.com",
+          "expires": "2027-01-08",
+          "last_changed": "2025-12-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/go.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-01-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1945-06-15"
+      },
+      {
+        "data": {
+          "qid": "Q169889"
+        },
+        "field": "owner",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "American Broadcasting Company"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "ABC News (USA)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+        },
+        "field": "reliability",
+        "outlet_id": "abcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.11627888679504395,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.8362789154052734
+    },
+    "created_at": 1790663984,
+    "expired": false,
+    "id": 5763199805054953490,
+    "item_count": 2,
+    "last_active_at": 1790715390,
+    "origin_item_id": 5763199805054953490,
+    "origin_outlet_id": "japantimes",
+    "outlet_count": 2,
+    "primary_title": "Vietnam arrests three on terrorism charges, including Norwegian and Australian citizens",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 5763199805054953490,
+        "joined_at": 1790663984,
+        "outlet_id": "japantimes",
+        "published_at": 1790663280
+      },
+      {
+        "item_id": 11265912942273375510,
+        "joined_at": 1790715390,
+        "outlet_id": "abcnews",
+        "published_at": 1790687988
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcnews": "ABC News",
+    "japantimes": "The Japan Times"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/news/2026/09/29/asia-pacific/vietnam-norwegian-australian-terrorism/",
+          "cluster_id": 5763199805054953490,
+          "fetched_at": 1790663984,
+          "id": 5763199805054953490,
+          "joined_at": 1790663984,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790663280,
+          "summary": "Vietnam's Ministry of Public Security said the three men had admitted to being members of Viet Tan, a U.S.-based pro-democracy group.",
+          "text_hash": 5767003001429492784,
+          "title": "Vietnam arrests three on terrorism charges, including Norwegian and Australian citizens"
+        }
+      ],
+      "outlet_id": "japantimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/vietnam-detains-3-men-terrorism-charges-including-norwegian-136849777",
+          "cluster_id": 5763199805054953490,
+          "fetched_at": 1790715390,
+          "id": 11265912942273375510,
+          "joined_at": 1790715390,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790687988,
+          "summary": "Vietnamese police have detained three men accused of terrorism, including a Norwegian citizen and an Australian national of Vietnamese origin, according to the Ministry of Public Security",
+          "text_hash": 9396137151539521336,
+          "title": "Vietnam detains 3 men on terrorism charges, including Norwegian, Australian citizens"
+        }
+      ],
+      "outlet_id": "abcnews"
+    }
+  ],
+  "withdrawals": []
+}

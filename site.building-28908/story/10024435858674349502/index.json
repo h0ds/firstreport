@@ -1,0 +1,243 @@
+{
+  "claims": {
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "theblaze": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "theblaze.com",
+          "expires": "2027-09-26",
+          "last_changed": "2026-08-25",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "theblaze",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theblaze.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2000-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2011-09-12"
+      },
+      {
+        "data": {
+          "qid": "Q6818648"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mercury Radio Arts"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Is_The_Blaze_a_WP:RS_for_America_(2014_film)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_227#Newsbusters_and_The_Blaze_at_WP:BLP_page_Malcolm_Nance_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_239#TheBlaze_show_Dana_etc._w_rgd_Dana_Loesch"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Blaze Media (BlazeTV, Conservative Review, CRTV, TheBlaze)",
+          "status": "generally_unreliable",
+          "summary": "Blaze Media (including TheBlaze) is considered generally unreliable for facts. In some cases, it may be usable for attributed opinions. In 2018, TheBlaze merged with Conservative Review (CRTV) to form Blaze Media. [ 3 ]"
+        },
+        "field": "reliability",
+        "outlet_id": "theblaze",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.05246543884277344,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7724654674530029
+    },
+    "created_at": 1790715377,
+    "expired": false,
+    "id": 10024435858674349502,
+    "item_count": 2,
+    "last_active_at": 1790717852,
+    "origin_item_id": 10024435858674349502,
+    "origin_outlet_id": "euronews",
+    "outlet_count": 2,
+    "primary_title": "Iran's stranglehold on the Strait of Hormuz continues to erode — and crude oil exports are rebounding",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 10024435858674349502,
+        "joined_at": 1790715377,
+        "outlet_id": "euronews",
+        "published_at": 1790687597
+      },
+      {
+        "item_id": 11372141268961350664,
+        "joined_at": 1790717852,
+        "outlet_id": "theblaze",
+        "published_at": 1790717748
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "euronews": "Euronews",
+    "theblaze": "TheBlaze"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/29/middle-east-oil-exports-rise-as-lng-traffic-through-hormuz-picks-up",
+          "cluster_id": 10024435858674349502,
+          "fetched_at": 1790715377,
+          "id": 10024435858674349502,
+          "joined_at": 1790715377,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790687597,
+          "summary": "Months into the war with Iran, Gulf exporters are finding ways to keep oil and gas moving, but crossing Hormuz remains risky and some customers are still missing contracted cargoes.",
+          "text_hash": 1078489836884553511,
+          "title": "Middle East oil exports rise as LNG traffic through Hormuz picks up"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theblaze.com/news/oil-strait-hormuz-iran-exports",
+          "cluster_id": 10024435858674349502,
+          "fetched_at": 1790717852,
+          "id": 11372141268961350664,
+          "joined_at": 1790717852,
+          "lang": "en",
+          "outlet_id": "theblaze",
+          "published_at": 1790717748,
+          "summary": "Crude oil exports in the Middle East rebounded in September as the Iranian regime continued to lose its control over the Strait of Hormuz. Nineteen very large crude oil carriers carrying about 38 million barrels exited the strait just last week, according to data from a Kpler report on Monday. 'You are preventing them from getting access to money that they will use to try and kill Americans and others around the world and their own people.' The report said crude oil exports from the Middle East had…",
+          "text_hash": 1421312827167395005,
+          "title": "Iran's stranglehold on the Strait of Hormuz continues to erode — and crude oil exports are rebounding"
+        }
+      ],
+      "outlet_id": "theblaze"
+    }
+  ],
+  "withdrawals": []
+}

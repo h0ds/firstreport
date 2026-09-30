@@ -1,0 +1,484 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "nbcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nbcnews.com",
+          "expires": "2027-06-25",
+          "last_changed": "2025-05-24",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nbcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-06-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1940-02-21"
+      },
+      {
+        "data": {
+          "qid": "Q724759"
+        },
+        "field": "owner",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "NBCUniversal"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_186#Column_on_Donors_Trust_on_(but_not_by)_NBC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Is_NBC_a_reliable_sources_for_the_Wikipedia_The_Epoch_Times_(ET)_article?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_314#NBC_News-_'Undecided_voters'_at_NBC's_Biden_town_hall_were_featured_on_MSNBC_as_Biden_voters",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_424#NBC_News_for_Wąsosz_pogrom"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NBC News",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NBC News is generally reliable for news. See also: MS NOW (formerly MSNBC)"
+        },
+        "field": "reliability",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "pbs": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pbs.org",
+          "expires": "2027-04-20",
+          "last_changed": "2026-08-12",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "pbs",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/pbs.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1969-11-03"
+      },
+      {
+        "as_of": "2016",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_101#Emme_(model)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_135#Judaism:_The_oldest_monotheistic_religion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_150#Center_for_Investigative_Reporting",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_153#thinkprogress.org_as_a_generally_accepted_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_206#Pbs.org"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "PBS (Public Broadcasting Service)",
+          "status": "generally_reliable",
+          "summary": "The Public Broadcasting Service is an American public broadcaster. It is considered generally reliable by editors."
+        },
+        "field": "reliability",
+        "outlet_id": "pbs",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "rawstory": [
+      {
+        "data": {
+          "domain": "rawstory.com",
+          "expires": "2031-01-29",
+          "last_changed": "2026-01-29",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rawstory",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rawstory.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2004-01-29"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#RfC_-_The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_12#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_17#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_112#The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_202#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#Raw_story_a_RS_for_details_on_this_obscure_death?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Raw Story",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that Raw Story is generally unreliable for factual reporting, based upon a pattern of publishing false and sensationalized stories. Editors almost unanimously agree that the source is biased and that in-text attribution should accompany each use of the source."
+        },
+        "field": "reliability",
+        "outlet_id": "rawstory",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.051114439964294434,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7711144685745239
+    },
+    "created_at": 1790653930,
+    "expired": false,
+    "id": 7044983670511306301,
+    "item_count": 6,
+    "last_active_at": 1790725358,
+    "origin_item_id": 7044983670511306301,
+    "origin_outlet_id": "pbs",
+    "outlet_count": 4,
+    "primary_title": "WATCH LIVE: Jack Smith testifies before Senate Judiciary as GOP targets past Trump probes",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 7044983670511306301,
+        "joined_at": 1790653930,
+        "outlet_id": "pbs",
+        "published_at": 1790627023
+      },
+      {
+        "item_id": 7574393085529339458,
+        "joined_at": 1790679061,
+        "outlet_id": "nbcnews",
+        "published_at": 1790672440
+      },
+      {
+        "item_id": 11439945784171824314,
+        "joined_at": 1790715492,
+        "outlet_id": "nbcnews",
+        "published_at": 1790703974
+      },
+      {
+        "item_id": 1187072058474930608,
+        "joined_at": 1790716549,
+        "outlet_id": "rawstory",
+        "published_at": 1790716476
+      },
+      {
+        "item_id": 18437743649344855723,
+        "joined_at": 1790722476,
+        "outlet_id": "pbs",
+        "published_at": 1790722228
+      },
+      {
+        "item_id": 2811917690314406100,
+        "joined_at": 1790725358,
+        "outlet_id": "aljazeera",
+        "published_at": 1790724527
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "nbcnews",
+            "pbs"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "rawstory"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "nbcnews": "NBC News",
+    "pbs": "PBS NewsHour",
+    "rawstory": "Raw Story"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 4,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    4,
+    4,
+    4
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://pbs.org/newshour/politics/watch-live-jack-smith-testifies-before-senate-judiciary-as-gop-targets-past-trump-probes",
+          "cluster_id": 7044983670511306301,
+          "fetched_at": 1790653930,
+          "id": 7044983670511306301,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "pbs",
+          "published_at": 1790627023,
+          "summary": "This week's Senate Judiciary hearing comes after a key Republican lawmaker said in July he believes that special counsel Jack Smith may have lied to Congress while testifying about his investigation of President Donald Trump and that the Justice Department should consider prosecuting him.",
+          "text_hash": 11691779553314925117,
+          "title": "WATCH LIVE: Jack Smith testifies before Senate Judiciary as GOP targets past Trump probes"
+        },
+        {
+          "canonical_url": "https://pbs.org/newshour/show/during-senate-hearing-jack-smith-defends-criminal-investigations-of-trump",
+          "cluster_id": 7044983670511306301,
+          "fetched_at": 1790722476,
+          "id": 18437743649344855723,
+          "joined_at": 1790722476,
+          "lang": "en",
+          "outlet_id": "pbs",
+          "published_at": 1790722228,
+          "summary": "The prosecutor who led criminal investigations of President Trump for the Department of Justice faced questions from Senate Republicans on Tuesday. Former special counsel Jack Smith handled two probes. One focused on the president's efforts to overturn the 2020 election and the other on Trump's alleged mishandling of classified documents. Justice correspondent Ali Rogin reports.",
+          "text_hash": 13479008456997659785,
+          "title": "During Senate hearing, Jack Smith defends criminal investigations of Trump"
+        }
+      ],
+      "outlet_id": "pbs"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nbcnews.com/politics/justice-department/senate-gop-press-jack-smith-trump-jan-6-probe-doj-targets-investigator-rcna600306",
+          "cluster_id": 7044983670511306301,
+          "fetched_at": 1790679061,
+          "id": 7574393085529339458,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "nbcnews",
+          "published_at": 1790672440,
+          "summary": "The former special counsel is set to testify before the Senate Judiciary Committee amid the Justice Department’s pursuit of those involved in investigations into President Trump.",
+          "text_hash": 8561314247741194280,
+          "title": "Senate GOP to press Jack Smith on Trump Jan. 6 probe as DOJ targets investigators"
+        },
+        {
+          "canonical_url": "https://nbcnews.com/now/video/jack-smith-testifies-at-senate-hearing-defending-decision-to-charge-trump-270732357840",
+          "cluster_id": 7044983670511306301,
+          "fetched_at": 1790715492,
+          "id": 11439945784171824314,
+          "joined_at": 1790715492,
+          "lang": "en",
+          "outlet_id": "nbcnews",
+          "published_at": 1790703974,
+          "summary": "Jack Smith appeared before the Senate Judiciary Committee amid the Justice Department’s push to target law enforcement officials involved with his investigation into President Trump. NBC News' Julie Tsirkin reports on how Smith responded to senators.",
+          "text_hash": 3787723238335904280,
+          "title": "Jack Smith testifies at Senate hearing, defending decision to charge Trump"
+        }
+      ],
+      "outlet_id": "nbcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rawstory.com/jack-smith-hearing-2677961369/",
+          "cluster_id": 7044983670511306301,
+          "fetched_at": 1790716549,
+          "id": 1187072058474930608,
+          "joined_at": 1790716549,
+          "lang": "en",
+          "outlet_id": "rawstory",
+          "published_at": 1790716476,
+          "summary": "Former special counsel Jack Smith's hearing before the Senate Judiciary Committee left a GOP senator with a look that set off howls of online laughter. On Tuesday, Smith appeared before the committee to defend his two criminal probes into President Donald Trump, and several Republicans suggested Smith should face prosecution. However, Sen. Eric Schmitt (R-MO) created one of the most-talked-about moments already after he appeared to confidently set a perjury trap for Smith. Schmitt cited text messages from…",
+          "text_hash": 10882343622474589736,
+          "title": "GOP senator ridiculed as cameras catch her look of 'utter horror' in Jack Smith hearing"
+        }
+      ],
+      "outlet_id": "rawstory"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/29/jack-smith-defends-investigations-into-trump-during-tense-us-senate-hearing?traffic_source=rss",
+          "cluster_id": 7044983670511306301,
+          "fetched_at": 1790725358,
+          "id": 2811917690314406100,
+          "joined_at": 1790725358,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790724527,
+          "summary": "Former US special counsel rejects claims that his probes improperly targeted Republicans and conservative groups.",
+          "text_hash": 13109096944978105020,
+          "title": "Jack Smith defends investigations into Trump during tense US Senate hearing"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 7574393085529339458,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5375,
+      "snapshot_id": 16262753627618973934,
+      "ts": 1790715492
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+# Stories, page 47 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Trump has filled his Cabinet with ‘head-nodders’ who are just there to smile and carry out his whims](/story/9260488885741646535/) · 1 outlet · reach 1
+- ["We Are the 99%": 15 Years Later, Occupy Wall Street's Impact Is Still Being Felt](/story/9272138279625118605/) · 1 outlet · reach 1
+- ["Grotesque": Ex-Israeli Negotiator Daniel Levy on Netanyahu's U.N. Speech & Israel's Impunity](/story/9416582872885568801/) · 1 outlet · reach 1
+- [Facebook shares plummet nearly 4 per cent as company's OWN employees dump stock](/story/9421068096311847734/) · 1 outlet · reach 1
+- ['I wanted to die': Husband and wife kidnapped on October 7 reveal hell they endured in Gaza - from seeing girls 'beaten to pieces' and sexually assaulted to being starved and tortured](/story/9535597375243031298/) · 1 outlet · reach 1
+- [Raulie Casteel, arrested in Michigan highway shootings, had far right-wing political views](/story/9632894839874425689/) · 1 outlet · reach 1
+- [Radio host attacked: Bolivian journalist Fernando Vidal set on fire live on air in Yacuiba](/story/9884229497783010713/) · 1 outlet · reach 1
+- [Inside Putin's horrific torture gulags where inmates are gassed in 'elephant masks', used as 'human furniture' and forced to endure 'Putin's phone'](/story/9916921609041305236/) · 1 outlet · reach 1
+- [Emma Willis issues candid admission as she returns to ITV alongside new Strictly Come Dancing role: 'I don't!'](/story/9974762733379452797/) · 1 outlet · reach 1
+- [Trump trolled by fellow Republican over ‘ominous’ TV ads: ‘This is completely legal... in banana republics’](/story/10051324523756161132/) · 1 outlet · reach 1
+- [Horror as another baby sitter goes on bloody rampage, stabbing to death girl, 5, boy, 8, and their two dogs](/story/10074819323155648616/) · 1 outlet · reach 1
+- [Five midterm races that could stun everyone on Election Day](/story/10128202427897319991/) · 1 outlet · reach 1
+- [Briton Suzanne Cassidy sucked into propellers after jumping off boat in Ibiza](/story/10195233041373924347/) · 1 outlet · reach 1
+- [Photographer captures the moment 5,000 birds create an exclamation mark formation in the sky](/story/10229765525533457170/) · 1 outlet · reach 1
+- [Headlines for September 24, 2026](/story/10248088139000505386/) · 1 outlet · reach 1
+- [How Iran's ruthless enforcers use rape to crush dissent: Brutal sex attacks on victims as young as 12 used to strike fear into protesters, rights groups reveal amid fury over sickening nurse gang rape](/story/10266826776304308066/) · 1 outlet · reach 1
+- [People who have come back from the dead... and what they say is waiting for us on the other side](/story/10273075451488600324/) · 1 outlet · reach 1
+- [Harrowing image of migrant tragedy that shocked Europe - as thousands still die trying to reach continent: Ten years after Alan Kurdi washed up dead in Turkey, how the EU has failed to tackle migrant crisis](/story/10362439926302122480/) · 1 outlet · reach 1
+- [Wes Streeting issues RAF Fairford update following urgent Cobra meeting](/story/11034610343790578885/) · 1 outlet · reach 1
+- [Majorca counts the cost of rejecting tourists: Restaurants and bars say their season has been devastated after UK families took their cash elsewhere in wake of anti-tourist protests](/story/11059935070929729032/) · 1 outlet · reach 1
+- [Trump has Truth Social tantrum over press coverage again after replacing CNN with LindellTV](/story/11169864088834684246/) · 1 outlet · reach 1
+- ["New Low in U.N. History": Trita Parsi on Trump's Threat to Annihilate Iran at General Assembly](/story/11170303431642717398/) · 1 outlet · reach 1
+- [Andy Burnham to chair urgent Cobra meeting over RAF Fairford 'terror plot'](/story/11244359267694866797/) · 1 outlet · reach 1
+- [Inside horrifying paedophile sect run by one-eyed Nazi colonel in German-style Chilean village where children were tortured and abused... and which is now a tourist hotspot](/story/11888143537934130183/) · 1 outlet · reach 1
+- [Nato states prepare evacuation plan for Russian attack amid mounting fears of incursion into alliance's 'Achilles heel'](/story/11920800149287474908/) · 1 outlet · reach 1
+- [Man, 43, arrested in hunt for Michigan sniper who fired at random cars in four counties in two-week campaign of terror](/story/12162315662879003305/) · 1 outlet · reach 1
+- [Poachers caught with loaded guns and headless deer in California forest](/story/12233662759683798787/) · 1 outlet · reach 1
+- [Bugs: Amazing photos show microscopic insects coping with a downpour](/story/12255713786422535338/) · 1 outlet · reach 1
+- [Trump heads to Ohio as crucial Senate race enters final stretch](/story/12272496321118766581/) · 1 outlet · reach 1
+- [Portrait of Inaugural poet Amanda Gorman, 22, is donated to Harvard University](/story/12330076526684901164/) · 1 outlet · reach 1
+- [Global war for control of the ARCTIC: Climate change is unlocking untapped natural resources, new trade routes... and a new international conflict that RUSSIA is already winning](/story/12378488768968801827/) · 1 outlet · reach 1
+- [Man, 57, 'had sex with girl, 14, and gave her a cellphone so he could send her explicit texts'](/story/12402127905543931076/) · 1 outlet · reach 1
+- [Humpback whale 'thanks' rescuers who saved it from dying tangled in fishing nets](/story/12496275326309174027/) · 1 outlet · reach 1
+- [Bernie Sanders: The World Is "Moving in the Wrong Direction" on War, Climate, Inequality & AI Tech](/story/12511278750514662444/) · 1 outlet · reach 1
+- [Low North Carolina bridge destroys a truck a month¿and there¿s nothing to stop it, says Department of Transportation](/story/12735837866791874727/) · 1 outlet · reach 1
+- [Maya, the only female porter in Ludhiana, carries bags for a few rupees to pay for her son, 12](/story/12748351251313428625/) · 1 outlet · reach 1
+- [Hurricane Sandy miracle: Couple survive superstorm to welcome a baby boy](/story/12766935411799005964/) · 1 outlet · reach 1
+- [The incredible transformation of Mia Schem: Young Israeli is now a stunning model after going through Hell as an October 7 hostage](/story/12770179521174156056/) · 1 outlet · reach 1
+- [The Brits who shame us around the world: Global tourist hotspots where law-breaking UK nationals end up in jail - and the criminal activities they get up to from drug smuggling to nightclub brawls](/story/12776382859600245009/) · 1 outlet · reach 1
+- [The bloodthirsty gangs ravaging Brit backpacking mecca including 'Los Killers' cartel led by mass murderer and his glamorous girlfriend - as three women are tortured to death on live-stream](/story/12785268976435784511/) · 1 outlet · reach 1
+- [Las Vegas is tearing out some grass in parks throughout the city to combat drought](/story/12988156582144190685/) · 1 outlet · reach 1
+- [Clarence Williams: Teacher 'duct tapes 11-year-old student's mouth shut for more than a half hour'](/story/13004031926907174971/) · 1 outlet · reach 1
+- [135 bungee jumpers take leap at the same time in world record attempt](/story/13128475612556123390/) · 1 outlet · reach 1
+- ["Call It Evil": Philosopher Susan Neiman on Why Moral Clarity Matters in the Trump Era](/story/13136434324934793618/) · 1 outlet · reach 1
+- [After a chaotic weekend in the Trump-media standoff, it’s now a wait-and-see game for networks](/story/13363541557774637126/) · 1 outlet · reach 1
+- [Should U.N. Help Set Global AI Rules? AI Tech Billionaires Address Security Council](/story/13417254960262754867/) · 1 outlet · reach 1
+- [A Russian Oligarch Secretly Funded Donald Trump Jr.'s Bahamas Wedding; Democrats Demand Probe](/story/13437156319736286582/) · 1 outlet · reach 1
+- [Ten arrested after powerboat smuggling Albanian migrants docks in Cornwall harbour](/story/13444871236533216152/) · 1 outlet · reach 1
+- [Angela Rayner gives curt response to Christopher Hope as she makes GB News debut](/story/13512398162210703034/) · 1 outlet · reach 1
+- [The Hague Group: South Africa Leads Coalition Against U.S./Israel's "Unilateral Bullying" of the ICC](/story/13627124571289263221/) · 1 outlet · reach 1

@@ -1,0 +1,54 @@
+# Stories, page 32 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Chicken and fermented tea leaves: KFC serves up a local twist in Myanmar](/story/15326861524909039932/) · 1 outlet · reach 1
+- [China's Toyota joint ventures to be put under one roof to help ailing GAC](/story/15604037359847790416/) · 1 outlet · reach 1
+- [Taiwan doubles space workforce in resilience push: space agency chief](/story/15839596586925433709/) · 1 outlet · reach 1
+- [Pomp, tariffs and AI: 5 things to know about the Trump-Xi summit](/story/16422765453347593288/) · 1 outlet · reach 1
+- [Gunma police arrest man wanted after murder of ex-wife’s mother](/story/242258496004136841/) · 1 outlet · reach 1
+- [Maple Leafs acquire Kirill Marchenko in blockbuster with Blue Jackets](/story/443917679901857908/) · 1 outlet · reach 1
+- [Dodgers eye three-peat, Red Sox face Yankees as MLB playoffs begin](/story/2920579202866530998/) · 1 outlet · reach 1
+- [FamilyMart enlists Lady Gaga to bolster recruitment](/story/3222319647841652392/) · 1 outlet · reach 1
+- [Sushi wars roll into America as Japan’s top chains face off](/story/4398420638339071705/) · 1 outlet · reach 1
+- [Government eyes supporting use of AI and drones to manage bear population](/story/4539088605078319255/) · 1 outlet · reach 1
+- [Residents of Polish region key for NATO try to live normally despite threat](/story/7111970774736166146/) · 1 outlet · reach 1
+- [Trump and Xi’s ‘stalemate’ summit was a glitzy gift to China](/story/8284401152928682364/) · 2 outlets · reach 1
+- [Japan can lead the world in making preventive health pay](/story/8891606329310550922/) · 1 outlet · reach 1
+- [Mister Donut returns to China after seven years](/story/9385847685066022583/) · 1 outlet · reach 1
+- [Weather and transport woes hit Asian Games as Eala makes fast start](/story/9993896434909319547/) · 1 outlet · reach 1
+- [AI faces $6 trillion test to justify data centers, Bain says](/story/12078591432463403678/) · 1 outlet · reach 1
+- [Beijing broadens travel curbs to encompass family of top AI talent in China](/story/12467294262227514098/) · 1 outlet · reach 1
+- [Beer-makers prepare for battle as Japan set to unify liquor taxes](/story/14324165579897993803/) · 1 outlet · reach 1
+- [42 Japanese firms engaged in bid-rigging over condo repair work](/story/16187326336410999641/) · 1 outlet · reach 1
+- [Giants acquire quarterback J.J. McCarthy from Vikings](/story/17356562307658162678/) · 2 outlets · reach 1
+- [‘Silent Hill: Townfall’ cements series’ return from the proverbial grave](/story/18070337951999946598/) · 1 outlet · reach 1
+- [Nakai and Hatakeyama win BMX racing gold at Asian Games](/story/18085076304780680746/) · 1 outlet · reach 1
+- [Russia not at war with France or Europe, de Gaulle's grandson says](/story/134002141993097768/) · 1 outlet · reach 1
+- [Zelensky Told Trump Kiev Ready to Scale Back Attacks on Russian Refineries](/story/209916805724086067/) · 1 outlet · reach 1
+- [Lavrov, Moroccan Foreign Minister Discussed Russian-Moroccan Relations - Moscow](/story/387232870337315607/) · 1 outlet · reach 1
+- [North Korea Calls South Korea Target of 'Collective Punishment' – State Media](/story/396082948611617876/) · 1 outlet · reach 1
+- [EU Faces Harshest Winter Since 2022 Amid Diesel Price Surge - Commissioner](/story/601745702023019371/) · 1 outlet · reach 1
+- [Pezeshkian Rules Out Meeting With Trump Before Trust Between Iran, US Restored](/story/651987806069196761/) · 1 outlet · reach 1
+- [Iran to Launch Larger Strikes If US, Israel Attack Tehran Again – Military](/story/712182759743223932/) · 1 outlet · reach 1
+- [Foreign special services’ attempts to derail elections in Russia failed — Putin](/story/846258919790997684/) · 1 outlet · reach 1
+- [EU defense ministers fail to agree on Patriot missile transfers to Kiev](/story/848258206752733055/) · 1 outlet · reach 1
+- [Ukraine supports terrorists seeking to harm Mali's integrity — president](/story/929150393831397560/) · 1 outlet · reach 1
+- [Putin instructed government to buy grain from agricultural producers](/story/1126332065286518456/) · 1 outlet · reach 1
+- [Europe aids Ukrainian armed forces due to current inability to fight Russia — expert](/story/1153088553179026745/) · 1 outlet · reach 1
+- [BRICS mechanisms promote better mutual understanding than EU — expert](/story/1390458764384478974/) · 1 outlet · reach 1
+- [Tourist flow from South Korea to Russia may grow exponentially — expert](/story/1394189716325407618/) · 1 outlet · reach 1
+- [Uncontrolled EU Drone Production Threaten Russia, Other Nations – Russian Foreign Ministry](/story/1426942827162353119/) · 1 outlet · reach 1
+- [What Xi-Trump Dinner Guest List Said About True Balance of Power Between China, US](/story/1543392235054131326/) · 1 outlet · reach 1
+- [Culture Can Build Bridges Despite Political And Economic Divisions - Putin](/story/1574271297983891996/) · 1 outlet · reach 1
+- [Russia honors $102 mln Eurobond coupon payment — Finance Ministry](/story/1796361041547671782/) · 1 outlet · reach 1
+- [Crewed Starliner flight planned by 2028 — NASA](/story/1983512298465985414/) · 1 outlet · reach 1
+- [Cuba Ready for Dialogue With US Without Interference in Internal Affairs — Foreign Minister](/story/1995575826283148199/) · 1 outlet · reach 1
+- [Ukraine Sends Battle-Hardened Foreign Commanders to Chernobyl](/story/2010666648831799464/) · 1 outlet · reach 1
+- [Iran Vows Measures After Colombia Severs Diplomatic Ties](/story/2084618259423687470/) · 1 outlet · reach 1
+- [Iran Has Lost Trust in Negotiations With US – President](/story/2227093997383010554/) · 1 outlet · reach 1
+- [Gas reserves in European UGS facilities approaching 71%](/story/2265302275775560269/) · 1 outlet · reach 1
+- [No Specific Details Yet Regarding Organization of Trilateral Meeting on Ukraine - Kremlin](/story/2447750196344944262/) · 1 outlet · reach 1
+- [Starship explodes immediately after splashdown — TV](/story/2793661707796169289/) · 1 outlet · reach 1
+- [UN warns that geopolitical tensions hinder counter-terrorism efforts](/story/3002155385399068927/) · 1 outlet · reach 1
+- [Russia’s exports of radio-electronic products nearly reach $2.9 bln in 1H — minister](/story/3119977329812925928/) · 1 outlet · reach 1

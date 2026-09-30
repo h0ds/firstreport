@@ -1,0 +1,124 @@
+{
+  "claims": {
+    "rawstory": [
+      {
+        "data": {
+          "domain": "rawstory.com",
+          "expires": "2031-01-29",
+          "last_changed": "2026-01-29",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rawstory",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rawstory.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2004-01-29"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#RfC_-_The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_12#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_17#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_112#The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_202#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#Raw_story_a_RS_for_details_on_this_obscure_death?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Raw Story",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that Raw Story is generally unreliable for factual reporting, based upon a pattern of publishing false and sensationalized stories. Editors almost unanimously agree that the source is biased and that in-text attribution should accompany each use of the source."
+        },
+        "field": "reliability",
+        "outlet_id": "rawstory",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653935,
+    "expired": false,
+    "id": 17650588528279117686,
+    "item_count": 1,
+    "last_active_at": 1790653935,
+    "origin_item_id": 17650588528279117686,
+    "origin_outlet_id": "rawstory",
+    "outlet_count": 1,
+    "primary_title": "Fox News host's strange take on New York 'quality of life issue' sparks uproar: 'Oy'",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 17650588528279117686,
+        "joined_at": 1790653935,
+        "outlet_id": "rawstory",
+        "published_at": 1790641037
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "rawstory": "Raw Story"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rawstory.com/fox-news-2677956483/",
+          "cluster_id": 17650588528279117686,
+          "fetched_at": 1790653935,
+          "id": 17650588528279117686,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "rawstory",
+          "published_at": 1790641037,
+          "summary": "A Fox News host sparked an uproar after uncorking a strange take about what he described as a \"quality of life issue\" New Yorkers face during Monday's broadcast of \"The Five.\" \"It's something that a lot of people are talking about in terms of a quality of life issue, and I don't know if we have photos of what's going on in that area, but how overweight the hookers have become,\" said Greg Gutfeld , one of the show's co-hosts. \"Have you noticed that?\" \"I have!\" co-host Jesse Watters chimed in. \"It's insane,\"…",
+          "text_hash": 9530865068253450823,
+          "title": "Fox News host's strange take on New York 'quality of life issue' sparks uproar: 'Oy'"
+        }
+      ],
+      "outlet_id": "rawstory"
+    }
+  ],
+  "withdrawals": []
+}

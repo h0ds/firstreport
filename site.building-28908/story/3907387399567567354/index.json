@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 3907387399567567354,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 3907387399567567354,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "Following SCOTUS Ruling, Common Cause Vows Immediate Legal Action Against Any Attempts to Disenfranchise Voters Using Flawed System",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3907387399567567354,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1790363307
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/following-scotus-ruling-common-cause-vows-immediate-legal-action-against-any-attempts-to-disenfranchise-voters-using-flawed-system",
+          "cluster_id": 3907387399567567354,
+          "fetched_at": 1790653936,
+          "id": 3907387399567567354,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1790363307,
+          "summary": "Common Cause condemned the Supreme Court’s ruling today allowing the federal government to continue using the flawed SAVE system. Statement from Common Cause President & CEO Virginia Kase Solomón: “The Supreme Court’s decision to allow DHS and states to use an error-ridden system is completely unacceptable and didn’t need to happen this close to the election. This DHS system, which the federal government itself admits is flawed, has always been part of the Trump administration’s campaign to interfere in…",
+          "text_hash": 11274888199689882566,
+          "title": "Following SCOTUS Ruling, Common Cause Vows Immediate Legal Action Against Any Attempts to Disenfranchise Voters Using Flawed System"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

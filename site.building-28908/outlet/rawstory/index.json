@@ -1,0 +1,649 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "rawstory.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.6161
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "rawstory",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.62 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "rawstory.com",
+          "expires": "2031-01-29",
+          "last_changed": "2026-01-29",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rawstory",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rawstory.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2004-01-29"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q17232649"
+        },
+        "field": "legal_form",
+        "outlet_id": "rawstory",
+        "ref_url": "https://www.wikidata.org/wiki/Q7759518",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news website"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "rawstory.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "rawstory",
+        "ref_url": "https://www.rawstory.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "Raw Story"
+      },
+      {
+        "field": "name",
+        "outlet_id": "rawstory",
+        "ref_url": "https://www.wikidata.org/wiki/Q7759518",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Raw Story"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "origin_of": 0,
+          "shared_stories": 4,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "rawstory",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/rawstory",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 0% of 4 stories other outlets also carried"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "rawstory",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/rawstory",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.3 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "rawstory.com"
+        },
+        "field": "registrar",
+        "outlet_id": "rawstory",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rawstory.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "GoDaddy.com, LLC"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#RfC_-_The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_12#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_17#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_112#The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_202#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#Raw_story_a_RS_for_details_on_this_obscure_death?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Raw Story",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that Raw Story is generally unreliable for factual reporting, based upon a pattern of publishing false and sensationalized stories. Editors almost unanimously agree that the source is biased and that in-text attribution should accompany each use of the source."
+        },
+        "field": "reliability",
+        "outlet_id": "rawstory",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "rawstory",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/rawstory",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "rawstory.com",
+          "final_url": "https://www.rawstory.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "rawstory",
+        "ref_url": "https://www.rawstory.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.rawstory.com/st/About_Us_Raw_Story",
+          "domain": "rawstory.com",
+          "ethics": "https://www.rawstory.com/st/ethics-policy",
+          "masthead": "https://www.rawstory.com/raw-investigates/white-house-staff-quits/",
+          "missing": [
+            "contact",
+            "corrections"
+          ],
+          "privacy": "https://www.rawstory.com/privacy-policy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "rawstory",
+        "ref_url": "https://www.rawstory.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, privacy, ethics, masthead pages from its home page; no contact, corrections link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "rawstory",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/rawstory",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "rawstory",
+        "ref_url": "https://www.wikidata.org/wiki/Q7759518",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.rawstory.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "rawstory",
+        "ref_url": "https://www.wikidata.org/wiki/Q7759518",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q7759518"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "rawstory",
+        "ref_url": "https://www.wikidata.org/wiki/Q7759518",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Raw_Story"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "rawstory",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/rawstory",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 1,
+  "items": 81,
+  "outlet": {
+    "domains": [
+      "rawstory.com"
+    ],
+    "id": "rawstory",
+    "name": "Raw Story"
+  },
+  "shared_stories": 12,
+  "stories": [
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 7044983670511306301,
+      "outlet_count": 4,
+      "title": "WATCH LIVE: Jack Smith testifies before Senate Judiciary as GOP targets past Trump probes"
+    },
+    {
+      "created_at": 1790715378,
+      "first": false,
+      "id": 6644257237448895193,
+      "outlet_count": 14,
+      "title": "Trump: Tech Leaders Signed Accord to 'Self-Police' AI Development"
+    },
+    {
+      "created_at": 1790724967,
+      "first": true,
+      "id": 10166495251015000007,
+      "outlet_count": 1,
+      "title": "Key voting bloc fumes at Trump White House after GOP stands them up"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 3322863658697567134,
+      "outlet_count": 18,
+      "title": "Justices Let Deportations to 3rd Countries Resume While Weighing Policy"
+    },
+    {
+      "created_at": 1790723686,
+      "first": true,
+      "id": 4588665052546235852,
+      "outlet_count": 1,
+      "title": "Jake Tapper chides Trump's 'pinky promise to behave' with AI leaders"
+    },
+    {
+      "created_at": 1790723243,
+      "first": true,
+      "id": 5216678059378275797,
+      "outlet_count": 1,
+      "title": "Ex-GOP strategist warns Republicans 'caught in a trap' as Trump comes to their districts"
+    },
+    {
+      "created_at": 1790682931,
+      "first": true,
+      "id": 5409441799064808063,
+      "outlet_count": 2,
+      "title": "Natalie Harp was ‘devoted’ to Christian minister before finding Trump, brother reveals"
+    },
+    {
+      "created_at": 1790721170,
+      "first": true,
+      "id": 13160993343573400474,
+      "outlet_count": 1,
+      "title": "Trump's bid to escape slush fund penalties tossed out by panel with his own appointee"
+    },
+    {
+      "created_at": 1790720465,
+      "first": true,
+      "id": 5022825423415422980,
+      "outlet_count": 1,
+      "title": "Judge panel signals possible contempt charges won't stop at Trump's 'sacrificial lamb'"
+    },
+    {
+      "created_at": 1790720192,
+      "first": true,
+      "id": 17073071346905537701,
+      "outlet_count": 1,
+      "title": "Nicolle Wallace spots growing 'debacle' for Trump DOJ ​as MAGA prosecutors flee"
+    },
+    {
+      "created_at": 1790720192,
+      "first": true,
+      "id": 4755798296912595043,
+      "outlet_count": 1,
+      "title": "Markwayne Mullin exposes new cracks in MAGA as DHS changes tune on deportations"
+    },
+    {
+      "created_at": 1790717894,
+      "first": true,
+      "id": 10172048731011099672,
+      "outlet_count": 1,
+      "title": "White House says new AI chatbot will be 'updated' after it debunks Trump's claims"
+    },
+    {
+      "created_at": 1790717249,
+      "first": true,
+      "id": 9542540791357978441,
+      "outlet_count": 1,
+      "title": "'The worst!' Trump silences CNN for calling him out at bizarre outdoor press conference"
+    },
+    {
+      "created_at": 1790716069,
+      "first": true,
+      "id": 7137346941259529517,
+      "outlet_count": 1,
+      "title": "'My jaw was dropping': Reporter flabbergasted by GOP senator's epic 'faceplant'"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 14776272129164761012,
+      "outlet_count": 21,
+      "title": "Trump Denies Offering to Sell Arms to China's Xi"
+    },
+    {
+      "created_at": 1790715373,
+      "first": false,
+      "id": 7769874655184030231,
+      "outlet_count": 2,
+      "title": "GOP senator silenced as he sneers at Jack Smith: 'You make me want to throw up'"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 16740995766478872775,
+      "outlet_count": 1,
+      "title": "Even Politico trolls outraged Republican for handing Jack Smith a win"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 16567242729964225200,
+      "outlet_count": 1,
+      "title": "'Elder abuse': Experts alarmed by Chuck Grassley 'ranting wildly' at Jack Smith hearing"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 14560703175589270577,
+      "outlet_count": 1,
+      "title": "Shock answer catches Darline Graham off guard as she tries to pin down Jack Smith"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 14347953629245628309,
+      "outlet_count": 1,
+      "title": "'Speak in English!' MAGA crowd heckles Byron Donalds' running mate for Spanish-only speech"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 14052849425103090223,
+      "outlet_count": 10,
+      "title": "Trump unveils US$15 billion Iowa steel project the White House says will be biggest in US"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 13896613669454641698,
+      "outlet_count": 1,
+      "title": "MAGA senator throws tantrum after epic gaffe in Jack Smith hearing: ‘Quote me on it!'"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 13052125670995628452,
+      "outlet_count": 1,
+      "title": "'Will never be VP': Critics see GOP senator's ambitions crater in 'perjury trap' bellyflop"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 12779349914670027500,
+      "outlet_count": 1,
+      "title": "This is the fuel of MAGA's blind devotion"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 12472590931332985229,
+      "outlet_count": 1,
+      "title": "CBS News' Bari Weiss banks on 'blood feud' to claw viewers back: report"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 11210314478089572539,
+      "outlet_count": 2,
+      "title": "DoorDash driver shot by ICE in Texas is charged with assaulting officers"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 9446136890119528394,
+      "outlet_count": 1,
+      "title": "‘Maximum danger may still lie ahead’: Conservative warns of chaos after Trump midterms"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 7337952039881664661,
+      "outlet_count": 1,
+      "title": "Rambling Trump blows up his own AI security brag — only seconds after making it"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 6771752307761822140,
+      "outlet_count": 1,
+      "title": "Screaming match exposed as Markwayne Mullin's hometown newspaper defies staff's gag order"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 6527731666145272877,
+      "outlet_count": 1,
+      "title": "Kash Patel's 'gaming the system' with FBI list exposed by damning clue: report"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 6458397890156444222,
+      "outlet_count": 1,
+      "title": "Trump's ‘woke’ government chatbot sparks mockery hours after launch for 'betraying' him"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 6217291216924379946,
+      "outlet_count": 1,
+      "title": "'This is what you like!' Fury after Sean Hannity backpedals defense of Jack Smith attack"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 5393253331035113487,
+      "outlet_count": 1,
+      "title": "Expert gobsmacked as Trump caught robbing his admin for ad money: 'Can't make this up!'"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 3549269328910586946,
+      "outlet_count": 1,
+      "title": "Trump quietly caves on $5.6M payout as E. Jean Carroll case ends: 'A first'"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 2123048242728241079,
+      "outlet_count": 1,
+      "title": "Trump voters spill why they're ditching Republicans: 'Washington is full of criminals'"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 1734816724362751583,
+      "outlet_count": 1,
+      "title": "Trump's baffling prediction immediately blows up in his face: ‘Out of touch’"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 1220260024973903440,
+      "outlet_count": 1,
+      "title": "Jack Smith cracks down as MAGA senator attacks wife: 'Not going to speak about my family'"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 698509903428966638,
+      "outlet_count": 1,
+      "title": "'This is gaslighting!' Ted Cruz laughed at as he uses 'Les Mis' to rage at Jack Smith"
+    },
+    {
+      "created_at": 1790715373,
+      "first": true,
+      "id": 283148658987899884,
+      "outlet_count": 1,
+      "title": "Jasmine Crockett lashes out after 'corny' attack over endorsements: 'I keep receipts'"
+    },
+    {
+      "created_at": 1790682931,
+      "first": true,
+      "id": 7759141633548764989,
+      "outlet_count": 1,
+      "title": "MAGA pundit's bizarre Ozempic tale dumbfounds CNN panel: 'Economy is like a fat person'"
+    },
+    {
+      "created_at": 1790681328,
+      "first": true,
+      "id": 17941731555240079028,
+      "outlet_count": 1,
+      "title": "'Dumb beyond belief': Trump insider predicts onslaught of subpoenas over new scandal"
+    },
+    {
+      "created_at": 1790681328,
+      "first": true,
+      "id": 13081575667839073309,
+      "outlet_count": 1,
+      "title": "MAGA schooled as Dem launches public war on sleeping Trump: 'Your facts are wrong'"
+    },
+    {
+      "created_at": 1790681328,
+      "first": true,
+      "id": 4281079664055995324,
+      "outlet_count": 1,
+      "title": "'My God': Karoline Leavitt shamed after major math goof blows up 'lunatic' attack"
+    },
+    {
+      "created_at": 1790639336,
+      "first": false,
+      "id": 10306277323124204780,
+      "outlet_count": 15,
+      "title": "Trump denies he offered Iran sanctions relief, release of frozen funds"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 16148303218841537404,
+      "outlet_count": 1,
+      "title": "Trump's ugly action plan allows him to go utterly rogue"
+    },
+    {
+      "created_at": 1790658673,
+      "first": false,
+      "id": 14703132148845938949,
+      "outlet_count": 2,
+      "title": "Trump revenge plot implodes as multiple insiders jump ship"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 6700408803628056467,
+      "outlet_count": 1,
+      "title": "Republicans 'brace for losing everything' as wipeout comes for heart of Trump country"
+    },
+    {
+      "created_at": 1790679060,
+      "first": false,
+      "id": 4425657799403277408,
+      "outlet_count": 2,
+      "title": "‘Fires are everywhere right now’: Trump hits the road to shore up red states"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16910807431805601164,
+      "outlet_count": 7,
+      "title": "Justice Alito Recuses Himself from Major Climate Lawsuit Against Oil Companies"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 18411035555519062384,
+      "outlet_count": 1,
+      "title": "Expert unmasks 'smokescreen' Blanche is attempting to pull off in court: 'Will not stand'"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

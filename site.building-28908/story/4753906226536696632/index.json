@@ -1,0 +1,183 @@
+{
+  "claims": {
+    "sputnik": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "sputniknews.com",
+          "expires": "2028-10-24",
+          "last_changed": "2022-03-04",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputniknews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2011-10-24"
+      },
+      {
+        "data": {
+          "domain": "sputnikglobe.com",
+          "expires": "2028-03-29",
+          "last_changed": "2023-03-30",
+          "registrar": "Domain.com - Network Solutions, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputnikglobe.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2023-03-29"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-11-10"
+      },
+      {
+        "data": {
+          "qid": "Q1140115"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Government of Russia"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#RfC:_Sputnik",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Sputnik_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_212#Source_being_used_in_the_S-400_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_246#Sputnik_(news_agency)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_337#Sputnik-Abkhazia",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_367#Sputnik,_kind_of"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sputnik",
+          "status": "deprecated",
+          "summary": "There is consensus that Sputnik is an unreliable source that publishes false or fabricated information, and should be deprecated as in the 2017 RfC of the Daily Mail. Sputnik is considered a Russian propaganda outlet that engages in bias and disinformation, [ 25 ] a significant proportion of editors endorse that view, with some editors considering it less reliable than Breitbart News. See also: RI"
+        },
+        "field": "reliability",
+        "outlet_id": "sputnik",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653945,
+    "expired": false,
+    "id": 4753906226536696632,
+    "item_count": 1,
+    "last_active_at": 1790653945,
+    "origin_item_id": 4753906226536696632,
+    "origin_outlet_id": "sputnik",
+    "outlet_count": 1,
+    "primary_title": "Data Center Supporting Starlink Operations Hit in Kiev - MoD",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 4753906226536696632,
+        "joined_at": 1790653945,
+        "outlet_id": "sputnik",
+        "published_at": 1790406325
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "sputnik": "Sputnik"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://sputnikglobe.com/20260926/data-center-supporting-starlink-operations-hit-in-kiev---mod-1124792821.html",
+          "cluster_id": 4753906226536696632,
+          "fetched_at": 1790653945,
+          "id": 4753906226536696632,
+          "joined_at": 1790653945,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790406325,
+          "summary": "MOSCOW (Sputnik) - Russian Armed Forces struck the Cosmonova data center in Kiev during overnight strikes, which was providing support for Starlink satellite communication systems, the Russian Defense Ministry said on Saturday.",
+          "text_hash": 17637747398894208526,
+          "title": "Data Center Supporting Starlink Operations Hit in Kiev - MoD"
+        }
+      ],
+      "outlet_id": "sputnik"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,54 @@
+# Stories, page 10 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- ['The worst!' Trump silences CNN for calling him out at bizarre outdoor press conference](/story/9542540791357978441/) · 1 outlet · reach 1
+- [Trump says he does not know if Iran is going to 'give up yet'](/story/17207371783701496932/) · 1 outlet · reach 1
+- [Glenn Beck: The UVU report on Charlie Kirk’s death isn’t the plot you think it is](/story/17279742584191992840/) · 1 outlet · reach 1
+- [Aussie breaks 24-year-old world record at national short course swimming titles](/story/5505540178401903595/) · 1 outlet · reach 1
+- [Safeguards 'build a moat' around US AI firms, prevent open-source models from advancing, expert says](/story/16509772853753607212/) · 1 outlet · reach 1
+- [Lamine nets double as Spain win again and England beat 10-man Czechs](/story/1379601611807495471/) · 1 outlet · reach 1
+- [Saudi Arabia resumes Yanbu oil loading after pipeline restart](/story/9626912435306506082/) · 1 outlet · reach 1
+- [Lawyer for ‘Cornell 7’ accuser says he may seek special prosecutor: ‘She was reporting rape and sexual abuse’](/story/455554211047148945/) · 1 outlet · reach 1
+- [Fallen NYC wine seller Sherry-Lehmann loses suit that alleged smear campaign by NYT journo, former execs](/story/2983510516029280681/) · 1 outlet · reach 1
+- [Knicks still mulling whether to go to White House](/story/15729949460787460511/) · 1 outlet · reach 1
+- [Manchin to Newsmax: Parties Have Taken Control](/story/5496791401532524621/) · 1 outlet · reach 1
+- [Another majority that could be in Democrats’ reach: From the Politics Desk](/story/8075882529817047093/) · 1 outlet · reach 1
+- [GOP senator airballs perjury claim against Jack Smith over apparent Hawks/Hawkeyes mix-up](/story/14253856113479372735/) · 1 outlet · reach 1
+- [The state is failing and has failed but Andy Burnham wants to give it more power, says Jacob Rees-Mogg](/story/6903607102595878429/) · 1 outlet · reach 1
+- [Japan's TDK, Taiyo Yuden ally on next-generation AI components](/story/5901191566427418799/) · 1 outlet · reach 1
+- [Scandal-hit University of Tokyo seeks change with first female chief](/story/15153003638654149151/) · 1 outlet · reach 1
+- ['My jaw was dropping': Reporter flabbergasted by GOP senator's epic 'faceplant'](/story/7137346941259529517/) · 1 outlet · reach 1
+- [60 million kids to be auto-enrolled in Trump Accounts](/story/6008504164833380883/) · 1 outlet · reach 1
+- [US stocks end lower as Treasury yields rise](/story/12353674881172747612/) · 1 outlet · reach 1
+- [Jayden Daniels avoids serious injury even as surgery still looms in big Commanders boost](/story/16827168669400604418/) · 1 outlet · reach 1
+- [Dad deserves better than another tie — shop our 32 best Christmas gift ideas instead](/story/18037912299490654529/) · 1 outlet · reach 1
+- [Has Gaza broken the Israel consensus in the US?](/story/2076467944945708168/) · 1 outlet · reach 1
+- [Can Iraq handle future security challenges alone?](/story/17736647471598817780/) · 1 outlet · reach 1
+- [Senior US official tells Canadian lobbyists to 'get the hell out of our country'](/story/1756655309237078291/) · 1 outlet · reach 1
+- [Abdul El-Sayed trashes Bill Maher for ‘terrible’ beliefs, wants to see him get his ‘a– whooped’ if invited on show](/story/7210007828756702253/) · 1 outlet · reach 1
+- [Why not all extended car warranties are scams — and what you need to know](/story/12110953366228203194/) · 1 outlet · reach 1
+- [Carole Radziwill wears these Levi’s jeans ‘on repeat’](/story/15038979393806179461/) · 1 outlet · reach 1
+- [When does ‘The Drop: A Snowfall Saga’ Episode 4 come out? Time, livestream](/story/15110358877745321928/) · 1 outlet · reach 1
+- [Gen-Z doesn’t carry wallets — so I asked our editors what they’re carrying instead](/story/3676729998741824676/) · 1 outlet · reach 1
+- [5 car seat mistakes experts want you to unlearn, and what to do instead](/story/3952719870913184733/) · 1 outlet · reach 1
+- [Anne Hathaway says doctor warned her that ‘Hot Ones’ interview could induce early labor](/story/7536209873238062144/) · 1 outlet · reach 1
+- [Is pet-safe ice melt actually pet-safe? Plus, more winter safety tips for dog owners](/story/8282151590326697892/) · 1 outlet · reach 1
+- [Trump’s border wall construction cut into an ancient ground carving older than Stonehenge](/story/11902688305221342715/) · 1 outlet · reach 1
+- [OpenAI unveils always-on Dots agent, $500 monthly ChatGPT plan](/story/2809939749900543212/) · 1 outlet · reach 1
+- [German state premier calls for reform of EU-Türkiye Customs Union](/story/5208220268061370635/) · 1 outlet · reach 1
+- [Turkish stock exchange ends Tuesday in red](/story/6098734218810602919/) · 1 outlet · reach 1
+- [Trump claims US took more oil out of Strait of Hormuz than ever before](/story/6184425897430810783/) · 1 outlet · reach 1
+- [Kazakh president meets German counterpart, chancellor to discuss bilateral ties](/story/6504733831969597986/) · 1 outlet · reach 1
+- [60% of leaders mention AI at UN General Assembly speech](/story/7071134358189416716/) · 1 outlet · reach 1
+- [Palestine urges companies to review ties with businesses linked to illegal Israeli settlements](/story/8463541315636934907/) · 2 outlets · reach 1
+- [Spanish Senate rejects friendship treaty with France as Macron visits Madrid](/story/10056962074948356247/) · 1 outlet · reach 1
+- [Italy must keep channels with Egypt open to pursue truth in Giulio Regeni case: Meloni](/story/11398117564617934488/) · 1 outlet · reach 1
+- [European stocks close mixed as bond yields rise, euro weakens](/story/13521682838471858316/) · 1 outlet · reach 1
+- [Japan, Mongolia vow to boost ties with focus on AI, security, energy](/story/13665644576255247267/) · 1 outlet · reach 1
+- [Türkiye’s Vatican envoy stresses human dignity, dialogue as foundations for peace](/story/14684194512959703096/) · 1 outlet · reach 1
+- [Sweden’s new parliament formally opens amid government formation deadlock](/story/14690703441272321035/) · 1 outlet · reach 1
+- [Norwegian parliament to question 11 ministers about Epstein-linked foreign ministry revelations](/story/16645866496650881523/) · 1 outlet · reach 1
+- [Kazakh president calls for freeze of Ukraine war](/story/17243735779648051855/) · 1 outlet · reach 1
+- [UN chief 'strongly condemns' deadly Myanmar airstrike, voices alarm about casualties](/story/17442408799148967605/) · 1 outlet · reach 1
+- [Saudi crown prince, Italian PM emphasize importance of supporting efforts to ensure freedom of navigation](/story/8876952072891716/) · 1 outlet · reach 1

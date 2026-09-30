@@ -1,0 +1,255 @@
+{
+  "claims": {
+    "politico": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "politico.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-18",
+          "registrar": "Register.com - Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "politico",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/politico.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-23"
+      },
+      {
+        "data": {
+          "qid": "Q163560"
+        },
+        "field": "owner",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Axel Springer SE"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_363#RfC:_Politico_update?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_11#Politico.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#DataTreasury",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_50#Politico;_Also_for_Book_reviews:_New_Engish_Review_and_Pajamas_Media",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#self-published?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Is_an_SPLC_report_a_reliable_source_for_List_of_Confederate_monuments_and_memorials?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_241#Statements_of_Fact_Based_on_One_Report_from_One_Media_Outlet,_Sourced_to_Anonymous_Sources",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_458#Politico_status_update"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Politico",
+          "status": "generally_reliable",
+          "summary": "Politico is considered generally reliable for American politics. A small number of editors say that Politico is a biased source."
+        },
+        "field": "reliability",
+        "outlet_id": "politico",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "rawstory": [
+      {
+        "data": {
+          "domain": "rawstory.com",
+          "expires": "2031-01-29",
+          "last_changed": "2026-01-29",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rawstory",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rawstory.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2004-01-29"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#RfC_-_The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_12#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_17#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_112#The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_202#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#Raw_story_a_RS_for_details_on_this_obscure_death?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Raw Story",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that Raw Story is generally unreliable for factual reporting, based upon a pattern of publishing false and sensationalized stories. Editors almost unanimously agree that the source is biased and that in-text attribution should accompany each use of the source."
+        },
+        "field": "reliability",
+        "outlet_id": "rawstory",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.008789300918579102,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7287893295288086
+    },
+    "created_at": 1790679060,
+    "expired": false,
+    "id": 4425657799403277408,
+    "item_count": 2,
+    "last_active_at": 1790679060,
+    "origin_item_id": 4425657799403277408,
+    "origin_outlet_id": "politico",
+    "outlet_count": 2,
+    "primary_title": "‘Fires are everywhere right now’: Trump hits the road to shore up red states",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 4425657799403277408,
+        "joined_at": 1790679060,
+        "outlet_id": "politico",
+        "published_at": 1790675400
+      },
+      {
+        "item_id": 12083698135780668516,
+        "joined_at": 1790679060,
+        "outlet_id": "rawstory",
+        "published_at": 1790678126
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "politico"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "rawstory"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "politico": "Politico",
+    "rawstory": "Raw Story"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 4425657799403277408,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4283,
+      "snapshot_id": 2892540916701494712,
+      "ts": 1790681338
+    }
+  ],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://politico.com/news/2026/09/29/fires-are-everywhere-right-now-trump-hits-the-road-to-shore-up-red-states-01095543",
+          "cluster_id": 4425657799403277408,
+          "fetched_at": 1790679060,
+          "id": 4425657799403277408,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "politico",
+          "published_at": 1790675400,
+          "summary": "Each trip to play defense robs the GOP of a chance to put Democrats on the back foot in states that are traditionally competitive.",
+          "text_hash": 10871386606754088962,
+          "title": "‘On a scale of 1 to 10, 10’: Trump’s midterm travel schedule underscores GOP troubles"
+        }
+      ],
+      "outlet_id": "politico"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rawstory.com/trump-midterm-disaster-2677957549/",
+          "cluster_id": 4425657799403277408,
+          "fetched_at": 1790679060,
+          "id": 12083698135780668516,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "rawstory",
+          "published_at": 1790678126,
+          "summary": "President Donald Trump is being deployed to deep red states to shore up Republican candidates who, in a normal year, would be waltzing to reelection — and it's his own unpopularity dragging them down . Bastions of conservatism including Alabama, Alaska, Iowa, Ohio and Texas now need Trump's star power to turn out his most die-hard supporters, Politico reported. But every trip spent playing defense in red strongholds is one the GOP can't spend putting Democrats \"on the back foot\" in traditionally…",
+          "text_hash": 11603640330232340647,
+          "title": "'It's his fault': GOP operatives in frenzy as calamity forces Trump to deep red states"
+        }
+      ],
+      "outlet_id": "rawstory"
+    }
+  ],
+  "withdrawals": []
+}

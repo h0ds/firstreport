@@ -1,0 +1,54 @@
+# Stories, page 2 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [US forces exit Iraq after two decades, leaving opening for Iran](/story/5623028648086973051/) · 7 outlets · reach 6
+- [Israel kills senior Hamas commander in Gaza strike](/story/6976649014365615021/) · 6 outlets · reach 6
+- [Dennis Haskins, Best Known For Playing Mr. Belding in “Saved by the Bell” Dead at 75](/story/5662166384588561854/) · 6 outlets · reach 6
+- [3 Egyptian Officials Convicted of Kidnapping Slain Italian Student](/story/6236339129075470018/) · 8 outlets · reach 6
+- [Lula widens first-round lead over Flavio Bolsonaro as runoff polls point to tight race in Brazil](/story/11885385319615779539/) · 6 outlets · reach 6
+- [FBI deputy chief announces resignation after just over a year in job](/story/7269790725609937051/) · 7 outlets · reach 6
+- [Justice Alito Recuses Himself from Major Climate Lawsuit Against Oil Companies](/story/16910807431805601164/) · 7 outlets · reach 6
+- [Pope Leo wraps up France visit, urging Europe to help combat 'lies and deceit'](/story/18042936254357745621/) · 7 outlets · reach 6
+- [Hegseth to Cut Pentagon Posts Held for Generals, Admirals](/story/7695855586285115353/) · 5 outlets · reach 5
+- [French students and police clash as school blockades turn violent](/story/12916877823827640315/) · 5 outlets · reach 5
+- [Suspected ShinyHunters hacker arrested after FBI data breach](/story/1812193344952732728/) · 5 outlets · reach 5
+- [Trump says he will sign executive order naming AI as Super Intelligence](/story/15065261947489113789/) · 5 outlets · reach 5
+- [Trump Launches America.gov AI Tool to Simplify User Navigation of Online Government Services](/story/2144685897655024128/) · 5 outlets · reach 5
+- [Taxpayer-Funded Trump Ad Violates the Hatch Act](/story/16109613403163530335/) · 5 outlets · reach 5
+- [The RAF Fairford ‘terror plot’: Unpacking escalation in the UK echo-chamber](/story/7539515453392159397/) · 6 outlets · reach 5
+- [Dutch Doctors Euthanize Two-Year-Old Toddler In First Case Of Its Kind](/story/11187380030572242577/) · 5 outlets · reach 5
+- [New Russian mobilisation: Putin signs decree adding 15,500 troops to army](/story/14976319985450857727/) · 5 outlets · reach 5
+- [Ethiopia's army chief accuses Eritrea, Sudan and Egypt of supporting Tigray rebels](/story/3966912277761637371/) · 5 outlets · reach 5
+- [Delta Air Lines flight to Boston forced to make emergency landing in Portugal after smoke in cabin](/story/16664745717732133943/) · 5 outlets · reach 5
+- [Pope Leo urges Russia, Ukraine to sit down and discuss how to end war](/story/1963091091914502276/) · 5 outlets · reach 5
+- [South Korea demands Ukraine apology over denial of confidential deal on North’s prisoners of war](/story/12381899204697281607/) · 7 outlets · reach 5
+- [14 killed at fireworks factory in Russia's Yaroslavl region](/story/17919202268746052880/) · 5 outlets · reach 5
+- [Nvidia unveils security platform to stop AI agents from going rogue](/story/10365073202848134034/) · 6 outlets · reach 5
+- [WATCH LIVE: Jack Smith testifies before Senate Judiciary as GOP targets past Trump probes](/story/7044983670511306301/) · 4 outlets · reach 4
+- [Man City guilty of all serious financial breach charges: Premier League](/story/18145423920728228428/) · 4 outlets · reach 4
+- [US sanctions 10 over allegedly procuring weapons for Iran](/story/7553827412345677229/) · 4 outlets · reach 4
+- [Homeland Security spending $20M in taxpayer funds for pro-Trump ads](/story/17379105243396014528/) · 4 outlets · reach 4
+- [Saudi crown prince welcomes UAE vice president in Riyadh](/story/8522530705406292751/) · 4 outlets · reach 4
+- [Utah death-row prisoner released after new DNA analysis of 1985 killing](/story/5078667113344905020/) · 4 outlets · reach 4
+- [Israel's Gaza genocide death toll passes 74,000 as killings continue](/story/8740613920876251500/) · 4 outlets · reach 4
+- [NFL asks Department of Homeland Security to remove Brian Dawkins video from immigration post](/story/15612404507510769058/) · 5 outlets · reach 4
+- [Anthropic's IPO Prospectus Shows Sweeping AI Vision, Surging Costs: Report](/story/4105122918329295150/) · 4 outlets · reach 4
+- [At UN, Denmark says Greenland pact benefits all parties involved](/story/5543202539112511581/) · 4 outlets · reach 4
+- [Satellite images show Gaza in ruins three years into Israel’s genocidal war](/story/8671402165075689410/) · 4 outlets · reach 4
+- [AI giant promises investors ‘existential risk to humanity’](/story/7341258804868091602/) · 4 outlets · reach 4
+- [European Commission asks United States not to ban diesel supplies to Europe](/story/9438593316819776287/) · 4 outlets · reach 4
+- [Congo politician beaten to death after urging Ebola prevention on radio, his party says](/story/7232004499966159143/) · 5 outlets · reach 4
+- [US revokes visas from Latin American officials and families over accusations of corruption](/story/14438000136465300896/) · 4 outlets · reach 4
+- [2 US Navy aviators eject while landing plane on carrier off Virginia, 4 sailors injured](/story/3191716705614828410/) · 4 outlets · reach 4
+- [8 Marines Injured in Previously Unreported Iranian Attack on Hormuz](/story/3936197591205098771/) · 5 outlets · reach 4
+- [FIFA accuses UEFA of 'misinformation campaign' in response to filing](/story/4027847128741190405/) · 4 outlets · reach 4
+- [Iran parliament speaker warns no one in region will sell oil if Tehran cannot](/story/6981832686656465774/) · 4 outlets · reach 4
+- [40 rescued, 2 dead after boat capsizes west of Puerto Rico](/story/13062882941013870036/) · 4 outlets · reach 4
+- [Iran Officials Pessimistic About US Deal Before Midterms](/story/6150980776379824007/) · 5 outlets · reach 4
+- [Ukraine’s Zelensky says North Korea prepares to deploy another 10,000 troops to Russia](/story/17417424853964488970/) · 4 outlets · reach 4
+- [Two giant pandas arrive in Atlanta from China after Xi-Trump summit](/story/9532632070516774090/) · 7 outlets · reach 4
+- [Hegseth instructs Pentagon to defend 2026 elections from ‘foreign actors’](/story/16506327252844129190/) · 4 outlets · reach 4
+- [Mamdani releases plan to combat antisemitism in New York amid concerns over his criticism of Israel](/story/12061008855114871481/) · 3 outlets · reach 3
+- [Six Flags shuts down X2 rollercoaster after hundreds allege brain injuries](/story/14766125194296977604/) · 3 outlets · reach 3
+- [US consumer confidence sinks to 12-year low over inflation, stagnant wages](/story/5880937290253179125/) · 3 outlets · reach 3

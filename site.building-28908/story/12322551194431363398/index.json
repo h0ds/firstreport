@@ -1,0 +1,154 @@
+{
+  "claims": {
+    "presstv": [
+      {
+        "data": {
+          "qid": "Q794"
+        },
+        "field": "country",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Iran"
+      },
+      {
+        "data": {
+          "domain": "presstv.co.uk",
+          "expires": "2026-11-05",
+          "last_changed": "2024-11-04",
+          "registrar": "Ionos SE",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "presstv",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/presstv.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2006-11-05"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-07-08"
+      },
+      {
+        "data": {
+          "qid": "Q1674127"
+        },
+        "field": "owner",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Islamic Republic of Iran Broadcasting"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_Press_TV_on_Saudi_Arabian_protests",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_42#Press_TV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_108#Alex_Jones,_Mathaba,_Pravda,_and_PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_139#Press_TV_and_Veterans_Today_RS_for_their_contibutors",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_175#Using_Press_TV_for_reporting_Hamas_claims",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_190#Press_TV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Press_TV's_website"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Press TV",
+          "status": "deprecated",
+          "summary": "In the 2020 RfC, editors found a clear consensus to deprecate Press TV, owing to its status as an Iranian government propaganda outlet that publishes disinformation, conspiracy theories, antisemitic content including Holocaust denial, [ 24 ] and a host of other problematic content."
+        },
+        "field": "reliability",
+        "outlet_id": "presstv",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790654765,
+    "expired": false,
+    "id": 12322551194431363398,
+    "item_count": 1,
+    "last_active_at": 1790654765,
+    "origin_item_id": 12322551194431363398,
+    "origin_outlet_id": "presstv",
+    "outlet_count": 1,
+    "primary_title": "Tayebi wins shot put gold as Iran takes three more silvers at Aichi-Nagoya Asian Games",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 12322551194431363398,
+        "joined_at": 1790654765,
+        "outlet_id": "presstv",
+        "published_at": 0
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "presstv": "Press TV"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://presstv.co.uk/Detail/2026/09/26/777064/Tayebi-wins-shot-put-gold-as-Iran-takes-three-more-silvers-at-Aichi-Nagoya-Asian-Games",
+          "cluster_id": 12322551194431363398,
+          "fetched_at": 1790654765,
+          "id": 12322551194431363398,
+          "joined_at": 1790654765,
+          "lang": "en",
+          "outlet_id": "presstv",
+          "published_at": 0,
+          "summary": "Mohammadreza Tayebi won a shot put gold medal in the 2026 Asian Games after breaking the games record.",
+          "text_hash": 7193172778017652832,
+          "title": "Tayebi wins shot put gold as Iran takes three more silvers at Aichi-Nagoya Asian Games"
+        }
+      ],
+      "outlet_id": "presstv"
+    }
+  ],
+  "withdrawals": []
+}

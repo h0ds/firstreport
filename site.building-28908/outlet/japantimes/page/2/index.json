@@ -1,0 +1,38 @@
+{
+  "export_time": 1790725421,
+  "outlet": "japantimes",
+  "page": 2,
+  "page_size": 50,
+  "pages": 2,
+  "stories": [
+    {
+      "created_at": 1790653946,
+      "first": true,
+      "id": 2920579202866530998,
+      "outlet_count": 1,
+      "title": "Dodgers eye three-peat, Red Sox face Yankees as MLB playoffs begin"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 1914476724021229136,
+      "outlet_count": 2,
+      "title": "New Zealand election on knife edge as Greens surge to 16%, poll shows"
+    },
+    {
+      "created_at": 1790653946,
+      "first": true,
+      "id": 443917679901857908,
+      "outlet_count": 1,
+      "title": "Maple Leafs acquire Kirill Marchenko in blockbuster with Blue Jackets"
+    },
+    {
+      "created_at": 1790653946,
+      "first": true,
+      "id": 242258496004136841,
+      "outlet_count": 1,
+      "title": "Gunma police arrest man wanted after murder of ex-wife’s mother"
+    }
+  ],
+  "window_days": 30
+}

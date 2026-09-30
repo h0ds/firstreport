@@ -1,0 +1,468 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "vox.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.5546
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "vox",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.55 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "vox.com",
+          "expires": "2027-09-29",
+          "last_changed": "2026-09-16",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "vox",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/vox.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-30"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-04-06"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1153191"
+        },
+        "field": "legal_form",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "online newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "vox.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "vox",
+        "ref_url": "https://www.vox.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "Vox"
+      },
+      {
+        "field": "name",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Vox"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q7942354"
+        },
+        "field": "owner",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Vox Media"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 17,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "vox",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/vox",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.2 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "vox.com"
+        },
+        "field": "registrar",
+        "outlet_id": "vox",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/vox.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Amazon Registrar, Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_170#is_quoting_someone's_calculations_based_on_four_year_old_outdated_information_allowed?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_181#Huffington_Post_and_Vox_and_WP:BLP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Vox.com_and_Huffington_Post_at_Smith_&_Wesson_M&P15",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#Vox_article_containing_a_factually_wrong_claim_is_used_in_an_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_362#Vox_revisited",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_388#Vox",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_441#OpenAI_\"content_and_product_partnerships\"_with_Vox_Media_and_The_Atlantic"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Vox (Recode)",
+          "status": "generally_reliable",
+          "summary": "Vox is considered generally reliable. Some editors say that Vox is a partisan source in the field of politics or that it does not always clearly delineate reporting and opinion content. See also: Polygon (pre–May 2025), The Verge, New York"
+        },
+        "field": "reliability",
+        "outlet_id": "vox",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 17,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "vox",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/vox",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "vox.com",
+          "final_url": "https://www.vox.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "vox",
+        "ref_url": "https://www.vox.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.vox.com/today-explained-newsletter/503597/uncomfortable-truth-about-aquariums-beluga-deaths",
+          "contact": "https://www.vox.com/contact",
+          "domain": "vox.com",
+          "ethics": "https://www.vox.com/2018/12/7/18113237/ethics-and-guidelines-at-vox-com",
+          "masthead": "https://www.vox.com/masthead",
+          "missing": [
+            "corrections"
+          ],
+          "privacy": "https://www.voxmedia.com/legal/privacy-notice"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "vox",
+        "ref_url": "https://www.vox.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, ethics, masthead pages from its home page; no corrections link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 17,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "vox",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/vox",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.vox.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q20877087"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Vox_(website)"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 17,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 6
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "vox",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/vox",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "35% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 22,
+  "outlet": {
+    "domains": [
+      "vox.com"
+    ],
+    "id": "vox",
+    "name": "Vox"
+  },
+  "shared_stories": 2,
+  "stories": [
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 270612440624308507,
+      "outlet_count": 13,
+      "title": "China, US Can Continue Dialogue on AI to Weigh Risks, Benefits - Xi"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 10381543053073412957,
+      "outlet_count": 2,
+      "title": "Cornell students blast school’s response as gang-rape scandal rocks campus: ‘Priority not to help the victim’"
+    },
+    {
+      "created_at": 1790715390,
+      "first": true,
+      "id": 2019780569693102123,
+      "outlet_count": 1,
+      "title": "The next generation of Republican justices will be even more partisan"
+    },
+    {
+      "created_at": 1790681243,
+      "first": true,
+      "id": 8364597481023488745,
+      "outlet_count": 1,
+      "title": "Live auctions are turning shopping into gambling"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 13433140251187623832,
+      "outlet_count": 1,
+      "title": "Where did all the vegan restaurants go?"
+    },
+    {
+      "created_at": 1790661353,
+      "first": true,
+      "id": 12992867124350751930,
+      "outlet_count": 1,
+      "title": "America’s empty bedrooms are up for grabs"
+    },
+    {
+      "created_at": 1790661353,
+      "first": true,
+      "id": 4172924671555682287,
+      "outlet_count": 1,
+      "title": "What should you do if your friend is in love with you?"
+    },
+    {
+      "created_at": 1790661353,
+      "first": true,
+      "id": 3916702741879458681,
+      "outlet_count": 1,
+      "title": "Big Oil has an audacious request for the Supreme Court"
+    },
+    {
+      "created_at": 1790654492,
+      "first": true,
+      "id": 17142238068976448230,
+      "outlet_count": 1,
+      "title": "Trump’s taxpayer-funded propaganda blitz"
+    },
+    {
+      "created_at": 1790654492,
+      "first": true,
+      "id": 14385141363839983839,
+      "outlet_count": 1,
+      "title": "Flock cameras are creepy. They might still be worth it."
+    },
+    {
+      "created_at": 1790654492,
+      "first": true,
+      "id": 9529440428549072451,
+      "outlet_count": 1,
+      "title": "Welcome to the October issue of The Highlight"
+    },
+    {
+      "created_at": 1790654492,
+      "first": true,
+      "id": 6891017150960625733,
+      "outlet_count": 1,
+      "title": "Trump’s China reversal"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15250089125038912832,
+      "outlet_count": 1,
+      "title": "Why Democratic Senate hopes are rising"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 14430814688146225094,
+      "outlet_count": 1,
+      "title": "Can you spend your way out of loneliness?"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 9625917606957084584,
+      "outlet_count": 1,
+      "title": "Alzheimer’s treatment is advancing rapidly — and there’s one thing all of us can do to help"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 7565123755395880830,
+      "outlet_count": 1,
+      "title": "The online “burnerverse” trying to ruin young women’s lives"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 6740742369981077939,
+      "outlet_count": 1,
+      "title": "Wait, what are the rules around cellphone etiquette now?"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 6436757737192321404,
+      "outlet_count": 1,
+      "title": "Inside a quest to learn about the ocean’s mysterious “deep reefs”"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 6065571738732545231,
+      "outlet_count": 1,
+      "title": "There’s a global plan to save humans from AI. Can it actually work?"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 3301838297407107297,
+      "outlet_count": 1,
+      "title": "Why Democrats stopped talking about climate"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 2339016654548094582,
+      "outlet_count": 1,
+      "title": "Trump wants AI in every classroom. Here’s why Republicans are saying no."
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 46271193267013566,
+      "outlet_count": 1,
+      "title": "This weather threat costs us billions. And it’s about to get worse."
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

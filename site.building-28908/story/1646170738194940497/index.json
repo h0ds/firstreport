@@ -1,0 +1,417 @@
+{
+  "claims": {
+    "dailymail": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "dailymail.co.uk",
+          "expires": "2028-06-16",
+          "last_changed": "2019-02-15",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailymail",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/dailymail.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-06-16"
+      },
+      {
+        "data": {
+          "domain": "dailymail.com",
+          "expires": "2027-12-24",
+          "last_changed": "2026-09-14",
+          "registrar": "Nom-iq Ltd. dba COM LAUDE",
+          "status": [
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailymail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailymail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-20"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1896-05-04"
+      },
+      {
+        "data": {
+          "qid": "Q667613"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daily Mail and General Trust"
+      },
+      {
+        "data": {
+          "qid": "Q6273342"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Jonathan Harmsworth, 4th Viscount Rothermere"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_220#Daily_Mail_RfC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_255#2nd_RfC:_The_Daily_Mail",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_299#(Infomercial_voice)_But_Wait!_There's_still_more!!_(News_about_The_Daily_Mail)",
+            "#cite_note-29"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Mail (MailOnline)",
+          "status": "deprecated",
+          "summary": "In the 2017 RfC, the Daily Mail was the first source to be deprecated on Wikipedia, and the decision was challenged and reaffirmed in the 2019 RfC. There is consensus that the Daily Mail (including its online version, MailOnline) is generally unreliable, and its use as a reference is generally prohibited, especially when other sources exist that are more reliable. As a result, the Daily Mail shoul"
+        },
+        "field": "reliability",
+        "outlet_id": "dailymail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "globeandmail": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      },
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": null
+    },
+    "created_at": 1790653938,
+    "expired": false,
+    "id": 1646170738194940497,
+    "item_count": 3,
+    "last_active_at": 1790653941,
+    "origin_item_id": 8709099675411704164,
+    "origin_outlet_id": "globeandmail",
+    "outlet_count": 3,
+    "primary_title": "Swiss reject 'pro-Russian' bid to toughen country's neutrality in referendum",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 1646170738194940497,
+        "joined_at": 1790653938,
+        "outlet_id": "dailymail",
+        "published_at": 1790596822
+      },
+      {
+        "item_id": 5371515349630449024,
+        "joined_at": 1790653938,
+        "outlet_id": "independent",
+        "published_at": 1790569686
+      },
+      {
+        "item_id": 8709099675411704164,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790516980
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "globeandmail",
+            "independent"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "dailymail"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "dailymail": "Daily Mail",
+    "globeandmail": "The Globe and Mail",
+    "independent": "The Independent"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-swiss-voters-reject-hardening-neutrality-rules-that-would-limit-nato/",
+          "cluster_id": 1646170738194940497,
+          "fetched_at": 1790653941,
+          "id": 8709099675411704164,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790516980,
+          "summary": "More than two-thirds voted against a proposal for a strictly defined version of neutrality to be written into the Swiss constitution",
+          "text_hash": 7658698998244583937,
+          "title": "Swiss voters reject hardening neutrality rules that would limit NATO co-operation"
+        }
+      ],
+      "outlet_id": "globeandmail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/europe/switzerland-neutrality-nato-eu-sanctions-russia-b3057307.html",
+          "cluster_id": 1646170738194940497,
+          "fetched_at": 1790653938,
+          "id": 5371515349630449024,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790569686,
+          "summary": "Ballot spearheaded by populist party said country had drawn dangerously close to Nato and EU, particularly concerning Ukraine war",
+          "text_hash": 12352512345017882964,
+          "title": "Swiss voters reject proposal to strengthen country’s neutrality"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailymail.com/news/article-16165763/Switzerland-Russia-neutrality-referendum.html",
+          "cluster_id": 1646170738194940497,
+          "fetched_at": 1790653938,
+          "id": 1646170738194940497,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "dailymail",
+          "published_at": 1790596822,
+          "summary": "Voters in Switzerland overwhelmingly rejected a proposal championed by a right-wing populist party to strengthen the country's vaunted neutrality.",
+          "text_hash": 13431474918623231490,
+          "title": "Swiss reject 'pro-Russian' bid to toughen country's neutrality in referendum"
+        }
+      ],
+      "outlet_id": "dailymail"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 5371515349630449024,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3102,
+      "snapshot_id": 5410876935907481467,
+      "ts": 1790659140
+    },
+    {
+      "cluster_id": null,
+      "item_id": 1646170738194940497,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3839,
+      "snapshot_id": 13262225653195923116,
+      "ts": 1790679060
+    }
+  ]
+}

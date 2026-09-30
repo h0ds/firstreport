@@ -1,0 +1,147 @@
+{
+  "claims": {
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653931,
+    "expired": false,
+    "id": 13950072446426732622,
+    "item_count": 1,
+    "last_active_at": 1790653931,
+    "origin_item_id": 13950072446426732622,
+    "origin_outlet_id": "axios",
+    "outlet_count": 1,
+    "primary_title": "Scoop: NRSC pleads for $9M to defend three red seats",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 13950072446426732622,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790293077
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "axios": "Axios"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/24/nrsc-republicans-alaska-iowa-ohio",
+          "cluster_id": 13950072446426732622,
+          "fetched_at": 1790653931,
+          "id": 13950072446426732622,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790293077,
+          "summary": "The Senate GOP campaign arm is making an extraordinary late ask — $8.9 million, to be exact — for three red states: Alaska, Iowa and Ohio, according to a memo sent Thursday and obtained by Axios. Why it matters: The request is yet another sign of the headwinds facing Republicans. In a good year, they wouldn't be begging for millions to defend states President Trump carried by double digits in 2024. \"We need $8.9 million in additional hard dollars to close the media gap and sustain that progress through…",
+          "text_hash": 13974730124995593457,
+          "title": "Scoop: NRSC pleads for $9M to defend three red seats"
+        }
+      ],
+      "outlet_id": "axios"
+    }
+  ],
+  "withdrawals": []
+}

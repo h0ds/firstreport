@@ -1,0 +1,38 @@
+{
+  "export_time": 1790725421,
+  "outlet": "aljazeera",
+  "page": 3,
+  "page_size": 50,
+  "pages": 3,
+  "stories": [
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 8808913916574702907,
+      "outlet_count": 1,
+      "title": "Gold falls amid rising oil prices and higher US dollar"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 8024634187253577938,
+      "outlet_count": 1,
+      "title": "Flights between Iraq’s Najaf and Iran resumed as Tehran protests US curbs"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 5415343600275808899,
+      "outlet_count": 1,
+      "title": "American and six Ukrainians released by India after six months in jail"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 2289700435305254509,
+      "outlet_count": 1,
+      "title": "South Sudan calls for sanctions to be lifted at UNGA"
+    }
+  ],
+  "window_days": 30
+}

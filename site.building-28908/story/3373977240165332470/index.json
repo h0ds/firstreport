@@ -1,0 +1,818 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "gatewaypundit": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thegatewaypundit.com",
+          "expires": "2031-01-27",
+          "last_changed": "2026-01-20",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thegatewaypundit.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2011-01-27"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2004-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_278#RfC:_\"The_Gateway_Pundit\"_(October)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_256#Among_low-quality_sources,_the_most_popular_websites_are_right-wing_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Gateway Pundit (TGP)",
+          "status": "deprecated",
+          "summary": "The Gateway Pundit was deprecated in the 2019 RfC, which showed consensus that the site is unacceptable as a source. It is unreliable for statements of fact, and given to publishing hoax articles and reporting conspiracy theories as fact."
+        },
+        "field": "reliability",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "globeandmail": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      },
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "justthenews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "justthenews.com",
+          "expires": "2028-07-23",
+          "last_changed": "2026-08-28",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "justthenews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/justthenews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-07-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2020-01-01"
+      }
+    ],
+    "nbcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nbcnews.com",
+          "expires": "2027-06-25",
+          "last_changed": "2025-05-24",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nbcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-06-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1940-02-21"
+      },
+      {
+        "data": {
+          "qid": "Q724759"
+        },
+        "field": "owner",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "NBCUniversal"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_186#Column_on_Donors_Trust_on_(but_not_by)_NBC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Is_NBC_a_reliable_sources_for_the_Wikipedia_The_Epoch_Times_(ET)_article?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_314#NBC_News-_'Undecided_voters'_at_NBC's_Biden_town_hall_were_featured_on_MSNBC_as_Biden_voters",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_424#NBC_News_for_Wąsosz_pogrom"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NBC News",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NBC News is generally reliable for news. See also: MS NOW (formerly MSNBC)"
+        },
+        "field": "reliability",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "pbs": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pbs.org",
+          "expires": "2027-04-20",
+          "last_changed": "2026-08-12",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "pbs",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/pbs.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1969-11-03"
+      },
+      {
+        "as_of": "2016",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_101#Emme_(model)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_135#Judaism:_The_oldest_monotheistic_religion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_150#Center_for_Investigative_Reporting",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_153#thinkprogress.org_as_a_generally_accepted_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_206#Pbs.org"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "PBS (Public Broadcasting Service)",
+          "status": "generally_reliable",
+          "summary": "The Public Broadcasting Service is an American public broadcaster. It is considered generally reliable by editors."
+        },
+        "field": "reliability",
+        "outlet_id": "pbs",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.022081375122070312,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7420814037322998
+    },
+    "created_at": 1790715370,
+    "expired": false,
+    "id": 3373977240165332470,
+    "item_count": 8,
+    "last_active_at": 1790725358,
+    "origin_item_id": 14824128826794690701,
+    "origin_outlet_id": "justthenews",
+    "outlet_count": 8,
+    "primary_title": "Venezuelan man shot by ICE officer in Texas is charged with assault",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3373977240165332470,
+        "joined_at": 1790715370,
+        "outlet_id": "gatewaypundit",
+        "published_at": 1790708408
+      },
+      {
+        "item_id": 3128429746207943941,
+        "joined_at": 1790715371,
+        "outlet_id": "straitstimes",
+        "published_at": 1790705566
+      },
+      {
+        "item_id": 654176245114607208,
+        "joined_at": 1790715378,
+        "outlet_id": "globeandmail",
+        "published_at": 1790706106
+      },
+      {
+        "item_id": 14824128826794690701,
+        "joined_at": 1790715390,
+        "outlet_id": "justthenews",
+        "published_at": 1790640000
+      },
+      {
+        "item_id": 5655616159151978607,
+        "joined_at": 1790721125,
+        "outlet_id": "guardian",
+        "published_at": 1790720317
+      },
+      {
+        "item_id": 17721600771774803318,
+        "joined_at": 1790722476,
+        "outlet_id": "pbs",
+        "published_at": 1790720218
+      },
+      {
+        "item_id": 8148830260098980035,
+        "joined_at": 1790723359,
+        "outlet_id": "nbcnews",
+        "published_at": 1790722830
+      },
+      {
+        "item_id": 9747840621173905148,
+        "joined_at": 1790725358,
+        "outlet_id": "aljazeera",
+        "published_at": 1790723735
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "nbcnews",
+            "pbs",
+            "globeandmail",
+            "guardian",
+            "straitstimes"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "gatewaypundit"
+          ]
+        }
+      ],
+      "not_rated": [
+        "justthenews"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "gatewaypundit": "The Gateway Pundit",
+    "globeandmail": "The Globe and Mail",
+    "guardian": "The Guardian",
+    "justthenews": "Just the News",
+    "nbcnews": "NBC News",
+    "pbs": "PBS NewsHour",
+    "straitstimes": "The Straits Times"
+  },
+  "outlets_24h": 8,
+  "outlets_6h": 8,
+  "revisions": [],
+  "spark": [
+    6,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://justthenews.com/nation/crime/venezuelan-man-shot-ice-agent-texas-charged-assaulting-officer",
+          "cluster_id": 3373977240165332470,
+          "fetched_at": 1790715390,
+          "id": 14824128826794690701,
+          "joined_at": 1790715390,
+          "lang": "en",
+          "outlet_id": "justthenews",
+          "published_at": 1790640000,
+          "summary": "According to a federal complaint, Wilber Rafael Garces-Perez, 28, allegedly tried to escape Immigration and Customs Enforcement after they pulled him over.",
+          "text_hash": 1777432299138892904,
+          "title": "Feds charge Venezuelan facing deportation, shot by ICE agent in Texas with assaulting an officer"
+        }
+      ],
+      "outlet_id": "justthenews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/justice-department-charges-venezuelan-man-shot-by-ice-officer-in-austin",
+          "cluster_id": 3373977240165332470,
+          "fetched_at": 1790715371,
+          "id": 3128429746207943941,
+          "joined_at": 1790715371,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790705566,
+          "summary": "Sept 29 - A Venezuelan man shot by a federal immigration agent on September 20 in Austin, Texas, appeared in federal court on Tuesday after being charged with assaulting, resisting, interfering, and impeding a federal officer, the Justice Department said in a press release.",
+          "text_hash": 13359350090048493653,
+          "title": "Justice Department charges Venezuelan man shot by ICE officer in Austin"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-ice-shooting-austin-venezuela-immigration-trump/",
+          "cluster_id": 3373977240165332470,
+          "fetched_at": 1790715378,
+          "id": 654176245114607208,
+          "joined_at": 1790715378,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790706106,
+          "summary": "Wilber Rafael Garces Perez, 28, accused of striking ICE officer with car’s side mirror",
+          "text_hash": 12781953585654886635,
+          "title": "Venezuelan man shot by Texas ICE officer is charged by Trump administration"
+        }
+      ],
+      "outlet_id": "globeandmail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thegatewaypundit.com/2026/09/doj-prosecutors-charge-venezuelan-illegal-shot-ice-assaulting/",
+          "cluster_id": 3373977240165332470,
+          "fetched_at": 1790715370,
+          "id": 3373977240165332470,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "gatewaypundit",
+          "published_at": 1790708408,
+          "summary": "It was revealed on Tuesday that DOJ prosecutors charged the Venezuelan illegal alien who was shot by ICE for assaulting a federal officer. The post DOJ Prosecutors Charge Venezuelan Illegal Shot by ICE for Assaulting Federal Officer appeared first on The Gateway Pundit .",
+          "text_hash": 671916283192862847,
+          "title": "DOJ Prosecutors Charge Venezuelan Illegal Shot by ICE for Assaulting Federal Officer"
+        }
+      ],
+      "outlet_id": "gatewaypundit"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://pbs.org/newshour/nation/federal-prosecutors-charge-venezuelan-man-shot-in-his-car-by-ice-agent-in-texas-with-assaulting-an-officer",
+          "cluster_id": 3373977240165332470,
+          "fetched_at": 1790722476,
+          "id": 17721600771774803318,
+          "joined_at": 1790722476,
+          "lang": "en",
+          "outlet_id": "pbs",
+          "published_at": 1790720218,
+          "summary": "If convicted Garces Perez faces up to 20 years in prison.",
+          "text_hash": 10838656331779803266,
+          "title": "Federal prosecutors charge Venezuelan man shot in his car by ICE agent in Texas with assaulting an officer"
+        }
+      ],
+      "outlet_id": "pbs"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/us-news/2026/sep/29/venezuelan-man-charged-texas-ice-shooting",
+          "cluster_id": 3373977240165332470,
+          "fetched_at": 1790721125,
+          "id": 5655616159151978607,
+          "joined_at": 1790721125,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790720317,
+          "summary": "Garcés Pérez, who was shot in his car by agents, is accused of striking officer with side mirror while trying to drive away Federal prosecutors on Tuesday announced an assault charge against a Venezuelan delivery driver who was shot in his car by a federal immigration agent in Texas, accusing the man of striking an officer with his side mirror while trying to drive away. Wilber Rafael Garcés Pérez, 28, was charged with one count of assaulting, resisting and impeding a federal officer, according to a…",
+          "text_hash": 10561118987001012577,
+          "title": "Venezuelan man shot by ICE agent in Texas charged with assaulting an officer"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nbcnews.com/news/us-news/venezuelan-man-shot-wounded-ice-agent-texas-charged-assaulting-officer-rcna600533",
+          "cluster_id": 3373977240165332470,
+          "fetched_at": 1790723359,
+          "id": 8148830260098980035,
+          "joined_at": 1790723359,
+          "lang": "en",
+          "outlet_id": "nbcnews",
+          "published_at": 1790722830,
+          "summary": "Garcés Pérez was wounded by an ICE officer on Sept. 20 while he was in his car making DoorDash deliveries; his attorneys say a bullet lodged in his spine is causing “grave danger.”",
+          "text_hash": 3914129897226373450,
+          "title": "Venezuelan man shot and wounded by ICE agent in Texas is charged with assaulting an officer"
+        }
+      ],
+      "outlet_id": "nbcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/29/venezuelan-man-shot-by-ice-officer-in-texas-is-charged-with-assault?traffic_source=rss",
+          "cluster_id": 3373977240165332470,
+          "fetched_at": 1790725358,
+          "id": 9747840621173905148,
+          "joined_at": 1790725358,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790723735,
+          "summary": "Wilber Rafael Garces Perez has disputed the government's account of what led to his shooting during a DoorDash delivery.",
+          "text_hash": 1998069273455123781,
+          "title": "Venezuelan man shot by ICE officer in Texas is charged with assault"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    }
+  ],
+  "withdrawals": []
+}

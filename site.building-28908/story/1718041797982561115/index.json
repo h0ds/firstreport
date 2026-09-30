@@ -1,0 +1,238 @@
+{
+  "claims": {
+    "motherjones": [
+      {
+        "data": {
+          "domain": "motherjones.com",
+          "expires": "2027-06-18",
+          "last_changed": "2025-04-19",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "motherjones",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/motherjones.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-06-19"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q851510 (Mother Jones); also Q55467943 (Foundation for National Progress)",
+        "outlet_id": "motherjones",
+        "ref_url": "https://www.wikidata.org/wiki/Q851510",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1976-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_132#[Mother_Jones_and_Rolling_Stone_articles_as_RS_sources_in_a_BLP_for_a_contentious_claim",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_149#Opinion_column_by_Stephanie_Mencimer_in_Mother_Jones",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_188#Buzzfeed,_Mother_Jones_for_BLP's.",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_229#Is_Mother_Jones_magazine_a_reliable_source_for_investigative_reporting?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_274#Does_this_Mother_Jones_article_accurately_summarize_the_arguments_made_by_the_PragerU_videos_it_cites?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Mother Jones (MoJo)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Mother Jones is generally reliable. Almost all editors consider Mother Jones a biased source, so its statements (particularly on political topics) may need to be attributed. Consider whether content from this publication constitutes due weight before citing it in an article."
+        },
+        "field": "reliability",
+        "outlet_id": "motherjones",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "zerohedge": [
+      {
+        "data": {
+          "domain": "zerohedge.com",
+          "expires": "2027-01-11",
+          "last_changed": "2026-01-10",
+          "registrar": "easyDNS Technologies Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/zerohedge.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2009-01-11"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2009-01-09"
+      },
+      {
+        "data": {
+          "qid": "Q56547225"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daniel Ivandjiiski"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_302#RfC:_Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_199#ZeroHedge_Blog_post_by_\"Tyler_Durden\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_238#Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#rate_\"Zero_Hedge\""
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Zero Hedge (ZeroHedge, ZH)",
+          "status": "deprecated",
+          "summary": "Zero Hedge was deprecated in the 2020 RfC due to its propagation of conspiracy theories. It is a self-published blog that is biased or opinionated."
+        },
+        "field": "reliability",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.11959648132324219,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.8395965099334717
+    },
+    "created_at": 1790715370,
+    "expired": false,
+    "id": 1718041797982561115,
+    "item_count": 2,
+    "last_active_at": 1790721887,
+    "origin_item_id": 1718041797982561115,
+    "origin_outlet_id": "motherjones",
+    "outlet_count": 2,
+    "primary_title": "Judges Keep Striking Down Climate Laws. Some States Are Fighting Back.",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 1718041797982561115,
+        "joined_at": 1790715370,
+        "outlet_id": "motherjones",
+        "published_at": 1790709885
+      },
+      {
+        "item_id": 11869024674982622456,
+        "joined_at": 1790721887,
+        "outlet_id": "zerohedge",
+        "published_at": 1790716800
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "motherjones"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "zerohedge"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "motherjones": "Mother Jones",
+    "zerohedge": "ZeroHedge"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://motherjones.com/environment/2026/09/climate-superfund-new-york-supreme-court-suncor-boulder/",
+          "cluster_id": 1718041797982561115,
+          "fetched_at": 1790715370,
+          "id": 1718041797982561115,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "motherjones",
+          "published_at": 1790709885,
+          "summary": "On Wednesday—the fourth day New York’s annual Climate Week—a federal judge handed the Trump administration a major victory by striking down New York’s landmark Climate Change Superfund Act. Judge P. Kevin Castel ruled that the law, which sought to hold fossil fuel companies financially responsible for climate change-related damages, overstepped the state’s authority because it was […]",
+          "text_hash": 4729544482785914156,
+          "title": "Judges Keep Striking Down Climate Laws. Some States Are Fighting Back."
+        }
+      ],
+      "outlet_id": "motherjones"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://zerohedge.com/political/another-federal-judge-strikes-down-new-yorks-75-billion-climate-superfund",
+          "cluster_id": 1718041797982561115,
+          "fetched_at": 1790721887,
+          "id": 11869024674982622456,
+          "joined_at": 1790721887,
+          "lang": "en",
+          "outlet_id": "zerohedge",
+          "published_at": 1790716800,
+          "summary": "Another Federal Judge Strikes Down New York's $75 Billion Climate Superfund Authored by Tom Gantert via The Epoch Times , A federal judge has struck down New York's Climate Change Superfund Act , blocking the state from collecting $75 billion from fossil fuel companies to pay for projects addressing concerns the state attributed to climate change. The Justice Department on Sept. 28 hailed the ruling as a \"significant step in ... protecting American energy from state overreach.\" U.S. District Judge P. Kevin…",
+          "text_hash": 16559950809192266493,
+          "title": "Another Federal Judge Strikes Down New York's $75 Billion Climate Superfund"
+        }
+      ],
+      "outlet_id": "zerohedge"
+    }
+  ],
+  "withdrawals": []
+}

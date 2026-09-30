@@ -1,0 +1,138 @@
+{
+  "claims": {
+    "reason": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "reason.com",
+          "expires": "2034-08-21",
+          "last_changed": "2024-08-21",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "reason",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/reason.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1968-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_200#Reason_Magazine_at_David_Lisak",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_291#Reason_Magazine_and_reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_352#Reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_500#Reason_(magazine)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Reason",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Reason is generally reliable for news and facts. Editors consider Reason to be a biased or opinionated source that primarily publishes commentary, analysis, and opinion articles. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "reason",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790679061,
+    "expired": false,
+    "id": 16184040353973442799,
+    "item_count": 1,
+    "last_active_at": 1790679061,
+    "origin_item_id": 16184040353973442799,
+    "origin_outlet_id": "reason",
+    "outlet_count": 1,
+    "primary_title": "Brickbat: Evidence Is Overrated",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16184040353973442799,
+        "joined_at": 1790679061,
+        "outlet_id": "reason",
+        "published_at": 1790668837
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "reason": "Reason"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://reason.com/2026/09/29/brickbat-evidence-is-overrated/",
+          "cluster_id": 16184040353973442799,
+          "fetched_at": 1790679061,
+          "id": 16184040353973442799,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "reason",
+          "published_at": 1790668837,
+          "summary": "Nathaniel Stephens of Grayson, Kentucky, became the subject of a DUI investigation after a teenager backed into his car in… The post Brickbat: Evidence Is Overrated appeared first on Reason Magazine.",
+          "text_hash": 3876276964734874649,
+          "title": "Brickbat: Evidence Is Overrated"
+        }
+      ],
+      "outlet_id": "reason"
+    }
+  ],
+  "withdrawals": []
+}

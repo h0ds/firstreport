@@ -1,0 +1,483 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "cna": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "channelnewsasia.com",
+          "expires": "2027-02-23",
+          "last_changed": "2026-02-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cna",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/channelnewsasia.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-02-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1999-03-01"
+      },
+      {
+        "data": {
+          "qid": "Q1368796"
+        },
+        "field": "owner",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mediacorp"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_489#RfC:_Channel_NewsAsia_(CNA)_and_other_Mediacorp-affiliated_media"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CNA (Channel NewsAsia)",
+          "status": "generally_reliable",
+          "summary": "The 2025 RfC established a consensus that CNA, a Singaporean state-owned news channel, is a generally reliable source."
+        },
+        "field": "reliability",
+        "outlet_id": "cna",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.005520641803741455,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.725520670413971
+    },
+    "created_at": 1790715370,
+    "expired": false,
+    "id": 18145423920728228428,
+    "item_count": 6,
+    "last_active_at": 1790725358,
+    "origin_item_id": 3000058227013034070,
+    "origin_outlet_id": "cna",
+    "outlet_count": 4,
+    "primary_title": "Man City guilty of all serious financial breach charges: Premier League",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 18145423920728228428,
+        "joined_at": 1790715370,
+        "outlet_id": "aljazeera",
+        "published_at": 1790699450
+      },
+      {
+        "item_id": 3279137073866720414,
+        "joined_at": 1790715391,
+        "outlet_id": "cna",
+        "published_at": 1790700462
+      },
+      {
+        "item_id": 3000058227013034070,
+        "joined_at": 1790715391,
+        "outlet_id": "cna",
+        "published_at": 1790698080
+      },
+      {
+        "item_id": 4665042432916584703,
+        "joined_at": 1790715392,
+        "outlet_id": "arabnews",
+        "published_at": 1790713101
+      },
+      {
+        "item_id": 10167372366296880717,
+        "joined_at": 1790715393,
+        "outlet_id": "anadolu",
+        "published_at": 1790707072
+      },
+      {
+        "item_id": 17066884575373754243,
+        "joined_at": 1790725358,
+        "outlet_id": "aljazeera",
+        "published_at": 1790723167
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "cna"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "anadolu": "Anadolu Agency",
+    "arabnews": "Arab News",
+    "cna": "CNA"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 4,
+  "revisions": [],
+  "spark": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://channelnewsasia.com/sport/man-city-charged-guilty-financial-breaches-6419256",
+          "cluster_id": 18145423920728228428,
+          "fetched_at": 1790715391,
+          "id": 3000058227013034070,
+          "joined_at": 1790715391,
+          "lang": "en",
+          "outlet_id": "cna",
+          "published_at": 1790698080,
+          "summary": "Manchester City were found guilty of serious Premier League financial rule breaches over nine seasons, though the club denied wrongdoing and said it would appeal the decision.",
+          "text_hash": 10853368031010311473,
+          "title": "Man City found guilty of all charges of financial rule breaches, Premier League confirms"
+        },
+        {
+          "canonical_url": "https://channelnewsasia.com/sport/man-city-surprised-after-premier-league-confirm-findings-serious-financial-breaches-6419331",
+          "cluster_id": 18145423920728228428,
+          "fetched_at": 1790715391,
+          "id": 3279137073866720414,
+          "joined_at": 1790715391,
+          "lang": "en",
+          "outlet_id": "cna",
+          "published_at": 1790700462,
+          "summary": "",
+          "text_hash": 7393903302953462547,
+          "title": "Man City surprised after Premier League confirm findings of serious financial breaches"
+        }
+      ],
+      "outlet_id": "cna"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/sports/2026/9/29/man-city-guilty-of-all-serious-financial-breach-charges-premier-league?traffic_source=rss",
+          "cluster_id": 18145423920728228428,
+          "fetched_at": 1790715370,
+          "id": 18145423920728228428,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790699450,
+          "summary": "Manchester City say they are 'disappointed and surprised' by the verdict and will appeal.",
+          "text_hash": 9266455644951670021,
+          "title": "Man City guilty of all serious financial breach charges: Premier League"
+        },
+        {
+          "canonical_url": "https://aljazeera.com/video/newsfeed/2026/9/29/man-city-ceo-premier-league-verdict-based-on-conspiracy?traffic_source=rss",
+          "cluster_id": 18145423920728228428,
+          "fetched_at": 1790725358,
+          "id": 17066884575373754243,
+          "joined_at": 1790725358,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790723167,
+          "summary": "Man City says it will appeal after an independent commission convicted it of breaking Premier League financial rules.",
+          "text_hash": 8398711344555500684,
+          "title": "Man City CEO: Premier League verdict based on ‘conspiracy theory’"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/sports/manchester-city-found-guilty-of-serious-premier-league-financial-rule-breaches-to-appeal/4073044",
+          "cluster_id": 18145423920728228428,
+          "fetched_at": 1790715393,
+          "id": 10167372366296880717,
+          "joined_at": 1790715393,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790707072,
+          "summary": "Independent commission finds club used ‘sham’ deals to inflate revenues, reduce costs by more than £900M",
+          "text_hash": 15458271161736036857,
+          "title": "Manchester City found guilty of serious Premier League financial rule breaches, to appeal"
+        }
+      ],
+      "outlet_id": "anadolu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/football/tebas-says-man-city-should-face-most-severe-sanctions-if-guilty-of-rule-breaches-3003791",
+          "cluster_id": 18145423920728228428,
+          "fetched_at": 1790715392,
+          "id": 4665042432916584703,
+          "joined_at": 1790715392,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790713101,
+          "summary": "LONDON: La Liga president Javier Tebas said Manchester City should face the “most severe sanction” available if they have breached financial regulations. Reports on Friday said an independent panel had found City guilty on all but one of 115 charges for breaking Premier League rules. But no official announcement has been made by the English top-flight and there is, as yet, no indication of any potential punishment. Abu Dhabi-backed City have always strenuously denied the charges and chairman",
+          "text_hash": 11637802696004439328,
+          "title": "Tebas says Man City should face ‘most severe’ sanctions if guilty of rule breaches"
+        }
+      ],
+      "outlet_id": "arabnews"
+    }
+  ],
+  "withdrawals": []
+}

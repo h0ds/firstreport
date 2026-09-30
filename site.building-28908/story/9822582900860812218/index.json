@@ -1,0 +1,147 @@
+{
+  "claims": {
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653931,
+    "expired": false,
+    "id": 9822582900860812218,
+    "item_count": 1,
+    "last_active_at": 1790653931,
+    "origin_item_id": 9822582900860812218,
+    "origin_outlet_id": "axios",
+    "outlet_count": 1,
+    "primary_title": "Exclusive: Thune plans another leader bid as Senate GOP fights to survive",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9822582900860812218,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790206245
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "axios": "Axios"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/23/john-thune-senate-republican-leader-trump",
+          "cluster_id": 9822582900860812218,
+          "fetched_at": 1790653931,
+          "id": 9822582900860812218,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790206245,
+          "summary": "Senate Majority Leader John Thune plans to run for another term as GOP leader, even if Republicans lose the chamber's majority, he told Axios in an exclusive interview Wednesday in his Capitol office. Why it matters: Thune (R-S.D.) is giving his senators broad leeway and tons of cash to preserve GOP control of the Senate. \"I do see the Senate as a firewall in a lot of ways,\" Thune told Axios. \"We will spend probably the next two years — if the House flips — trying to do impeachment or investigations,…",
+          "text_hash": 14254107226461703465,
+          "title": "Exclusive: Thune plans another leader bid as Senate GOP fights to survive"
+        }
+      ],
+      "outlet_id": "axios"
+    }
+  ],
+  "withdrawals": []
+}

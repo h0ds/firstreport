@@ -1,0 +1,208 @@
+{
+  "claims": {
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q340169"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q118213518 (PRESIDENT Online); also Q118213523 (PRESIDENT Online Podcast)",
+        "outlet_id": "president",
+        "ref_url": "https://www.wikidata.org/wiki/Q118213518",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "communications media"
+      },
+      {
+        "data": {
+          "qid": "Q17232649"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q118213518 (PRESIDENT Online); also Q118213523 (PRESIDENT Online Podcast)",
+        "outlet_id": "president",
+        "ref_url": "https://www.wikidata.org/wiki/Q118213518",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news website"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "president.jp"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "president",
+        "ref_url": "https://president.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "PRESIDENT Online（プレジデントオンライン）"
+      },
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q118213518 (PRESIDENT Online); also Q118213523 (PRESIDENT Online Podcast)",
+        "outlet_id": "president",
+        "ref_url": "https://www.wikidata.org/wiki/Q118213518",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "PRESIDENT Online"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 22,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "president",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/president",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.2 items/day"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 22,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "president",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/president",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "president.jp",
+          "final_url": "https://president.jp/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "president",
+        "ref_url": "https://president.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://president.jp/list/about",
+          "contact": "https://secure.president.co.jp/cgi-bin/info/contact/article/pol",
+          "domain": "president.jp",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.president.co.jp/information/privacy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "president",
+        "ref_url": "https://president.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 22,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "president",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/president",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q118213518 (PRESIDENT Online); also Q118213523 (PRESIDENT Online Podcast)",
+        "outlet_id": "president",
+        "ref_url": "https://www.wikidata.org/wiki/Q118213518",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://president.jp/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q118213523"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q118213518 (PRESIDENT Online); also Q118213523 (PRESIDENT Online Podcast)",
+        "outlet_id": "president",
+        "ref_url": "https://www.wikidata.org/wiki/Q118213518",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q118213518"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 22,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "president",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/president",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 37,
+  "outlet": {
+    "domains": [
+      "president.jp"
+    ],
+    "id": "president",
+    "name": "PRESIDENT Online"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

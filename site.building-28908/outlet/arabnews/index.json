@@ -1,0 +1,668 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "arabnews.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.1923
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "arabnews",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.19 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q11032"
+        },
+        "field": "legal_form",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "newspaper"
+      }
+    ],
+    "name": [
+      {
+        "field": "name",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Arab News"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 65,
+          "origin_of": 4,
+          "shared_stories": 24,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "arabnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/arabnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 17% of 24 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 65,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "arabnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/arabnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.7 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "arabnews.com"
+        },
+        "field": "registrar",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Network Solutions, LLC"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 65,
+          "revised": 1,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "arabnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/arabnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "2% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "final_url": "https://www.arabnews.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.arabnews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.arabnews.com/middle-east/what-we-know-about-us-sanctions-on-iranian-aviation-3003638",
+          "contact": "https://www.arabnews.com/contact-us",
+          "domain": "arabnews.com",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.arabnews.com/node/51204"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.arabnews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 65,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "arabnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/arabnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.arabnews.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q623659"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Arab_News"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 65,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 3
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "arabnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/arabnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "5% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 9,
+  "items": 141,
+  "outlet": {
+    "domains": [
+      "arabnews.com"
+    ],
+    "id": "arabnews",
+    "name": "Arab News"
+  },
+  "shared_stories": 59,
+  "stories": [
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 18145423920728228428,
+      "outlet_count": 4,
+      "title": "Man City guilty of all serious financial breach charges: Premier League"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 5623028648086973051,
+      "outlet_count": 7,
+      "title": "US forces exit Iraq after two decades, leaving opening for Iran"
+    },
+    {
+      "created_at": 1790715378,
+      "first": false,
+      "id": 6644257237448895193,
+      "outlet_count": 14,
+      "title": "Trump: Tech Leaders Signed Accord to 'Self-Police' AI Development"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 12368115546343778984,
+      "outlet_count": 8,
+      "title": "Netanyahu Said to Have Been Warned by Emirati Leader About Hamas Attack Before Oct. 7"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 17314204335772072738,
+      "outlet_count": 7,
+      "title": "North Korea denies South's claim it was behind DMZ mine blasts"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 10592617896016852205,
+      "outlet_count": 2,
+      "title": "Syria dismantles Hezbollah-linked cell in southern Daraa province"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 3322863658697567134,
+      "outlet_count": 18,
+      "title": "Justices Let Deportations to 3rd Countries Resume While Weighing Policy"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 11028257054862133353,
+      "outlet_count": 3,
+      "title": "Sabotage on east Syria pipeline halts gas flow: state media"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 11726634235689167800,
+      "outlet_count": 13,
+      "title": "Morocco’s king appoints the country’s first woman prime minister"
+    },
+    {
+      "created_at": 1790715371,
+      "first": false,
+      "id": 7553827412345677229,
+      "outlet_count": 4,
+      "title": "US sanctions 10 over allegedly procuring weapons for Iran"
+    },
+    {
+      "created_at": 1790718367,
+      "first": false,
+      "id": 4426038608937777973,
+      "outlet_count": 2,
+      "title": "Yamal inspires Spain to Croatia romp on World Cup homecoming"
+    },
+    {
+      "created_at": 1790723374,
+      "first": true,
+      "id": 3414528666523961638,
+      "outlet_count": 1,
+      "title": "England break down stubborn Czechs to claim first Nations League win"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 925583014156697947,
+      "outlet_count": 12,
+      "title": "French far-right’s Bardella denies alleged antisemitic comments, files defamation lawsuit"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15587760235900320854,
+      "outlet_count": 26,
+      "title": "5 men released on bail in UK over suspected US-run airbase plot"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 2687155261920818657,
+      "outlet_count": 10,
+      "title": "UAE, Israel both confirm Netanyahu's Abu Dhabi trip after reports"
+    },
+    {
+      "created_at": 1790715388,
+      "first": false,
+      "id": 12061008855114871481,
+      "outlet_count": 3,
+      "title": "Mamdani releases plan to combat antisemitism in New York amid concerns over his criticism of Israel"
+    },
+    {
+      "created_at": 1790682645,
+      "first": false,
+      "id": 12263486972145751600,
+      "outlet_count": 6,
+      "title": "Iran's currency hits a new record low as war erodes the country's economic stability"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 9811700178444612757,
+      "outlet_count": 8,
+      "title": "Congo’s Ebola outbreak tops 8,000 confirmed cases as disease remains out of control"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 17379105243396014528,
+      "outlet_count": 4,
+      "title": "Homeland Security spending $20M in taxpayer funds for pro-Trump ads"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 8386805498379463014,
+      "outlet_count": 1,
+      "title": "Saudi Arabia through as dramatic final group night leaves Oman-Iraq tie to be settled by lots"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 8522530705406292751,
+      "outlet_count": 4,
+      "title": "Saudi crown prince welcomes UAE vice president in Riyadh"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11230258509063452999,
+      "outlet_count": 18,
+      "title": "87-year-old woman whose eviction sparked protests in Spain is returning home"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 12183864648573350673,
+      "outlet_count": 9,
+      "title": "3 News Outlets Seek Court Order Against Trump's White House Ban"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 10317763272925147596,
+      "outlet_count": 9,
+      "title": "Russian Tu-95 nuclear-capable bomber plane crashes, killing six people"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 2328662350960157817,
+      "outlet_count": 6,
+      "title": "A TV journalist is crowned king of a traditional monarchy in Uganda"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 18245226222243910694,
+      "outlet_count": 1,
+      "title": "Houthi missile hits Yemen government base in Lahj as mountain battles intensify"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 18019892712182308118,
+      "outlet_count": 1,
+      "title": "Closing Bell: Saudi main market slips 1.17%"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 17786009933868979804,
+      "outlet_count": 1,
+      "title": "Turkey, now a major power in Somalia, dragged into internal conflicts"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 17757636065600841753,
+      "outlet_count": 1,
+      "title": "Saudi and Bulgarian defense ministers discuss military cooperation and regional security"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 17629658595313966630,
+      "outlet_count": 1,
+      "title": "Why we could not stop cholera in Sudan"
+    },
+    {
+      "created_at": 1790682043,
+      "first": false,
+      "id": 17179960892066331142,
+      "outlet_count": 2,
+      "title": "Motor Racing-Alonso extends contract with Aston Martin for 2027 season"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 17030057795327761994,
+      "outlet_count": 2,
+      "title": "Ireland undecided on approach for next game against Israel, coach says"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 16844703644500887654,
+      "outlet_count": 1,
+      "title": "Joao Felix steps out of Ronaldo’s shadow for Al-Nassr and Portugal"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 16533903157304924163,
+      "outlet_count": 1,
+      "title": "Iraq begins importing gasoline via Syrian port to bypass the closed Strait of Hormuz"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 15686112681895505188,
+      "outlet_count": 1,
+      "title": "Turkiye arrests president of football refereeing body"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 15484306957026177269,
+      "outlet_count": 1,
+      "title": "Saudi Embassy honors Kingdom’s candidate for WHO director general in Washington"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 15198984378949373088,
+      "outlet_count": 1,
+      "title": "Saudi Cabinet stresses importance of ensuring freedom of navigation in vital waterways"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 15082212044037247297,
+      "outlet_count": 1,
+      "title": "Flippant response to Ben-Gvir’s vile idea a grave concern"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 14409675516241058513,
+      "outlet_count": 1,
+      "title": "Cartoon by Amjad Rasmi. (Courtesy of Asharq Al-Awsat)"
+    },
+    {
+      "created_at": 1790679061,
+      "first": false,
+      "id": 13101871118082445272,
+      "outlet_count": 2,
+      "title": "Judge keeps UK far-right activist in jail for trial on slashing migrant dinghy"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 12627203330768233379,
+      "outlet_count": 1,
+      "title": "SAB partners with Swift to enhance cross-border payments"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 11454582511529522431,
+      "outlet_count": 1,
+      "title": "Where We Are Going Today: Kungfu 1919’s beef noodle soup will leave you craving more"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 9242111305910964489,
+      "outlet_count": 1,
+      "title": "Saudi FM meets with heads of two US Senate committees in Washington"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 8961830429398429750,
+      "outlet_count": 1,
+      "title": "UN should move its headquarters from the US to Middle East"
+    },
+    {
+      "created_at": 1790715371,
+      "first": false,
+      "id": 8324438044210794929,
+      "outlet_count": 2,
+      "title": "Greece agrees to return remains of medieval tsar to Bulgaria"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 8219853661833304387,
+      "outlet_count": 1,
+      "title": "Kingdom introduces all-inclusive Hajj package for 2027"
+    },
+    {
+      "created_at": 1790715371,
+      "first": false,
+      "id": 8130742170536893742,
+      "outlet_count": 2,
+      "title": "Italy completes troop withdrawal from Iraq"
+    },
+    {
+      "created_at": 1790679062,
+      "first": false,
+      "id": 7978507866460908506,
+      "outlet_count": 2,
+      "title": "Soldiers and mercenaries killed at least 34 civilians in Mali, Amnesty report says"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 7967029603139251214,
+      "outlet_count": 1,
+      "title": "100 days to go: Saudi Arabia showcases readiness for AFC Asian Cup 2027"
+    },
+    {
+      "created_at": 1790715392,
+      "first": true,
+      "id": 7589678494436894558,
+      "outlet_count": 1,
+      "title": "Brazil come from behind to beat Australia 4-2 in friendly"
+    }
+  ],
+  "story_pages": 3,
+  "window_days": 30
+}

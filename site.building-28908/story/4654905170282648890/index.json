@@ -1,0 +1,179 @@
+{
+  "claims": {
+    "cbsnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "cbsnews.com",
+          "expires": "2027-10-03",
+          "last_changed": "2026-09-01",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cbsnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-10-04"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-09-18"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_522#Request_for_Comment:_Reliability_of_CBS_News_under_Bari_Weiss",
+            "#cite_note-20"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CBS News",
+          "status": "generally_reliable",
+          "summary": "CBS News is the news division of CBS. It is considered generally reliable. Some editors note, however, that its television content may include superficial coverage, which might not qualify under WP:MEDRS. Editors also note that CBS has undergone intensified political bias after Bari Weiss became editor-in-chief in late 2025, and supression of reporting critical of the Trump administration has been"
+        },
+        "field": "reliability",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": true,
+      "unscored": 3,
+      "weakest_join": null
+    },
+    "created_at": 1790653930,
+    "expired": false,
+    "id": 4654905170282648890,
+    "item_count": 3,
+    "last_active_at": 1790724967,
+    "origin_item_id": 10529019097340330245,
+    "origin_outlet_id": "cbsnews",
+    "outlet_count": 1,
+    "primary_title": "Charles Spencer says Buckingham Palace \"has to gaslight\" him in response to Diana book claims",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 4654905170282648890,
+        "joined_at": 1790653930,
+        "outlet_id": "cbsnews",
+        "published_at": 1790610780
+      },
+      {
+        "item_id": 11571298825130505669,
+        "joined_at": 1790653930,
+        "outlet_id": "cbsnews",
+        "published_at": 1790608713
+      },
+      {
+        "item_id": 10529019097340330245,
+        "joined_at": 1790724967,
+        "outlet_id": "cbsnews",
+        "published_at": 1789913160
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "cbsnews": "CBS News"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://cbsnews.com/news/charles-spencers-striking-claims-about-the-royal-fallout-following-princess-dianas-death/",
+          "cluster_id": 4654905170282648890,
+          "fetched_at": 1790724933,
+          "id": 10529019097340330245,
+          "joined_at": 1790724967,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1789913160,
+          "summary": "In his first interview about his new book, \"Swan Song: Diana, My Sister,\" Charles Spencer talks about his attempt to set down what he calls the definitive story of Princess Diana.",
+          "text_hash": 7339346139662681782,
+          "title": "Charles Spencer on the royal fallout following Princess Diana's death"
+        },
+        {
+          "canonical_url": "https://cbsnews.com/video/charles-spencer-says-buckingham-palace-has-to-gaslight-him-in-response-to-diana-book-claims/",
+          "cluster_id": 4654905170282648890,
+          "fetched_at": 1790653930,
+          "id": 11571298825130505669,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790608713,
+          "summary": "Charles Spencer, the brother of Princess Diana, sits down with \"CBS Mornings\" to discuss his new book \"Swan Song\" about his sister's death and her legacy thereafter.",
+          "text_hash": 9296199755883775970,
+          "title": "Charles Spencer says Buckingham Palace \"has to gaslight\" him in response to Diana book claims"
+        },
+        {
+          "canonical_url": "https://cbsnews.com/news/princess-diana-brother-charles-spencer-buckingham-palaces-response-claims-new-book/",
+          "cluster_id": 4654905170282648890,
+          "fetched_at": 1790653930,
+          "id": 4654905170282648890,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790610780,
+          "summary": "Charles Spencer, the brother of the late Princess Diana, spoke to \"CBS Mornings\" co-host Gayle King about writing his new book, \"Swan Song: Diana, My Sister.\"",
+          "text_hash": 14137674015748031378,
+          "title": "Princess Diana's brother says Buckingham Palace \"has to gaslight\" him"
+        }
+      ],
+      "outlet_id": "cbsnews"
+    }
+  ],
+  "withdrawals": []
+}

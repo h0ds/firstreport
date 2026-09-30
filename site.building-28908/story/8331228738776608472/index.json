@@ -1,0 +1,276 @@
+{
+  "claims": {
+    "gbnews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      },
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "mirror": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "mirror.co.uk",
+          "expires": "2027-09-08",
+          "last_changed": "2026-09-04",
+          "registrar": "CSC Corporate Domains, Inc",
+          "status": [
+            "server delete prohibited",
+            "renew period",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "mirror",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/mirror.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-08"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1636545"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Reach plc"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_160#Huffington_Post/Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#The_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Daily_Express_and_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Daily_Mirror"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Mirror (Mirror)",
+          "status": "no_consensus",
+          "summary": "The Daily Mirror, also known just as the Mirror, is a tabloid newspaper that publishes tabloid journalism. There is no consensus on whether its reliability is comparable to that of British tabloids such as the Daily Mail and The Sun."
+        },
+        "field": "reliability",
+        "outlet_id": "mirror",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.04093259572982788,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7609326243400574
+    },
+    "created_at": 1790653939,
+    "expired": false,
+    "id": 8331228738776608472,
+    "item_count": 2,
+    "last_active_at": 1790717725,
+    "origin_item_id": 8331228738776608472,
+    "origin_outlet_id": "mirror",
+    "outlet_count": 2,
+    "primary_title": "Police alerted to RAF Fairford after terror suspect 'called 999 himself'",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8331228738776608472,
+        "joined_at": 1790653939,
+        "outlet_id": "mirror",
+        "published_at": 1790592818
+      },
+      {
+        "item_id": 4261109229434275473,
+        "joined_at": 1790717725,
+        "outlet_id": "gbnews",
+        "published_at": 1790716462
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "No consensus",
+          "outlets": [
+            "mirror"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "gbnews"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "gbnews": "GB News",
+    "mirror": "Daily Mirror"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://mirror.co.uk/news/uk-news/raf-fairford-terror-police-farmer-37709579",
+          "cluster_id": 8331228738776608472,
+          "fetched_at": 1790653939,
+          "id": 8331228738776608472,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "mirror",
+          "published_at": 1790592818,
+          "summary": "\"As a farmer claims she stumbled upon suspicious group near RAF Fairford and police 'dropped the ball', the opposite is almost certainly true - the gang was already being watched\"",
+          "text_hash": 76068150069725288,
+          "title": "'RAF Fairford terror police \"likely already probing plot\" when farmer raised alarm'"
+        }
+      ],
+      "outlet_id": "mirror"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://gbnews.com/news/raf-fairford-police-alerted-terror-plot-suspected-called-999",
+          "cluster_id": 8331228738776608472,
+          "fetched_at": 1790717725,
+          "id": 4261109229434275473,
+          "joined_at": 1790717725,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790716462,
+          "summary": "A suspect arrested for the alleged bomb plot near RAF Fairford is said to have foiled the plan himself. It has been reported the attack was foiled when one of the five suspects called emergency services in the early hours of Sunday morning. Around an hour later, a member of the public, a local farmer, rang up 999 to alert the police about three suspicious vans and a group of masked men in the area. But police were already understood to be on the scene. TRENDING Stories Videos Your Say Initial reports said…",
+          "text_hash": 7472150283466620621,
+          "title": "Police alerted to RAF Fairford after terror suspect 'called 999 himself'"
+        }
+      ],
+      "outlet_id": "gbnews"
+    }
+  ],
+  "withdrawals": []
+}

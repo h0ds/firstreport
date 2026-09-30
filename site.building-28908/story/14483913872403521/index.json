@@ -1,0 +1,139 @@
+{
+  "claims": {
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653939,
+    "expired": false,
+    "id": 14483913872403521,
+    "item_count": 1,
+    "last_active_at": 1790653939,
+    "origin_item_id": 14483913872403521,
+    "origin_outlet_id": "euronews",
+    "outlet_count": 1,
+    "primary_title": "Russia under Putin lost nearly half its schools — war propaganda fills the rest",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 14483913872403521,
+        "joined_at": 1790653939,
+        "outlet_id": "euronews",
+        "published_at": 1790586761
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "euronews": "Euronews"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/28/russia-under-putin-lost-nearly-half-its-schools-war-propaganda-fills-the-rest",
+          "cluster_id": 14483913872403521,
+          "fetched_at": 1790653939,
+          "id": 14483913872403521,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790586761,
+          "summary": "Closures driven by per-pupil funding that made smaller rural schools unviable far outpaced demographic decline. Since 2022, all remaining schools hold mandatory weekly classes on Russian \"traditional values\" and the Kremlin's version of events surrounding Russia's war in Ukraine.",
+          "text_hash": 8204398227459700031,
+          "title": "Russia under Putin lost nearly half its schools — war propaganda fills the rest"
+        }
+      ],
+      "outlet_id": "euronews"
+    }
+  ],
+  "withdrawals": []
+}

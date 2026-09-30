@@ -1,0 +1,486 @@
+{
+  "claims": {
+    "country": [
+      {
+        "data": {
+          "qid": "Q212"
+        },
+        "field": "country",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Ukraine"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "kyivindependent.com",
+          "expires": "2031-11-19",
+          "last_changed": "2025-11-23",
+          "registrar": "Instra Corporation Pty Ltd.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/kyivindependent.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2021-11-19"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-11-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q6017523"
+        },
+        "field": "legal_form",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "independent media"
+      },
+      {
+        "data": {
+          "qid": "Q1153191"
+        },
+        "field": "legal_form",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "online newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "kyivindependent.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://kyivindependent.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "The Kyiv Independent"
+      },
+      {
+        "field": "name",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Kyiv Independent"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 16,
+          "origin_of": 1,
+          "shared_stories": 4,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "kyivindependent",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/kyivindependent",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 25% of 4 stories other outlets also carried"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 16,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "kyivindependent",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/kyivindependent",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.2 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "kyivindependent.com"
+        },
+        "field": "registrar",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/kyivindependent.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Instra Corporation Pty Ltd."
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 16,
+          "revised": 1,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "kyivindependent",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/kyivindependent",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "6% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "kyivindependent.com",
+          "final_url": "https://kyivindependent.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://kyivindependent.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://kyivindependent.com/about/",
+          "contact": "https://kyivindependent.com/contacts/",
+          "domain": "kyivindependent.com",
+          "masthead": "https://kyivindependent.com/general-staff-russia-has-lost-1-532-500-troops-in-ukraine-since-feb-24-2022/",
+          "missing": [
+            "corrections",
+            "ethics"
+          ],
+          "privacy": "https://kyivindependent.com/privacy-policy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://kyivindependent.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, masthead pages from its home page; no corrections, ethics link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 16,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "kyivindependent",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/kyivindependent",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://kyivindependent.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q111028947"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Kyiv_Independent"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 16,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 1
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "kyivindependent",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/kyivindependent",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "6% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 4,
+  "items": 34,
+  "outlet": {
+    "domains": [
+      "kyivindependent.com"
+    ],
+    "id": "kyivindependent",
+    "name": "The Kyiv Independent"
+  },
+  "shared_stories": 12,
+  "stories": [
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 10317763272925147596,
+      "outlet_count": 9,
+      "title": "Russian Tu-95 nuclear-capable bomber plane crashes, killing six people"
+    },
+    {
+      "created_at": 1790715371,
+      "first": true,
+      "id": 4171261342992099727,
+      "outlet_count": 3,
+      "title": "Belgium to transfer 3 F-16 fighter jets to Ukraine by end of 2026, Zelensky says"
+    },
+    {
+      "created_at": 1790668765,
+      "first": false,
+      "id": 15012738059663545664,
+      "outlet_count": 10,
+      "title": "Estonia blames Russia for arson attack on defense company that provides vehicles to Ukraine"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 16909025163628940506,
+      "outlet_count": 1,
+      "title": "Kyiv Independent COO Zakhar Protsiuk named in INMA’s 30 Under 30 Awards"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 15391234027449503055,
+      "outlet_count": 1,
+      "title": "Ukrainian suspect in Nord Stream sabotage requests asylum in Croatia"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 14976319985450857727,
+      "outlet_count": 5,
+      "title": "New Russian mobilisation: Putin signs decree adding 15,500 troops to army"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 13952437953144253964,
+      "outlet_count": 1,
+      "title": "Update: EU's decision to pay for alleged 'anti-reform' draws criticism from Ukrainian experts"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 13809834417185423872,
+      "outlet_count": 2,
+      "title": "Zelensky warns Russia of consequences if energy truce talks fail"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 12579444589888382050,
+      "outlet_count": 1,
+      "title": "Russian military units allegedly involved in Oleshky humanitarian crisis identified"
+    },
+    {
+      "created_at": 1790679062,
+      "first": false,
+      "id": 12275314763615734997,
+      "outlet_count": 2,
+      "title": "Lukashenko proposes US join Belarus-Gazprom fertilizer project, Belta reports"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 7547290798346628443,
+      "outlet_count": 1,
+      "title": "After Nestle and Auchan seizures, Russia is coming for others"
+    },
+    {
+      "created_at": 1790654763,
+      "first": true,
+      "id": 6516553864041570504,
+      "outlet_count": 2,
+      "title": "Russia to cut welfare, education funding in 2027, as spending soars on war in Ukraine"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 6049286712785113304,
+      "outlet_count": 1,
+      "title": "Ukraine receives air defense missiles for NASAMS systems, Zelensky says amid shortage"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 4130183579023343868,
+      "outlet_count": 1,
+      "title": "Reporter's Notebook: How constant drone attacks became a normal workday in Kyiv"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 2631397046856685495,
+      "outlet_count": 1,
+      "title": "3 children injured as Russia strikes Sumy school with glide bombs"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 436575783752664934,
+      "outlet_count": 1,
+      "title": "Top Zelensky staffer's associates get properties worth $1 million in controversial projects, media report says"
+    },
+    {
+      "created_at": 1790654763,
+      "first": true,
+      "id": 11205415086936426057,
+      "outlet_count": 2,
+      "title": "Russia Tightens Secrecy On Energy Exports"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 10220048785832836552,
+      "outlet_count": 14,
+      "title": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 3322944493951692810,
+      "outlet_count": 1,
+      "title": "Norway to allocate $2.6 million for humanitarian programs in Ukraine"
+    },
+    {
+      "created_at": 1790664666,
+      "first": true,
+      "id": 14522317379158800810,
+      "outlet_count": 1,
+      "title": "General Staff: Russia has lost 1,532,500 troops in Ukraine since Feb. 24, 2022"
+    },
+    {
+      "created_at": 1790653938,
+      "first": true,
+      "id": 17417424853964488970,
+      "outlet_count": 4,
+      "title": "Ukraine’s Zelensky says North Korea prepares to deploy another 10,000 troops to Russia"
+    },
+    {
+      "created_at": 1790654763,
+      "first": true,
+      "id": 15182660915292023648,
+      "outlet_count": 1,
+      "title": "Unfreezing Europe's Russian assets debate"
+    },
+    {
+      "created_at": 1790633635,
+      "first": false,
+      "id": 12381899204697281607,
+      "outlet_count": 7,
+      "title": "South Korea demands Ukraine apology over denial of confidential deal on North’s prisoners of war"
+    },
+    {
+      "created_at": 1790654763,
+      "first": true,
+      "id": 11068886818912249814,
+      "outlet_count": 1,
+      "title": "Over 70% of Ukrainians hold Zelensky responsible for corruption among his allies, poll shows"
+    },
+    {
+      "created_at": 1790654763,
+      "first": true,
+      "id": 8949969173386377802,
+      "outlet_count": 1,
+      "title": "Ukraine's defense industry gets a second chance"
+    },
+    {
+      "created_at": 1790654763,
+      "first": true,
+      "id": 6043198578088658614,
+      "outlet_count": 1,
+      "title": "Ukrnafta installs concrete shelters at Kyiv gas stations amid Russian attacks"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 1963091091914502276,
+      "outlet_count": 5,
+      "title": "Pope Leo urges Russia, Ukraine to sit down and discuss how to end war"
+    },
+    {
+      "created_at": 1790654763,
+      "first": true,
+      "id": 645125468284857326,
+      "outlet_count": 1,
+      "title": "Ukrainian Chess Federation blasts presidential aide after accepting FIDE position alongside a Russian, urges SBU probe"
+    },
+    {
+      "created_at": 1790654763,
+      "first": true,
+      "id": 54241118626393244,
+      "outlet_count": 1,
+      "title": "Kremlin seizes control of German retailer Metro AG's Russian properties"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

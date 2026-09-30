@@ -1,0 +1,100 @@
+{
+  "claims": {
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790660996,
+    "expired": false,
+    "id": 17127133358018530115,
+    "item_count": 1,
+    "last_active_at": 1790660996,
+    "origin_item_id": 17127133358018530115,
+    "origin_outlet_id": "japantimes",
+    "outlet_count": 1,
+    "primary_title": "Closure of Seibu Shibuya store to end 58 years of shaping youth culture",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 17127133358018530115,
+        "joined_at": 1790660996,
+        "outlet_id": "japantimes",
+        "published_at": 1790660580
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japantimes": "The Japan Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/business/2026/09/29/companies/seibu-shibuya-department-store-closure/",
+          "cluster_id": 17127133358018530115,
+          "fetched_at": 1790660996,
+          "id": 17127133358018530115,
+          "joined_at": 1790660996,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790660580,
+          "summary": "The store, which opened in April 1968, attracted customers with luxury-brand shops while helping to promote cutting-edge fashion.",
+          "text_hash": 785243913069576914,
+          "title": "Closure of Seibu Shibuya store to end 58 years of shaping youth culture"
+        }
+      ],
+      "outlet_id": "japantimes"
+    }
+  ],
+  "withdrawals": []
+}

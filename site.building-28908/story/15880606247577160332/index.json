@@ -1,0 +1,267 @@
+{
+  "claims": {
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "reason": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "reason.com",
+          "expires": "2034-08-21",
+          "last_changed": "2024-08-21",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "reason",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/reason.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1968-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_200#Reason_Magazine_at_David_Lisak",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_291#Reason_Magazine_and_reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_352#Reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_500#Reason_(magazine)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Reason",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Reason is generally reliable for news and facts. Editors consider Reason to be a biased or opinionated source that primarily publishes commentary, analysis, and opinion articles. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "reason",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.08346974849700928,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.8034697771072388
+    },
+    "created_at": 1790638791,
+    "expired": false,
+    "id": 15880606247577160332,
+    "item_count": 2,
+    "last_active_at": 1790715383,
+    "origin_item_id": 15880606247577160332,
+    "origin_outlet_id": "breitbart",
+    "outlet_count": 2,
+    "primary_title": "TikTok's $100 Million Settlement With Alabama Is No Win for the Public",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15880606247577160332,
+        "joined_at": 1790638791,
+        "outlet_id": "breitbart",
+        "published_at": 1790619166
+      },
+      {
+        "item_id": 11733773354417165895,
+        "joined_at": 1790715383,
+        "outlet_id": "reason",
+        "published_at": 1790707004
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "reason"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "breitbart": "Breitbart",
+    "reason": "Reason"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/tech/2026/09/28/tiktok-to-pay-100-million-to-settle-alabama-lawsuit-claiming-addictive-features-aimed-at-children/",
+          "cluster_id": 15880606247577160332,
+          "fetched_at": 1790638791,
+          "id": 15880606247577160332,
+          "joined_at": 1790638791,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790619166,
+          "summary": "TikTok has agreed to pay Alabama at least $100 million in a settlement tied to the state's allegations that the formerly Chinese company made its social media platform addictive to young users and misled users about safety. The post TikTok to Pay $100 Million to Settle Alabama Lawsuit Claiming Addictive Features Aimed at Children appeared first on Breitbart .",
+          "text_hash": 1082910993644952886,
+          "title": "TikTok to Pay $100 Million to Settle Alabama Lawsuit Claiming Addictive Features Aimed at Children"
+        }
+      ],
+      "outlet_id": "breitbart"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://reason.com/2026/09/29/tiktoks-100-million-settlement-with-alabama-is-no-win-for-the-public/",
+          "cluster_id": 15880606247577160332,
+          "fetched_at": 1790715383,
+          "id": 11733773354417165895,
+          "joined_at": 1790715383,
+          "lang": "en",
+          "outlet_id": "reason",
+          "published_at": 1790707004,
+          "summary": "TikTok must implement several new \"safety\" features, including time limits for kids and strict age-verification measures.",
+          "text_hash": 2928195792690621443,
+          "title": "TikTok's $100 Million Settlement With Alabama Is No Win for the Public"
+        }
+      ],
+      "outlet_id": "reason"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 15880606247577160332,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3233,
+      "snapshot_id": 6340058221328524891,
+      "ts": 1790660768
+    }
+  ]
+}

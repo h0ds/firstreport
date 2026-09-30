@@ -1,0 +1,361 @@
+{
+  "claims": {
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "presstv": [
+      {
+        "data": {
+          "qid": "Q794"
+        },
+        "field": "country",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Iran"
+      },
+      {
+        "data": {
+          "domain": "presstv.co.uk",
+          "expires": "2026-11-05",
+          "last_changed": "2024-11-04",
+          "registrar": "Ionos SE",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "presstv",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/presstv.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2006-11-05"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-07-08"
+      },
+      {
+        "data": {
+          "qid": "Q1674127"
+        },
+        "field": "owner",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Islamic Republic of Iran Broadcasting"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_Press_TV_on_Saudi_Arabian_protests",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_42#Press_TV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_108#Alex_Jones,_Mathaba,_Pravda,_and_PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_139#Press_TV_and_Veterans_Today_RS_for_their_contibutors",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_175#Using_Press_TV_for_reporting_Hamas_claims",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_190#Press_TV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Press_TV's_website"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Press TV",
+          "status": "deprecated",
+          "summary": "In the 2020 RfC, editors found a clear consensus to deprecate Press TV, owing to its status as an Iranian government propaganda outlet that publishes disinformation, conspiracy theories, antisemitic content including Holocaust denial, [ 24 ] and a host of other problematic content."
+        },
+        "field": "reliability",
+        "outlet_id": "presstv",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "rt": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "rt.com",
+          "expires": "2027-09-22",
+          "last_changed": "2026-09-21",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rt",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rt.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-09-23"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-09-15"
+      },
+      {
+        "data": {
+          "qid": "Q821172"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "RIA Novosti"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#RfC:_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Enquiry_concerning_the_RT_Network",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_168#RT_news_and_Crimean_status_referendum,_2014",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_173#Russia_Today",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Attributed_statement_sourced_by_RT_news_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_231#RT_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#On_Contact_/_RT",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Ruptly,_subsidiary_of_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)",
+          "status": "deprecated",
+          "summary": "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
+        },
+        "field": "reliability",
+        "outlet_id": "rt",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.015696048736572266,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": 0.7356960773468018
+    },
+    "created_at": 1790653944,
+    "expired": false,
+    "id": 2250095089404219301,
+    "item_count": 3,
+    "last_active_at": 1790715383,
+    "origin_item_id": 2531939693435059573,
+    "origin_outlet_id": "presstv",
+    "outlet_count": 3,
+    "primary_title": "Netherlands summons Israeli ambassador over removal of diplomats' status",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 2250095089404219301,
+        "joined_at": 1790653944,
+        "outlet_id": "anadolu",
+        "published_at": 1790631780
+      },
+      {
+        "item_id": 2531939693435059573,
+        "joined_at": 1790654765,
+        "outlet_id": "presstv",
+        "published_at": 0
+      },
+      {
+        "item_id": 18126947254420560326,
+        "joined_at": 1790715383,
+        "outlet_id": "rt",
+        "published_at": 1790700528
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "presstv",
+            "rt"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "anadolu": "Anadolu Agency",
+    "presstv": "Press TV",
+    "rt": "RT"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://presstv.co.uk/Detail/2026/09/28/777162/Israel-Dutch-diplomats-surrender-documents-bans-settlement-trade",
+          "cluster_id": 2250095089404219301,
+          "fetched_at": 1790654765,
+          "id": 2531939693435059573,
+          "joined_at": 1790654765,
+          "lang": "en",
+          "outlet_id": "presstv",
+          "published_at": 0,
+          "summary": "Israel gives Dutch diplomats seven days to surrender their documents after the Netherlands banned trade in goods from illegal settlements.",
+          "text_hash": 3353862797905651759,
+          "title": "Israel orders Dutch diplomats to surrender documents after Netherlands bans settlement trade"
+        }
+      ],
+      "outlet_id": "presstv"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/europe/netherlands-summons-israeli-ambassador-over-removal-of-diplomats-status/4072078",
+          "cluster_id": 2250095089404219301,
+          "fetched_at": 1790653944,
+          "id": 2250095089404219301,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790631780,
+          "summary": "Dutch diplomatic staff in Ramallah given 7 days to leave Israel, according to NOS",
+          "text_hash": 17114566261107681831,
+          "title": "Netherlands summons Israeli ambassador over removal of diplomats' status"
+        }
+      ],
+      "outlet_id": "anadolu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rt.com/news/646438-israel-netherlands-diplomatic-row/",
+          "cluster_id": 2250095089404219301,
+          "fetched_at": 1790715383,
+          "id": 18126947254420560326,
+          "joined_at": 1790715383,
+          "lang": "en",
+          "outlet_id": "rt",
+          "published_at": 1790700528,
+          "summary": "Israel has canceled the credentials of Netherlands diplomats in Ramallah, effectively ending Dutch representation in the West Bank Read Full Article at RT.com",
+          "text_hash": 6309590594736460574,
+          "title": "EU nation reacts to Israel stripping West Bank diplomat’s credentials"
+        }
+      ],
+      "outlet_id": "rt"
+    }
+  ],
+  "withdrawals": []
+}

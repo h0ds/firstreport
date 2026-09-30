@@ -1,0 +1,234 @@
+{
+  "claims": {
+    "justthenews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "justthenews.com",
+          "expires": "2028-07-23",
+          "last_changed": "2026-08-28",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "justthenews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/justthenews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-07-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2020-01-01"
+      }
+    ],
+    "theblaze": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "theblaze.com",
+          "expires": "2027-09-26",
+          "last_changed": "2026-08-25",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "theblaze",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theblaze.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2000-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2011-09-12"
+      },
+      {
+        "data": {
+          "qid": "Q6818648"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mercury Radio Arts"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Is_The_Blaze_a_WP:RS_for_America_(2014_film)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_227#Newsbusters_and_The_Blaze_at_WP:BLP_page_Malcolm_Nance_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_239#TheBlaze_show_Dana_etc._w_rgd_Dana_Loesch"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Blaze Media (BlazeTV, Conservative Review, CRTV, TheBlaze)",
+          "status": "generally_unreliable",
+          "summary": "Blaze Media (including TheBlaze) is considered generally unreliable for facts. In some cases, it may be usable for attributed opinions. In 2018, TheBlaze merged with Conservative Review (CRTV) to form Blaze Media. [ 3 ]"
+        },
+        "field": "reliability",
+        "outlet_id": "theblaze",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.04635214805603027,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7663521766662598
+    },
+    "created_at": 1790715381,
+    "expired": false,
+    "id": 3582605538408887146,
+    "item_count": 2,
+    "last_active_at": 1790715390,
+    "origin_item_id": 16361114596930094053,
+    "origin_outlet_id": "justthenews",
+    "outlet_count": 2,
+    "primary_title": "‘Deranged partisan fanatic’ Jack Smith obtained personal info on Trump supporters to try to rig the election, Tom Cotton says",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3582605538408887146,
+        "joined_at": 1790715381,
+        "outlet_id": "theblaze",
+        "published_at": 1790708400
+      },
+      {
+        "item_id": 16361114596930094053,
+        "joined_at": 1790715390,
+        "outlet_id": "justthenews",
+        "published_at": 1790640000
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "justthenews": "Just the News",
+    "theblaze": "TheBlaze"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://justthenews.com/politics-policy/jack-smiths-team-subpoenaed-checks-roughly-5000-americans-grassley",
+          "cluster_id": 3582605538408887146,
+          "fetched_at": 1790715390,
+          "id": 16361114596930094053,
+          "joined_at": 1790715390,
+          "lang": "en",
+          "outlet_id": "justthenews",
+          "published_at": 1790640000,
+          "summary": "\"It included 42 checks from Iowans who dared to donate money to Republicans. No matter what you say, there is no legitimate basis for what you did,\" he added.",
+          "text_hash": 488991756832482810,
+          "title": "Jack Smith's team subpoenaed checks from roughly 5,000 Americans: Grassley"
+        }
+      ],
+      "outlet_id": "justthenews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theblaze.com/news/jack-smith-cotton-rig-election",
+          "cluster_id": 3582605538408887146,
+          "fetched_at": 1790715381,
+          "id": 3582605538408887146,
+          "joined_at": 1790715381,
+          "lang": "en",
+          "outlet_id": "theblaze",
+          "published_at": 1790708400,
+          "summary": "The investigation into former special counsel Jack Smith has led to allegations that he was trying to swing the presidential election of 2024. Senate Judiciary Committee Chairman Chuck Grassley (R-Iowa) said a legal whistleblower revealed that Smith had obtained 4,782 checks from Americans who donated to President Donald Trump and pro-Trump entities between 2019 and 2023, often in small amounts. 'Every member on this committee ought to be outraged for what happened to their constituents. Which one of my…",
+          "text_hash": 13494887552324521777,
+          "title": "‘Deranged partisan fanatic’ Jack Smith obtained personal info on Trump supporters to try to rig the election, Tom Cotton says"
+        }
+      ],
+      "outlet_id": "theblaze"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 16361114596930094053,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5476,
+      "snapshot_id": 16975317700352125107,
+      "ts": 1790717076
+    }
+  ]
+}

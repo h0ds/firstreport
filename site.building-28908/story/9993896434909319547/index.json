@@ -1,0 +1,100 @@
+{
+  "claims": {
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653946,
+    "expired": false,
+    "id": 9993896434909319547,
+    "item_count": 1,
+    "last_active_at": 1790653946,
+    "origin_item_id": 9993896434909319547,
+    "origin_outlet_id": "japantimes",
+    "outlet_count": 1,
+    "primary_title": "Weather and transport woes hit Asian Games as Eala makes fast start",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9993896434909319547,
+        "joined_at": 1790653946,
+        "outlet_id": "japantimes",
+        "published_at": 1790647440
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japantimes": "The Japan Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/sports/2026/09/29/asian-games/eala-asian-games-rain/",
+          "cluster_id": 9993896434909319547,
+          "fetched_at": 1790653946,
+          "id": 9993896434909319547,
+          "joined_at": 1790653946,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790647440,
+          "summary": "Organizational chaos again dogged the Games when the official bus carrying the Pakistan men's volleyball team went to the wrong venue.",
+          "text_hash": 6164036413583381844,
+          "title": "Weather and transport woes hit Asian Games as Eala makes fast start"
+        }
+      ],
+      "outlet_id": "japantimes"
+    }
+  ],
+  "withdrawals": []
+}

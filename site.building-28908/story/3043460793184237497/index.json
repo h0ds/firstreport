@@ -1,0 +1,1212 @@
+{
+  "claims": {
+    "abcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "abcnews.com",
+          "expires": "2027-04-21",
+          "last_changed": "2026-03-22",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/abcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-20"
+      },
+      {
+        "data": {
+          "domain": "go.com",
+          "expires": "2027-01-08",
+          "last_changed": "2025-12-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/go.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-01-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1945-06-15"
+      },
+      {
+        "data": {
+          "qid": "Q169889"
+        },
+        "field": "owner",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "American Broadcasting Company"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "ABC News (USA)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+        },
+        "field": "reliability",
+        "outlet_id": "abcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "bbc": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "bbc.com",
+          "expires": "2030-07-14",
+          "last_changed": "2021-07-06",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1989-07-15"
+      },
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "expires": "2034-12-13",
+          "last_changed": "2025-10-29",
+          "registrar": "British Broadcasting Corporation",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-13"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_495#RfC:_reliability_of_the_BBC",
+            "#cite_note-9"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "BBC (British Broadcasting Corporation)",
+          "status": "generally_reliable",
+          "summary": "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
+        },
+        "field": "reliability",
+        "outlet_id": "bbc",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "cbsnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "cbsnews.com",
+          "expires": "2027-10-03",
+          "last_changed": "2026-09-01",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cbsnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-10-04"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-09-18"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_522#Request_for_Comment:_Reliability_of_CBS_News_under_Bari_Weiss",
+            "#cite_note-20"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CBS News",
+          "status": "generally_reliable",
+          "summary": "CBS News is the news division of CBS. It is considered generally reliable. Some editors note, however, that its television content may include superficial coverage, which might not qualify under WP:MEDRS. Editors also note that CBS has undergone intensified political bias after Bari Weiss became editor-in-chief in late 2025, and supression of reporting critical of the Trump administration has been"
+        },
+        "field": "reliability",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "globeandmail": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      },
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "ndtv": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "ndtv.com",
+          "expires": "2032-09-25",
+          "last_changed": "2026-09-26",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "pending transfer"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ndtv",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/ndtv.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1988-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q4680631"
+        },
+        "field": "owner",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Adani Group"
+      }
+    ],
+    "pbs": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pbs.org",
+          "expires": "2027-04-20",
+          "last_changed": "2026-08-12",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "pbs",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/pbs.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1969-11-03"
+      },
+      {
+        "as_of": "2016",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_101#Emme_(model)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_135#Judaism:_The_oldest_monotheistic_religion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_150#Center_for_Investigative_Reporting",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_153#thinkprogress.org_as_a_generally_accepted_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_206#Pbs.org"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "PBS (Public Broadcasting Service)",
+          "status": "generally_reliable",
+          "summary": "The Public Broadcasting Service is an American public broadcaster. It is considered generally reliable by editors."
+        },
+        "field": "reliability",
+        "outlet_id": "pbs",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.09063863754272461,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": true,
+      "unscored": 7,
+      "weakest_join": 0.8106386661529541
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 3043460793184237497,
+    "item_count": 14,
+    "last_active_at": 1790725113,
+    "origin_item_id": 9598290319834492982,
+    "origin_outlet_id": "globeandmail",
+    "outlet_count": 10,
+    "primary_title": "Hurricane Polo threatens Southwest U.S. with flooding. See its path.",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3043460793184237497,
+        "joined_at": 1790633633,
+        "outlet_id": "bbc",
+        "published_at": 1790593549
+      },
+      {
+        "item_id": 17990386936521561464,
+        "joined_at": 1790653930,
+        "outlet_id": "cbsnews",
+        "published_at": 1790651204
+      },
+      {
+        "item_id": 315553199499356290,
+        "joined_at": 1790653938,
+        "outlet_id": "independent",
+        "published_at": 1790583757
+      },
+      {
+        "item_id": 16461620097770983772,
+        "joined_at": 1790653941,
+        "outlet_id": "scmp",
+        "published_at": 1790610780
+      },
+      {
+        "item_id": 1250653028358139422,
+        "joined_at": 1790653941,
+        "outlet_id": "straitstimes",
+        "published_at": 1790638260
+      },
+      {
+        "item_id": 16988793860115010077,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790593100
+      },
+      {
+        "item_id": 1711958191256323053,
+        "joined_at": 1790659140,
+        "outlet_id": "ndtv",
+        "published_at": 1790652681
+      },
+      {
+        "item_id": 9598290319834492982,
+        "joined_at": 1790659869,
+        "outlet_id": "globeandmail",
+        "published_at": 1790161875
+      },
+      {
+        "item_id": 16630458888259188963,
+        "joined_at": 1790679060,
+        "outlet_id": "independent",
+        "published_at": 1790678360
+      },
+      {
+        "item_id": 3621710088667003435,
+        "joined_at": 1790679062,
+        "outlet_id": "abcnews",
+        "published_at": 1790675909
+      },
+      {
+        "item_id": 247454986921360354,
+        "joined_at": 1790681523,
+        "outlet_id": "euronews",
+        "published_at": 1790681216
+      },
+      {
+        "item_id": 15176785966367032629,
+        "joined_at": 1790715375,
+        "outlet_id": "pbs",
+        "published_at": 1790702085
+      },
+      {
+        "item_id": 3671429655889087732,
+        "joined_at": 1790715378,
+        "outlet_id": "globeandmail",
+        "published_at": 1790698244
+      },
+      {
+        "item_id": 13835863835267948994,
+        "joined_at": 1790725113,
+        "outlet_id": "straitstimes",
+        "published_at": 1790724840
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "abcnews",
+            "bbc",
+            "cbsnews",
+            "pbs",
+            "scmp",
+            "globeandmail",
+            "independent",
+            "straitstimes"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews",
+        "ndtv"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcnews": "ABC News",
+    "bbc": "BBC",
+    "cbsnews": "CBS News",
+    "euronews": "Euronews",
+    "globeandmail": "The Globe and Mail",
+    "independent": "The Independent",
+    "ndtv": "NDTV",
+    "pbs": "PBS NewsHour",
+    "scmp": "South China Morning Post",
+    "straitstimes": "The Straits Times"
+  },
+  "outlets_24h": 9,
+  "outlets_6h": 3,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 3043460793184237497,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 421,
+      "snapshot_id": 9176113868975425716,
+      "ts": 1790638864
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17990386936521561464,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3560,
+      "snapshot_id": 10320403243354780322,
+      "ts": 1790668202
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17990386936521561464,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3873,
+      "snapshot_id": 7649540876211644376,
+      "ts": 1790679061
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17990386936521561464,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4332,
+      "snapshot_id": 14708479673233802170,
+      "ts": 1790682638
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17990386936521561464,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4532,
+      "snapshot_id": 15140024345177010502,
+      "ts": 1790715389
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    6,
+    7,
+    7,
+    7,
+    9,
+    9,
+    9,
+    9,
+    9,
+    10
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-polo-grows-into-one-of-the-most-powerful-pacific-cyclones-in-decades/",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790653941,
+          "id": 9598290319834492982,
+          "joined_at": 1790659869,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790161875,
+          "summary": "Polo is expected to skirt Mexico’s Guerrero state, submerging coastal areas with 10 to 15 centimetres of rain through Thursday",
+          "text_hash": 2451774390531719868,
+          "title": "Mexico braces for flooding, mudslides as Polo becomes major hurricane"
+        },
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-hurricane-polo-mexico-baja-california-hurricane-nolo-hawaii/",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790653941,
+          "id": 16988793860115010077,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790593100,
+          "summary": "Polo is expected to lash the peninsula with heavy rainfall overnight and could produce life-threatening flooding and mudslides",
+          "text_hash": 16575233977209608860,
+          "title": "Mexico’s Baja California braces for Hurricane Polo, while Hurricane Nolo threatens Hawaii"
+        },
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-hurricane-polo-makes-landfall-mexico-baja-california/",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790715378,
+          "id": 3671429655889087732,
+          "joined_at": 1790715378,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790698244,
+          "summary": "Mexican authorities reported Polo left no serious damage. About 700 people remained in shelters Tuesday but were expected to return to their homes",
+          "text_hash": 12154655720029249248,
+          "title": "Hurricane Polo brings powerful winds and rain to Mexico’s Baja California"
+        }
+      ],
+      "outlet_id": "globeandmail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/americas/hurricane-polo-baja-california-hawaii-b3057412.html",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790653938,
+          "id": 315553199499356290,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790583757,
+          "summary": "Hurricane Polo bore down on Mexico’s Baja California peninsula with a threat of storm surge, high winds and heavy rains, even as Hurricane Nolo edged further away from the Hawaiian Islands",
+          "text_hash": 3463022220329258485,
+          "title": "Hurricane onslaught threatens catastrophic flooding from Mexico to Hawaii"
+        },
+        {
+          "canonical_url": "https://independent.co.uk/news/world/americas/hurricane-polo-baja-california-flooding-b3058174.html",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790679060,
+          "id": 16630458888259188963,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790678360,
+          "summary": "Hurricane Polo has made landfall in Baja California with flash flooding and winds described by forecasters as a “life-threatening.”",
+          "text_hash": 11556001831096866333,
+          "title": "Lethal Hurricane Polo threatens to unleash deadly flash floods across US Southwest"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bbc.co.uk/news/articles/cw8d3z5y7958o",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790633633,
+          "id": 3043460793184237497,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "bbc",
+          "published_at": 1790593549,
+          "summary": "The category-three storm is expected to make landfall of north of Cabo San Lucas, a popular tourist area, on the Mexican peninsula of Baja California Sur.",
+          "text_hash": 33817677780689448,
+          "title": "Hurricane Polo unleashes threatening winds as it approaches Mexico"
+        }
+      ],
+      "outlet_id": "bbc"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/world/americas/article/3369107/mexico-could-see-life-threatening-floods-due-hurricane-polo",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790653941,
+          "id": 16461620097770983772,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790610780,
+          "summary": "Residents of Mexico’s Baja California Sur state boarded up homes and workers hauled dirt and rubble to shore up embankments as Hurricane Polo bore down on the peninsula on Monday, threatening high winds, floods and mudslides. Meanwhile, Hurricane Nolo could still bring torrential rain to parts of Hawaii even as the storm edged away from the state. In Mexico’s Puerto San Carlos, a fishing town of about 5,700 people, some feared high tides and pounding waves from Polo could breach barriers and...",
+          "text_hash": 7082826761020886577,
+          "title": "Mexico could see life-threatening floods due to Hurricane Polo"
+        }
+      ],
+      "outlet_id": "scmp"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/flooding-power-cuts-as-hurricane-polo-slams-mexico",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790653941,
+          "id": 1250653028358139422,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790638260,
+          "summary": "The Category 3 storm is the first hurricane of 2026’s season to make landfall.",
+          "text_hash": 10120473703918716800,
+          "title": "Flooding, power cuts as Hurricane Polo slams Mexico"
+        },
+        {
+          "canonical_url": "https://straitstimes.com/world/hurricane-polo-sweeps-over-mexicos-pacific-coast-heads-inland",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790725113,
+          "id": 13835863835267948994,
+          "joined_at": 1790725113,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790724840,
+          "summary": "It caused little serious damage and no reported injuries, according to initial assessments by authorities.",
+          "text_hash": 4918537479769994282,
+          "title": "Hurricane Polo sweeps over Mexico’s Pacific coast, heads inland"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://cbsnews.com/news/hurricane-polo-category-5-mexico-life-threatening-flooding/",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790653930,
+          "id": 17990386936521561464,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790651204,
+          "summary": "Hurricane Polo made landfall in Baja California Sur, Mexico, bringing \"damaging winds and life-threatening flash flooding,\" and is expected hit the Southwest U.S. with heavy rain and flooding.",
+          "text_hash": 3606013841571491445,
+          "title": "Hurricane Polo makes landfall in Mexico"
+        }
+      ],
+      "outlet_id": "cbsnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://ndtv.com/world-news/flash-floods-mudslides-risk-loom-over-mexico-as-hurricane-polo-nears-12112277",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790659140,
+          "id": 1711958191256323053,
+          "joined_at": 1790659140,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790652681,
+          "summary": "Hurricane Polo was a Category 3 storm with top sustained winds of 115 mph (185 kph) Monday, the US National Hurricane Center in Miami said.",
+          "text_hash": 6940681347654567754,
+          "title": "Flash Floods, Mudslides Risk Loom Over Mexico As Hurricane Polo Nears"
+        }
+      ],
+      "outlet_id": "ndtv"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/hurricane-polo-makes-landfall-baja-california-forecast-life-136845534",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790679062,
+          "id": 3621710088667003435,
+          "joined_at": 1790679062,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790675909,
+          "summary": "Hurricane Polo has made landfall in Baja California with flash flooding and winds described by forecasters as a “life-threatening.”",
+          "text_hash": 16887985615055494684,
+          "title": "Hurricane Polo makes landfall in Baja California, 'life-threatening' winds forecast"
+        }
+      ],
+      "outlet_id": "abcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/29/mexico-braces-for-hurricane-polo-residents-evacuated-in-baja-california-sur",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790681523,
+          "id": 247454986921360354,
+          "joined_at": 1790681523,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790681216,
+          "summary": "This year's Pacific hurricane season is shaping up as more severe than usual, as a Super El Niño, an extreme version of a recurring weather pattern, wreaks devastation, in the form of historic droughts and flooding.",
+          "text_hash": 5073509644061197669,
+          "title": "Polo makes landfall in Mexico as Category 3 hurricane, cutting power and causing floods"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://pbs.org/newshour/science/hurricane-polo-makes-landfall-in-baja-california-toppling-trees-and-flooding-coastal-communities",
+          "cluster_id": 3043460793184237497,
+          "fetched_at": 1790715375,
+          "id": 15176785966367032629,
+          "joined_at": 1790715375,
+          "lang": "en",
+          "outlet_id": "pbs",
+          "published_at": 1790702085,
+          "summary": "The Category 2 hurricane struck early Tuesday near Las Barrancas, bringing maximum sustained winds of 110 mph. The U.S. National Hurricane Center reports Polo is crossing the Gulf of California and could bring heavy rain to parts of the U.S. Southwest later this week.",
+          "text_hash": 3783642119169709594,
+          "title": "Hurricane Polo makes landfall in Baja California, toppling trees and flooding coastal communities"
+        }
+      ],
+      "outlet_id": "pbs"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 3043460793184237497,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3624,
+      "snapshot_id": 8640473946526622949,
+      "ts": 1790668931
+    },
+    {
+      "cluster_id": null,
+      "item_id": 315553199499356290,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3714,
+      "snapshot_id": 8578725780096186160,
+      "ts": 1790670489
+    },
+    {
+      "cluster_id": null,
+      "item_id": 3621710088667003435,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4340,
+      "snapshot_id": 4566945215071369950,
+      "ts": 1790682789
+    },
+    {
+      "cluster_id": null,
+      "item_id": 3621710088667003435,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5493,
+      "snapshot_id": 8606245320753665216,
+      "ts": 1790717480
+    }
+  ]
+}

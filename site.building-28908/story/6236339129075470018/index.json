@@ -1,0 +1,925 @@
+{
+  "claims": {
+    "abcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "abcnews.com",
+          "expires": "2027-04-21",
+          "last_changed": "2026-03-22",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/abcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-20"
+      },
+      {
+        "data": {
+          "domain": "go.com",
+          "expires": "2027-01-08",
+          "last_changed": "2025-12-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/go.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-01-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1945-06-15"
+      },
+      {
+        "data": {
+          "qid": "Q169889"
+        },
+        "field": "owner",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "American Broadcasting Company"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "ABC News (USA)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+        },
+        "field": "reliability",
+        "outlet_id": "abcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "nytimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nytimes.com",
+          "expires": "2027-01-19",
+          "last_changed": "2024-12-18",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nytimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nytimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-01-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1851-09-18"
+      },
+      {
+        "data": {
+          "qid": "Q2529982"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The New York Times Company"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_244#RfC:_Wound_characteristics_of_military-style_rifles",
+            "#cite_note-70"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New York Times (NYT)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New York Times is generally reliable. WP:RSOPINION should be used to evaluate opinion columns, while WP:NEWSBLOG should be used for the blogs on The New York Times's website. The 2018 RfC cites WP:MEDPOP to establish that popular press sources such as The New York Times should generally not be used to support medical claims."
+        },
+        "field": "reliability",
+        "outlet_id": "nytimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "timesofisrael": [
+      {
+        "data": {
+          "qid": "Q801"
+        },
+        "field": "country",
+        "outlet_id": "timesofisrael",
+        "ref_url": "https://www.wikidata.org/wiki/Q6449319",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Israel"
+      },
+      {
+        "data": {
+          "domain": "timesofisrael.com",
+          "expires": "2035-01-02",
+          "last_changed": "2025-03-04",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "timesofisrael",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/timesofisrael.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2010-02-12"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "timesofisrael",
+        "ref_url": "https://www.wikidata.org/wiki/Q6449319",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2012-02-01"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_461#RfC:_Times_of_Israel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Times_of_Israel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_442#Stop_using_The_Times_of_Israel_as_a_source_for_Israel-Palestine_conflict_news.",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_457#What_does_everyone_think_about_the_Times_of_Israel?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_461#Times_of_Israel_blogs",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_468#The_Times_of_Israel_and_fake_news."
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Times of Israel (ToI)",
+          "status": "generally_reliable",
+          "summary": "In the 2024 RfC, there was consensus that The Times of Israel is generally reliable, although potentially biased in certain topics like the Israeli–Palestinian conflict. ToI disclaims responsibility for the contents of the blogs section (which is written by third parties) though experts' blog posts may be sometimes usable per the guidance at WP:BLOGS."
+        },
+        "field": "reliability",
+        "outlet_id": "timesofisrael",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "washingtontimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtontimes.com",
+          "expires": "2027-09-13",
+          "last_changed": "2026-07-30",
+          "registrar": "DNC Holdings, Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtontimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1982-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      },
+      {
+        "data": {
+          "qid": "Q217059"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Unification Church"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_328#RfC:_The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_209#Is_the_Washington_Times_an_acceptable_source_for_statements_of_fact_related_to_student_protesters/black_lives_matter/Milo_Yiannopoulos?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_316#Rebel_News"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Times",
+          "status": "no_consensus",
+          "summary": "There is consensus that The Washington Times is a marginally reliable source for politics and science. Most editors agree that it is a partisan source. Some editors noted a history of publishing inaccurate or false information, of being slow to issue retractions or corrections, and of sometimes only doing so under the threat of legal action; a considerable minority favored deprecation on these gro"
+        },
+        "field": "reliability",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.06419205665588379,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 7,
+      "weakest_join": 0.7841920852661133
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 6236339129075470018,
+    "item_count": 9,
+    "last_active_at": 1790715392,
+    "origin_item_id": 2695991641183406758,
+    "origin_outlet_id": "straitstimes",
+    "outlet_count": 8,
+    "primary_title": "3 Egyptian Officials Convicted of Kidnapping Slain Italian Student",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 6236339129075470018,
+        "joined_at": 1790633633,
+        "outlet_id": "nytimes",
+        "published_at": 1790626941
+      },
+      {
+        "item_id": 16971276514459384373,
+        "joined_at": 1790633634,
+        "outlet_id": "aljazeera",
+        "published_at": 1790624706
+      },
+      {
+        "item_id": 13253763844878252260,
+        "joined_at": 1790653931,
+        "outlet_id": "abcnews",
+        "published_at": 1790618548
+      },
+      {
+        "item_id": 5943110799871281312,
+        "joined_at": 1790653933,
+        "outlet_id": "washingtontimes",
+        "published_at": 1790625338
+      },
+      {
+        "item_id": 15331631706152304969,
+        "joined_at": 1790653938,
+        "outlet_id": "independent",
+        "published_at": 1790633828
+      },
+      {
+        "item_id": 2695991641183406758,
+        "joined_at": 1790653941,
+        "outlet_id": "straitstimes",
+        "published_at": 1790614357
+      },
+      {
+        "item_id": 5082998142309519231,
+        "joined_at": 1790653942,
+        "outlet_id": "timesofisrael",
+        "published_at": 1790618270
+      },
+      {
+        "item_id": 10897335484919460563,
+        "joined_at": 1790679340,
+        "outlet_id": "straitstimes",
+        "published_at": 1790679166
+      },
+      {
+        "item_id": 12486156863708162001,
+        "joined_at": 1790715392,
+        "outlet_id": "arabnews",
+        "published_at": 1790707680
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "abcnews",
+            "aljazeera",
+            "independent",
+            "nytimes",
+            "straitstimes",
+            "timesofisrael"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews",
+            "washingtontimes"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcnews": "ABC News",
+    "aljazeera": "Al Jazeera",
+    "arabnews": "Arab News",
+    "independent": "The Independent",
+    "nytimes": "The New York Times",
+    "straitstimes": "The Straits Times",
+    "timesofisrael": "The Times of Israel",
+    "washingtontimes": "The Washington Times"
+  },
+  "outlets_24h": 6,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/court-convicts-three-egyptians-for-kidnapping-murdered-italian-student",
+          "cluster_id": 6236339129075470018,
+          "fetched_at": 1790653941,
+          "id": 2695991641183406758,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790614357,
+          "summary": "The three men were sentenced to 10 years in jail, while a fourth Egyptian defendant was acquitted.",
+          "text_hash": 1551527577646137361,
+          "title": "Court convicts three Egyptians for kidnapping murdered Italian student"
+        },
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/italy-distances-egypt-from-verdict-over-giulio-regeni-as-opposition-attacks",
+          "cluster_id": 6236339129075470018,
+          "fetched_at": 1790679340,
+          "id": 10897335484919460563,
+          "joined_at": 1790679340,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790679166,
+          "summary": "ROME, Sept 29 - Italy signalled on Tuesday it wanted to avoid a diplomatic rupture with Egypt after three Egyptian security officials were found guilty in absentia of the 2016 kidnapping of student Giulio Regeni, who was killed after his abduction.",
+          "text_hash": 11622013328238413605,
+          "title": "Italy distances Egypt from verdict over Giulio Regeni as opposition attacks"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://timesofisrael.com/rome-convicts-3-egyptian-security-officers-for-2016-murder-of-italian-student/",
+          "cluster_id": 6236339129075470018,
+          "fetched_at": 1790653942,
+          "id": 5082998142309519231,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "timesofisrael",
+          "published_at": 1790618270,
+          "summary": "Cambridge PhD candidate Giulio Regeni, 28, was killed and mutilated in Cairo during research trip; investigators believe Egyptian authorities thought he was a spy The post Rome convicts 3 Egyptian security officers for 2016 murder of Italian student appeared first on The Times of Israel .",
+          "text_hash": 12080944904780922938,
+          "title": "Rome convicts 3 Egyptian security officers for 2016 murder of Italian student"
+        }
+      ],
+      "outlet_id": "timesofisrael"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/rome-court-sentences-3-egyptian-security-officials-10-136828776",
+          "cluster_id": 6236339129075470018,
+          "fetched_at": 1790653931,
+          "id": 13253763844878252260,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790618548,
+          "summary": "A court in Rome has sentenced three Egyptian security officials to 10 years in prison for the aggravated kidnapping of Italian researcher Giulio Regeni in Cairo 10 years ago",
+          "text_hash": 7712782889461504868,
+          "title": "Rome court sentences 3 Egyptian security officials to 10 years over Giulio Regeni's abduction"
+        }
+      ],
+      "outlet_id": "abcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/28/italian-court-convicts-three-egyptian-agents-for-kidnap-of-giulio-regeni?traffic_source=rss",
+          "cluster_id": 6236339129075470018,
+          "fetched_at": 1790633634,
+          "id": 16971276514459384373,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790624706,
+          "summary": "Defendants were sentenced in absentia to 10 years in prison over the 2016 fatal abduction of the Cambridge scholar.",
+          "text_hash": 4268963663896025700,
+          "title": "Italian court convicts three Egyptian agents for kidnap of Giulio Regeni"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtontimes.com/news/2026/sep/28/court-rome-sentences-3-egyptian-security-officials-10-years-giulio/",
+          "cluster_id": 6236339129075470018,
+          "fetched_at": 1790653933,
+          "id": 5943110799871281312,
+          "joined_at": 1790653933,
+          "lang": "en",
+          "outlet_id": "washingtontimes",
+          "published_at": 1790625338,
+          "summary": "A court in Rome on Monday sentenced three Egyptian security officials convicted of aggravated kidnapping in the abduction of an Italian researcher in Cairo to 10 years in prison, while a fourth defendant was acquitted of murder.",
+          "text_hash": 5551047119951907696,
+          "title": "Court in Rome sentences 3 Egyptian security officials to 10 years over Giulio Regeni's abduction"
+        }
+      ],
+      "outlet_id": "washingtontimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nytimes.com/2026/09/28/world/europe/italy-egypt-giulio-regeni-verdict.html",
+          "cluster_id": 6236339129075470018,
+          "fetched_at": 1790633633,
+          "id": 6236339129075470018,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "nytimes",
+          "published_at": 1790626941,
+          "summary": "The verdict followed a decade-long effort in Italy to account for the killing of Giulio Regeni, an Italian researcher who disappeared in Cairo in 2016.",
+          "text_hash": 2315153021461404169,
+          "title": "3 Egyptian Officials Convicted of Kidnapping Slain Italian Student"
+        }
+      ],
+      "outlet_id": "nytimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/europe/giulio-regeni-egypt-italy-court-case-verdict-cambridge-b3057632.html",
+          "cluster_id": 6236339129075470018,
+          "fetched_at": 1790653938,
+          "id": 15331631706152304969,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790633828,
+          "summary": "More than 10 years after the violent death of Cambridge PhD student Giulio Regeni, his family receive the verdict in the trial of four Egyptian security agents accused of kidnap. Alex Croft reports",
+          "text_hash": 13821184866988870398,
+          "title": "The Egyptian spies, the Cambridge student and the vicious Italian kidnapping"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/world/italy-distances-egypt-from-verdict-over-giulio-regeni-as-opposition-attacks-3003777",
+          "cluster_id": 6236339129075470018,
+          "fetched_at": 1790715392,
+          "id": 12486156863708162001,
+          "joined_at": 1790715392,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790707680,
+          "summary": "ROME: Italy signalled on Tuesday it wanted to avoid a diplomatic rupture with Egypt after three Egyptian security officials were found guilty in absentia of the 2016 kidnapping of student Giulio Regeni, who was killed after his abduction. “There has been a conviction. Egypt has not been convicted, three people have been convicted,” Foreign Minister Antonio Tajani said, appearing keen to separate the verdict from Italy’s broader relationship with Egypt. Regeni, a 28-year-old postgraduate stude",
+          "text_hash": 9244087979935319980,
+          "title": "Italy distances Egypt from verdict over Giulio Regeni as opposition attacks"
+        }
+      ],
+      "outlet_id": "arabnews"
+    }
+  ],
+  "withdrawals": []
+}

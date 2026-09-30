@@ -1,0 +1,117 @@
+{
+  "claims": {
+    "ap": [
+      {
+        "data": {
+          "domain": "apnews.com",
+          "expires": "2027-07-11",
+          "last_changed": "2026-05-12",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ap",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/apnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-07-12"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "#cite_note-7"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Associated Press (AP)",
+          "status": "generally_reliable",
+          "summary": "The Associated Press is a news agency. There is consensus that the Associated Press is generally reliable. Syndicated reports from the Associated Press that are published in other sources are also considered generally reliable."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "ap",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790633851,
+    "expired": false,
+    "id": 16046524938889253843,
+    "item_count": 1,
+    "last_active_at": 1790633851,
+    "origin_item_id": 16046524938889253843,
+    "origin_outlet_id": "ap",
+    "outlet_count": 1,
+    "primary_title": "Malaysian authorities recover remains of all 5 aboard ‘flying doctor’ helicopter after crash",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16046524938889253843,
+        "joined_at": 1790633851,
+        "outlet_id": "ap",
+        "published_at": 1788956582
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "ap": "Associated Press"
+  },
+  "outlets_24h": 0,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://apnews.com/article/malaysia-flying-doctor-helicopter-crash-borneo-7efd79a8d0b2acf1e1cb3879afb93c65",
+          "cluster_id": 16046524938889253843,
+          "fetched_at": 1790633851,
+          "id": 16046524938889253843,
+          "joined_at": 1790633851,
+          "lang": "en",
+          "outlet_id": "ap",
+          "published_at": 1788956582,
+          "summary": "Kelly Granado, whose parents died in Venezuela's June 24 earthquakes, poses for photos at her restaurant in downtown Los Angeles, Tuesday, Aug. 25, 2026. (AP Photo/Jae C. Hong) 2026-09-09T12:09:53Z KUALA LUMPUR, Malaysia (AP) — Authorities recovered Wednesday the remains of all five people aboard a “flying doctor” service helicopter that crashed on Malaysia’s Borneo island the day before. The crash happened near the Long Lellang airstrip in northern Sarawak, Malaysia’s largest state, which covers vast…",
+          "text_hash": 3141080594141343768,
+          "title": "Malaysian authorities recover remains of all 5 aboard ‘flying doctor’ helicopter after crash"
+        }
+      ],
+      "outlet_id": "ap"
+    }
+  ],
+  "withdrawals": []
+}

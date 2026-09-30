@@ -1,0 +1,156 @@
+{
+  "claims": {
+    "cnn": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "cnn.com",
+          "expires": "2027-09-21",
+          "last_changed": "2025-04-22",
+          "registrar": "Nom-iq Ltd. dba COM LAUDE",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cnn",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cnn.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-22"
+      },
+      {
+        "field": "founded",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1980-06-01"
+      },
+      {
+        "data": {
+          "qid": "Q107074885"
+        },
+        "field": "owner",
+        "note": "4 Wikidata items match the domain; this is Q48340 (CNN); also Q12217473 (CNN.com), Q1282786 (Q1282786), Q5013138 (CNN International Asia Pacific)",
+        "outlet_id": "cnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q48340",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Warner Bros. Discovery"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_274#RfC:_\"CNN\"_(October)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_307#RFC_on_CNN",
+            "#cite_note-25"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CNN (Cable News Network)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that news broadcast or published by CNN is generally reliable. However, iReport consists solely of user-generated content, and talk show content should be treated as opinion pieces. Some editors consider CNN biased, though not to the extent that it affects reliability."
+        },
+        "field": "reliability",
+        "outlet_id": "cnn",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653928,
+    "expired": false,
+    "id": 3299225555620159166,
+    "item_count": 1,
+    "last_active_at": 1790653928,
+    "origin_item_id": 3299225555620159166,
+    "origin_outlet_id": "cnn",
+    "outlet_count": 1,
+    "primary_title": "Silicon Valley Bank collapse renews calls to address disparities impacting entrepreneurs of color",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3299225555620159166,
+        "joined_at": 1790653928,
+        "outlet_id": "cnn",
+        "published_at": 1681420384
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "cnn": "CNN"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://cnn.com/2023/04/13/business/silicon-valley-bank-entrepreneurs-of-color-reaj/index.html",
+          "cluster_id": 3299225555620159166,
+          "fetched_at": 1790653928,
+          "id": 3299225555620159166,
+          "joined_at": 1790653928,
+          "lang": "en",
+          "outlet_id": "cnn",
+          "published_at": 1681420384,
+          "summary": "When customers at Silicon Valley Bank rushed to withdraw billions of dollars last month, venture capitalist Arlan Hamilton stepped in to help some of the founders of color who panicked about losing access to payroll funds.",
+          "text_hash": 7831662871259237344,
+          "title": "Silicon Valley Bank collapse renews calls to address disparities impacting entrepreneurs of color"
+        }
+      ],
+      "outlet_id": "cnn"
+    }
+  ],
+  "withdrawals": []
+}

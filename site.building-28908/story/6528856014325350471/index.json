@@ -1,0 +1,298 @@
+{
+  "claims": {
+    "bloomberg": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "bloomberg.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-09-24",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bloomberg.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1990-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q13977"
+        },
+        "field": "owner",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg L.P."
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_151#Bloomberg_on_Microsoft",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_270#Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bloomberg_News_/_Decision_not_to_investigate_Michael_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_499#Omitting_Bloomberg_from_India-Pak_Conflicts"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg (Bloomberg News, Bloomberg Businessweek)",
+          "status": "generally_reliable",
+          "summary": "Bloomberg publications, including Bloomberg News and Bloomberg Businessweek, are considered generally reliable for news and business topics. See also: Bloomberg profiles."
+        },
+        "field": "reliability",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#User_submitted_Executive_Profiles_on_Bloomberg.com"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg profiles",
+          "status": "no_consensus",
+          "summary": "Bloomberg company and executive profiles are generally considered to be based on company press releases and should only be used as a source for uncontroversial information. There is consensus that these profiles should not be used to establish notability. Some editors consider these profiles to be akin to self-published sources. See also: Bloomberg."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "cna": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "channelnewsasia.com",
+          "expires": "2027-02-23",
+          "last_changed": "2026-02-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cna",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/channelnewsasia.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-02-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1999-03-01"
+      },
+      {
+        "data": {
+          "qid": "Q1368796"
+        },
+        "field": "owner",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mediacorp"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_489#RfC:_Channel_NewsAsia_(CNA)_and_other_Mediacorp-affiliated_media"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CNA (Channel NewsAsia)",
+          "status": "generally_reliable",
+          "summary": "The 2025 RfC established a consensus that CNA, a Singaporean state-owned news channel, is a generally reliable source."
+        },
+        "field": "reliability",
+        "outlet_id": "cna",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.06530261039733887,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7853026390075684
+    },
+    "created_at": 1790659140,
+    "expired": false,
+    "id": 6528856014325350471,
+    "item_count": 2,
+    "last_active_at": 1790668488,
+    "origin_item_id": 6528856014325350471,
+    "origin_outlet_id": "bloomberg",
+    "outlet_count": 2,
+    "primary_title": "Malaysian Minister Vows to Quit When Najib Begins House Arrest",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 6528856014325350471,
+        "joined_at": 1790659140,
+        "outlet_id": "bloomberg",
+        "published_at": 1790657162
+      },
+      {
+        "item_id": 4944047521184608920,
+        "joined_at": 1790668488,
+        "outlet_id": "cna",
+        "published_at": 1790667960
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "bloomberg",
+            "cna"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "bloomberg": "Bloomberg",
+    "cna": "CNA"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bloomberg.com/news/articles/2026-09-29/malaysian-minister-vows-to-quit-when-najib-begins-house-arrest",
+          "cluster_id": 6528856014325350471,
+          "fetched_at": 1790659140,
+          "id": 6528856014325350471,
+          "joined_at": 1790659140,
+          "lang": "en",
+          "outlet_id": "bloomberg",
+          "published_at": 1790657162,
+          "summary": "Malaysian Transport Minister Anthony Loke Siew Fook said he will quit Prime Minister Anwar Ibrahim’s cabinet once jailed former premier Najib Razak begins serving his house arrest granted under a conditional royal pardon.",
+          "text_hash": 14320677922602764386,
+          "title": "Malaysian Minister Vows to Quit When Najib Begins House Arrest"
+        }
+      ],
+      "outlet_id": "bloomberg"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://channelnewsasia.com/asia/malaysia-anthony-loke-remain-transport-minister-najib-house-arrest-6417846",
+          "cluster_id": 6528856014325350471,
+          "fetched_at": 1790668488,
+          "id": 4944047521184608920,
+          "joined_at": 1790668488,
+          "lang": "en",
+          "outlet_id": "cna",
+          "published_at": 1790667960,
+          "summary": "Loke had previously announced his resignation in protest of the conditional royal pardon granted to former premier Najib Razak on Sep 18.",
+          "text_hash": 582477722354344553,
+          "title": "Anthony Loke says will remain as Malaysia’s transport minister until Najib begins house arrest"
+        }
+      ],
+      "outlet_id": "cna"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 6528856014325350471,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4263,
+      "snapshot_id": 9758052487424372095,
+      "ts": 1790680910
+    }
+  ]
+}

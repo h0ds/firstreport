@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 5452662523796948754,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 5452662523796948754,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "August CPI Report Shows Price Hikes Accelerating as Trump Brushes Off Working Families’ Affordability Worries",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 5452662523796948754,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1789148027
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/august-cpi-report-shows-price-hikes-accelerating-as-trump-brushes-off-working-families-affordability-worries",
+          "cluster_id": 5452662523796948754,
+          "fetched_at": 1790653936,
+          "id": 5452662523796948754,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1789148027,
+          "summary": "Today’s Consumer Price Index (CPI) report shows prices rose 0.4% in August and are up 3.4% over the past year. Core prices, which exclude food and energy, rose 0.3% in August alone. Gas prices reached their highest ever recorded for August, and the pressure has not let up, climbing $4.29 per gallon, up 14 cents since hitting a Labor Day record . Diesel surged past $6 per gallon for the first time ever, up more than 70 cents from a month ago, which will show up on grocery store shelves for months to come as…",
+          "text_hash": 1943926116512475091,
+          "title": "August CPI Report Shows Price Hikes Accelerating as Trump Brushes Off Working Families’ Affordability Worries"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,286 @@
+{
+  "claims": {
+    "presstv": [
+      {
+        "data": {
+          "qid": "Q794"
+        },
+        "field": "country",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Iran"
+      },
+      {
+        "data": {
+          "domain": "presstv.co.uk",
+          "expires": "2026-11-05",
+          "last_changed": "2024-11-04",
+          "registrar": "Ionos SE",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "presstv",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/presstv.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2006-11-05"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-07-08"
+      },
+      {
+        "data": {
+          "qid": "Q1674127"
+        },
+        "field": "owner",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Islamic Republic of Iran Broadcasting"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_Press_TV_on_Saudi_Arabian_protests",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_42#Press_TV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_108#Alex_Jones,_Mathaba,_Pravda,_and_PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_139#Press_TV_and_Veterans_Today_RS_for_their_contibutors",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_175#Using_Press_TV_for_reporting_Hamas_claims",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_190#Press_TV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Press_TV's_website"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Press TV",
+          "status": "deprecated",
+          "summary": "In the 2020 RfC, editors found a clear consensus to deprecate Press TV, owing to its status as an Iranian government propaganda outlet that publishes disinformation, conspiracy theories, antisemitic content including Holocaust denial, [ 24 ] and a host of other problematic content."
+        },
+        "field": "reliability",
+        "outlet_id": "presstv",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "rt": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "rt.com",
+          "expires": "2027-09-22",
+          "last_changed": "2026-09-21",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rt",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rt.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-09-23"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-09-15"
+      },
+      {
+        "data": {
+          "qid": "Q821172"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "RIA Novosti"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#RfC:_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Enquiry_concerning_the_RT_Network",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_168#RT_news_and_Crimean_status_referendum,_2014",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_173#Russia_Today",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Attributed_statement_sourced_by_RT_news_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_231#RT_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#On_Contact_/_RT",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Ruptly,_subsidiary_of_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)",
+          "status": "deprecated",
+          "summary": "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
+        },
+        "field": "reliability",
+        "outlet_id": "rt",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": null
+    },
+    "created_at": 1790633639,
+    "expired": false,
+    "id": 18072829354974753891,
+    "item_count": 2,
+    "last_active_at": 1790654765,
+    "origin_item_id": 3825430829706142608,
+    "origin_outlet_id": "presstv",
+    "outlet_count": 2,
+    "primary_title": "Trump seeks to ‘colonize’ Brazil, seize its wealth through election meddling: Lula",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 18072829354974753891,
+        "joined_at": 1790633639,
+        "outlet_id": "rt",
+        "published_at": 1790345391
+      },
+      {
+        "item_id": 3825430829706142608,
+        "joined_at": 1790654765,
+        "outlet_id": "presstv",
+        "published_at": 0
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "presstv",
+            "rt"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "presstv": "Press TV",
+    "rt": "RT"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://presstv.co.uk/Detail/2026/09/25/777010/Trump-seeks-to-%E2%80%98colonize%E2%80%99-Brazil,-seize-its-wealth-through-election-meddling--Lula-",
+          "cluster_id": 18072829354974753891,
+          "fetched_at": 1790654765,
+          "id": 3825430829706142608,
+          "joined_at": 1790654765,
+          "lang": "en",
+          "outlet_id": "presstv",
+          "published_at": 0,
+          "summary": "Brazilian President Lula da Silva says US President Donald Trump aims to colonize Brazil.",
+          "text_hash": 3130579417223250833,
+          "title": "Trump seeks to ‘colonize’ Brazil, seize its wealth through election meddling: Lula"
+        }
+      ],
+      "outlet_id": "presstv"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rt.com/news/646247-us-brazil-election-meddling/",
+          "cluster_id": 18072829354974753891,
+          "fetched_at": 1790633639,
+          "id": 18072829354974753891,
+          "joined_at": 1790633639,
+          "lang": "en",
+          "outlet_id": "rt",
+          "published_at": 1790345391,
+          "summary": "US President Donald Trump wants to “colonize” Brazil by interfering in the presidential election, Lula’s campaign has said Read Full Article at RT.com",
+          "text_hash": 4284125023421065362,
+          "title": "Trump wants to ‘colonize’ Brazil – Lula campaign"
+        }
+      ],
+      "outlet_id": "rt"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,54 @@
+# Stories, page 48 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Climate Activists Target AI Data Centers & Amazon's Plan to Build Largest U.S. Gas Power Plant](/story/13699764304966155639/) · 1 outlet · reach 1
+- ["America, Who Hurt You?": Tony-Winning Performer Sarah Jones on New NY Solo Show & Art as Resistance](/story/13706279322019654369/) · 1 outlet · reach 1
+- [Filipowicz funeral: Heartbreaking farewell to father and son who died in Superstorm Sandy](/story/13754891364401549450/) · 1 outlet · reach 1
+- [Brutal tactics of Ecuador's gangs who send decapitated enemies' heads to their wives and their hearts to their parents - as it's declared the toughest place on earth to be a cop](/story/13957650044948425653/) · 1 outlet · reach 1
+- [Russia builds doomsday nuclear bunker in remote mountain to launch strikes against West](/story/13972780856198316782/) · 1 outlet · reach 1
+- [Kim Jong-un's wife Ri Sol-ju makes first appearance after two months of home detention](/story/14214973402689733304/) · 1 outlet · reach 1
+- [Kennedy Center’s leader stopped a plan to fix the faulty ceiling before it came crashing down, whistleblowers claim](/story/14286084590572634389/) · 1 outlet · reach 1
+- [Heartbreaking final moments of 'Sleeping Beauty of Everest' who begged climber 'don't leave me here to die' before her body froze in time in mountain 'death zone'](/story/14335296582262048727/) · 1 outlet · reach 1
+- [Sadistic human experiments inside Japan's notorious WW2 Unit 731 where PoWs were infected with plague, raped and buried alive are brought to life in ultra-violent Chinese movie](/story/14355216542477410612/) · 1 outlet · reach 1
+- [The number of measles cases in the US nears 3,700 — with a quarter in one state](/story/14403093743879283547/) · 1 outlet · reach 1
+- [Father and daughter plucked from China river after he tried to commit suicide](/story/14464299883501354561/) · 1 outlet · reach 1
+- [Mystery National Lottery winner in Wales yet to claim life-changing £12million fortune](/story/14517231019302720426/) · 1 outlet · reach 1
+- [Wild horses face slaughter after breeding too fast: Mustangs roaming plains of America ¿endanger animals¿](/story/14722067991729473963/) · 1 outlet · reach 1
+- [Millions more Amazon Prime customers could get automatic refunds starting next week](/story/14748463928659489553/) · 1 outlet · reach 1
+- [Canada could steal the one prize Trump wants most](/story/14912890093265472075/) · 1 outlet · reach 1
+- [Even Trump’s once-loyal ‘Front Row Joes’ have had enough of him: ‘Fraud and liar’](/story/14974479720291163583/) · 1 outlet · reach 1
+- [Boy, 10, and two women 'are crushed to death' in UK-bound migrant mega-dinghy off Calais](/story/15009715394328311408/) · 1 outlet · reach 1
+- ["Secretary of Measlesland": Dr. Paul Offit Slams RFK Jr.'s Handling of Deadly Measles Outbreak](/story/15114560273897399527/) · 1 outlet · reach 1
+- ["Fast Food Nation," Mystery Meat & Trump's Dismantling of U.S. Food Safety System: Eric Schlosser](/story/15329521454031170740/) · 1 outlet · reach 1
+- [Scientists behind Armageddon flu virus suspend their research because it 'could put world at risk of catastrophic pandemic'](/story/15505928345348991756/) · 1 outlet · reach 1
+- [Hope she knows what she's letting herself in for! Sex-shame DSK takes new partner on vacation](/story/15778266418178041482/) · 1 outlet · reach 1
+- [Ex-South Park writer launches ‘Cornell 7’ website against accused rapists: ‘Nobody to tell me I’ve gone too far’](/story/15829727255661033882/) · 1 outlet · reach 1
+- [Broadway star Celeste Holm's longtime Manhattan home put on the market for $14million by estranged son following her death](/story/15836916678378856842/) · 1 outlet · reach 1
+- [TV ad links gay Democratic Rep David Cicilline to a child molester, murderer and predator](/story/15983816776711783838/) · 1 outlet · reach 1
+- [Le Pen scores ‘historic victory’ in French Senate vote](/story/16087454010111158092/) · 3 outlets · reach 1
+- [Harbin Ice and Snow Festival: Spectacular sculptures spring up in China](/story/16154292064696060175/) · 1 outlet · reach 1
+- [Russian teens 'stabbed man to death at party then murdered four guests'](/story/16205984608168799388/) · 1 outlet · reach 1
+- [Stripped, electrocuted and forced to fight each other to the death on camera: New evidence shows how Putin's commanders are torturing their own men](/story/16337712167639100337/) · 1 outlet · reach 1
+- [Trump ignites outrage from political world by ‘stealing’ from taxpayers to fund ad campaign: ‘Completely illegal’](/story/16375468649553243633/) · 1 outlet · reach 1
+- [Intern makes incredible discovery of unknown papers written by Abraham Lincoln in 1844](/story/16408283532195062931/) · 1 outlet · reach 1
+- [Trump offers Iran war naysayers an extreme endgame: ‘Let them hit us with a nuclear weapon’](/story/16433361152563350722/) · 1 outlet · reach 1
+- [Parents of woman who died when Irish doctors refused to perform abortion meet with Indian government to demand justice](/story/16436688205437949335/) · 1 outlet · reach 1
+- [GoFundMe shut down for 81-year-old man working to return lost luggage to fund wife’s cancer bills](/story/16962630953928499445/) · 1 outlet · reach 1
+- ["The Elimination Project": Israel's Systematic Dismantling of Palestinian Life in West Bank: B'Tselem](/story/16978163855021120798/) · 1 outlet · reach 1
+- [Nigel Farage rejects ‘fast track’ refugee routes from Palestine and Afghanistan: ‘We have to put national security first’](/story/17013232842622088830/) · 1 outlet · reach 1
+- [Inside South Africa's whites-only enclave where young people are flocking after deciding 'it's not so wonderful elsewhere' and it's nicer to be 'the majority'](/story/17133023436572754771/) · 1 outlet · reach 1
+- [The curse of 'Death Island': How Thai holiday paradise of Koh Tao became a nightmarish hub of murder, suspicious deaths and rape](/story/17331868603980339894/) · 1 outlet · reach 1
+- [Trump’s slurred, confused Oval Office announcement really should concern Republicans](/story/17398160160721647911/) · 1 outlet · reach 1
+- [Grocery worker who handed out samples of semen-tainted yoghurt gets two years in prison](/story/17471579311437970704/) · 1 outlet · reach 1
+- [Headlines for September 23, 2026](/story/17642193468985474172/) · 1 outlet · reach 1
+- [Iran wants one thing in its war with the West](/story/17770483129687933667/) · 1 outlet · reach 1
+- [BBC demands dedicated button on Britons' TV remotes so audiences 'stay connected to British values'](/story/17810189840531349176/) · 1 outlet · reach 1
+- [Donald Trump 'surprised' RAF Fairford terror suspects released on bail: 'I wouldn't have done that!'](/story/17852893030966815786/) · 1 outlet · reach 1
+- [Hayden Panettiere's ex Wladimir Klitschko petitions to protect their daughter's inheritance](/story/18133825272351674683/) · 1 outlet · reach 1
+- [Mystery wolf slayer who leaves the dead animals displayed in Tuscan villages has shot seven of them and STRANGLED one in bizarre vendetta](/story/18209423506696341080/) · 1 outlet · reach 1
+- [The rich will keep getting richer: 300 wealthiest people in the world are more than £300 billion better off than this time last year, and Bill Gates is back on top](/story/18265411248705265085/) · 1 outlet · reach 1
+- [Hundreds of protesters march on giant Net Zero pipeline](/story/18318023056374665667/) · 1 outlet · reach 1
+- [Putin's secret space weapon: Kremlin's mysterious Cosmos 2553 satellite 'is fitted with dummy warhead' in 'forerunner to nuke that could wipe out rival spacecraft and cause chaos on Earth'](/story/18329509965487127828/) · 1 outlet · reach 1
+- [Rolls-Royce confirms £300million investment in major boost to UK production](/story/18404345239602432969/) · 1 outlet · reach 1
+- [Their Internationalism and Ours](/story/613974978524498948/) · 1 outlet · reach 1

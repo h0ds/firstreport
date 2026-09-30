@@ -1,0 +1,117 @@
+{
+  "claims": {
+    "ap": [
+      {
+        "data": {
+          "domain": "apnews.com",
+          "expires": "2027-07-11",
+          "last_changed": "2026-05-12",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ap",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/apnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-07-12"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "#cite_note-7"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Associated Press (AP)",
+          "status": "generally_reliable",
+          "summary": "The Associated Press is a news agency. There is consensus that the Associated Press is generally reliable. Syndicated reports from the Associated Press that are published in other sources are also considered generally reliable."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "ap",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790633851,
+    "expired": false,
+    "id": 15910427428268507543,
+    "item_count": 1,
+    "last_active_at": 1790633851,
+    "origin_item_id": 15910427428268507543,
+    "origin_outlet_id": "ap",
+    "outlet_count": 1,
+    "primary_title": "Why the versatile PB&J remains king of the lunchbox after 125 years",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15910427428268507543,
+        "joined_at": 1790633851,
+        "outlet_id": "ap",
+        "published_at": 1788958381
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "ap": "Associated Press"
+  },
+  "outlets_24h": 0,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://apnews.com/article/peanut-butter-jelly-sandwich-bd68e6a150a9d50cc7567fbf04fe80ec",
+          "cluster_id": 15910427428268507543,
+          "fetched_at": 1790633851,
+          "id": 15910427428268507543,
+          "joined_at": 1790633851,
+          "lang": "en",
+          "outlet_id": "ap",
+          "published_at": 1788958381,
+          "summary": "A peanut butter and jelly sandwich is prepared in New York in August 2026. (Katie Workman via AP) 2026-09-09T12:28:51Z If there is a single sandwich associated with childhood and school lunches in the U.S.A, it has to be the PB&J. Sweet and salty, inexpensive, easy to make (maybe the first sandwich many kids make for themselves?), peanut butter and jelly is as close to iconic as a sandwich can get. It’s been 125 years since the first known written recipe, and the PB&J concept is still going strong. In its…",
+          "text_hash": 9556151245344475772,
+          "title": "Why the versatile PB&J remains king of the lunchbox after 125 years"
+        }
+      ],
+      "outlet_id": "ap"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,402 @@
+{
+  "claims": {
+    "abcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "abcnews.com",
+          "expires": "2027-04-21",
+          "last_changed": "2026-03-22",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/abcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-20"
+      },
+      {
+        "data": {
+          "domain": "go.com",
+          "expires": "2027-01-08",
+          "last_changed": "2025-12-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/go.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-01-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1945-06-15"
+      },
+      {
+        "data": {
+          "qid": "Q169889"
+        },
+        "field": "owner",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "American Broadcasting Company"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "ABC News (USA)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+        },
+        "field": "reliability",
+        "outlet_id": "abcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "bbc": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "bbc.com",
+          "expires": "2030-07-14",
+          "last_changed": "2021-07-06",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1989-07-15"
+      },
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "expires": "2034-12-13",
+          "last_changed": "2025-10-29",
+          "registrar": "British Broadcasting Corporation",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-13"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_495#RfC:_reliability_of_the_BBC",
+            "#cite_note-9"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "BBC (British Broadcasting Corporation)",
+          "status": "generally_reliable",
+          "summary": "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
+        },
+        "field": "reliability",
+        "outlet_id": "bbc",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "cbsnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "cbsnews.com",
+          "expires": "2027-10-03",
+          "last_changed": "2026-09-01",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cbsnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-10-04"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-09-18"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_522#Request_for_Comment:_Reliability_of_CBS_News_under_Bari_Weiss",
+            "#cite_note-20"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CBS News",
+          "status": "generally_reliable",
+          "summary": "CBS News is the news division of CBS. It is considered generally reliable. Some editors note, however, that its television content may include superficial coverage, which might not qualify under WP:MEDRS. Editors also note that CBS has undergone intensified political bias after Bari Weiss became editor-in-chief in late 2025, and supression of reporting critical of the Trump administration has been"
+        },
+        "field": "reliability",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": null
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 18178820504319923867,
+    "item_count": 3,
+    "last_active_at": 1790653931,
+    "origin_item_id": 9047011180405797863,
+    "origin_outlet_id": "abcnews",
+    "outlet_count": 3,
+    "primary_title": "Rescue teams search for 12 people missing after deadly Nepal avalanche",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 18178820504319923867,
+        "joined_at": 1790633633,
+        "outlet_id": "bbc",
+        "published_at": 1790612024
+      },
+      {
+        "item_id": 13383527296613315641,
+        "joined_at": 1790653930,
+        "outlet_id": "cbsnews",
+        "published_at": 1790595978
+      },
+      {
+        "item_id": 9047011180405797863,
+        "joined_at": 1790653931,
+        "outlet_id": "abcnews",
+        "published_at": 1790595023
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "abcnews",
+            "bbc",
+            "cbsnews"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcnews": "ABC News",
+    "bbc": "BBC",
+    "cbsnews": "CBS News"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/rescue-teams-search-nepal-mountain-12-swept-avalanche-136813766",
+          "cluster_id": 18178820504319923867,
+          "fetched_at": 1790653931,
+          "id": 9047011180405797863,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790595023,
+          "summary": "Rescue teams are searching for a dozen people swept away by an avalanche on a Nepalese mountain",
+          "text_hash": 15876304994365361299,
+          "title": "Rescue teams search Nepal mountain for 12 swept by avalanche"
+        }
+      ],
+      "outlet_id": "abcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://cbsnews.com/news/nepal-avalanche-deaths-rescue-teams-search-missing/",
+          "cluster_id": 18178820504319923867,
+          "fetched_at": 1790653930,
+          "id": 13383527296613315641,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790595978,
+          "summary": "An avalanche in northern Nepal has killed at least four people, with a search underway for 12 others still missing.",
+          "text_hash": 12686909953810551887,
+          "title": "Rescue teams search for 12 people missing after deadly Nepal avalanche"
+        }
+      ],
+      "outlet_id": "cbsnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bbc.co.uk/news/articles/cwjdvml9e897o",
+          "cluster_id": 18178820504319923867,
+          "fetched_at": 1790633633,
+          "id": 18178820504319923867,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "bbc",
+          "published_at": 1790612024,
+          "summary": "Rescuers are still looking for 12 Nepalese cook staff who were preparing for climbers to ascend the Himlung Himal peak.",
+          "text_hash": 15349087604039000362,
+          "title": "Four bodies found after avalanche hits Himalayan climbing group"
+        }
+      ],
+      "outlet_id": "bbc"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 18178820504319923867,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3757,
+      "snapshot_id": 9722525986195862396,
+      "ts": 1790671077
+    },
+    {
+      "cluster_id": null,
+      "item_id": 13383527296613315641,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5909,
+      "snapshot_id": 6389917781636320744,
+      "ts": 1790724933
+    }
+  ]
+}

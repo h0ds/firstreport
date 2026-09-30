@@ -1,0 +1,721 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "theblaze.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.7889
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "theblaze",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.79 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "theblaze.com",
+          "expires": "2027-09-26",
+          "last_changed": "2026-08-25",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "theblaze",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theblaze.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2000-09-26"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2011-09-12"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q192283"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news agency"
+      },
+      {
+        "data": {
+          "qid": "Q59152282"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "video streaming service"
+      },
+      {
+        "data": {
+          "qid": "Q35127"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "website"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "theblaze.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.theblaze.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "Blaze Media"
+      },
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Blaze Media"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "origin_of": 0,
+          "shared_stories": 1,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "theblaze",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/theblaze",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 0% of 1 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q6818648"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mercury Radio Arts"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "theblaze",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/theblaze",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.3 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "theblaze.com"
+        },
+        "field": "registrar",
+        "outlet_id": "theblaze",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theblaze.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "MarkMonitor Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Is_The_Blaze_a_WP:RS_for_America_(2014_film)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_227#Newsbusters_and_The_Blaze_at_WP:BLP_page_Malcolm_Nance_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_239#TheBlaze_show_Dana_etc._w_rgd_Dana_Loesch"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Blaze Media (BlazeTV, Conservative Review, CRTV, TheBlaze)",
+          "status": "generally_unreliable",
+          "summary": "Blaze Media (including TheBlaze) is considered generally unreliable for facts. In some cases, it may be usable for attributed opinions. In 2018, TheBlaze merged with Conservative Review (CRTV) to form Blaze Media. [ 3 ]"
+        },
+        "field": "reliability",
+        "outlet_id": "theblaze",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "theblaze",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/theblaze",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "theblaze.com",
+          "final_url": "https://www.theblaze.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.theblaze.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.theblaze.com/jan-6-truth/",
+          "contact": "https://www.theblaze.com/contact/",
+          "domain": "theblaze.com",
+          "ethics": "https://www.theblaze.com/editorial-standards",
+          "masthead": "https://www.theblaze.com/masthead",
+          "missing": [
+            "corrections"
+          ],
+          "privacy": "https://www.theblaze.com/privacy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.theblaze.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, ethics, masthead pages from its home page; no corrections link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "theblaze",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/theblaze",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.theblaze.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q110568502"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q7711621"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Blaze_Media"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 30,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "theblaze",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/theblaze",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 56,
+  "outlet": {
+    "domains": [
+      "theblaze.com"
+    ],
+    "id": "theblaze",
+    "name": "TheBlaze"
+  },
+  "shared_stories": 8,
+  "stories": [
+    {
+      "created_at": 1790680910,
+      "first": false,
+      "id": 2144685897655024128,
+      "outlet_count": 5,
+      "title": "Trump Launches America.gov AI Tool to Simplify User Navigation of Online Government Services"
+    },
+    {
+      "created_at": 1790723830,
+      "first": true,
+      "id": 14778102807080342154,
+      "outlet_count": 1,
+      "title": "Obama wants the filibuster gone and speech ruled: ‘What’s going to change isn’t the change you want’"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 13866602592389928610,
+      "outlet_count": 13,
+      "title": "Senate passes bipartisan Protect College Sports Act amid ‘chaos’ in industry"
+    },
+    {
+      "created_at": 1790720202,
+      "first": true,
+      "id": 17444062263067409196,
+      "outlet_count": 1,
+      "title": "'Breakthrough Model of the Year' is transgender-identifying child of Naomi Watts"
+    },
+    {
+      "created_at": 1790715377,
+      "first": false,
+      "id": 10024435858674349502,
+      "outlet_count": 2,
+      "title": "Iran's stranglehold on the Strait of Hormuz continues to erode — and crude oil exports are rebounding"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 9378438701147307814,
+      "outlet_count": 10,
+      "title": "Lindsay Clancy's lawyer makes stunning argument in first hearing since recent mistrial"
+    },
+    {
+      "created_at": 1790716881,
+      "first": true,
+      "id": 17279742584191992840,
+      "outlet_count": 1,
+      "title": "Glenn Beck: The UVU report on Charlie Kirk’s death isn’t the plot you think it is"
+    },
+    {
+      "created_at": 1790715381,
+      "first": false,
+      "id": 3582605538408887146,
+      "outlet_count": 2,
+      "title": "‘Deranged partisan fanatic’ Jack Smith obtained personal info on Trump supporters to try to rig the election, Tom Cotton says"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 15874584116895244171,
+      "outlet_count": 1,
+      "title": "Confusing repairs? Foreign menu? Your iPhone camera app just got a lot more helpful"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 14347348253894359077,
+      "outlet_count": 1,
+      "title": "Defending the last place where men can be men"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 14098000261708868538,
+      "outlet_count": 1,
+      "title": "What Chris Hansen knows about sin that modern culture forgets"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 12911410412879864675,
+      "outlet_count": 1,
+      "title": "Hollywood's latest villain: A guy famous for catching predators"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 12190806751208993123,
+      "outlet_count": 1,
+      "title": "Armed home invasion in Florida backfires on suspects as gun-toting victim shoots 1, fights the other"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 10465618043082634647,
+      "outlet_count": 1,
+      "title": "279,000+ Indians are approved for H-1B visas in US each year — no other nationality is even close"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 9538818432254979024,
+      "outlet_count": 1,
+      "title": "Karoline Leavitt reveals how ‘fake news’ stories get made"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 8791238406429747526,
+      "outlet_count": 1,
+      "title": "Are America's jails being run by foreigners?"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 7362344005323417456,
+      "outlet_count": 1,
+      "title": "Is Greta Gerwig's 'Narnia' Netflix sending a 'transgender' message?"
+    },
+    {
+      "created_at": 1790659140,
+      "first": false,
+      "id": 5662166384588561854,
+      "outlet_count": 6,
+      "title": "Dennis Haskins, Best Known For Playing Mr. Belding in “Saved by the Bell” Dead at 75"
+    },
+    {
+      "created_at": 1790715381,
+      "first": false,
+      "id": 3028242242451346429,
+      "outlet_count": 2,
+      "title": "Fauci's agency backed an experiment aerosolizing lethal Ebola — then he panicked about what it exposed about vaccination"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 1449979506209680327,
+      "outlet_count": 1,
+      "title": "'Trump Wh*re': Susan Collins' office vandalized"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 290321579100522053,
+      "outlet_count": 1,
+      "title": "Vance: Talarico wears Christianity as a 'skin suit' — and it reveals more than just contempt"
+    },
+    {
+      "created_at": 1790681435,
+      "first": true,
+      "id": 14008852814169839578,
+      "outlet_count": 1,
+      "title": "'Chivalry mode': Meet the new dating app that's for Christians only"
+    },
+    {
+      "created_at": 1790681435,
+      "first": true,
+      "id": 5827350417037238391,
+      "outlet_count": 1,
+      "title": "Smoke and mirrors? These big corporations are still shelling out for LGBT indoctrination"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 15044629589392561720,
+      "outlet_count": 1,
+      "title": "‘A vessel of destruction’: Ex-psychic calls out Taylor Swift for normalizing witchcraft"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 8825161775452840123,
+      "outlet_count": 1,
+      "title": "Kansas Republicans muddy the waters on ICE enforcement"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 440357877855947259,
+      "outlet_count": 1,
+      "title": "The kindness con: Fraudsters exploit America’s safety net"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 18424384095951887421,
+      "outlet_count": 1,
+      "title": "'Fantastic': Trump celebrates thwarting of possible terror attack against American forces in UK"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 16821758771799222675,
+      "outlet_count": 1,
+      "title": "Alleged home intruder attacks Vietnam veteran — and ends up getting shot in his buttocks"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 15183110763565998068,
+      "outlet_count": 1,
+      "title": "‘That’s not the issue’: The NYT is dodging the real problem with political violence"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 13850518891963036704,
+      "outlet_count": 1,
+      "title": "Glenn Beck: This may be the DARKEST secret coming out of China"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 13574549453586211338,
+      "outlet_count": 1,
+      "title": "Does the Bible really contradict itself? Pastors take on viral TikTok theology"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 12619920720624799955,
+      "outlet_count": 1,
+      "title": "They met top tech experts behind closed doors. Now these religious leaders are urging Congress to act."
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 12608172995521090087,
+      "outlet_count": 1,
+      "title": "After a decade-long wait, Apple Watch just got the one feature it always needed most"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 12565727432860437004,
+      "outlet_count": 1,
+      "title": "I finally understand why everyone loves going to the dentist"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 12381941323681697042,
+      "outlet_count": 1,
+      "title": "Christians are missing the opportunity next door"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 12208496858336169095,
+      "outlet_count": 1,
+      "title": "Democrat gives nonresponse when forced to face uncomfortable truth about his party's lack of support"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 11904211747211774095,
+      "outlet_count": 1,
+      "title": "'We have compromised the FBI': Pokemon lovers boast of shocking hack on federal website"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 9567981492946277093,
+      "outlet_count": 1,
+      "title": "Young children found covered in blood with horrific injuries — police arrest shocking suspect"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 9144396082481028539,
+      "outlet_count": 1,
+      "title": "Gay Atlantic writer whines to Bill Maher that LGBT extremism is blowing up support for homosexual 'marriage'"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 8410940581162061007,
+      "outlet_count": 1,
+      "title": "Florida male allegedly opens fire at woman inside parking garage at courthouse. Turns out they're reportedly married."
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 8032464060910760286,
+      "outlet_count": 1,
+      "title": "The last ethnic Halloween costume nobody apologizes for"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 7746026038615378014,
+      "outlet_count": 1,
+      "title": "Democrats don't just want to take your firearms. They want your kids' BB guns too."
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 7103269523423134344,
+      "outlet_count": 1,
+      "title": "1619 Project founder sent her daughter to failing Brooklyn schools in the name of racial justice. Now she regrets it."
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 6627557412608430203,
+      "outlet_count": 1,
+      "title": "Siri has always been lame — until now. Here's how to make the latest version pay off."
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 6447015383701007052,
+      "outlet_count": 1,
+      "title": "Mexican national accused of sexually assaulting woman on Mackinac Island"
+    },
+    {
+      "created_at": 1790633635,
+      "first": false,
+      "id": 6346254032116773804,
+      "outlet_count": 2,
+      "title": "New York Magazine gets TORCHED for putting Elliot Page on the cover of its debut 'men's style' issue"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 6258951709771814497,
+      "outlet_count": 1,
+      "title": "BBC gets CRUSHED over woke article claiming new fingernail trend is white supremacist 'erasure'"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 4721268482300910639,
+      "outlet_count": 1,
+      "title": "NY Giants quarterback labeled 'insane' over pregame comments — almost no one knew he was quoting the Bible"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 4689836468420986126,
+      "outlet_count": 1,
+      "title": "Sara Gonzales mocks media outrage over White House ban: 'You are literally covering him right now'"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 3895056102384005893,
+      "outlet_count": 1,
+      "title": "The audience you may need someday"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

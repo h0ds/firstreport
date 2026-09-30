@@ -1,0 +1,375 @@
+{
+  "claims": {
+    "dailysabah": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      },
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "nbcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nbcnews.com",
+          "expires": "2027-06-25",
+          "last_changed": "2025-05-24",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nbcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-06-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1940-02-21"
+      },
+      {
+        "data": {
+          "qid": "Q724759"
+        },
+        "field": "owner",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "NBCUniversal"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_186#Column_on_Donors_Trust_on_(but_not_by)_NBC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Is_NBC_a_reliable_sources_for_the_Wikipedia_The_Epoch_Times_(ET)_article?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_314#NBC_News-_'Undecided_voters'_at_NBC's_Biden_town_hall_were_featured_on_MSNBC_as_Biden_voters",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_424#NBC_News_for_Wąsosz_pogrom"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NBC News",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NBC News is generally reliable for news. See also: MS NOW (formerly MSNBC)"
+        },
+        "field": "reliability",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "reason": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "reason.com",
+          "expires": "2034-08-21",
+          "last_changed": "2024-08-21",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "reason",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/reason.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1968-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_200#Reason_Magazine_at_David_Lisak",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_291#Reason_Magazine_and_reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_352#Reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_500#Reason_(magazine)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Reason",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Reason is generally reliable for news and facts. Editors consider Reason to be a biased or opinionated source that primarily publishes commentary, analysis, and opinion articles. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "reason",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 10980737569429867374,
+    "item_count": 3,
+    "last_active_at": 1790654748,
+    "origin_item_id": 10980737569429867374,
+    "origin_outlet_id": "reason",
+    "outlet_count": 3,
+    "primary_title": "May President Trump Exclude CNN from Air Force One? Very Likely Yes",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 10980737569429867374,
+        "joined_at": 1790653936,
+        "outlet_id": "reason",
+        "published_at": 1790399016
+      },
+      {
+        "item_id": 12580635186303217627,
+        "joined_at": 1790653944,
+        "outlet_id": "dailysabah",
+        "published_at": 1790414100
+      },
+      {
+        "item_id": 8479592520728420100,
+        "joined_at": 1790654748,
+        "outlet_id": "nbcnews",
+        "published_at": 1790430431
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "nbcnews",
+            "reason"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "dailysabah"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "dailysabah": "Daily Sabah",
+    "nbcnews": "NBC News",
+    "reason": "Reason"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://reason.com/volokh/2026/09/26/may-president-trump-exclude-cnn-from-air-force-one-very-likely-yes/",
+          "cluster_id": 10980737569429867374,
+          "fetched_at": 1790653936,
+          "id": 10980737569429867374,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "reason",
+          "published_at": 1790399016,
+          "summary": "After being blocked in his attempt to keep CNN out of the White House altogether (including the main press briefing… The post May President Trump Exclude CNN from Air Force One? Very Likely Yes appeared first on Reason Magazine.",
+          "text_hash": 10358226722018437640,
+          "title": "May President Trump Exclude CNN from Air Force One? Very Likely Yes"
+        }
+      ],
+      "outlet_id": "reason"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailysabah.com/world/americas/cnn-left-off-air-force-one-in-latest-white-house-media-restriction",
+          "cluster_id": 10980737569429867374,
+          "fetched_at": 1790653944,
+          "id": 12580635186303217627,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790414100,
+          "summary": "The White House indicated Friday night that CNN would be excluded from the media pool aboard Air Force One for President Donald Trump’s trip Saturday, marking the latest escalation...",
+          "text_hash": 14200204264284504449,
+          "title": "CNN left off Air Force One in latest White House media restriction"
+        }
+      ],
+      "outlet_id": "dailysabah"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nbcnews.com/politics/white-house/white-house-blocks-cnn-covering-trumps-tennessee-trip-rcna599944",
+          "cluster_id": 10980737569429867374,
+          "fetched_at": 1790654748,
+          "id": 8479592520728420100,
+          "joined_at": 1790654748,
+          "lang": "en",
+          "outlet_id": "nbcnews",
+          "published_at": 1790430431,
+          "summary": "CNN had been scheduled to fly with Trump on Air Force One on Saturday as part of its pool duties covering the president.",
+          "text_hash": 16552627537845909136,
+          "title": "White House blocks CNN from covering Trump’s Tennessee trip"
+        }
+      ],
+      "outlet_id": "nbcnews"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 8479592520728420100,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3113,
+      "snapshot_id": 3400942843626094913,
+      "ts": 1790659141
+    },
+    {
+      "cluster_id": null,
+      "item_id": 8479592520728420100,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3863,
+      "snapshot_id": 11963863429182609621,
+      "ts": 1790679061
+    }
+  ]
+}

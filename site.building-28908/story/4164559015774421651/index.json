@@ -1,0 +1,243 @@
+{
+  "claims": {
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "presstv": [
+      {
+        "data": {
+          "qid": "Q794"
+        },
+        "field": "country",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Iran"
+      },
+      {
+        "data": {
+          "domain": "presstv.co.uk",
+          "expires": "2026-11-05",
+          "last_changed": "2024-11-04",
+          "registrar": "Ionos SE",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "presstv",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/presstv.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2006-11-05"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-07-08"
+      },
+      {
+        "data": {
+          "qid": "Q1674127"
+        },
+        "field": "owner",
+        "outlet_id": "presstv",
+        "ref_url": "https://www.wikidata.org/wiki/Q912429",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Islamic Republic of Iran Broadcasting"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#RfC:_Press_TV_on_Saudi_Arabian_protests",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_42#Press_TV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_108#Alex_Jones,_Mathaba,_Pravda,_and_PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_139#Press_TV_and_Veterans_Today_RS_for_their_contibutors",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_175#Using_Press_TV_for_reporting_Hamas_claims",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_190#Press_TV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#PressTV",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Press_TV's_website"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Press TV",
+          "status": "deprecated",
+          "summary": "In the 2020 RfC, editors found a clear consensus to deprecate Press TV, owing to its status as an Iranian government propaganda outlet that publishes disinformation, conspiracy theories, antisemitic content including Holocaust denial, [ 24 ] and a host of other problematic content."
+        },
+        "field": "reliability",
+        "outlet_id": "presstv",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.008675992488861084,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7286760210990906
+    },
+    "created_at": 1790654765,
+    "expired": false,
+    "id": 4164559015774421651,
+    "item_count": 2,
+    "last_active_at": 1790715393,
+    "origin_item_id": 4164559015774421651,
+    "origin_outlet_id": "presstv",
+    "outlet_count": 2,
+    "primary_title": "Cuba's health system severely struggling due to US sanctions",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 4164559015774421651,
+        "joined_at": 1790654765,
+        "outlet_id": "presstv",
+        "published_at": 0
+      },
+      {
+        "item_id": 7529625764245451340,
+        "joined_at": 1790715393,
+        "outlet_id": "anadolu",
+        "published_at": 1790708017
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "presstv"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "anadolu": "Anadolu Agency",
+    "presstv": "Press TV"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://presstv.co.uk/Detail/2026/09/27/777089/US-maximum-pressure-sanction-Cuba-health-system-economic-crisis-",
+          "cluster_id": 4164559015774421651,
+          "fetched_at": 1790654765,
+          "id": 4164559015774421651,
+          "joined_at": 1790654765,
+          "lang": "en",
+          "outlet_id": "presstv",
+          "published_at": 0,
+          "summary": "The US's policy of maximum pressure against Havana is not only causing a grave economic crisis in Cuba, but it is also seriously disrupting the local health system.",
+          "text_hash": 856098763151914805,
+          "title": "Cuba's health system severely struggling due to US sanctions"
+        }
+      ],
+      "outlet_id": "presstv"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/americas/cuba-blames-us-pressure-for-worsening-crisis-as-rubio-calls-island-failed-state/4073057",
+          "cluster_id": 4164559015774421651,
+          "fetched_at": 1790715393,
+          "id": 7529625764245451340,
+          "joined_at": 1790715393,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790708017,
+          "summary": "Foreign minister says US measures causing growing damage to Cuban families",
+          "text_hash": 17449535681496853202,
+          "title": "Cuba blames US pressure for worsening crisis as Rubio calls island 'failed state'"
+        }
+      ],
+      "outlet_id": "anadolu"
+    }
+  ],
+  "withdrawals": []
+}

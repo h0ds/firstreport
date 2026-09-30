@@ -1,0 +1,54 @@
+# Stories, page 49 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Who Killed Asylum?](/story/4244328659405013235/) · 1 outlet · reach 1
+- [The Beatles Belong to the Left](/story/4491156598818427588/) · 1 outlet · reach 1
+- [According to Polls, Americans Like Socialism a Lot](/story/4506979954204139066/) · 1 outlet · reach 1
+- [The First Walmart Union Contract in North America](/story/6674176575454506260/) · 1 outlet · reach 1
+- [Greece’s Neo-Nazis Are Back](/story/6824719560104508874/) · 1 outlet · reach 1
+- [The United Arab Emirates Is Devastating Sudan for Profit](/story/8538053654963412131/) · 1 outlet · reach 1
+- [Saudi Arabia’s Yemen Strategy Has Fallen to Pieces](/story/8697469229468968228/) · 1 outlet · reach 1
+- [Greed and Economic Desperation Are Fueling Sudan’s Civil War](/story/8928488612537184068/) · 1 outlet · reach 1
+- [Video Game Workers at Blizzard Won First Union Contracts](/story/9283639925474061796/) · 1 outlet · reach 1
+- [Trump’s Greenland Deal Puts His Annexation Plans on Ice](/story/9516070872355054477/) · 1 outlet · reach 1
+- [We Have to Figure Out How to Design a Warming Planet](/story/10046430022137520309/) · 1 outlet · reach 1
+- [Mark Carney Is Taking Aim at Canada’s Labor Movement](/story/11628693054310627537/) · 1 outlet · reach 1
+- [Literacy Is Another Casualty of the Decline of Democracy](/story/11776812557871223478/) · 1 outlet · reach 1
+- [A Labour Prime Minister Inaugurated Britain’s Neoliberal Era](/story/14218340286668361492/) · 1 outlet · reach 1
+- [We Can’t Blame the Supreme Court for Congress’s Problems](/story/15192046833097381411/) · 1 outlet · reach 1
+- [A Union Feud Shouldn’t Sink California’s Billionaire Tax](/story/17019368547561952016/) · 1 outlet · reach 1
+- [In Italy’s Financial Capital, Socialism Is Back in the Air](/story/17764729663291150079/) · 1 outlet · reach 1
+- [How Brazilian Cinema Survived Fascism](/story/18288836073282297238/) · 1 outlet · reach 1
+- [The Dilemmas of Socialist Governance of a Capitalist State](/story/18365026343572960057/) · 1 outlet · reach 1
+- [This weather threat costs us billions. And it’s about to get worse.](/story/46271193267013566/) · 1 outlet · reach 1
+- [In Chicago, Putting a Hot Dog in a Bun Can Get You in Trouble](/story/747243439856213472/) · 1 outlet · reach 1
+- [Senate Investigation Into OpenAI Is an Important First Step, But CEOs Must Testify Under Oath](/story/1345347957451562160/) · 1 outlet · reach 1
+- [Banning Flock Won't Be Enough Without Police Reform](/story/1893749533927937969/) · 1 outlet · reach 1
+- [How Murdering Suspected Drug Smugglers Became the New Normal](/story/1918874903667699139/) · 1 outlet · reach 1
+- [Anthropic's "Supply Chain Risk" Designation Stemmed from Its Refusing to Agree to Contract Terms, Not Its Speech](/story/2117971809955297299/) · 1 outlet · reach 1
+- [The Road Not Taken in Trump v. Barbara](/story/2303068492357489883/) · 1 outlet · reach 1
+- [Trump wants AI in every classroom. Here’s why Republicans are saying no.](/story/2339016654548094582/) · 1 outlet · reach 1
+- [RootsAction and Progressive Democrats of America Announce Campaign Urging AOC and Ro Khanna to Run for 2028 Democratic Presidential Nomination](/story/3278373796392979401/) · 1 outlet · reach 1
+- [Why Democrats stopped talking about climate](/story/3301838297407107297/) · 1 outlet · reach 1
+- [Renée Good's Mom Wanted Trump to Protect Her Family. Her Daughter Was Killed by ICE.](/story/3339330083690935127/) · 1 outlet · reach 1
+- [FPF comments on White House's defiance of judge's media ban smackdown](/story/3716774004416368265/) · 1 outlet · reach 1
+- [Trump Administration Will Roll Back Climate Rules](/story/3751367354520800949/) · 1 outlet · reach 1
+- [Today in Supreme Court History: September 28, 1787](/story/3824187799214232650/) · 1 outlet · reach 1
+- [Following SCOTUS Ruling, Common Cause Vows Immediate Legal Action Against Any Attempts to Disenfranchise Voters Using Flawed System](/story/3907387399567567354/) · 1 outlet · reach 1
+- [Caveman Invents War](/story/4278137300912393678/) · 1 outlet · reach 1
+- [Trump Moves to Strip EPA of Authority to Limit Power Plant Carbon Pollution](/story/5270665110149397881/) · 1 outlet · reach 1
+- [August CPI Report Shows Price Hikes Accelerating as Trump Brushes Off Working Families’ Affordability Worries](/story/5452662523796948754/) · 1 outlet · reach 1
+- [Is AI Going To Wipe Out Humanity? Don't Build That Bunker Yet.](/story/5743890598850690469/) · 1 outlet · reach 1
+- [New ACLU and AFL-CIO Report Shows Deportations Lower Wages and Raise Costs for America’s Workers](/story/5845823352616667383/) · 1 outlet · reach 1
+- [There’s a global plan to save humans from AI. Can it actually work?](/story/6065571738732545231/) · 1 outlet · reach 1
+- [Inside a quest to learn about the ocean’s mysterious “deep reefs”](/story/6436757737192321404/) · 1 outlet · reach 1
+- ['I Would Be the Greatest Communist in History'](/story/6463297499454912278/) · 1 outlet · reach 1
+- [Failures of Canada's Single-Payer Health Care Highlight the Flaws of 'Medicare for All'](/story/6717608936254197926/) · 1 outlet · reach 1
+- [Wait, what are the rules around cellphone etiquette now?](/story/6740742369981077939/) · 1 outlet · reach 1
+- [SCOTUS Greenlights the Misuse of Social Security Data](/story/6936621983496082196/) · 1 outlet · reach 1
+- [Data Centers and Their Discontents](/story/7042924073859088075/) · 1 outlet · reach 1
+- ["I Will Not Stand for Being Jerked Around … by Any Lawyer Who Practices Before Me"](/story/7084098193448853350/) · 1 outlet · reach 1
+- [The online “burnerverse” trying to ruin young women’s lives](/story/7565123755395880830/) · 1 outlet · reach 1
+- [EPA to Allow Power Plants to Accelerate Global Warming](/story/7898599113000469208/) · 1 outlet · reach 1
+- [Short Circuit: An inexhaustive weekly compendium of rulings from the federal courts of appeal](/story/7900540607923735224/) · 1 outlet · reach 1

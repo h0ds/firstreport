@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 6936621983496082196,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 6936621983496082196,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "SCOTUS Greenlights the Misuse of Social Security Data",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 6936621983496082196,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1790360677
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/scotus-greenlights-the-misuse-of-social-security-data",
+          "cluster_id": 6936621983496082196,
+          "fetched_at": 1790653936,
+          "id": 6936621983496082196,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1790360677,
+          "summary": "The following is a statement from Nancy Altman , President of Social Security Works , in response to today’s Supreme Court decision greenlighting the use of Social Security data for determining voter eligibility: “In the name of non-existent voter fraud, the Supreme Court has given the Trump administration the power to misuse Social Security data to deprive American citizens of their right to vote. This is an obvious effort to undermine free and fair elections. The personal data that Americans provide to…",
+          "text_hash": 11934989575301271413,
+          "title": "SCOTUS Greenlights the Misuse of Social Security Data"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,898 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "dailysabah": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      },
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "nytimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nytimes.com",
+          "expires": "2027-01-19",
+          "last_changed": "2024-12-18",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nytimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nytimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-01-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1851-09-18"
+      },
+      {
+        "data": {
+          "qid": "Q2529982"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The New York Times Company"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_244#RfC:_Wound_characteristics_of_military-style_rifles",
+            "#cite_note-70"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New York Times (NYT)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New York Times is generally reliable. WP:RSOPINION should be used to evaluate opinion columns, while WP:NEWSBLOG should be used for the blogs on The New York Times's website. The 2018 RfC cites WP:MEDPOP to establish that popular press sources such as The New York Times should generally not be used to support medical claims."
+        },
+        "field": "reliability",
+        "outlet_id": "nytimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "timesofindia": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "indiatimes.com",
+          "expires": "2026-11-21",
+          "last_changed": "2025-10-23",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/indiatimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-11-22"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1838-01-01"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1898-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q139935842"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q139935842"
+      },
+      {
+        "data": {
+          "qid": "Q972645"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Times Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_287#Times_of_India_RFC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_447#RfC:_The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_320#The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_342#Valid_Sources?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_353#Circular_references_from_The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_364#Times_of_India_is_not_that_pro-government_as_mentioned_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_442#Times_of_India_running_AI-generated_articles?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_493#Another_AI-generated_article_from_The_Times_of_India"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Times of India (post-1950) (TOI)",
+          "status": "no_consensus",
+          "summary": "Additional considerations apply to articles published in The Times of India (TOI) after 1950. TOI has sometimes had a poor reputation for fact-checking and its use should be evaluated with caution. Editors should ensure that they do not use paid advertorials —which were first published in TOI in 1950 at the earliest—to verify information or establish notability. Paid advertorials may be of particu"
+        },
+        "field": "reliability",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.060726284980773926,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 5,
+      "weakest_join": 0.7807263135910034
+    },
+    "created_at": 1790633634,
+    "expired": false,
+    "id": 11603208240114099487,
+    "item_count": 10,
+    "last_active_at": 1790680916,
+    "origin_item_id": 2842810003199530665,
+    "origin_outlet_id": "thehindu",
+    "outlet_count": 8,
+    "primary_title": "Myanmar airstrike kills 33 in Rohingya-majority Rakhine state",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 11603208240114099487,
+        "joined_at": 1790633634,
+        "outlet_id": "aljazeera",
+        "published_at": 1790623887
+      },
+      {
+        "item_id": 2842810003199530665,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790614238
+      },
+      {
+        "item_id": 10301908745687585031,
+        "joined_at": 1790653942,
+        "outlet_id": "timesofindia",
+        "published_at": 1790650608
+      },
+      {
+        "item_id": 16158514877989134990,
+        "joined_at": 1790653944,
+        "outlet_id": "dailysabah",
+        "published_at": 1790617860
+      },
+      {
+        "item_id": 15035777244740840119,
+        "joined_at": 1790658673,
+        "outlet_id": "euronews",
+        "published_at": 1790656486
+      },
+      {
+        "item_id": 16825355453601887446,
+        "joined_at": 1790665583,
+        "outlet_id": "arabnews",
+        "published_at": 1790664972
+      },
+      {
+        "item_id": 6332742128702013265,
+        "joined_at": 1790679061,
+        "outlet_id": "nytimes",
+        "published_at": 1790671683
+      },
+      {
+        "item_id": 472308449222722230,
+        "joined_at": 1790679062,
+        "outlet_id": "dailysabah",
+        "published_at": 1790676480
+      },
+      {
+        "item_id": 796152122219580431,
+        "joined_at": 1790679063,
+        "outlet_id": "anadolu",
+        "published_at": 1790675218
+      },
+      {
+        "item_id": 11134730744186337577,
+        "joined_at": 1790680916,
+        "outlet_id": "thehindu",
+        "published_at": 1790680877
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "thehindu",
+            "nytimes"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews",
+            "timesofindia"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu",
+            "dailysabah"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "anadolu": "Anadolu Agency",
+    "arabnews": "Arab News",
+    "dailysabah": "Daily Sabah",
+    "euronews": "Euronews",
+    "nytimes": "The New York Times",
+    "thehindu": "The Hindu",
+    "timesofindia": "The Times of India"
+  },
+  "outlets_24h": 7,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 6332742128702013265,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4510,
+      "snapshot_id": 15198895272797891155,
+      "ts": 1790715386
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    4,
+    5,
+    6,
+    6,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/airstrike-near-market-in-myanmars-rakhine-state-kills-33-people/article71521149.ece",
+          "cluster_id": 11603208240114099487,
+          "fetched_at": 1790653942,
+          "id": 2842810003199530665,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790614238,
+          "summary": "Myanmar has been in turmoil since the military seized power from the elected government of Aung San Suu Kyi on February 1, 2021, triggering widespread opposition",
+          "text_hash": 6440662996882797917,
+          "title": "Airstrike near market in Myanmar’s Rakhine state kills 33 people"
+        },
+        {
+          "canonical_url": "https://thehindu.com/news/international/myanmar-airstrike-toll-hits-50-as-families-gather-dead/article71523544.ece",
+          "cluster_id": 11603208240114099487,
+          "fetched_at": 1790680916,
+          "id": 11134730744186337577,
+          "joined_at": 1790680916,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790680877,
+          "summary": "Witnesses say the military's air force raided the riverside commercial hub in Kyauktaw town in western Rakhine state around midday (05:30 GMT) on September 28",
+          "text_hash": 3255313646433561375,
+          "title": "Myanmar airstrike toll hits 50 as families gather dead"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailysabah.com/world/asia-pacific/myanmar-airstrike-kills-33-in-rohingya-majority-rakhine-state",
+          "cluster_id": 11603208240114099487,
+          "fetched_at": 1790653944,
+          "id": 16158514877989134990,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790617860,
+          "summary": "A Myanmar military airstrike near a market in western Rakhine state, home to the country’s persecuted Rohingya Muslim minority, killed at least 33 people and wounded 36 others Mond...",
+          "text_hash": 9467784018571411272,
+          "title": "Myanmar airstrike kills 33 in Rohingya-majority Rakhine state"
+        },
+        {
+          "canonical_url": "https://dailysabah.com/world/asia-pacific/myanmar-military-strike-death-toll-in-rakhine-state-climbs-to-50",
+          "cluster_id": 11603208240114099487,
+          "fetched_at": 1790679062,
+          "id": 472308449222722230,
+          "joined_at": 1790679062,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790676480,
+          "summary": "The death toll from a Myanmar military airstrike in Rakhine state rose to 50 Tuesday after rescuers found more bodies, according to a local aid worker and the rebel group controlli...",
+          "text_hash": 17226681437218986881,
+          "title": "Myanmar military strike death toll in Rakhine state climbs to 50"
+        }
+      ],
+      "outlet_id": "dailysabah"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/28/myanmar-army-air-strike-kills-dozens-in-rakhine-state?traffic_source=rss",
+          "cluster_id": 11603208240114099487,
+          "fetched_at": 1790633634,
+          "id": 11603208240114099487,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790623887,
+          "summary": "Nearly half a million people are displaced in Rakhine as a result of the conflict between the military and rebel groups.",
+          "text_hash": 13246237024559988982,
+          "title": "Myanmar army air strike kills dozens in Rakhine state"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://timesofindia.indiatimes.com/world/rest-of-world/49-killed-in-myanmar-as-junta-carries-out-airstrike-in-rebel-controlled-rakhine-region/articleshow/134554050.cms",
+          "cluster_id": 11603208240114099487,
+          "fetched_at": 1790653942,
+          "id": 10301908745687585031,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "timesofindia",
+          "published_at": 1790650608,
+          "summary": "",
+          "text_hash": 9443582578978222274,
+          "title": "49 killed in Myanmar as junta carries airstrikes in rebel-controlled Rakhine"
+        }
+      ],
+      "outlet_id": "timesofindia"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/29/myanmar-army-airstrike-kills-49-and-injures-58-others-in-market-in-opposition-controlled-r",
+          "cluster_id": 11603208240114099487,
+          "fetched_at": 1790658673,
+          "id": 15035777244740840119,
+          "joined_at": 1790658673,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790656486,
+          "summary": "The Arakan Army accused the army of using fighter jets to drop bombs near the civilian market around noon on Monday, killing many people. The incident is the latest in a continued territorial fight between Myanmar’s ruling junta and the Arakan Army, which controls the state of Rakhine.",
+          "text_hash": 13971542724155867530,
+          "title": "Myanmar army airstrike kills 49 and injures 58 others in market in opposition-controlled Rakhine state"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/world/myanmar-airstrike-death-toll-rises-to-50-local-aid-workers-3003682",
+          "cluster_id": 11603208240114099487,
+          "fetched_at": 1790665583,
+          "id": 16825355453601887446,
+          "joined_at": 1790665583,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790664972,
+          "summary": "A military airstrike on a marketplace in Rakhine state, Myanmar, has resulted in 50 fatalities, according to local aid workers. The strike targeted Kyauktaw town and increased concern over security in the region.",
+          "text_hash": 17326042932172669538,
+          "title": "Myanmar airstrike death toll rises to 50: local aid workers"
+        }
+      ],
+      "outlet_id": "arabnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nytimes.com/2026/09/29/world/asia/myanmar-airstrike-rakhine-market.html",
+          "cluster_id": 11603208240114099487,
+          "fetched_at": 1790679061,
+          "id": 6332742128702013265,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "nytimes",
+          "published_at": 1790671683,
+          "summary": "An airstrike on a bustling market in rebel territory left at least 50 people dead, in one of the deadliest attacks on civilians in months.",
+          "text_hash": 7445140087482561511,
+          "title": "Dozens Killed in Myanmar Military Bombing"
+        }
+      ],
+      "outlet_id": "nytimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/asia-pacific/myanmar-military-bombing-kills-at-least-50-in-northern-rakhine-state-report/4072417",
+          "cluster_id": 11603208240114099487,
+          "fetched_at": 1790679063,
+          "id": 796152122219580431,
+          "joined_at": 1790679063,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790675218,
+          "summary": "Burmese military jet targets bridge, market in Kyauktaw township of Rakhine on Monday",
+          "text_hash": 17756959896488215153,
+          "title": "Myanmar military bombing kills at least 50 in northern Rakhine state: Report"
+        }
+      ],
+      "outlet_id": "anadolu"
+    }
+  ],
+  "withdrawals": []
+}

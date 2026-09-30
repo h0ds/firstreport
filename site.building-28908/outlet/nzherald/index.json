@@ -1,0 +1,426 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "nzherald.co.nz",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.116
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "nzherald",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.12 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q664"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New Zealand"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1863-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q11032"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "nzherald.co.nz"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.nzherald.co.nz/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "NZ Herald"
+      },
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The New Zealand Herald"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 10,
+          "origin_of": 1,
+          "shared_stories": 5,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "nzherald",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nzherald",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 20% of 5 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q7759231"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New Zealand Media and Entertainment"
+      },
+      {
+        "data": {
+          "qid": "Q115613014"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Wilson & Horton"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 10,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "nzherald",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nzherald",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.1 items/day"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_New_Zealand_Herald",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#New_Zealand_Herald,_Whanganui_Chronicle,_opinion_piece?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New Zealand Herald (NZ Herald)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New Zealand Herald is generally reliable."
+        },
+        "field": "reliability",
+        "outlet_id": "nzherald",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 10,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "nzherald",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nzherald",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "nzherald.co.nz",
+          "final_url": "https://www.nzherald.co.nz/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.nzherald.co.nz/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.nzherald.co.nz/nz/about-nz-herald-the-home-of-honest-impartial-and-independent-journalism/V7247WBR5BFWHM4ENZDM5OSTHU/",
+          "contact": "https://www.nzherald.co.nz/help-and-support/contact-us/",
+          "domain": "nzherald.co.nz",
+          "missing": [
+            "privacy",
+            "corrections",
+            "ethics",
+            "masthead"
+          ]
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.nzherald.co.nz/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact pages from its home page; no privacy, corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 10,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "nzherald",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nzherald",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.nzherald.co.nz/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q137925634"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q1199207"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_New_Zealand_Herald"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 10,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "nzherald",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nzherald",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 1,
+  "items": 16,
+  "outlet": {
+    "domains": [
+      "nzherald.co.nz"
+    ],
+    "id": "nzherald",
+    "name": "The New Zealand Herald"
+  },
+  "shared_stories": 8,
+  "stories": [
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18293615436391779908,
+      "outlet_count": 17,
+      "title": "New York prosecutors reopen investigation into alleged rape at Cornell University"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 2931301599306692089,
+      "outlet_count": 8,
+      "title": "Tennessee to execute a woman for first time in 200 years after governor denies clemency"
+    },
+    {
+      "created_at": 1790715388,
+      "first": false,
+      "id": 3990874398755420546,
+      "outlet_count": 2,
+      "title": "Monk begins 12-year isolation at Buddhist temple"
+    },
+    {
+      "created_at": 1790718006,
+      "first": true,
+      "id": 1460292701574559964,
+      "outlet_count": 1,
+      "title": "Donald Trump’s luck is finally running out"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 9378438701147307814,
+      "outlet_count": 10,
+      "title": "Lindsay Clancy's lawyer makes stunning argument in first hearing since recent mistrial"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 15802106796458350074,
+      "outlet_count": 6,
+      "title": "Mystery over UK airbase scare as police find petrol, not explosives"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 1915453072919720181,
+      "outlet_count": 7,
+      "title": "SpaceX’s Starship reaches orbit for the first time"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 12492774096871122684,
+      "outlet_count": 8,
+      "title": "UK detains 5, probe Iran link to foiled attack near US-run air base"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 18371987887269951774,
+      "outlet_count": 1,
+      "title": "Bath University rugby team investigated over ‘plot to spike female freshers’"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 1973258367106771536,
+      "outlet_count": 1,
+      "title": "The rural English villages at the centre of a possible terrorist plot"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15326836451892574789,
+      "outlet_count": 11,
+      "title": "At least 27 killed in 2 mass shootings in South Africa"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 15724304339353336283,
+      "outlet_count": 1,
+      "title": "Life returns to submerged Bangkok markets after deadly flooding"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 8850675884555630449,
+      "outlet_count": 1,
+      "title": "US Military healthcare fraud scheme paid for gold-plated Tesla, lavish parties and hotels"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 4243355468379074177,
+      "outlet_count": 1,
+      "title": "Cornell University student says she was drugged and gang-raped by fraternity students"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 2755462213035452593,
+      "outlet_count": 1,
+      "title": "Some Republicans issue a new call on Donald Trump’s war with Iran: End it now"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

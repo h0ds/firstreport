@@ -1,0 +1,895 @@
+{
+  "claims": {
+    "bbc": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "bbc.com",
+          "expires": "2030-07-14",
+          "last_changed": "2021-07-06",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1989-07-15"
+      },
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "expires": "2034-12-13",
+          "last_changed": "2025-10-29",
+          "registrar": "British Broadcasting Corporation",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-13"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_495#RfC:_reliability_of_the_BBC",
+            "#cite_note-9"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "BBC (British Broadcasting Corporation)",
+          "status": "generally_reliable",
+          "summary": "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
+        },
+        "field": "reliability",
+        "outlet_id": "bbc",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "justthenews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "justthenews.com",
+          "expires": "2028-07-23",
+          "last_changed": "2026-08-28",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "justthenews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/justthenews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-07-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2020-01-01"
+      }
+    ],
+    "nbcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nbcnews.com",
+          "expires": "2027-06-25",
+          "last_changed": "2025-05-24",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nbcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-06-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1940-02-21"
+      },
+      {
+        "data": {
+          "qid": "Q724759"
+        },
+        "field": "owner",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "NBCUniversal"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_186#Column_on_Donors_Trust_on_(but_not_by)_NBC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Is_NBC_a_reliable_sources_for_the_Wikipedia_The_Epoch_Times_(ET)_article?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_314#NBC_News-_'Undecided_voters'_at_NBC's_Biden_town_hall_were_featured_on_MSNBC_as_Biden_voters",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_424#NBC_News_for_Wąsosz_pogrom"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NBC News",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NBC News is generally reliable for news. See also: MS NOW (formerly MSNBC)"
+        },
+        "field": "reliability",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "nypost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pagesix.com",
+          "expires": "2027-09-12",
+          "last_changed": "2026-08-11",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/pagesix.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-13"
+      },
+      {
+        "data": {
+          "domain": "nypost.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-08-27",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nypost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1801-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q14289857"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corp"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_312#RFC:_New_York_Post_(nypost.com)",
+            "#cite_note-69"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six) (excluding entertainment)",
+          "status": "generally_unreliable",
+          "summary": "There is consensus the New York Post is generally unreliable for factual reporting, especially with regard to politics, particularly New York City politics. A tabloid newspaper, editors criticise its lack of concern for fact-checking or corrections, including examples of outright fabrication. Editors consider the New York Post more reliable before it changed ownership in 1976, and particularly unr"
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_436#RfC:_Entertainment_coverage_of_the_New_York_Post_(including_Decider_and_Page_Six)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_348#Using_a_Decider.com_interview",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_371#Decider.com_/_Jimmy_DiResta_/_Naomi_Wu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_431#Using_Decider_/_Decider.com_for_interviews_and_reviews"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six, Decider) (entertainment)",
+          "status": "no_consensus",
+          "summary": "There is consensus that the New York Post (nypost.com) and its sub-publications Decider (decider.com) and Page Six are considered to be marginally reliable sources for entertainment coverage, including reviews, but should not be used for controversial statements related to living persons."
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.0669323205947876,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7869323492050171
+    },
+    "created_at": 1790653938,
+    "expired": false,
+    "id": 10680949531682007259,
+    "item_count": 8,
+    "last_active_at": 1790725234,
+    "origin_item_id": 10680949531682007259,
+    "origin_outlet_id": "independent",
+    "outlet_count": 7,
+    "primary_title": "Caleb Flynn, former ‘American Idol’ singer, found guilty of wife’s murder",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 10680949531682007259,
+        "joined_at": 1790653938,
+        "outlet_id": "independent",
+        "published_at": 1790628698
+      },
+      {
+        "item_id": 13965726656676264858,
+        "joined_at": 1790715370,
+        "outlet_id": "independent",
+        "published_at": 1790712940
+      },
+      {
+        "item_id": 4948858525393184061,
+        "joined_at": 1790715382,
+        "outlet_id": "bbc",
+        "published_at": 1790715043
+      },
+      {
+        "item_id": 5292375612741858289,
+        "joined_at": 1790715390,
+        "outlet_id": "justthenews",
+        "published_at": 1790640000
+      },
+      {
+        "item_id": 5307633299254576788,
+        "joined_at": 1790715492,
+        "outlet_id": "nbcnews",
+        "published_at": 1790710612
+      },
+      {
+        "item_id": 5249382893823412242,
+        "joined_at": 1790720186,
+        "outlet_id": "guardian",
+        "published_at": 1790718345
+      },
+      {
+        "item_id": 11917783380698920184,
+        "joined_at": 1790721804,
+        "outlet_id": "nypost",
+        "published_at": 1790721827
+      },
+      {
+        "item_id": 11855339689099583859,
+        "joined_at": 1790725234,
+        "outlet_id": "scmp",
+        "published_at": 1790724773
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "bbc",
+            "nbcnews",
+            "scmp",
+            "guardian",
+            "independent"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "nypost"
+          ]
+        }
+      ],
+      "not_rated": [
+        "justthenews"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "bbc": "BBC",
+    "guardian": "The Guardian",
+    "independent": "The Independent",
+    "justthenews": "Just the News",
+    "nbcnews": "NBC News",
+    "nypost": "New York Post",
+    "scmp": "South China Morning Post"
+  },
+  "outlets_24h": 7,
+  "outlets_6h": 7,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 5307633299254576788,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5860,
+      "snapshot_id": 15526602726657947432,
+      "ts": 1790723688
+    },
+    {
+      "cluster_id": null,
+      "item_id": 5307633299254576788,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5861,
+      "snapshot_id": 15526602726657947432,
+      "ts": 1790723688
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    7,
+    7,
+    7
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/americas/ohio-dayton-hollywood-police-american-b3057867.html",
+          "cluster_id": 10680949531682007259,
+          "fetched_at": 1790653938,
+          "id": 10680949531682007259,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790628698,
+          "summary": "A former Ohio music pastor who appeared on the singing competition “American Idol” is on trial over allegations that he killed his wife while having an affair",
+          "text_hash": 10793407486683188454,
+          "title": "Former 'American Idol' singer Caleb Flynn is on trial in wife's killing. He says a burglar did it"
+        },
+        {
+          "canonical_url": "https://independent.co.uk/news/world/americas/crime/caleb-flynn-guilty-verdict-american-idol-wife-murder-b3058582.html",
+          "cluster_id": 10680949531682007259,
+          "fetched_at": 1790715370,
+          "id": 13965726656676264858,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790712940,
+          "summary": "Caleb Flynn claimed in a frantic 911 call that a burglar killed his wife",
+          "text_hash": 2439973302711455686,
+          "title": "Former American Idol contestant Caleb Flynn found guilty of killing his wife who encouraged him to chase his dreams"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://justthenews.com/nation/crime/jury-finds-former-american-idol-contestant-caleb-flynn-guilty-murder-his-wife",
+          "cluster_id": 10680949531682007259,
+          "fetched_at": 1790715390,
+          "id": 5292375612741858289,
+          "joined_at": 1790715390,
+          "lang": "en",
+          "outlet_id": "justthenews",
+          "published_at": 1790640000,
+          "summary": "The defendant was charged with a total of nine counts, including murder, felonious assault and tampering with evidence, and was found guilty on all counts.",
+          "text_hash": 15559826530708203319,
+          "title": "Jury finds former American Idol contestant Caleb Flynn guilty in murder of his wife"
+        }
+      ],
+      "outlet_id": "justthenews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nbcnews.com/news/us-news/jury-reaches-verdict-case-caleb-flynn-american-idol-singer-charged-wif-rcna600448",
+          "cluster_id": 10680949531682007259,
+          "fetched_at": 1790715492,
+          "id": 5307633299254576788,
+          "joined_at": 1790715492,
+          "lang": "en",
+          "outlet_id": "nbcnews",
+          "published_at": 1790710612,
+          "summary": "Former “American Idol” singer Caleb Flynn was found guilty Tuesday of murdering his wife in their Ohio home in February.",
+          "text_hash": 9424208196967040534,
+          "title": "Caleb Flynn, former ‘American Idol’ singer, found guilty of wife’s murder"
+        }
+      ],
+      "outlet_id": "nbcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bbc.co.uk/news/articles/c5rm9gv7n07xo",
+          "cluster_id": 10680949531682007259,
+          "fetched_at": 1790715382,
+          "id": 4948858525393184061,
+          "joined_at": 1790715382,
+          "lang": "en",
+          "outlet_id": "bbc",
+          "published_at": 1790715043,
+          "summary": "Caleb Flynn weeps in court as he is convicted of shooting his wife, Ashley, dead in their Ohio home.",
+          "text_hash": 9342358833613999967,
+          "title": "Former American Idol contestant and pastor found guilty of murdering wife"
+        }
+      ],
+      "outlet_id": "bbc"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/us-news/2026/sep/29/american-idol-ohio-pastor-guilty-wife-murder",
+          "cluster_id": 10680949531682007259,
+          "fetched_at": 1790720186,
+          "id": 5249382893823412242,
+          "joined_at": 1790720186,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790718345,
+          "summary": "Caleb Flynn convicted of aggravated murder in shooting of Ashley Flynn, a schoolteacher and volleyball coach Caleb Flynn , the former Ohio music pastor and one-time American Idol contestant accused of killing his wife to pursue a lover, was convicted of her murder on Tuesday. As a judge read the guilty verdict, 40-year-old Flynn cried, shaking his head and closing his eyes at times. He faces up to life in prison. Continue reading...",
+          "text_hash": 10808336725072121603,
+          "title": "Former American Idol contestant found guilty of killing wife during affair"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nypost.com/2026/09/29/us-news/american-idol-star-caleb-flynn-found-guilty-of-killing-wife-in-sick-plan-to-start-new-life-with-his-young-mistress/",
+          "cluster_id": 10680949531682007259,
+          "fetched_at": 1790721804,
+          "id": 11917783380698920184,
+          "joined_at": 1790721804,
+          "lang": "en",
+          "outlet_id": "nypost",
+          "published_at": 1790721827,
+          "summary": "Flynn hatched the horrific scheme after a yearslong affair with Alleigha Botner, 24, whom he met in 2022 while she was a 20-year-old intern at the church where he served as a music pastor, prosecutors said.",
+          "text_hash": 11524384843547348108,
+          "title": "‘American Idol’ alum Caleb Flynn blubbers as he’s convicted on all counts for killing wife to be with young mistress"
+        }
+      ],
+      "outlet_id": "nypost"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/world/united-states-canada/article/3369260/ex-american-idol-singer-caleb-flynn-convicted-fatally-shooting-his-wife",
+          "cluster_id": 10680949531682007259,
+          "fetched_at": 1790725234,
+          "id": 11855339689099583859,
+          "joined_at": 1790725234,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790724773,
+          "summary": "A former Ohio music pastor who once appeared on American Idol was convicted of murder on Tuesday in the killing of his wife while he was having an affair. Prosecutors said Caleb Flynn, 40, staged a home invasion in February after shooting his wife, Ashley Flynn, a 37-year-old teacher and volleyball coach. Flynn, who claimed his wife was killed by a burglar, could get up to life in prison without the chance of parole when he’s sentenced on Monday. Flynn closed his eyes, shook his head to the side...",
+          "text_hash": 10659354469870406570,
+          "title": "Ex-American Idol singer Caleb Flynn convicted of fatally shooting his wife"
+        }
+      ],
+      "outlet_id": "scmp"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 10680949531682007259,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4202,
+      "snapshot_id": 176291616130132315,
+      "ts": 1790679783
+    }
+  ]
+}

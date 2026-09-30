@@ -1,0 +1,682 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "bbc": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "bbc.com",
+          "expires": "2030-07-14",
+          "last_changed": "2021-07-06",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1989-07-15"
+      },
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "expires": "2034-12-13",
+          "last_changed": "2025-10-29",
+          "registrar": "British Broadcasting Corporation",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-13"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_495#RfC:_reliability_of_the_BBC",
+            "#cite_note-9"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "BBC (British Broadcasting Corporation)",
+          "status": "generally_reliable",
+          "summary": "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
+        },
+        "field": "reliability",
+        "outlet_id": "bbc",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.0009495019912719727,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7209495306015015
+    },
+    "created_at": 1790679062,
+    "expired": false,
+    "id": 12916877823827640315,
+    "item_count": 9,
+    "last_active_at": 1790720198,
+    "origin_item_id": 5460237318153312039,
+    "origin_outlet_id": "straitstimes",
+    "outlet_count": 5,
+    "primary_title": "French students and police clash as school blockades turn violent",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 12916877823827640315,
+        "joined_at": 1790679062,
+        "outlet_id": "straitstimes",
+        "published_at": 1790677978
+      },
+      {
+        "item_id": 5460237318153312039,
+        "joined_at": 1790679062,
+        "outlet_id": "straitstimes",
+        "published_at": 1790674582
+      },
+      {
+        "item_id": 11181432744755108117,
+        "joined_at": 1790715370,
+        "outlet_id": "aljazeera",
+        "published_at": 1790693503
+      },
+      {
+        "item_id": 16299460182638845942,
+        "joined_at": 1790715373,
+        "outlet_id": "guardian",
+        "published_at": 1790695170
+      },
+      {
+        "item_id": 11302416555494445220,
+        "joined_at": 1790715377,
+        "outlet_id": "euronews",
+        "published_at": 1790697983
+      },
+      {
+        "item_id": 8141901550072366448,
+        "joined_at": 1790716891,
+        "outlet_id": "straitstimes",
+        "published_at": 1790716585
+      },
+      {
+        "item_id": 10255881511009205130,
+        "joined_at": 1790718367,
+        "outlet_id": "aljazeera",
+        "published_at": 1790716163
+      },
+      {
+        "item_id": 13174383523487524904,
+        "joined_at": 1790720198,
+        "outlet_id": "bbc",
+        "published_at": 1790718913
+      },
+      {
+        "item_id": 17823660894673455188,
+        "joined_at": 1790720198,
+        "outlet_id": "bbc",
+        "published_at": 1790718816
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "bbc",
+            "guardian",
+            "straitstimes"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "bbc": "BBC",
+    "euronews": "Euronews",
+    "guardian": "The Guardian",
+    "straitstimes": "The Straits Times"
+  },
+  "outlets_24h": 5,
+  "outlets_6h": 5,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 11181432744755108117,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5407,
+      "snapshot_id": 8171716184744724144,
+      "ts": 1790715695
+    },
+    {
+      "cluster_id": null,
+      "item_id": 8141901550072366448,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5845,
+      "snapshot_id": 4044308876832448330,
+      "ts": 1790723528
+    },
+    {
+      "cluster_id": null,
+      "item_id": 16299460182638845942,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5854,
+      "snapshot_id": 7340485288374536241,
+      "ts": 1790723644
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/french-teens-blockade-schools-as-unions-vow-day-of-anger-over-cost-cutting-budget",
+          "cluster_id": 12916877823827640315,
+          "fetched_at": 1790679062,
+          "id": 5460237318153312039,
+          "joined_at": 1790679062,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790674582,
+          "summary": "They are protesting timetables, class sizes, and a shortage of teachers, among other issues.",
+          "text_hash": 8513382234127696717,
+          "title": "French teens blockade schools as unions vow day of ‘anger’ over cost-cutting budget"
+        },
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/student-protests-and-french-public-sector-strike-heap-pressure-on-macron",
+          "cluster_id": 12916877823827640315,
+          "fetched_at": 1790679062,
+          "id": 12916877823827640315,
+          "joined_at": 1790679062,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790677978,
+          "summary": "PARIS, Sept 29 - French civil servants went on strike on Tuesday and high school students blocked the entrances to schools in a show of discontent with planned budget cuts ahead of next year's presidential election.",
+          "text_hash": 582099948567052372,
+          "title": "Student protests and French public sector strike heap pressure on Macron"
+        },
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/blockades-in-france-over-high-school-grievances-see-hundreds-detained",
+          "cluster_id": 12916877823827640315,
+          "fetched_at": 1790716891,
+          "id": 8141901550072366448,
+          "joined_at": 1790716891,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790716585,
+          "summary": "Grievances include timetables, class sizes and a shortage of teachers.",
+          "text_hash": 2450126427896341899,
+          "title": "Clashes between French teens, police as school blockades intensify"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/gallery/2026/9/29/photos-french-studentspublic-workers-protest-macrons-planned-budget-cuts?traffic_source=rss",
+          "cluster_id": 12916877823827640315,
+          "fetched_at": 1790715370,
+          "id": 11181432744755108117,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790693503,
+          "summary": "More than 400 people have been arrested as protesting students clash with police.",
+          "text_hash": 2651312108888786303,
+          "title": "Photos: French students protest, public workers strike before budget cuts"
+        },
+        {
+          "canonical_url": "https://aljazeera.com/video/newsfeed/2026/9/29/french-students-clash-with-police-as-protests-over-education-cuts-spread?traffic_source=rss",
+          "cluster_id": 12916877823827640315,
+          "fetched_at": 1790718367,
+          "id": 10255881511009205130,
+          "joined_at": 1790718367,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790716163,
+          "summary": "French school students have blocked schools across France, demanding better learning conditions.",
+          "text_hash": 17691646036655775788,
+          "title": "French students clash with police as protests over education cuts spread"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/world/2026/sep/29/french-students-police-clash-school-blockades-violent",
+          "cluster_id": 12916877823827640315,
+          "fetched_at": 1790715373,
+          "id": 16299460182638845942,
+          "joined_at": 1790715373,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790695170,
+          "summary": "More than 400 detained as police and students clash over class sizes, exhausting timetables and staff shortages More than 400 people, most of them children, have been detained in France on Tuesday after teenagers across the country blockaded their schools in protest at class sizes, teacher shortages and long timetables. Interior minister Laurent Nunez told BFM TV: “440 were detained across national territory. We don’t have the final tally yet, but I’m told two-thirds led to police custody.” Continue…",
+          "text_hash": 7954013352579130758,
+          "title": "Hundreds detained as student protests across France turn violent"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/video/2026/09/29/french-students-blockade-schools-nationwide-to-demand-more-resources",
+          "cluster_id": 12916877823827640315,
+          "fetched_at": 1790715377,
+          "id": 11302416555494445220,
+          "joined_at": 1790715377,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790697983,
+          "summary": "Hundreds of secondary school students blocked school entrances in Rennes and Paris during a national day of action, calling for more staff and funding for education.",
+          "text_hash": 12824037885259482796,
+          "title": "French students blockade schools nationwide to demand more resources"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bbc.co.uk/news/videos/cmy0zey3ey2lo",
+          "cluster_id": 12916877823827640315,
+          "fetched_at": 1790720198,
+          "id": 17823660894673455188,
+          "joined_at": 1790720198,
+          "lang": "en",
+          "outlet_id": "bbc",
+          "published_at": 1790718816,
+          "summary": "More than 400 people, mainly minors, were arrested on Tuesday, the country's interior minister says.",
+          "text_hash": 14658895122190645376,
+          "title": "Fires and blockades as students stage school protests across France"
+        },
+        {
+          "canonical_url": "https://bbc.co.uk/news/articles/c862epne7glyo",
+          "cluster_id": 12916877823827640315,
+          "fetched_at": 1790720198,
+          "id": 13174383523487524904,
+          "joined_at": 1790720198,
+          "lang": "en",
+          "outlet_id": "bbc",
+          "published_at": 1790718913,
+          "summary": "Students have been protesting conditions and resources in high schools since last week.",
+          "text_hash": 8424068973938990189,
+          "title": "More than 400 detained as France student protests escalate"
+        }
+      ],
+      "outlet_id": "bbc"
+    }
+  ],
+  "withdrawals": []
+}

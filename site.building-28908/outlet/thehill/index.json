@@ -1,0 +1,672 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "thehill.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.06
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "thehill",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.06 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q11032"
+        },
+        "field": "legal_form",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "thehill.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "thehill",
+        "ref_url": "https://thehill.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "The Hill"
+      },
+      {
+        "field": "name",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Hill"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 100,
+          "origin_of": 11,
+          "shared_stories": 29,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "thehill",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/thehill",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 38% of 29 stories other outlets also carried"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 100,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "thehill",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/thehill",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "1.1 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "thehill.com"
+        },
+        "field": "registrar",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "CSC Corporate Domains, Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 100,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "thehill",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/thehill",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "thehill.com",
+          "final_url": "https://thehill.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "thehill",
+        "ref_url": "https://thehill.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://thehill.com/events/about/",
+          "contact": "https://thehill.com/contact/internships/",
+          "domain": "thehill.com",
+          "ethics": "https://thehill.com/newsletters/energy-environment/6116281-trump-loosens-vehicle-mileage-standards/",
+          "missing": [
+            "corrections",
+            "masthead"
+          ],
+          "privacy": "https://www.nexstar.tv/privacy-policy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "thehill",
+        "ref_url": "https://thehill.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 100,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "thehill",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/thehill",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "http://thehill.com/"
+      },
+      {
+        "field": "website",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://thehill.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q7739683"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Hill_(newspaper)"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 100,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "thehill",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/thehill",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 12,
+  "items": 106,
+  "outlet": {
+    "domains": [
+      "thehill.com"
+    ],
+    "id": "thehill",
+    "name": "The Hill"
+  },
+  "shared_stories": 31,
+  "stories": [
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15587760235900320854,
+      "outlet_count": 26,
+      "title": "5 men released on bail in UK over suspected US-run airbase plot"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 18293615436391779908,
+      "outlet_count": 17,
+      "title": "New York prosecutors reopen investigation into alleged rape at Cornell University"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 13866602592389928610,
+      "outlet_count": 13,
+      "title": "Senate passes bipartisan Protect College Sports Act amid ‘chaos’ in industry"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 14776272129164761012,
+      "outlet_count": 21,
+      "title": "Trump Denies Offering to Sell Arms to China's Xi"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 16346503716596623632,
+      "outlet_count": 13,
+      "title": "Pope Leo says concerns about AI doom scenarios are not ‘fake news’"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 15762781888966832589,
+      "outlet_count": 3,
+      "title": "Education Department Scraps Biden-Era Title IX Gender Identity Protections"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 10343460793907305299,
+      "outlet_count": 7,
+      "title": "US, China agree to cut tariffs on $60B worth of products"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 7400055562576066529,
+      "outlet_count": 3,
+      "title": "Trump administration asks Supreme Court to OK transgender inmate policy"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 1915453072919720181,
+      "outlet_count": 7,
+      "title": "SpaceX’s Starship reaches orbit for the first time"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 14052849425103090223,
+      "outlet_count": 10,
+      "title": "Trump unveils US$15 billion Iowa steel project the White House says will be biggest in US"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 12492774096871122684,
+      "outlet_count": 8,
+      "title": "UK detains 5, probe Iran link to foiled attack near US-run air base"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 18365860650901984467,
+      "outlet_count": 2,
+      "title": "Pennsylvania surpasses 900 measles cases"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 16664745717732133943,
+      "outlet_count": 5,
+      "title": "Delta Air Lines flight to Boston forced to make emergency landing in Portugal after smoke in cabin"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 10969125623470226463,
+      "outlet_count": 12,
+      "title": "Trump expects more talks after rejecting latest Iranian proposal"
+    },
+    {
+      "created_at": 1790681417,
+      "first": false,
+      "id": 13159882135635889122,
+      "outlet_count": 2,
+      "title": "Jack Smith stresses strength of Trump cases, says he will not be ‘silenced’ by threats"
+    },
+    {
+      "created_at": 1790683024,
+      "first": true,
+      "id": 15635370383288504493,
+      "outlet_count": 1,
+      "title": "Don’t let our next UN secretary-general be a shill for China, Cuba and Hamas"
+    },
+    {
+      "created_at": 1790681417,
+      "first": true,
+      "id": 2500068483150467390,
+      "outlet_count": 1,
+      "title": "We need accountability for federal employee purges made on false pretenses"
+    },
+    {
+      "created_at": 1790639336,
+      "first": false,
+      "id": 10306277323124204780,
+      "outlet_count": 15,
+      "title": "Trump denies he offered Iran sanctions relief, release of frozen funds"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 18223236983752790663,
+      "outlet_count": 2,
+      "title": "Trump paying for political ads with taxpayer money?"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 1316915591768853551,
+      "outlet_count": 1,
+      "title": "The Memo: Slew of Trump controversies gives headache to Republicans in midterms"
+    },
+    {
+      "created_at": 1790638791,
+      "first": false,
+      "id": 7269790725609937051,
+      "outlet_count": 7,
+      "title": "FBI deputy chief announces resignation after just over a year in job"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16910807431805601164,
+      "outlet_count": 7,
+      "title": "Justice Alito Recuses Himself from Major Climate Lawsuit Against Oil Companies"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 16506327252844129190,
+      "outlet_count": 4,
+      "title": "Hegseth instructs Pentagon to defend 2026 elections from ‘foreign actors’"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 9532632070516774090,
+      "outlet_count": 7,
+      "title": "Two giant pandas arrive in Atlanta from China after Xi-Trump summit"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 16260071136014290073,
+      "outlet_count": 2,
+      "title": "Bill Gates says global AI cooperation is ‘more difficult’ than nuclear talks"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 14067706000843580412,
+      "outlet_count": 2,
+      "title": "Nvidia shares rise after largest-ever $150 billion buyback plan is announced"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 17881402584476595342,
+      "outlet_count": 2,
+      "title": "Georgia Gov. Kemp suspends state gas tax for 30 days"
+    },
+    {
+      "created_at": 1790633635,
+      "first": true,
+      "id": 10365073202848134034,
+      "outlet_count": 6,
+      "title": "Nvidia unveils security platform to stop AI agents from going rogue"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 2011424002957068533,
+      "outlet_count": 3,
+      "title": "Vance, RFK Jr. to Headline MAHA Summit Amid Rift"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 13623868330813475276,
+      "outlet_count": 2,
+      "title": "Trump blasts Obama’s ‘ridiculous’ take all-women governments would ‘be better’"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 13346121265740723390,
+      "outlet_count": 2,
+      "title": "GOP Georgia Peanut Chair Endorses Dem Sen. Ossoff"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 10776281565568805758,
+      "outlet_count": 2,
+      "title": "Fetterman joins Democrats in warning Mullin, DHS about election interference"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 9889831105738716716,
+      "outlet_count": 3,
+      "title": "Sen. Thune: Taxpayers Shouldn't Pay for Trump Ads"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 3447545804680193382,
+      "outlet_count": 2,
+      "title": "Scoop: Anthropic's Dario Amodei to have White House dinner with Trump"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 17236732144324156755,
+      "outlet_count": 1,
+      "title": "Why you may get 3 paychecks in October, and how it could impact your 2027"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 17079945998660101215,
+      "outlet_count": 1,
+      "title": "Russell Brand to moderate panel at MAHA summit"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 16885254971854072372,
+      "outlet_count": 1,
+      "title": "News outlets ask court to give ‘little weight’ to DOJ support for OpenAI in copyright dispute"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 16754964316007335577,
+      "outlet_count": 1,
+      "title": "Trump approval slips to historic low in Wall Street Journal survey"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 15998231963752236602,
+      "outlet_count": 1,
+      "title": "Trump slams Supreme Court for blocking Missouri’s GOP-favored map for third time"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 15842197189849560073,
+      "outlet_count": 1,
+      "title": "Former GOP rep: ‘Trump did everything he could to help Republicans lose’"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 15309371934915686174,
+      "outlet_count": 1,
+      "title": "Hilton outlines English-only California schools plan"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 15295567287467897845,
+      "outlet_count": 1,
+      "title": "Mick Mulvaney: Trump ad ‘flat out’ wrong"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 15279478338611977246,
+      "outlet_count": 1,
+      "title": "The West must win its future wars and not just battles"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 15189034564389516988,
+      "outlet_count": 1,
+      "title": "Dolly Parton’s classic ‘9 to 5’ returning to theaters for limited run"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 15146761870204727525,
+      "outlet_count": 1,
+      "title": "Despite popular narratives, free speech is working in Macklemore’s favor"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 15139590290535468346,
+      "outlet_count": 1,
+      "title": "GLP-1 drugs may help sleep apnea, but CPAP remains best treatment: Study"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 14793094053700906354,
+      "outlet_count": 1,
+      "title": "DHS announces nationwide surge in ‘sanctuary’ cities"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 14369936871101317336,
+      "outlet_count": 1,
+      "title": "How to win the vote of generation vape"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 14287056215837749210,
+      "outlet_count": 1,
+      "title": "Watch live: Duffy gives remarks on air traffic control modernization"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 14040187711419447218,
+      "outlet_count": 1,
+      "title": "Thune says Iran war has ‘trumped everything else’ for voters"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

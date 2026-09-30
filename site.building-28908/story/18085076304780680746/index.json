@@ -1,0 +1,100 @@
+{
+  "claims": {
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653946,
+    "expired": false,
+    "id": 18085076304780680746,
+    "item_count": 1,
+    "last_active_at": 1790653946,
+    "origin_item_id": 18085076304780680746,
+    "origin_outlet_id": "japantimes",
+    "outlet_count": 1,
+    "primary_title": "Nakai and Hatakeyama win BMX racing gold at Asian Games",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 18085076304780680746,
+        "joined_at": 1790653946,
+        "outlet_id": "japantimes",
+        "published_at": 1790647440
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japantimes": "The Japan Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/sports/2026/09/29/asian-games/japan-bmx-gold-asian-games/",
+          "cluster_id": 18085076304780680746,
+          "fetched_at": 1790653946,
+          "id": 18085076304780680746,
+          "joined_at": 1790653946,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790647440,
+          "summary": "In track and field, Ryuji Miura brought Japan its first gold medal in 28 years in the men's 3,000-meter steeplechase.",
+          "text_hash": 814709930998235274,
+          "title": "Nakai and Hatakeyama win BMX racing gold at Asian Games"
+        }
+      ],
+      "outlet_id": "japantimes"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,87 @@
+{
+  "export_time": 1790725421,
+  "outlet": "euronews",
+  "page": 2,
+  "page_size": 50,
+  "pages": 2,
+  "stories": [
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 5712047506183011748,
+      "outlet_count": 1,
+      "title": "Azerbaijan marks its Remembrance Day looking forward to a future of peace"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 4015333180317254218,
+      "outlet_count": 2,
+      "title": "Tigray rebels push into Afar as Ethiopia blames neighbours"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 3751853170037756446,
+      "outlet_count": 1,
+      "title": "Watch: mass Madrid protests over Maricarmen eviction and housing crisis"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 2753206224964127879,
+      "outlet_count": 1,
+      "title": "EU tells countries to curb energy demand as gas prices face winter squeeze"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 2345838428114911622,
+      "outlet_count": 2,
+      "title": "Heavy rain and flooding kill at least 62 in northern India"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 1650162676472507455,
+      "outlet_count": 1,
+      "title": "At least 11 dead following suicide bomb attack in northwestern Pakistan"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 1578230654574277685,
+      "outlet_count": 1,
+      "title": "Serbia's politicians return to TV debates ahead of parliamentary election"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 970291589655735889,
+      "outlet_count": 1,
+      "title": "What is killing whale calves in Patagonia? bacteria under suspicion"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 785001445115155322,
+      "outlet_count": 2,
+      "title": "Stand-up comic released after being convicted of insulting Erdoğan"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 184752849764768984,
+      "outlet_count": 1,
+      "title": "Ukraine: Kharkiv apartment block hit by Russian strike, 25 injured"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 14483913872403521,
+      "outlet_count": 1,
+      "title": "Russia under Putin lost nearly half its schools — war propaganda fills the rest"
+    }
+  ],
+  "window_days": 30
+}

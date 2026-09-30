@@ -1,0 +1,259 @@
+{
+  "claims": {
+    "sputnik": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "sputniknews.com",
+          "expires": "2028-10-24",
+          "last_changed": "2022-03-04",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputniknews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2011-10-24"
+      },
+      {
+        "data": {
+          "domain": "sputnikglobe.com",
+          "expires": "2028-03-29",
+          "last_changed": "2023-03-30",
+          "registrar": "Domain.com - Network Solutions, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputnikglobe.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2023-03-29"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-11-10"
+      },
+      {
+        "data": {
+          "qid": "Q1140115"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Government of Russia"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#RfC:_Sputnik",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Sputnik_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_212#Source_being_used_in_the_S-400_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_246#Sputnik_(news_agency)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_337#Sputnik-Abkhazia",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_367#Sputnik,_kind_of"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sputnik",
+          "status": "deprecated",
+          "summary": "There is consensus that Sputnik is an unreliable source that publishes false or fabricated information, and should be deprecated as in the 2017 RfC of the Daily Mail. Sputnik is considered a Russian propaganda outlet that engages in bias and disinformation, [ 25 ] a significant proportion of editors endorse that view, with some editors considering it less reliable than Breitbart News. See also: RI"
+        },
+        "field": "reliability",
+        "outlet_id": "sputnik",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 5,
+      "weakest_join": null
+    },
+    "created_at": 1790653945,
+    "expired": false,
+    "id": 6957930229248472671,
+    "item_count": 5,
+    "last_active_at": 1790654748,
+    "origin_item_id": 10759469011830450116,
+    "origin_outlet_id": "sputnik",
+    "outlet_count": 1,
+    "primary_title": "Russia Strikes Ukraine's Logistics Centers, Port Infrastructure",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 6957930229248472671,
+        "joined_at": 1790653945,
+        "outlet_id": "sputnik",
+        "published_at": 1790521427
+      },
+      {
+        "item_id": 6117057655499835105,
+        "joined_at": 1790653945,
+        "outlet_id": "sputnik",
+        "published_at": 1790487511
+      },
+      {
+        "item_id": 16907221355893933721,
+        "joined_at": 1790653945,
+        "outlet_id": "sputnik",
+        "published_at": 1790437191
+      },
+      {
+        "item_id": 9670562462749940167,
+        "joined_at": 1790654492,
+        "outlet_id": "sputnik",
+        "published_at": 1790319909
+      },
+      {
+        "item_id": 10759469011830450116,
+        "joined_at": 1790654748,
+        "outlet_id": "sputnik",
+        "published_at": 1790265023
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "sputnik": "Sputnik"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://sputnikglobe.com/20260924/russia-strikes-warehouse-terminals-used-by-ukrainian-forces---defense-ministry-1124782958.html",
+          "cluster_id": 6957930229248472671,
+          "fetched_at": 1790653945,
+          "id": 10759469011830450116,
+          "joined_at": 1790654748,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790265023,
+          "summary": "MOSCOW, (Sputnik) - The Russian armed forces carried out drone strikes against logistics and warehouse terminals used to support the Ukrainian armed forces, as well as against sea vessels involved in delivering military supplies to Ukraine, the Russian Defense Ministry said on Thursday.",
+          "text_hash": 4526369175121976466,
+          "title": "Russia Strikes Warehouse Terminals Used by Ukrainian Forces - Defense Ministry"
+        },
+        {
+          "canonical_url": "https://sputnikglobe.com/20260925/russia-continues-to-hit-ukraines-defense-industry-plants-logistics-centers---mod-1124785779.html",
+          "cluster_id": 6957930229248472671,
+          "fetched_at": 1790653945,
+          "id": 9670562462749940167,
+          "joined_at": 1790654492,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790319909,
+          "summary": "MOSCOW (Sputnik) - The Russian armed forces have continued to carry out overnight strikes on enterprises of the defense industry complex and logistics centers, as well as on naval vessels used to support the Ukrainian armed forces, the Russian Defense Ministry said on Friday.",
+          "text_hash": 5639999630563154584,
+          "title": "Russia Continues to Hit Ukraine's Defense Industry Plants, Logistics Centers - MoD"
+        },
+        {
+          "canonical_url": "https://sputnikglobe.com/20260926/russian-forces-strike-ukrainian-port-infrastructure-and-military-supply-routes-1124797405.html",
+          "cluster_id": 6957930229248472671,
+          "fetched_at": 1790653945,
+          "id": 16907221355893933721,
+          "joined_at": 1790653945,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790437191,
+          "summary": "Russian forces struck a logistics center in Odessa used for storing and distributing military-related supplies delivered from foreign countries for the Ukrainian Armed Forces, the Russian Defense Ministry said.",
+          "text_hash": 11569111150823945228,
+          "title": "Russia Strikes Ukraine Hub for Foreign-Supplied Military Equipment in Odessa"
+        },
+        {
+          "canonical_url": "https://sputnikglobe.com/20260927/russia-strikes-ukraines-logistics-centers-port-infrastructure-1124800521.html",
+          "cluster_id": 6957930229248472671,
+          "fetched_at": 1790653945,
+          "id": 6117057655499835105,
+          "joined_at": 1790653945,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790487511,
+          "summary": "Tonight, the Armed Forces of the Russian Federation continued carrying out strikes with unmanned aerial vehicles against logistics centres, port and transport infrastructure, communications hubs and maritime vessels involved in supporting the Ukrainian army.",
+          "text_hash": 11094014947953048797,
+          "title": "Russia Strikes Ukraine's Logistics Centers, Port Infrastructure"
+        },
+        {
+          "canonical_url": "https://sputnikglobe.com/20260927/russian-forces-continue-strikes-on-ukrainian-communication-and-logistics-centers-1124801918.html",
+          "cluster_id": 6957930229248472671,
+          "fetched_at": 1790653945,
+          "id": 6957930229248472671,
+          "joined_at": 1790653945,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790521427,
+          "summary": "Russian forces continued strikes on communication and logistics centers, as well as maritime vessels used in support of the Ukrainian Armed Forces, the Russian Defense Ministry said on Sunday.",
+          "text_hash": 5062202701320562448,
+          "title": "Russian Forces Continue Strikes on Ukrainian Communication and Logistics Centers"
+        }
+      ],
+      "outlet_id": "sputnik"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,759 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "gbnews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      },
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "mirror": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "mirror.co.uk",
+          "expires": "2027-09-08",
+          "last_changed": "2026-09-04",
+          "registrar": "CSC Corporate Domains, Inc",
+          "status": [
+            "server delete prohibited",
+            "renew period",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "mirror",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/mirror.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-08"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1636545"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Reach plc"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_160#Huffington_Post/Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#The_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Daily_Express_and_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Daily_Mirror"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Mirror (Mirror)",
+          "status": "no_consensus",
+          "summary": "The Daily Mirror, also known just as the Mirror, is a tabloid newspaper that publishes tabloid journalism. There is no consensus on whether its reliability is comparable to that of British tabloids such as the Daily Mail and The Sun."
+        },
+        "field": "reliability",
+        "outlet_id": "mirror",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "rt": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "rt.com",
+          "expires": "2027-09-22",
+          "last_changed": "2026-09-21",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rt",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rt.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-09-23"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-09-15"
+      },
+      {
+        "data": {
+          "qid": "Q821172"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "RIA Novosti"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#RfC:_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Enquiry_concerning_the_RT_Network",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_168#RT_news_and_Crimean_status_referendum,_2014",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_173#Russia_Today",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Attributed_statement_sourced_by_RT_news_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_231#RT_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#On_Contact_/_RT",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Ruptly,_subsidiary_of_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)",
+          "status": "deprecated",
+          "summary": "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
+        },
+        "field": "reliability",
+        "outlet_id": "rt",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "timesofindia": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "indiatimes.com",
+          "expires": "2026-11-21",
+          "last_changed": "2025-10-23",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/indiatimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-11-22"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1838-01-01"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1898-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q139935842"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q139935842"
+      },
+      {
+        "data": {
+          "qid": "Q972645"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Times Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_287#Times_of_India_RFC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_447#RfC:_The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_320#The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_342#Valid_Sources?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_353#Circular_references_from_The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_364#Times_of_India_is_not_that_pro-government_as_mentioned_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_442#Times_of_India_running_AI-generated_articles?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_493#Another_AI-generated_article_from_The_Times_of_India"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Times of India (post-1950) (TOI)",
+          "status": "no_consensus",
+          "summary": "Additional considerations apply to articles published in The Times of India (TOI) after 1950. TOI has sometimes had a poor reputation for fact-checking and its use should be evaluated with caution. Editors should ensure that they do not use paid advertorials —which were first published in TOI in 1950 at the earliest—to verify information or establish notability. Paid advertorials may be of particu"
+        },
+        "field": "reliability",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.06851142644882202,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": 0.7885114550590515
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 7539515453392159397,
+    "item_count": 6,
+    "last_active_at": 1790716891,
+    "origin_item_id": 10817338845631784609,
+    "origin_outlet_id": "mirror",
+    "outlet_count": 6,
+    "primary_title": "The RAF Fairford ‘terror plot’: Unpacking escalation in the UK echo-chamber",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 7539515453392159397,
+        "joined_at": 1790633633,
+        "outlet_id": "guardian",
+        "published_at": 1790631400
+      },
+      {
+        "item_id": 4449596432332974866,
+        "joined_at": 1790653938,
+        "outlet_id": "gbnews",
+        "published_at": 1790599176
+      },
+      {
+        "item_id": 10817338845631784609,
+        "joined_at": 1790653939,
+        "outlet_id": "mirror",
+        "published_at": 1790529238
+      },
+      {
+        "item_id": 3865367217697243715,
+        "joined_at": 1790666781,
+        "outlet_id": "timesofindia",
+        "published_at": 1790663412
+      },
+      {
+        "item_id": 8224337215007355946,
+        "joined_at": 1790715383,
+        "outlet_id": "rt",
+        "published_at": 1790694193
+      },
+      {
+        "item_id": 2308408045069240405,
+        "joined_at": 1790716891,
+        "outlet_id": "aljazeera",
+        "published_at": 1790715320
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "guardian"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "mirror",
+            "timesofindia"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "gbnews"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "rt"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "gbnews": "GB News",
+    "guardian": "The Guardian",
+    "mirror": "Daily Mirror",
+    "rt": "RT",
+    "timesofindia": "The Times of India"
+  },
+  "outlets_24h": 5,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    6
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://mirror.co.uk/news/uk-news/raf-fairford-arrests-terror-probe-37707680",
+          "cluster_id": 7539515453392159397,
+          "fetched_at": 1790653939,
+          "id": 10817338845631784609,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "mirror",
+          "published_at": 1790529238,
+          "summary": "The five suspects were arrested after police foiled a suspected terror plot at RAF Fairford in Gloucestershire — counter-terrorism officers are investigating possible links to Iran",
+          "text_hash": 165963402882537702,
+          "title": "RAF Fairford 'terror plot': Woman who called 999 warned neighbours on WhatsApp over 'men in balaclavas'"
+        }
+      ],
+      "outlet_id": "mirror"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://gbnews.com/news/raf-fairford-iran-rejects-involvement-bomb-plot",
+          "cluster_id": 7539515453392159397,
+          "fetched_at": 1790653938,
+          "id": 4449596432332974866,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790599176,
+          "summary": "Iran has \"categorically rejected\" involvement in the suspected bomb plot at RAF Fairford. The five people arrested are male British nationals, Counter Terrorism Policing have confirmed. The group of men, who are also from London and aged in their 20s, were detained yesterday on suspicion of terrorism and explosives offences after three vans were discovered close to the Gloucestershire base used by US forces. Counter-terrorism police are actively investigating a link to Iran. TRENDING Stories Videos Your…",
+          "text_hash": 86445598979984093,
+          "title": "Iran 'categorically rejects' involvement in foiled RAF Fairford bomb plot"
+        }
+      ],
+      "outlet_id": "gbnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/world/2026/sep/28/questions-remain-over-irans-link-to-alleged-raf-fairford-bomb-plot",
+          "cluster_id": 7539515453392159397,
+          "fetched_at": 1790633633,
+          "id": 7539515453392159397,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790631400,
+          "summary": "Tehran has been trying to step up attacks on targets in the west but its track record has been mixed Investigators may be some way from determining exactly what led five men with three vans to a village just outside RAF Fairford in the small hours of Sunday – but the fact they have all been released on bail without immediate charge suggests they are not deemed to pose a serious and violent threat. In a moment where wider geopolitical tensions mean external threats are perceived to be close, the question of…",
+          "text_hash": 10648689529357838420,
+          "title": "Questions remain over Iran’s link to alleged RAF Fairford bomb plot"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://timesofindia.indiatimes.com/world/uk/who-was-behind-raf-fairford-terror-plot-foreign-actor-claim-puts-iran-link-in-focus/articleshow/134558256.cms",
+          "cluster_id": 7539515453392159397,
+          "fetched_at": 1790666781,
+          "id": 3865367217697243715,
+          "joined_at": 1790666781,
+          "lang": "en",
+          "outlet_id": "timesofindia",
+          "published_at": 1790663412,
+          "summary": "",
+          "text_hash": 8864401122852727106,
+          "title": "Who was behind RAF Fairford terror plot? 'Foreign actor' claim puts Iran link in focus"
+        }
+      ],
+      "outlet_id": "timesofindia"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rt.com/news/646402-fairford-bomb-plot-explainer/",
+          "cluster_id": 7539515453392159397,
+          "fetched_at": 1790715383,
+          "id": 8224337215007355946,
+          "joined_at": 1790715383,
+          "lang": "en",
+          "outlet_id": "rt",
+          "published_at": 1790694193,
+          "summary": "Reports of a Russo-Iranian terrorist plot targeting Britain’s RAF Fairford appear to have been greatly exaggerated Read Full Article at RT.com",
+          "text_hash": 9605668731203029312,
+          "title": "The RAF Fairford ‘terror plot’: Unpacking escalation in the UK echo-chamber"
+        }
+      ],
+      "outlet_id": "rt"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/video/newsfeed/2026/9/29/what-we-know-about-raf-fairford-bomb?traffic_source=rss",
+          "cluster_id": 7539515453392159397,
+          "fetched_at": 1790716891,
+          "id": 2308408045069240405,
+          "joined_at": 1790716891,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790715320,
+          "summary": "A police alert turned into a potential Iranian “bomb plot” against a British military base used by the US.",
+          "text_hash": 11092911860369680726,
+          "title": "What we know about RAF Fairford ‘bomb plot’"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 3865367217697243715,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3809,
+      "snapshot_id": 1580222558748730171,
+      "ts": 1790679060
+    }
+  ]
+}

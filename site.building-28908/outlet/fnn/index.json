@@ -1,0 +1,231 @@
+{
+  "claims": {
+    "country": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q843791",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q843791",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1966-10-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q11324860"
+        },
+        "field": "legal_form",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q843791",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q11324860"
+      },
+      {
+        "data": {
+          "qid": "Q1254874"
+        },
+        "field": "legal_form",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q843791",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "television network"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "fnn.jp"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.fnn.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "FNNプライムオンライン"
+      },
+      {
+        "field": "name",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q843791",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Fuji News Network"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 108,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "fnn",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/fnn",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "1.2 items/day"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 108,
+          "revised": 5,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "fnn",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/fnn",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "5% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "fnn.jp",
+          "final_url": "https://www.fnn.jp/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.fnn.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.fnn.jp/list/about",
+          "domain": "fnn.jp",
+          "missing": [
+            "contact",
+            "privacy",
+            "corrections",
+            "ethics",
+            "masthead"
+          ]
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.fnn.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about pages from its home page; no contact, privacy, corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 108,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "fnn",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/fnn",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q843791",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.fnn.jp/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q843791",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q843791"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "fnn",
+        "ref_url": "https://www.wikidata.org/wiki/Q843791",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Fuji_News_Network"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 108,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "fnn",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/fnn",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 259,
+  "outlet": {
+    "domains": [
+      "fnn.jp"
+    ],
+    "id": "fnn",
+    "name": "FNNプライムオンライン"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

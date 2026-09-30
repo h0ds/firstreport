@@ -1,0 +1,719 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "politico.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.1914
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "politico",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.19 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "politico.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-18",
+          "registrar": "Register.com - Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "politico",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/politico.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-18"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-23"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q41298"
+        },
+        "field": "legal_form",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "magazine"
+      },
+      {
+        "data": {
+          "qid": "Q17232649"
+        },
+        "field": "legal_form",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news website"
+      },
+      {
+        "data": {
+          "qid": "Q11032"
+        },
+        "field": "legal_form",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "politico.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "politico",
+        "ref_url": "https://www.politico.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "POLITICO"
+      },
+      {
+        "field": "name",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Politico"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 36,
+          "origin_of": 1,
+          "shared_stories": 2,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "politico",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/politico",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 50% of 2 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q163560"
+        },
+        "field": "owner",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Axel Springer SE"
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q163560"
+        },
+        "field": "parent",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Axel Springer SE"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 36,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "politico",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/politico",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.4 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "politico.com"
+        },
+        "field": "registrar",
+        "outlet_id": "politico",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/politico.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Register.com - Network Solutions, LLC"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_363#RfC:_Politico_update?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_11#Politico.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#DataTreasury",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_50#Politico;_Also_for_Book_reviews:_New_Engish_Review_and_Pajamas_Media",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#self-published?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Is_an_SPLC_report_a_reliable_source_for_List_of_Confederate_monuments_and_memorials?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_241#Statements_of_Fact_Based_on_One_Report_from_One_Media_Outlet,_Sourced_to_Anonymous_Sources",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_458#Politico_status_update"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Politico",
+          "status": "generally_reliable",
+          "summary": "Politico is considered generally reliable for American politics. A small number of editors say that Politico is a biased source."
+        },
+        "field": "reliability",
+        "outlet_id": "politico",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 36,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "politico",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/politico",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "politico.com",
+          "final_url": "https://www.politico.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "politico",
+        "ref_url": "https://www.politico.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.politico.com/news/2026/09/29/larissa-waters-sudden-departure-opens-greens-leadership-and-questions-about-the-partys-future-01096611",
+          "contact": "https://www.politico.com/feedback",
+          "corrections": "https://www.politico.com/corrections",
+          "domain": "politico.com",
+          "masthead": "https://www.politico.com/staff/jordain-carney",
+          "missing": [
+            "ethics"
+          ],
+          "privacy": "https://www.politico.com/privacy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "politico",
+        "ref_url": "https://www.politico.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, corrections, masthead pages from its home page; no ethics link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 36,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "politico",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/politico",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.politico.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q3109740"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Politico"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 36,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "politico",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/politico",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 5,
+  "items": 57,
+  "outlet": {
+    "domains": [
+      "politico.com"
+    ],
+    "id": "politico",
+    "name": "Politico"
+  },
+  "shared_stories": 9,
+  "stories": [
+    {
+      "created_at": 1790715378,
+      "first": false,
+      "id": 6644257237448895193,
+      "outlet_count": 14,
+      "title": "Trump: Tech Leaders Signed Accord to 'Self-Police' AI Development"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 3322863658697567134,
+      "outlet_count": 18,
+      "title": "Justices Let Deportations to 3rd Countries Resume While Weighing Policy"
+    },
+    {
+      "created_at": 1790715388,
+      "first": true,
+      "id": 12061008855114871481,
+      "outlet_count": 3,
+      "title": "Mamdani releases plan to combat antisemitism in New York amid concerns over his criticism of Israel"
+    },
+    {
+      "created_at": 1790722475,
+      "first": true,
+      "id": 9780382616921361693,
+      "outlet_count": 1,
+      "title": "Democrats gear up to tank data center legislation"
+    },
+    {
+      "created_at": 1790720189,
+      "first": true,
+      "id": 11569771414248437199,
+      "outlet_count": 2,
+      "title": "Judge orders Mamdani to redo pied-à-terre tax rollout"
+    },
+    {
+      "created_at": 1790720189,
+      "first": true,
+      "id": 13979465364040710908,
+      "outlet_count": 1,
+      "title": "Inside Mamdani’s fraught effort to rein in the NYPD unit he pledged to end"
+    },
+    {
+      "created_at": 1790720189,
+      "first": true,
+      "id": 11377501896825536255,
+      "outlet_count": 1,
+      "title": "Republicans wanted Jack Smith to give them a smoking gun. They got a gaffe instead."
+    },
+    {
+      "created_at": 1790720189,
+      "first": true,
+      "id": 7338451556400681074,
+      "outlet_count": 1,
+      "title": "Why Aaron Sorkin left Trump out of ‘The Social Reckoning’"
+    },
+    {
+      "created_at": 1790715388,
+      "first": true,
+      "id": 11927859962867196080,
+      "outlet_count": 2,
+      "title": "Navarro warns Canada against election interference"
+    },
+    {
+      "created_at": 1790715388,
+      "first": true,
+      "id": 13183049695364349635,
+      "outlet_count": 1,
+      "title": "White House pumped brakes on TPS termination for 200,000 Salvadorans"
+    },
+    {
+      "created_at": 1790715388,
+      "first": true,
+      "id": 12968438066977746627,
+      "outlet_count": 1,
+      "title": "Advocates sue OpenAI over Hugging Face hack under California anti-hacking law"
+    },
+    {
+      "created_at": 1790715388,
+      "first": true,
+      "id": 11614358106239746139,
+      "outlet_count": 1,
+      "title": "Ahead of meeting with AI executives, Trump says he won’t stifle AI growth"
+    },
+    {
+      "created_at": 1790715388,
+      "first": true,
+      "id": 11536822064478885917,
+      "outlet_count": 1,
+      "title": "Newsom signs laws targeting ICE with shock glove ban, detention center tax"
+    },
+    {
+      "created_at": 1790715388,
+      "first": true,
+      "id": 10539594324388251296,
+      "outlet_count": 1,
+      "title": "Democrats are running pastors for office. Republicans are attacking their religious comments."
+    },
+    {
+      "created_at": 1790715388,
+      "first": true,
+      "id": 10045841749028611902,
+      "outlet_count": 1,
+      "title": "White House looking to Europe to release diesel from strategic reserves"
+    },
+    {
+      "created_at": 1790715388,
+      "first": true,
+      "id": 2939726413833954438,
+      "outlet_count": 1,
+      "title": "Australian agencies warned in May of incoming ‘vulnerability storm’ ahead of OpenAI breach"
+    },
+    {
+      "created_at": 1790715388,
+      "first": true,
+      "id": 2920591472859111710,
+      "outlet_count": 1,
+      "title": "Pharma's new top lobbyist is former Majority Leader Eric Cantor"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 16093173513555838957,
+      "outlet_count": 1,
+      "title": "AI agents expose banks to new risks"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 13261141543183765197,
+      "outlet_count": 2,
+      "title": "FBI investigates hackers’ claim to have stolen sensitive employee data"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 4734296298265494847,
+      "outlet_count": 1,
+      "title": "Nvidia, AMD want Trump to keep their chips flowing to China"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 4425657799403277408,
+      "outlet_count": 2,
+      "title": "‘Fires are everywhere right now’: Trump hits the road to shore up red states"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16910807431805601164,
+      "outlet_count": 7,
+      "title": "Justice Alito Recuses Himself from Major Climate Lawsuit Against Oil Companies"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 9804964872731470124,
+      "outlet_count": 2,
+      "title": "Judge blocks Trump from tying anti-terrorism grants to election changes"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 17979299898952061339,
+      "outlet_count": 1,
+      "title": "Charlie Kirk’s Lieutenant Has Second Thoughts"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 17007996430118937152,
+      "outlet_count": 1,
+      "title": "Trump’s ‘magic words’: National security"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 16265628033217382880,
+      "outlet_count": 1,
+      "title": "Iran, US complain about each other’s stances as mediators meet with Iranian FM"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 15972846394508554226,
+      "outlet_count": 1,
+      "title": "September"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 15227809545311842297,
+      "outlet_count": 1,
+      "title": "Poll: Trump’s MAGA loyalists don’t think he has an affordability problem"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 14724004539923767982,
+      "outlet_count": 1,
+      "title": "Russia Said These Foreigners Wouldn’t Have to Fight. Then It Sent Them to the Frontlines."
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 14638672465496215458,
+      "outlet_count": 1,
+      "title": "Why a diesel export ban could send California gas prices soaring"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 14092205287520549770,
+      "outlet_count": 1,
+      "title": "Poll: A crack is emerging in Trump’s coalition over deportations"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 13505828164849204682,
+      "outlet_count": 1,
+      "title": "America Is Losing Its Mind. This Governor Wants You to Put Down Your Phone."
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 13082679643361057885,
+      "outlet_count": 1,
+      "title": "Senate passes bipartisan bill to overhaul college sports"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11988571094983856124,
+      "outlet_count": 1,
+      "title": "Trump administration reinstates sexual misconduct rule for schools"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11584877384031080153,
+      "outlet_count": 1,
+      "title": "Hill investigates after F-35 parts diverted to Hong Kong"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11278454801013417758,
+      "outlet_count": 1,
+      "title": "How Gettysburg Became a Refuge for Conservatives Battered by Trump-Era Strife"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11096908391196202530,
+      "outlet_count": 1,
+      "title": "Democrats Are on the Verge of Picking Another 80-Year-Old"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11020696085530435049,
+      "outlet_count": 1,
+      "title": "Everyone’s talking about ‘electability.’ Our poll shows where voters stand."
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 9836812243235642514,
+      "outlet_count": 1,
+      "title": "Inside the anti-climate campaign against researchers"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 8725976394633075075,
+      "outlet_count": 1,
+      "title": "Republicans scheme to block Trump’s funding cancellations"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 8210109183709431939,
+      "outlet_count": 1,
+      "title": "Trump controversies pile on Senate Republicans as they seek midterm escape"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 7646215213465162545,
+      "outlet_count": 1,
+      "title": "Opinion | What Really Happened at the White House Lunch That Marc Andreessen Says Sent Him to Trump"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 6974296731548306332,
+      "outlet_count": 1,
+      "title": "He’s a Former General and a Grieving Father. And He Could Defeat Netanyahu."
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 6615144167717186547,
+      "outlet_count": 1,
+      "title": "The Iranian Regime’s Dynamics Are Fooling Trump"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 5806296590168327594,
+      "outlet_count": 1,
+      "title": "‘Very Hard to See How This Ends’"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 5761570048522218152,
+      "outlet_count": 1,
+      "title": "Trump's big regret: Consumers aren't buying his economic pitch."
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 5567887326426454480,
+      "outlet_count": 1,
+      "title": "The British Prime Minister’s New Digs"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 5314525746423711540,
+      "outlet_count": 1,
+      "title": "James Fishback Is Probably About to Lose. His Politics Might Be Winning."
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 3324749511378710029,
+      "outlet_count": 1,
+      "title": "How to Tell if Democrats Are Poised for a Huge Midterm Win"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 3288983758448250308,
+      "outlet_count": 1,
+      "title": "Senate negotiators reach deal on permitting text"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

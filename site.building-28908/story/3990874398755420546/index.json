@@ -1,0 +1,299 @@
+{
+  "claims": {
+    "dailymail": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "dailymail.co.uk",
+          "expires": "2028-06-16",
+          "last_changed": "2019-02-15",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailymail",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/dailymail.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-06-16"
+      },
+      {
+        "data": {
+          "domain": "dailymail.com",
+          "expires": "2027-12-24",
+          "last_changed": "2026-09-14",
+          "registrar": "Nom-iq Ltd. dba COM LAUDE",
+          "status": [
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailymail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailymail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-20"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1896-05-04"
+      },
+      {
+        "data": {
+          "qid": "Q667613"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daily Mail and General Trust"
+      },
+      {
+        "data": {
+          "qid": "Q6273342"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Jonathan Harmsworth, 4th Viscount Rothermere"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_220#Daily_Mail_RfC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_255#2nd_RfC:_The_Daily_Mail",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_299#(Infomercial_voice)_But_Wait!_There's_still_more!!_(News_about_The_Daily_Mail)",
+            "#cite_note-29"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Mail (MailOnline)",
+          "status": "deprecated",
+          "summary": "In the 2017 RfC, the Daily Mail was the first source to be deprecated on Wikipedia, and the decision was challenged and reaffirmed in the 2019 RfC. There is consensus that the Daily Mail (including its online version, MailOnline) is generally unreliable, and its use as a reference is generally prohibited, especially when other sources exist that are more reliable. As a result, the Daily Mail shoul"
+        },
+        "field": "reliability",
+        "outlet_id": "dailymail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "nzherald": [
+      {
+        "data": {
+          "qid": "Q664"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New Zealand"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1863-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7759231"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New Zealand Media and Entertainment"
+      },
+      {
+        "data": {
+          "qid": "Q115613014"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Wilson & Horton"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_New_Zealand_Herald",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#New_Zealand_Herald,_Whanganui_Chronicle,_opinion_piece?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New Zealand Herald (NZ Herald)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New Zealand Herald is generally reliable."
+        },
+        "field": "reliability",
+        "outlet_id": "nzherald",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.09451377391815186,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.8145138025283813
+    },
+    "created_at": 1790715388,
+    "expired": false,
+    "id": 3990874398755420546,
+    "item_count": 2,
+    "last_active_at": 1790720194,
+    "origin_item_id": 3990874398755420546,
+    "origin_outlet_id": "dailymail",
+    "outlet_count": 2,
+    "primary_title": "Monk begins 12-year isolation at Buddhist temple",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3990874398755420546,
+        "joined_at": 1790715388,
+        "outlet_id": "dailymail",
+        "published_at": 1790692220
+      },
+      {
+        "item_id": 8474881060811380498,
+        "joined_at": 1790720194,
+        "outlet_id": "nzherald",
+        "published_at": 1790719407
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "nzherald"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "dailymail"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "dailymail": "Daily Mail",
+    "nzherald": "The New Zealand Herald"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailymail.com/news/article-16169337/Monk-begins-TWELVE-YEAR-isolation-absolutely-no-contact-information-outside-world-extreme-Buddhist-training.html",
+          "cluster_id": 3990874398755420546,
+          "fetched_at": 1790715388,
+          "id": 3990874398755420546,
+          "joined_at": 1790715388,
+          "lang": "en",
+          "outlet_id": "dailymail",
+          "published_at": 1790692220,
+          "summary": "A Japanese monk has begun a 12-year period of total isolation as part of a demanding training regime.",
+          "text_hash": 14294753964926288594,
+          "title": "Monk begins TWELVE-YEAR isolation with absolutely no contact with anyone or any information from the outside world as part of extreme Buddhist training"
+        }
+      ],
+      "outlet_id": "dailymail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nzherald.co.nz/world/monk-begins-12-year-isolation-at-buddhist-temple/ZLPKLPB7ZZHZNK7JDBVC3AC5P4/",
+          "cluster_id": 3990874398755420546,
+          "fetched_at": 1790720194,
+          "id": 8474881060811380498,
+          "joined_at": 1790720194,
+          "lang": "en",
+          "outlet_id": "nzherald",
+          "published_at": 1790719407,
+          "summary": "Telegraph: Sogaku Taguchi will have no contact with others until September 11, 2038.",
+          "text_hash": 12675803789388048088,
+          "title": "Monk begins 12-year isolation at Buddhist temple"
+        }
+      ],
+      "outlet_id": "nzherald"
+    }
+  ],
+  "withdrawals": []
+}

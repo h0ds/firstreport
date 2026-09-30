@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 16915013990350848306,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 16915013990350848306,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "In UN Speech, Trump Brags About Fossil Fuel Resource Grabs",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16915013990350848306,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1790095178
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/in-un-speech-trump-brags-about-fossil-fuel-resource-grabs",
+          "cluster_id": 16915013990350848306,
+          "fetched_at": 1790653936,
+          "id": 16915013990350848306,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1790095178,
+          "summary": "Donald Trump used his platform at the UN General Assembly to brag about the U.S’s fossil fueled imperialism. From Iran, to Venezuela, to Greenland, Trump’s actions follow a familiar path: use military force to dominate sovereign nations, let Big Oil cash in, and leave ordinary people to bear the costs through war, pollution, rising energy bills, and worsening climate disasters. Governments have a choice: Follow Trump into a future of conflict and economic volatility, or build prosperity and energy…",
+          "text_hash": 7868061372923658196,
+          "title": "In UN Speech, Trump Brags About Fossil Fuel Resource Grabs"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

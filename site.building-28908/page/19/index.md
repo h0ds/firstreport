@@ -1,0 +1,54 @@
+# Stories, page 19 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Trump rolls out AI takeover of American government](/story/11576098412258208212/) · 1 outlet · reach 1
+- [How executions have risen under Trump despite wave of states abolishing death penalty](/story/12304563237837653546/) · 1 outlet · reach 1
+- [Bail for RAF base suspects suggests no evidence of ‘terror’, say analysts](/story/12565761877195353199/) · 1 outlet · reach 1
+- [Indian firm building $15bn Trump-announced steel mill has deep Russia ties](/story/12642242933150411249/) · 1 outlet · reach 1
+- [Sudan takes centre stage on final day of UNGA](/story/12838455348757027315/) · 1 outlet · reach 1
+- [‘The emperor is naked’: UEFA’s Ceferin takes aim at FIFA boss Infantino](/story/13429104183009975912/) · 1 outlet · reach 1
+- [Widow Whose Husband “Suffocated Slowly” Tells Senate How Doctors Killed Him After Ivermectin Started Working](/story/13626484458541225472/) · 1 outlet · reach 1
+- [Oops! Adam Schiff Accidentally Shows Image of Murder of Trump Supporter Roseanne Boyland by Cops on Steps of US Capitol During Jack Smith Hearing](/story/14213582414411273073/) · 1 outlet · reach 1
+- [In the early 1970s, David Wolkowsky began stewarding a remote island near Key West and...](/story/14678705795953186661/) · 1 outlet · reach 1
+- [Punjabi man stabbed to death in Canada after intervening in racist altercation; sister alleges police delay](/story/15406518963003601727/) · 1 outlet · reach 1
+- [Attorney Kurt Olsen Resigns from RICO Grande Case – Will Remain at DOJ](/story/15758310140143522130/) · 1 outlet · reach 1
+- [Woman accused of shooting at Rihanna’s home is mentally fit for trial, judge says](/story/16016343663849033626/) · 1 outlet · reach 1
+- [4,000-year-old Egyptian tomb reveals secrets of powerful royal official](/story/16585144059742936869/) · 1 outlet · reach 1
+- [Trump held a midterm convention to rally Republican voters - but Democrats got the boost, polls find](/story/16730435157144240779/) · 1 outlet · reach 1
+- [Trump’s own America.gov chatbot contradicts US president on 2020 polls, climate](/story/16815297519019999798/) · 1 outlet · reach 1
+- [In 2021, billionaire Orlando Bravo paid $39.25 million for Phil Collins’s 1929 Miami Beach mansion](/story/16892565548401499174/) · 1 outlet · reach 1
+- [Burundi says it will accept migrant deportees from the United States but details are vague](/story/17460545446513998133/) · 1 outlet · reach 1
+- [Trump roasted for calling out ‘Sleepy Joe’ Biden and then appearing to nod off](/story/17601441021177918412/) · 1 outlet · reach 1
+- [Trump deep state conspiracy probe crumbles as top loyalist and election denier quits DOJ](/story/17652638763387763329/) · 1 outlet · reach 1
+- [Cuba’s aspiring ballerinas remain nation’s pride while finding light amid power cuts and scarcity](/story/17987327015000605945/) · 1 outlet · reach 1
+- [Meet Zhang Zhanshuo: The 19-year-old China swimmer who won record 7 Asian Games golds](/story/18158191493357731548/) · 1 outlet · reach 1
+- [Trump just turned the US government into a tech-bro fever dream](/story/18295647526320090650/) · 1 outlet · reach 1
+- [Bath University rugby team investigated over ‘plot to spike female freshers’](/story/18371987887269951774/) · 1 outlet · reach 1
+- [Hormuz and Yemen: Iran offers de-escalation at a price others will pay](/story/6706258002500017197/) · 1 outlet · reach 1
+- [What did Yamal say to Messi at World Cup final? ‘Thank you for everything’](/story/6743674562193286469/) · 1 outlet · reach 1
+- [Can Tajikistan’s economic boom survive its debt gamble?](/story/17962192026592033978/) · 1 outlet · reach 1
+- [NASA May Bring Legendary Spy Jet SR-71 Blackbird Back To Skies: Report](/story/11494627445501667463/) · 1 outlet · reach 1
+- [Meet Anna Luísa Beserra, a Brazilian scientist whose teenage idea turned dirty water into drinking water using just sunlight](/story/14372665728268646110/) · 1 outlet · reach 1
+- [Meet Brooke Sweeney, 15, who turned overnight oats into a business](/story/15129815229561115660/) · 1 outlet · reach 1
+- [Colorado rancher wins wind project after $50,000 fight over oil drilling on his land](/story/15918160655666494414/) · 1 outlet · reach 1
+- [London artist turns home into museum with thousands of dolls and discarded objects](/story/18431601708713802007/) · 1 outlet · reach 1
+- [Trump Uses Recission "Loophole" To Cut Nearly $1 Billion In Funds For Illegals](/story/4513375700082136191/) · 1 outlet · reach 1
+- [EU Eyes Methane Rule Retreat As Energy Crisis Deepens; IEA Floats Another Emergency Oil Dump](/story/17669284357922513629/) · 1 outlet · reach 1
+- [New UK homes in flood-risk areas could become uninsurable, says Aviva boss](/story/18327237781462534733/) · 1 outlet · reach 1
+- [Hong Kong turns Halloween into month-long event with street parties, free rides](/story/7350768840109744555/) · 1 outlet · reach 1
+- [Hong Kong firms lag mainland China on AI adoption amid legacy-system burden: Accenture](/story/7373956485574847798/) · 1 outlet · reach 1
+- [Two California private high schools crack nation’s Top 10](/story/2732958370756657728/) · 1 outlet · reach 1
+- [NHL predictions for 2026-27 season: Post experts make Stanley Cup, award picks](/story/3026665878363113984/) · 1 outlet · reach 1
+- [Red Sox lefty pitchers– and familiar faces — create big Yankees problems in AL Wild Card](/story/5908610574836768223/) · 1 outlet · reach 1
+- [‘Project Hail Mary,’ ‘Digger,’ and Two Oscar Entries: 2026 is Sandra Hüller’s Year](/story/11073511719237070780/) · 1 outlet · reach 1
+- [French presidential candidate Philippe pitches later retirement, mandatory savings](/story/1635371069251296902/) · 1 outlet · reach 1
+- [Germany urges Russian president to show willingness to negotiate for peace with Ukraine](/story/6696305411357986150/) · 1 outlet · reach 1
+- [Baltic Fleet naval aviation exercise starts near Kaliningrad](/story/8792700308084183228/) · 1 outlet · reach 1
+- [All of Iran to tune in to watch tonight's football friendly against Russia — ambassador](/story/13623183855056777419/) · 1 outlet · reach 1
+- [Don’t let our next UN secretary-general be a shill for China, Cuba and Hamas](/story/15635370383288504493/) · 1 outlet · reach 1
+- [Israeli national security minister storms Ibrahimi Mosque in Hebron with hundreds of occupiers](/story/4691259798559785792/) · 1 outlet · reach 1
+- [Turkish foreign minister meets premier of Germany's North Rhine-Westphalia](/story/9898461549305444955/) · 1 outlet · reach 1
+- [Russian president enacts new rules limiting cash taken out of Russia](/story/12431607122150371899/) · 1 outlet · reach 1
+- [Japan’s new arctic research vessel set to arrive in December](/story/3880901012769878928/) · 1 outlet · reach 1
+- [Japan’s population fell 2.5% between 2020 and 2025, census shows](/story/10822693681503211759/) · 1 outlet · reach 1

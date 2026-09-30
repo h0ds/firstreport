@@ -1,0 +1,360 @@
+{
+  "export_time": 1790725421,
+  "outlet": "aljazeera",
+  "page": 2,
+  "page_size": 50,
+  "pages": 3,
+  "stories": [
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 2881515449600342668,
+      "outlet_count": 1,
+      "title": "Jerusalem Daily: Israeli worshippers attack Palestinian man"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 2756723993303270835,
+      "outlet_count": 1,
+      "title": "Trump unveils new site to simplify access to government services"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 144035788194247632,
+      "outlet_count": 1,
+      "title": "Madrid residents feel the impact of Spain’s housing crisis"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 69534164464593456,
+      "outlet_count": 1,
+      "title": "Yemen’s war disrupts roads and ports, deepening humanitarian crisis"
+    },
+    {
+      "created_at": 1790683762,
+      "first": true,
+      "id": 17962192026592033978,
+      "outlet_count": 1,
+      "title": "Can Tajikistan’s economic boom survive its debt gamble?"
+    },
+    {
+      "created_at": 1790683762,
+      "first": true,
+      "id": 6743674562193286469,
+      "outlet_count": 1,
+      "title": "What did Yamal say to Messi at World Cup final? ‘Thank you for everything’"
+    },
+    {
+      "created_at": 1790683762,
+      "first": true,
+      "id": 6706258002500017197,
+      "outlet_count": 1,
+      "title": "Hormuz and Yemen: Iran offers de-escalation at a price others will pay"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 14263650070409979055,
+      "outlet_count": 1,
+      "title": "Malaysia begins sending back Rohingya refugees despite safety warnings"
+    },
+    {
+      "created_at": 1790682391,
+      "first": true,
+      "id": 9815769628576853461,
+      "outlet_count": 1,
+      "title": "Ireland lost to Israel"
+    },
+    {
+      "created_at": 1790664389,
+      "first": false,
+      "id": 4027847128741190405,
+      "outlet_count": 4,
+      "title": "FIFA accuses UEFA of 'misinformation campaign' in response to filing"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 17665525782816535922,
+      "outlet_count": 3,
+      "title": "Monsoon floods, landslides kill 68 across India, Nepal in 72 hours"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11603208240114099487,
+      "outlet_count": 8,
+      "title": "Myanmar airstrike kills 33 in Rohingya-majority Rakhine state"
+    },
+    {
+      "created_at": 1790680784,
+      "first": true,
+      "id": 17358415999410053061,
+      "outlet_count": 1,
+      "title": "Palestine weekly: Israeli politicians vie to look toughest before election"
+    },
+    {
+      "created_at": 1790680784,
+      "first": true,
+      "id": 8612507411299723515,
+      "outlet_count": 1,
+      "title": "Lebanese are watching Israel’s upcoming election, but few expect change"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 15240037775334421365,
+      "outlet_count": 2,
+      "title": "AI, immigration rhetoric fuel anti-South Asian online hate by 240%"
+    },
+    {
+      "created_at": 1790639336,
+      "first": false,
+      "id": 10306277323124204780,
+      "outlet_count": 15,
+      "title": "Trump denies he offered Iran sanctions relief, release of frozen funds"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 10220048785832836552,
+      "outlet_count": 14,
+      "title": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 13839679079852904479,
+      "outlet_count": 1,
+      "title": "Novak Djokovic ready for tennis comeback at China Open"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 12435484096510868481,
+      "outlet_count": 1,
+      "title": "‘A false problem’: Italy’s Muslims question Meloni’s burqa ban"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 11809685535413000734,
+      "outlet_count": 1,
+      "title": "Fighting in Ethiopia intensifies: What’s the latest?"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 6150980776379824007,
+      "outlet_count": 5,
+      "title": "Iran Officials Pessimistic About US Deal Before Midterms"
+    },
+    {
+      "created_at": 1790661050,
+      "first": true,
+      "id": 5667923868268598511,
+      "outlet_count": 1,
+      "title": "Public transport drivers strike in Manila over soaring fuel prices"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 896865049394568840,
+      "outlet_count": 1,
+      "title": "UNGA 81: Five key takeaways from general debate"
+    },
+    {
+      "created_at": 1790668521,
+      "first": true,
+      "id": 8654236704037406308,
+      "outlet_count": 1,
+      "title": "Gaza doctors face tough decisions as patients face long waits for diagnoses"
+    },
+    {
+      "created_at": 1790668521,
+      "first": true,
+      "id": 5777140033812839643,
+      "outlet_count": 1,
+      "title": "Can Pakistan’s Sohail Afridi win freedom for ex-PM Imran Khan?"
+    },
+    {
+      "created_at": 1790668521,
+      "first": true,
+      "id": 1792476856645118575,
+      "outlet_count": 1,
+      "title": "Israel’s West Bank road closures turn routine journeys into long ordeals"
+    },
+    {
+      "created_at": 1790666793,
+      "first": true,
+      "id": 1782470363696958287,
+      "outlet_count": 1,
+      "title": "Asian Games: South Korea volleyball team latest to be taken to wrong venue"
+    },
+    {
+      "created_at": 1790653944,
+      "first": false,
+      "id": 903786248883338887,
+      "outlet_count": 2,
+      "title": "FIFA President Infantino backs increased funding for member associations: Report"
+    },
+    {
+      "created_at": 1790665657,
+      "first": true,
+      "id": 11718779390340109003,
+      "outlet_count": 1,
+      "title": "AFCON qualifiers: Wissa guides DR Congo to win, Tunisia held by Botswana"
+    },
+    {
+      "created_at": 1790658678,
+      "first": false,
+      "id": 9072614626620549455,
+      "outlet_count": 2,
+      "title": "Australia raises interest rates to 15-year high"
+    },
+    {
+      "created_at": 1790661050,
+      "first": true,
+      "id": 11865181408638793153,
+      "outlet_count": 1,
+      "title": "More than 80 reported abducted in Nigeria as police find human remains"
+    },
+    {
+      "created_at": 1790653944,
+      "first": false,
+      "id": 14101283955421187846,
+      "outlet_count": 2,
+      "title": "Top Saudi, US diplomats discuss maritime security, situation in Yemen"
+    },
+    {
+      "created_at": 1790659139,
+      "first": true,
+      "id": 9306005474230593996,
+      "outlet_count": 1,
+      "title": "Ethiopian army claims to have taken Tigrayan stronghold"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 9532632070516774090,
+      "outlet_count": 7,
+      "title": "Two giant pandas arrive in Atlanta from China after Xi-Trump summit"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 2826706911955230753,
+      "outlet_count": 3,
+      "title": "Hungary's Parliament suspends immunity for PM Magyar and two Orbán-era ministers"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 18254033148954010512,
+      "outlet_count": 2,
+      "title": "Apple ordered to pay $5.7bn in patent infringement case"
+    },
+    {
+      "created_at": 1790651187,
+      "first": false,
+      "id": 10927800464233232743,
+      "outlet_count": 2,
+      "title": "Iran's Araghchi To Meet Qatari Mediators In New York Today"
+    },
+    {
+      "created_at": 1790652755,
+      "first": true,
+      "id": 4968976499239857727,
+      "outlet_count": 1,
+      "title": "Fighter jets escort Pope Leo on final day of his France tour"
+    },
+    {
+      "created_at": 1790647865,
+      "first": true,
+      "id": 9932511146139035312,
+      "outlet_count": 1,
+      "title": "UK: ‘Too soon’ to blame airbase plot on foreign state"
+    },
+    {
+      "created_at": 1790647865,
+      "first": true,
+      "id": 8209181050713230026,
+      "outlet_count": 1,
+      "title": "Africa’s space ambitions are moving from policy to practice"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 4979100985949455916,
+      "outlet_count": 2,
+      "title": "Watch: From launch to fiery splashdown, SpaceX's Starship completes orbit test"
+    },
+    {
+      "created_at": 1790647865,
+      "first": true,
+      "id": 2154742415060226665,
+      "outlet_count": 1,
+      "title": "Inside Al Jazeera’s UNGA coverage"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 18427925317573506340,
+      "outlet_count": 1,
+      "title": "Olise scores late to grab France 1-0 Nations League win at Belgium"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 16847182692431821077,
+      "outlet_count": 1,
+      "title": "Hundreds set up tent encampments in Madrid over housing crisis"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 16561424307696820348,
+      "outlet_count": 1,
+      "title": "Somali army clashes with local forces for control of Baidoa"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 16539563381213501657,
+      "outlet_count": 1,
+      "title": "Iran touts Hormuz attacks as oil flows increase despite tensions"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 15262445404692518808,
+      "outlet_count": 1,
+      "title": "Trump made the right decision to reject Iran’s offer"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 14650035380422953538,
+      "outlet_count": 1,
+      "title": "Slovenia’s U-turn towards Israel"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 14398697596184647082,
+      "outlet_count": 1,
+      "title": "Gaza’s young inventors build robots with what they have"
+    },
+    {
+      "created_at": 1790633634,
+      "first": true,
+      "id": 9583278362033070377,
+      "outlet_count": 1,
+      "title": "How can the UK’s Labour Party rebuild voter trust?"
+    }
+  ],
+  "window_days": 30
+}

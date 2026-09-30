@@ -1,0 +1,166 @@
+{
+  "claims": {
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": null
+    },
+    "created_at": 1790653931,
+    "expired": false,
+    "id": 4250732272000881338,
+    "item_count": 2,
+    "last_active_at": 1790654492,
+    "origin_item_id": 10942284662579682878,
+    "origin_outlet_id": "axios",
+    "outlet_count": 1,
+    "primary_title": "AI labs are cutting model costs - and it could help them slow down safely",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 4250732272000881338,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790154006
+      },
+      {
+        "item_id": 10942284662579682878,
+        "joined_at": 1790654492,
+        "outlet_id": "axios",
+        "published_at": 1790100007
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "axios": "Axios"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/22/cheap-powerful-models-new-ai-frontier",
+          "cluster_id": 4250732272000881338,
+          "fetched_at": 1790653931,
+          "id": 10942284662579682878,
+          "joined_at": 1790654492,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790100007,
+          "summary": "AI companies have competed on having the best and often most dangerous models for years. Now, they're pivoting to a new focus: cost. Why it matters: The biggest risk to the AI boom is demand, and recent innovations to make models cheaper while maintaining powerful levels of intelligence have offered a bullish signal. As the prices of top models from OpenAI, Anthropic and others come down, usage is increasing dramatically, a trend that points to the kind of demand that will be necessary to justify trillions…",
+          "text_hash": 11113771488629031024,
+          "title": "Cheap, powerful AI models are increasing usage, a bullish sign for the AI boom"
+        },
+        {
+          "canonical_url": "https://axios.com/2026/09/23/price-war-pause-slowdown-ai-frontier",
+          "cluster_id": 4250732272000881338,
+          "fetched_at": 1790653931,
+          "id": 4250732272000881338,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790154006,
+          "summary": "The shift of the AI frontier toward more powerful, lower-cost models could pave the way for safely slowing development, experts say. Why it matters: Top U.S. startups including OpenAI and Anthropic, as well as other AI players, have to develop a financially viable path to allow them to slow development. Otherwise financial incentives will be too powerful . Driving the news : The health of the entire U.S. economy now rests in part on the AI boom. Yet the companies at the center of the race are burning far…",
+          "text_hash": 4298908194955215473,
+          "title": "AI labs are cutting model costs - and it could help them slow down safely"
+        }
+      ],
+      "outlet_id": "axios"
+    }
+  ],
+  "withdrawals": []
+}

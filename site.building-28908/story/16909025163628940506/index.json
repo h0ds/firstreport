@@ -1,0 +1,117 @@
+{
+  "claims": {
+    "kyivindependent": [
+      {
+        "data": {
+          "qid": "Q212"
+        },
+        "field": "country",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Ukraine"
+      },
+      {
+        "data": {
+          "domain": "kyivindependent.com",
+          "expires": "2031-11-19",
+          "last_changed": "2025-11-23",
+          "registrar": "Instra Corporation Pty Ltd.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/kyivindependent.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2021-11-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-11-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790715385,
+    "expired": false,
+    "id": 16909025163628940506,
+    "item_count": 1,
+    "last_active_at": 1790715385,
+    "origin_item_id": 16909025163628940506,
+    "origin_outlet_id": "kyivindependent",
+    "outlet_count": 1,
+    "primary_title": "Kyiv Independent COO Zakhar Protsiuk named in INMA’s 30 Under 30 Awards",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16909025163628940506,
+        "joined_at": 1790715385,
+        "outlet_id": "kyivindependent",
+        "published_at": 1790693152
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "kyivindependent": "The Kyiv Independent"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://kyivindependent.com/kyiv-independent-coo-zakhar-protsiuk-named-in-inmas-30-under-30-awards/",
+          "cluster_id": 16909025163628940506,
+          "fetched_at": 1790715385,
+          "id": 16909025163628940506,
+          "joined_at": 1790715385,
+          "lang": "en",
+          "outlet_id": "kyivindependent",
+          "published_at": 1790693152,
+          "summary": "The Kyiv Independent is proud to announce that Chief Operating Officer Zakhar Protsiuk has been named in the International News Media Association’s (INMA) 2026 30 Under 30 Awards, recognizing young media professionals making an impact on the news industry.",
+          "text_hash": 17872984426671784021,
+          "title": "Kyiv Independent COO Zakhar Protsiuk named in INMA’s 30 Under 30 Awards"
+        }
+      ],
+      "outlet_id": "kyivindependent"
+    }
+  ],
+  "withdrawals": []
+}

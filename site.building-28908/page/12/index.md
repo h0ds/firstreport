@@ -1,0 +1,54 @@
+# Stories, page 12 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Explainer-What is a public benefit corporation, the Anthropic legal structure?](/story/17236304791385633857/) · 1 outlet · reach 1
+- [Italy's Juventus to ask investors for up to €250 million](/story/18415446582568261807/) · 1 outlet · reach 1
+- [Senate Expected to Vote on Israel Human Rights Abuse Report](/story/429124909392413767/) · 1 outlet · reach 1
+- [The next generation of Republican justices will be even more partisan](/story/2019780569693102123/) · 1 outlet · reach 1
+- [Cruz chastises Jack Smith over 'egregious abuse of power'](/story/8203726395580293830/) · 1 outlet · reach 1
+- [Cornyn presses Smith on appointment as special counsel](/story/8458806324773933973/) · 1 outlet · reach 1
+- [Trump admin touts 96% drop in immigration from Muslim-majority countries since 2024](/story/9108925773426324459/) · 1 outlet · reach 1
+- [Trump announces launch of government AI-powered chatbot allowing users to research public services](/story/10266750027878837150/) · 1 outlet · reach 1
+- [Hawley slams Smith over 'hilarious' claim his probe wasn't political](/story/10270383258366337633/) · 1 outlet · reach 1
+- [Turner's masterpiece of Rome returns to city ahead of UK sale that could set a record](/story/12560989817165836801/) · 1 outlet · reach 1
+- [Team USA captain gives 'all the credit' for Presidents Cup Win to Trump](/story/15676841625145480149/) · 1 outlet · reach 1
+- [3 Nigerians killed in recent weeks in South Africa, Nigeria says](/story/16117062669859065817/) · 1 outlet · reach 1
+- [Potential Taiwan tension sparked 'last minute' change in Trump-Xi National Archives visit](/story/3053289542129920300/) · 1 outlet · reach 1
+- [Motorcycle patrols swarm Iranian cities, checkpoints rise as regime braces for unrest](/story/3746125493410892408/) · 1 outlet · reach 1
+- [When are the Dally M Awards? Who is the favourite?](/story/7691596221753333149/) · 1 outlet · reach 1
+- [Trump weakens fuel efficiency standards. And, Cornell fraternity rape case reopened](/story/11079547708254750129/) · 1 outlet · reach 1
+- [British farmer speaks out about alleged U.K. terror plot near U.S. base](/story/13830759927939113370/) · 1 outlet · reach 1
+- [Hero cop stopped synagogue massacre in Canada as Jewish group calls for armed guards](/story/16365727537506947717/) · 1 outlet · reach 1
+- [Pharma's new top lobbyist is former Majority Leader Eric Cantor](/story/2920591472859111710/) · 1 outlet · reach 1
+- [Australian agencies warned in May of incoming ‘vulnerability storm’ ahead of OpenAI breach](/story/2939726413833954438/) · 1 outlet · reach 1
+- [Tourist sparks fury after riding a sea turtle down a beach as it was laying eggs](/story/6925476361682474234/) · 1 outlet · reach 1
+- [White House looking to Europe to release diesel from strategic reserves](/story/10045841749028611902/) · 1 outlet · reach 1
+- [Democrats are running pastors for office. Republicans are attacking their religious comments.](/story/10539594324388251296/) · 1 outlet · reach 1
+- [Newsom signs laws targeting ICE with shock glove ban, detention center tax](/story/11536822064478885917/) · 1 outlet · reach 1
+- [Ahead of meeting with AI executives, Trump says he won’t stifle AI growth](/story/11614358106239746139/) · 1 outlet · reach 1
+- [Advocates sue OpenAI over Hugging Face hack under California anti-hacking law](/story/12968438066977746627/) · 1 outlet · reach 1
+- [White House pumped brakes on TPS termination for 200,000 Salvadorans](/story/13183049695364349635/) · 1 outlet · reach 1
+- [Ukrainian Science Academy, Struck by Drone, Played Key Role in Research](/story/2449538044462071156/) · 1 outlet · reach 1
+- [No Bombs Found in U.K. Case, but Officials Say Threat to Bases Is Real](/story/3573061046575809879/) · 1 outlet · reach 1
+- [Why the U.S. Is Imposing New Visa Restrictions on South Africa](/story/4647052983618789588/) · 1 outlet · reach 1
+- [Headlines for September 29, 2026](/story/6679395035052706935/) · 1 outlet · reach 1
+- [Afghans "Have Been the Victims" of U.S. Military, Taliban, Cartels & More for Decades: Nagieb Khaja](/story/8185899691799043888/) · 1 outlet · reach 1
+- [Israeli Settlers Stop Soldiers From Returning Palestinians to Their Home](/story/10097789718799787868/) · 1 outlet · reach 1
+- [Turkish Confectioner Hands Out Doughnuts to Honor the Dead](/story/12122804743110623111/) · 1 outlet · reach 1
+- [The Latin American Right’s Big Bet](/story/12157995655873062371/) · 1 outlet · reach 1
+- [Tankers Are Loading Oil Again From a Vital Saudi Pipeline](/story/14868517699754145758/) · 1 outlet · reach 1
+- [Top Zelensky staffer's associates get properties worth $1 million in controversial projects, media report says](/story/436575783752664934/) · 1 outlet · reach 1
+- [Daughter of Brit missing in France gives theory for disappearance](/story/1780423987592655382/) · 1 outlet · reach 1
+- [3 children injured as Russia strikes Sumy school with glide bombs](/story/2631397046856685495/) · 1 outlet · reach 1
+- [Reporter's Notebook: How constant drone attacks became a normal workday in Kyiv](/story/4130183579023343868/) · 1 outlet · reach 1
+- [First pictures of 'deeply missed' dad, 49 and daughter, 24, killed in same tragic workplace incident](/story/4672918978538087843/) · 1 outlet · reach 1
+- [Firefighter, 27, plunges 700ft to his death near Millville Canyon as wingsuit fails](/story/5574315262503020356/) · 1 outlet · reach 1
+- [Ukraine receives air defense missiles for NASAMS systems, Zelensky says amid shortage](/story/6049286712785113304/) · 1 outlet · reach 1
+- [After Nestle and Auchan seizures, Russia is coming for others](/story/7547290798346628443/) · 1 outlet · reach 1
+- [British woman dead after 'drowning' in Ibiza despite desperate attempts to save her](/story/8418680091917724622/) · 1 outlet · reach 1
+- [Amazon Is Perfecting Total Surveillance of Its Workforce](/story/8990216418448555354/) · 1 outlet · reach 1
+- [Britain Used Modern Advertising to Sell Its Empire](/story/11007946676451960126/) · 1 outlet · reach 1
+- [Russian military units allegedly involved in Oleshky humanitarian crisis identified](/story/12579444589888382050/) · 1 outlet · reach 1
+- [Update: EU's decision to pay for alleged 'anti-reform' draws criticism from Ukrainian experts](/story/13952437953144253964/) · 1 outlet · reach 1
+- [Economic Democracy Is at the Heart of Socialism](/story/14994079291308108060/) · 1 outlet · reach 1

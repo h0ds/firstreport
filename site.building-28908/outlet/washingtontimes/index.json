@@ -1,0 +1,612 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "washingtontimes.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.6297
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.63 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "washingtontimes.com",
+          "expires": "2027-09-13",
+          "last_changed": "2026-07-30",
+          "registrar": "DNC Holdings, Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtontimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-14"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1982-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q11032"
+        },
+        "field": "legal_form",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "newspaper"
+      }
+    ],
+    "name": [
+      {
+        "field": "name",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Washington Times"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "origin_of": 5,
+          "shared_stories": 13,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "washingtontimes",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/washingtontimes",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 38% of 13 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      },
+      {
+        "data": {
+          "qid": "Q217059"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Unification Church"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "washingtontimes",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/washingtontimes",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.2 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "washingtontimes.com"
+        },
+        "field": "registrar",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtontimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "DNC Holdings, Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_328#RfC:_The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_209#Is_the_Washington_Times_an_acceptable_source_for_statements_of_fact_related_to_student_protesters/black_lives_matter/Milo_Yiannopoulos?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_316#Rebel_News"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Times",
+          "status": "no_consensus",
+          "summary": "There is consensus that The Washington Times is a marginally reliable source for politics and science. Most editors agree that it is a partisan source. Some editors noted a history of publishing inaccurate or false information, of being slow to issue retractions or corrections, and of sometimes only doing so under the threat of legal action; a considerable minority favored deprecation on these gro"
+        },
+        "field": "reliability",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "revised": 1,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "washingtontimes",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/washingtontimes",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "5% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "washingtontimes.com",
+          "final_url": "https://www.washingtontimes.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.washingtontimes.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.washingtontimes.com/about/jobs/",
+          "contact": "https://www.washingtontimes.com/contact-us/",
+          "corrections": "https://www.washingtontimes.com/news/corrections/",
+          "domain": "washingtontimes.com",
+          "ethics": "https://www.washingtontimes.com/news/2026/sep/28/trump-admin-roll-lower-fuel-economy-standards-cars-light-trucks/",
+          "masthead": "https://www.washingtontimes.com/staff/cheryl-k-chumley/",
+          "missing": [],
+          "privacy": "https://www.washingtontimes.com/privacy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.washingtontimes.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, corrections, ethics, masthead pages from its home page"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "washingtontimes",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/washingtontimes",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "http://www.washingtontimes.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q494170"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Washington_Times"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "washingtontimes",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/washingtontimes",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 8,
+  "items": 41,
+  "outlet": {
+    "domains": [
+      "washingtontimes.com"
+    ],
+    "id": "washingtontimes",
+    "name": "The Washington Times"
+  },
+  "shared_stories": 26,
+  "stories": [
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 925583014156697947,
+      "outlet_count": 12,
+      "title": "French far-right’s Bardella denies alleged antisemitic comments, files defamation lawsuit"
+    },
+    {
+      "created_at": 1790723373,
+      "first": true,
+      "id": 17324161224980023135,
+      "outlet_count": 1,
+      "title": "Carney accuses U.S. steelmaker of betraying Canadian workers after layoffs tied to Trump tariffs"
+    },
+    {
+      "created_at": 1790715379,
+      "first": false,
+      "id": 7695855586285115353,
+      "outlet_count": 5,
+      "title": "Hegseth to Cut Pentagon Posts Held for Generals, Admirals"
+    },
+    {
+      "created_at": 1790682645,
+      "first": false,
+      "id": 12263486972145751600,
+      "outlet_count": 6,
+      "title": "Iran's currency hits a new record low as war erodes the country's economic stability"
+    },
+    {
+      "created_at": 1790715379,
+      "first": true,
+      "id": 1025914268736771417,
+      "outlet_count": 2,
+      "title": "Pak Vows To Defend Saudi Against Iran-Backed Houthis By \"Whatever Means\""
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11230258509063452999,
+      "outlet_count": 18,
+      "title": "87-year-old woman whose eviction sparked protests in Spain is returning home"
+    },
+    {
+      "created_at": 1790715371,
+      "first": true,
+      "id": 11498917335133207289,
+      "outlet_count": 10,
+      "title": "Eiffel Tower chief to step down after exclusion of female staff during Hindu delegation visit"
+    },
+    {
+      "created_at": 1790670935,
+      "first": false,
+      "id": 6870823133732014281,
+      "outlet_count": 7,
+      "title": "U.S. ban on $1 billion worth of Canadian imports, from motorcycles to booze, goes into effect"
+    },
+    {
+      "created_at": 1790679061,
+      "first": false,
+      "id": 6800150837118356285,
+      "outlet_count": 9,
+      "title": "Slovak school stabbing kills teacher, injures two"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 6236339129075470018,
+      "outlet_count": 8,
+      "title": "3 Egyptian Officials Convicted of Kidnapping Slain Italian Student"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 14776272129164761012,
+      "outlet_count": 21,
+      "title": "Trump Denies Offering to Sell Arms to China's Xi"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 5543202539112511581,
+      "outlet_count": 4,
+      "title": "At UN, Denmark says Greenland pact benefits all parties involved"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 11336663336944555363,
+      "outlet_count": 8,
+      "title": "Argentina threatens legal action against UK over Falkland Islands oil exploration"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 16346503716596623632,
+      "outlet_count": 13,
+      "title": "Pope Leo says concerns about AI doom scenarios are not ‘fake news’"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 14438000136465300896,
+      "outlet_count": 4,
+      "title": "US revokes visas from Latin American officials and families over accusations of corruption"
+    },
+    {
+      "created_at": 1790715379,
+      "first": true,
+      "id": 17761610880129894944,
+      "outlet_count": 1,
+      "title": "U.N. envoy meets Houthi negotiators in a bid to halt escalating violence in Yemen"
+    },
+    {
+      "created_at": 1790715379,
+      "first": true,
+      "id": 11671106260699536152,
+      "outlet_count": 1,
+      "title": "Trump aims to expand efforts against cartels as effectiveness of deadly boat strikes draws criticism"
+    },
+    {
+      "created_at": 1790715379,
+      "first": true,
+      "id": 10522150996767181714,
+      "outlet_count": 1,
+      "title": "China rolls out new measures to bolster its property sector and economy"
+    },
+    {
+      "created_at": 1790679062,
+      "first": false,
+      "id": 9080973679397993503,
+      "outlet_count": 3,
+      "title": "Taiwan says U.S. arms sales to island are unchanged, but a $14 billion package remains on hold"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 8823494364560399012,
+      "outlet_count": 3,
+      "title": "Russia's ballistic missile and jet-propelled drone blitz keeps Kyiv on edge"
+    },
+    {
+      "created_at": 1790715379,
+      "first": true,
+      "id": 8666921510297245142,
+      "outlet_count": 1,
+      "title": "Hungary prepares to release Communist-era records revealing state security agents and informants"
+    },
+    {
+      "created_at": 1790715379,
+      "first": true,
+      "id": 5967549435665964199,
+      "outlet_count": 1,
+      "title": "South Korea points finger at North over bloody mine blast"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 4555465433342937664,
+      "outlet_count": 13,
+      "title": "Bangkok declares flood disaster as torrential rain inundates city"
+    },
+    {
+      "created_at": 1790715379,
+      "first": true,
+      "id": 4523181684248201955,
+      "outlet_count": 1,
+      "title": "AI-generated 'pity scams' use fake wounded veterans to sell goods online"
+    },
+    {
+      "created_at": 1790715379,
+      "first": true,
+      "id": 3776529269278115824,
+      "outlet_count": 1,
+      "title": "NATO races to solve missile shortage as wars drain Western stockpiles"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 3267502042222449910,
+      "outlet_count": 2,
+      "title": "Hormuz traffic nears prewar levels as Iran war simmers"
+    },
+    {
+      "created_at": 1790653944,
+      "first": false,
+      "id": 3191716705614828410,
+      "outlet_count": 4,
+      "title": "2 US Navy aviators eject while landing plane on carrier off Virginia, 4 sailors injured"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16126029408899543548,
+      "outlet_count": 17,
+      "title": "Iran awaits US response on plan to reopen Strait of Hormuz"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 3966912277761637371,
+      "outlet_count": 5,
+      "title": "Ethiopia's army chief accuses Eritrea, Sudan and Egypt of supporting Tigray rebels"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 4085781351675851944,
+      "outlet_count": 8,
+      "title": "Mediators reportedly continue work with Iran, US toward likely deal"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 16506327252844129190,
+      "outlet_count": 4,
+      "title": "Hegseth instructs Pentagon to defend 2026 elections from ‘foreign actors’"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 15952383964819731772,
+      "outlet_count": 1,
+      "title": "Trump disagrees with decision to grant bail to British terror suspects"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 15266364895810790135,
+      "outlet_count": 1,
+      "title": "Kosovo's lawmakers slam EU-backed court's war crimes verdicts of rebel leaders from war with Serbia"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 13562487032978845419,
+      "outlet_count": 1,
+      "title": "Air Force Thunderbirds' F-16 lost power, crashed last year due to 'misaligned' engine fan blade"
+    },
+    {
+      "created_at": 1790653931,
+      "first": true,
+      "id": 12554634109807779022,
+      "outlet_count": 2,
+      "title": "S. Korea says border blasts injured 3 officers was likely caused by N. Korean mines"
+    },
+    {
+      "created_at": 1790653930,
+      "first": true,
+      "id": 7905469984486417975,
+      "outlet_count": 2,
+      "title": "In a relatively mild speech, North Korea uses U.N. platform to lament 'mutual distrust' and tension"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 2617387176448167624,
+      "outlet_count": 1,
+      "title": "Colombia issues lengthy sentences against ELN rebel leaders for recruiting children"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 1796846435918629831,
+      "outlet_count": 1,
+      "title": "DHS flubbed 40% of Afghan ally asylum cases"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 756642820112136821,
+      "outlet_count": 1,
+      "title": "A new 'Last Supper'? Why America's defense tech boom may be slowing down"
+    },
+    {
+      "created_at": 1790653931,
+      "first": true,
+      "id": 692817120589073407,
+      "outlet_count": 2,
+      "title": "11th woman's body in South Africa as authorities investigate recent spate of killings"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

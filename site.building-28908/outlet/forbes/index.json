@@ -1,0 +1,325 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "forbes.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.0465
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "forbes",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.05 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "forbes.com",
+          "expires": "2027-06-16",
+          "last_changed": "2026-05-15",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "forbes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/forbes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-06-17"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1917-09-15"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q41298"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "magazine"
+      },
+      {
+        "data": {
+          "qid": "Q17232649"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news website"
+      },
+      {
+        "data": {
+          "qid": "Q35127"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "website"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "forbes.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.forbes.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "Forbes"
+      },
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Forbes"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q956568"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Forbes"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "forbes.com"
+        },
+        "field": "registrar",
+        "outlet_id": "forbes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/forbes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "MarkMonitor Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Special:GoToComment/c-Bearian-20260217185000-Forbes",
+            "#cite_note-40"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Forbes.com (pre–5 August 2010) and Forbes (print issue)",
+          "status": "generally_reliable",
+          "summary": "Forbes.com articles published before 5 August 2010 (the date when contributors were introduced to the website) and any articles featured in print issue Forbes magazines are considered generally reliable. Forbes.com content published after this date is covered by the previous entry on this list."
+        },
+        "field": "reliability",
+        "outlet_id": "forbes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_337#RFC_Forbes_Advisor",
+            "https://en.wikipedia.org/wiki/Special:GoToComment/c-Bearian-20260217185000-Forbes",
+            "#cite_note-41"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Forbes.com non-staff authored articles",
+          "status": "generally_unreliable",
+          "summary": "Most articles on Forbes.com are written by non-staff authors, mainly by Forbes \"Contributors\", \"Senior Contributors\" or \"Brand Contributors\", has minimal editorial oversight, and such articles are considered generally unreliable. Other varieties of non-staff authored articles include those created by \"Subscribers\", \"Forbes Councils\" and \"Forbes Advisors\". There is consensus that non-staff authored"
+        },
+        "field": "reliability",
+        "note": "matched by domain listed in the row",
+        "outlet_id": "forbes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Special:GoToComment/c-Bearian-20260217185000-Forbes",
+            "#cite_note-39"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Forbes.com (5 August 2010 – present)",
+          "status": "no_consensus",
+          "summary": "Forbes.com articles published after 5 August 2010 include ones written by their staff and by Forbes.com contributors. There is no consensus on the general reliability of Forbes.com content created after this date due to concerns around contributors-turned-staff's articles being retroactively modified to appear written by staff. Articles are considered generally reliable if it is ascertained their "
+        },
+        "field": "reliability",
+        "note": "matched by domain listed in the row",
+        "outlet_id": "forbes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "forbes.com",
+          "final_url": "https://www.forbes.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.forbes.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "contact": "https://www.forbes.com/contact/",
+          "domain": "forbes.com",
+          "ethics": "https://www.forbes.com/sites/forbesstaff/article/forbes-editorial-values-and-standards/",
+          "masthead": "https://www.forbes.com/sites/forbesstaff/article/tips-and-confidential-sources/",
+          "missing": [
+            "about",
+            "corrections"
+          ],
+          "privacy": "https://www.forbes.com/fdc/privacy.html"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.forbes.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links contact, privacy, ethics, masthead pages from its home page; no about, corrections link found"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://forbes.com"
+      },
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.forbes.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q956568"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q25161472"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q25161472 (Forbes); also Q956568 (Forbes)",
+        "outlet_id": "forbes",
+        "ref_url": "https://www.wikidata.org/wiki/Q25161472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Forbes"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 0,
+  "outlet": {
+    "domains": [
+      "forbes.com"
+    ],
+    "id": "forbes",
+    "name": "Forbes"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

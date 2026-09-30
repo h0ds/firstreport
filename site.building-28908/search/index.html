@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search · Kagami</title>
+<meta name="description" content="Find an outlet by name, id or domain, or a story by title.">
+<link rel="stylesheet" href="/tokens.css">
+<link rel="stylesheet" href="/lens.css">
+<link rel="alternate" type="application/json" href="/search/index.json" title="This page as JSON">
+<link rel="alternate" type="text/markdown" href="/search/index.md" title="This page as Markdown">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this site">
+</head>
+<body>
+<main>
+<header class="chrome">
+  <span class="kg-lockup"><a class="kg-wordmark" href="/">Kagami<span class="kanji">鏡</span></a><span class="rule"></span><span class="tool">lens</span></span>
+  <span class="kg-muted">search · built from an export at 2026-09-29 23:43 UTC · times in UTC</span>
+</header>
+<h1>Search</h1><p class="kg-muted">96 outlets and 3025 stories from the 24 hours to 2026-09-29 23:43 UTC. Matches by name, id, domain or title; nothing is ranked beyond that.</p><input id="q" class="kg-input wide" type="search" placeholder="Outlet name, id or domain; story title" autocomplete="off" autofocus><noscript><p class="kg-muted">Search runs in the browser over <a href="/search/index.json">index.json</a>; without scripts, read that file or the <a href="/">front page</a>.</p></noscript><div id="outlets"></div><div id="stories"></div><script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const n = (k, w) => `${k} ${w}${k === 1 ? '' : (w.endsWith('y') ? 'ies' : 's')}`.replace(/ys$/, 'ies');
+let idx = null;
+async function load() { if (!idx) idx = await fetch('/search/index.json').then(r => r.json()); return idx; }
+function score(q, s) { s = s.toLowerCase(); return s === q ? 3 : s.startsWith(q) ? 2 : s.includes(q) ? 1 : 0; }
+async function search(q) {
+  q = q.trim().toLowerCase();
+  history.replaceState(null, '', q ? '?q=' + encodeURIComponent(q) : location.pathname);
+  if (!q) { $('#outlets').innerHTML = ''; $('#stories').innerHTML = ''; return; }
+  const d = await load();
+  const outlets = d.outlets.map(o => ({o, s: Math.max(score(q, o.id), score(q, o.name), ...o.domains.map(x => score(q, x)))})).filter(x => x.s).sort((a, b) => b.s - a.s || a.o.name.localeCompare(b.o.name)).slice(0, 20);
+  const stories = d.stories.map(c => ({c, s: score(q, c.title)})).filter(x => x.s).sort((a, b) => b.s - a.s || b.c.created_at - a.c.created_at).slice(0, 50);
+  $('#outlets').innerHTML = (outlets.length ? '<h2>Outlets</h2><ul class="stories">' + outlets.map(({o}) => `<li><a href="/outlet/${esc(o.id)}/" data-outlet="${esc(o.id)}">${esc(o.name || o.id)}</a><span class="kg-muted">${esc(o.domains.join(', '))}</span><span class="n kg-muted">${o.claims ? n(o.claims, 'claim') : 'not assessed yet'}</span></li>`).join('') + '</ul>' : '');
+  $('#stories').innerHTML = (stories.length ? '<h2>Stories</h2><ul class="stories">' + stories.map(({c}) => `<li data-id="${c.id}"><a href="/story/${c.id}/">${esc(c.title)}</a><span class="n kg-muted">${n(c.outlet_count, 'outlet')} · ${esc(c.created)}</span></li>`).join('') + '</ul>' : '');
+  if (!outlets.length && !stories.length) $('#stories').innerHTML = '<div class="empty">Nothing in the index matches that.</div>';
+}
+let t;
+$('#q').addEventListener('input', e => { clearTimeout(t); t = setTimeout(() => search(e.target.value), 120); });
+const q0 = new URLSearchParams(location.search).get('q');
+if (q0) { $('#q').value = q0; search(q0); }
+</script>
+<footer class="kg-muted">Every number on this page is a count from Kagami feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · <a href="/outlets/">Outlets</a> · <a href="/about/">About</a> · Machine readers: <a href="/search/index.json">JSON</a> · <a href="/search/index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a></footer>
+</main>
+</body>
+</html>

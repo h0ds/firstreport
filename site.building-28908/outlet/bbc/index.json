@@ -1,0 +1,761 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "bbc.co.uk",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.2004
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "bbc",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.20 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "bbc.com",
+          "expires": "2030-07-14",
+          "last_changed": "2021-07-06",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1989-07-15"
+      },
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "expires": "2034-12-13",
+          "last_changed": "2025-10-29",
+          "registrar": "British Broadcasting Corporation",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-13"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q141255352"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "online newspaper without paywall"
+      },
+      {
+        "data": {
+          "qid": "Q1126006"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "public broadcaster"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "bbc.co.uk"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.bbc.co.uk/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "BBC"
+      },
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "British Broadcasting Corporation"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "origin_of": 6,
+          "shared_stories": 19,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "bbc",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bbc",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 32% of 19 stories other outlets also carried"
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q910019"
+        },
+        "field": "parent",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Department for Digital, Culture, Media and Sport"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "bbc",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bbc",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.5 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "bbc.co.uk"
+        },
+        "field": "registrar",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "British Broadcasting Corporation"
+      },
+      {
+        "data": {
+          "domain": "bbc.com"
+        },
+        "field": "registrar",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Tucows Domains Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_495#RfC:_reliability_of_the_BBC",
+            "#cite_note-9"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "BBC (British Broadcasting Corporation)",
+          "status": "generally_reliable",
+          "summary": "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
+        },
+        "field": "reliability",
+        "outlet_id": "bbc",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "revised": 5,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "bbc",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bbc",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "11% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "final_url": "https://www.bbc.co.uk/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.bbc.co.uk/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.bbc.co.uk/aboutthebbc/governance/mission",
+          "contact": "https://www.bbc.co.uk/contact",
+          "domain": "bbc.co.uk",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.bbc.com/usingthebbc/privacy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.bbc.co.uk/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "state_media": [
+      {
+        "as_of": "2026",
+        "data": {
+          "code": "IP"
+        },
+        "field": "state_media",
+        "note": "State Media Monitor's category, not Kagami's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0.",
+        "outlet_id": "bbc",
+        "ref_url": "https://statemediamonitor.com/2026/09/british-broadcasting-corporation-bbc/",
+        "retrieved_at": 1790722336,
+        "source_id": "state_media_monitor",
+        "value": "Independent Public (IP)"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 47,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "bbc",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bbc",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://bbc.co.uk"
+      },
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://bbc.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q747860"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q9531"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/BBC"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 47,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 12
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "bbc",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bbc",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "26% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 8,
+  "items": 70,
+  "outlet": {
+    "domains": [
+      "bbc.co.uk",
+      "bbc.com"
+    ],
+    "id": "bbc",
+    "name": "BBC"
+  },
+  "shared_stories": 34,
+  "stories": [
+    {
+      "created_at": 1790653938,
+      "first": false,
+      "id": 10680949531682007259,
+      "outlet_count": 7,
+      "title": "Caleb Flynn, former ‘American Idol’ singer, found guilty of wife’s murder"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 3043460793184237497,
+      "outlet_count": 10,
+      "title": "Hurricane Polo threatens Southwest U.S. with flooding. See its path."
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 11726634235689167800,
+      "outlet_count": 13,
+      "title": "Morocco’s king appoints the country’s first woman prime minister"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 3372583884509813153,
+      "outlet_count": 13,
+      "title": "OpenAI cancels release of newest model due to safety concerns"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 925583014156697947,
+      "outlet_count": 12,
+      "title": "French far-right’s Bardella denies alleged antisemitic comments, files defamation lawsuit"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18293615436391779908,
+      "outlet_count": 17,
+      "title": "New York prosecutors reopen investigation into alleged rape at Cornell University"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 270612440624308507,
+      "outlet_count": 13,
+      "title": "China, US Can Continue Dialogue on AI to Weigh Risks, Benefits - Xi"
+    },
+    {
+      "created_at": 1790715370,
+      "first": false,
+      "id": 14766125194296977604,
+      "outlet_count": 3,
+      "title": "Six Flags shuts down X2 rollercoaster after hundreds allege brain injuries"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 7035178624231398532,
+      "outlet_count": 1,
+      "title": "Twelve women have been killed in one part of South Africa since July. Here's what we know so far"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 2931301599306692089,
+      "outlet_count": 8,
+      "title": "Tennessee to execute a woman for first time in 200 years after governor denies clemency"
+    },
+    {
+      "created_at": 1790679062,
+      "first": false,
+      "id": 12916877823827640315,
+      "outlet_count": 5,
+      "title": "French students and police clash as school blockades turn violent"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 9378438701147307814,
+      "outlet_count": 10,
+      "title": "Lindsay Clancy's lawyer makes stunning argument in first hearing since recent mistrial"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11230258509063452999,
+      "outlet_count": 18,
+      "title": "87-year-old woman whose eviction sparked protests in Spain is returning home"
+    },
+    {
+      "created_at": 1790653936,
+      "first": false,
+      "id": 16109613403163530335,
+      "outlet_count": 5,
+      "title": "Taxpayer-Funded Trump Ad Violates the Hatch Act"
+    },
+    {
+      "created_at": 1790715371,
+      "first": false,
+      "id": 11498917335133207289,
+      "outlet_count": 10,
+      "title": "Eiffel Tower chief to step down after exclusion of female staff during Hindu delegation visit"
+    },
+    {
+      "created_at": 1790647865,
+      "first": true,
+      "id": 2328662350960157817,
+      "outlet_count": 6,
+      "title": "A TV journalist is crowned king of a traditional monarchy in Uganda"
+    },
+    {
+      "created_at": 1790668765,
+      "first": false,
+      "id": 15012738059663545664,
+      "outlet_count": 10,
+      "title": "Estonia blames Russia for arson attack on defense company that provides vehicles to Ukraine"
+    },
+    {
+      "created_at": 1790655372,
+      "first": false,
+      "id": 14858190639268489308,
+      "outlet_count": 7,
+      "title": "Malaysia starts sending Myanmar migrants home"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 11336663336944555363,
+      "outlet_count": 8,
+      "title": "Argentina threatens legal action against UK over Falkland Islands oil exploration"
+    },
+    {
+      "created_at": 1790679060,
+      "first": false,
+      "id": 9892254173691011547,
+      "outlet_count": 7,
+      "title": "Israeli settlers attack West Bank village, blocking family's return home"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 17475486283352162102,
+      "outlet_count": 1,
+      "title": "Close-up look at Turner's '£50m' Rome painting on show in the city"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 15245613715131317373,
+      "outlet_count": 1,
+      "title": "'I was lured into a trap': Evan Gershkovich on moment that led to 16 months in Russian jail"
+    },
+    {
+      "created_at": 1790679060,
+      "first": false,
+      "id": 9636902651536422410,
+      "outlet_count": 2,
+      "title": "Man charged over AI image of crocodile at Singapore reservoir that led to search"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 8225416100050473512,
+      "outlet_count": 1,
+      "title": "Watch: US journalist Evan Gershkovich describes being detained by Russian agents"
+    },
+    {
+      "created_at": 1790715382,
+      "first": true,
+      "id": 3330381062286786178,
+      "outlet_count": 1,
+      "title": "Dutch police arrest suspected member of group that claimed FBI hack"
+    },
+    {
+      "created_at": 1790680848,
+      "first": false,
+      "id": 106458269581154056,
+      "outlet_count": 2,
+      "title": "From TV News Anchor To King Of Uganda's Tooro: Who Is Edward Rukidi Nyabongo?"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 9286423225921681917,
+      "outlet_count": 9,
+      "title": "New York Times exec 'shot dead by his elderly in-laws amid bitter family feud over becoming trans'"
+    },
+    {
+      "created_at": 1790671077,
+      "first": true,
+      "id": 12857440086413780105,
+      "outlet_count": 3,
+      "title": "Vietnam accused of abducting Norwegian and Australian human rights activists"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 10220048785832836552,
+      "outlet_count": 14,
+      "title": "Russian strike on Kyiv’s science academy kills at least one in latest daytime attack"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 11155112803343802879,
+      "outlet_count": 2,
+      "title": "Seoul summons Ukraine envoy over North Korean prisoner-of-war row"
+    },
+    {
+      "created_at": 1790671077,
+      "first": true,
+      "id": 14050575988984145587,
+      "outlet_count": 1,
+      "title": "How an alleged rape sent an Indian university into turmoil and emptied hostels"
+    },
+    {
+      "created_at": 1790671077,
+      "first": true,
+      "id": 6460880385938637076,
+      "outlet_count": 1,
+      "title": "Burkina Faso's junta leader opens major gold refinery to keep mining profits at home"
+    },
+    {
+      "created_at": 1790654765,
+      "first": false,
+      "id": 17914457389278130694,
+      "outlet_count": 2,
+      "title": "Flooded Bangkok street turns into floating market"
+    },
+    {
+      "created_at": 1790662841,
+      "first": true,
+      "id": 14055193686745920382,
+      "outlet_count": 1,
+      "title": "Watch: Luxury units uncovered inside an Indonesian prison"
+    },
+    {
+      "created_at": 1790658140,
+      "first": true,
+      "id": 17917545486191720564,
+      "outlet_count": 1,
+      "title": "US ban on Canadian alcohol and dairy comes into effect as trade war drags on"
+    },
+    {
+      "created_at": 1790654964,
+      "first": true,
+      "id": 9058799565262405197,
+      "outlet_count": 1,
+      "title": "Lost songs from iconic Australian rockstar found in garage"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16964007668169587437,
+      "outlet_count": 6,
+      "title": "Serbia’s Longtime President Aleksandar Vucic Resigns Post"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 12848179420933474743,
+      "outlet_count": 3,
+      "title": "Four people dead after helicopter crashes and catches fire in Canadian town"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 11337633027840784093,
+      "outlet_count": 2,
+      "title": "Switzerland rejects stricter interpretation of its neutrality"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 16508466295022350321,
+      "outlet_count": 2,
+      "title": "Plan for controversial Sydney data centre scrapped after push-back"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 785001445115155322,
+      "outlet_count": 2,
+      "title": "Stand-up comic released after being convicted of insulting Erdoğan"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18178820504319923867,
+      "outlet_count": 3,
+      "title": "Rescue teams search for 12 people missing after deadly Nepal avalanche"
+    },
+    {
+      "created_at": 1790647865,
+      "first": true,
+      "id": 12632793235856455217,
+      "outlet_count": 1,
+      "title": "Sign before praying: A new conversion law is affecting churchgoers in Indian state"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 4979100985949455916,
+      "outlet_count": 2,
+      "title": "Watch: From launch to fiery splashdown, SpaceX's Starship completes orbit test"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 7018862499408472219,
+      "outlet_count": 2,
+      "title": "Madonna, Taylor Swift Dominate Wild MTV Video Music Awards"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 18186851790389987429,
+      "outlet_count": 1,
+      "title": "The treasured 'eternal snow' on this tropical island is about to disappear forever"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 17610322148842418871,
+      "outlet_count": 1,
+      "title": "Woman charged with stealing from patients and staff at hospitals across Ontario"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 16503573671878037599,
+      "outlet_count": 1,
+      "title": "German town bans 'stumbling stone' memorials to Nazi victims"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 15535640098957907743,
+      "outlet_count": 1,
+      "title": "Stuck between superpowers: How Australia navigates the China-US rivalry"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 14354233828147591767,
+      "outlet_count": 1,
+      "title": "Nigerian attempts to break world record by dancing non-stop for seven days"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

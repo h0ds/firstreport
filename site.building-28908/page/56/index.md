@@ -1,0 +1,54 @@
+# Stories, page 56 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Reining in Big Tech: How California lawmakers plan to regulate AI and social media](/story/11558540947583324846/) · 1 outlet · reach 1
+- [Hill investigates after F-35 parts diverted to Hong Kong](/story/11584877384031080153/) · 1 outlet · reach 1
+- [A new flash point in the Iran war: The narrow strait called the 'Gate of Tears'](/story/11675567142076552041/) · 1 outlet · reach 1
+- [Trump supercharged ICE. Now battleground candidates are scrambling for a message](/story/11761884584815027490/) · 1 outlet · reach 1
+- [For third time, Supreme Court rejects Missouri's bid for another GOP-leaning House district](/story/11781618732428679639/) · 1 outlet · reach 1
+- [Waymo offers new incentives for commuters on public transit](/story/11816121641475892763/) · 1 outlet · reach 1
+- [Cocaine, crypto and soccer: Accused kingpin from Uruguay fights U.S. case](/story/11849791725156696414/) · 1 outlet · reach 1
+- [Commentary: Trump's vanity arch is coming and it's no triumph for taxpayers](/story/11863698214422275842/) · 1 outlet · reach 1
+- [Trump administration reinstates sexual misconduct rule for schools](/story/11988571094983856124/) · 1 outlet · reach 1
+- [Newsom says he won't run for president if Harris does](/story/12171272237499811849/) · 1 outlet · reach 1
+- [U.S. is running low on advanced defensive missiles — and it could take years to recover](/story/12189834024588919459/) · 1 outlet · reach 1
+- [Despite court wins, California election war with Trump rages on](/story/12337576226828313989/) · 1 outlet · reach 1
+- ['Convenient scapegoats': Boyle Heights warehouse company fights fire backlash](/story/12525498379902970626/) · 1 outlet · reach 1
+- [Canada's tariffs go into effect, spotlighting soured relations with U.S.](/story/13051822383025054246/) · 1 outlet · reach 1
+- [Senate passes bipartisan bill to overhaul college sports](/story/13082679643361057885/) · 1 outlet · reach 1
+- [California judge sentences former Syrian prison boss to 60 years for torturing inmates](/story/13382183681728066961/) · 1 outlet · reach 1
+- [America Is Losing Its Mind. This Governor Wants You to Put Down Your Phone.](/story/13505828164849204682/) · 1 outlet · reach 1
+- [A grand display for Xi reveals the limits of Trump's summitry](/story/13880801925667509952/) · 1 outlet · reach 1
+- [As world leaders converge on U.S., Trump seeks to demonstrate control](/story/13926926550514534026/) · 1 outlet · reach 1
+- [Judge again halts Postal Service mail ballot plan as Trump administration seeks Supreme Court relief](/story/13941572868333522664/) · 1 outlet · reach 1
+- [NASA's Roman Space Telescope, set to probe universe with JPL tech, launches on SpaceX rocket](/story/13970711711958421771/) · 1 outlet · reach 1
+- [California voters deeply frustrated by length of November ballot, state and nation's direction](/story/14030100134673092296/) · 1 outlet · reach 1
+- [Poll: A crack is emerging in Trump’s coalition over deportations](/story/14092205287520549770/) · 1 outlet · reach 1
+- [Hollywood fears an AI future. China is already living it](/story/14093976654460837347/) · 1 outlet · reach 1
+- [Opposition grows to Paramount-Warner Bros. merger settlement as deal enters critical week](/story/14224122688654646587/) · 1 outlet · reach 1
+- [Tax the rich? California voters are divided, according to new poll](/story/14382396710343123458/) · 1 outlet · reach 1
+- [Why a diesel export ban could send California gas prices soaring](/story/14638672465496215458/) · 1 outlet · reach 1
+- [Russia Said These Foreigners Wouldn’t Have to Fight. Then It Sent Them to the Frontlines.](/story/14724004539923767982/) · 1 outlet · reach 1
+- [How Sudan's civil war is erasing thousands of years of cultural memory](/story/15003703132276854336/) · 1 outlet · reach 1
+- [Global warming is ruining their way of life. These Colorado ranchers demand accountability](/story/15011985201745573703/) · 1 outlet · reach 1
+- ['It's going to be fine': Trump rebuffs rising alarm over AI dangers, sparking outcry](/story/15019729201111918151/) · 1 outlet · reach 1
+- [Salvadorans anxiously await news on whether TPS protections will end](/story/15196303291075920876/) · 1 outlet · reach 1
+- [Fewer than half of Americans expect midterm elections to be 'free and fair,' poll finds](/story/15214202485785823078/) · 1 outlet · reach 1
+- [Will the economy motivate voters? This Central Valley swing district could be a test](/story/15226963179723284014/) · 1 outlet · reach 1
+- [Poll: Trump’s MAGA loyalists don’t think he has an affordability problem](/story/15227809545311842297/) · 1 outlet · reach 1
+- [A conservative California upbringing paved Natalie Harp's way to Trump](/story/15314702848870740711/) · 1 outlet · reach 1
+- [Mideast escalation risks an oil shock ahead of the midterms](/story/15502187543190963549/) · 1 outlet · reach 1
+- [Convicted Trump Media-linked fraudster funded pro-Trump film in hopes of pardon, lawsuit says](/story/15687501363229763804/) · 1 outlet · reach 1
+- [California donors have funded both sides of Democrats' primary battles](/story/15690890536807118252/) · 1 outlet · reach 1
+- [Gloria Steinem, charismatic feminist and co-founder of Ms. Magazine, dies at 92](/story/15695498619907950498/) · 1 outlet · reach 1
+- [Appreciation: Gloria Steinem was a rock star of revolution](/story/15851856537885877013/) · 1 outlet · reach 1
+- [Kennedy Center closes, despite judge's order; addition of Trump's name blocked](/story/15943796320775702348/) · 1 outlet · reach 1
+- [September](/story/15972846394508554226/) · 1 outlet · reach 1
+- [In this small Mexican town, avocados were a lifeline — and a curse](/story/16052145469087800069/) · 1 outlet · reach 1
+- [Sons, mothers of people killed by ICE agents demand answers: 'We still have so many questions'](/story/16146874616816765436/) · 1 outlet · reach 1
+- [Iran, US complain about each other’s stances as mediators meet with Iranian FM](/story/16265628033217382880/) · 1 outlet · reach 1
+- [Viral photo gives Gaza family a bittersweet glimpse of their missing son](/story/16390885288623685171/) · 1 outlet · reach 1
+- [Trespasser stopped on former Vice President Kamala Harris' Malibu property](/story/16625470329083492824/) · 1 outlet · reach 1
+- [Trump calls for federal tax incentives to revive U.S. film industry](/story/16727520183998568815/) · 1 outlet · reach 1
+- [AI crisis heightens the stakes of Xi's visit to Washington](/story/16805301737120439145/) · 1 outlet · reach 1

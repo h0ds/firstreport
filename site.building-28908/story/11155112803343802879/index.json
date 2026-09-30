@@ -1,0 +1,279 @@
+{
+  "claims": {
+    "bbc": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "bbc.com",
+          "expires": "2030-07-14",
+          "last_changed": "2021-07-06",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1989-07-15"
+      },
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "expires": "2034-12-13",
+          "last_changed": "2025-10-29",
+          "registrar": "British Broadcasting Corporation",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-13"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_495#RfC:_reliability_of_the_BBC",
+            "#cite_note-9"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "BBC (British Broadcasting Corporation)",
+          "status": "generally_reliable",
+          "summary": "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
+        },
+        "field": "reliability",
+        "outlet_id": "bbc",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "zerohedge": [
+      {
+        "data": {
+          "domain": "zerohedge.com",
+          "expires": "2027-01-11",
+          "last_changed": "2026-01-10",
+          "registrar": "easyDNS Technologies Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/zerohedge.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2009-01-11"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2009-01-09"
+      },
+      {
+        "data": {
+          "qid": "Q56547225"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daniel Ivandjiiski"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_302#RfC:_Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_199#ZeroHedge_Blog_post_by_\"Tyler_Durden\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_238#Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#rate_\"Zero_Hedge\""
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Zero Hedge (ZeroHedge, ZH)",
+          "status": "deprecated",
+          "summary": "Zero Hedge was deprecated in the 2020 RfC due to its propagation of conspiracy theories. It is a self-published blog that is biased or opinionated."
+        },
+        "field": "reliability",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.06749236583709717,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7874923944473267
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 11155112803343802879,
+    "item_count": 2,
+    "last_active_at": 1790679061,
+    "origin_item_id": 11155112803343802879,
+    "origin_outlet_id": "bbc",
+    "outlet_count": 2,
+    "primary_title": "Seoul summons Ukraine envoy over North Korean prisoner-of-war row",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 11155112803343802879,
+        "joined_at": 1790633633,
+        "outlet_id": "bbc",
+        "published_at": 1790607451
+      },
+      {
+        "item_id": 4560665003531322061,
+        "joined_at": 1790679061,
+        "outlet_id": "zerohedge",
+        "published_at": 1790667000
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "bbc"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "zerohedge"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "bbc": "BBC",
+    "zerohedge": "ZeroHedge"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bbc.co.uk/news/articles/c8ly40xx0dr0o",
+          "cluster_id": 11155112803343802879,
+          "fetched_at": 1790633633,
+          "id": 11155112803343802879,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "bbc",
+          "published_at": 1790607451,
+          "summary": "Last week Zelensky revealed Ukraine had sent two captured North Koreans to South Korea - which Seoul says was meant to be a secret.",
+          "text_hash": 13465786065708488999,
+          "title": "Seoul summons Ukraine envoy over North Korean prisoner-of-war row"
+        }
+      ],
+      "outlet_id": "bbc"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://zerohedge.com/geopolitical/south-korea-summons-acting-ukrainian-ambassador-over-north-korean-prisoner-transfer",
+          "cluster_id": 11155112803343802879,
+          "fetched_at": 1790679061,
+          "id": 4560665003531322061,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "zerohedge",
+          "published_at": 1790667000,
+          "summary": "South Korea Summons Acting Ukrainian Ambassador Over North Korean Prisoner Transfer Revelation Authored by Guy Birchall via The Epoch Times , The South Korean Ministry of Foreign Affairs summoned Ukraine's acting ambassador to the country on Sept. 28 to convey Seoul's displeasure over Ukrainian President Volodymyr Zelenskyy's revelation that two North Korean prisoners of war had been transferred to South Korea. South Korean President Lee Jae Myung in Seoul, South Korea, on June 8, 2026. Chung…",
+          "text_hash": 13464019142780480688,
+          "title": "South Korea Summons Acting Ukrainian Ambassador Over North Korean Prisoner Transfer Revelation"
+        }
+      ],
+      "outlet_id": "zerohedge"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 11155112803343802879,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4489,
+      "snapshot_id": 16462822106586126355,
+      "ts": 1790715382
+    }
+  ]
+}

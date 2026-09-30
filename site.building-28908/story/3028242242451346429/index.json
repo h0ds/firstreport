@@ -1,0 +1,265 @@
+{
+  "claims": {
+    "theblaze": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "theblaze.com",
+          "expires": "2027-09-26",
+          "last_changed": "2026-08-25",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "theblaze",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theblaze.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2000-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2011-09-12"
+      },
+      {
+        "data": {
+          "qid": "Q6818648"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q7711621 (Blaze Media); also Q110568502 (The News & Why It Matters)",
+        "outlet_id": "theblaze",
+        "ref_url": "https://www.wikidata.org/wiki/Q7711621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mercury Radio Arts"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Is_The_Blaze_a_WP:RS_for_America_(2014_film)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_227#Newsbusters_and_The_Blaze_at_WP:BLP_page_Malcolm_Nance_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_239#TheBlaze_show_Dana_etc._w_rgd_Dana_Loesch"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Blaze Media (BlazeTV, Conservative Review, CRTV, TheBlaze)",
+          "status": "generally_unreliable",
+          "summary": "Blaze Media (including TheBlaze) is considered generally unreliable for facts. In some cases, it may be usable for attributed opinions. In 2018, TheBlaze merged with Conservative Review (CRTV) to form Blaze Media. [ 3 ]"
+        },
+        "field": "reliability",
+        "outlet_id": "theblaze",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "zerohedge": [
+      {
+        "data": {
+          "domain": "zerohedge.com",
+          "expires": "2027-01-11",
+          "last_changed": "2026-01-10",
+          "registrar": "easyDNS Technologies Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/zerohedge.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2009-01-11"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2009-01-09"
+      },
+      {
+        "data": {
+          "qid": "Q56547225"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q3575278 (Zero Hedge); also Q56547225 (Daniel Ivandjiiski)",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://www.wikidata.org/wiki/Q3575278",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daniel Ivandjiiski"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_302#RfC:_Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_199#ZeroHedge_Blog_post_by_\"Tyler_Durden\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_238#Zero_Hedge",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_259#rate_\"Zero_Hedge\""
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Zero Hedge (ZeroHedge, ZH)",
+          "status": "deprecated",
+          "summary": "Zero Hedge was deprecated in the 2020 RfC due to its propagation of conspiracy theories. It is a self-published blog that is biased or opinionated."
+        },
+        "field": "reliability",
+        "outlet_id": "zerohedge",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.08368146419525146,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.803681492805481
+    },
+    "created_at": 1790715381,
+    "expired": false,
+    "id": 3028242242451346429,
+    "item_count": 2,
+    "last_active_at": 1790715381,
+    "origin_item_id": 11069474571307375996,
+    "origin_outlet_id": "zerohedge",
+    "outlet_count": 2,
+    "primary_title": "Fauci's agency backed an experiment aerosolizing lethal Ebola — then he panicked about what it exposed about vaccination",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3028242242451346429,
+        "joined_at": 1790715381,
+        "outlet_id": "theblaze",
+        "published_at": 1790705700
+      },
+      {
+        "item_id": 11069474571307375996,
+        "joined_at": 1790715381,
+        "outlet_id": "zerohedge",
+        "published_at": 1790694600
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "theblaze"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "zerohedge"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "theblaze": "TheBlaze",
+    "zerohedge": "ZeroHedge"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://zerohedge.com/medical/newly-released-fauci-files-reveal-dangerous-niaid-funded-aerosolized-ebola-research",
+          "cluster_id": 3028242242451346429,
+          "fetched_at": 1790715381,
+          "id": 11069474571307375996,
+          "joined_at": 1790715381,
+          "lang": "en",
+          "outlet_id": "zerohedge",
+          "published_at": 1790694600,
+          "summary": "Newly Released Fauci Files Reveal Dangerous NIAID-Funded Aerosolized Ebola Research Authored by Debra Heine via American Greatness , Senator Rand Paul (R-Ky.) released documents from Dr. Fauci's diary and emails Monday detailing his dangerous NIAID-funded research during the Obama Administration, including a 2015 experiment that exposed vaccinated monkeys to aerosolized Ebola. The risky research was conducted at the United States Army Medical Research Institute of Infectious Diseases (USAMRIID) at Fort…",
+          "text_hash": 4204922900517914000,
+          "title": "Newly Released Fauci Files Reveal Dangerous NIAID-Funded Aerosolized Ebola Research"
+        }
+      ],
+      "outlet_id": "zerohedge"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theblaze.com/news/niaid-backed-an-experiment-aersolizing-lethal-ebola-then-fauci-panicked-about-what-it-exposed-about-vaccination",
+          "cluster_id": 3028242242451346429,
+          "fetched_at": 1790715381,
+          "id": 3028242242451346429,
+          "joined_at": 1790715381,
+          "lang": "en",
+          "outlet_id": "theblaze",
+          "published_at": 1790705700,
+          "summary": "The National Institute of Allergy and Infectious Diseases under Anthony Fauci funded deadly gain-of-function research on coronaviruses at the likely Chinese epicenter of the COVID-19 pandemic. However, SARS-COV-2 was apparently not the first deadly virus that created panic in the former NIAID director's office. 'I believe all of this is important for bio defense.' According to a journal entry obtained by Senate Homeland Security Committee Chairman Rand Paul (R-Ky.) and published by Just the News, Fauci…",
+          "text_hash": 17973945104241947151,
+          "title": "Fauci's agency backed an experiment aerosolizing lethal Ebola — then he panicked about what it exposed about vaccination"
+        }
+      ],
+      "outlet_id": "theblaze"
+    }
+  ],
+  "withdrawals": []
+}

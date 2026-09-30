@@ -1,0 +1,739 @@
+{
+  "claims": {
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "cna": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "channelnewsasia.com",
+          "expires": "2027-02-23",
+          "last_changed": "2026-02-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cna",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/channelnewsasia.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-02-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1999-03-01"
+      },
+      {
+        "data": {
+          "qid": "Q1368796"
+        },
+        "field": "owner",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mediacorp"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_489#RfC:_Channel_NewsAsia_(CNA)_and_other_Mediacorp-affiliated_media"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CNA (Channel NewsAsia)",
+          "status": "generally_reliable",
+          "summary": "The 2025 RfC established a consensus that CNA, a Singaporean state-owned news channel, is a generally reliable source."
+        },
+        "field": "reliability",
+        "outlet_id": "cna",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.019644498825073242,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": 0.7396445274353027
+    },
+    "created_at": 1790653942,
+    "expired": false,
+    "id": 17314204335772072738,
+    "item_count": 9,
+    "last_active_at": 1790725086,
+    "origin_item_id": 17314204335772072738,
+    "origin_outlet_id": "thehindu",
+    "outlet_count": 7,
+    "primary_title": "North Korea denies South's claim it was behind DMZ mine blasts",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 17314204335772072738,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790513475
+      },
+      {
+        "item_id": 16108298485968809232,
+        "joined_at": 1790653946,
+        "outlet_id": "japantimes",
+        "published_at": 1790653740
+      },
+      {
+        "item_id": 229970207202478012,
+        "joined_at": 1790659143,
+        "outlet_id": "anadolu",
+        "published_at": 1790656933
+      },
+      {
+        "item_id": 6984607191296800758,
+        "joined_at": 1790670026,
+        "outlet_id": "cna",
+        "published_at": 1790669460
+      },
+      {
+        "item_id": 8071566702340528363,
+        "joined_at": 1790679060,
+        "outlet_id": "euronews",
+        "published_at": 1790672188
+      },
+      {
+        "item_id": 9154979926237928789,
+        "joined_at": 1790679060,
+        "outlet_id": "arabnews",
+        "published_at": 1790669394
+      },
+      {
+        "item_id": 2540618506062018066,
+        "joined_at": 1790679060,
+        "outlet_id": "scmp",
+        "published_at": 1790674108
+      },
+      {
+        "item_id": 890437759714947867,
+        "joined_at": 1790679063,
+        "outlet_id": "anadolu",
+        "published_at": 1790656933
+      },
+      {
+        "item_id": 6248351500366996252,
+        "joined_at": 1790725086,
+        "outlet_id": "cna",
+        "published_at": 1790723820
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "cna",
+            "scmp",
+            "thehindu"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews",
+        "japantimes"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "anadolu": "Anadolu Agency",
+    "arabnews": "Arab News",
+    "cna": "CNA",
+    "euronews": "Euronews",
+    "japantimes": "The Japan Times",
+    "scmp": "South China Morning Post",
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 7,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    4,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/south-korean-military-un-command-launch-investigation-into-dmz-explosion/article71515934.ece",
+          "cluster_id": 17314204335772072738,
+          "fetched_at": 1790653942,
+          "id": 17314204335772072738,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790513475,
+          "summary": "The investigative team ‌of ⁠about 40 officials searched an area ⁠near the site where the blast happened on September 21, says South Korea’s Joint Chiefs of ​Staff",
+          "text_hash": 12792734407176840372,
+          "title": "South Korean military, UN command launch investigation into DMZ explosion"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/news/2026/09/29/asia-pacific/north-korea-mines-dmz-explosions/",
+          "cluster_id": 17314204335772072738,
+          "fetched_at": 1790653946,
+          "id": 16108298485968809232,
+          "joined_at": 1790653946,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790653740,
+          "summary": "South Korea's military vowed to respond if a final investigation confirms Pyongyang's involvement in the blasts that injured three soldiers.",
+          "text_hash": 2466917622524346191,
+          "title": "Seoul says North Korea’s mines likely behind DMZ explosions"
+        }
+      ],
+      "outlet_id": "japantimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/asia-pacific/south-korean-president-orders-thorough-probe-into-landmine-blast-in-dmz/4072121",
+          "cluster_id": 17314204335772072738,
+          "fetched_at": 1790659143,
+          "id": 229970207202478012,
+          "joined_at": 1790659143,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790656933,
+          "summary": "Lee Jae Myung says Seoul will take ‘necessary measures’ based on investigation’s findings",
+          "text_hash": 3574526469638218758,
+          "title": "South Korean president orders thorough probe into landmine blast in DMZ"
+        },
+        {
+          "canonical_url": "https://aa.com.tr/en/asia-pacific/south-korean-president-orders-probe-into-land-mine-blast-in-demilitarized-zone/4072121",
+          "cluster_id": 17314204335772072738,
+          "fetched_at": 1790679063,
+          "id": 890437759714947867,
+          "joined_at": 1790679063,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790656933,
+          "summary": "Defense minister calls explosion a 'clear violation of armistice agreement' with North Korea",
+          "text_hash": 1227727694026133848,
+          "title": "South Korean president orders probe into land mine blast in Demilitarized Zone"
+        }
+      ],
+      "outlet_id": "anadolu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/world/north-korean-dmz-landmine-blasts-violation-of-armistice-seoul-3003688",
+          "cluster_id": 17314204335772072738,
+          "fetched_at": 1790679060,
+          "id": 9154979926237928789,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790669394,
+          "summary": "Seoul has declared that landmine explosions in the DMZ, which injured three South Korean soldiers, were instigated by North Korea, violating the armistice agreement.",
+          "text_hash": 1055250803436232801,
+          "title": "North Korean DMZ landmine blasts ‘violation of armistice’: Seoul"
+        }
+      ],
+      "outlet_id": "arabnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://channelnewsasia.com/east-asia/north-korea-dmz-landmind-blasts-armistice-violation-south-korea-6417896",
+          "cluster_id": 17314204335772072738,
+          "fetched_at": 1790670026,
+          "id": 6984607191296800758,
+          "joined_at": 1790670026,
+          "lang": "en",
+          "outlet_id": "cna",
+          "published_at": 1790669460,
+          "summary": "",
+          "text_hash": 10869326691979454513,
+          "title": "North Korean DMZ landmine blasts 'violation of armistice': Seoul"
+        },
+        {
+          "canonical_url": "https://channelnewsasia.com/east-asia/south-korea-north-dmz-mine-blasts-armistice-6419956",
+          "cluster_id": 17314204335772072738,
+          "fetched_at": 1790725086,
+          "id": 6248351500366996252,
+          "joined_at": 1790725086,
+          "lang": "en",
+          "outlet_id": "cna",
+          "published_at": 1790723820,
+          "summary": "South Korea said that North Korea was \"highly suspected\" of causing two explosions at the countries' Demilitarized Zone, adding that it was \"a clear violation\" of their armistice agreement.",
+          "text_hash": 2328612061171508161,
+          "title": "North Korea denies South's claim it was behind DMZ mine blasts"
+        }
+      ],
+      "outlet_id": "cna"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/29/north-korean-landmine-blasts-in-dmz-a-violation-of-armistice-seoul-says",
+          "cluster_id": 17314204335772072738,
+          "fetched_at": 1790679060,
+          "id": 8071566702340528363,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790672188,
+          "summary": "The northern and southern boundaries of the zone are among the world's most heavily fortified frontiers and landmine incidents have previously heightened tensions between the two countries.",
+          "text_hash": 9692619978982510082,
+          "title": "North Korean landmine blasts in DMZ a 'violation of armistice,' Seoul says"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/asia/east-asia/article/3369200/north-korean-mines-behind-dmz-blast-injured-2-south-koreans-seoul-says",
+          "cluster_id": 17314204335772072738,
+          "fetched_at": 1790679060,
+          "id": 2540618506062018066,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790674108,
+          "summary": "South Korea’s defence minister said on Tuesday North Korean mines caused a blast last week that injured two South Korean personnel in the demilitarised zone (DMZ), adding that the incident violated the Korean war armistice agreement and warranted a response against Pyongyang. Defence Minister Kang Shin-chul told a parliamentary committee that the mines were North Korean and appeared to have been planted in the area as part ⁠of North Korea’s border fortification work near the military demarcation...",
+          "text_hash": 5775977660443617648,
+          "title": "North Korean mines behind DMZ blast that injured 2 South Koreans, Seoul says"
+        }
+      ],
+      "outlet_id": "scmp"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 229970207202478012,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3883,
+      "snapshot_id": 5567590423331091635,
+      "ts": 1790679063
+    }
+  ]
+}

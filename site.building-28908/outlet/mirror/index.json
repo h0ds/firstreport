@@ -1,0 +1,617 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "mirror.co.uk",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.1505
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "mirror",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.15 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "mirror.co.uk",
+          "expires": "2027-09-08",
+          "last_changed": "2026-09-04",
+          "registrar": "CSC Corporate Domains, Inc",
+          "status": [
+            "server delete prohibited",
+            "renew period",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "mirror",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/mirror.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-08"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1110794"
+        },
+        "field": "legal_form",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "daily newspaper"
+      },
+      {
+        "data": {
+          "qid": "Q11032"
+        },
+        "field": "legal_form",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "newspaper"
+      },
+      {
+        "data": {
+          "qid": "Q1002697"
+        },
+        "field": "legal_form",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "periodical"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "mirror.co.uk"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.mirror.co.uk/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "Daily Mirror"
+      },
+      {
+        "field": "name",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daily Mirror"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 27,
+          "origin_of": 4,
+          "shared_stories": 6,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "mirror",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/mirror",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 67% of 6 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q1636545"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Reach plc"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 27,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "mirror",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/mirror",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.3 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "mirror.co.uk"
+        },
+        "field": "registrar",
+        "outlet_id": "mirror",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/mirror.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "CSC Corporate Domains, Inc"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_160#Huffington_Post/Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#The_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Daily_Express_and_Daily_Mirror",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Daily_Mirror"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Mirror (Mirror)",
+          "status": "no_consensus",
+          "summary": "The Daily Mirror, also known just as the Mirror, is a tabloid newspaper that publishes tabloid journalism. There is no consensus on whether its reliability is comparable to that of British tabloids such as the Daily Mail and The Sun."
+        },
+        "field": "reliability",
+        "outlet_id": "mirror",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 27,
+          "revised": 1,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "mirror",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/mirror",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "4% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "mirror.co.uk",
+          "final_url": "https://www.mirror.co.uk/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.mirror.co.uk/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.mirror.co.uk/all-about/crime",
+          "contact": "https://www.mirror.co.uk/contact-us/",
+          "corrections": "https://www.mirror.co.uk/corrections-clarifications/",
+          "domain": "mirror.co.uk",
+          "ethics": "https://www.mirror.co.uk/community-standards/",
+          "missing": [
+            "masthead"
+          ],
+          "privacy": "https://www.mirror.co.uk/privacy-notice/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.mirror.co.uk/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, corrections, ethics pages from its home page; no masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 27,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "mirror",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/mirror",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "http://www.mirror.co.uk"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q26792861",
+            "Q7639452"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q217623"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "3 Wikidata items match the domain; this is Q217623 (Daily Mirror); also Q26792861 (Mirror Online), Q7639452 (Sunday Mirror)",
+        "outlet_id": "mirror",
+        "ref_url": "https://www.wikidata.org/wiki/Q217623",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Daily_Mirror"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 27,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "mirror",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/mirror",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 7,
+  "items": 38,
+  "outlet": {
+    "domains": [
+      "mirror.co.uk"
+    ],
+    "id": "mirror",
+    "name": "Daily Mirror"
+  },
+  "shared_stories": 10,
+  "stories": [
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 8331228738776608472,
+      "outlet_count": 2,
+      "title": "Police alerted to RAF Fairford after terror suspect 'called 999 himself'"
+    },
+    {
+      "created_at": 1790633633,
+      "first": true,
+      "id": 7539515453392159397,
+      "outlet_count": 6,
+      "title": "The RAF Fairford ‘terror plot’: Unpacking escalation in the UK echo-chamber"
+    },
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 10317763272925147596,
+      "outlet_count": 9,
+      "title": "Russian Tu-95 nuclear-capable bomber plane crashes, killing six people"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 6800150837118356285,
+      "outlet_count": 9,
+      "title": "Slovak school stabbing kills teacher, injures two"
+    },
+    {
+      "created_at": 1790653938,
+      "first": true,
+      "id": 11187380030572242577,
+      "outlet_count": 5,
+      "title": "Dutch Doctors Euthanize Two-Year-Old Toddler In First Case Of Its Kind"
+    },
+    {
+      "created_at": 1790653938,
+      "first": false,
+      "id": 8671402165075689410,
+      "outlet_count": 4,
+      "title": "Satellite images show Gaza in ruins three years into Israel’s genocidal war"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 8418680091917724622,
+      "outlet_count": 1,
+      "title": "British woman dead after 'drowning' in Ibiza despite desperate attempts to save her"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 5574315262503020356,
+      "outlet_count": 1,
+      "title": "Firefighter, 27, plunges 700ft to his death near Millville Canyon as wingsuit fails"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 4672918978538087843,
+      "outlet_count": 1,
+      "title": "First pictures of 'deeply missed' dad, 49 and daughter, 24, killed in same tragic workplace incident"
+    },
+    {
+      "created_at": 1790715385,
+      "first": true,
+      "id": 1780423987592655382,
+      "outlet_count": 1,
+      "title": "Daughter of Brit missing in France gives theory for disappearance"
+    },
+    {
+      "created_at": 1790680780,
+      "first": true,
+      "id": 8467261046320781304,
+      "outlet_count": 1,
+      "title": "'Another driver lied over £60 parking ticket - it cost us our home and split us across 2 countries'"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 10917389413655294441,
+      "outlet_count": 1,
+      "title": "Brit rushed to hospital after being bitten by toxic pufferfish wreaking havoc off Greek island"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 3570413029085555239,
+      "outlet_count": 1,
+      "title": "Brit retiree, 85, 'violently murdered' in French village with manhunt for two suspects"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 11162370625110855976,
+      "outlet_count": 1,
+      "title": "Spanish F-18 fighter jets scrambled after aerial target enters NATO country's airspace"
+    },
+    {
+      "created_at": 1790660641,
+      "first": true,
+      "id": 8295911776320738634,
+      "outlet_count": 1,
+      "title": "Dad missing for a week after disappearing in France"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 12848179420933474743,
+      "outlet_count": 3,
+      "title": "Four people dead after helicopter crashes and catches fire in Canadian town"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 2946811614078542302,
+      "outlet_count": 2,
+      "title": "Ukraine says it struck Ilsky oil refinery in southern Russia"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 16100927013076150790,
+      "outlet_count": 1,
+      "title": "'Killer robots' one step closer as Russia and US team up to strip safeguards from UN pact"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15912219926801847618,
+      "outlet_count": 1,
+      "title": "Friends spend a day in France for under £75 and have 'one big tip'"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15880129551048094679,
+      "outlet_count": 1,
+      "title": "Teacher said I'd never amount to anything - years later she came to me for a job"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 13188242447542171175,
+      "outlet_count": 1,
+      "title": "British Airways flight to Heathrow declares mid-air emergency over medical incident"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 9417220420644426430,
+      "outlet_count": 1,
+      "title": "Russia issues chilling war threat to Europe and warns 'it will be short'"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 7853149014788405267,
+      "outlet_count": 1,
+      "title": "18-month-old baby dies in car as parent 'forgets about child and goes to work'"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 7790378444718532061,
+      "outlet_count": 1,
+      "title": "Woman, 33, stabbed to death in Benidorm and dumped in field as partner arrested"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 6598586628276033695,
+      "outlet_count": 1,
+      "title": "Putin 'builds new Black Sea palace' - but it has one major drawback"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 6583147752888861877,
+      "outlet_count": 1,
+      "title": "Huge 'explosion' rocks Kyiv as people climb from third-storey windows after Russian attack"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 6446040969344521941,
+      "outlet_count": 1,
+      "title": "New evidence for missing British toddler Cheryl Grimmer in Australia as family blasts 'catastrophic failure'"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 6005832204148572277,
+      "outlet_count": 1,
+      "title": "Mount Etna eruption RECAP: Catania Airport flights suspended as 4km ash cloud sparks red alert"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 5296217003028410828,
+      "outlet_count": 3,
+      "title": "Ireland refuses handshake with Israel, wears black armbands for game"
+    },
+    {
+      "created_at": 1790653939,
+      "first": false,
+      "id": 4950002316148022107,
+      "outlet_count": 2,
+      "title": "British man and his Greek wife 'killed’ in horror Athens building blast"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 4915967790020514260,
+      "outlet_count": 1,
+      "title": "Russia to planning to expand military despite Vladimir Putin's Europe attack 'promise'"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 4579347885279718814,
+      "outlet_count": 1,
+      "title": "British man, 58, dies after being pulled from sea at Algarve holiday beach"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 2998216824883164457,
+      "outlet_count": 1,
+      "title": "Jay Slater's mum Debbie Duncan returns to Tenerife mountains to seek closure for tragic son"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 2769761519437983064,
+      "outlet_count": 1,
+      "title": "Massive manhunt after four people shot dead on Caribbean island St. Vincent"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 1881475066098986328,
+      "outlet_count": 1,
+      "title": "British resident slips from top of waterfall and plunges to her death in front of horrified friend"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

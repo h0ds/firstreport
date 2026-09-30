@@ -1,0 +1,360 @@
+{
+  "export_time": 1790725421,
+  "outlet": "latimes",
+  "page": 2,
+  "page_size": 50,
+  "pages": 3,
+  "stories": [
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11849791725156696414,
+      "outlet_count": 1,
+      "title": "Cocaine, crypto and soccer: Accused kingpin from Uruguay fights U.S. case"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11816121641475892763,
+      "outlet_count": 1,
+      "title": "Waymo offers new incentives for commuters on public transit"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11781618732428679639,
+      "outlet_count": 1,
+      "title": "For third time, Supreme Court rejects Missouri's bid for another GOP-leaning House district"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11761884584815027490,
+      "outlet_count": 1,
+      "title": "Trump supercharged ICE. Now battleground candidates are scrambling for a message"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11675567142076552041,
+      "outlet_count": 1,
+      "title": "A new flash point in the Iran war: The narrow strait called the 'Gate of Tears'"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11558540947583324846,
+      "outlet_count": 1,
+      "title": "Reining in Big Tech: How California lawmakers plan to regulate AI and social media"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11529469703561276101,
+      "outlet_count": 1,
+      "title": "Trump's economic record is working against him in the midterms"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11375305095113268237,
+      "outlet_count": 1,
+      "title": "Supreme Court halts Trump's proposed limits on mail ballots for this year's elections"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 11307761561312327679,
+      "outlet_count": 1,
+      "title": "Trump's trade war with Canada adds a challenge in Senate races"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 10965872969482877989,
+      "outlet_count": 1,
+      "title": "Confusion over protected status leaves employers and Salvadoran immigrants scrambling"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 10672654997093067570,
+      "outlet_count": 1,
+      "title": "Lopez: Here's why so many L.A. voters are undecided in mayor's race"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 10471350983065491621,
+      "outlet_count": 1,
+      "title": "Whistleblower says USPS defied court to push 'untested' portal for Trump mail voting order"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 10267222269086759173,
+      "outlet_count": 1,
+      "title": "California, other states warn Supreme Court of 'chaos' if it lets USPS mail ballot rules stand"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 10257325530120708811,
+      "outlet_count": 1,
+      "title": "California, others challenge Trump effort to deny green cards over past use of public aid"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 10029463358898160234,
+      "outlet_count": 1,
+      "title": "New evidence shows that you are only slightly hotter than a T. rex"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 9816517346350414962,
+      "outlet_count": 1,
+      "title": "Ex-Compton gang leader found guilty in murder of Tupac Shakur"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 9673564921226451005,
+      "outlet_count": 1,
+      "title": "Supreme Court upholds Trump's expanded citizenship data checks, stoking fears of voter purges"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 9541338829467454323,
+      "outlet_count": 1,
+      "title": "EPA scraps power plant emissions limits in sweeping rollback"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 8677556004895669502,
+      "outlet_count": 1,
+      "title": "Commentary: 'Help Wanted/Leave Now!' How U.S. immigration policy remains maddeningly consistently inconsistent"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 8505076205744794797,
+      "outlet_count": 1,
+      "title": "As Trump locks in oil deal, Venezuelans ask: What happened to elections?"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 8437701486685814873,
+      "outlet_count": 1,
+      "title": "Citing California as a problem state, Trump administration shuts down 110 trucking schools"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 8167606997156411149,
+      "outlet_count": 1,
+      "title": "More than $200 million spent fighting and supporting billionaire tax measure, and more to come"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 7448999869704267250,
+      "outlet_count": 1,
+      "title": "Macklemore announces new Free Palestine tour, after Ed Sheeran tour dismissal"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 7285850967072864921,
+      "outlet_count": 1,
+      "title": "Prompted by new California and U.S. laws, two new lawsuits demand return of Nazi-looted art"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 7248845794931617975,
+      "outlet_count": 1,
+      "title": "California Republicans walk a tightrope as Trump jumps into midterms campaigning"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 7006749141684307156,
+      "outlet_count": 1,
+      "title": "'Racist' Transformers-inspired DHS campaign sparks outrage over AI imagery"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 6918993726602523716,
+      "outlet_count": 1,
+      "title": "California is losing its oaks. One man is planting 10,000, including in tree-scarce Altadena"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 6912803660027249654,
+      "outlet_count": 1,
+      "title": "Barabak: Don't look now, but suddenly the U.S. Senate is in play"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 6908259912029672664,
+      "outlet_count": 1,
+      "title": "Trump targets private school tax-exempt status over race-based aid. California takes notice"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 6767828807221049622,
+      "outlet_count": 1,
+      "title": "Questions swirl over Trump's pledge to give $5,000 payouts if GOP wins"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 6665028248800581429,
+      "outlet_count": 1,
+      "title": "France's wildfire nightmare echoes California's hard lessons on building in the woods"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 6663964157020392390,
+      "outlet_count": 1,
+      "title": "Costco's newest store is about to open in SoCal after years of litigation"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 6439708758808294484,
+      "outlet_count": 1,
+      "title": "Tech leaders say they want to slow down the development of AI amid growing fear"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 5956543498704491890,
+      "outlet_count": 1,
+      "title": "Supreme Court, in 5-4 vote, clears way for Trump's new ballroom"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 5898026177776884857,
+      "outlet_count": 1,
+      "title": "He was called 'MAGA's Man' in Latin America. Now he's charged with hiring hitmen to murder his girlfriend"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 5056575485805271273,
+      "outlet_count": 1,
+      "title": "Uber lays off 10% of its workforce in biggest cut since 2020"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 4695567473141218177,
+      "outlet_count": 1,
+      "title": "Hilton proposes eliminating DMV, slashing vehicle registration fee if elected governor"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 4386630052066880236,
+      "outlet_count": 1,
+      "title": "Trump, addressing U.N., threatens to 'annihilate' Iran if war continues"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 4055467418725506816,
+      "outlet_count": 1,
+      "title": "U.S. hits diesel fuel milestone as prices slam California economy from trucks to crops"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 3169126299168508485,
+      "outlet_count": 1,
+      "title": "Trump calls on FCC to punish 'Meet the Press' moderator Kristen Welker"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 2858462324737104732,
+      "outlet_count": 1,
+      "title": "One dead, more than a dozen unaccounted for after Grand Canyon flash flood"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 2826985558190908877,
+      "outlet_count": 1,
+      "title": "Chabria: A 'fight worth fighting': Paramount settlement is less than desired, more than nothing"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 2712141000499117376,
+      "outlet_count": 1,
+      "title": "Lopez: We don't need AI to threaten the future of humanity. We've got Trump's climate policies"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 2656887192003261328,
+      "outlet_count": 1,
+      "title": "Barabak: War games and draft lawsuits: Democrats work to Trump-proof November election"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 2605465034269248291,
+      "outlet_count": 1,
+      "title": "Barabak: Integrity on the ballot: Election deniers target secretary of state races in key states"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 2101242305227035789,
+      "outlet_count": 1,
+      "title": "Cyclosporiasis outbreak that sickened tens of thousands officially over, CDC says"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 1685884402632253503,
+      "outlet_count": 1,
+      "title": "FCC approves foreign owners for a merged Paramount-Warner Bros."
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 1659845341742589019,
+      "outlet_count": 1,
+      "title": "Trumpism's shadow looms over German election as far right eyes historic power"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 435023884377315268,
+      "outlet_count": 1,
+      "title": "The U.S. freed political prisoners in Nicaragua. Now Trump is trying to deport them."
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 262856709063077067,
+      "outlet_count": 1,
+      "title": "With support from loggers and (some) environmentalists, Congress unites on major wildfire bill"
+    }
+  ],
+  "window_days": 30
+}

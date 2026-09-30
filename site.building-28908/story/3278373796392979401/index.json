@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 3278373796392979401,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 3278373796392979401,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "RootsAction and Progressive Democrats of America Announce Campaign Urging AOC and Ro Khanna to Run for 2028 Democratic Presidential Nomination",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3278373796392979401,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1789399903
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/rootsaction-and-progressive-democrats-of-america-announce-campaign-urging-aoc-and-ro-khanna-to-run-for-2028-democratic-presidential-nomination",
+          "cluster_id": 3278373796392979401,
+          "fetched_at": 1790653936,
+          "id": 3278373796392979401,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1789399903,
+          "summary": "Two national activist groups, Progressive Democrats of America and RootsAction, announced today that they will launch a campaign soon after the November midterm elections calling for Reps. Ro Khanna and Alexandria Ocasio-Cortez to enter the race for the 2028 Democratic presidential nomination. “As the prospective field comes into view, it’s crucial to have a strong progressive at the top of the Democratic ticket in 2028,” the two groups said in a joint statement. “Most of the Democrats whose names now…",
+          "text_hash": 14384004639392665773,
+          "title": "RootsAction and Progressive Democrats of America Announce Campaign Urging AOC and Ro Khanna to Run for 2028 Democratic Presidential Nomination"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

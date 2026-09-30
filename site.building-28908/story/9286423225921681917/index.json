@@ -1,0 +1,1120 @@
+{
+  "claims": {
+    "bbc": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "bbc.com",
+          "expires": "2030-07-14",
+          "last_changed": "2021-07-06",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bbc.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1989-07-15"
+      },
+      {
+        "data": {
+          "domain": "bbc.co.uk",
+          "expires": "2034-12-13",
+          "last_changed": "2025-10-29",
+          "registrar": "British Broadcasting Corporation",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bbc",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/bbc.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-13"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9531 (British Broadcasting Corporation); also Q747860 (BBC Online)",
+        "outlet_id": "bbc",
+        "ref_url": "https://www.wikidata.org/wiki/Q9531",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_495#RfC:_reliability_of_the_BBC",
+            "#cite_note-9"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "BBC (British Broadcasting Corporation)",
+          "status": "generally_reliable",
+          "summary": "BBC is a British publicly funded broadcaster. It is considered generally reliable. This includes BBC News, BBC documentaries, and the BBC History site (on BBC Online). However, this excludes BBC projects that incorporate user-generated content (such as h2g2 and the BBC Domesday Project) and BBC publications with reduced editorial oversight (such as Collective). Statements of opinion should conform"
+        },
+        "field": "reliability",
+        "outlet_id": "bbc",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "gbnews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      },
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "nbcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nbcnews.com",
+          "expires": "2027-06-25",
+          "last_changed": "2025-05-24",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nbcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-06-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1940-02-21"
+      },
+      {
+        "data": {
+          "qid": "Q724759"
+        },
+        "field": "owner",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "NBCUniversal"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_186#Column_on_Donors_Trust_on_(but_not_by)_NBC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Is_NBC_a_reliable_sources_for_the_Wikipedia_The_Epoch_Times_(ET)_article?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_314#NBC_News-_'Undecided_voters'_at_NBC's_Biden_town_hall_were_featured_on_MSNBC_as_Biden_voters",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_424#NBC_News_for_Wąsosz_pogrom"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NBC News",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NBC News is generally reliable for news. See also: MS NOW (formerly MSNBC)"
+        },
+        "field": "reliability",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "timesofindia": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "indiatimes.com",
+          "expires": "2026-11-21",
+          "last_changed": "2025-10-23",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/indiatimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-11-22"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1838-01-01"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1898-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q139935842"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q139935842"
+      },
+      {
+        "data": {
+          "qid": "Q972645"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Times Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_287#Times_of_India_RFC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_447#RfC:_The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_320#The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_342#Valid_Sources?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_353#Circular_references_from_The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_364#Times_of_India_is_not_that_pro-government_as_mentioned_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_442#Times_of_India_running_AI-generated_articles?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_493#Another_AI-generated_article_from_The_Times_of_India"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Times of India (post-1950) (TOI)",
+          "status": "no_consensus",
+          "summary": "Additional considerations apply to articles published in The Times of India (TOI) after 1950. TOI has sometimes had a poor reputation for fact-checking and its use should be evaluated with caution. Editors should ensure that they do not use paid advertorials —which were first published in TOI in 1950 at the earliest—to verify information or establish notability. Paid advertorials may be of particu"
+        },
+        "field": "reliability",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.06988120079040527,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 7,
+      "weakest_join": 0.7898812294006348
+    },
+    "created_at": 1790647865,
+    "expired": false,
+    "id": 9286423225921681917,
+    "item_count": 9,
+    "last_active_at": 1790715381,
+    "origin_item_id": 5745843335705839979,
+    "origin_outlet_id": "nbcnews",
+    "outlet_count": 9,
+    "primary_title": "New York Times exec 'shot dead by his elderly in-laws amid bitter family feud over becoming trans'",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9286423225921681917,
+        "joined_at": 1790647865,
+        "outlet_id": "bbc",
+        "published_at": 1790628603
+      },
+      {
+        "item_id": 14739823568875141644,
+        "joined_at": 1790653938,
+        "outlet_id": "gbnews",
+        "published_at": 1790639628
+      },
+      {
+        "item_id": 11135439360408566507,
+        "joined_at": 1790653938,
+        "outlet_id": "independent",
+        "published_at": 1790628979
+      },
+      {
+        "item_id": 5826757722901718574,
+        "joined_at": 1790653941,
+        "outlet_id": "scmp",
+        "published_at": 1790651649
+      },
+      {
+        "item_id": 17647623635696810700,
+        "joined_at": 1790654492,
+        "outlet_id": "guardian",
+        "published_at": 1790637438
+      },
+      {
+        "item_id": 6051450418385100985,
+        "joined_at": 1790654513,
+        "outlet_id": "timesofindia",
+        "published_at": 1790653865
+      },
+      {
+        "item_id": 5745843335705839979,
+        "joined_at": 1790654748,
+        "outlet_id": "nbcnews",
+        "published_at": 1790619471
+      },
+      {
+        "item_id": 10290170882261287640,
+        "joined_at": 1790665970,
+        "outlet_id": "thehindu",
+        "published_at": 1790665151
+      },
+      {
+        "item_id": 5779853454683301194,
+        "joined_at": 1790715381,
+        "outlet_id": "breitbart",
+        "published_at": 1790705408
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "bbc",
+            "nbcnews",
+            "scmp",
+            "guardian",
+            "thehindu",
+            "independent"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "timesofindia"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "gbnews"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "bbc": "BBC",
+    "breitbart": "Breitbart",
+    "gbnews": "GB News",
+    "guardian": "The Guardian",
+    "independent": "The Independent",
+    "nbcnews": "NBC News",
+    "scmp": "South China Morning Post",
+    "thehindu": "The Hindu",
+    "timesofindia": "The Times of India"
+  },
+  "outlets_24h": 9,
+  "outlets_6h": 1,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 17647623635696810700,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 431,
+      "snapshot_id": 8038465178773594232,
+      "ts": 1790647865
+    },
+    {
+      "cluster_id": null,
+      "item_id": 5826757722901718574,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3109,
+      "snapshot_id": 6095687600763595853,
+      "ts": 1790659140
+    },
+    {
+      "cluster_id": null,
+      "item_id": 9286423225921681917,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3311,
+      "snapshot_id": 13865928381991756781,
+      "ts": 1790662841
+    }
+  ],
+  "spark": [
+    7,
+    7,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nbcnews.com/news/us-news/new-york-executive-shot-killed-laws-bay-area-park-police-say-rcna600300",
+          "cluster_id": 9286423225921681917,
+          "fetched_at": 1790654748,
+          "id": 5745843335705839979,
+          "joined_at": 1790654748,
+          "lang": "en",
+          "outlet_id": "nbcnews",
+          "published_at": 1790619471,
+          "summary": "Jonathan McKinsey, head of engineering and games player experiences for the Times, was found on the ground at a park with multiple gunshot wounds, police said.",
+          "text_hash": 519488477316818028,
+          "title": "New York Times executive fatally shot by his in-laws in Bay Area park, police say"
+        }
+      ],
+      "outlet_id": "nbcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bbc.co.uk/news/articles/cred737qdv2no",
+          "cluster_id": 9286423225921681917,
+          "fetched_at": 1790647865,
+          "id": 9286423225921681917,
+          "joined_at": 1790647865,
+          "lang": "en",
+          "outlet_id": "bbc",
+          "published_at": 1790628603,
+          "summary": "Jonathan McKinsey's in-laws, who are both 77 years old, face multiple charges including first-degree murder.",
+          "text_hash": 11306844441000513306,
+          "title": "New York Times executive fatally shot by elderly in-laws, police say"
+        }
+      ],
+      "outlet_id": "bbc"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/americas/crime/shooting-parents-son-in-law-dead-child-abuse-b3057851.html",
+          "cluster_id": 9286423225921681917,
+          "fetched_at": 1790653938,
+          "id": 11135439360408566507,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790628979,
+          "summary": "Jonathan McKinsey, the 40-year-old director of engineering for New York Times Games, was gunned down by a park in broad daylight",
+          "text_hash": 10387847734879316303,
+          "title": "Parents accused of taking turns fatally shooting their son-in-law months after his child abuse arrest"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/us-news/2026/sep/28/new-york-times-engineer-california-shooting",
+          "cluster_id": 9286423225921681917,
+          "fetched_at": 1790637985,
+          "id": 17647623635696810700,
+          "joined_at": 1790654492,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790637438,
+          "summary": "Police arrest couple in their 70s after Jonathan McKinsey, 40, found dead in park in Bay Area city of Dublin A married couple in their 70s have been arrested for allegedly shooting and killing their son-in-law, a New York Times engineer, in broad daylight at a suburban Bay Area park. A police officer found Jonathan McKinsey, 40, lying on the ground with multiple gunshot wounds in a park in Dublin, California, a small city about 35 miles (56.3km) east of San Francisco. Around the time the officer discovered…",
+          "text_hash": 16086185985439148534,
+          "title": "In-laws arrested on suspicion of murder after New York Times engineer shot dead in California"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://gbnews.com/news/us/jonathan-mckinsey-new-york-times-family-feud-trans",
+          "cluster_id": 9286423225921681917,
+          "fetched_at": 1790653938,
+          "id": 14739823568875141644,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790639628,
+          "summary": "Jonathan McKinsey, a 40-year-old tech executive at the New York Times, was allegedly shot dead by his in-laws amid a family feud over him \"transitioning\", it has emerged. Mr McKinsey was killed in a car park at a sports complex in Dublin, California, at approximately 3pm on Saturday. Police arrested his in-laws, Shouyong Zhang and Shili Chen, both aged 77, shortly after the shooting. The pair have been charged with murder in a case that had already shocked America over the suspects' identities. TRENDING…",
+          "text_hash": 12730807994346155186,
+          "title": "New York Times exec 'shot dead by his elderly in-laws amid bitter family feud over becoming trans'"
+        }
+      ],
+      "outlet_id": "gbnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/world/united-states-canada/article/3369132/elderly-laws-arrested-california-shooting-death-new-york-times-employee",
+          "cluster_id": 9286423225921681917,
+          "fetched_at": 1790653941,
+          "id": 5826757722901718574,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790651649,
+          "summary": "A couple in their late 70s gunned down their son-in-law in a California city park over the weekend, authorities said, and court documents showed the victim had been in a bitter custody dispute with their daughter. Jonathan McKinsey, a 40-year-old gaming engineer for The New York Times, was shot to death Saturday afternoon in the car park of a sports complex in Dublin, east of San Francisco. A police sergeant was driving nearby and saw him on the ground as witnesses began calling 911 and pointing...",
+          "text_hash": 9739356821652536277,
+          "title": "Elderly in-laws arrested in California shooting death of New York Times employee"
+        }
+      ],
+      "outlet_id": "scmp"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://timesofindia.indiatimes.com/world/us/took-turns-shooting-trans-nyt-executive-killed-by-in-laws-amid-anti-lgbtq-allegations/articleshow/134555420.cms",
+          "cluster_id": 9286423225921681917,
+          "fetched_at": 1790654513,
+          "id": 6051450418385100985,
+          "joined_at": 1790654513,
+          "lang": "en",
+          "outlet_id": "timesofindia",
+          "published_at": 1790653865,
+          "summary": "Jonathan McKinsey was shot and killed by his elderly in-laws at a sports complex in California. Police arrested the suspects, Shouyong Zhang and Shili Chen, near the crime scene shortly after the incident. McKinsey's transgender identity allegedly contributed to a family conflict and legal disputes with his wife, Candice Jang. The couple was involved in divorce proceedings and allegations of domestic violence prior to McKinsey's death.",
+          "text_hash": 3197610799693536447,
+          "title": "‘Took turns shooting’: Trans NYT exec killed by in-laws amid anti-LGBTQ+ allegations"
+        }
+      ],
+      "outlet_id": "timesofindia"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/police-arrest-california-couple-in-public-shooting-death-of-their-son-in-law/article71522847.ece",
+          "cluster_id": 9286423225921681917,
+          "fetched_at": 1790665970,
+          "id": 10290170882261287640,
+          "joined_at": 1790665970,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790665151,
+          "summary": "Jonathan McKinsey, a 40-year-old gaming engineer for The New York Times, was shot to death in the parking lot of a sports complex in Dublin, east of San Francisco",
+          "text_hash": 10097292426352799123,
+          "title": "Police arrest California couple in public shooting death of their son-in-law"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/2nd-amendment/2026/09/29/trans-nyt-games-executive-allegedly-shot-dead-wifes-parents/",
+          "cluster_id": 9286423225921681917,
+          "fetched_at": 1790715381,
+          "id": 5779853454683301194,
+          "joined_at": 1790715381,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790705408,
+          "summary": "Jonathan McKinsey, a woman living as a man who was an executive in the games department of the NYT, was allegedly shot and killed Saturday. The post Trans NYT Games Executive Allegedly Shot Dead by Wife’s Parents appeared first on Breitbart .",
+          "text_hash": 5143321947596460270,
+          "title": "Trans NYT Games Executive Allegedly Shot Dead by Wife's Parents"
+        }
+      ],
+      "outlet_id": "breitbart"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 5745843335705839979,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3636,
+      "snapshot_id": 8809766573469748220,
+      "ts": 1790669085
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17647623635696810700,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3784,
+      "snapshot_id": 14614480373335041781,
+      "ts": 1790679060
+    },
+    {
+      "cluster_id": null,
+      "item_id": 5745843335705839979,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5371,
+      "snapshot_id": 16262753627618973934,
+      "ts": 1790715492
+    },
+    {
+      "cluster_id": null,
+      "item_id": 9286423225921681917,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5748,
+      "snapshot_id": 1556582939125495797,
+      "ts": 1790721703
+    }
+  ]
+}

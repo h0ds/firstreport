@@ -1,0 +1,150 @@
+{
+  "claims": {
+    "jpost": [
+      {
+        "data": {
+          "qid": "Q801"
+        },
+        "field": "country",
+        "outlet_id": "jpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q35438",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Israel"
+      },
+      {
+        "data": {
+          "domain": "jpost.com",
+          "expires": "2033-09-29",
+          "last_changed": "2024-07-31",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "jpost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/jpost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-30"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "jpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q35438",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1932-12-01"
+      },
+      {
+        "data": {
+          "qid": "Q6799805"
+        },
+        "field": "owner",
+        "outlet_id": "jpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q35438",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Eli Azur"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_459#RFC_Jerusalem_Post",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_452#The_Jerusalem_Posts",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_58#Using_an_opinion_piece_by_a_controversial_journalist_as_a_reliable_source_regarding_Middle_Eastern_History",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#Jerusalem_Post_unreliable_for_archaeology?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_489#Haaretz,_Jerusalem_Post_for_claim_that_Ramy_Abdu_is_Hamas_affiliated"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Jerusalem Post",
+          "status": "generally_reliable",
+          "summary": "The Jerusalem Post is generally reliable but should be treated with caution when making extraordinary claims regarding the Israeli–Palestinian conflict. It should be used as a source for the Israeli–Palestinian conflict only to cite basic facts or if its reporting is validated by additional reporting from another source not similarly limited."
+        },
+        "field": "reliability",
+        "outlet_id": "jpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653943,
+    "expired": false,
+    "id": 14039781591435713443,
+    "item_count": 1,
+    "last_active_at": 1790653943,
+    "origin_item_id": 14039781591435713443,
+    "origin_outlet_id": "jpost",
+    "outlet_count": 1,
+    "primary_title": "IDF issues evacuation order for Tehran ahead of strikes",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 14039781591435713443,
+        "joined_at": 1790653943,
+        "outlet_id": "jpost",
+        "published_at": 1750091967
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "jpost": "The Jerusalem Post"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://jpost.com/breaking-news/article-857933",
+          "cluster_id": 14039781591435713443,
+          "fetched_at": 1790653943,
+          "id": 14039781591435713443,
+          "joined_at": 1790653943,
+          "lang": "en",
+          "outlet_id": "jpost",
+          "published_at": 1750091967,
+          "summary": "",
+          "text_hash": 14183393153048432754,
+          "title": "IDF issues evacuation order for Tehran ahead of strikes"
+        }
+      ],
+      "outlet_id": "jpost"
+    }
+  ],
+  "withdrawals": []
+}

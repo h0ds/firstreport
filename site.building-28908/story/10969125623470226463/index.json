@@ -1,0 +1,1341 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "cbsnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "cbsnews.com",
+          "expires": "2027-10-03",
+          "last_changed": "2026-09-01",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cbsnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-10-04"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-09-18"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_522#Request_for_Comment:_Reliability_of_CBS_News_under_Bari_Weiss",
+            "#cite_note-20"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CBS News",
+          "status": "generally_reliable",
+          "summary": "CBS News is the news division of CBS. It is considered generally reliable. Some editors note, however, that its television content may include superficial coverage, which might not qualify under WP:MEDRS. Editors also note that CBS has undergone intensified political bias after Bari Weiss became editor-in-chief in late 2025, and supression of reporting critical of the Trump administration has been"
+        },
+        "field": "reliability",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "cgtn": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "cgtn.com",
+          "expires": "2026-11-15",
+          "last_changed": "2025-11-01",
+          "registrar": "Alibaba Cloud Computing (Beijing) Co., Ltd.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cgtn",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cgtn.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2002-11-15"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1997-09-20"
+      },
+      {
+        "data": {
+          "qid": "Q207936"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "China Central Television"
+      },
+      {
+        "data": {
+          "qid": "Q51675998"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "China Media Group"
+      }
+    ],
+    "dailysabah": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      },
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "globeandmail": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      },
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "rt": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "rt.com",
+          "expires": "2027-09-22",
+          "last_changed": "2026-09-21",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rt",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rt.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-09-23"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-09-15"
+      },
+      {
+        "data": {
+          "qid": "Q821172"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "RIA Novosti"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#RfC:_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Enquiry_concerning_the_RT_Network",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_168#RT_news_and_Crimean_status_referendum,_2014",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_173#Russia_Today",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Attributed_statement_sourced_by_RT_news_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_231#RT_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#On_Contact_/_RT",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Ruptly,_subsidiary_of_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)",
+          "status": "deprecated",
+          "summary": "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
+        },
+        "field": "reliability",
+        "outlet_id": "rt",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "thehill": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "washingtonpost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q166032",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtonpost.com",
+          "expires": "2026-11-12",
+          "last_changed": "2025-11-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtonpost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-11-13"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q166032",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1877-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q312556"
+        },
+        "field": "owner",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q166032",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Jeff Bezos"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "#cite_note-92"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Post (The Post, WaPo, TWP)",
+          "status": "generally_reliable",
+          "summary": "Most editors consider The Washington Post generally reliable. Some editors note that WP:NEWSBLOG should be used to evaluate blog posts on The Washington Post's website."
+        },
+        "field": "reliability",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.037125587463378906,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 14,
+      "weakest_join": 0.7571256160736084
+    },
+    "created_at": 1790633639,
+    "expired": false,
+    "id": 10969125623470226463,
+    "item_count": 15,
+    "last_active_at": 1790715370,
+    "origin_item_id": 1753654880704680034,
+    "origin_outlet_id": "axios",
+    "outlet_count": 12,
+    "primary_title": "Trump expects more talks after rejecting latest Iranian proposal",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 10969125623470226463,
+        "joined_at": 1790633639,
+        "outlet_id": "rt",
+        "published_at": 1790545472
+      },
+      {
+        "item_id": 11673070380692349140,
+        "joined_at": 1790633644,
+        "outlet_id": "washingtonpost",
+        "published_at": 1790530246
+      },
+      {
+        "item_id": 1306976061137868172,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790596720
+      },
+      {
+        "item_id": 834847034802864920,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790520907
+      },
+      {
+        "item_id": 1753654880704680034,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790432874
+      },
+      {
+        "item_id": 1954124710071928579,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790512682
+      },
+      {
+        "item_id": 13382420576911729354,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790585879
+      },
+      {
+        "item_id": 17555823242426732284,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790568804
+      },
+      {
+        "item_id": 14809690127847385632,
+        "joined_at": 1790653944,
+        "outlet_id": "cgtn",
+        "published_at": 1790600985
+      },
+      {
+        "item_id": 3242454174077785029,
+        "joined_at": 1790653944,
+        "outlet_id": "cgtn",
+        "published_at": 1790573074
+      },
+      {
+        "item_id": 15911557429622625655,
+        "joined_at": 1790653944,
+        "outlet_id": "dailysabah",
+        "published_at": 1790587380
+      },
+      {
+        "item_id": 11005711950218105689,
+        "joined_at": 1790654492,
+        "outlet_id": "breitbart",
+        "published_at": 1790635842
+      },
+      {
+        "item_id": 8548008264402802439,
+        "joined_at": 1790654492,
+        "outlet_id": "cbsnews",
+        "published_at": 1790633875
+      },
+      {
+        "item_id": 14974306670914696555,
+        "joined_at": 1790654492,
+        "outlet_id": "independent",
+        "published_at": 1790652071
+      },
+      {
+        "item_id": 17505866199131641233,
+        "joined_at": 1790715370,
+        "outlet_id": "aljazeera",
+        "published_at": 1790694593
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "axios",
+            "cbsnews",
+            "globeandmail",
+            "thehill",
+            "thehindu",
+            "independent",
+            "washingtonpost"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "dailysabah"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "rt"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [
+        "cgtn"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "axios": "Axios",
+    "breitbart": "Breitbart",
+    "cbsnews": "CBS News",
+    "cgtn": "CGTN",
+    "dailysabah": "Daily Sabah",
+    "globeandmail": "The Globe and Mail",
+    "independent": "The Independent",
+    "rt": "RT",
+    "thehill": "The Hill",
+    "thehindu": "The Hindu",
+    "washingtonpost": "The Washington Post"
+  },
+  "outlets_24h": 10,
+  "outlets_6h": 1,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 8548008264402802439,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3376,
+      "snapshot_id": 9818851569150408696,
+      "ts": 1790664665
+    },
+    {
+      "cluster_id": null,
+      "item_id": 8548008264402802439,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3874,
+      "snapshot_id": 7649540876211644376,
+      "ts": 1790679061
+    },
+    {
+      "cluster_id": null,
+      "item_id": 8548008264402802439,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5907,
+      "snapshot_id": 6389917781636320744,
+      "ts": 1790724933
+    }
+  ],
+  "spark": [
+    2,
+    2,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    11,
+    12
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/26/trump-iran-un-proposal",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653931,
+          "id": 1753654880704680034,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790432874,
+          "summary": "President Trump said on Saturday that he rejected the latest Iranian proposal that was conveyed to the U.S. during indirect negotiations in New York this week. Why it matters: While Qatar and other regional mediators are trying to revive negotiations between the U.S. and Iran, the gaps on the key issues are still very wide. While Iran wants to focus any talks on the Strait of Hormuz and the U.S. naval blockade, the Trump administration demands the Iranians agree to nuclear concessions. What he is saying:…",
+          "text_hash": 3812126058425337875,
+          "title": "Trump says he rejected the latest Iranian proposal"
+        },
+        {
+          "canonical_url": "https://axios.com/2026/09/27/trump-iran-war-hormuz-blockade-negotiations",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653931,
+          "id": 834847034802864920,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790520907,
+          "summary": "One day after he rejected an Iranian proposal to end the war, President Trump told Axios in a phone interview on Sunday that he expects U.S. negotiators to engage in more talks with the country this week. Why it matters: Qatar and other regional mediators are trying to revive negotiations between the U.S. and Iran, but the two sides are far apart on the key issues. While Iran wants to focus any talks on the Strait of Hormuz and the U.S. naval blockade, the Trump administration is demanding that Iran agree…",
+          "text_hash": 3778277503760222355,
+          "title": "After nixing Iran proposal, Trump tells Axios he expects talks this week"
+        }
+      ],
+      "outlet_id": "axios"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-iran-insists-only-diplomacy-can-solve-conflict-after-trumps-rejects/",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653941,
+          "id": 1954124710071928579,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790512682,
+          "summary": "Trump says he expects U.S. negotiators to engage in more talks this week",
+          "text_hash": 14761588113192667186,
+          "title": "Iran insists only diplomacy can solve conflict after Trump rejects peace proposal"
+        }
+      ],
+      "outlet_id": "globeandmail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtonpost.com/world/2026/09/27/trump-says-us-iran-slated-indirect-talks-despite-his-rejection-offer/",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790633644,
+          "id": 11673070380692349140,
+          "joined_at": 1790633644,
+          "lang": "en",
+          "outlet_id": "washingtonpost",
+          "published_at": 1790530246,
+          "summary": "Hostile rhetoric on both sides underscored the difficulty of reaching a negotiated end to the war.",
+          "text_hash": 3909611242110636379,
+          "title": "Trump says U.S., Iran slated for indirect talks after he rejects latest proposal"
+        }
+      ],
+      "outlet_id": "washingtonpost"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rt.com/news/646338-trump-iran-talks-rhetoric/",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790633639,
+          "id": 10969125623470226463,
+          "joined_at": 1790633639,
+          "lang": "en",
+          "outlet_id": "rt",
+          "published_at": 1790545472,
+          "summary": "The US and Iran are expected to hold talks as soon as this week, US President Donald Trump said Read Full Article at RT.com",
+          "text_hash": 12178877170041253956,
+          "title": "Trump teases ‘more talks’ but mulls strikes on Iran"
+        }
+      ],
+      "outlet_id": "rt"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/iran-stands-firm-on-hormuz-plan-after-us-rejection/article71517156.ece",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653942,
+          "id": 17555823242426732284,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790568804,
+          "summary": "Iran's plan called for a cessation of all hostilities in West Asia, including in Lebanon, according to Foreign Minister Abbas Araghchi, and a return to the conditions in the ceasefire deal that fell apart a few months ago",
+          "text_hash": 10570990931940279424,
+          "title": "Trump expects new Iran talks despite rejecting deal offer"
+        },
+        {
+          "canonical_url": "https://thehindu.com/news/international/iran-has-no-plans-for-talks-with-us-says-state-media/article71518820.ece",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653942,
+          "id": 13382420576911729354,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790585879,
+          "summary": "Iran's UN delegation has no plans for negotiations, even as U.S. President Donald Trump says he expects talks to resume soon.",
+          "text_hash": 722898626529329750,
+          "title": "Iran has no plans for talks with U.S., says state media"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://news.cgtn.com/news/2026-09-28/Trump-expects-more-US-Iran-talks-after-rejecting-truce-1QNJJlQvldu/p.html",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653944,
+          "id": 3242454174077785029,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "cgtn",
+          "published_at": 1790573074,
+          "summary": "US President Donald Trump said on Sunday that he expects the United States and Iran to hold more talks this week, a day after confirming that he had rejected Iran's latest truce proposal.",
+          "text_hash": 4599311162105727621,
+          "title": "Trump expects more US-Iran talks after rejecting truce"
+        },
+        {
+          "canonical_url": "https://news.cgtn.com/news/2026-09-28/Iran-not-planning-talks-with-US-during-delegation-s-UN-visit-media-1QOpwMKdK5q/p.html",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653944,
+          "id": 14809690127847385632,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "cgtn",
+          "published_at": 1790600985,
+          "summary": "Iran not planning talks with US during delegation's UN visit: media",
+          "text_hash": 6496674146959129886,
+          "title": "Iran not planning talks with US during delegation's UN visit: media"
+        }
+      ],
+      "outlet_id": "cgtn"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailysabah.com/world/mid-east/iran-delegation-at-un-planning-no-further-talks-with-us-reports",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653944,
+          "id": 15911557429622625655,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790587380,
+          "summary": "Iranian state media reported Monday that the country's U.N. delegation has no plans to talk with the United States, following President Donald Trump’s comments that he expected fur...",
+          "text_hash": 658793996065462995,
+          "title": "Iran delegation at UN planning no further talks with US: Reports"
+        }
+      ],
+      "outlet_id": "dailysabah"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehill.com/policy/international/6114543-donald-trump-us-iran-war-peace-talks/",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653930,
+          "id": 1306976061137868172,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790596720,
+          "summary": "President Trump said Sunday he expects U.S. officials to negotiate further with their Iranian counterparts this week, after he rejected a seven-day ceasefire proposal from Tehran. “I expect more talks with Iran [this week]. They want to make a deal, but it is not the deal that I want to make,” Trump told Axios in…",
+          "text_hash": 13235447612107522178,
+          "title": "Trump expects more talks after rejecting latest Iranian proposal"
+        }
+      ],
+      "outlet_id": "thehill"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://cbsnews.com/live-updates/iran-war-us-trump-talks-strait-of-hormuz/",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653930,
+          "id": 8548008264402802439,
+          "joined_at": 1790654492,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790633875,
+          "summary": "President Trump says U.S. and Iranian negotiators are talking via mediators, but insists he has \"offered them NOTHING\" to get a peace deal done.",
+          "text_hash": 9545560409107875088,
+          "title": "Iran says it expects response to ceasefire plan already rejected by Trump"
+        }
+      ],
+      "outlet_id": "cbsnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/politics/2026/09/28/trump-u-s-will-win-iran-war-very-soon-as-mediated-talks-continue-one-way-or-the-other/",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790649504,
+          "id": 11005711950218105689,
+          "joined_at": 1790654492,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790635842,
+          "summary": "President Donald Trump said Monday the war with Iran will end with a U.S. victory “very soon,” declaring the outcome will be decided “one way or the other” as Washington and Tehran remain engaged through mediators over a potential agreement addressing the Strait of Hormuz and Iran’s nuclear program. The post Trump: U.S. Will Win Iran War ‘Very Soon’ as Mediated Talks Continue — ‘One Way or the Other’ appeared first on Breitbart .",
+          "text_hash": 2171031039977328347,
+          "title": "Trump: U.S. Will Win Iran War ‘Very Soon’ as Mediated Talks Continue — ‘One Way or the Other’"
+        }
+      ],
+      "outlet_id": "breitbart"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/middle-east/iran-us-war-live-trump-strikes-hormuz-oil-peace-talks-b3057304.html",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790653938,
+          "id": 14974306670914696555,
+          "joined_at": 1790654492,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790652071,
+          "summary": "Donald Trump has publicly rejected the seven-day plan and reportedly told staff he expects to resume hostilities after the November midterms",
+          "text_hash": 483132476003633396,
+          "title": "Iran-US war latest: Trump says US will win conflict ‘very soon’ as officials begin talks with peace negotiators"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/29/us-iran-talks-in-new-york-whats-the-latest?traffic_source=rss",
+          "cluster_id": 10969125623470226463,
+          "fetched_at": 1790715370,
+          "id": 17505866199131641233,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790694593,
+          "summary": "Both sides remain interested in a diplomatic settlement but differ on how to achieve one.",
+          "text_hash": 14805477047794514422,
+          "title": "US-Iran talks in New York: What’s the latest?"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 14974306670914696555,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3100,
+      "snapshot_id": 5410876935907481467,
+      "ts": 1790659140
+    },
+    {
+      "cluster_id": null,
+      "item_id": 11005711950218105689,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3231,
+      "snapshot_id": 6340058221328524891,
+      "ts": 1790660768
+    }
+  ]
+}

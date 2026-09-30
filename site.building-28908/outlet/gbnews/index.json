@@ -1,0 +1,672 @@
+{
+  "claims": {
+    "country": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q561068"
+        },
+        "field": "legal_form",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "specialty channel"
+      },
+      {
+        "data": {
+          "qid": "Q1616075"
+        },
+        "field": "legal_form",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "television station"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "gbnews.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.gbnews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "GB News"
+      },
+      {
+        "field": "name",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q100300992"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 38,
+          "origin_of": 1,
+          "shared_stories": 7,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "gbnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/gbnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 14% of 7 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 38,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "gbnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/gbnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.4 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "gbnews.com"
+        },
+        "field": "registrar",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Dreamscape Networks International Pte Ltd"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 38,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "gbnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/gbnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "final_url": "https://www.gbnews.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.gbnews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.gbnews.com/about-us/contact-us",
+          "domain": "gbnews.com",
+          "masthead": "https://www.gbnews.com/news/world/oktoberfest-staff-campaign-far-right-hate-speech",
+          "missing": [
+            "contact",
+            "corrections",
+            "ethics"
+          ],
+          "privacy": "https://www.gbnews.com/tech/privacy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.gbnews.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, privacy, masthead pages from its home page; no contact, corrections, ethics link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 38,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "gbnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/gbnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.gbnews.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q100300992"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/GB_News"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 38,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "gbnews",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/gbnews",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 4,
+  "items": 73,
+  "outlet": {
+    "domains": [
+      "gbnews.com"
+    ],
+    "id": "gbnews",
+    "name": "GB News"
+  },
+  "shared_stories": 13,
+  "stories": [
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 15587760235900320854,
+      "outlet_count": 26,
+      "title": "5 men released on bail in UK over suspected US-run airbase plot"
+    },
+    {
+      "created_at": 1790653848,
+      "first": true,
+      "id": 12392621956996144113,
+      "outlet_count": 10,
+      "title": "Rubio says UK airbase incident involved a foreign state"
+    },
+    {
+      "created_at": 1790658738,
+      "first": false,
+      "id": 16048654248437613464,
+      "outlet_count": 2,
+      "title": "Burnham to signal willingness to look at scrapping pension triple lock to fund social care"
+    },
+    {
+      "created_at": 1790653939,
+      "first": false,
+      "id": 8331228738776608472,
+      "outlet_count": 2,
+      "title": "Police alerted to RAF Fairford after terror suspect 'called 999 himself'"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 7539515453392159397,
+      "outlet_count": 6,
+      "title": "The RAF Fairford ‘terror plot’: Unpacking escalation in the UK echo-chamber"
+    },
+    {
+      "created_at": 1790716348,
+      "first": true,
+      "id": 6903607102595878429,
+      "outlet_count": 1,
+      "title": "The state is failing and has failed but Andy Burnham wants to give it more power, says Jacob Rees-Mogg"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 13101871118082445272,
+      "outlet_count": 2,
+      "title": "Judge keeps UK far-right activist in jail for trial on slashing migrant dinghy"
+    },
+    {
+      "created_at": 1790715376,
+      "first": false,
+      "id": 9350437899012036591,
+      "outlet_count": 2,
+      "title": "Russia's embassy in Britain threatens West with nuclear war over TV show depicting NATO strike on Kaliningrad"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 11336663336944555363,
+      "outlet_count": 8,
+      "title": "Argentina threatens legal action against UK over Falkland Islands oil exploration"
+    },
+    {
+      "created_at": 1790647865,
+      "first": false,
+      "id": 9286423225921681917,
+      "outlet_count": 9,
+      "title": "New York Times exec 'shot dead by his elderly in-laws amid bitter family feud over becoming trans'"
+    },
+    {
+      "created_at": 1790653938,
+      "first": true,
+      "id": 6194157444656708867,
+      "outlet_count": 2,
+      "title": "Labour minister claims the idea of Britain's pubs, warm ale and black labradors is a 'far-right fantasy that never existed'"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 17346883381860813496,
+      "outlet_count": 1,
+      "title": "Martin Daubney clashes with Labour MP in bitter triple lock row: 'Going for pensioners AGAIN!'"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 16809128829522105150,
+      "outlet_count": 1,
+      "title": "Louise Haigh refuses to rule out rejoining the European Union under Andy Burnham: 'Brexit hasn't worked'"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 16481263532038941866,
+      "outlet_count": 1,
+      "title": "Giving millions of pounds to Afghanistan and Iran will stop migrant crisis, suggests Labour MP"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 15342669780224545149,
+      "outlet_count": 1,
+      "title": "Louis Walsh ‘suffered heart attack’ in ITV Celebrity Big Brother house as star reveals terrifying ordeal"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 12604164429978211821,
+      "outlet_count": 1,
+      "title": "Body of newborn baby found on Welsh shoreline as police launch search for mother"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 12322111622378437683,
+      "outlet_count": 1,
+      "title": "WATCH: Angela Rayner hails Andy Burnham after 'fantastic' conference speech"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 10839140821751330789,
+      "outlet_count": 1,
+      "title": "John Goodman, 74, barely recognisable as he shows off dramatic 14-stone transformation"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 10711286921904740841,
+      "outlet_count": 1,
+      "title": "‘Oh come on!’ Alex Armstrong presses Lucy Powell to address Labour minister’s ‘far right’ warning about rural Britain"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 10502023923160125499,
+      "outlet_count": 1,
+      "title": "Britain's safest and most dangerous universities according to students as millions start this week — Is yours among them?"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 10327529003292930291,
+      "outlet_count": 1,
+      "title": "Harry ‘wants to reconcile with William’ but Diana anniversary reunion could be unlikely"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 9830766850767862094,
+      "outlet_count": 1,
+      "title": "I spent 24 hours on the Russian border. People are living on 'thin ice'"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 9359430337249121027,
+      "outlet_count": 1,
+      "title": "Nigel Farage firebomb suspect caught on CCTV but police failed to spot him"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 8061705338893791906,
+      "outlet_count": 1,
+      "title": "WATCH: Warship blown up and sunk off British coast as Royal Navy test new ‘ship buster’ missile"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 5012330392039593235,
+      "outlet_count": 1,
+      "title": "Police watchdog finds no evidence of 'tactical contact' before A66 crash which killed two officers"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 3444076842218578426,
+      "outlet_count": 1,
+      "title": "Boy, 17, arrested after three teenagers killed following car crash into river"
+    },
+    {
+      "created_at": 1790715375,
+      "first": true,
+      "id": 2887398590702739588,
+      "outlet_count": 2,
+      "title": "British police find no explosives in vans linked to 5 men detained near U.S.-run military base"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 960044752821343752,
+      "outlet_count": 1,
+      "title": "Henry Nowak's killer Vickrum Digwa given permission to appeal prison sentence for murder of teenager"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 93600592948496152,
+      "outlet_count": 1,
+      "title": "Amy Tapper flaunts staggering 8.5st weight loss transformation as fans left stunned by Gogglebox star: 'Incredible!'"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 16664745717732133943,
+      "outlet_count": 5,
+      "title": "Delta Air Lines flight to Boston forced to make emergency landing in Portugal after smoke in cabin"
+    },
+    {
+      "created_at": 1790680567,
+      "first": true,
+      "id": 18323651991543140679,
+      "outlet_count": 1,
+      "title": "Angela Rayner hints at a more radical Labour as she takes swipe at Nigel Farage over donations: 'Just imagine what he'd do for £70million!'"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 17786816314976489834,
+      "outlet_count": 1,
+      "title": "Lucy Powell insists Labour are ‘committed to the triple lock’ amid fear Andy Burnham will scrap pension protections"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 13996672602235899831,
+      "outlet_count": 1,
+      "title": "Gatwick Airport travel chaos as fire breaks out with passengers facing horror delays"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 13580553740569115770,
+      "outlet_count": 1,
+      "title": "Britain's biggest benefits fraudster who stole £54 MILLION ordered to pay back just £18k"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 13056078464287903558,
+      "outlet_count": 1,
+      "title": "Labour told to hit Iran hard after falling victim to 'bullying' tactics: 'They only understand the language of force!'"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 1986604717939144750,
+      "outlet_count": 1,
+      "title": "Driving law changes you missed in September - New HMRC rates, Motability rules and more"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 1480327339316751772,
+      "outlet_count": 1,
+      "title": "Taxpayer-funded police training likened Nigel Farage and GB News to Islamophobia"
+    },
+    {
+      "created_at": 1790670512,
+      "first": true,
+      "id": 850177041258964129,
+      "outlet_count": 1,
+      "title": "Princess Alexandra's last-minute withdrawal from event sparks concern for her health"
+    },
+    {
+      "created_at": 1790669873,
+      "first": true,
+      "id": 134991341151203630,
+      "outlet_count": 1,
+      "title": "M25 traffic: Drivers face TWO HOURS of delays near Dartford Crossing after huge lorry fire"
+    },
+    {
+      "created_at": 1790668896,
+      "first": true,
+      "id": 17755955545496991721,
+      "outlet_count": 1,
+      "title": "Sadiq Khan confirms when cars will be banned from Oxford Street amid pedestrianisation plans"
+    },
+    {
+      "created_at": 1790668896,
+      "first": true,
+      "id": 1895938712384199954,
+      "outlet_count": 1,
+      "title": "French police launch manhunt after British pensioner ‘very violently’ killed in sleepy village"
+    },
+    {
+      "created_at": 1790665645,
+      "first": true,
+      "id": 4887665486038382604,
+      "outlet_count": 1,
+      "title": "Energy bills set to rise under new 'buy British' grid plans, Labour admits"
+    },
+    {
+      "created_at": 1790662842,
+      "first": true,
+      "id": 4647351851197283676,
+      "outlet_count": 1,
+      "title": "Oktoberfest staff launch mass campaign against 'far-right hate speech'... which organisers confirm isn't actually on the rise"
+    },
+    {
+      "created_at": 1790659977,
+      "first": true,
+      "id": 7765006335133377877,
+      "outlet_count": 1,
+      "title": "Smiling Sudanese 'asylum seeker' set fire to hotel with 170 people inside"
+    },
+    {
+      "created_at": 1790658788,
+      "first": true,
+      "id": 4614706068988890672,
+      "outlet_count": 1,
+      "title": "GB News Daily Reflection — Tuesday 29th September 2026"
+    },
+    {
+      "created_at": 1790654572,
+      "first": true,
+      "id": 12429632998214329030,
+      "outlet_count": 1,
+      "title": "Labour told to scrap fuel duty hike as John Healey warned over 'worst timing possible'"
+    },
+    {
+      "created_at": 1790653938,
+      "first": true,
+      "id": 18404345239602432969,
+      "outlet_count": 1,
+      "title": "Rolls-Royce confirms £300million investment in major boost to UK production"
+    },
+    {
+      "created_at": 1790653938,
+      "first": true,
+      "id": 18318023056374665667,
+      "outlet_count": 1,
+      "title": "Hundreds of protesters march on giant Net Zero pipeline"
+    },
+    {
+      "created_at": 1790653938,
+      "first": true,
+      "id": 17852893030966815786,
+      "outlet_count": 1,
+      "title": "Donald Trump 'surprised' RAF Fairford terror suspects released on bail: 'I wouldn't have done that!'"
+    },
+    {
+      "created_at": 1790653938,
+      "first": true,
+      "id": 17810189840531349176,
+      "outlet_count": 1,
+      "title": "BBC demands dedicated button on Britons' TV remotes so audiences 'stay connected to British values'"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

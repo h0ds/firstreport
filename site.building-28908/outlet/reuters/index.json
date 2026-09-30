@@ -1,0 +1,229 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "reuters.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.1287
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "reuters",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.13 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q22343541 (reuters.com)",
+        "outlet_id": "reuters",
+        "ref_url": "https://www.wikidata.org/wiki/Q130879",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "reuters.com",
+          "expires": "2027-06-02",
+          "last_changed": "2026-05-01",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "reuters",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/reuters.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-06-03"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q22343541 (reuters.com)",
+        "outlet_id": "reuters",
+        "ref_url": "https://www.wikidata.org/wiki/Q130879",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1851-10-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q4830453"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q22343541 (reuters.com)",
+        "outlet_id": "reuters",
+        "ref_url": "https://www.wikidata.org/wiki/Q130879",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "business"
+      },
+      {
+        "data": {
+          "qid": "Q192283"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q22343541 (reuters.com)",
+        "outlet_id": "reuters",
+        "ref_url": "https://www.wikidata.org/wiki/Q130879",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news agency"
+      }
+    ],
+    "name": [
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q22343541 (reuters.com)",
+        "outlet_id": "reuters",
+        "ref_url": "https://www.wikidata.org/wiki/Q130879",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Reuters"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q1141267"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q22343541 (reuters.com)",
+        "outlet_id": "reuters",
+        "ref_url": "https://www.wikidata.org/wiki/Q130879",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Thomson Reuters"
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q1141267"
+        },
+        "field": "parent",
+        "note": "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q22343541 (reuters.com)",
+        "outlet_id": "reuters",
+        "ref_url": "https://www.wikidata.org/wiki/Q130879",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Thomson Reuters"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "reuters.com"
+        },
+        "field": "registrar",
+        "outlet_id": "reuters",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/reuters.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "MarkMonitor Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_107#Can_this_review_from_reuters_be_used?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_130#Thomson_Reuters",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_243#Can_“wire”_news_services_such_AP,_Reuters,_or_AFP_ever_report_inaccurate,_misleading,_or_false_information"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Reuters",
+          "status": "generally_reliable",
+          "summary": "Reuters is a news agency. There is consensus that Reuters is generally reliable. Syndicated reports from Reuters that are published in other sources are also considered generally reliable. Press releases published by Reuters are not automatically reliable."
+        },
+        "field": "reliability",
+        "outlet_id": "reuters",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q22343541 (reuters.com)",
+        "outlet_id": "reuters",
+        "ref_url": "https://www.wikidata.org/wiki/Q130879",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.reuters.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q22343541"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q22343541 (reuters.com)",
+        "outlet_id": "reuters",
+        "ref_url": "https://www.wikidata.org/wiki/Q130879",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q130879"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q130879 (Reuters); also Q22343541 (reuters.com)",
+        "outlet_id": "reuters",
+        "ref_url": "https://www.wikidata.org/wiki/Q130879",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Reuters"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 0,
+  "outlet": {
+    "domains": [
+      "reuters.com"
+    ],
+    "id": "reuters",
+    "name": "Reuters"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

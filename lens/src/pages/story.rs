@@ -488,7 +488,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         head: &head,
         body: &b,
         status: &format!(
-            "story · built from an export at {}",
+            "Updated {}",
             datetime(input.export_time)
         ),
     });

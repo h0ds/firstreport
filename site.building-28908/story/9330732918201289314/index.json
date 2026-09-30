@@ -1,0 +1,881 @@
+{
+  "claims": {
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "cgtn": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "cgtn.com",
+          "expires": "2026-11-15",
+          "last_changed": "2025-11-01",
+          "registrar": "Alibaba Cloud Computing (Beijing) Co., Ltd.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cgtn",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cgtn.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2002-11-15"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1997-09-20"
+      },
+      {
+        "data": {
+          "qid": "Q207936"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "China Central Television"
+      },
+      {
+        "data": {
+          "qid": "Q51675998"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q4378607 (CGTN); also Q28089296 (China Global Television Network)",
+        "outlet_id": "cgtn",
+        "ref_url": "https://www.wikidata.org/wiki/Q4378607",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "China Media Group"
+      }
+    ],
+    "dailysabah": [
+      {
+        "data": {
+          "qid": "Q43"
+        },
+        "field": "country",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turkey"
+      },
+      {
+        "data": {
+          "domain": "dailysabah.com",
+          "expires": "2028-08-29",
+          "last_changed": "2026-09-07",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailysabah.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2013-08-29"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q272361"
+        },
+        "field": "owner",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://www.wikidata.org/wiki/Q18639164",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Çalık Holding"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#RfC:_Daily_Sabah"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Sabah",
+          "status": "generally_unreliable",
+          "summary": "Daily Sabah is considered to be a propaganda outlet that publishes pro-Turkish government news which aims to strengthen Erdoğan's rule, spread Westernophobia, and promote Turkish government policies. Editors also pointed out that Daily Sabah publishes unfactual information such as Armenian genocide denial, and mispresenting statements. Some editors consider it to be reliable enough to cite POV of "
+        },
+        "field": "reliability",
+        "outlet_id": "dailysabah",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "globeandmail": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      },
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "sputnik": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "sputniknews.com",
+          "expires": "2028-10-24",
+          "last_changed": "2022-03-04",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputniknews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2011-10-24"
+      },
+      {
+        "data": {
+          "domain": "sputnikglobe.com",
+          "expires": "2028-03-29",
+          "last_changed": "2023-03-30",
+          "registrar": "Domain.com - Network Solutions, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputnikglobe.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2023-03-29"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-11-10"
+      },
+      {
+        "data": {
+          "qid": "Q1140115"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Government of Russia"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#RfC:_Sputnik",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Sputnik_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_212#Source_being_used_in_the_S-400_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_246#Sputnik_(news_agency)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_337#Sputnik-Abkhazia",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_367#Sputnik,_kind_of"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sputnik",
+          "status": "deprecated",
+          "summary": "There is consensus that Sputnik is an unreliable source that publishes false or fabricated information, and should be deprecated as in the 2017 RfC of the Daily Mail. Sputnik is considered a Russian propaganda outlet that engages in bias and disinformation, [ 25 ] a significant proportion of editors endorse that view, with some editors considering it less reliable than Breitbart News. See also: RI"
+        },
+        "field": "reliability",
+        "outlet_id": "sputnik",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.01279759407043457,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": true,
+      "unscored": 11,
+      "weakest_join": 0.7327976226806641
+    },
+    "created_at": 1790653941,
+    "expired": false,
+    "id": 9330732918201289314,
+    "item_count": 12,
+    "last_active_at": 1790722475,
+    "origin_item_id": 10283062292257767131,
+    "origin_outlet_id": "axios",
+    "outlet_count": 7,
+    "primary_title": "What happened when Trump met Xi: big fanfare, but no breakthrough",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9330732918201289314,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790206443
+      },
+      {
+        "item_id": 13870155214283947561,
+        "joined_at": 1790654492,
+        "outlet_id": "sputnik",
+        "published_at": 1790260161
+      },
+      {
+        "item_id": 4732051558914421718,
+        "joined_at": 1790654748,
+        "outlet_id": "sputnik",
+        "published_at": 1790258906
+      },
+      {
+        "item_id": 9476762342028494977,
+        "joined_at": 1790654748,
+        "outlet_id": "sputnik",
+        "published_at": 1790304240
+      },
+      {
+        "item_id": 2660525673924086754,
+        "joined_at": 1790654926,
+        "outlet_id": "globeandmail",
+        "published_at": 1790334974
+      },
+      {
+        "item_id": 15217608020676778677,
+        "joined_at": 1790655128,
+        "outlet_id": "globeandmail",
+        "published_at": 1790270350
+      },
+      {
+        "item_id": 10283062292257767131,
+        "joined_at": 1790658140,
+        "outlet_id": "axios",
+        "published_at": 1790201625
+      },
+      {
+        "item_id": 17107776291259628199,
+        "joined_at": 1790721633,
+        "outlet_id": "thehindu",
+        "published_at": 1790590691
+      },
+      {
+        "item_id": 2509136184508521192,
+        "joined_at": 1790721633,
+        "outlet_id": "cgtn",
+        "published_at": 1790403461
+      },
+      {
+        "item_id": 15239822713013470170,
+        "joined_at": 1790721633,
+        "outlet_id": "scmp",
+        "published_at": 1790719205
+      },
+      {
+        "item_id": 9074587931301505309,
+        "joined_at": 1790721633,
+        "outlet_id": "sputnik",
+        "published_at": 1790351697
+      },
+      {
+        "item_id": 2910677303226899901,
+        "joined_at": 1790722475,
+        "outlet_id": "dailysabah",
+        "published_at": 1790325660
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "axios",
+            "scmp",
+            "globeandmail",
+            "thehindu"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "dailysabah"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "sputnik"
+          ]
+        }
+      ],
+      "not_rated": [
+        "cgtn"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "axios": "Axios",
+    "cgtn": "CGTN",
+    "dailysabah": "Daily Sabah",
+    "globeandmail": "The Globe and Mail",
+    "scmp": "South China Morning Post",
+    "sputnik": "Sputnik",
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 7,
+  "outlets_6h": 5,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    7,
+    7,
+    7
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/23/trump-xi-china-state-visit-joint-base-andrews",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653931,
+          "id": 10283062292257767131,
+          "joined_at": 1790658140,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790201625,
+          "summary": "President Trump welcomed Xi Jinping at Joint Base Andrews for the Chinese leader's state visit to Washington D.C. Wednesday evening. Why it matters: U.S. presidents typically receive visiting foreign leaders at the White House, making Trump's airport welcome an unusual diplomatic gesture. The latest: Trump met Xi at the foot of the stairs after the Chinese leader's jet landed at Joint Base Andrews, the U.S. military base 13 miles southeast of the White House in Maryland. Zoom out: It's much more common for…",
+          "text_hash": 2878888343112660437,
+          "title": "Trump greets Xi on tarmac in rare gesture"
+        }
+      ],
+      "outlet_id": "axios"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theglobeandmail.com/world/video-trump-welcomes-chinese-president-xi-jinping-to-washington/",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653941,
+          "id": 9330732918201289314,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790206443,
+          "summary": "U.S. President Donald Trump welcomed Chinese President Xi Jinping to Washington on Wednesday for a three-day visit where the superpowers' tensions over trade, technology and Tehran will play out against a backdrop of pomp and ceremony.",
+          "text_hash": 3686263537119160434,
+          "title": "Trump welcomes Chinese President Xi Jinping to Washington"
+        },
+        {
+          "canonical_url": "https://theglobeandmail.com/world/video-trump-rolls-out-military-pageantry-for-xi-jinpings-state-visit/",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653941,
+          "id": 15217608020676778677,
+          "joined_at": 1790655128,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790270350,
+          "summary": "U.S. President Donald Trump welcomed Chinese President Xi Jinping to the White House Thursday for a highly anticipated state visit. The leaders watched a military review in the Rose Garden, featuring a colonial-era band and a flyover by a B-2 bomber and four fighter jets.",
+          "text_hash": 12962298288931485062,
+          "title": "Trump rolls out military pageantry for Xi Jinping's state visit"
+        },
+        {
+          "canonical_url": "https://theglobeandmail.com/world/video-what-happened-when-trump-met-xi-big-fanfare-but-no-breakthrough/",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653941,
+          "id": 2660525673924086754,
+          "joined_at": 1790654926,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790334974,
+          "summary": "U.S. President Donald Trump welcomed Chinese President Xi Jinping to the White House on Thursday for a lavish summit that was heavy on symbolism but light on substance, with no sign of breakthroughs on thorny issues such as AI, trade, Taiwan and the war with Iran.",
+          "text_hash": 2551131652899341762,
+          "title": "What happened when Trump met Xi: big fanfare, but no breakthrough"
+        }
+      ],
+      "outlet_id": "globeandmail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://sputnikglobe.com/20260924/trump-welcomes-xi-to-white-house-for-state-visit-1124781700.html",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653945,
+          "id": 4732051558914421718,
+          "joined_at": 1790654748,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790258906,
+          "summary": "The meeting comes as Washington and Beijing seek to manage tensions between the world’s two largest economies.",
+          "text_hash": 17367447374360144306,
+          "title": "Trump Welcomes Xi to White House for State Visit"
+        },
+        {
+          "canonical_url": "https://sputnikglobe.com/20260924/trump-welcomes-chinese-president-xi-to-white-house-1124782450.html",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653945,
+          "id": 13870155214283947561,
+          "joined_at": 1790654492,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790260161,
+          "summary": "WASHINGTON (Sputnik) - US President Donald Trump welcomed Chinese President Xi Jinping to the White House on Thursday.",
+          "text_hash": 3973639608370952658,
+          "title": "Trump Welcomes Chinese President Xi to White House"
+        },
+        {
+          "canonical_url": "https://sputnikglobe.com/20260925/trump-welcomes-xi-to-white-house-state-dinner-1124784789.html",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653945,
+          "id": 9476762342028494977,
+          "joined_at": 1790654748,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790304240,
+          "summary": "US President Donald Trump welcomed Chinese President Xi Jinping to a White House state dinner on Thursday, marking Xi’s first visit to Washington in more than a decade.",
+          "text_hash": 3751661897709453760,
+          "title": "Trump Welcomes Xi to White House State Dinner"
+        },
+        {
+          "canonical_url": "https://sputnikglobe.com/20260925/xi-says-expects-2-more-meetings-with-trump-this-year-invites-us-president-to-visit-china-1124790663.html",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653945,
+          "id": 9074587931301505309,
+          "joined_at": 1790721633,
+          "lang": "en",
+          "outlet_id": "sputnik",
+          "published_at": 1790351697,
+          "summary": "WASHINGTON (Sputnik) - Chinese President Xi Jinping said on Friday that he expects two more meetings with US President Donald Trump this year and invited the US leader and his wife to visit China to attend the APEC summit.",
+          "text_hash": 4276446410549127256,
+          "title": "Xi Says Expects 2 More Meetings With Trump This Year, Invites US President to Visit China"
+        }
+      ],
+      "outlet_id": "sputnik"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailysabah.com/business/economy/key-takeaways-from-trump-xi-summit-in-us",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653944,
+          "id": 2910677303226899901,
+          "joined_at": 1790722475,
+          "lang": "en",
+          "outlet_id": "dailysabah",
+          "published_at": 1790325660,
+          "summary": "U.S. President Donald Trump treated Chinese leader Xi Jinping to pomp and pageantry Thursday, as the leaders of the world's two superpowers met in Washington, D.C. Talks on trade,...",
+          "text_hash": 2300729998470504946,
+          "title": "Key takeaways from Trump-Xi summit in US"
+        }
+      ],
+      "outlet_id": "dailysabah"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://news.cgtn.com/news/2026-09-26/World-reaction-to-Xi-Trump-summit-in-Washington-1QKkcAwqnF6/p.html",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653944,
+          "id": 2509136184508521192,
+          "joined_at": 1790721633,
+          "lang": "en",
+          "outlet_id": "cgtn",
+          "published_at": 1790403461,
+          "summary": "The meeting between Chinese and US presidents has drawn close attention internationally, with figures from around the world welcoming closer communication between the two major powers and saying greater cooperation could help address challenges facing the world.",
+          "text_hash": 10412757111856716064,
+          "title": "World reaction to Xi-Trump summit in Washington"
+        }
+      ],
+      "outlet_id": "cgtn"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/trump-xi-wrap-up-summit-with-tea-and-tour-of-us-archives/article71510159.ece",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790653942,
+          "id": 17107776291259628199,
+          "joined_at": 1790721633,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790590691,
+          "summary": "The Chinese President also said he and U.S. counterpart Trump would have ‌two more opportunities to meet this year, the APEC summit in China and a G20 summit in Miami",
+          "text_hash": 6276348588499085526,
+          "title": "Trump, Xi wrap up summit with tea and tour of U.S. archives"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/china/diplomacy/article/3369238/xi-trump-summit-drew-chinese-ceos-so-why-couldnt-they-get-seat-table",
+          "cluster_id": 9330732918201289314,
+          "fetched_at": 1790720191,
+          "id": 15239822713013470170,
+          "joined_at": 1790721633,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790719205,
+          "summary": "As American billionaires gathered at the White House to honour Chinese President Xi Jinping and his wife Peng Liyuan last Thursday, a group of Chinese business leaders spent the evening on the sidelines. They had travelled to the US capital to join the state dinner. But their invitations never arrived. For weeks, their participation was the subject of intense discussion between Washington and Beijing. While it was under consideration until the summit’s final hours, they were ultimately excluded...",
+          "text_hash": 9209234631561184099,
+          "title": "Xi-Trump summit drew Chinese CEOs. So why couldn’t they get a seat at the table?"
+        }
+      ],
+      "outlet_id": "scmp"
+    }
+  ],
+  "withdrawals": []
+}

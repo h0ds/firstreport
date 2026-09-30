@@ -1,0 +1,3285 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "bloomberg": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "bloomberg.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-09-24",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/bloomberg.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-29"
+      },
+      {
+        "field": "founded",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1990-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q13977"
+        },
+        "field": "owner",
+        "note": "6 Wikidata items match the domain; this is Q14270642 (Bloomberg News); also Q107188753 (Bloomberg Bpool), Q112610835 (Bloomberg.com), Q13977 (Bloomberg L.P.), Q93359263 (Bloomberg Trading Facility Limited), Q93360342 (Bloomberg - APA)",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://www.wikidata.org/wiki/Q14270642",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Bloomberg L.P."
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_151#Bloomberg_on_Microsoft",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_270#Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#Bloomberg_News_/_Decision_not_to_investigate_Michael_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_499#Omitting_Bloomberg_from_India-Pak_Conflicts"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg (Bloomberg News, Bloomberg Businessweek)",
+          "status": "generally_reliable",
+          "summary": "Bloomberg publications, including Bloomberg News and Bloomberg Businessweek, are considered generally reliable for news and business topics. See also: Bloomberg profiles."
+        },
+        "field": "reliability",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2018",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#On_Bloomberg",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#User_submitted_Executive_Profiles_on_Bloomberg.com"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Bloomberg profiles",
+          "status": "no_consensus",
+          "summary": "Bloomberg company and executive profiles are generally considered to be based on company press releases and should only be used as a source for uncontroversial information. There is consensus that these profiles should not be used to establish notability. Some editors consider these profiles to be akin to self-published sources. See also: Bloomberg."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "bloomberg",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "cbsnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "cbsnews.com",
+          "expires": "2027-10-03",
+          "last_changed": "2026-09-01",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/cbsnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-10-04"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q861764",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1927-09-18"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_522#Request_for_Comment:_Reliability_of_CBS_News_under_Bari_Weiss",
+            "#cite_note-20"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CBS News",
+          "status": "generally_reliable",
+          "summary": "CBS News is the news division of CBS. It is considered generally reliable. Some editors note, however, that its television content may include superficial coverage, which might not qualify under WP:MEDRS. Editors also note that CBS has undergone intensified political bias after Bari Weiss became editor-in-chief in late 2025, and supression of reporting critical of the Trump administration has been"
+        },
+        "field": "reliability",
+        "outlet_id": "cbsnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "foxnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "foxnews.com",
+          "expires": "2031-06-20",
+          "last_changed": "2022-09-20",
+          "registrar": "GoDaddy Corporate Domains, LLC",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "foxnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/foxnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-06-21"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-10-07"
+      },
+      {
+        "data": {
+          "qid": "Q5476713"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "21st Century Fox"
+      },
+      {
+        "data": {
+          "qid": "Q60238941"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Fox Corporation"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_73#Request_for_Comment_on_Fox_News_Channel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_303#RfC:_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_385#RFC:_Fox_News_(news):_politics_&_science",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_406#RfC:_downgrade_Fox_News_for_politics?",
+            "#cite_note-44"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (politics and science)",
+          "status": "generally_unreliable",
+          "summary": "There is consensus Fox News is generally unreliable for the reporting of politics, especially from November 2020 onwards. On the matter of science, and on the matter of pre-November 2020 politics, there is a consensus that the reliability of Fox News is unclear and that additional considerations apply to its use. As a result, Fox News is considered marginally reliable and generally does not qualif"
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#The_status_of_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#Is_Fox_News_a_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_257#Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#Fox_News_redux",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_264#Fox_News_-_sources_for_future_discussion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_276#Litmus_test_for_source_reliability_in_the_AmPol2_area",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_278#Suggestion:_comparing_Fox_News_real-time_coverage_of_the_impeachment_inquiry_with_other_outlets'",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Fox_News_and_COVID-19",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Why_does_Fox_News_talk_shows_have_it's_own_section_in_the_list?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (talk shows)",
+          "status": "generally_unreliable",
+          "summary": "Fox News talk shows, including Hannity, Tucker Carlson Tonight, The Ingraham Angle, and Fox & Friends, should not be used for statements of fact but can sometimes be used for attributed opinions. See also: Fox News (news excluding politics and science), Fox News (politics and science)."
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_73#Request_for_Comment_on_Fox_News_Channel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_303#RfC:_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_406#RfC:_downgrade_Fox_News_for_politics?",
+            "#cite_note-43"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (news excluding politics and science)",
+          "status": "no_consensus",
+          "summary": "Historically, there has been consensus that Fox News is generally reliable for news coverage on topics other than politics and science. However, many editors expressed concerns about the reliability of Fox News for any topic in a 2023 RFC. No formal consensus was reached on the matter, though. See also: Fox News (politics and science), Fox News (talk shows)."
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "france24": [
+      {
+        "data": {
+          "domain": "france24.com",
+          "expires": "2026-12-01",
+          "last_changed": "2026-04-21",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "france24",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/france24.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-12-01"
+      },
+      {
+        "data": {
+          "qid": "Q166180"
+        },
+        "field": "owner",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France 24"
+      }
+    ],
+    "gbnews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "gbnews.com",
+          "expires": "2029-01-26",
+          "last_changed": "2023-01-09",
+          "registrar": "Dreamscape Networks International Pte Ltd",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gbnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/gbnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-01-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-06-13"
+      },
+      {
+        "data": {
+          "qid": "Q7152223"
+        },
+        "field": "owner",
+        "outlet_id": "gbnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q100300992",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Paul Marshall"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Should_GB_News_be_\"depreciated\"?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_382#Reliability_of_GB_News_as_a_source_for_citations",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_465#GBNews_can_be_reliable_for_group_based_child_sex_exploitation",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_494#Reliability_of_GB_News",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_8#Add_GB_News?",
+            "https://en.wikipedia.org/wiki/Wikipedia_talk:Reliable_sources/Perennial_sources/Archive_10#GB_News_inclusion"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "GB News",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that GB News is generally unreliable."
+        },
+        "field": "reliability",
+        "outlet_id": "gbnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ],
+    "globeandmail": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      },
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "huffpost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "huffpost.com",
+          "expires": "2028-03-10",
+          "last_changed": "2026-02-06",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "huffpost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/huffpost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-03-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-05-01"
+      },
+      {
+        "data": {
+          "qid": "Q5003490"
+        },
+        "field": "owner",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "BuzzFeed"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-52"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost (excluding politics) (The Huffington Post)",
+          "status": "generally_reliable",
+          "summary": "A 2020 RfC found HuffPost staff writers fairly reliable for factual reporting on non-political topics, but notes that they may give prominence to topics that support their political bias and less prominence to, or omit, things that contradict it. HuffPost's reliability has increased since 2012; articles before 2012 are less reliable and should be treated with more caution. HuffPost uses clickbait "
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-54"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost contributors (The Huffington Post)",
+          "status": "generally_unreliable",
+          "summary": "Until 2018, the U.S. edition of HuffPost published content written by contributors with near-zero editorial oversight. These contributors generally did not have a reputation for fact-checking, and most editors consider them highly variable in quality. Editors show consensus for treating HuffPost contributor articles as self-published sources, unless the article was written by a subject-matter expe"
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-53"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost (politics) (The Huffington Post)",
+          "status": "no_consensus",
+          "summary": "In the 2020 RfC, there was no consensus on HuffPost staff writers' reliability for political topics. The community considers HuffPost openly biased on American politics. There is no consensus on its reliability for international politics. See also: HuffPost (excluding politics), HuffPost contributors."
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "nbcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nbcnews.com",
+          "expires": "2027-06-25",
+          "last_changed": "2025-05-24",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nbcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-06-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1940-02-21"
+      },
+      {
+        "data": {
+          "qid": "Q724759"
+        },
+        "field": "owner",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q2877626",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "NBCUniversal"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_186#Column_on_Donors_Trust_on_(but_not_by)_NBC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#Is_NBC_a_reliable_sources_for_the_Wikipedia_The_Epoch_Times_(ET)_article?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_314#NBC_News-_'Undecided_voters'_at_NBC's_Biden_town_hall_were_featured_on_MSNBC_as_Biden_voters",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_424#NBC_News_for_Wąsosz_pogrom"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NBC News",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NBC News is generally reliable for news. See also: MS NOW (formerly MSNBC)"
+        },
+        "field": "reliability",
+        "outlet_id": "nbcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "ndtv": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "ndtv.com",
+          "expires": "2032-09-25",
+          "last_changed": "2026-09-26",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "pending transfer"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ndtv",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/ndtv.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1988-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q4680631"
+        },
+        "field": "owner",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Adani Group"
+      }
+    ],
+    "newsmax": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "newsmax.com",
+          "expires": "2027-07-17",
+          "last_changed": "2026-07-17",
+          "registrar": "SafeNames Ltd.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "newsmax",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/newsmax.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-07-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11991273 (Newsmax Media); also Q27037115 (Newsmax)",
+        "outlet_id": "newsmax",
+        "ref_url": "https://www.wikidata.org/wiki/Q11991273",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1998-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Newsmax",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_297#Is_Newsmax_reliable_for_the_best_Catholic_Colleges?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#Newsmax_interviewee's_opinions"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Newsmax",
+          "status": "deprecated",
+          "summary": "Newsmax was deprecated by snowball clause consensus in the November 2020 RfC. Concerns of editors included that Newsmax lacks adherence to journalistic standards, launders propaganda, promulgates misinformation, promotes conspiracy theories and false information for political purposes, and promotes medical misinformation such as COVID-19 -related falsehoods, climate change denialism, conspiracy th"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "newsmax",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "npr": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "npr",
+        "ref_url": "https://www.wikidata.org/wiki/Q671510",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "npr.org",
+          "expires": "2027-12-12",
+          "last_changed": "2026-08-11",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "npr",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/npr.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-12-13"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "npr",
+        "ref_url": "https://www.wikidata.org/wiki/Q671510",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1970-02-26"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_139#NPR_reference_in_War_On_Women",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_149#NPR_religion_program_claim_from_Judy_Valente_about_membership_estimate_from_Christian_Science_church",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_292#NPR",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_322#Using_an_NPR_report_in_the_article_Misinformation_related_to_the_COVID-19_pandemic",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_448#Is_NPR_a_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NPR (National Public Radio)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NPR, an American public service broadcaster, is generally reliable for news and statements of fact. NPR's opinion pieces should only be used with attribution."
+        },
+        "field": "reliability",
+        "outlet_id": "npr",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "nytimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "nytimes.com",
+          "expires": "2027-01-19",
+          "last_changed": "2024-12-18",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nytimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nytimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-01-18"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1851-09-18"
+      },
+      {
+        "data": {
+          "qid": "Q2529982"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q9684 (The New York Times); also Q135925219 (nytimes.com)",
+        "outlet_id": "nytimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q9684",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The New York Times Company"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_244#RfC:_Wound_characteristics_of_military-style_rifles",
+            "#cite_note-70"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New York Times (NYT)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New York Times is generally reliable. WP:RSOPINION should be used to evaluate opinion columns, while WP:NEWSBLOG should be used for the blogs on The New York Times's website. The 2018 RfC cites WP:MEDPOP to establish that popular press sources such as The New York Times should generally not be used to support medical claims."
+        },
+        "field": "reliability",
+        "outlet_id": "nytimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "pbs": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pbs.org",
+          "expires": "2027-04-20",
+          "last_changed": "2026-08-12",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "pbs",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/pbs.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1969-11-03"
+      },
+      {
+        "as_of": "2016",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_101#Emme_(model)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_135#Judaism:_The_oldest_monotheistic_religion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_150#Center_for_Investigative_Reporting",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_153#thinkprogress.org_as_a_generally_accepted_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_206#Pbs.org"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "PBS (Public Broadcasting Service)",
+          "status": "generally_reliable",
+          "summary": "The Public Broadcasting Service is an American public broadcaster. It is considered generally reliable by editors."
+        },
+        "field": "reliability",
+        "outlet_id": "pbs",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "rt": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "rt.com",
+          "expires": "2027-09-22",
+          "last_changed": "2026-09-21",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rt",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rt.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-09-23"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-09-15"
+      },
+      {
+        "data": {
+          "qid": "Q821172"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "RIA Novosti"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#RfC:_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Enquiry_concerning_the_RT_Network",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_168#RT_news_and_Crimean_status_referendum,_2014",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_173#Russia_Today",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Attributed_statement_sourced_by_RT_news_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_231#RT_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#On_Contact_/_RT",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Ruptly,_subsidiary_of_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)",
+          "status": "deprecated",
+          "summary": "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
+        },
+        "field": "reliability",
+        "outlet_id": "rt",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehill": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "unknown:today.com": [],
+    "washingtonpost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q166032",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtonpost.com",
+          "expires": "2026-11-12",
+          "last_changed": "2025-11-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtonpost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-11-13"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q166032",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1877-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q312556"
+        },
+        "field": "owner",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q166032",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Jeff Bezos"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "#cite_note-92"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Post (The Post, WaPo, TWP)",
+          "status": "generally_reliable",
+          "summary": "Most editors consider The Washington Post generally reliable. Some editors note that WP:NEWSBLOG should be used to evaluate blog posts on The Washington Post's website."
+        },
+        "field": "reliability",
+        "outlet_id": "washingtonpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.011248350143432617,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 40,
+      "weakest_join": 0.7312483787536621
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 15587760235900320854,
+    "item_count": 52,
+    "last_active_at": 1790722541,
+    "origin_item_id": 6582924374120051070,
+    "origin_outlet_id": "foxnews",
+    "outlet_count": 26,
+    "primary_title": "5 men released on bail in UK over suspected US-run airbase plot",
+    "syndication": [
+      {
+        "first_outlet_id": "france24",
+        "item_ids": [
+          3664043954830937056,
+          9535488051623327239
+        ],
+        "spread_secs": 99,
+        "text_hash": 3500895513010733501
+      }
+    ],
+    "timeline": [
+      {
+        "item_id": 15587760235900320854,
+        "joined_at": 1790633633,
+        "outlet_id": "guardian",
+        "published_at": 1790632942
+      },
+      {
+        "item_id": 17898273162578695047,
+        "joined_at": 1790633633,
+        "outlet_id": "nytimes",
+        "published_at": 1790632641
+      },
+      {
+        "item_id": 18316665773356867111,
+        "joined_at": 1790633633,
+        "outlet_id": "nytimes",
+        "published_at": 1790540420
+      },
+      {
+        "item_id": 6230638258834357026,
+        "joined_at": 1790633633,
+        "outlet_id": "nytimes",
+        "published_at": 1790625926
+      },
+      {
+        "item_id": 9585249930798125768,
+        "joined_at": 1790633634,
+        "outlet_id": "npr",
+        "published_at": 1790592685
+      },
+      {
+        "item_id": 12082318645125469333,
+        "joined_at": 1790633634,
+        "outlet_id": "foxnews",
+        "published_at": 1790610391
+      },
+      {
+        "item_id": 16086225105184842556,
+        "joined_at": 1790633634,
+        "outlet_id": "npr",
+        "published_at": 1790633402
+      },
+      {
+        "item_id": 250656443722811628,
+        "joined_at": 1790633634,
+        "outlet_id": "aljazeera",
+        "published_at": 1790616764
+      },
+      {
+        "item_id": 4993242721498481235,
+        "joined_at": 1790633634,
+        "outlet_id": "npr",
+        "published_at": 1790543684
+      },
+      {
+        "item_id": 6582924374120051070,
+        "joined_at": 1790633634,
+        "outlet_id": "foxnews",
+        "published_at": 1790509254
+      },
+      {
+        "item_id": 6640554879419267423,
+        "joined_at": 1790633635,
+        "outlet_id": "breitbart",
+        "published_at": 1790611522
+      },
+      {
+        "item_id": 9517423831472897323,
+        "joined_at": 1790633639,
+        "outlet_id": "rt",
+        "published_at": 1790543011
+      },
+      {
+        "item_id": 17144001477193075404,
+        "joined_at": 1790633644,
+        "outlet_id": "washingtonpost",
+        "published_at": 1790528582
+      },
+      {
+        "item_id": 5073366294790778111,
+        "joined_at": 1790633644,
+        "outlet_id": "washingtonpost",
+        "published_at": 1790617182
+      },
+      {
+        "item_id": 9998788905922881835,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790625531
+      },
+      {
+        "item_id": 1255182558609802591,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790619359
+      },
+      {
+        "item_id": 14404976847862770553,
+        "joined_at": 1790653930,
+        "outlet_id": "cbsnews",
+        "published_at": 1790638414
+      },
+      {
+        "item_id": 14102658564844486547,
+        "joined_at": 1790653930,
+        "outlet_id": "cbsnews",
+        "published_at": 1790638220
+      },
+      {
+        "item_id": 17920483038074511497,
+        "joined_at": 1790653930,
+        "outlet_id": "cbsnews",
+        "published_at": 1790601323
+      },
+      {
+        "item_id": 7476658630888396648,
+        "joined_at": 1790653930,
+        "outlet_id": "pbs",
+        "published_at": 1790635507
+      },
+      {
+        "item_id": 17539974539827203666,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790525975
+      },
+      {
+        "item_id": 5624193881719306840,
+        "joined_at": 1790653933,
+        "outlet_id": "bloomberg",
+        "published_at": 1790607688
+      },
+      {
+        "item_id": 2673382663592452248,
+        "joined_at": 1790653934,
+        "outlet_id": "newsmax",
+        "published_at": 1790637575
+      },
+      {
+        "item_id": 6817451898814765997,
+        "joined_at": 1790653935,
+        "outlet_id": "huffpost",
+        "published_at": 1790609006
+      },
+      {
+        "item_id": 18057674138440011555,
+        "joined_at": 1790653935,
+        "outlet_id": "huffpost",
+        "published_at": 1790531469
+      },
+      {
+        "item_id": 4388673828530589501,
+        "joined_at": 1790653938,
+        "outlet_id": "gbnews",
+        "published_at": 1790612573
+      },
+      {
+        "item_id": 16265616870906424708,
+        "joined_at": 1790653938,
+        "outlet_id": "gbnews",
+        "published_at": 1790595479
+      },
+      {
+        "item_id": 3664043954830937056,
+        "joined_at": 1790653939,
+        "outlet_id": "france24",
+        "published_at": 1790630718
+      },
+      {
+        "item_id": 9535488051623327239,
+        "joined_at": 1790653939,
+        "outlet_id": "france24",
+        "published_at": 1790630619
+      },
+      {
+        "item_id": 16536067851973424556,
+        "joined_at": 1790653939,
+        "outlet_id": "france24",
+        "published_at": 1790614031
+      },
+      {
+        "item_id": 12758328661387896993,
+        "joined_at": 1790653941,
+        "outlet_id": "scmp",
+        "published_at": 1790594299
+      },
+      {
+        "item_id": 4998290463450254569,
+        "joined_at": 1790653941,
+        "outlet_id": "straitstimes",
+        "published_at": 1790626688
+      },
+      {
+        "item_id": 9570350391300067115,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790603116
+      },
+      {
+        "item_id": 3864764996115888542,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790591087
+      },
+      {
+        "item_id": 16646139486979280535,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790516814
+      },
+      {
+        "item_id": 1557766715907142397,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790527201
+      },
+      {
+        "item_id": 16805506203679954856,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790537300
+      },
+      {
+        "item_id": 12702503740219034233,
+        "joined_at": 1790653942,
+        "outlet_id": "arabnews",
+        "published_at": 1790625244
+      },
+      {
+        "item_id": 9057039749380820392,
+        "joined_at": 1790654531,
+        "outlet_id": "arabnews",
+        "published_at": 1790654544
+      },
+      {
+        "item_id": 13951427144333228563,
+        "joined_at": 1790654748,
+        "outlet_id": "unknown:today.com",
+        "published_at": 1790594172
+      },
+      {
+        "item_id": 2238807855555577965,
+        "joined_at": 1790667539,
+        "outlet_id": "ndtv",
+        "published_at": 1790658878
+      },
+      {
+        "item_id": 14329423026993851800,
+        "joined_at": 1790679060,
+        "outlet_id": "france24",
+        "published_at": 1790677916
+      },
+      {
+        "item_id": 13643474664352064539,
+        "joined_at": 1790679060,
+        "outlet_id": "france24",
+        "published_at": 1790673127
+      },
+      {
+        "item_id": 13208549375976281210,
+        "joined_at": 1790679061,
+        "outlet_id": "nbcnews",
+        "published_at": 1790676364
+      },
+      {
+        "item_id": 6398690140943444841,
+        "joined_at": 1790682110,
+        "outlet_id": "thehindu",
+        "published_at": 1790681540
+      },
+      {
+        "item_id": 13330697414083629155,
+        "joined_at": 1790682424,
+        "outlet_id": "independent",
+        "published_at": 1790682310
+      },
+      {
+        "item_id": 9621804497890721238,
+        "joined_at": 1790715373,
+        "outlet_id": "guardian",
+        "published_at": 1790704615
+      },
+      {
+        "item_id": 3639434993237599106,
+        "joined_at": 1790715376,
+        "outlet_id": "france24",
+        "published_at": 1790681792
+      },
+      {
+        "item_id": 15148611418029777452,
+        "joined_at": 1790715378,
+        "outlet_id": "globeandmail",
+        "published_at": 1790685067
+      },
+      {
+        "item_id": 14409111173843530222,
+        "joined_at": 1790715492,
+        "outlet_id": "unknown:today.com",
+        "published_at": 1790680873
+      },
+      {
+        "item_id": 11191200533709939824,
+        "joined_at": 1790718663,
+        "outlet_id": "arabnews",
+        "published_at": 1790716708
+      },
+      {
+        "item_id": 3622818621203869398,
+        "joined_at": 1790722541,
+        "outlet_id": "huffpost",
+        "published_at": 1790716077
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "axios",
+            "bloomberg",
+            "cbsnews",
+            "huffpost",
+            "nbcnews",
+            "npr",
+            "pbs",
+            "scmp",
+            "globeandmail",
+            "guardian",
+            "thehill",
+            "thehindu",
+            "independent",
+            "nytimes",
+            "straitstimes",
+            "washingtonpost"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "foxnews",
+            "gbnews"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "newsmax",
+            "rt"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [
+        "france24",
+        "ndtv",
+        "unknown:today.com"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "arabnews": "Arab News",
+    "axios": "Axios",
+    "bloomberg": "Bloomberg",
+    "breitbart": "Breitbart",
+    "cbsnews": "CBS News",
+    "foxnews": "Fox News",
+    "france24": "France 24",
+    "gbnews": "GB News",
+    "globeandmail": "The Globe and Mail",
+    "guardian": "The Guardian",
+    "huffpost": "HuffPost",
+    "independent": "The Independent",
+    "nbcnews": "NBC News",
+    "ndtv": "NDTV",
+    "newsmax": "Newsmax",
+    "npr": "NPR",
+    "nytimes": "The New York Times",
+    "pbs": "PBS NewsHour",
+    "rt": "RT",
+    "scmp": "South China Morning Post",
+    "straitstimes": "The Straits Times",
+    "thehill": "The Hill",
+    "thehindu": "The Hindu",
+    "unknown:today.com": "unknown:today.com",
+    "washingtonpost": "The Washington Post"
+  },
+  "outlets_24h": 19,
+  "outlets_6h": 6,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 9585249930798125768,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3246,
+      "snapshot_id": 208018889077794446,
+      "ts": 1790661153
+    },
+    {
+      "cluster_id": null,
+      "item_id": 4998290463450254569,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3253,
+      "snapshot_id": 2968912916999139602,
+      "ts": 1790661272
+    },
+    {
+      "cluster_id": null,
+      "item_id": 9621804497890721238,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5571,
+      "snapshot_id": 13066206848297626258,
+      "ts": 1790720186
+    }
+  ],
+  "spark": [
+    8,
+    8,
+    23,
+    23,
+    24,
+    24,
+    26,
+    26,
+    26,
+    26,
+    26,
+    26
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://foxnews.com/world/uk-police-arrest-explosive-suspects-near-us-airbase-key-iran-war",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633634,
+          "id": 6582924374120051070,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "foxnews",
+          "published_at": 1790509254,
+          "summary": "Multiple suspects were arrested under the Explosives Act near RAF Fairford, prompting evacuations as explosive ordnance disposal teams examined vehicles.",
+          "text_hash": 17601260351807264222,
+          "title": "UK police arrest 'explosive' suspects near US airbase, key to Iran war"
+        },
+        {
+          "canonical_url": "https://foxnews.com/world/uk-airbase-terror-suspects-released-bail-iran-denies-connection",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633634,
+          "id": 12082318645125469333,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "foxnews",
+          "published_at": 1790610391,
+          "summary": "Five RAF Fairford terror suspects were released on bail as counter terrorism policing probes possible foreign state involvement in the plot.",
+          "text_hash": 1955985642656905868,
+          "title": "UK airbase terror suspects being released on bail as Iran denies connection"
+        }
+      ],
+      "outlet_id": "foxnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-uk-terrorist-air-base-us-military/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653941,
+          "id": 16646139486979280535,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790516814,
+          "summary": "RAF Fairford has been used by American bombers for strictly limited strikes against Iranian missile sites",
+          "text_hash": 1733961220304564226,
+          "title": "Five arrested in U.K. on suspicion of preparing terrorist act near air base used by U.S. military"
+        },
+        {
+          "canonical_url": "https://theglobeandmail.com/world/video-uk-police-arrest-five-near-us-air-base/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653941,
+          "id": 1557766715907142397,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790527201,
+          "summary": "U.K. police said Sunday that five men arrested in the middle of the night near an air base used by the United States during its war against Iran are being held on suspicion of preparing a terrorist act.",
+          "text_hash": 9826441029279498244,
+          "title": "U.K. police arrest five near U.S. air base"
+        },
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-uk-air-base-attempted-iran-linked-attack/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653941,
+          "id": 3864764996115888542,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790591087,
+          "summary": "Five British men arrested are released on bail as counterterror detectives investigate ‘multiple lines of inquiry’",
+          "text_hash": 8784590217920787462,
+          "title": "U.K. police probe whether arrests near U.S.-run air base foiled an attempted Iran-linked attack"
+        },
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-uk-military-base-men-arrested-british-nationals/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653941,
+          "id": 9570350391300067115,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790603116,
+          "summary": "Five British nationals were arrested Sunday near RAF Fairford, a site used by the U.S. military to carry out air strikes on Iran",
+          "text_hash": 17963851906900849602,
+          "title": "Men suspected of carrying explosives near U.K. military base released on bail"
+        },
+        {
+          "canonical_url": "https://theglobeandmail.com/world/video-five-men-arrested-near-us-run-air-base-in-uk-released-on-bail/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790715378,
+          "id": 15148611418029777452,
+          "joined_at": 1790715378,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790685067,
+          "summary": "The five suspects, who haven't been named, were initially held over suspected explosives offenses and later also arrested on suspicion of preparing an act of terrorism. Police said the men are all British nationals from London and in their 20s.",
+          "text_hash": 7139199565690908808,
+          "title": "Five men arrested near U.S.-run air base in U.K. released on bail"
+        }
+      ],
+      "outlet_id": "globeandmail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/27/terrorism-raf-fairford-base-us-air-force",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653931,
+          "id": 17539974539827203666,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790525975,
+          "summary": "British police arrested five men Sunday on suspicion of terrorism near a U.K. air base used for U.S. operations in Iran , as President Trump said the suspects had been under investigation. The latest: \"Working with Britain, it was an amazing job,\" Trump told reporters Sunday morning. \"We had them under investigation. They were looking to do big damage to our fort, and working with the British worked out great and we got them.\" The big picture: Officials declared a major incident and set up roadblocks…",
+          "text_hash": 1307901104246923358,
+          "title": "Trump: 5 terrorism suspects in U.K. base incident were under investigation"
+        }
+      ],
+      "outlet_id": "axios"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtonpost.com/world/2026/09/27/5-arrested-uk-near-base-used-by-us-suspicion-planning-terror-act/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633644,
+          "id": 17144001477193075404,
+          "joined_at": 1790633644,
+          "lang": "en",
+          "outlet_id": "washingtonpost",
+          "published_at": 1790528582,
+          "summary": "President Trump said U.S. and British authorities were working together on the investigation. He said he believed the suspects were “looking to do big damage.”",
+          "text_hash": 5884194592304686170,
+          "title": "5 arrested in U.K. near base used by U.S. on suspicion of planning terror act"
+        },
+        {
+          "canonical_url": "https://washingtonpost.com/world/2026/09/28/uk-says-men-accused-terror-plot-are-british-nationals-iran-denies-links/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633644,
+          "id": 5073366294790778111,
+          "joined_at": 1790633644,
+          "lang": "en",
+          "outlet_id": "washingtonpost",
+          "published_at": 1790617182,
+          "summary": "Britain has confronted dozens of lethal plots traced to Iran in recent years, but the release of the suspects could indicate they were not seen as an imminent threat.",
+          "text_hash": 2710677057407942856,
+          "title": "Men accused of U.K. air base plot freed on bail as officials probe any Iran links"
+        }
+      ],
+      "outlet_id": "washingtonpost"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://huffpost.com/entry/british-police-arrest-five-air-base-terror-probe_n_6ab9544ee4b0d1543f549e3c",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653935,
+          "id": 18057674138440011555,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "huffpost",
+          "published_at": 1790531469,
+          "summary": "The men were arrested on suspicion of preparing a terrorist act and explosives offenses after three vans were seen heading to RAF Fairford.",
+          "text_hash": 1736560539623388035,
+          "title": "British Police Arrest 5 Near Air Base Used By U.S. In Potential Terror Probe"
+        },
+        {
+          "canonical_url": "https://huffpost.com/entry/five-men-released-us-air-base-england-police-counterterrorism_n_6aba83a8e4b00588e1d560e5",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653935,
+          "id": 6817451898814765997,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "huffpost",
+          "published_at": 1790609006,
+          "summary": "British police say the five men are still under investigation after being arrested under counterterrorism laws outside a base used by American bombers.",
+          "text_hash": 8722771534451192270,
+          "title": "5 Men Released On Bail After Arrest Near U.S.-Run Air Base In England, Police Say"
+        },
+        {
+          "canonical_url": "https://huffpost.com/entry/british-police-no-explosives-arrests-us-military-base-uk-counterterror_n_6abc2604e4b0ecc03a1d6cef",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790722541,
+          "id": 3622818621203869398,
+          "joined_at": 1790722541,
+          "lang": "en",
+          "outlet_id": "huffpost",
+          "published_at": 1790716077,
+          "summary": "British counterterror police said its decision to release five men during a probe into a suspected bomb plot was based on “experience and strategy.”",
+          "text_hash": 1409440087093081206,
+          "title": "British Police Find No Explosives After Arrests Near U.S.-Run Military Base"
+        }
+      ],
+      "outlet_id": "huffpost"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/uk-london-fairford-air-base-bomb-threat/article71515604.ece",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653942,
+          "id": 16805506203679954856,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790537300,
+          "summary": "Some 85 households in the nearby village of Whelford were advised to evacuate and army bomb disposal experts were called in.",
+          "text_hash": 8384775912327408916,
+          "title": "U.K. police arrest five for preparing ‘terrorist act’ as incident near air base probed"
+        },
+        {
+          "canonical_url": "https://thehindu.com/news/international/trump-surprised-uk-air-base-terror-suspects-out-on-bail/article71523496.ece",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790682110,
+          "id": 6398690140943444841,
+          "joined_at": 1790682110,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790681540,
+          "summary": "“I’m surprised that they released them,” Mr. Trump told reporters, even as he praised the U.K. authorities for working “very closely” with the U.S.",
+          "text_hash": 17976831585766474318,
+          "title": "Trump ‘surprised’ U.K. air base terror suspects out on bail"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nytimes.com/2026/09/27/world/europe/raf-fairford-airbase-arrests.html",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633633,
+          "id": 18316665773356867111,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "nytimes",
+          "published_at": 1790540420,
+          "summary": "The British counterterrorism police say the men were arrested after three suspicious vehicles appeared to be traveling toward R.A.F. Fairford early on Sunday.",
+          "text_hash": 1183406669346115844,
+          "title": "5 Arrested on Suspicion of Terrorism Near RAF Fairford Air Base in UK"
+        },
+        {
+          "canonical_url": "https://nytimes.com/2026/09/28/world/europe/us-air-base-uk-terror-incident-fairford.html",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633633,
+          "id": 6230638258834357026,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "nytimes",
+          "published_at": 1790625926,
+          "summary": "The British counterterrorism police said the five British nationals arrested near R.A.F. Fairford on Sunday were being released on bail but remained under investigation.",
+          "text_hash": 673106656686571870,
+          "title": "Release of Suspects in U.K. Prompts New Questions Over Possible Terror Plot at RAF Fairford Base"
+        },
+        {
+          "canonical_url": "https://nytimes.com/2026/09/28/world/europe/raf-fairford-incident-air-base-terrorism-uk.html",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633633,
+          "id": 17898273162578695047,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "nytimes",
+          "published_at": 1790632641,
+          "summary": "Five British men who were detained near R.A.F. Fairford, a base used by American forces in the war against Iran, were being released on bail but remained under investigation.",
+          "text_hash": 1902700635649614094,
+          "title": "Possible Terrorist Plot at RAF Fairford Air Base in U.K.: What We Know"
+        }
+      ],
+      "outlet_id": "nytimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rt.com/news/646335-uk-police-arrest-five-men/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633639,
+          "id": 9517423831472897323,
+          "joined_at": 1790633639,
+          "lang": "en",
+          "outlet_id": "rt",
+          "published_at": 1790543011,
+          "summary": "UK police are investigating five British men over a suspected terrorist plot near a US air base used in strikes against Iran Read Full Article at RT.com",
+          "text_hash": 8706375096770080553,
+          "title": "Five Britons probed over suspected bomb plot outside US air base"
+        }
+      ],
+      "outlet_id": "rt"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://npr.org/2026/09/27/nx-s1-5982718/five-arrested-near-uk-air-base-used-by-u-s-bombers-in-iran-war",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633634,
+          "id": 4993242721498481235,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "npr",
+          "published_at": 1790543684,
+          "summary": "U.K. police say five men were arrested on suspicion of preparation of a terrorist act after three vehicles were spotted near an air base the U.S. military has been using to launch attacks on Iran.",
+          "text_hash": 4062045155811841614,
+          "title": "Five arrested near UK air base used by U.S. bombers in Iran war"
+        },
+        {
+          "canonical_url": "https://npr.org/2026/09/28/g-s1-145245/britain-us-base-suspected-foiled-attack",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633634,
+          "id": 9585249930798125768,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "npr",
+          "published_at": 1790592685,
+          "summary": "Investigators haven't concluded whether the incident was state-backed. They are investigating a possible link to Iran, Russia or non-state militant groups.",
+          "text_hash": 1630734634962597318,
+          "title": "5 men arrested near a U.S.-run base bailed as UK police probe if there's an Iran link"
+        },
+        {
+          "canonical_url": "https://npr.org/2026/09/28/nx-s1-5983550/british-men-released-on-bail-after-suspected-terror-plot",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633634,
+          "id": 16086225105184842556,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "npr",
+          "published_at": 1790633402,
+          "summary": "Five British men have been released on bail after being detained near a military base for alleged terror offenses. The British base is used by the U.S. military for strikes on Iran.",
+          "text_hash": 8650387474999947506,
+          "title": "British men released on bail after suspected terror plot"
+        }
+      ],
+      "outlet_id": "npr"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://today.com/video/5-men-arrested-on-suspected-terror-plot-at-us-air-base-in-britain-270642245507",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790654748,
+          "id": 13951427144333228563,
+          "joined_at": 1790654748,
+          "lang": "en",
+          "outlet_id": "unknown:today.com",
+          "published_at": 1790594172,
+          "summary": "Five men have been arrested by U.K. police on a suspected terror plot at a key U.S. Air Base in Britain. Now an urgent investigation is underway with officials looking into whether Iran was behind the threat. NBC’s Raf Sanchez reports for TODAY.",
+          "text_hash": 16725358827607884171,
+          "title": "5 Arrested on Suspected Terror Plot at US Air Base in Britain"
+        },
+        {
+          "canonical_url": "https://today.com/video/rubio-alleges-foreign-government-was-involved-in-uk-terror-plot-270709829855",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790715492,
+          "id": 14409111173843530222,
+          "joined_at": 1790715492,
+          "lang": "en",
+          "outlet_id": "unknown:today.com",
+          "published_at": 1790680873,
+          "summary": "New details are emerging about the potential terror plot targeting a US-operated military base in the U.K, with Secretary of State Marco Rubio alleging for the first time that a foreign government was involved. Authorities decided to release all five suspects on bail without being charged. NBC’s Raf Sanchez reports for TODAY.",
+          "text_hash": 4148548873873625583,
+          "title": "5 Men Arrested Near UK Air Base by US Forces Released on Bail"
+        }
+      ],
+      "outlet_id": "unknown:today.com"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/world/europe/article/3369082/uk-investigates-if-arrests-near-us-run-base-prevented-iran-linked-attack",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653941,
+          "id": 12758328661387896993,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790594299,
+          "summary": "Five young British men arrested on explosives and terror charges near a US-operated air force base in England were released on bail Monday, and counterterror detectives said they were investigating “multiple lines of inquiry”, including whether there is a link to Iran. The men were detained early Sunday after three vans were spotted in the countryside near RAF Fairford, a UK-owned base that has been used by American bombers during decades of conflicts in the Middle East, including this year’s...",
+          "text_hash": 10971179886803690391,
+          "title": "5 men released on bail in UK over suspected US-run airbase plot"
+        }
+      ],
+      "outlet_id": "scmp"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://gbnews.com/news/raf-fairford-arrested-men-london",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653938,
+          "id": 16265616870906424708,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790595479,
+          "summary": "Five people arrested over a suspected bomb plot at RAF Fairford are all male British nationals, Counter Terrorism Policing have confirmed. The group of men, who are also from London and aged in their 20s, were detained yesterday on suspicion of terrorism and explosives offences after three vans were discovered close to the Gloucestershire base used by US forces. All five have since been released on bail, Assistant Commissioner Laurence Taylor said. Mr Taylor told reporters outside New Scotland Yard: “I can…",
+          "text_hash": 1518713562234690143,
+          "title": "Five men arrested over foiled RAF bomb plot are all British nationals, counter-terror police say"
+        },
+        {
+          "canonical_url": "https://gbnews.com/news/raf-fairford-bomb-plot-update-suspects-bailed-counter-terror-police",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653938,
+          "id": 4388673828530589501,
+          "joined_at": 1790653938,
+          "lang": "en",
+          "outlet_id": "gbnews",
+          "published_at": 1790612573,
+          "summary": "The five suspects arrested in connection with a suspected terror plot at RAF Fairford have been released on bail, Counterterror police have revealed in an update on the case. Laurence Taylor, Head of National Counter Terrorism Policing, insisted that the men “remain under investigation” and have been placed under stringent release conditions. On Sunday, five men were arrested on suspicion of terrorism and explosives offences after three suspicious vans were found close to the Gloucestershire facility.…",
+          "text_hash": 722000714315740476,
+          "title": "RAF Fairford suspects released on bail as counter-terror police refuse to rule out ‘foreign state’ connection"
+        }
+      ],
+      "outlet_id": "gbnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://cbsnews.com/video/at-least-5-men-suspected-of-preparing-terrorist-act-near-uk-air-base-used-by-us-police-say/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653930,
+          "id": 17920483038074511497,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790601323,
+          "summary": "Five men were arrested Sunday near a Royal Air Force base in Gloucestershire, England, on suspicion of preparing a terrorist act against the base, which is used by U.S. forces. Holly Williams reports.",
+          "text_hash": 1880328709882380676,
+          "title": "At least 5 men suspected of preparing terrorist act near U.K. air base used by U.S., police say"
+        },
+        {
+          "canonical_url": "https://cbsnews.com/video/5-british-terror-plot-suspects-freed-bail/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653930,
+          "id": 14102658564844486547,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790638220,
+          "summary": "Five British nationals were freed on bail after a high-profile arrest over the weekend. They are suspected of planning an attack near an air base used by the U.S. military in the war with Iran. President Trump criticized their release as investigators dig into their backgrounds. Holly Williams reports.",
+          "text_hash": 17066189485195265106,
+          "title": "5 British terror plot suspects freed on bail"
+        },
+        {
+          "canonical_url": "https://cbsnews.com/news/england-raf-fairford-us-military-air-force-bomb-disposal/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653930,
+          "id": 14404976847862770553,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "cbsnews",
+          "published_at": 1790638414,
+          "summary": "Police say five U.K. nationals who were arrested near RAF Fairford air base in England, which is used by U.S. forces, have been released on bail.",
+          "text_hash": 1736429278433645506,
+          "title": "5 men arrested near U.K. air base used by U.S. released on bail"
+        }
+      ],
+      "outlet_id": "cbsnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://bloomberg.com/news/articles/2026-09-28/uk-police-release-airbase-terror-suspects-on-bail",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653933,
+          "id": 5624193881719306840,
+          "joined_at": 1790653933,
+          "lang": "en",
+          "outlet_id": "bloomberg",
+          "published_at": 1790607688,
+          "summary": "President Donald Trump criticized the UK’s move to release on bail five men held over an alleged terror plot against a Royal Air Force base used by the US for strikes against Iran, as British police continue to investigate foreign links to the incident.",
+          "text_hash": 14152000631917084867,
+          "title": "Trump Criticizes UK Move to Release Airbase Suspects Amid Probe"
+        }
+      ],
+      "outlet_id": "bloomberg"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/europe/2026/09/28/suspects-in-alleged-terror-plot-on-air-force-base-released-on-bail-all-said-to-be-british-nationals/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633635,
+          "id": 6640554879419267423,
+          "joined_at": 1790633635,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790611522,
+          "summary": "Counter Terrorism officials said that the \"British national\" suspects in the alleged terror plot on RAF Fairford have been released on bail. The post Suspects in Alleged Terror Plot on Air Force Base Released on Bail, All Said to Be ‘British Nationals’ appeared first on Breitbart .",
+          "text_hash": 5270491675495922254,
+          "title": "Suspects in Alleged Terror Plot on Air Force Base Released on Bail, All Said to Be 'British Nationals'"
+        }
+      ],
+      "outlet_id": "breitbart"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://france24.com/en/video/20260928-five-suspects-arrested-in-explosives-case-near-uk-airbase-were-british-nationals",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653939,
+          "id": 16536067851973424556,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790614031,
+          "summary": "Five suspects arrested by British police on suspicion of terrorism and explosives ​offenses after white vans drove towards an airbase used by US forces were all British nationals from London in their early 20s, police said on Monday. France 24 Benedicte Paviot has more.",
+          "text_hash": 10567605171854489589,
+          "title": "Five suspects arrested in explosives case near UK airbase were British nationals"
+        },
+        {
+          "canonical_url": "https://france24.com/en/expert-says-uk-airbase-plot-fits-into-a-very-intense-pattern-we-ve-been-seeing-in-past-two-months",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653939,
+          "id": 9535488051623327239,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790630619,
+          "summary": "British police said Monday five men arrested near an airbase used by the United States were released on bail, as officers probed whether a \"foreign state\" could be involved in a suspected bomb plot. Speaking with FRANCE 24's Monte Francis, Yan Saint-Pierre, CEO of Modern Security Consulting Group, explains that many of the hybrid warfare cases seen recently \"involve local nationals, this is not about exporting terror\" adding that foreign actors aim to have \"as many layers as possible to complicate any…",
+          "text_hash": 3500895513010733501,
+          "title": "Expert says UK airbase plot 'fits into a very intense pattern we've been seeing in past two months'"
+        },
+        {
+          "canonical_url": "https://france24.com/en/tv-shows/a-propos/20260928-expert-says-uk-airbase-plot-fits-into-a-very-intense-pattern-we-ve-been-seeing-in-past-two-months",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653939,
+          "id": 3664043954830937056,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790630718,
+          "summary": "British police said Monday five men arrested near an airbase used by the United States were released on bail, as officers probed whether a \"foreign state\" could be involved in a suspected bomb plot. Speaking with FRANCE 24's Monte Francis, Yan Saint-Pierre, CEO of Modern Security Consulting Group, explains that many of the hybrid warfare cases seen recently \"involve local nationals, this is not about exporting terror\" adding that foreign actors aim to have \"as many layers as possible to complicate any…",
+          "text_hash": 3500895513010733501,
+          "title": "Expert says UK airbase plot 'fits into a very intense pattern we've been seeing in past two months'"
+        },
+        {
+          "canonical_url": "https://france24.com/en/europe/20260929-trump-surprised-uk-granted-bail-to-suspects-alleged-airbase-terror-plot",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790679060,
+          "id": 13643474664352064539,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790673127,
+          "summary": "US President Donald Trump said Monday he was “surprised” British police released on bail five men arrested on suspicion of a plot to attack a UK airbase. Trump added the case “might be” linked to Iran, since the base has been used by US bombers to target Iran since March.",
+          "text_hash": 4077176599807402506,
+          "title": "Trump 'surprised' UK granted bail to suspects in alleged airbase terror plot"
+        },
+        {
+          "canonical_url": "https://france24.com/en/video/20260929-investigation-ongoing-uk-police-release-on-bail-five-men-held-over-airbase-incident",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790679060,
+          "id": 14329423026993851800,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790677916,
+          "summary": "British police said Monday five men arrested near an airbase used by the United States were released on bail, as Washington asserted a \"foreign actor\" was involved in the suspected bomb plot. US President Donald Trump, speaking in Washington, said he was \"surprised that they released them\". The release of the five came as British Prime Minister Andy Burnham announced an emergency meeting of top officials to ensure they have \"the full picture\". FRANCE 24's International Affairs Commentator Douglas Herbert…",
+          "text_hash": 36348399192486167,
+          "title": "Investigation 'ongoing': UK police release on bail five men held over airbase incident"
+        },
+        {
+          "canonical_url": "https://france24.com/en/video/20260929-mystery-over-uk-airbase-scare-after-reports-no-explosives-found",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790715376,
+          "id": 3639434993237599106,
+          "joined_at": 1790715376,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790681792,
+          "summary": "A UK probe into a suspected bomb plot at an airbase used by the United States was mired in confusion on Tuesday, after media reported no explosives were detected in vehicles seized nearby. As armed guards maintained a cordon around a nearby village, Washington questioned the decision to release on bail five men arrested near the Royal Air Force Fairford base in southwest England.",
+          "text_hash": 1951461216762038321,
+          "title": "Mystery over UK airbase scare after reports no explosives found"
+        }
+      ],
+      "outlet_id": "france24"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/video/newsfeed/2026/9/28/uk-police-release-suspects-on-bail-after-raf-arrests-investigation-ongoing?traffic_source=rss",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633634,
+          "id": 250656443722811628,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790616764,
+          "summary": "British police officials say that suspects arrested over a 'terror' incident at a RAF base were released on police bail.",
+          "text_hash": 2913000404030789140,
+          "title": "UK police release suspects on bail after RAF arrests, investigation ongoing"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehill.com/homenews/administration/6115778-men-released-raf-fairford-investigation/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653930,
+          "id": 1255182558609802591,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790619359,
+          "summary": "The five men arrested in connection with a possible terrorist attack at a British air base operated by the U.S. military have been released on bail but remain under investigation, according to the United Kingdom’s counterterrorism police. All five men — who are British nationals from London and are between 23 and 25 years old…",
+          "text_hash": 8707338514303163776,
+          "title": "UK police to release 5 men arrested in US air base incident"
+        },
+        {
+          "canonical_url": "https://thehill.com/homenews/administration/6115979-trump-uk-terror-bail-surprise/",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653930,
+          "id": 9998788905922881835,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790625531,
+          "summary": "President Trump said Monday he was “surprised” that British authorities released on bail the five men arrested a day prior in connection with a possible terrorist attack at a U.K. air base operated by the U.S. military. “I would’ve said don’t let them have bail. … I’m surprised that they released them. I wouldn’t have…",
+          "text_hash": 18191057132777263554,
+          "title": "Trump ‘surprised’ 5 men released in UK bomb plotting probe"
+        }
+      ],
+      "outlet_id": "thehill"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/world/trump-surprised-uk-freed-airbase-suspects-on-bail-3003623",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653942,
+          "id": 12702503740219034233,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790625244,
+          "summary": "WASHINGTON: US President Donald Trump said Monday that British police should not have released on bail five men who were arrested near an airbase used by the United States over a suspected bomb plot. Trump added that the case “might be” linked to Iran but declined to give details. “I’m surprised that they released them, I wouldn’t have done that,” Trump told reporters in the Oval Office, while adding that British authorities had worked “very closely” with the United States. “We know everything a",
+          "text_hash": 3099506559410325651,
+          "title": "Trump ‘surprised’ UK freed airbase suspects on bail"
+        },
+        {
+          "canonical_url": "https://arabnews.com/world/uk-police-release-on-bail-five-men-held-over-airbase-incident-3003666",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790654531,
+          "id": 9057039749380820392,
+          "joined_at": 1790654531,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790654544,
+          "summary": "British police have released five men on bail after they were arrested near a US airbase. The release comes amid claims from Washington of a ‘foreign actor’ being involved in a suspected bomb plot.",
+          "text_hash": 254130909291655318,
+          "title": "UK police release on bail five men held over airbase incident"
+        },
+        {
+          "canonical_url": "https://arabnews.com/world/british-police-find-no-explosives-but-questions-remain-after-arrests-near-a-us-run-military-base-3003800",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790718663,
+          "id": 11191200533709939824,
+          "joined_at": 1790718663,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790716708,
+          "summary": "LONDON (AP) — A surprise decision by the U.K.'s counterterrorism police to release five suspects on bail during an investigation into a suspected bomb plot at a U.S.-operated air force base in England has deepened questions and uncertainty about the incident. Police confirmed Tuesday that no explosives were found in three vans linked to the suspects, and said the decision to grant bail was grounded in “experience and strategy.\" U.S. President Donald Trump told reporters on Monday that he was",
+          "text_hash": 10656851838456000323,
+          "title": "British police find no explosives but questions remain after arrests near a US-run military base"
+        }
+      ],
+      "outlet_id": "arabnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/uk-police-release-five-men-on-bail-after-airbase-incident",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653941,
+          "id": 4998290463450254569,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790626688,
+          "summary": "Their release came as British Prime Minister Andy Burnham announced an emergency meeting of top officials.",
+          "text_hash": 9235834881083318347,
+          "title": "British police release five men on bail after airbase incident"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/uk-news/2026/sep/28/men-arrested-raf-fairford-counter-terrorism-police",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790633633,
+          "id": 15587760235900320854,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790632942,
+          "summary": "Police say alleged offences could have been committed ‘knowingly or unknowingly’ on behalf of a foreign state Five men arrested over a suspected bomb plot at RAF Fairford have been released on bail as police investigate why they were so close to the airbase in three vans with suspicious material in the back. The five suspects were revealed to be British men, all in their 20s and from London. They had been arrested in the Gloucestershire countryside early on Sunday morning on suspicion of explosives…",
+          "text_hash": 4120187900291283286,
+          "title": "Five UK nationals arrested near RAF Fairford released on bail"
+        },
+        {
+          "canonical_url": "https://theguardian.com/uk-news/2026/sep/29/raf-fairford-police-uk-counter-terrorism",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790715373,
+          "id": 9621804497890721238,
+          "joined_at": 1790715373,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790704615,
+          "summary": "Man dialled 999 before he and four others were arrested near military base in Gloucestershire, it has emerged One of the five men arrested near RAF Fairford as part of a terror investigation that prompted fears of an Iran-backed plot called the police to report the incident, it has emerged. The call from the man, in his 20s and from London, was one reason armed police were scrambled to arrest the men, who were with three vans close to the military base used by the US in its attacks on Iran. Continue…",
+          "text_hash": 12717382207320751451,
+          "title": "Suspect in RAF Fairford case called police to report incident"
+        }
+      ],
+      "outlet_id": "guardian"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://pbs.org/newshour/show/news-wrap-uk-police-investigating-possible-plot-targeting-u-s-base",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653930,
+          "id": 7476658630888396648,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "pbs",
+          "published_at": 1790635507,
+          "summary": "In our news wrap Monday, UK police are investigating five British nationals in connection with a possible plot at an American airbase, prosecutors in New York say they are reopening a criminal investigation into an alleged sexual assault at a Cornell University fraternity in 2024 and officials in Ukraine say at least seven people were killed and more than 80 were wounded in Russian strikes.",
+          "text_hash": 7662245765568280163,
+          "title": "News Wrap: UK police investigating possible plot targeting U.S. base"
+        }
+      ],
+      "outlet_id": "pbs"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://newsmax.com/politics/donald-trump-u-k-air-base/2026/09/28/id/1270992",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790653934,
+          "id": 2673382663592452248,
+          "joined_at": 1790653934,
+          "lang": "en",
+          "outlet_id": "newsmax",
+          "published_at": 1790637575,
+          "summary": "President Donald Trump said he was \"surprised\" by the Monday release on bail of five men arrested near a United Kingdom air base used by the U.S. military on suspicion of explosives offenses and preparing a terrorist act.",
+          "text_hash": 4183072949838257603,
+          "title": "Trump 'Surprised' UK Freed Airbase Plot Suspects"
+        }
+      ],
+      "outlet_id": "newsmax"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://ndtv.com/world-news/surprised-trump-as-uk-releases-us-airbase-incident-terror-suspects-on-bail-12112600",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790667539,
+          "id": 2238807855555577965,
+          "joined_at": 1790667539,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790658878,
+          "summary": "Police said in their latest update Monday that the five men held, who all live in inner London boroughs, were being released on bail.",
+          "text_hash": 11278447794158664899,
+          "title": "\"Surprised\": Trump After UK Releases Airbase Incident Terror Suspects On Bail"
+        }
+      ],
+      "outlet_id": "ndtv"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nbcnews.com/world/united-kingdom/trump-surprised-uk-releases-men-base-used-us-iran-rcna600423",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790679061,
+          "id": 13208549375976281210,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "nbcnews",
+          "published_at": 1790676364,
+          "summary": "President Donald Trump has said he was surprised after U.K. police released on bail five men who had been arrested in connection with a huge security operation near an air base used by the U.S.",
+          "text_hash": 3500220701238628562,
+          "title": "Trump ‘surprised’ after U.K. releases men detained near base used by U.S. forces"
+        }
+      ],
+      "outlet_id": "nbcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/uk/crime/raf-fairford-marco-rubio-terror-iran-b3058127.html",
+          "cluster_id": 15587760235900320854,
+          "fetched_at": 1790682424,
+          "id": 13330697414083629155,
+          "joined_at": 1790682424,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790682310,
+          "summary": "Five suspects, all UK nationals living in London, were released on Monday but remain under investigation",
+          "text_hash": 1356813319720360741,
+          "title": "Suspected terror plot at UK-US airbase ‘clearly involved a foreign actor’, Secretary of State Rubio claims"
+        }
+      ],
+      "outlet_id": "independent"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 5624193881719306840,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3028,
+      "snapshot_id": 4764928190158281636,
+      "ts": 1790655372
+    },
+    {
+      "cluster_id": null,
+      "item_id": 6817451898814765997,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3210,
+      "snapshot_id": 9450678744362225953,
+      "ts": 1790660539
+    },
+    {
+      "cluster_id": null,
+      "item_id": 15587760235900320854,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3303,
+      "snapshot_id": 10465272261450667778,
+      "ts": 1790662840
+    },
+    {
+      "cluster_id": null,
+      "item_id": 6817451898814765997,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3479,
+      "snapshot_id": 15821896755431870849,
+      "ts": 1790666791
+    },
+    {
+      "cluster_id": null,
+      "item_id": 13951427144333228563,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3855,
+      "snapshot_id": 11963863429182609621,
+      "ts": 1790679061
+    },
+    {
+      "cluster_id": null,
+      "item_id": 13208549375976281210,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5367,
+      "snapshot_id": 16262753627618973934,
+      "ts": 1790715492
+    },
+    {
+      "cluster_id": null,
+      "item_id": 13208549375976281210,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5373,
+      "snapshot_id": 16262753627618973934,
+      "ts": 1790715492
+    },
+    {
+      "cluster_id": null,
+      "item_id": 14409111173843530222,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5507,
+      "snapshot_id": 5465025383875757474,
+      "ts": 1790717646
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17920483038074511497,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5908,
+      "snapshot_id": 6389917781636320744,
+      "ts": 1790724933
+    }
+  ]
+}

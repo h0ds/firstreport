@@ -1,0 +1,232 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "dailycaller.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.6958
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.70 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://www.wikidata.org/wiki/Q7728625",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "dailycaller.com",
+          "expires": "2028-05-06",
+          "last_changed": "2025-05-07",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailycaller.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2009-05-06"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://www.wikidata.org/wiki/Q7728625",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2010-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q17232649"
+        },
+        "field": "legal_form",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://www.wikidata.org/wiki/Q7728625",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news website"
+      },
+      {
+        "data": {
+          "qid": "Q1153191"
+        },
+        "field": "legal_form",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://www.wikidata.org/wiki/Q7728625",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "online newspaper"
+      }
+    ],
+    "name": [
+      {
+        "field": "name",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://www.wikidata.org/wiki/Q7728625",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Daily Caller"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "dailycaller.com"
+        },
+        "field": "registrar",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailycaller.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "GoDaddy.com, LLC"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_258#RfC:_The_Daily_Caller",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_71#The_Daily_Caller",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_145#The_Daily_Caller_is_not_a_reliable_source",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_109#Daily_Caller_as_source_of_opinion_refuting_a_technical_white_paper_+_secondary_sources",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_149#The_Daily_Caller_as_a_source",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_158#Timmerman_of_Daily_Caller:_\"sources_with_access_to_intelligence_reports_had_told_him_that_intelligence_reports_from_French_and_Jordanian_military_intelligence_show...\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_242#The_Hill,_Fox_News,_and_Daily_Caller_reliable_sources?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_278#Correct_action_when_someone_persistently_adds_back_a_deprecated_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_280#Interviews_&_opinion_pieces_(The_Daily_Caller)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Daily Caller",
+          "status": "deprecated",
+          "summary": "The Daily Caller was deprecated in the 2019 RfC, which showed consensus that the site publishes false or fabricated information."
+        },
+        "field": "reliability",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "dailycaller.com",
+          "final_url": "https://dailycaller.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://dailycaller.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://dailycaller.com/about-us",
+          "contact": "https://dailycaller.com/contact",
+          "domain": "dailycaller.com",
+          "ethics": "https://dailycaller.com/2026/09/28/trump-fuel-economy-standards-ev-mandate-duffy-nhtsa-steve-milloy-jason-isaac",
+          "missing": [
+            "corrections",
+            "masthead"
+          ],
+          "privacy": "https://dailycaller.com/footer/privacy-policy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://dailycaller.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://www.wikidata.org/wiki/Q7728625",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://dailycaller.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://www.wikidata.org/wiki/Q7728625",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q7728625"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "dailycaller",
+        "ref_url": "https://www.wikidata.org/wiki/Q7728625",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Daily_Caller"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 0,
+  "outlet": {
+    "domains": [
+      "dailycaller.com"
+    ],
+    "id": "dailycaller",
+    "name": "The Daily Caller"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

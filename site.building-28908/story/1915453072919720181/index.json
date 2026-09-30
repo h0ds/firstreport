@@ -1,0 +1,773 @@
+{
+  "claims": {
+    "axios": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "axios.com",
+          "expires": "2027-09-09",
+          "last_changed": "2026-08-05",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "axios",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/axios.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-09-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2017-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q1138249"
+        },
+        "field": "owner",
+        "outlet_id": "axios",
+        "ref_url": "https://www.wikidata.org/wiki/Q28230873",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Cox Enterprises"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_263#Axios_(website)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Axios.com_as_a_generally_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Axios",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Axios is generally reliable. Some editors consider Axios to be a biased or opinionated source. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "axios",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "globeandmail": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      },
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "ndtv": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "ndtv.com",
+          "expires": "2032-09-25",
+          "last_changed": "2026-09-26",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "pending transfer"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "ndtv",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/ndtv.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-26"
+      },
+      {
+        "field": "founded",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1988-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q4680631"
+        },
+        "field": "owner",
+        "note": "5 Wikidata items match the domain; this is Q2985356 (NDTV); also Q17055835 (Imagine Film Company), Q3403060 (NDTV 24x7), Q6953325 (NDTV India), Q6953328 (NDTV MetroNation)",
+        "outlet_id": "ndtv",
+        "ref_url": "https://www.wikidata.org/wiki/Q2985356",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Adani Group"
+      }
+    ],
+    "nzherald": [
+      {
+        "data": {
+          "qid": "Q664"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New Zealand"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1863-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7759231"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New Zealand Media and Entertainment"
+      },
+      {
+        "data": {
+          "qid": "Q115613014"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Wilson & Horton"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_New_Zealand_Herald",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#New_Zealand_Herald,_Whanganui_Chronicle,_opinion_piece?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New Zealand Herald (NZ Herald)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New Zealand Herald is generally reliable."
+        },
+        "field": "reliability",
+        "outlet_id": "nzherald",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "thehill": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.17754560708999634,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 8,
+      "weakest_join": 0.8975456357002258
+    },
+    "created_at": 1790653930,
+    "expired": false,
+    "id": 1915453072919720181,
+    "item_count": 9,
+    "last_active_at": 1790715377,
+    "origin_item_id": 14238264608904418393,
+    "origin_outlet_id": "nzherald",
+    "outlet_count": 7,
+    "primary_title": "SpaceX’s Starship reaches orbit for the first time",
+    "syndication": [
+      {
+        "first_outlet_id": "euronews",
+        "item_ids": [
+          15623654576623223152,
+          6520694626836863326
+        ],
+        "spread_secs": 0,
+        "text_hash": 4507268707473383121
+      }
+    ],
+    "timeline": [
+      {
+        "item_id": 1915453072919720181,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790602064
+      },
+      {
+        "item_id": 10850424911136227185,
+        "joined_at": 1790653931,
+        "outlet_id": "axios",
+        "published_at": 1790611996
+      },
+      {
+        "item_id": 15623654576623223152,
+        "joined_at": 1790653939,
+        "outlet_id": "euronews",
+        "published_at": 1790618780
+      },
+      {
+        "item_id": 10203539956173979585,
+        "joined_at": 1790653941,
+        "outlet_id": "scmp",
+        "published_at": 1790607125
+      },
+      {
+        "item_id": 7092490008288645919,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790602348
+      },
+      {
+        "item_id": 14299358992574453523,
+        "joined_at": 1790653941,
+        "outlet_id": "ndtv",
+        "published_at": 1790619727
+      },
+      {
+        "item_id": 6655284628080434594,
+        "joined_at": 1790653942,
+        "outlet_id": "nzherald",
+        "published_at": 1790619918
+      },
+      {
+        "item_id": 14238264608904418393,
+        "joined_at": 1790653942,
+        "outlet_id": "nzherald",
+        "published_at": 1790578308
+      },
+      {
+        "item_id": 6520694626836863326,
+        "joined_at": 1790715377,
+        "outlet_id": "euronews",
+        "published_at": 1790618780
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "axios",
+            "scmp",
+            "globeandmail",
+            "thehill",
+            "nzherald"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews",
+        "ndtv"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "axios": "Axios",
+    "euronews": "Euronews",
+    "globeandmail": "The Globe and Mail",
+    "ndtv": "NDTV",
+    "nzherald": "The New Zealand Herald",
+    "scmp": "South China Morning Post",
+    "thehill": "The Hill"
+  },
+  "outlets_24h": 7,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nzherald.co.nz/world/spacex-aims-to-put-starship-in-orbit-for-the-first-time/5XEIWG5WXNEKNCHCQATVQOIUDQ/",
+          "cluster_id": 1915453072919720181,
+          "fetched_at": 1790653942,
+          "id": 14238264608904418393,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "nzherald",
+          "published_at": 1790578308,
+          "summary": "The test aims to put Starship in orbit and deploy 26 Starlink satellites.",
+          "text_hash": 6566387459607414881,
+          "title": "SpaceX aims to put Starship in orbit for the first time"
+        },
+        {
+          "canonical_url": "https://nzherald.co.nz/world/spacex-launches-starship-heavy-lifter-into-orbit-for-the-first-time/PRO6MVGEFRFVDBG6MAUM6DJQQE/",
+          "cluster_id": 1915453072919720181,
+          "fetched_at": 1790653942,
+          "id": 6655284628080434594,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "nzherald",
+          "published_at": 1790619918,
+          "summary": "Despite a nerve-wracking engine issue during ascent, the rocket's mission was a success.",
+          "text_hash": 3642939799410878516,
+          "title": "SpaceX launches Starship heavy lifter into orbit for the first time"
+        }
+      ],
+      "outlet_id": "nzherald"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehill.com/policy/transportation/6114737-spacex-starship-launch-orbit/",
+          "cluster_id": 1915453072919720181,
+          "fetched_at": 1790653930,
+          "id": 1915453072919720181,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790602064,
+          "summary": "SpaceX on Monday sent its Starship out to orbit for the first time, with the company looking for the craft to achieve six laps around the Earth in order to show off its capability for the NASA Artemis program, according to The Associated Press. SpaceX said everything needs to go as planned for Starship before…",
+          "text_hash": 12531576205889469600,
+          "title": "SpaceX launches Starship toward orbit for first time"
+        }
+      ],
+      "outlet_id": "thehill"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-spacex-starship-launch-orbit-first-time/",
+          "cluster_id": 1915453072919720181,
+          "fetched_at": 1790653941,
+          "id": 7092490008288645919,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790602348,
+          "summary": "SpaceX is pressing hard to certify Starship for orbital flight, a vital step toward moon and Mars travel",
+          "text_hash": 476544950224449001,
+          "title": "SpaceX’s supersized Starship launches into orbit for the first time"
+        }
+      ],
+      "outlet_id": "globeandmail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/world/united-states-canada/article/3369106/spacexs-starship-rocket-reaches-orbit-first-time",
+          "cluster_id": 1915453072919720181,
+          "fetched_at": 1790653941,
+          "id": 10203539956173979585,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790607125,
+          "summary": "SpaceX launched its enormous Starship into orbit for the first time on Monday and successfully delivered the most advanced Starlink satellites yet, but cut the flight short to ensure safety. The spacecraft re-entered over the Pacific and splashed down north of Hawaii three hours after blasting off from Texas. The company had been aiming for a 10-hour flight, spanning six full laps around Earth, to prove its readiness for Nasa’s Artemis moon programme. Starship tipped over and erupted in flames...",
+          "text_hash": 507863631859725557,
+          "title": "SpaceX’s Starship reaches orbit for first time but flight cut short"
+        }
+      ],
+      "outlet_id": "scmp"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://axios.com/2026/09/28/spacex-starship-orbital-flight",
+          "cluster_id": 1915453072919720181,
+          "fetched_at": 1790653931,
+          "id": 10850424911136227185,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "axios",
+          "published_at": 1790611996,
+          "summary": "SpaceX's next-generation Starship rocket came back to Earth earlier than planned after its first orbital flight Monday, with an explosion visible on the company's livestream just after touchdown in the Pacific Ocean. Why it matters: The massive, fully-reusable Starship is key to SpaceX's commercial spaceflight ambitions, while NASA is counting on a modified version for use as a lunar lander in its Artemis program. Driving the news: Starship launched from South Texas just before 9 a.m. ET on a planned test…",
+          "text_hash": 14888891037177636998,
+          "title": "SpaceX brings Starship home early after first orbital flight"
+        }
+      ],
+      "outlet_id": "axios"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/28/spacexs-starship-reaches-orbit-for-the-first-time",
+          "cluster_id": 1915453072919720181,
+          "fetched_at": 1790653939,
+          "id": 15623654576623223152,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790618780,
+          "summary": "SpaceX’s Starship reached orbit for the first time, but the test flight ended earlier than planned.",
+          "text_hash": 4507268707473383121,
+          "title": "SpaceX’s Starship reaches orbit for the first time"
+        },
+        {
+          "canonical_url": "https://euronews.com/video/2026/09/28/spacexs-starship-reaches-orbit-for-the-first-time",
+          "cluster_id": 1915453072919720181,
+          "fetched_at": 1790715377,
+          "id": 6520694626836863326,
+          "joined_at": 1790715377,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790618780,
+          "summary": "SpaceX’s Starship reached orbit for the first time, but the test flight ended earlier than planned.",
+          "text_hash": 4507268707473383121,
+          "title": "SpaceX’s Starship reaches orbit for the first time"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://ndtv.com/world-news/spacex-launches-massive-starship-into-orbit-for-1st-time-flight-ends-early-12111518",
+          "cluster_id": 1915453072919720181,
+          "fetched_at": 1790653941,
+          "id": 14299358992574453523,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "ndtv",
+          "published_at": 1790619727,
+          "summary": "Musk's showpiece rocket - the biggest and most powerful ever built - carried 26 of the latest Starlink satellites to join the 11,000 older models already providing internet service.",
+          "text_hash": 1614610960104719811,
+          "title": "SpaceX Launches Massive Starship Into Orbit For 1st Time, Flight Ends Early"
+        }
+      ],
+      "outlet_id": "ndtv"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 15623654576623223152,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4439,
+      "snapshot_id": 17463763119576269744,
+      "ts": 1790715377
+    }
+  ]
+}

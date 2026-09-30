@@ -1,0 +1,592 @@
+{
+  "claims": {
+    "aljazeera": [
+      {
+        "data": {
+          "qid": "Q846"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Qatar"
+      },
+      {
+        "data": {
+          "domain": "aljazeera.com",
+          "expires": "2031-04-13",
+          "last_changed": "2026-01-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/aljazeera.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-04-12"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-11-01"
+      },
+      {
+        "data": {
+          "qid": "Q4704134"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q13477 (Al Jazeera); also Q4727585 (aljazeera.com)",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://www.wikidata.org/wiki/Q13477",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Al Jazeera Media Network"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Reliability_of_Al_Jazeera",
+            "#cite_note-5"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Al Jazeera",
+          "status": "generally_reliable",
+          "summary": "Al Jazeera is a Qatari state-funded news organization and in the 2024 RfC there was consensus that it is generally reliable. Most editors seem to agree that Al Jazeera English and especially Al Jazeera Arabic are biased sources on the Arab–Israeli conflict and on topics for which the Qatari government has a conflict of interest. Editors perceive Al Jazeera English to be more reliable than Al Jazee"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "aljazeera",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "gatewaypundit": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thegatewaypundit.com",
+          "expires": "2031-01-27",
+          "last_changed": "2026-01-20",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thegatewaypundit.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2011-01-27"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://www.wikidata.org/wiki/Q30589935",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2004-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_278#RfC:_\"The_Gateway_Pundit\"_(October)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_256#Among_low-quality_sources,_the_most_popular_websites_are_right-wing_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Gateway Pundit (TGP)",
+          "status": "deprecated",
+          "summary": "The Gateway Pundit was deprecated in the 2019 RfC, which showed consensus that the site is unacceptable as a source. It is unreliable for statements of fact, and given to publishing hoax articles and reporting conspiracy theories as fact."
+        },
+        "field": "reliability",
+        "outlet_id": "gatewaypundit",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "latimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "latimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q188515",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "latimes.com",
+          "expires": "2027-12-11",
+          "last_changed": "2025-11-09",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "latimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/latimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1990-12-12"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "latimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q188515",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1881-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7147677"
+        },
+        "field": "owner",
+        "outlet_id": "latimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q188515",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Patrick Soon-Shiong"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_9#Los_Angeles_Times_as_reference_for_Prem_Rawat",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_45#LA_times_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_81#Los_Angeles_Times_Blog",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_148#LA_Times_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_179#Los_Angeles_Times_as_RS_for_statement_about_event",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_216#LA_Times_and_Biocom",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#HS_Insider_(Los_Angeles_Times)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_363#Los_Angeles_Times_columnists",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_399#LA_Times_in_Chloe_Cole_article_in_regards_to_the_Kaiser_lawsuit"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Los Angeles Times (L.A. Times)",
+          "status": "generally_reliable",
+          "summary": "Most editors consider the Los Angeles Times generally reliable. Refer to WP:NEWSBLOG for the newspaper's blog."
+        },
+        "field": "reliability",
+        "outlet_id": "latimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.04086560010910034,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": 0.7608656287193298
+    },
+    "created_at": 1790633634,
+    "expired": false,
+    "id": 15612404507510769058,
+    "item_count": 5,
+    "last_active_at": 1790715381,
+    "origin_item_id": 15612404507510769058,
+    "origin_outlet_id": "aljazeera",
+    "outlet_count": 5,
+    "primary_title": "NFL asks Department of Homeland Security to remove Brian Dawkins video from immigration post",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15612404507510769058,
+        "joined_at": 1790633634,
+        "outlet_id": "aljazeera",
+        "published_at": 1790624965
+      },
+      {
+        "item_id": 15048307080376389182,
+        "joined_at": 1790653932,
+        "outlet_id": "latimes",
+        "published_at": 1790626492
+      },
+      {
+        "item_id": 16776784510378750894,
+        "joined_at": 1790679060,
+        "outlet_id": "independent",
+        "published_at": 1790677061
+      },
+      {
+        "item_id": 2266608162085772150,
+        "joined_at": 1790715370,
+        "outlet_id": "gatewaypundit",
+        "published_at": 1790700032
+      },
+      {
+        "item_id": 7486132630368852910,
+        "joined_at": 1790715381,
+        "outlet_id": "breitbart",
+        "published_at": 1790650447
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "aljazeera",
+            "latimes",
+            "independent"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "gatewaypundit"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "aljazeera": "Al Jazeera",
+    "breitbart": "Breitbart",
+    "gatewaypundit": "The Gateway Pundit",
+    "independent": "The Independent",
+    "latimes": "Los Angeles Times"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    5
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aljazeera.com/news/2026/9/28/nfl-asks-us-homeland-security-to-remove-video-with-former-star-player?traffic_source=rss",
+          "cluster_id": 15612404507510769058,
+          "fetched_at": 1790633634,
+          "id": 15612404507510769058,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "aljazeera",
+          "published_at": 1790624965,
+          "summary": "Agency used video of Hall of Fame player Brian Dawkins to show readiness for border protection.",
+          "text_hash": 2017449786631130628,
+          "title": "NFL asks US Homeland Security to remove video with former star player"
+        }
+      ],
+      "outlet_id": "aljazeera"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://latimes.com/sports/story/2026-09-28/nfl-asks-dhs-remove-brian-dawkins-video-immigration",
+          "cluster_id": 15612404507510769058,
+          "fetched_at": 1790653932,
+          "id": 15048307080376389182,
+          "joined_at": 1790653932,
+          "lang": "en",
+          "outlet_id": "latimes",
+          "published_at": 1790626492,
+          "summary": "The NFL asked the Department of Homeland Security to remove a video of Hall of Fame safety Brian Dawkins' punishing hits, used in a post about a cracking down on a migrant caravan.",
+          "text_hash": 1976358281086897464,
+          "title": "NFL asks Department of Homeland Security to remove Brian Dawkins video from immigration post"
+        }
+      ],
+      "outlet_id": "latimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/sports/2026/09/28/nfl-asks-dhs-to-delete-video-featuring-legendary-eagles-star-brian-dawkins-i-didnt-give-my-permission/",
+          "cluster_id": 15612404507510769058,
+          "fetched_at": 1790715381,
+          "id": 7486132630368852910,
+          "joined_at": 1790715381,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790650447,
+          "summary": "Both the NFL and legendary Eagles safety Brian Dawkins have asked the DHS to delete a video featuring his likeness. The post NFL Asks DHS to Delete Video Featuring Legendary Eagles Star Brian Dawkins: ‘I Didn’t Give My Permission’ appeared first on Breitbart .",
+          "text_hash": 428786034598530903,
+          "title": "NFL Asks DHS to Delete Video Featuring Legendary Eagles Star Brian Dawkins: 'I Didn't Give My Permission'"
+        }
+      ],
+      "outlet_id": "breitbart"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/sport/us-sport/nfl-dhs-brian-dawkins-video-b3058154.html",
+          "cluster_id": 15612404507510769058,
+          "fetched_at": 1790679060,
+          "id": 16776784510378750894,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790677061,
+          "summary": "The NFL has asked the Department of Homeland Security to take down a video on social media showing highlights of Hall of Fame safety Brian Dawkins in reference to a potential caravan of immigrants approaching the U.S. border",
+          "text_hash": 6885273618845405755,
+          "title": "NFL and Hall of Famer Brian Dawkins blast Trump DHS over anti-immigrant propaganda video"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thegatewaypundit.com/2026/09/nfl-tells-dhs-delete-hall-famer-hit-video/",
+          "cluster_id": 15612404507510769058,
+          "fetched_at": 1790715370,
+          "id": 2266608162085772150,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "gatewaypundit",
+          "published_at": 1790700032,
+          "summary": "The NFL has told the Department of Homeland Security to take down a social media video that used Hall of Fame safety Brian Dawkins’ hardest hits as a reply to a report of a migrant caravan heading toward the southern border. The post NFL Tells DHS to Delete Hall of Famer Hit Video Posted in Response to Migrant Caravan Heading to US Border, Agency Responds (VIDEO) appeared first on The Gateway Pundit .",
+          "text_hash": 333019377068991284,
+          "title": "NFL Tells DHS to Delete Hall of Famer Hit Video Posted in Response to Migrant Caravan Heading to US Border, Agency Responds (VIDEO)"
+        }
+      ],
+      "outlet_id": "gatewaypundit"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 7486132630368852910,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5681,
+      "snapshot_id": 3236693464818417352,
+      "ts": 1790720969
+    }
+  ]
+}

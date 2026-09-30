@@ -62,7 +62,7 @@ pub fn stub(input: &Input, absorbed: u64, survivor: u64) -> Twins {
         head: &head,
         body: &body,
         status: &format!(
-            "story · built from an export at {}",
+            "Updated {}",
             datetime(input.export_time)
         ),
     });

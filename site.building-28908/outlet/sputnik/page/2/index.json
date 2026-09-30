@@ -1,0 +1,353 @@
+{
+  "export_time": 1790725421,
+  "outlet": "sputnik",
+  "page": 2,
+  "page_size": 50,
+  "pages": 2,
+  "stories": [
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 11574787048065554888,
+      "outlet_count": 1,
+      "title": "Lavrov Held 50 Meetings at UN in 3 Incomplete Days - Russian MFA Spox"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 11317495786062938003,
+      "outlet_count": 1,
+      "title": "Russia Accelerates Nuclear Share in Energy Mix at Faster Pace - Putin"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 11199658955331185146,
+      "outlet_count": 1,
+      "title": "Western Publishing Houses Banned Translations of Russian Classics"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 11150920374443372139,
+      "outlet_count": 1,
+      "title": "Russian Specialists Asked to Help Gaza Civilians Undergo Art Therapy — Palestinian Minister"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 10492757005416287869,
+      "outlet_count": 1,
+      "title": "West Interferes in Russia's Elections – Russian Foreign Intel Head"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 10450362527358683185,
+      "outlet_count": 1,
+      "title": "Russia Expects New UN Secretary-General to Represent Interests of All Mankind - Lavrov"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 10447698056339440755,
+      "outlet_count": 1,
+      "title": "Trump Advocates Arms Control Talks With China and Russia"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 10286395573623149363,
+      "outlet_count": 1,
+      "title": "UK's Attempts to Use Puppet Organizations to Harm Russia's Security Doomed to Failure - FSB"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 10235966695857835781,
+      "outlet_count": 1,
+      "title": "Reactor of 7th Unit of Tianwan NPP Launched in China - Russia's Rosatom"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 10187138882170515041,
+      "outlet_count": 1,
+      "title": "Russian Drones Hit Ukrtelecom and DreamLine Data Centers in Kiev Overnight"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 9083529068913896598,
+      "outlet_count": 1,
+      "title": "Xi Calls for China, US to Make National Goals 'Mutually Reinforcing'"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 9011628523636266623,
+      "outlet_count": 1,
+      "title": "Chinese, US Military to Sign Memorandum on Strengthening Contacts in Crisis - Reports"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 8878633738711980293,
+      "outlet_count": 1,
+      "title": "Russia Welcomes All Positive Agreements Between China, US – Putin"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 8841675918244970944,
+      "outlet_count": 1,
+      "title": "Kremlin Weighs Possibility of Putin, Xi and Trump Talks at APEC"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 8511767556478591921,
+      "outlet_count": 1,
+      "title": "Russia Doubts Japan Will Remove Typhon Systems After Drills With US, Australia"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 8384838664663736577,
+      "outlet_count": 1,
+      "title": "Iranian President Dismisses Rumors About Tehran's Plans to Produce Nuclear Bomb"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 8059000415189254199,
+      "outlet_count": 1,
+      "title": "Election Observer Highlights Uniquely Festive Atmosphere of Russia’s Parliamentary Vote"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 8016202470384858065,
+      "outlet_count": 1,
+      "title": "US Casualty Tally in Iran War Quietly Climbs to 861 Wounded — Reports"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 7923830368489893279,
+      "outlet_count": 1,
+      "title": "United Russia Party Secures 349 Seats in State Duma - CEC Head"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 7910401911295195614,
+      "outlet_count": 1,
+      "title": "Bangladesh Seeks Deeper Cultural Ties With Russia"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 7029627218780416862,
+      "outlet_count": 1,
+      "title": "Myanmar Considers Russia Reliable Partner, Trusts Moscow – Minister"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 6732937803621549863,
+      "outlet_count": 1,
+      "title": "Valdai Meeting Moved to Moscow Region Due to Large Number of Participants — Chairman"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 6497624331337021697,
+      "outlet_count": 1,
+      "title": "Hackers From US, France, Singapore Tried to Disrupt Russian Elections - Internet Provider"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 6160367701572255811,
+      "outlet_count": 1,
+      "title": "Thousands of Ukrainian Scammers Attacking Europeans - Russian Foreign Ministry"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 4795681646611673007,
+      "outlet_count": 1,
+      "title": "Putin, Vucic Discuss Pressing Int'l Issues, Including Conflict in Ukraine - Kremlin"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 4753906226536696632,
+      "outlet_count": 1,
+      "title": "Data Center Supporting Starlink Operations Hit in Kiev - MoD"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 4727320213463613040,
+      "outlet_count": 1,
+      "title": "Use of AI in Culture and Art Requires a Balanced Approach – Russian Culture Minister"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 4637526767664860232,
+      "outlet_count": 1,
+      "title": "Russia’s Methodical Data Center Strikes Wiping Out Ukraine’s Dual-Use Digital Infrastructure"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 4293511635508599289,
+      "outlet_count": 1,
+      "title": "Pincer at Dobropolye Gives Russia Control of Key Hub Supplying Enemy’s Remaining Donbass Forts"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 4117917117696179610,
+      "outlet_count": 1,
+      "title": "Russia's Lavrov Hands UN Chief Report About Provocation in Bucha - Foreign Ministry"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 4064917218590074293,
+      "outlet_count": 1,
+      "title": "Protecting Historical Heritage Strengthens Russia’s Sovereignty"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 4029324342698566063,
+      "outlet_count": 1,
+      "title": "Moldova Does Not Plan to Join NATO - Prime Minister"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 3884906473808402845,
+      "outlet_count": 1,
+      "title": "US Spy Jet Completes Nearly 9-Hour Flight Over Black Sea - Flight Data"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 3678460116584372762,
+      "outlet_count": 1,
+      "title": "Nearly Two Dozen States Urging US Congress to Adopt AI Regulations - Reports"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 3216161618757203789,
+      "outlet_count": 1,
+      "title": "Lavrov, Araghchi Stress There is No Alternative to Diplomatic Solution to Gulf Crisis"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 2447750196344944262,
+      "outlet_count": 1,
+      "title": "No Specific Details Yet Regarding Organization of Trilateral Meeting on Ukraine - Kremlin"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 2227093997383010554,
+      "outlet_count": 1,
+      "title": "Iran Has Lost Trust in Negotiations With US – President"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 2084618259423687470,
+      "outlet_count": 1,
+      "title": "Iran Vows Measures After Colombia Severs Diplomatic Ties"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 2010666648831799464,
+      "outlet_count": 1,
+      "title": "Ukraine Sends Battle-Hardened Foreign Commanders to Chernobyl"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 1995575826283148199,
+      "outlet_count": 1,
+      "title": "Cuba Ready for Dialogue With US Without Interference in Internal Affairs — Foreign Minister"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 1574271297983891996,
+      "outlet_count": 1,
+      "title": "Culture Can Build Bridges Despite Political And Economic Divisions - Putin"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 1543392235054131326,
+      "outlet_count": 1,
+      "title": "What Xi-Trump Dinner Guest List Said About True Balance of Power Between China, US"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 1426942827162353119,
+      "outlet_count": 1,
+      "title": "Uncontrolled EU Drone Production Threaten Russia, Other Nations – Russian Foreign Ministry"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 712182759743223932,
+      "outlet_count": 1,
+      "title": "Iran to Launch Larger Strikes If US, Israel Attack Tehran Again – Military"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 651987806069196761,
+      "outlet_count": 1,
+      "title": "Pezeshkian Rules Out Meeting With Trump Before Trust Between Iran, US Restored"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 601745702023019371,
+      "outlet_count": 1,
+      "title": "EU Faces Harshest Winter Since 2022 Amid Diesel Price Surge - Commissioner"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 396082948611617876,
+      "outlet_count": 1,
+      "title": "North Korea Calls South Korea Target of 'Collective Punishment' – State Media"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 387232870337315607,
+      "outlet_count": 1,
+      "title": "Lavrov, Moroccan Foreign Minister Discussed Russian-Moroccan Relations - Moscow"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 209916805724086067,
+      "outlet_count": 1,
+      "title": "Zelensky Told Trump Kiev Ready to Scale Back Attacks on Russian Refineries"
+    }
+  ],
+  "window_days": 30
+}

@@ -1,0 +1,285 @@
+{
+  "claims": {
+    "independent": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "independent.co.uk",
+          "expires": "2027-02-02",
+          "last_changed": "2022-10-18",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "independent",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/independent.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-02"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1986-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q370787"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q11149 (The Independent); also Q20073466 (Independent on Sunday)",
+        "outlet_id": "independent",
+        "ref_url": "https://www.wikidata.org/wiki/Q11149",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alexander Lebedev"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#RFC:_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#How_Islamic_Inventors_Changed_the_World_article_in_The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_140#Is_the_UK_paper,_\"The_Independent\"_a_\"tabloid_journalism\"_source_for_BLP_references?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_174#Haaretz,_The_Independent,_Le_Monde_Diplomatique,_Ukrainian_Helsink_Human_Rights_Union_(UHHRU)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Can_The_Independent_online_newspaper_still_be_considered_a_Reliable_Source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_321#The_Independent,_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_325#The_Independent",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#The_Independent_on_Azov_Battalion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_435#Is_this_comment_in_the_independent_considered_reliable_for_the_biography_of_a_non-living_person?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Independent",
+          "status": "generally_reliable",
+          "summary": "The Independent, a British newspaper, is considered a reliable source for non-specialist information. In March 2016, the publication discontinued its print edition to become an online newspaper; some editors advise caution for articles published after this date."
+        },
+        "field": "reliability",
+        "outlet_id": "independent",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "vox": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "vox.com",
+          "expires": "2027-09-29",
+          "last_changed": "2026-09-16",
+          "registrar": "Amazon Registrar, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "vox",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/vox.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-30"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-04-06"
+      },
+      {
+        "data": {
+          "qid": "Q7942354"
+        },
+        "field": "owner",
+        "outlet_id": "vox",
+        "ref_url": "https://www.wikidata.org/wiki/Q20877087",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Vox Media"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_170#is_quoting_someone's_calculations_based_on_four_year_old_outdated_information_allowed?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_181#Huffington_Post_and_Vox_and_WP:BLP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_219#Vox.com_and_Huffington_Post_at_Smith_&_Wesson_M&P15",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#Vox_article_containing_a_factually_wrong_claim_is_used_in_an_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_362#Vox_revisited",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_388#Vox",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_441#OpenAI_\"content_and_product_partnerships\"_with_Vox_Media_and_The_Atlantic"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Vox (Recode)",
+          "status": "generally_reliable",
+          "summary": "Vox is considered generally reliable. Some editors say that Vox is a partisan source in the field of politics or that it does not always clearly delineate reporting and opinion content. See also: Polygon (pre–May 2025), The Verge, New York"
+        },
+        "field": "reliability",
+        "outlet_id": "vox",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.006968021392822266,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7269680500030518
+    },
+    "created_at": 1790715370,
+    "expired": false,
+    "id": 10381543053073412957,
+    "item_count": 2,
+    "last_active_at": 1790716810,
+    "origin_item_id": 10381543053073412957,
+    "origin_outlet_id": "independent",
+    "outlet_count": 2,
+    "primary_title": "Cornell students blast school’s response as gang-rape scandal rocks campus: ‘Priority not to help the victim’",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 10381543053073412957,
+        "joined_at": 1790715370,
+        "outlet_id": "independent",
+        "published_at": 1790706254
+      },
+      {
+        "item_id": 6115576660111958296,
+        "joined_at": 1790716810,
+        "outlet_id": "vox",
+        "published_at": 1790713800
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "independent",
+            "vox"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "independent": "The Independent",
+    "vox": "Vox"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 10381543053073412957,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 5480,
+      "snapshot_id": 15043818583201784205,
+      "ts": 1790717303
+    }
+  ],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://independent.co.uk/news/world/americas/cornell-students-investigation-sexual-assault-b3058470.html",
+          "cluster_id": 10381543053073412957,
+          "fetched_at": 1790715370,
+          "id": 10381543053073412957,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "independent",
+          "published_at": 1790706254,
+          "summary": "Ivy Leaguers say they found out about the alleged frat house gang rape via email and are planning campus demonstrations this week after the incident became public knowledge, Justin Rohrlich reports",
+          "text_hash": 6317115131414714253,
+          "title": "Cornell students blast school’s response as gang-rape scandal rocks campus: ‘Priority not to help the victim’"
+        }
+      ],
+      "outlet_id": "independent"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://vox.com/today-explained-newsletter/504570/cornell-university-sexual-assault-case",
+          "cluster_id": 10381543053073412957,
+          "fetched_at": 1790716810,
+          "id": 6115576660111958296,
+          "joined_at": 1790716810,
+          "lang": "en",
+          "outlet_id": "vox",
+          "published_at": 1790713800,
+          "summary": "This story appeared in Today, Explained, a daily newsletter that helps you understand the most compelling news and stories of the day. Subscribe here. Today’s newsletter is a heavy one — so please feel free to skip it if you need to. But as the uproar over an alarming rape allegation at Cornell University from 2024 keeps building, […]",
+          "text_hash": 10698442463996357739,
+          "title": "A crisis that goes far beyond Cornell"
+        }
+      ],
+      "outlet_id": "vox"
+    }
+  ],
+  "withdrawals": []
+}

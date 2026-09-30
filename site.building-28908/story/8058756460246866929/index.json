@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 8058756460246866929,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 8058756460246866929,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "Trump’s Desperate Attempt to Bribe Voters Ahead of Election is a New Low",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8058756460246866929,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1789069421
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/trumps-desperate-attempt-to-bribe-voters-ahead-of-election-is-a-new-low",
+          "cluster_id": 8058756460246866929,
+          "fetched_at": 1790653936,
+          "id": 8058756460246866929,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1789069421,
+          "summary": "At a speech at the GOP’s midterm convention in Dallas, Texas yesterday, Donald Trump promised,“if the Republicans win, you win with us and you get $5,000.” Lisa Gilbert, co-president of Public Citizen, issued the following statement in response: “Even for the notoriously corrupt and lawless Trump, this explicit and desperate attempt to buy votes in the November election is a new low. Trump knows he can’t do this, and yet he’s attempting to bribe voters with the false promise of cash to help his party win…",
+          "text_hash": 1215133937593102977,
+          "title": "Trump’s Desperate Attempt to Bribe Voters Ahead of Election is a New Low"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

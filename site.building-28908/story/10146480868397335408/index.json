@@ -1,0 +1,139 @@
+{
+  "claims": {
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790715377,
+    "expired": false,
+    "id": 10146480868397335408,
+    "item_count": 1,
+    "last_active_at": 1790715377,
+    "origin_item_id": 10146480868397335408,
+    "origin_outlet_id": "euronews",
+    "outlet_count": 1,
+    "primary_title": "Counterfeit medicine trade: how online pharmacies are selling deadly fake painkillers across Europe",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 10146480868397335408,
+        "joined_at": 1790715377,
+        "outlet_id": "euronews",
+        "published_at": 1790686846
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "euronews": "Euronews"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/29/counterfeit-medicine-trade-how-online-pharmacies-are-selling-deadly-fake-painkillers-acros",
+          "cluster_id": 10146480868397335408,
+          "fetched_at": 1790715377,
+          "id": 10146480868397335408,
+          "joined_at": 1790715377,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790686846,
+          "summary": "Deadly synthetic opioids disguised as legitimate painkillers are being sold online across Europe, as counterfeit medicines linked to multiple deaths in the Netherlands expose the dark side of e-commerce.",
+          "text_hash": 4221581856194145272,
+          "title": "Counterfeit medicine trade: how online pharmacies are selling deadly fake painkillers across Europe"
+        }
+      ],
+      "outlet_id": "euronews"
+    }
+  ],
+  "withdrawals": []
+}

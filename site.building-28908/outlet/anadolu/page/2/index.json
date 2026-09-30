@@ -1,0 +1,360 @@
+{
+  "export_time": 1790725421,
+  "outlet": "anadolu",
+  "page": 2,
+  "page_size": 50,
+  "pages": 3,
+  "stories": [
+    {
+      "created_at": 1790653944,
+      "first": false,
+      "id": 11885385319615779539,
+      "outlet_count": 6,
+      "title": "Lula widens first-round lead over Flavio Bolsonaro as runoff polls point to tight race in Brazil"
+    },
+    {
+      "created_at": 1790653933,
+      "first": false,
+      "id": 11336663336944555363,
+      "outlet_count": 8,
+      "title": "Argentina threatens legal action against UK over Falkland Islands oil exploration"
+    },
+    {
+      "created_at": 1790653944,
+      "first": false,
+      "id": 2250095089404219301,
+      "outlet_count": 3,
+      "title": "Netherlands summons Israeli ambassador over removal of diplomats' status"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 4555465433342937664,
+      "outlet_count": 13,
+      "title": "Bangkok declares flood disaster as torrential rain inundates city"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 3191716705614828410,
+      "outlet_count": 4,
+      "title": "2 US Navy aviators eject while landing plane on carrier off Virginia, 4 sailors injured"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16126029408899543548,
+      "outlet_count": 17,
+      "title": "Iran awaits US response on plan to reopen Strait of Hormuz"
+    },
+    {
+      "created_at": 1790663056,
+      "first": true,
+      "id": 6897739538149328160,
+      "outlet_count": 3,
+      "title": "Tokyo sets a new record with 34 straight days of rain"
+    },
+    {
+      "created_at": 1790682405,
+      "first": true,
+      "id": 9169063072912694862,
+      "outlet_count": 2,
+      "title": "Rights groups warn Spain’s planned Ceuta deportation decree threatens asylum protections"
+    },
+    {
+      "created_at": 1790683329,
+      "first": true,
+      "id": 6696305411357986150,
+      "outlet_count": 1,
+      "title": "Germany urges Russian president to show willingness to negotiate for peace with Ukraine"
+    },
+    {
+      "created_at": 1790682997,
+      "first": true,
+      "id": 12431607122150371899,
+      "outlet_count": 1,
+      "title": "Russian president enacts new rules limiting cash taken out of Russia"
+    },
+    {
+      "created_at": 1790682997,
+      "first": true,
+      "id": 9898461549305444955,
+      "outlet_count": 1,
+      "title": "Turkish foreign minister meets premier of Germany's North Rhine-Westphalia"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 4691259798559785792,
+      "outlet_count": 1,
+      "title": "Israeli national security minister storms Ibrahimi Mosque in Hebron with hundreds of occupiers"
+    },
+    {
+      "created_at": 1790682685,
+      "first": true,
+      "id": 15608061131544526075,
+      "outlet_count": 1,
+      "title": "From forests to towns: What is behind Russia’s bear encounters?"
+    },
+    {
+      "created_at": 1790664389,
+      "first": false,
+      "id": 4027847128741190405,
+      "outlet_count": 4,
+      "title": "FIFA accuses UEFA of 'misinformation campaign' in response to filing"
+    },
+    {
+      "created_at": 1790682081,
+      "first": true,
+      "id": 3167367124942422157,
+      "outlet_count": 1,
+      "title": "Spanish government agrees on eviction protections until 2030, curbs on property purchases by investment funds"
+    },
+    {
+      "created_at": 1790681760,
+      "first": true,
+      "id": 12650509706652680158,
+      "outlet_count": 1,
+      "title": "Anadolu Atesi to take Troy on tour in Russia after Istanbul performance"
+    },
+    {
+      "created_at": 1790681760,
+      "first": true,
+      "id": 464162787876182323,
+      "outlet_count": 1,
+      "title": "6 EU member states call for cuts to bloc’s budget: Report"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 5868209118716352305,
+      "outlet_count": 3,
+      "title": "Russian embassy warns UK that its plans to blockade Kaliningrad to have consequences"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11603208240114099487,
+      "outlet_count": 8,
+      "title": "Myanmar airstrike kills 33 in Rohingya-majority Rakhine state"
+    },
+    {
+      "created_at": 1790680734,
+      "first": true,
+      "id": 17811055610993258795,
+      "outlet_count": 1,
+      "title": "INTERVIEW – As Merz loses ground, could Germany see a 'chancellor swap'?"
+    },
+    {
+      "created_at": 1790680734,
+      "first": true,
+      "id": 4953159889192497184,
+      "outlet_count": 1,
+      "title": "Historic Greek church in central Türkiye set to open to public soon"
+    },
+    {
+      "created_at": 1790680366,
+      "first": true,
+      "id": 6299192479924820878,
+      "outlet_count": 1,
+      "title": "Violence, Israeli settlement make life ‘intolerable’ for Palestinians in West Bank: Red Cross"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 18106782274538871114,
+      "outlet_count": 1,
+      "title": "China's Hengrui licenses weight-loss drug to Denmark's Novo Nordisk in deal worth up to $2.6B"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 16058910196150969250,
+      "outlet_count": 1,
+      "title": "Turkish trade minister to visit US to tackle food security, overproduction and more"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 13062882941013870036,
+      "outlet_count": 4,
+      "title": "40 rescued, 2 dead after boat capsizes west of Puerto Rico"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 12534124810108981980,
+      "outlet_count": 1,
+      "title": "The consensus of extremism in Israeli politics"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 10092045759960804908,
+      "outlet_count": 1,
+      "title": "Germany's public debt rises 1% in Q2 to $3.1T"
+    },
+    {
+      "created_at": 1790679060,
+      "first": false,
+      "id": 6981832686656465774,
+      "outlet_count": 4,
+      "title": "Iran parliament speaker warns no one in region will sell oil if Tehran cannot"
+    },
+    {
+      "created_at": 1790679062,
+      "first": false,
+      "id": 5942722842503869822,
+      "outlet_count": 2,
+      "title": "Russia hopes Iran to remain in NPT — Kremlin"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 3002705087550221708,
+      "outlet_count": 1,
+      "title": "Türkiye must take center stage as global trade routes shift, sector body says"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 1329023512451032026,
+      "outlet_count": 1,
+      "title": "Several high schools blocked across France as tensions rise between students, police"
+    },
+    {
+      "created_at": 1790670935,
+      "first": true,
+      "id": 1723355484372814406,
+      "outlet_count": 1,
+      "title": "Türkiye's economic confidence index increases in September"
+    },
+    {
+      "created_at": 1790670935,
+      "first": true,
+      "id": 1125870224924838596,
+      "outlet_count": 1,
+      "title": "Israeli forces detain Syrian man during incursion in northern Quneitra"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 879591048792657354,
+      "outlet_count": 9,
+      "title": "OpenAI agent hacks into an Australian government site"
+    },
+    {
+      "created_at": 1790668723,
+      "first": true,
+      "id": 10865998067603083810,
+      "outlet_count": 1,
+      "title": "Türkiye's BIST 100 down at opening session"
+    },
+    {
+      "created_at": 1790668336,
+      "first": true,
+      "id": 15766394480501710701,
+      "outlet_count": 1,
+      "title": "Japan sees record elderly population as overall count falls for 3rd consecutive census"
+    },
+    {
+      "created_at": 1790668336,
+      "first": true,
+      "id": 3788324808475270752,
+      "outlet_count": 1,
+      "title": "Israeli occupiers attack 3 West Bank villages, torch homes, vehicles"
+    },
+    {
+      "created_at": 1790668336,
+      "first": true,
+      "id": 752387878140258441,
+      "outlet_count": 1,
+      "title": "China tells Japan to 'correct' leader's stance on Taiwan"
+    },
+    {
+      "created_at": 1790667122,
+      "first": true,
+      "id": 11251567290162993358,
+      "outlet_count": 1,
+      "title": "Morning Briefing: Sept. 29, 2026"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 903786248883338887,
+      "outlet_count": 2,
+      "title": "FIFA President Infantino backs increased funding for member associations: Report"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 803801380345923964,
+      "outlet_count": 2,
+      "title": "2 Palestinians killed in Israeli strike, gunfire in Gaza despite ceasefire"
+    },
+    {
+      "created_at": 1790659143,
+      "first": true,
+      "id": 16776164009940452535,
+      "outlet_count": 1,
+      "title": "'Cuba's already fallen,' US Secretary of State says"
+    },
+    {
+      "created_at": 1790659143,
+      "first": true,
+      "id": 4482205859047882663,
+      "outlet_count": 1,
+      "title": "US senators urge Trump administration to extend Temporary Protected Status for Ukrainians"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 14101283955421187846,
+      "outlet_count": 2,
+      "title": "Top Saudi, US diplomats discuss maritime security, situation in Yemen"
+    },
+    {
+      "created_at": 1790655269,
+      "first": true,
+      "id": 10830699054287901379,
+      "outlet_count": 1,
+      "title": "Palestinian shot as Israeli forces raid town in occupied West Bank"
+    },
+    {
+      "created_at": 1790655269,
+      "first": true,
+      "id": 4480256590349745891,
+      "outlet_count": 1,
+      "title": "Israeli forces raid homes, set up checkpoint in southern Syria"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 17919202268746052880,
+      "outlet_count": 5,
+      "title": "14 killed at fireworks factory in Russia's Yaroslavl region"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 18005885481478786697,
+      "outlet_count": 1,
+      "title": "Florida pastor goes on trial over Haitian president’s assassination"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 16543090358384089601,
+      "outlet_count": 2,
+      "title": "Israel’s Shin Bet seeks legal action over disclosure of Netanyahu’s secret UAE visit"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 16506327252844129190,
+      "outlet_count": 4,
+      "title": "Hegseth instructs Pentagon to defend 2026 elections from ‘foreign actors’"
+    }
+  ],
+  "window_days": 30
+}

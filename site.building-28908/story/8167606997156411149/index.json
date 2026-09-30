@@ -1,0 +1,159 @@
+{
+  "claims": {
+    "latimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "latimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q188515",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "latimes.com",
+          "expires": "2027-12-11",
+          "last_changed": "2025-11-09",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "latimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/latimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1990-12-12"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "latimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q188515",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1881-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7147677"
+        },
+        "field": "owner",
+        "outlet_id": "latimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q188515",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Patrick Soon-Shiong"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_9#Los_Angeles_Times_as_reference_for_Prem_Rawat",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_45#LA_times_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_81#Los_Angeles_Times_Blog",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_148#LA_Times_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_179#Los_Angeles_Times_as_RS_for_statement_about_event",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_216#LA_Times_and_Biocom",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#HS_Insider_(Los_Angeles_Times)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_363#Los_Angeles_Times_columnists",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_399#LA_Times_in_Chloe_Cole_article_in_regards_to_the_Kaiser_lawsuit"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Los Angeles Times (L.A. Times)",
+          "status": "generally_reliable",
+          "summary": "Most editors consider the Los Angeles Times generally reliable. Refer to WP:NEWSBLOG for the newspaper's blog."
+        },
+        "field": "reliability",
+        "outlet_id": "latimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653932,
+    "expired": false,
+    "id": 8167606997156411149,
+    "item_count": 1,
+    "last_active_at": 1790653932,
+    "origin_item_id": 8167606997156411149,
+    "origin_outlet_id": "latimes",
+    "outlet_count": 1,
+    "primary_title": "More than $200 million spent fighting and supporting billionaire tax measure, and more to come",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8167606997156411149,
+        "joined_at": 1790653932,
+        "outlet_id": "latimes",
+        "published_at": 1790589600
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "latimes": "Los Angeles Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://latimes.com/california/story/2026-09-28/200-million-plus-raised-billionaire-tax-measure-november-ballot",
+          "cluster_id": 8167606997156411149,
+          "fetched_at": 1790653932,
+          "id": 8167606997156411149,
+          "joined_at": 1790653932,
+          "lang": "en",
+          "outlet_id": "latimes",
+          "published_at": 1790589600,
+          "summary": "Donors pour more than $200 million into supporting and opposing the billionaire tax measures on the ballot, with more to come in the weeks before the Nov. 3 election.",
+          "text_hash": 8415200842370769042,
+          "title": "More than $200 million spent fighting and supporting billionaire tax measure, and more to come"
+        }
+      ],
+      "outlet_id": "latimes"
+    }
+  ],
+  "withdrawals": []
+}

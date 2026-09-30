@@ -1,0 +1,219 @@
+{
+  "claims": {
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "justthenews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "justthenews.com",
+          "expires": "2028-07-23",
+          "last_changed": "2026-08-28",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "justthenews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/justthenews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-07-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "justthenews",
+        "ref_url": "https://www.wikidata.org/wiki/Q103844322",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2020-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.09821188449859619,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.8182119131088257
+    },
+    "created_at": 1790715390,
+    "expired": false,
+    "id": 13211941707434792860,
+    "item_count": 2,
+    "last_active_at": 1790720969,
+    "origin_item_id": 13211941707434792860,
+    "origin_outlet_id": "justthenews",
+    "outlet_count": 2,
+    "primary_title": "Biden Judge Dismisses Riley Gaines' Transgender Athlete Lawsuit Against NCAA",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 13211941707434792860,
+        "joined_at": 1790715390,
+        "outlet_id": "justthenews",
+        "published_at": 1790640000
+      },
+      {
+        "item_id": 9783918411035746780,
+        "joined_at": 1790720969,
+        "outlet_id": "breitbart",
+        "published_at": 1790698625
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "breitbart": "Breitbart",
+    "justthenews": "Just the News"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 2,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://justthenews.com/government/courts-law/federal-judge-dismisses-riley-gaines-title-ix-lawsuit-against-ncaa",
+          "cluster_id": 13211941707434792860,
+          "fetched_at": 1790715390,
+          "id": 13211941707434792860,
+          "joined_at": 1790715390,
+          "lang": "en",
+          "outlet_id": "justthenews",
+          "published_at": 1790640000,
+          "summary": "The case stemmed from the 2022 NCAA Division I Women’s Swimming and Diving Championships at Georgia Tech. Former University of Pennsylvania swimmer Lia Thomas was the first openly transgender athlete to win an NCAA Division I championship.",
+          "text_hash": 681140675046136517,
+          "title": "Federal judge dismisses Riley Gaines' Title IX lawsuit against NCAA"
+        }
+      ],
+      "outlet_id": "justthenews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/sports/2026/09/29/biden-judge-dismisses-riley-gaines-transgender-athlete-lawsuit-against-ncaa/",
+          "cluster_id": 13211941707434792860,
+          "fetched_at": 1790720969,
+          "id": 9783918411035746780,
+          "joined_at": 1790720969,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790698625,
+          "summary": "A Joe Biden-appointed federal judge has dismissed former college athlete Riley Gaines' lawsuit against the NCAA over its transgender policies The post Biden Judge Dismisses Riley Gaines’ Transgender Athlete Lawsuit Against NCAA appeared first on Breitbart .",
+          "text_hash": 6472136529190365877,
+          "title": "Biden Judge Dismisses Riley Gaines' Transgender Athlete Lawsuit Against NCAA"
+        }
+      ],
+      "outlet_id": "breitbart"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,442 @@
+{
+  "claims": {
+    "democracynow": [
+      {
+        "data": {
+          "domain": "democracynow.org",
+          "expires": "2027-09-10",
+          "last_changed": "2026-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "auto renew period"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "democracynow",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/democracynow.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-09-10"
+      },
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard#RfC:_update_Democracy_Now!_from_WP:MREL_to_WP:GENREL?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_40#Democracy_Now!",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_71#Democracy_Now_source_article_\"Cheering_Movers_and_Art_Student_Spies\"",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_84#Democracy_Now!_and_CounterPunch",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_96#Democracy_Now",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_144#Democracy_Now!_in_general"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Democracy Now!",
+          "status": "no_consensus",
+          "summary": "There is no consensus on the reliability of Democracy Now!. Most editors consider Democracy Now! a partisan source whose statements should be attributed. Syndicated content published by Democracy Now! should be evaluated by the reliability of its original publisher."
+        },
+        "field": "reliability",
+        "outlet_id": "democracynow",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "pbs": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "pbs.org",
+          "expires": "2027-04-20",
+          "last_changed": "2026-08-12",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "pbs",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/pbs.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "pbs",
+        "ref_url": "https://www.wikidata.org/wiki/Q215616",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1969-11-03"
+      },
+      {
+        "as_of": "2016",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_101#Emme_(model)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_135#Judaism:_The_oldest_monotheistic_religion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_150#Center_for_Investigative_Reporting",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_153#thinkprogress.org_as_a_generally_accepted_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_206#Pbs.org"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "PBS (Public Broadcasting Service)",
+          "status": "generally_reliable",
+          "summary": "The Public Broadcasting Service is an American public broadcaster. It is considered generally reliable by editors."
+        },
+        "field": "reliability",
+        "outlet_id": "pbs",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "straitstimes": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "straitstimes.com",
+          "expires": "2027-08-17",
+          "last_changed": "2026-08-13",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/straitstimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1845-07-15"
+      },
+      {
+        "data": {
+          "qid": "Q263204"
+        },
+        "field": "owner",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q498921",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore Press Holdings"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_437#the_Straits_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_486#Reliability_of_The_Straits_Times_must_be_rediscussed"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Straits Times (ST)",
+          "status": "generally_reliable",
+          "summary": "The Straits Times is Singapore's English-language newspaper of record and is generally reliable. However, additional considerations may be required when citing its coverage of domestic affairs, including local politics, government policies, and the ruling People's Action Party (PAP) and its politicians. This stems from the historical context of the Singaporean media landscape, where journalists of"
+        },
+        "field": "reliability",
+        "outlet_id": "straitstimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "washingtontimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtontimes.com",
+          "expires": "2027-09-13",
+          "last_changed": "2026-07-30",
+          "registrar": "DNC Holdings, Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtontimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1982-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      },
+      {
+        "data": {
+          "qid": "Q217059"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Unification Church"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_328#RfC:_The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_209#Is_the_Washington_Times_an_acceptable_source_for_statements_of_fact_related_to_student_protesters/black_lives_matter/Milo_Yiannopoulos?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_316#Rebel_News"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Times",
+          "status": "no_consensus",
+          "summary": "There is consensus that The Washington Times is a marginally reliable source for politics and science. Most editors agree that it is a partisan source. Some editors noted a history of publishing inaccurate or false information, of being slow to issue retractions or corrections, and of sometimes only doing so under the threat of legal action; a considerable minority favored deprecation on these gro"
+        },
+        "field": "reliability",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.0872160792350769,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": 0.8072161078453064
+    },
+    "created_at": 1790653930,
+    "expired": false,
+    "id": 5543202539112511581,
+    "item_count": 4,
+    "last_active_at": 1790715386,
+    "origin_item_id": 9791949302217837575,
+    "origin_outlet_id": "straitstimes",
+    "outlet_count": 4,
+    "primary_title": "At UN, Denmark says Greenland pact benefits all parties involved",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 5543202539112511581,
+        "joined_at": 1790653930,
+        "outlet_id": "pbs",
+        "published_at": 1790633831
+      },
+      {
+        "item_id": 17023646008584895692,
+        "joined_at": 1790653933,
+        "outlet_id": "washingtontimes",
+        "published_at": 1790626259
+      },
+      {
+        "item_id": 9791949302217837575,
+        "joined_at": 1790653941,
+        "outlet_id": "straitstimes",
+        "published_at": 1790608356
+      },
+      {
+        "item_id": 7196645170798797077,
+        "joined_at": 1790715386,
+        "outlet_id": "democracynow",
+        "published_at": 1790684049
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "pbs",
+            "straitstimes"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "democracynow",
+            "washingtontimes"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "democracynow": "Democracy Now!",
+    "pbs": "PBS NewsHour",
+    "straitstimes": "The Straits Times",
+    "washingtontimes": "The Washington Times"
+  },
+  "outlets_24h": 4,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://straitstimes.com/world/europe/denmark-sees-long-term-nato-presence-in-greenland-after-trump-deal",
+          "cluster_id": 5543202539112511581,
+          "fetched_at": 1790653941,
+          "id": 9791949302217837575,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "straitstimes",
+          "published_at": 1790608356,
+          "summary": "BRUSSELS, Sept 28 - Denmark is confident that NATO will maintain a heightened presence in Greenland and the broader Arctic region over the long term following a security agreement with the United States signed last week, the Danish defence minister said on Monday.",
+          "text_hash": 14257904500037208587,
+          "title": "Denmark sees long-term NATO presence in Greenland after Trump deal"
+        }
+      ],
+      "outlet_id": "straitstimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtontimes.com/news/2026/sep/28/denmark-un-says-greenland-pact-benefits-parties-involved/",
+          "cluster_id": 5543202539112511581,
+          "fetched_at": 1790653933,
+          "id": 17023646008584895692,
+          "joined_at": 1790653933,
+          "lang": "en",
+          "outlet_id": "washingtontimes",
+          "published_at": 1790626259,
+          "summary": "The security agreement signed by the U.S., Denmark and Greenland last week \"strengthens the defense of Greenland, the NATO area, and the American continent,\" Denmark's U.N. ambassador told the U.N.'s annual gathering of world leaders Monday.",
+          "text_hash": 1796469558257160771,
+          "title": "Denmark, at U.N., says Greenland pact benefits all parties involved"
+        }
+      ],
+      "outlet_id": "washingtontimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://pbs.org/newshour/world/at-un-denmark-says-greenland-pact-benefits-all-parties-involved",
+          "cluster_id": 5543202539112511581,
+          "fetched_at": 1790653930,
+          "id": 5543202539112511581,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "pbs",
+          "published_at": 1790633831,
+          "summary": "The security agreement signed by the U.S., Denmark and Greenland last week \"strengthens the defense of Greenland, the NATO area, and the American continent.\"",
+          "text_hash": 2048669030557030955,
+          "title": "At UN, Denmark says Greenland pact benefits all parties involved"
+        }
+      ],
+      "outlet_id": "pbs"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "http://democracynow.org/2026/9/29/greenland_denmark",
+          "cluster_id": 5543202539112511581,
+          "fetched_at": 1790715386,
+          "id": 7196645170798797077,
+          "joined_at": 1790715386,
+          "lang": "en",
+          "outlet_id": "democracynow",
+          "published_at": 1790684049,
+          "summary": "After months of threatening to take over Greenland by force, President Trump last week signed a 10-page agreement with Greenland and Denmark that bolsters the U.S. military presence on the mineral-rich and strategically located island but falls short of his earlier demands to make it American territory. Under the 1951 Defense of Greenland Treaty, the United States already has wide latitude to station forces and build military bases in Greenland. The U.S. currently has one active military base and around…",
+          "text_hash": 6100760446126007368,
+          "title": "Greenland Deal: Trump Drops Threat to Annex Denmark Territory in Favor of Greater U.S. Military Role"
+        }
+      ],
+      "outlet_id": "democracynow"
+    }
+  ],
+  "withdrawals": []
+}

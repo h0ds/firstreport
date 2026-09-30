@@ -1,0 +1,124 @@
+{
+  "claims": {
+    "rawstory": [
+      {
+        "data": {
+          "domain": "rawstory.com",
+          "expires": "2031-01-29",
+          "last_changed": "2026-01-29",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rawstory",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rawstory.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2004-01-29"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#RfC_-_The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_12#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_17#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_112#The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_202#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#Raw_story_a_RS_for_details_on_this_obscure_death?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Raw Story",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that Raw Story is generally unreliable for factual reporting, based upon a pattern of publishing false and sensationalized stories. Editors almost unanimously agree that the source is biased and that in-text attribution should accompany each use of the source."
+        },
+        "field": "reliability",
+        "outlet_id": "rawstory",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653935,
+    "expired": false,
+    "id": 17861770868336006552,
+    "item_count": 1,
+    "last_active_at": 1790653935,
+    "origin_item_id": 17861770868336006552,
+    "origin_outlet_id": "rawstory",
+    "outlet_count": 1,
+    "primary_title": "GOP scheme to boost Senate candidate backfires by confusing their own voters",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 17861770868336006552,
+        "joined_at": 1790653935,
+        "outlet_id": "rawstory",
+        "published_at": 1790627619
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "rawstory": "Raw Story"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rawstory.com/jon-husted-sherrod-brown/",
+          "cluster_id": 17861770868336006552,
+          "fetched_at": 1790653935,
+          "id": 17861770868336006552,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "rawstory",
+          "published_at": 1790627619,
+          "summary": "Ohio Republicans deliberately built a strategy around portraying Sen. Jon Husted as the underdog challenger rather than the sitting incumbent, hoping to capitalize on anti-establishment anger. Instead, the tactic appears to have genuinely confused voters about who actually holds the seat, reported The New York Times. One anonymous GOP strategist told The Times the campaign intentionally framed Democrat Sherrod Brown as the incumbent, seeing it as a rare chance to channel frustration with the status quo at…",
+          "text_hash": 1294543563660853813,
+          "title": "GOP scheme to boost Senate candidate backfires by confusing their own voters"
+        }
+      ],
+      "outlet_id": "rawstory"
+    }
+  ],
+  "withdrawals": []
+}

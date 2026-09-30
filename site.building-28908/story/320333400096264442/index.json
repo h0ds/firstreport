@@ -1,0 +1,123 @@
+{
+  "claims": {
+    "abcau": [
+      {
+        "data": {
+          "qid": "Q408"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Australia"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1932-07-01"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1983-07-01"
+      },
+      {
+        "data": {
+          "qid": "Q2991162"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Australian Government"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653939,
+    "expired": false,
+    "id": 320333400096264442,
+    "item_count": 1,
+    "last_active_at": 1790653939,
+    "origin_item_id": 320333400096264442,
+    "origin_outlet_id": "abcau",
+    "outlet_count": 1,
+    "primary_title": "Coach goes viral after smearing player's blood on own face",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 320333400096264442,
+        "joined_at": 1790653939,
+        "outlet_id": "abcau",
+        "published_at": 1790550902
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcau": "ABC News (Australia)"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abc.net.au/news/2026-09-28/college-football-coach-pj-fleck-goes-viral-with-blood-smear/107202676",
+          "cluster_id": 320333400096264442,
+          "fetched_at": 1790653939,
+          "id": 320333400096264442,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "abcau",
+          "published_at": 1790550902,
+          "summary": "College football coach PJ Fleck is described as \"crazy\" after smearing the blood of one his player's onto his own face after their team's US college football victory.",
+          "text_hash": 9201334580368896044,
+          "title": "Coach goes viral after smearing player's blood on own face"
+        }
+      ],
+      "outlet_id": "abcau"
+    }
+  ],
+  "withdrawals": []
+}

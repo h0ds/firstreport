@@ -1,0 +1,397 @@
+{
+  "claims": {
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "timesofindia": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "indiatimes.com",
+          "expires": "2026-11-21",
+          "last_changed": "2025-10-23",
+          "registrar": "Tucows Domains Inc.",
+          "status": [
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/indiatimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-11-22"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1838-01-01"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1898-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q139935842"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q139935842"
+      },
+      {
+        "data": {
+          "qid": "Q972645"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q46807 (The Times of India); also Q113974698 (Indiatimes)",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://www.wikidata.org/wiki/Q46807",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Times Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_287#Times_of_India_RFC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_447#RfC:_The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_320#The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_342#Valid_Sources?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_353#Circular_references_from_The_Times_of_India",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_364#Times_of_India_is_not_that_pro-government_as_mentioned_?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_442#Times_of_India_running_AI-generated_articles?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_493#Another_AI-generated_article_from_The_Times_of_India"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Times of India (post-1950) (TOI)",
+          "status": "no_consensus",
+          "summary": "Additional considerations apply to articles published in The Times of India (TOI) after 1950. TOI has sometimes had a poor reputation for fact-checking and its use should be evaluated with caution. Editors should ensure that they do not use paid advertorials —which were first published in TOI in 1950 at the earliest—to verify information or establish notability. Paid advertorials may be of particu"
+        },
+        "field": "reliability",
+        "outlet_id": "timesofindia",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "washingtontimes": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "washingtontimes.com",
+          "expires": "2027-09-13",
+          "last_changed": "2026-07-30",
+          "registrar": "DNC Holdings, Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/washingtontimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1982-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q462079"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News World Communications"
+      },
+      {
+        "data": {
+          "qid": "Q217059"
+        },
+        "field": "owner",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q494170",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Unification Church"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_328#RfC:_The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_209#Is_the_Washington_Times_an_acceptable_source_for_statements_of_fact_related_to_student_protesters/black_lives_matter/Milo_Yiannopoulos?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#The_Washington_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_316#Rebel_News"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Washington Times",
+          "status": "no_consensus",
+          "summary": "There is consensus that The Washington Times is a marginally reliable source for politics and science. Most editors agree that it is a partisan source. Some editors noted a history of publishing inaccurate or false information, of being slow to issue retractions or corrections, and of sometimes only doing so under the threat of legal action; a considerable minority favored deprecation on these gro"
+        },
+        "field": "reliability",
+        "outlet_id": "washingtontimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.026650190353393555,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.746650218963623
+    },
+    "created_at": 1790715370,
+    "expired": false,
+    "id": 8823494364560399012,
+    "item_count": 3,
+    "last_active_at": 1790715379,
+    "origin_item_id": 16149563705130770906,
+    "origin_outlet_id": "washingtontimes",
+    "outlet_count": 3,
+    "primary_title": "Russia's ballistic missile and jet-propelled drone blitz keeps Kyiv on edge",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8823494364560399012,
+        "joined_at": 1790715370,
+        "outlet_id": "timesofindia",
+        "published_at": 1790700460
+      },
+      {
+        "item_id": 14644232752017770974,
+        "joined_at": 1790715378,
+        "outlet_id": "thehindu",
+        "published_at": 1790695546
+      },
+      {
+        "item_id": 16149563705130770906,
+        "joined_at": 1790715379,
+        "outlet_id": "washingtontimes",
+        "published_at": 1790685121
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "thehindu"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "timesofindia",
+            "washingtontimes"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "thehindu": "The Hindu",
+    "timesofindia": "The Times of India",
+    "washingtontimes": "The Washington Times"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 3,
+  "revisions": [],
+  "spark": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://washingtontimes.com/news/2026/sep/29/russias-ballistic-missile-jet-propelled-drone-blitz-keeping-kyiv-edge/",
+          "cluster_id": 8823494364560399012,
+          "fetched_at": 1790715379,
+          "id": 16149563705130770906,
+          "joined_at": 1790715379,
+          "lang": "en",
+          "outlet_id": "washingtontimes",
+          "published_at": 1790685121,
+          "summary": "Russia fired ballistic missiles and dozens of jet-powered drones at Kyiv, Ukraine's air force said Tuesday, as Moscow seeks to make Ukraine buckle under the pressure of day-and-night bombardment of its capital and other cities.",
+          "text_hash": 10792249973399688248,
+          "title": "Russia's ballistic missile and jet-propelled drone blitz keeps Kyiv on edge"
+        }
+      ],
+      "outlet_id": "washingtontimes"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/russias-ballistic-missile-jet-propelled-drone-blitz-keeps-kyiv-on-edge/article71525070.ece",
+          "cluster_id": 8823494364560399012,
+          "fetched_at": 1790715378,
+          "id": 14644232752017770974,
+          "joined_at": 1790715378,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790695546,
+          "summary": "The Russian onslaught has used new jet-powered drones that fly too fast and too high for Ukrainian ground-based air defences to shoot down.",
+          "text_hash": 11368042574927418685,
+          "title": "Russia's ballistic missile, jet-propelled drone blitz keeps Kyiv on edge"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://timesofindia.indiatimes.com/world/europe/how-russias-ballistic-missiles-jet-powered-drones-have-kept-ukraine-under-pressure/articleshow/134570814.cms",
+          "cluster_id": 8823494364560399012,
+          "fetched_at": 1790715370,
+          "id": 8823494364560399012,
+          "joined_at": 1790715370,
+          "lang": "en",
+          "outlet_id": "timesofindia",
+          "published_at": 1790700460,
+          "summary": "Reports indicate that Russia is intensifying its attacks on Ukraine, targeting key cities with ballistic missiles and drones. As Ukraine grapples with a lack of US-made Patriot missiles, the capability of its air defenses is being severely tested. Ukrainian officials claim that these strikes are a strategic move by Russia to weaken their defense.",
+          "text_hash": 3389453620451893310,
+          "title": "How Russia's ballistic missiles, jet-powered drones have kept Ukraine under pressure"
+        }
+      ],
+      "outlet_id": "timesofindia"
+    }
+  ],
+  "withdrawals": []
+}

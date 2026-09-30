@@ -1,0 +1,548 @@
+{
+  "claims": {
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "foxnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "foxnews.com",
+          "expires": "2031-06-20",
+          "last_changed": "2022-09-20",
+          "registrar": "GoDaddy Corporate Domains, LLC",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "foxnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/foxnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-06-21"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-10-07"
+      },
+      {
+        "data": {
+          "qid": "Q5476713"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "21st Century Fox"
+      },
+      {
+        "data": {
+          "qid": "Q60238941"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Fox Corporation"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_73#Request_for_Comment_on_Fox_News_Channel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_303#RfC:_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_385#RFC:_Fox_News_(news):_politics_&_science",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_406#RfC:_downgrade_Fox_News_for_politics?",
+            "#cite_note-44"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (politics and science)",
+          "status": "generally_unreliable",
+          "summary": "There is consensus Fox News is generally unreliable for the reporting of politics, especially from November 2020 onwards. On the matter of science, and on the matter of pre-November 2020 politics, there is a consensus that the reliability of Fox News is unclear and that additional considerations apply to its use. As a result, Fox News is considered marginally reliable and generally does not qualif"
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#The_status_of_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#Is_Fox_News_a_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_257#Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#Fox_News_redux",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_264#Fox_News_-_sources_for_future_discussion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_276#Litmus_test_for_source_reliability_in_the_AmPol2_area",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_278#Suggestion:_comparing_Fox_News_real-time_coverage_of_the_impeachment_inquiry_with_other_outlets'",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Fox_News_and_COVID-19",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Why_does_Fox_News_talk_shows_have_it's_own_section_in_the_list?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (talk shows)",
+          "status": "generally_unreliable",
+          "summary": "Fox News talk shows, including Hannity, Tucker Carlson Tonight, The Ingraham Angle, and Fox & Friends, should not be used for statements of fact but can sometimes be used for attributed opinions. See also: Fox News (news excluding politics and science), Fox News (politics and science)."
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_73#Request_for_Comment_on_Fox_News_Channel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_303#RfC:_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_406#RfC:_downgrade_Fox_News_for_politics?",
+            "#cite_note-43"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (news excluding politics and science)",
+          "status": "no_consensus",
+          "summary": "Historically, there has been consensus that Fox News is generally reliable for news coverage on topics other than politics and science. However, many editors expressed concerns about the reliability of Fox News for any topic in a 2023 RFC. No formal consensus was reached on the matter, though. See also: Fox News (politics and science), Fox News (talk shows)."
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "globeandmail": [
+      {
+        "data": {
+          "qid": "Q16"
+        },
+        "field": "country",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Canada"
+      },
+      {
+        "data": {
+          "domain": "theglobeandmail.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-03",
+          "registrar": "Webnames.ca Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theglobeandmail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://www.wikidata.org/wiki/Q604525",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1936-01-01"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_340#RfC:_The_Globe_and_Mail"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Globe and Mail",
+          "status": "generally_reliable",
+          "summary": "In a 2021 RfC, editors found a strong consensus that The Globe and Mail is generally reliable for news coverage and is considered a newspaper of record."
+        },
+        "field": "reliability",
+        "outlet_id": "globeandmail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "huffpost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "huffpost.com",
+          "expires": "2028-03-10",
+          "last_changed": "2026-02-06",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "huffpost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/huffpost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-03-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-05-01"
+      },
+      {
+        "data": {
+          "qid": "Q5003490"
+        },
+        "field": "owner",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "BuzzFeed"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-52"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost (excluding politics) (The Huffington Post)",
+          "status": "generally_reliable",
+          "summary": "A 2020 RfC found HuffPost staff writers fairly reliable for factual reporting on non-political topics, but notes that they may give prominence to topics that support their political bias and less prominence to, or omit, things that contradict it. HuffPost's reliability has increased since 2012; articles before 2012 are less reliable and should be treated with more caution. HuffPost uses clickbait "
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-54"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost contributors (The Huffington Post)",
+          "status": "generally_unreliable",
+          "summary": "Until 2018, the U.S. edition of HuffPost published content written by contributors with near-zero editorial oversight. These contributors generally did not have a reputation for fact-checking, and most editors consider them highly variable in quality. Editors show consensus for treating HuffPost contributor articles as self-published sources, unless the article was written by a subject-matter expe"
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-53"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost (politics) (The Huffington Post)",
+          "status": "no_consensus",
+          "summary": "In the 2020 RfC, there was no consensus on HuffPost staff writers' reliability for political topics. The community considers HuffPost openly biased on American politics. There is no consensus on its reliability for international politics. See also: HuffPost (excluding politics), HuffPost contributors."
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 4,
+      "weakest_join": null
+    },
+    "created_at": 1790633634,
+    "expired": false,
+    "id": 3077533432725699246,
+    "item_count": 4,
+    "last_active_at": 1790653941,
+    "origin_item_id": 4806037659697646569,
+    "origin_outlet_id": "globeandmail",
+    "outlet_count": 4,
+    "primary_title": "Pope Leo draws staggering 800,000 faithful to heart of Paris for massive outdoor Mass",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3077533432725699246,
+        "joined_at": 1790633634,
+        "outlet_id": "foxnews",
+        "published_at": 1790465129
+      },
+      {
+        "item_id": 12713893773939804682,
+        "joined_at": 1790653935,
+        "outlet_id": "huffpost",
+        "published_at": 1790449582
+      },
+      {
+        "item_id": 17831250939396929004,
+        "joined_at": 1790653939,
+        "outlet_id": "euronews",
+        "published_at": 1790459316
+      },
+      {
+        "item_id": 4806037659697646569,
+        "joined_at": 1790653941,
+        "outlet_id": "globeandmail",
+        "published_at": 1790424040
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "huffpost",
+            "globeandmail"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "foxnews"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "euronews": "Euronews",
+    "foxnews": "Fox News",
+    "globeandmail": "The Globe and Mail",
+    "huffpost": "HuffPost"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theglobeandmail.com/world/article-pope-encourages-catholics-in-france-to-persevere-as-paris-shuts-down/",
+          "cluster_id": 3077533432725699246,
+          "fetched_at": 1790653941,
+          "id": 4806037659697646569,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "globeandmail",
+          "published_at": 1790424040,
+          "summary": "Turnout of an estimated 800,000 points to church’s lasting influence despite France’s increasing secularization",
+          "text_hash": 2140588567943606839,
+          "title": "Hundreds of thousands line Champs-Élysées in Paris for Pope Leo’s outdoor mass"
+        }
+      ],
+      "outlet_id": "globeandmail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://huffpost.com/entry/pope-leo-draws-800000-people-to-paris-for-open-air-mass-on-iconic-square_n_6ab8157ae4b07795582c66d9",
+          "cluster_id": 3077533432725699246,
+          "fetched_at": 1790653935,
+          "id": 12713893773939804682,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "huffpost",
+          "published_at": 1790449582,
+          "summary": "Pope Leo has sought to encourage French Catholics to persevere in their faith “even amid the thorns” of a secular world during his four-day visit.",
+          "text_hash": 3759520034995209193,
+          "title": "Pope Leo Draws 800,000 People To Paris For Open-Air Mass On Iconic Square"
+        }
+      ],
+      "outlet_id": "huffpost"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/video/2026/09/26/pope-leo-xiv-draws-800000-faithful-to-paris-before-emotional-lourdes-pilgrimage",
+          "cluster_id": 3077533432725699246,
+          "fetched_at": 1790653939,
+          "id": 17831250939396929004,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790459316,
+          "summary": "Pope Leo XIV celebrated a huge outdoor Mass in Paris, then travelled to Lourdes to pray at the grotto, greet pilgrims and continue his French pilgrimage.",
+          "text_hash": 8629035117969019490,
+          "title": "Pope Leo XIV draws 800,000 faithful to Paris before emotional Lourdes pilgrimage"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://foxnews.com/world/pope-leo-draws-staggering-800000-faithful-heart-paris-massive-outdoor-mass",
+          "cluster_id": 3077533432725699246,
+          "fetched_at": 1790633634,
+          "id": 3077533432725699246,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "foxnews",
+          "published_at": 1790465129,
+          "summary": "Pope Leo XIV drew an estimated 800,000 to Place de la Concorde for a historic open-air Mass, urging French Catholics to share their faith openly.",
+          "text_hash": 10413498660318544440,
+          "title": "Pope Leo draws staggering 800,000 faithful to heart of Paris for massive outdoor Mass"
+        }
+      ],
+      "outlet_id": "foxnews"
+    }
+  ],
+  "withdrawals": []
+}

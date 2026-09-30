@@ -1,0 +1,304 @@
+{
+  "claims": {
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790633633,
+    "expired": false,
+    "id": 17824706065274655349,
+    "item_count": 1,
+    "last_active_at": 1790633633,
+    "origin_item_id": 17824706065274655349,
+    "origin_outlet_id": "guardian",
+    "outlet_count": 1,
+    "primary_title": "Australia news live: Chalmers says taxes lower than under Howard as cash rate decision due; wife of missing activist urges help",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 17824706065274655349,
+        "joined_at": 1790633633,
+        "outlet_id": "guardian",
+        "published_at": 1790632902
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "guardian": "The Guardian"
+  },
+  "outlets_24h": 0,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 371,
+      "snapshot_id": 9198613954885999110,
+      "ts": 1790634203
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 374,
+      "snapshot_id": 13552890862359050238,
+      "ts": 1790636108
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 382,
+      "snapshot_id": 8090115966940568191,
+      "ts": 1790637274
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 386,
+      "snapshot_id": 2090063479153616082,
+      "ts": 1790637985
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 427,
+      "snapshot_id": 8038465178773594232,
+      "ts": 1790647865
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 450,
+      "snapshot_id": 1233416050503576084,
+      "ts": 1790649338
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 469,
+      "snapshot_id": 7918347327617190495,
+      "ts": 1790651543
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 472,
+      "snapshot_id": 15366687944087706606,
+      "ts": 1790652847
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3046,
+      "snapshot_id": 6484496600792613803,
+      "ts": 1790658738
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3176,
+      "snapshot_id": 14045492137554436714,
+      "ts": 1790659726
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3228,
+      "snapshot_id": 11342439763016092760,
+      "ts": 1790660767
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3302,
+      "snapshot_id": 10465272261450667778,
+      "ts": 1790662840
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3474,
+      "snapshot_id": 17363675637209569206,
+      "ts": 1790666777
+    },
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3775,
+      "snapshot_id": 14614480373335041781,
+      "ts": 1790679060
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/australia-news/live/2026/sep/29/treasurer-jim-chalmers-reserve-bank-cash-rate-decision-coalition-one-nation-ntwnfb",
+          "cluster_id": 17824706065274655349,
+          "fetched_at": 1790633633,
+          "id": 17824706065274655349,
+          "joined_at": 1790633633,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790632902,
+          "summary": "This blog is now closed RBA interest rates: Reserve Bank raises cash rate to highest level in 15 years and warns of more hikes ‘if needed’ Get our breaking news email , free app or daily news podcast New South Wales police say they are investigating the suspicious deaths of two men in the state’s north. Police said they found the first man – who has since been identified as a 79-year-old – dead at a property on Summerland Way at Gurranang, near Grafton, on 13 September. And that’s equally important in the…",
+          "text_hash": 17925544798520857101,
+          "title": "Australia investigating reports of human rights activist detained in Vietnam – as it happened"
+        }
+      ],
+      "outlet_id": "guardian"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 17824706065274655349,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4413,
+      "snapshot_id": 13468597432063914469,
+      "ts": 1790715373
+    }
+  ]
+}

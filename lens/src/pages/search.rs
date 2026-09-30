@@ -71,7 +71,7 @@ pub fn search(input: &Input, window_hours: i64) -> Twins {
         head: "",
         body: &b,
         status: &format!(
-            "search · built from an export at {}",
+            "Updated {}",
             datetime(input.export_time)
         ),
     });

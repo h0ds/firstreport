@@ -1,0 +1,211 @@
+{
+  "claims": {
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "rawstory": [
+      {
+        "data": {
+          "domain": "rawstory.com",
+          "expires": "2031-01-29",
+          "last_changed": "2026-01-29",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rawstory",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rawstory.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2004-01-29"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#RfC_-_The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_12#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_17#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_112#The_Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_202#Raw_Story",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#Raw_story_a_RS_for_details_on_this_obscure_death?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Raw Story",
+          "status": "generally_unreliable",
+          "summary": "There is consensus that Raw Story is generally unreliable for factual reporting, based upon a pattern of publishing false and sensationalized stories. Editors almost unanimously agree that the source is biased and that in-text attribution should accompany each use of the source."
+        },
+        "field": "reliability",
+        "outlet_id": "rawstory",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.01382291316986084,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7338229417800903
+    },
+    "created_at": 1790658673,
+    "expired": false,
+    "id": 14703132148845938949,
+    "item_count": 2,
+    "last_active_at": 1790679060,
+    "origin_item_id": 14703132148845938949,
+    "origin_outlet_id": "euronews",
+    "outlet_count": 2,
+    "primary_title": "Trump revenge plot implodes as multiple insiders jump ship",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 14703132148845938949,
+        "joined_at": 1790658673,
+        "outlet_id": "euronews",
+        "published_at": 1790655543
+      },
+      {
+        "item_id": 3113034225633413016,
+        "joined_at": 1790679060,
+        "outlet_id": "rawstory",
+        "published_at": 1790677348
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "euronews": "Euronews",
+    "rawstory": "Raw Story"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/29/second-prosecutor-resigns-from-trumps-2020-election-grand-conspiracy-justice-department-pr",
+          "cluster_id": 14703132148845938949,
+          "fetched_at": 1790658673,
+          "id": 14703132148845938949,
+          "joined_at": 1790658673,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790655543,
+          "summary": "A second high profile prosecutor in Trump’s grand conspiracy Justice Department probe into whether former government officials conspired against him has abruptly resigned from his post. Kurt Olsen was one of the biggest backers of the 2020 rigged elections claims that Trump has championed for years.",
+          "text_hash": 7869912832383938893,
+          "title": "Second prosecutor resigns from Trump's 2020 election 'grand conspiracy' Justice Department probe"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rawstory.com/trump-revenge-plot/",
+          "cluster_id": 14703132148845938949,
+          "fetched_at": 1790679060,
+          "id": 3113034225633413016,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "rawstory",
+          "published_at": 1790677348,
+          "summary": "The Justice Department's sprawling probe into an alleged \"grand conspiracy\" against President Donald Trump unraveled from the inside Monday as a second senior Trump loyalist walked out on the administration, and as many as eight prosecutors are now gone from the Florida-based team. Kurt Olsen, 63, resigned from the U.S. Attorney's Office for the Southern District of Florida after months working the investigation into claims of Russia's interference in the 2016 election, and into the classified documents…",
+          "text_hash": 18097568671351851960,
+          "title": "Trump revenge plot implodes as multiple insiders jump ship"
+        }
+      ],
+      "outlet_id": "rawstory"
+    }
+  ],
+  "withdrawals": []
+}

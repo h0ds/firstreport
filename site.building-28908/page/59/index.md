@@ -1,0 +1,54 @@
+# Stories, page 59 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Venezuelans rally to demand opposition leader's safe return, presidential elections](/story/17979902182304822234/) · 1 outlet · reach 1
+- [Trump weighed strikes against Houthis in Yemen before holding off](/story/17998309241001346233/) · 1 outlet · reach 1
+- [Ariz. activists build map to show federal agents at polls](/story/18269858026958217757/) · 1 outlet · reach 1
+- [Ahead of Sam Altman's UN address, OpenAI proposes new ways to track AI misalignment risks](/story/18387520073247584080/) · 1 outlet · reach 1
+- [Arizona tour company sues over Trump’s nonresident fee at national parks](/story/193782056827629286/) · 1 outlet · reach 1
+- [High mortgage rates compound housing affordability challenges](/story/263979981314591532/) · 1 outlet · reach 1
+- [How Blanche is shattering DOJ's standard of political independence](/story/319609499824048770/) · 1 outlet · reach 1
+- [White House airs taxpayer-funded ad talking about ‘the final battle’](/story/1104891143319453446/) · 1 outlet · reach 1
+- [Pope Leo draws massive crowds in France. Is Catholicism making a comeback?](/story/1491763230277161278/) · 1 outlet · reach 1
+- [Netanyahu should be held accountable for failing to stop Oct. 7](/story/1784110960473632078/) · 1 outlet · reach 1
+- [Trump rolls back car fuel efficiency standards](/story/2287804219707632859/) · 1 outlet · reach 1
+- [Senators spurn Hegseth’s pick amid jockeying for Army secretary nomination](/story/2371907657337958008/) · 1 outlet · reach 1
+- [Watch live: NASA, Boeing give update on future of Starliner](/story/2841090996451248797/) · 1 outlet · reach 1
+- [GOP lawmakers urge Trump to reimpose sanctions on Russian-owned Serbian refinery](/story/2920772014870138907/) · 1 outlet · reach 1
+- [Talarico up 4 points in new Texas poll](/story/2934333485196154277/) · 1 outlet · reach 1
+- [Paying stay-at-home parents isn’t a neutral way to subsidize childcare](/story/2942428586117047729/) · 1 outlet · reach 1
+- [Manchin: ‘If character means anything, you can’t vote for Ken Paxton’](/story/3086661132659578403/) · 1 outlet · reach 1
+- [GoFundMe: ‘Factual misrepresentations’ led to end of fundraiser for man paying wife’s cancer bills](/story/3128521868398710367/) · 1 outlet · reach 1
+- [State Department weighs sharing passport records for voter citizenship checks](/story/3892126413409354691/) · 1 outlet · reach 1
+- [Live updates: Trump calls US ‘better than ever’ at Presidents Cup; Blanche defends White House media ban](/story/4010597403467679514/) · 1 outlet · reach 1
+- [Data center developers should have known how much Americans love their land](/story/4187176540501689842/) · 1 outlet · reach 1
+- [As work requirements kick in for Medicaid, some states are taking a tougher stance](/story/4265845355683061519/) · 1 outlet · reach 1
+- [Cooper holds 11-point lead over Whatley in North Carolina Senate race: Poll](/story/4267249403991736890/) · 1 outlet · reach 1
+- [9/28: The Takeout with Major Garrett](/story/4379091922343399775/) · 1 outlet · reach 1
+- [Lawler, Conley clash over Israel aid, economy in televised debate](/story/4464208783505568502/) · 1 outlet · reach 1
+- [WFP official on addressing global hunger in face of wars and climate disasters](/story/4477096853401985531/) · 1 outlet · reach 1
+- [What Trump's rollback of fuel economy standards means for drivers](/story/4622594072082585078/) · 1 outlet · reach 1
+- [Former White House ethics attorney: Taxpayer-funded ads could be ‘impeachable offense’](/story/4808933057099337223/) · 1 outlet · reach 1
+- [Waiting at a red light? It may not know you’re there](/story/5073030974747713468/) · 1 outlet · reach 1
+- [Nevada abortion rights group launches $1M campaign on ballot measure](/story/5475488037592769657/) · 1 outlet · reach 1
+- [GOP senator says Trump should bring Iran war to an end](/story/6079045567342954617/) · 1 outlet · reach 1
+- [Trump calls arrests of UK men on suspicion of terror offenses ‘fantastic’](/story/6826640244727692333/) · 1 outlet · reach 1
+- [Fears of serial killer rise in South Africa after body of 10th woman found](/story/7105212241693115242/) · 1 outlet · reach 1
+- [Beshear: More states within ‘margin of error’ for Democratic gubernatorial candidates](/story/7178324223915970897/) · 1 outlet · reach 1
+- [Senate Democratic PAC hits Collins over Medicaid cuts she voted against](/story/7402223762836195874/) · 1 outlet · reach 1
+- [Tamara Keith and Amy Walter on taxpayer funds used for TV ads promoting Trump](/story/7702243993511600061/) · 1 outlet · reach 1
+- [Novo Nordisk’s next-gen weight loss drug outperforms Zepbound in new trial](/story/7783356142082300960/) · 1 outlet · reach 1
+- [Networks to resume TV pool coverage of Trump despite White House block of CNN](/story/8102507202044296267/) · 1 outlet · reach 1
+- [9/28: CBS Evening News](/story/8732151209475404325/) · 1 outlet · reach 1
+- [States should not blindly Alabama’s use of execution by nitrogen](/story/9036751185782895293/) · 1 outlet · reach 1
+- [Dems vow to confront Israel on violence against Palestinians: ‘Out of control’](/story/9293356241173412405/) · 1 outlet · reach 1
+- [Fake Mark Zuckerberg makes amazing case for free speech on Facebook](/story/9417990540698045019/) · 1 outlet · reach 1
+- [US aircraft carrier deploys to Middle East to relieve USS George Washington](/story/9644079010201889825/) · 1 outlet · reach 1
+- [MLB, Trump administration mulling baseball game in National Park: Report](/story/9876262136561199168/) · 1 outlet · reach 1
+- [Trump administration rejects UN pandemic preparedness declaration](/story/9903615571135586121/) · 1 outlet · reach 1
+- [The national debt should be the number one issue in this year’s election](/story/10156460107141509110/) · 1 outlet · reach 1
+- [Schumer, Dems at odds as leader aims to kill Ohio Republican’s data center bill](/story/10161017768703927493/) · 1 outlet · reach 1
+- [GOP rep: Americans feel ‘fatigue’ in diesel prices increasing](/story/10194836438297658853/) · 1 outlet · reach 1
+- [9/20/2026: Patrick Clancy; AI Data Centers; Shergar, Where are you?](/story/10271503670255744593/) · 1 outlet · reach 1
+- [Benjamin Satterley, pro wrestler known as "Pac," dies at 40](/story/10271990376644755322/) · 1 outlet · reach 1

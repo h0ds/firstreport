@@ -1,0 +1,250 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "dw.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.2763
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "dw",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.28 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q183"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q1156181 (DW-TV); also Q153770 (Deutsche Welle)",
+        "outlet_id": "dw",
+        "ref_url": "https://www.wikidata.org/wiki/Q1156181",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Germany"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "dw.com",
+          "expires": "2027-12-06",
+          "last_changed": "2026-08-26",
+          "registrar": "HTTP.NET INTERNET GMBH",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dw",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dw.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-12-07"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q1156181 (DW-TV); also Q153770 (Deutsche Welle)",
+        "outlet_id": "dw",
+        "ref_url": "https://www.wikidata.org/wiki/Q1156181",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1992-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q561068"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q1156181 (DW-TV); also Q153770 (Deutsche Welle)",
+        "outlet_id": "dw",
+        "ref_url": "https://www.wikidata.org/wiki/Q1156181",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "specialty channel"
+      },
+      {
+        "data": {
+          "qid": "Q1616075"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q1156181 (DW-TV); also Q153770 (Deutsche Welle)",
+        "outlet_id": "dw",
+        "ref_url": "https://www.wikidata.org/wiki/Q1156181",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "television station"
+      }
+    ],
+    "name": [
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q1156181 (DW-TV); also Q153770 (Deutsche Welle)",
+        "outlet_id": "dw",
+        "ref_url": "https://www.wikidata.org/wiki/Q1156181",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "DW-TV"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q49653"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1156181 (DW-TV); also Q153770 (Deutsche Welle)",
+        "outlet_id": "dw",
+        "ref_url": "https://www.wikidata.org/wiki/Q1156181",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q49653"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "dw.com"
+        },
+        "field": "registrar",
+        "outlet_id": "dw",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dw.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "HTTP.NET INTERNET GMBH"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_345#Deutsche_Welle_alternative_language_quality.",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_371#Deutsche_Welle",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_374#Police_in_Belarus_as_an_authority_on_Ukrainian_military"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Deutsche Welle (DW, DW-TV)",
+          "status": "generally_reliable",
+          "summary": "Deutsche Welle is a German state-owned international broadcaster. It is considered generally reliable. Some editors consider that the quality of DW depends on the language edition."
+        },
+        "field": "reliability",
+        "outlet_id": "dw",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "dw.com",
+          "final_url": "https://www.dw.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "dw",
+        "ref_url": "https://www.dw.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "domain": "dw.com",
+          "missing": [
+            "about",
+            "contact",
+            "privacy",
+            "corrections",
+            "ethics",
+            "masthead"
+          ]
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "dw",
+        "ref_url": "https://www.dw.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "none of the usual accountability pages linked from its home page"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q1156181 (DW-TV); also Q153770 (Deutsche Welle)",
+        "outlet_id": "dw",
+        "ref_url": "https://www.wikidata.org/wiki/Q1156181",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "http://www.dw.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q153770"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q1156181 (DW-TV); also Q153770 (Deutsche Welle)",
+        "outlet_id": "dw",
+        "ref_url": "https://www.wikidata.org/wiki/Q1156181",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q1156181"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q1156181 (DW-TV); also Q153770 (Deutsche Welle)",
+        "outlet_id": "dw",
+        "ref_url": "https://www.wikidata.org/wiki/Q1156181",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/DW-TV"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 0,
+  "outlet": {
+    "domains": [
+      "dw.com"
+    ],
+    "id": "dw",
+    "name": "Deutsche Welle"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

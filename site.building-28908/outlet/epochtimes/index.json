@@ -1,0 +1,256 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "theepochtimes.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.0084
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.01 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q96"
+        },
+        "field": "country",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q584472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mexico"
+      },
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q584472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "theepochtimes.com",
+          "expires": "2030-12-17",
+          "last_changed": "2025-12-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theepochtimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2003-12-17"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q584472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2000-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1110794"
+        },
+        "field": "legal_form",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q584472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "daily newspaper"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "theepochtimes.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.theepochtimes.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "The Epoch Times"
+      },
+      {
+        "field": "name",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q584472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Epoch Times"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q109914129"
+        },
+        "field": "owner",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q584472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Epoch Media Group"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "theepochtimes.com"
+        },
+        "field": "registrar",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theepochtimes.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "GoDaddy.com, LLC"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_279#The_Epoch_Times,_once_again",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_15#The_Epoch_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#Is_\"The_Epoch_Times\"_a_reliable_source",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_34#The_Epoch_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_191#Epoch_Times_for_story_on_Monsanto_lawsuit",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_251#The_Epoch_Times_for_anything_related_to_political_controversies_involving_Falun_Gong",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_294#Should_we_be_using_this_Falun_Gong_media_outfit_as_a_source_for_BLPs,_politics,_China,_etc?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#Expert_interview_in_Epoch_Times_spinoff_channel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Are_NTD_and_vision_times_legit_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Epoch Times (New Tang Dynasty Television, Vision Times, Vision China Times)",
+          "status": "deprecated",
+          "summary": "The Epoch Times was deprecated in the 2019 RfC. Most editors classify The Epoch Times as an advocacy group for the Falun Gong, and consider the publication a biased or opinionated source that frequently publishes conspiracy theories as fact."
+        },
+        "field": "reliability",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "theepochtimes.com",
+          "final_url": "https://www.theepochtimes.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.theepochtimes.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.theepochtimes.com/epochtv/us-china-to-lower-tariffs-on-60-billion-worth-of-goods-trump-not-serious-about-arming-china-newsham-6095963",
+          "contact": "https://www.theepochtimes.com/contact-us",
+          "corrections": "https://www.theepochtimes.com/corrections",
+          "domain": "theepochtimes.com",
+          "ethics": "https://www.theepochtimes.com/us/trump-says-new-fuel-economy-standards-approved-ending-biden-ev-mandate-6095559",
+          "masthead": "https://www.theepochtimes.com/bright/leadership",
+          "missing": [],
+          "privacy": "https://www.theepochtimes.com/privacy-notice"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.theepochtimes.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, corrections, ethics, masthead pages from its home page"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q584472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.theepochtimes.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q584472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q584472"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "epochtimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q584472",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Epoch_Times"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 0,
+  "outlet": {
+    "domains": [
+      "theepochtimes.com"
+    ],
+    "id": "epochtimes",
+    "name": "The Epoch Times"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

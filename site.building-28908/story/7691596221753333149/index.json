@@ -1,0 +1,123 @@
+{
+  "claims": {
+    "abcau": [
+      {
+        "data": {
+          "qid": "Q408"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Australia"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1932-07-01"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1983-07-01"
+      },
+      {
+        "data": {
+          "qid": "Q2991162"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Australian Government"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790715389,
+    "expired": false,
+    "id": 7691596221753333149,
+    "item_count": 1,
+    "last_active_at": 1790715389,
+    "origin_item_id": 7691596221753333149,
+    "origin_outlet_id": "abcau",
+    "outlet_count": 1,
+    "primary_title": "When are the Dally M Awards? Who is the favourite?",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 7691596221753333149,
+        "joined_at": 1790715389,
+        "outlet_id": "abcau",
+        "published_at": 1790711694
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcau": "ABC News (Australia)"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abc.net.au/news/2026-09-30/dally-m-awards-night-nrl-when-is-it-who-is-favourite/107204386",
+          "cluster_id": 7691596221753333149,
+          "fetched_at": 1790715389,
+          "id": 7691596221753333149,
+          "joined_at": 1790715389,
+          "lang": "en",
+          "outlet_id": "abcau",
+          "published_at": 1790711694,
+          "summary": "The NRL's and NRLW's best gather in Sydney tonight to crown rugby league's biggest stars at the Dally M Awards. Here is what you need to know.",
+          "text_hash": 10323635708180848732,
+          "title": "When are the Dally M Awards? Who is the favourite?"
+        }
+      ],
+      "outlet_id": "abcau"
+    }
+  ],
+  "withdrawals": []
+}

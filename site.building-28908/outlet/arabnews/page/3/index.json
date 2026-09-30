@@ -1,0 +1,213 @@
+{
+  "export_time": 1790725421,
+  "outlet": "arabnews",
+  "page": 3,
+  "page_size": 50,
+  "pages": 3,
+  "stories": [
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 16589424761394905038,
+      "outlet_count": 1,
+      "title": "8.3 mn refugees at risk due to ‘severe’ funding cuts: UN"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 16328271100377266648,
+      "outlet_count": 2,
+      "title": "UAE urges diplomacy, stronger international action on Gaza and regional crises at UN"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 15116390644093510539,
+      "outlet_count": 1,
+      "title": "Cholera and measles threaten displaced in Yemen after renewed fighting uproots 142,000, UN warns"
+    },
+    {
+      "created_at": 1790653939,
+      "first": false,
+      "id": 13545662959960034108,
+      "outlet_count": 3,
+      "title": "US deportations are triggering a 'cascade' of rights abuses, UN experts warn"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 13404164096798525798,
+      "outlet_count": 1,
+      "title": "Making room"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 13379095139110912433,
+      "outlet_count": 1,
+      "title": "Sudan criticizes US over failure to grant UN entry to leader"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 13101773028445450174,
+      "outlet_count": 1,
+      "title": "NASA ramps up support to get Boeing’s astronaut capsule flying after Butch and Suni fiasco"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 12055590859182204606,
+      "outlet_count": 1,
+      "title": "Rock and roll"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 10960638158549922826,
+      "outlet_count": 1,
+      "title": "Spelling challenge"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 10831086758323027289,
+      "outlet_count": 1,
+      "title": "What We Are Reading Today: ‘How Our Climate Works’ by Paul I. Palmer"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 10508793191802413521,
+      "outlet_count": 1,
+      "title": "Natural beauty"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 10340287630548035944,
+      "outlet_count": 1,
+      "title": "Muslim World League calls for Palestinian state, urgent end to Gaza suffering"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 9501061731543862361,
+      "outlet_count": 1,
+      "title": "Saudi camel trading rules protect buyers, animals"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 8971036837210479230,
+      "outlet_count": 3,
+      "title": "US to grant sanctions waiver for flights between Iran and Iraq’s Najaf, source says"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 8404023393713356588,
+      "outlet_count": 1,
+      "title": "Lebanese Forces chief says Hezbollah arms prolong Israeli presence in the south"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 7623959392189655483,
+      "outlet_count": 1,
+      "title": "Israeli drones and fighter jets violate Lebanese airspace 143 times in 3 days, UN peacekeepers say"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 7533870163859992266,
+      "outlet_count": 1,
+      "title": "Palestine Action arrests fuel free-speech concerns as poll finds 54% of Britons distrust government"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 7031771075621502335,
+      "outlet_count": 1,
+      "title": "Governor receives Consul General of Palestine in Jeddah"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 5381849648259462253,
+      "outlet_count": 1,
+      "title": "RUA, MRCB explore $5.5bn mixed-use development at King Salman Gate in Makkah"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 4868419558326098079,
+      "outlet_count": 1,
+      "title": "Iranians face arduous journeys as US sanctions ground planes"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 3888019562590766067,
+      "outlet_count": 1,
+      "title": "Saudi Arabia condemns Israeli officials, settlers for storming Al-Aqsa Mosque"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 3692184197640297757,
+      "outlet_count": 1,
+      "title": "Qualcomm views Saudi AI boom as opportunity for industrial tech and power efficiency"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 2786114143709075544,
+      "outlet_count": 2,
+      "title": "Israel lacks right to close UK Consulate in East Jerusalem: Ex-attorney general"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 2735376222556941274,
+      "outlet_count": 1,
+      "title": "5 things we learned from 2026 Arabian Gulf Cup so far"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 2614731750224150190,
+      "outlet_count": 1,
+      "title": "Dozens of NGOs demand US return to UN rights review"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 1075935243132022255,
+      "outlet_count": 1,
+      "title": "Morocco detains Tangier mayor over alleged vote fraud"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 980932224943463062,
+      "outlet_count": 1,
+      "title": "Regional conflict ‘eroding boundaries of what’s acceptable,’ Algerian FM warns UN"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 799523049407612101,
+      "outlet_count": 1,
+      "title": "Shaping Mega Projects 2026 opens in Riyadh with focus on investment, delivery, procurement"
+    },
+    {
+      "created_at": 1790653942,
+      "first": true,
+      "id": 643282440929852195,
+      "outlet_count": 1,
+      "title": "Lebanon says Israeli army set off large explosion in south"
+    }
+  ],
+  "window_days": 30
+}

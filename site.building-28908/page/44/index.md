@@ -1,0 +1,54 @@
+# Stories, page 44 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [The Wanted’s Max George admitted to hospital with ‘heart issues’](/story/13710212855669945037/) · 1 outlet · reach 1
+- [Cleary requires surgery on both feet after horrific NRL injury](/story/13714717358530327428/) · 1 outlet · reach 1
+- [Tuesday evening news briefing: Only 100 places left in male prisons](/story/13829003737480268311/) · 1 outlet · reach 1
+- [Chinese New Year 2025: Snakes, traditions and why clocks are unlucky](/story/13887023600673146733/) · 1 outlet · reach 1
+- [Thursday evening news briefing: Record number of migrants granted asylum](/story/13892900407878748529/) · 1 outlet · reach 1
+- [Matthews claims world championship silver after life-threatening crash](/story/14091587000155054766/) · 1 outlet · reach 1
+- [Friday evening news briefing: France tells nationals to leave Iran ‘immediately’ over fears of war with Israel](/story/14321294770275438965/) · 1 outlet · reach 1
+- [Thursday evening news briefing: Starmer plots vast expansion of nanny state in battle to save NHS](/story/14428143926055641739/) · 1 outlet · reach 1
+- [Twelve-man Newcastle through to grand final after Cleary's horrific leg break](/story/14460122891350542412/) · 1 outlet · reach 1
+- [Streeting and BMA to hold talks to avoid doctor strikes](/story/14664007343750128378/) · 1 outlet · reach 1
+- [Charity rowing crew mistaken for ‘illegal migrants’ by Rupert Lowe](/story/15009960545947213142/) · 1 outlet · reach 1
+- [Friday evening news briefing: France ‘preparing for more attacks’ after train sabotage](/story/15019156446565380987/) · 1 outlet · reach 1
+- [Jet ski rider cruises through flooded streets of Bangkok](/story/15066399088849697194/) · 1 outlet · reach 1
+- [Watch: Knife-wielding ‘bus surfer’ filmed in Brighton](/story/15230609645918856592/) · 1 outlet · reach 1
+- [Thursday evening news briefing: Sir Keir Starmer insists he is ‘completely in control’ despite Sue Gray row](/story/15305847537799666681/) · 1 outlet · reach 1
+- [Britain braces for heatwave temperatures to soar](/story/15490037099151423764/) · 1 outlet · reach 1
+- [Israel's opposition bloc, Netanyahu’s coalition in dead heat, election poll finds](/story/15634389975889733943/) · 1 outlet · reach 1
+- [Harshita Brella’s parents ‘want justice’ for murdered daughter](/story/15754319303877248286/) · 1 outlet · reach 1
+- [Wednesday evening news briefing: ‘Number of knives’ recovered from scene of soldier stabbing](/story/15759273412299768890/) · 1 outlet · reach 1
+- [Trump ‘flips & flops’ with Iran between making a deal and threats to attack in ‘devastating fashion’](/story/15864917143949116968/) · 1 outlet · reach 1
+- [Teacher said I'd never amount to anything - years later she came to me for a job](/story/15880129551048094679/) · 1 outlet · reach 1
+- [Friends spend a day in France for under £75 and have 'one big tip'](/story/15912219926801847618/) · 1 outlet · reach 1
+- [Emergency prison overcrowding measures triggered after riot charges](/story/16064419176662304855/) · 1 outlet · reach 1
+- ['Killer robots' one step closer as Russia and US team up to strip safeguards from UN pact](/story/16100927013076150790/) · 1 outlet · reach 1
+- [Bombers poach former Swans premiership coach John Longmire](/story/16228866214279753818/) · 1 outlet · reach 1
+- [Boy, 16, charged with terror offences after arrest outside mosque in Scotland](/story/16399768952159640425/) · 1 outlet · reach 1
+- [Counter-terror police investigating ‘Iran-backed firebombing’](/story/16545756561899554391/) · 1 outlet · reach 1
+- [BBC investigates ‘cocaine use’ by Strictly stars](/story/17317770720924496898/) · 1 outlet · reach 1
+- [Mother stabbed at Notting Hill Carnival was ‘caught in middle of altercation’](/story/17358388645950605236/) · 1 outlet · reach 1
+- [First picture of boy, 15, shot dead in children’s park](/story/17640348406560820042/) · 1 outlet · reach 1
+- [People struggle to believe evil Letby is a killer because she is banal, inquiry hears](/story/17679422489002817341/) · 1 outlet · reach 1
+- [Monday evening news briefing: Children among eight stabbed in Southport knife attack](/story/17747281721363064793/) · 1 outlet · reach 1
+- [Violinist warns of Edinburgh International Festival cuts after SNP leaves funding in limbo](/story/17855277984574631510/) · 1 outlet · reach 1
+- [Missing six-year-old girl found safe and well](/story/18079536217587459307/) · 1 outlet · reach 1
+- [Azerbaijan agrees multi-billion-dollar deals with investment giants](/story/18080965626697770271/) · 1 outlet · reach 1
+- [Wednesday evening news briefing: Hundreds of Hezbollah walkie-talkies explode across Lebanon](/story/18153361790375101253/) · 1 outlet · reach 1
+- [An artist made an ‘anti-racist’ version of the UK flag. You’ll never guess what happened next](/story/18193184037177591949/) · 1 outlet · reach 1
+- [Thursday evening news briefing: Boy, 15, first person charged with rioting over UK disorder](/story/18219487744596022031/) · 1 outlet · reach 1
+- [D-Day veteran Don Sheppard dies aged 104](/story/18417575615098400872/) · 1 outlet · reach 1
+- [Cattle ranch that feeds its cows BEER: Texas farmers swear by a secret ingredient that makes beef juicer](/story/39594043375568749/) · 1 outlet · reach 1
+- [Britons urged to leave Mali as rebel gunmen attack northern city of Gao ten days after claiming capital](/story/152315066714337530/) · 1 outlet · reach 1
+- [Middle school kids are choosing AI friends over real ones](/story/226235606333684184/) · 1 outlet · reach 1
+- ["Britain's Gaza Secrets Exposed": How U.K. Downplayed Israeli Crimes to Keep Selling Weapons](/story/306744013303317359/) · 1 outlet · reach 1
+- [Horrific executions of El Mencho's 'cannibal cartel': From hitmen who cut out and ate victim's heart to mass beheadings and rivals 'blasted with flame throwers', how slain drug lord used extreme violence to spread fear](/story/533718616237555370/) · 1 outlet · reach 1
+- [Harvard University on high alert after bomb threat as students issued 'shelter-in' notice](/story/612535302178080740/) · 1 outlet · reach 1
+- [Inside 'cursed' sex-filled Dutch movie so explicit it lay on the cutting room floor for decades with star killing himself days after filming ended - as it's finally released in cinemas](/story/671335084421345964/) · 1 outlet · reach 1
+- [Hurricane Sandy: Michael Bloomberg and Andrew Cuomo blame hurricane on climate change](/story/784637220429542434/) · 1 outlet · reach 1
+- [15 children rescued after being found in ‘deplorable’ two-bedroom Atlanta-area apartment](/story/799339728735184246/) · 1 outlet · reach 1
+- [The girl who gave birth aged FIVE: Incredible mystery of the child who became the world's youngest ever mother](/story/956084563410005440/) · 1 outlet · reach 1
+- ['They HATE us and we don't like them': Israel captain Manor Solomon vows 'revenge' in anti-Ireland rant and insists his country are 'ten times better' after rivals refused to shake hands before match](/story/961246153798698769/) · 1 outlet · reach 1

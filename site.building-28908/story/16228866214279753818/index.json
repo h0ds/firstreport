@@ -1,0 +1,123 @@
+{
+  "claims": {
+    "abcau": [
+      {
+        "data": {
+          "qid": "Q408"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Australia"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1932-07-01"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1983-07-01"
+      },
+      {
+        "data": {
+          "qid": "Q2991162"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q781365 (Australian Broadcasting Corporation); also Q4650214 (ABC Online)",
+        "outlet_id": "abcau",
+        "ref_url": "https://www.wikidata.org/wiki/Q781365",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Australian Government"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653939,
+    "expired": false,
+    "id": 16228866214279753818,
+    "item_count": 1,
+    "last_active_at": 1790653939,
+    "origin_item_id": 16228866214279753818,
+    "origin_outlet_id": "abcau",
+    "outlet_count": 1,
+    "primary_title": "Bombers poach former Swans premiership coach John Longmire",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16228866214279753818,
+        "joined_at": 1790653939,
+        "outlet_id": "abcau",
+        "published_at": 1790581444
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcau": "ABC News (Australia)"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abc.net.au/news/2026-09-28/john-longmire-leaves-sydney-swans-takes-up-role-with-essendon/107205000",
+          "cluster_id": 16228866214279753818,
+          "fetched_at": 1790653939,
+          "id": 16228866214279753818,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "abcau",
+          "published_at": 1790581444,
+          "summary": "Essendon have pulled off a huge recruiting coup, luring John Longmire away from Sydney to be their new head of performance.",
+          "text_hash": 3110316724951476496,
+          "title": "Bombers poach former Swans premiership coach John Longmire"
+        }
+      ],
+      "outlet_id": "abcau"
+    }
+  ],
+  "withdrawals": []
+}

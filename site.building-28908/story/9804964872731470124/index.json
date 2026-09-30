@@ -1,0 +1,300 @@
+{
+  "claims": {
+    "politico": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "politico.com",
+          "expires": "2027-09-17",
+          "last_changed": "2026-09-18",
+          "registrar": "Register.com - Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "politico",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/politico.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-09-18"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-23"
+      },
+      {
+        "data": {
+          "qid": "Q163560"
+        },
+        "field": "owner",
+        "outlet_id": "politico",
+        "ref_url": "https://www.wikidata.org/wiki/Q3109740",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Axel Springer SE"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_363#RfC:_Politico_update?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_11#Politico.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_19#DataTreasury",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_50#Politico;_Also_for_Book_reviews:_New_Engish_Review_and_Pajamas_Media",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_65#self-published?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_232#Is_an_SPLC_report_a_reliable_source_for_List_of_Confederate_monuments_and_memorials?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_241#Statements_of_Fact_Based_on_One_Report_from_One_Media_Outlet,_Sourced_to_Anonymous_Sources",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_458#Politico_status_update"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Politico",
+          "status": "generally_reliable",
+          "summary": "Politico is considered generally reliable for American politics. A small number of editors say that Politico is a biased source."
+        },
+        "field": "reliability",
+        "outlet_id": "politico",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 2,
+      "weakest_join": null
+    },
+    "created_at": 1790653932,
+    "expired": false,
+    "id": 9804964872731470124,
+    "item_count": 2,
+    "last_active_at": 1790653941,
+    "origin_item_id": 9804964872731470124,
+    "origin_outlet_id": "politico",
+    "outlet_count": 2,
+    "primary_title": "Judge blocks Trump from tying anti-terrorism grants to election changes",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9804964872731470124,
+        "joined_at": 1790653932,
+        "outlet_id": "politico",
+        "published_at": 1790631357
+      },
+      {
+        "item_id": 2962813784999680733,
+        "joined_at": 1790653941,
+        "outlet_id": "scmp",
+        "published_at": 1790637638
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "politico",
+            "scmp"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "politico": "Politico",
+    "scmp": "South China Morning Post"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://politico.com/news/2026/09/28/trump-election-anti-terrorism-fema-ruling-01095979",
+          "cluster_id": 9804964872731470124,
+          "fetched_at": 1790653932,
+          "id": 9804964872731470124,
+          "joined_at": 1790653932,
+          "lang": "en",
+          "outlet_id": "politico",
+          "published_at": 1790631357,
+          "summary": "A federal judge on Monday sided with local governments that sued the federal government for conditioning the grants on new election safety measures.",
+          "text_hash": 12329448894110412371,
+          "title": "Trump administration cannot tie anti-terrorism grants to election security, judge rules"
+        }
+      ],
+      "outlet_id": "politico"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/world/united-states-canada/article/3369120/judge-blocks-trump-tying-anti-terrorism-grants-election-changes",
+          "cluster_id": 9804964872731470124,
+          "fetched_at": 1790653941,
+          "id": 2962813784999680733,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790637638,
+          "summary": "A US judge blocked the Trump administration on Monday from conditioning counterterrorism funds to state and local ‌governments on changes to election administration. The decision by Washington-based US District Judge Amir Ali marks the latest defeat for US President Donald Trump in his bid to increase the federal government’s authority over elections ahead of the November 3 midterms, when his Republicans are fighting to retain majorities in both houses of Congress. Earlier this year, the...",
+          "text_hash": 725416102574587207,
+          "title": "Judge blocks Trump from tying anti-terrorism grants to election changes"
+        }
+      ],
+      "outlet_id": "scmp"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 9804964872731470124,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3843,
+      "snapshot_id": 16035080188212212291,
+      "ts": 1790679060
+    }
+  ]
+}

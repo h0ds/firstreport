@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 7898599113000469208,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 7898599113000469208,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "EPA to Allow Power Plants to Accelerate Global Warming",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 7898599113000469208,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1789403705
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/epa-to-allow-power-plants-to-accelerate-global-warming",
+          "cluster_id": 7898599113000469208,
+          "fetched_at": 1790653936,
+          "id": 7898599113000469208,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1789403705,
+          "summary": "The U.S. Environmental Protection Agency (EPA) is expected to announce today that it will stop regulating carbon dioxide released by power plants burning fossil fuels, according to reports. If allowed to go into effect, the second largest source of U.S. greenhouse gas emissions would be allowed to grow unchecked. In response, David Arkush, director of Public Citizen’s Climate Program issued the following statement: “With this move, Trump again subverts the EPA’s mission to protect human health and the…",
+          "text_hash": 2650169095702782183,
+          "title": "EPA to Allow Power Plants to Accelerate Global Warming"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

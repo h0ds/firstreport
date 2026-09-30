@@ -1,0 +1,59 @@
+{
+  "export_time": 1790725421,
+  "outlet": "politico",
+  "page": 2,
+  "page_size": 50,
+  "pages": 2,
+  "stories": [
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 3022644012869338312,
+      "outlet_count": 1,
+      "title": "The Palisades is furious with Karen Bass. Nithya Raman still has a hard sell."
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 2890709998334591038,
+      "outlet_count": 1,
+      "title": "Will Kevin Warsh Squander a Huge Opportunity?"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 2454475074049624716,
+      "outlet_count": 1,
+      "title": "Germany Built a Firewall Against the Far Right. It’s on the Verge of Collapse."
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 2432177773745068840,
+      "outlet_count": 1,
+      "title": "Can Susan Collins Survive the Craziest Race in the Country?"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 2287602680206280295,
+      "outlet_count": 1,
+      "title": "Poll: Canadians and Americans agree, Trump was in the wrong with trade war"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 1702664405217751464,
+      "outlet_count": 1,
+      "title": "Trump’s do-no-harm summit with Xi"
+    },
+    {
+      "created_at": 1790653932,
+      "first": true,
+      "id": 1106515496468852135,
+      "outlet_count": 1,
+      "title": "Bernie Sanders Lets Loose on the Democratic Party, the Midterms and 2028"
+    }
+  ],
+  "window_days": 30
+}

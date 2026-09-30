@@ -1,0 +1,682 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "telegraph.co.uk",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.0634
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "telegraph",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.06 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.wikidata.org/wiki/Q192621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "telegraph.co.uk",
+          "expires": "2028-07-29",
+          "last_changed": "2026-06-27",
+          "registrar": "Markmonitor Inc.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "telegraph",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/telegraph.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-07-29"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.wikidata.org/wiki/Q192621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1855-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1110794"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.wikidata.org/wiki/Q192621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "daily newspaper"
+      },
+      {
+        "data": {
+          "qid": "Q11032"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.wikidata.org/wiki/Q192621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "newspaper"
+      },
+      {
+        "data": {
+          "qid": "Q1002697"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.wikidata.org/wiki/Q192621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "periodical"
+      }
+    ],
+    "name": [
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.wikidata.org/wiki/Q192621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Daily Telegraph"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q7696245"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.wikidata.org/wiki/Q192621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Telegraph Media Group"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 119,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "telegraph",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/telegraph",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "1.3 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "telegraph.co.uk"
+        },
+        "field": "registrar",
+        "outlet_id": "telegraph",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/telegraph.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Markmonitor Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2026",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_392#RfC:_The_Telegraph",
+            "#cite_note-30"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Daily Telegraph (UK) (excluding transgender topics) (The Telegraph, The Sunday Telegraph)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Daily Telegraph (also known as The Telegraph) is generally reliable. Some editors believe that The Daily Telegraph is biased or opinionated for politics. Unrelated to The Daily Telegraph (Sydney)."
+        },
+        "field": "reliability",
+        "outlet_id": "telegraph",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_444#RFC:_The_Telegraph_on_trans_issues",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_441#The_Telegraph_and_trans_issues",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_496#The_Telegraph_repeating_a_hoax_from_Tucker_Carlson"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Daily Telegraph (UK) (transgender topics) (The Telegraph, The Sunday Telegraph)",
+          "status": "no_consensus",
+          "summary": "In regards to transgender issues, there is no consensus on the reliability of The Daily Telegraph. Editors consider The Telegraph biased or opinionated on the topic, and its statements should be attributed."
+        },
+        "field": "reliability",
+        "outlet_id": "telegraph",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 119,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "telegraph",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/telegraph",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "telegraph.co.uk",
+          "final_url": "https://www.telegraph.co.uk/",
+          "http_redirects_to_https": true,
+          "http_status": 402,
+          "https": false,
+          "status": 402
+        },
+        "field": "site_https",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.telegraph.co.uk/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https not served (status 402)"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 119,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "telegraph",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/telegraph",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.wikidata.org/wiki/Q192621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://telegraph.co.uk"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q12741725"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.wikidata.org/wiki/Q192621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q192621"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q192621 (The Daily Telegraph); also Q12741725 (The Sunday Telegraph)",
+        "outlet_id": "telegraph",
+        "ref_url": "https://www.wikidata.org/wiki/Q192621",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Daily_Telegraph"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 119,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "telegraph",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/telegraph",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 119,
+  "outlet": {
+    "domains": [
+      "telegraph.co.uk"
+    ],
+    "id": "telegraph",
+    "name": "The Telegraph"
+  },
+  "shared_stories": 0,
+  "stories": [
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 7959007602367640774,
+      "outlet_count": 1,
+      "title": "Monday evening news briefing: Countries warn against visiting UK amid riots"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 6659918200993077010,
+      "outlet_count": 1,
+      "title": "Ucas Clearing 2025: How to get a last-minute university place"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 1403176762817689481,
+      "outlet_count": 1,
+      "title": "GCSE results day 2024: Grade boundaries explained"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 18417575615098400872,
+      "outlet_count": 1,
+      "title": "D-Day veteran Don Sheppard dies aged 104"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 18219487744596022031,
+      "outlet_count": 1,
+      "title": "Thursday evening news briefing: Boy, 15, first person charged with rioting over UK disorder"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 18193184037177591949,
+      "outlet_count": 1,
+      "title": "An artist made an ‘anti-racist’ version of the UK flag. You’ll never guess what happened next"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 18153361790375101253,
+      "outlet_count": 1,
+      "title": "Wednesday evening news briefing: Hundreds of Hezbollah walkie-talkies explode across Lebanon"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 18079536217587459307,
+      "outlet_count": 1,
+      "title": "Missing six-year-old girl found safe and well"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 17855277984574631510,
+      "outlet_count": 1,
+      "title": "Violinist warns of Edinburgh International Festival cuts after SNP leaves funding in limbo"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 17747281721363064793,
+      "outlet_count": 1,
+      "title": "Monday evening news briefing: Children among eight stabbed in Southport knife attack"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 17679422489002817341,
+      "outlet_count": 1,
+      "title": "People struggle to believe evil Letby is a killer because she is banal, inquiry hears"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 17640348406560820042,
+      "outlet_count": 1,
+      "title": "First picture of boy, 15, shot dead in children’s park"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 17358388645950605236,
+      "outlet_count": 1,
+      "title": "Mother stabbed at Notting Hill Carnival was ‘caught in middle of altercation’"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 17317770720924496898,
+      "outlet_count": 1,
+      "title": "BBC investigates ‘cocaine use’ by Strictly stars"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 16545756561899554391,
+      "outlet_count": 1,
+      "title": "Counter-terror police investigating ‘Iran-backed firebombing’"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 16399768952159640425,
+      "outlet_count": 1,
+      "title": "Boy, 16, charged with terror offences after arrest outside mosque in Scotland"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 16064419176662304855,
+      "outlet_count": 1,
+      "title": "Emergency prison overcrowding measures triggered after riot charges"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15759273412299768890,
+      "outlet_count": 1,
+      "title": "Wednesday evening news briefing: ‘Number of knives’ recovered from scene of soldier stabbing"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15754319303877248286,
+      "outlet_count": 1,
+      "title": "Harshita Brella’s parents ‘want justice’ for murdered daughter"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15490037099151423764,
+      "outlet_count": 1,
+      "title": "Britain braces for heatwave temperatures to soar"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15305847537799666681,
+      "outlet_count": 1,
+      "title": "Thursday evening news briefing: Sir Keir Starmer insists he is ‘completely in control’ despite Sue Gray row"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15230609645918856592,
+      "outlet_count": 1,
+      "title": "Watch: Knife-wielding ‘bus surfer’ filmed in Brighton"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15019156446565380987,
+      "outlet_count": 1,
+      "title": "Friday evening news briefing: France ‘preparing for more attacks’ after train sabotage"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 15009960545947213142,
+      "outlet_count": 1,
+      "title": "Charity rowing crew mistaken for ‘illegal migrants’ by Rupert Lowe"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 14664007343750128378,
+      "outlet_count": 1,
+      "title": "Streeting and BMA to hold talks to avoid doctor strikes"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 14428143926055641739,
+      "outlet_count": 1,
+      "title": "Thursday evening news briefing: Starmer plots vast expansion of nanny state in battle to save NHS"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 14321294770275438965,
+      "outlet_count": 1,
+      "title": "Friday evening news briefing: France tells nationals to leave Iran ‘immediately’ over fears of war with Israel"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 13892900407878748529,
+      "outlet_count": 1,
+      "title": "Thursday evening news briefing: Record number of migrants granted asylum"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 13887023600673146733,
+      "outlet_count": 1,
+      "title": "Chinese New Year 2025: Snakes, traditions and why clocks are unlucky"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 13829003737480268311,
+      "outlet_count": 1,
+      "title": "Tuesday evening news briefing: Only 100 places left in male prisons"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 13710212855669945037,
+      "outlet_count": 1,
+      "title": "The Wanted’s Max George admitted to hospital with ‘heart issues’"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 13587047870131475263,
+      "outlet_count": 1,
+      "title": "The war on drugs has failed"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 13584505284320538343,
+      "outlet_count": 1,
+      "title": "Friday evening news briefing: Prisoners released early are already back in jail"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12967330094496724710,
+      "outlet_count": 1,
+      "title": "Tuesday evening news briefing: Thousands more riot police on standby over fears of more violence"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12920608146830009419,
+      "outlet_count": 1,
+      "title": "Storm Eowyn brings chaos – but not for everyone"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12851388991466669035,
+      "outlet_count": 1,
+      "title": "Woman jailed for tricking partner into thinking she was pregnant with twins"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12634059192563797671,
+      "outlet_count": 1,
+      "title": "Man who called for migrant centres to be burnt down jailed for three years"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12575267294957831345,
+      "outlet_count": 1,
+      "title": "Monday evening news briefing: Huw Edwards avoids jail over child abuse images"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12514740381145565034,
+      "outlet_count": 1,
+      "title": "Teenagers arrested after nursery cyber attack"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12433880155488848393,
+      "outlet_count": 1,
+      "title": "Tuesday evening news briefing: Exploding pagers kill eight and injure 3,000 in suspected Israeli attack on Hezbollah"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12273392261067552685,
+      "outlet_count": 1,
+      "title": "Northern Lights shine across the UK"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 12085576259346165434,
+      "outlet_count": 1,
+      "title": "Monday evening news briefing: ‘British Bill Gates’ Mike Lynch missing ‘after tornado sinks superyacht’"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 11679684222746835118,
+      "outlet_count": 1,
+      "title": "Thursday evening news briefing: Starmer says ban on smoking in pub gardens could reduce burden on NHS"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 11558152707573211221,
+      "outlet_count": 1,
+      "title": "Blizzard traps nearly 1,000 hikers on slopes of Mount Everest"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 11186542395439710091,
+      "outlet_count": 1,
+      "title": "Huw Edwards resigned from BBC during disciplinary process"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 11062509852731818057,
+      "outlet_count": 1,
+      "title": "Friday evening news briefing: US could negotiate directly with Hamas"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 10963934357993580317,
+      "outlet_count": 1,
+      "title": "Tuesday evening news briefing: Reeves suggests pensioners can afford winter fuel payment cuts"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 10225016091014206408,
+      "outlet_count": 1,
+      "title": "Girl, 3, found dead at Surrey home"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 10187518130498794102,
+      "outlet_count": 1,
+      "title": "Britain strikes Houthis for first time since Trump’s re-election"
+    },
+    {
+      "created_at": 1790653939,
+      "first": true,
+      "id": 10186053326180806558,
+      "outlet_count": 1,
+      "title": "Three police officers injured as riots break out in Plymouth"
+    }
+  ],
+  "story_pages": 3,
+  "window_days": 30
+}

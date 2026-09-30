@@ -1,0 +1,790 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "sputniknews.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.3021
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "sputnik",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.30 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "sputniknews.com",
+          "expires": "2028-10-24",
+          "last_changed": "2022-03-04",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputniknews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2011-10-24"
+      },
+      {
+        "data": {
+          "domain": "sputnikglobe.com",
+          "expires": "2028-03-29",
+          "last_changed": "2023-03-30",
+          "registrar": "Domain.com - Network Solutions, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputnikglobe.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2023-03-29"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-11-10"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q192283"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news agency"
+      },
+      {
+        "data": {
+          "qid": "Q186165"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "web portal"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "sputnikglobe.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "sputnik",
+        "ref_url": "https://sputnikglobe.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "Sputnik International"
+      },
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Sputnik"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 106,
+          "origin_of": 2,
+          "shared_stories": 6,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "sputnik",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/sputnik",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 33% of 6 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q1140115"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Government of Russia"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      }
+    ],
+    "parent": [
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "parent",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 106,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "sputnik",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/sputnik",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "1.2 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "sputnikglobe.com"
+        },
+        "field": "registrar",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputnikglobe.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Domain.com - Network Solutions, LLC"
+      },
+      {
+        "data": {
+          "domain": "sputniknews.com"
+        },
+        "field": "registrar",
+        "outlet_id": "sputnik",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sputniknews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Regional Network Information Center, JSC dba RU-CENTER"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_296#RfC:_Sputnik",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Sputnik_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_212#Source_being_used_in_the_S-400_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_246#Sputnik_(news_agency)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_337#Sputnik-Abkhazia",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_367#Sputnik,_kind_of"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sputnik",
+          "status": "deprecated",
+          "summary": "There is consensus that Sputnik is an unreliable source that publishes false or fabricated information, and should be deprecated as in the 2017 RfC of the Daily Mail. Sputnik is considered a Russian propaganda outlet that engages in bias and disinformation, [ 25 ] a significant proportion of editors endorse that view, with some editors considering it less reliable than Breitbart News. See also: RI"
+        },
+        "field": "reliability",
+        "outlet_id": "sputnik",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 106,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "sputnik",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/sputnik",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "sanctioned": [
+      {
+        "as_of": "2022-03-01",
+        "field": "sanctioned",
+        "note": "Council Regulation (EU) 2022/350 names Sputnik (Annex XV to Regulation 833/2014), citing the Russian Federation's systematic, international campaign of media manipulation and distortion of facts.",
+        "outlet_id": "sputnik",
+        "ref_url": "https://eur-lex.europa.eu/eli/reg/2022/350/oj",
+        "retrieved_at": 1790722232,
+        "source_id": "eu_sanctions",
+        "value": "Broadcasting suspended in the EU"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "sputnikglobe.com",
+          "final_url": "https://sputnikglobe.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "sputnik",
+        "ref_url": "https://sputnikglobe.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://sputnikglobe.com/20260925/what-xi-trump-dinner-guest-list-said-about-true-balance-of-power-between-china-us-1124789460.html",
+          "domain": "sputnikglobe.com",
+          "missing": [
+            "contact",
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.iubenda.com/privacy-policy/25986213/cookie-policy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "sputnik",
+        "ref_url": "https://sputnikglobe.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, privacy pages from its home page; no contact, corrections, ethics, masthead link found"
+      }
+    ],
+    "state_media": [
+      {
+        "as_of": "2026",
+        "data": {
+          "code": "SC",
+          "entity": "Rossiya Segodnya"
+        },
+        "field": "state_media",
+        "note": "SMM's entry for Rossiya Segodnya, which runs this outlet; State Media Monitor's category, not Kagami's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0.",
+        "outlet_id": "sputnik",
+        "ref_url": "https://statemediamonitor.com/2026/09/rossiya-segodnya/",
+        "retrieved_at": 1790722323,
+        "source_id": "state_media_monitor",
+        "value": "State-Controlled (SC)"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 106,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "sputnik",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/sputnik",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://sputnikglobe.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q212196"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q18572033"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q18572033 (Sputnik); also Q212196 (Voice of Russia)",
+        "outlet_id": "sputnik",
+        "ref_url": "https://www.wikidata.org/wiki/Q18572033",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Sputnik_(news_agency)"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 106,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "sputnik",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/sputnik",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 3,
+  "items": 117,
+  "outlet": {
+    "domains": [
+      "sputnikglobe.com",
+      "sputniknews.com"
+    ],
+    "id": "sputnik",
+    "name": "Sputnik"
+  },
+  "shared_stories": 10,
+  "stories": [
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 2687155261920818657,
+      "outlet_count": 10,
+      "title": "UAE, Israel both confirm Netanyahu's Abu Dhabi trip after reports"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 9330732918201289314,
+      "outlet_count": 7,
+      "title": "What happened when Trump met Xi: big fanfare, but no breakthrough"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 270612440624308507,
+      "outlet_count": 13,
+      "title": "China, US Can Continue Dialogue on AI to Weigh Risks, Benefits - Xi"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 2540694848936038641,
+      "outlet_count": 2,
+      "title": "Iraq’s national carrier to resume Iran flights in October after sanctions exemption"
+    },
+    {
+      "created_at": 1790653933,
+      "first": true,
+      "id": 9438593316819776287,
+      "outlet_count": 4,
+      "title": "European Commission asks United States not to ban diesel supplies to Europe"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16126029408899543548,
+      "outlet_count": 17,
+      "title": "Iran awaits US response on plan to reopen Strait of Hormuz"
+    },
+    {
+      "created_at": 1790679062,
+      "first": false,
+      "id": 15343017352437971718,
+      "outlet_count": 2,
+      "title": "Putin to meet Republika Srpska leaders in Moscow on Tuesday"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 12888444237703555558,
+      "outlet_count": 1,
+      "title": "Russia Strikes in Black Sea Dry Cargo Ship With Military Equipment"
+    },
+    {
+      "created_at": 1790715376,
+      "first": true,
+      "id": 4349579400207030667,
+      "outlet_count": 1,
+      "title": "Uzbekistan-Afghanistan-Pakistan Railway: What Is Known About the Project"
+    },
+    {
+      "created_at": 1790668625,
+      "first": false,
+      "id": 2471370937212947113,
+      "outlet_count": 2,
+      "title": "Russian ships’ passage through Shokalsky Strait shows who commands the Arctic — expert"
+    },
+    {
+      "created_at": 1790681406,
+      "first": true,
+      "id": 14601379206329449176,
+      "outlet_count": 1,
+      "title": "Lavrov on Poland's Proposal on Patriot Missiles: Study Russia's Military Doctrine"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 17932230195161303474,
+      "outlet_count": 1,
+      "title": "Russian Forces Liberate Khripuny Settlement in Kharkov Region - MoD"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 16458946629673224463,
+      "outlet_count": 1,
+      "title": "Arctic Sea Cucumber Delivers One-Two Punch to Triple-Negative Breast Cancer"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 16354316267070317305,
+      "outlet_count": 1,
+      "title": "Ukrainian Military Facing Shortage of Factory-Made Landmines - Sapper"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 10513287420012381621,
+      "outlet_count": 1,
+      "title": "Iran War Is ‘Defining Confrontation’ Toward a Genuinely Multipolar World Order: Mohammad Marandi"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 8431928840194797749,
+      "outlet_count": 1,
+      "title": "Transferring Companies to Temporary Management Not Aimed at Changing Ownership - Kremlin"
+    },
+    {
+      "created_at": 1790679063,
+      "first": true,
+      "id": 1014358763631785934,
+      "outlet_count": 1,
+      "title": "Lavrov Holds Press-Conference At 23rd Session of Valdai International Discussion Club"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 981632691791200710,
+      "outlet_count": 2,
+      "title": "Russia Strikes Two Data Centers in Kiev and Cargo Vessels in Black Sea"
+    },
+    {
+      "created_at": 1790664668,
+      "first": true,
+      "id": 3140816210040648745,
+      "outlet_count": 1,
+      "title": "Fire Protection With a ‘Sixth Sense’: Rostec Unveils Self-Activating System"
+    },
+    {
+      "created_at": 1790659142,
+      "first": true,
+      "id": 16325027528528339182,
+      "outlet_count": 1,
+      "title": "Russian Forces Foil Breakout Attempt by Encircled Ukrainian Troops"
+    },
+    {
+      "created_at": 1790659142,
+      "first": true,
+      "id": 14126534832894573568,
+      "outlet_count": 1,
+      "title": "US Working With Venezuelan Assembly to Hold Presidential Elections Soon - Rubio"
+    },
+    {
+      "created_at": 1790659142,
+      "first": true,
+      "id": 397261004278944979,
+      "outlet_count": 1,
+      "title": "Iran, Intermediaries Discuss Ways to Resolve Middle East Conflict - Foreign Minister"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 6957930229248472671,
+      "outlet_count": 1,
+      "title": "Russia Strikes Ukraine's Logistics Centers, Port Infrastructure"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 2630559022434900051,
+      "outlet_count": 1,
+      "title": "United Cultures Forum in St. Petersberg Brings Cultures Together Beyond Politics - Putin"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 17420991770896249196,
+      "outlet_count": 1,
+      "title": "Russian Envoy Says OSCE in Deep Crisis With Uncertain Future"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 17373829907125359298,
+      "outlet_count": 1,
+      "title": "Offshore Wind Farms Could Create Radar Blind Spots and ‘Ghost’ Targets - Chinese Study"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16964007668169587437,
+      "outlet_count": 6,
+      "title": "Serbia’s Longtime President Aleksandar Vucic Resigns Post"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 16920827895955698136,
+      "outlet_count": 1,
+      "title": "Russian Elections 'Peaceful and Well Organized' – Foreign Observer"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 16840799101528673833,
+      "outlet_count": 1,
+      "title": "US Tug-Of-War to Slow AI Designed to Contain China Before It Closes Tech Gap — Experts"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 16806207109587821768,
+      "outlet_count": 1,
+      "title": "Trump Says Expects 'Tremendous' Things to Happen After Meeting With China's Xi"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 16679946440402012958,
+      "outlet_count": 1,
+      "title": "OpenAI, Anthropic CEOs Called to Australian Senate Over Government System Breach - Reports"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 16528495892223676406,
+      "outlet_count": 1,
+      "title": "Russian Forces Liberate Novovodyanoye in Donetsk People’s Republic, Ulanovo in Sumy Region - MoD"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 15717255817652479590,
+      "outlet_count": 1,
+      "title": "CSTO Military Drills Begin in Russia – MoD"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 15717090673443463405,
+      "outlet_count": 1,
+      "title": "United Cultures Forum Serves as Critical Diplomacy Channel – Italian Nobility Heir"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 15067046815897134152,
+      "outlet_count": 1,
+      "title": "Director Fry Calls Russia’s Cultural Education System One of Best in World"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 15030826504433741271,
+      "outlet_count": 1,
+      "title": "Lavrov Speaks at 81st UN General Assembly"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 14922447211091994742,
+      "outlet_count": 1,
+      "title": "Araghchi Slams US, Israel for 'Whitewashing Criminal Acts' Against Iranians"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 14454793135541755586,
+      "outlet_count": 1,
+      "title": "Ukraine ‘Will Have to Pay The Price’ For Its Recent Actions — Kremlin"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 14434741023441224165,
+      "outlet_count": 1,
+      "title": "China, US Must Build More Sustainable Future for Relations - Xi"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 14019549727985407341,
+      "outlet_count": 1,
+      "title": "Turkish Foreign Minister Says No Deadline for Talks on Resell of S-400s to Other States"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 13813431327535319414,
+      "outlet_count": 1,
+      "title": "WSJ Claims Egypt Warned Israeli Authorities Three Times Before 2023 Hamas Attack"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 13678370720056139746,
+      "outlet_count": 1,
+      "title": "War Was Imposed on Iran, US-Israeli Attacks Derailed Diplomacy — Pezeshkian"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 13506838413230549504,
+      "outlet_count": 1,
+      "title": "Lavrov at UNGA Outlines Russia’s View of Shifting Global Order"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 13045962568393121666,
+      "outlet_count": 1,
+      "title": "Aluminum Production in Persian Gulf Countries Fell by Almost 43% in August - IAI"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 12412539866924034844,
+      "outlet_count": 1,
+      "title": "West's Actions Seriously Harm Arctic Council – Russian Foreign Ministry"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 12314754567885560632,
+      "outlet_count": 1,
+      "title": "US B-2 Stealth Bomber, Fighter Jets Fly Overhead During Welcome Ceremony for China's Xi"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 11842062190803511422,
+      "outlet_count": 1,
+      "title": "Palestinian President Accuses Israel of Destroying Two-State Solution"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 11807560418857903315,
+      "outlet_count": 1,
+      "title": "US Trade Deficit With China Declined by 40% Under Trump Presidency - Trade Representative"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 11724270400055588666,
+      "outlet_count": 1,
+      "title": "Major US Broadcasters to Resume Coverage of Trump Events - Reports"
+    },
+    {
+      "created_at": 1790653945,
+      "first": true,
+      "id": 11705694281178839961,
+      "outlet_count": 1,
+      "title": "Xi Hopes China, US Will Meet Each Other Halfway - Foreign Ministry"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

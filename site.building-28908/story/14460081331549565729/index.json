@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 14460081331549565729,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 14460081331549565729,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "Attorney General Bonta Caves to Pressure from Billionaires and Gavin Newsom, Paves Way for Disastrous Paramount-Warner Bros. Mega-Merger",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 14460081331549565729,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1790010919
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/attorney-general-bonta-caves-to-pressure-from-billionaires-and-gavin-newsom-paves-way-for-disastrous-paramount-warner-bros-mega-merger",
+          "cluster_id": 14460081331549565729,
+          "fetched_at": 1790653936,
+          "id": 14460081331549565729,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1790010919,
+          "summary": "According to Bloomberg on Monday, California State Attorney General Rob Bonta and other state attorneys general have reached a settlement of their antitrust lawsuit against Paramount Skydance’s $111 billion takeover bid for Warner Bros. Discovery. According to the report, the settlement creates a nominally independent editorial board to oversee CNN and CBS, and makes promises on the output of the combined studios’ movie production. Bloomberg does not report any divestitures of the merged companies’ massive…",
+          "text_hash": 576815206187305932,
+          "title": "Attorney General Bonta Caves to Pressure from Billionaires and Gavin Newsom, Paves Way for Disastrous Paramount-Warner Bros. Mega-Merger"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

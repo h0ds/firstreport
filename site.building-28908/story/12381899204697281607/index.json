@@ -1,0 +1,816 @@
+{
+  "claims": {
+    "abcnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "abcnews.com",
+          "expires": "2027-04-21",
+          "last_changed": "2026-03-22",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/abcnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-20"
+      },
+      {
+        "data": {
+          "domain": "go.com",
+          "expires": "2027-01-08",
+          "last_changed": "2025-12-09",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "abcnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/go.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1998-01-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1945-06-15"
+      },
+      {
+        "data": {
+          "qid": "Q169889"
+        },
+        "field": "owner",
+        "outlet_id": "abcnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q287171",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "American Broadcasting Company"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_318#ABC_News_and_FiveThirtyEight",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_346#Some_reliable_sources"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "ABC News (USA)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that ABC News, the news division of the American Broadcasting Company, is generally reliable. It is not to be confused with other publications of the same name."
+        },
+        "field": "reliability",
+        "outlet_id": "abcnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "breitbart": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "breitbart.com",
+          "expires": "2031-03-14",
+          "last_changed": "2022-09-17",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "breitbart",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/breitbart.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-03-14"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2007-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q503917"
+        },
+        "field": "owner",
+        "outlet_id": "breitbart",
+        "ref_url": "https://www.wikidata.org/wiki/Q4960434",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Andrew Breitbart"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_248#RfC:_Breitbart",
+            "https://en.wikipedia.org/wiki/MediaWiki_talk:Spam-blacklist/archives/October_2018#breitbart.com",
+            "#cite_note-13"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Breitbart News",
+          "status": "blacklisted",
+          "summary": "Due to persistent abuse, Breitbart News is on the Wikipedia spam blacklist, and links must be whitelisted before they can be used. The site has published a number of falsehoods, conspiracy theories, and intentionally misleading stories as fact. The 2018 RfC showed a very clear consensus that Breitbart News should be deprecated in the same way as the Daily Mail. This does not mean Breitbart News ca"
+        },
+        "field": "reliability",
+        "outlet_id": "breitbart",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Blacklisted"
+      }
+    ],
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "huffpost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "huffpost.com",
+          "expires": "2028-03-10",
+          "last_changed": "2026-02-06",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "huffpost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/huffpost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-03-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-05-01"
+      },
+      {
+        "data": {
+          "qid": "Q5003490"
+        },
+        "field": "owner",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "BuzzFeed"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-52"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost (excluding politics) (The Huffington Post)",
+          "status": "generally_reliable",
+          "summary": "A 2020 RfC found HuffPost staff writers fairly reliable for factual reporting on non-political topics, but notes that they may give prominence to topics that support their political bias and less prominence to, or omit, things that contradict it. HuffPost's reliability has increased since 2012; articles before 2012 are less reliable and should be treated with more caution. HuffPost uses clickbait "
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-54"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost contributors (The Huffington Post)",
+          "status": "generally_unreliable",
+          "summary": "Until 2018, the U.S. edition of HuffPost published content written by contributors with near-zero editorial oversight. These contributors generally did not have a reputation for fact-checking, and most editors consider them highly variable in quality. Editors show consensus for treating HuffPost contributor articles as self-published sources, unless the article was written by a subject-matter expe"
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-53"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost (politics) (The Huffington Post)",
+          "status": "no_consensus",
+          "summary": "In the 2020 RfC, there was no consensus on HuffPost staff writers' reliability for political topics. The community considers HuffPost openly biased on American politics. There is no consensus on its reliability for international politics. See also: HuffPost (excluding politics), HuffPost contributors."
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "kyivindependent": [
+      {
+        "data": {
+          "qid": "Q212"
+        },
+        "field": "country",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Ukraine"
+      },
+      {
+        "data": {
+          "domain": "kyivindependent.com",
+          "expires": "2031-11-19",
+          "last_changed": "2025-11-23",
+          "registrar": "Instra Corporation Pty Ltd.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/kyivindependent.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2021-11-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-11-01"
+      }
+    ],
+    "rt": [
+      {
+        "data": {
+          "qid": "Q159"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Russia"
+      },
+      {
+        "data": {
+          "domain": "rt.com",
+          "expires": "2027-09-22",
+          "last_changed": "2026-09-21",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "rt",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/rt.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1991-09-23"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-09-15"
+      },
+      {
+        "data": {
+          "qid": "Q821172"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "RIA Novosti"
+      },
+      {
+        "data": {
+          "qid": "Q15294742"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q22868 (RT); also Q111033569 (RT International)",
+        "outlet_id": "rt",
+        "ref_url": "https://www.wikidata.org/wiki/Q22868",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Rossiya Segodnya"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_295#RfC:_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_159#Enquiry_concerning_the_RT_Network",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_168#RT_news_and_Crimean_status_referendum,_2014",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_173#Russia_Today",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_192#Attributed_statement_sourced_by_RT_news_article",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_231#RT_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_253#On_Contact_/_RT",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Ruptly,_subsidiary_of_RT_(Russia_Today)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_375#Whitelist_RT_article_on_de-Leninization_which_kicks_the_State_line"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "RT (Russia Today, ANO TV-Novosti, Ruptly, Redfish, Maffick)",
+          "status": "deprecated",
+          "summary": "There is consensus that RT is an unreliable source, publishes false or fabricated information, and should be deprecated. Many editors describe RT as a mouthpiece of the Russian government that engages in propaganda and disinformation."
+        },
+        "field": "reliability",
+        "outlet_id": "rt",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "thehindu": [
+      {
+        "data": {
+          "qid": "Q668"
+        },
+        "field": "country",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "India"
+      },
+      {
+        "data": {
+          "domain": "thehindu.com",
+          "expires": "2028-03-02",
+          "last_changed": "2023-02-28",
+          "registrar": "eNom, LLC",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehindu",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehindu.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-03-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehindu",
+        "ref_url": "https://www.wikidata.org/wiki/Q926175",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1878-01-01"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_67#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_284#The_Hindu_mirroring_misinformation_from_WP",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#The_Hindu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_389#The_Hindu"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hindu",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Hindu is generally reliable and should be treated as a newspaper of record. The publication's opinion pieces should be handled with the appropriate guideline."
+        },
+        "field": "reliability",
+        "outlet_id": "thehindu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 7,
+      "weakest_join": null
+    },
+    "created_at": 1790633635,
+    "expired": false,
+    "id": 12381899204697281607,
+    "item_count": 7,
+    "last_active_at": 1790654763,
+    "origin_item_id": 13017571390270447665,
+    "origin_outlet_id": "rt",
+    "outlet_count": 7,
+    "primary_title": "South Korea demands Ukraine apology over denial of confidential deal on North’s prisoners of war",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 12381899204697281607,
+        "joined_at": 1790633635,
+        "outlet_id": "breitbart",
+        "published_at": 1790611825
+      },
+      {
+        "item_id": 13017571390270447665,
+        "joined_at": 1790633639,
+        "outlet_id": "rt",
+        "published_at": 1790551894
+      },
+      {
+        "item_id": 10585146751698916851,
+        "joined_at": 1790653931,
+        "outlet_id": "abcnews",
+        "published_at": 1790615676
+      },
+      {
+        "item_id": 5038244637493057029,
+        "joined_at": 1790653935,
+        "outlet_id": "huffpost",
+        "published_at": 1790588697
+      },
+      {
+        "item_id": 16832686449797195985,
+        "joined_at": 1790653939,
+        "outlet_id": "euronews",
+        "published_at": 1790567355
+      },
+      {
+        "item_id": 14676598661076131917,
+        "joined_at": 1790653942,
+        "outlet_id": "thehindu",
+        "published_at": 1790573343
+      },
+      {
+        "item_id": 10149462485689420061,
+        "joined_at": 1790654763,
+        "outlet_id": "kyivindependent",
+        "published_at": 1790618155
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "abcnews",
+            "huffpost",
+            "thehindu"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "rt"
+          ]
+        },
+        {
+          "label": "Blacklisted",
+          "outlets": [
+            "breitbart"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews",
+        "kyivindependent"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "abcnews": "ABC News",
+    "breitbart": "Breitbart",
+    "euronews": "Euronews",
+    "huffpost": "HuffPost",
+    "kyivindependent": "The Kyiv Independent",
+    "rt": "RT",
+    "thehindu": "The Hindu"
+  },
+  "outlets_24h": 5,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://rt.com/news/646339-zelensky-korea-soldiers-apology/",
+          "cluster_id": 12381899204697281607,
+          "fetched_at": 1790633639,
+          "id": 13017571390270447665,
+          "joined_at": 1790633639,
+          "lang": "en",
+          "outlet_id": "rt",
+          "published_at": 1790551894,
+          "summary": "Seoul demanded an official explanation from Kiev for disclosing the secret transfer of two North Korean soldiers captured in Russia Read Full Article at RT.com",
+          "text_hash": 16702744476792773754,
+          "title": "South Korea demands apology from Zelensky"
+        }
+      ],
+      "outlet_id": "rt"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/28/seoul-seeks-apology-after-ukraine-breached-confidentiality-agreement-over-transfer-of-nort",
+          "cluster_id": 12381899204697281607,
+          "fetched_at": 1790653939,
+          "id": 16832686449797195985,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790567355,
+          "summary": "North Korean soldiers were among the foreign contingent conscripted to fight alongside Russian troops on various frontlines in the war on Ukraine, after the Kremlin sought assistance from its close allies to bolster its deployments amid struggles with domestic conscription.",
+          "text_hash": 1329444602202981672,
+          "title": "Seoul seeks apology after Ukraine 'breached' confidentiality agreement over transfer of North Korean POWs"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehindu.com/news/international/south-korea-demands-ukraine-apology-over-denial-of-confidential-deal-on-norths-prisoners-of-war/article71518214.ece",
+          "cluster_id": 12381899204697281607,
+          "fetched_at": 1790653942,
+          "id": 14676598661076131917,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "thehindu",
+          "published_at": 1790573343,
+          "summary": "The incident came after Ukrainian President Volodymyr Zelenskyy told the United Nations that his country had sent two North Korean soldiers to the South, adding they were \"not easy to capture alive\".",
+          "text_hash": 475536602477294337,
+          "title": "South Korea demands Ukraine apology over denial of confidential deal on North’s prisoners of war"
+        }
+      ],
+      "outlet_id": "thehindu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://huffpost.com/entry/south-korea-demands-ukraine-apology-pow-transfer_n_6aba3576e4b0d1543f54fa03",
+          "cluster_id": 12381899204697281607,
+          "fetched_at": 1790653935,
+          "id": 5038244637493057029,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "huffpost",
+          "published_at": 1790588697,
+          "summary": "South Korea’s presidential office said the incident had seriously damaged trust between the two governments and could harm bilateral relations.",
+          "text_hash": 13124405322482567986,
+          "title": "South Korea Demands Apology From Ukraine Over Disclosure Of North Korean PoW Transfer"
+        }
+      ],
+      "outlet_id": "huffpost"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://breitbart.com/asia/2026/09/28/leftist-south-korea-demands-ukraine-apologize-after-zelensky-reveals-north-korea-soldiers-shipped-to-seoul/",
+          "cluster_id": 12381899204697281607,
+          "fetched_at": 1790633635,
+          "id": 12381899204697281607,
+          "joined_at": 1790633635,
+          "lang": "en",
+          "outlet_id": "breitbart",
+          "published_at": 1790611825,
+          "summary": "The leftist government of South Korea demanded a public apology on Sunday from the government of Ukraine after President Volodymyr Zelensky told the United Nations General Assembly last week that his troops had captured North Korean soldiers on the battlefield – and sent them to the South. The post Leftist South Korea Demands Ukraine Apologize After Zelensky Reveals North Korea Soldiers Shipped to Seoul appeared first on Breitbart .",
+          "text_hash": 17775584962931942581,
+          "title": "Leftist South Korea Demands Ukraine Apologize After Zelensky Reveals North Korea Soldiers Shipped to Seoul"
+        }
+      ],
+      "outlet_id": "breitbart"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://abcnews.com/International/wireStory/seoul-demands-apology-after-zelenskyy-unilaterally-reveals-north-136814400",
+          "cluster_id": 12381899204697281607,
+          "fetched_at": 1790653931,
+          "id": 10585146751698916851,
+          "joined_at": 1790653931,
+          "lang": "en",
+          "outlet_id": "abcnews",
+          "published_at": 1790615676,
+          "summary": "Seoul has demanded an apology after Ukrainian President Volodymyr Zelenskyy revealed what it says was supposed to be a secret transfer of two North Korean prisoners of war to South Korea",
+          "text_hash": 4222542270342177074,
+          "title": "Seoul demands apology after Zelenskyy reveals North Korean prisoners of war transfer"
+        }
+      ],
+      "outlet_id": "abcnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://kyivindependent.com/how-ukraine-angered-south-korea-and-why-it-matters/",
+          "cluster_id": 12381899204697281607,
+          "fetched_at": 1790654763,
+          "id": 10149462485689420061,
+          "joined_at": 1790654763,
+          "lang": "en",
+          "outlet_id": "kyivindependent",
+          "published_at": 1790618155,
+          "summary": "Ukraine just angered another partner — one sitting on an arsenal of weapons that Kyiv wants. President Volodymyr Zelensky’s Sept. 23 announcement at the U.N. General Assembly that Ukraine ’s two North Korean prisoners of war (POWs) were sent to South Korea was not well received",
+          "text_hash": 4506369956329013689,
+          "title": "How Ukraine angered South Korea — and why it matters"
+        }
+      ],
+      "outlet_id": "kyivindependent"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 5038244637493057029,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3212,
+      "snapshot_id": 9450678744362225953,
+      "ts": 1790660539
+    },
+    {
+      "cluster_id": null,
+      "item_id": 10149462485689420061,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4507,
+      "snapshot_id": 15323768833995399665,
+      "ts": 1790715385
+    },
+    {
+      "cluster_id": null,
+      "item_id": 10585146751698916851,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4539,
+      "snapshot_id": 12241636987856492026,
+      "ts": 1790715390
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "claims": {
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q4022413 (Shūkan Bunshun); also Q109594235 (Bunshun Online)",
+        "outlet_id": "bunshun",
+        "ref_url": "https://www.wikidata.org/wiki/Q4022413",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1959-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q41298"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q4022413 (Shūkan Bunshun); also Q109594235 (Bunshun Online)",
+        "outlet_id": "bunshun",
+        "ref_url": "https://www.wikidata.org/wiki/Q4022413",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "magazine"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "bunshun.jp"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "bunshun",
+        "ref_url": "https://bunshun.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "文春オンライン"
+      },
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q4022413 (Shūkan Bunshun); also Q109594235 (Bunshun Online)",
+        "outlet_id": "bunshun",
+        "ref_url": "https://www.wikidata.org/wiki/Q4022413",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Shūkan Bunshun"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 35,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "bunshun",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bunshun",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.4 items/day"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 35,
+          "revised": 1,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "bunshun",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bunshun",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "3% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "bunshun.jp",
+          "final_url": "https://bunshun.jp/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "bunshun",
+        "ref_url": "https://bunshun.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://bunshun.jp/list/about_ad",
+          "contact": "https://bunshun.jp/list/contact",
+          "domain": "bunshun.jp",
+          "missing": [
+            "privacy",
+            "corrections",
+            "ethics",
+            "masthead"
+          ]
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "bunshun",
+        "ref_url": "https://bunshun.jp/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact pages from its home page; no privacy, corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 35,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "bunshun",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bunshun",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q4022413 (Shūkan Bunshun); also Q109594235 (Bunshun Online)",
+        "outlet_id": "bunshun",
+        "ref_url": "https://www.wikidata.org/wiki/Q4022413",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://bunshun.jp"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q109594235"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q4022413 (Shūkan Bunshun); also Q109594235 (Bunshun Online)",
+        "outlet_id": "bunshun",
+        "ref_url": "https://www.wikidata.org/wiki/Q4022413",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q4022413"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q4022413 (Shūkan Bunshun); also Q109594235 (Bunshun Online)",
+        "outlet_id": "bunshun",
+        "ref_url": "https://www.wikidata.org/wiki/Q4022413",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Sh%C5%ABkan_Bunshun"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 35,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "bunshun",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/bunshun",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 45,
+  "outlet": {
+    "domains": [
+      "bunshun.jp"
+    ],
+    "id": "bunshun",
+    "name": "文春オンライン"
+  },
+  "shared_stories": 0,
+  "stories": [],
+  "story_pages": 1,
+  "window_days": 30
+}

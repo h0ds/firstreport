@@ -1,0 +1,360 @@
+{
+  "export_time": 1790725421,
+  "outlet": "breitbart",
+  "page": 2,
+  "page_size": 50,
+  "pages": 3,
+  "stories": [
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 8415559883501041660,
+      "outlet_count": 1,
+      "title": "Spanish Govt. Representative in Ceuta Resigns Crying 'Unfair Pressure' from Angry Locals"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 7803462222910559476,
+      "outlet_count": 1,
+      "title": "Report: Saudi Arabia to Fund $9 Million Mosque in Cuba"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 7467364181084434543,
+      "outlet_count": 1,
+      "title": "Left-Wing Swedish Social Democrat Abandons Attempts to Form Gov't, Opening Door for Conservatives"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 7232004499966159143,
+      "outlet_count": 5,
+      "title": "Congo politician beaten to death after urging Ebola prevention on radio, his party says"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 6957669907609134417,
+      "outlet_count": 1,
+      "title": "Arizona State Hockey Players Demand Coaches Be Put on Leave After Teammate’s Collapse"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 6800176688516225682,
+      "outlet_count": 1,
+      "title": "UK Home Secretary Mahmood Announces Plans to Import More Afghan and Palestinian Asylum Seekers"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 6771115100348069308,
+      "outlet_count": 1,
+      "title": "The AI God Complex: Breitbart EIC Calls on Christians to Stand Up to Tech Oligarchs"
+    },
+    {
+      "created_at": 1790653938,
+      "first": false,
+      "id": 6194157444656708867,
+      "outlet_count": 2,
+      "title": "Labour minister claims the idea of Britain's pubs, warm ale and black labradors is a 'far-right fantasy that never existed'"
+    },
+    {
+      "created_at": 1790659140,
+      "first": false,
+      "id": 5662166384588561854,
+      "outlet_count": 6,
+      "title": "Dennis Haskins, Best Known For Playing Mr. Belding in “Saved by the Bell” Dead at 75"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 5604730305068129807,
+      "outlet_count": 1,
+      "title": "JD Vance Says He and President Trump Have 'Wargamed' Plan to Pass SAVE America Act"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 4875122948861470186,
+      "outlet_count": 1,
+      "title": "The 'Effective Altruism' Cult Exposed: Inside Berkeley Liberals' Plot to Take Over the World Through AI"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 3275643999600902004,
+      "outlet_count": 1,
+      "title": "Bottoms: We Had Crime Spike in Atlanta When I Was Mayor in 2020 Due to Things Like 'Social Justice Protests'"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 2733990958370095983,
+      "outlet_count": 1,
+      "title": "Nolte: Disney Grooming Syndicate Cuts Hundreds of Jobs In Third Layoff of the Year"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 1038633772248523369,
+      "outlet_count": 1,
+      "title": "Exclusive — Veteran Action Backs Sen. Dan Sullivan in Alaska as Strong Supporter of Veterans"
+    },
+    {
+      "created_at": 1790715381,
+      "first": true,
+      "id": 799226275640821807,
+      "outlet_count": 1,
+      "title": "Brandon Gill Issues 'Barron's Law' to Get Non-English Speaking Truck Drivers Off American Highways"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16126029408899543548,
+      "outlet_count": 17,
+      "title": "Iran awaits US response on plan to reopen Strait of Hormuz"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 14052849425103090223,
+      "outlet_count": 10,
+      "title": "Trump unveils US$15 billion Iowa steel project the White House says will be biggest in US"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 6753936646908455125,
+      "outlet_count": 2,
+      "title": "Nolte: Actress Camryn Manheim Says She Tried to Turn Her Son Gay"
+    },
+    {
+      "created_at": 1790633639,
+      "first": false,
+      "id": 10969125623470226463,
+      "outlet_count": 12,
+      "title": "Trump expects more talks after rejecting latest Iranian proposal"
+    },
+    {
+      "created_at": 1790638791,
+      "first": false,
+      "id": 7269790725609937051,
+      "outlet_count": 7,
+      "title": "FBI deputy chief announces resignation after just over a year in job"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 16910807431805601164,
+      "outlet_count": 7,
+      "title": "Justice Alito Recuses Himself from Major Climate Lawsuit Against Oil Companies"
+    },
+    {
+      "created_at": 1790660768,
+      "first": true,
+      "id": 14041168140692843687,
+      "outlet_count": 1,
+      "title": "Brennan: Trump 'Has No Concept' of Taiwan's Importance to the U.S."
+    },
+    {
+      "created_at": 1790660768,
+      "first": true,
+      "id": 3875487415873222658,
+      "outlet_count": 1,
+      "title": "WATCH: Mariachi Band Performs National Anthem Before Monday Night Football as Part of Latino Heritage Month"
+    },
+    {
+      "created_at": 1790633635,
+      "first": false,
+      "id": 12381899204697281607,
+      "outlet_count": 7,
+      "title": "South Korea demands Ukraine apology over denial of confidential deal on North’s prisoners of war"
+    },
+    {
+      "created_at": 1790633635,
+      "first": false,
+      "id": 4462053429150698604,
+      "outlet_count": 3,
+      "title": "Powerful nor'easter threatens US Northeast with floods, high winds"
+    },
+    {
+      "created_at": 1790633635,
+      "first": true,
+      "id": 17356562307658162678,
+      "outlet_count": 2,
+      "title": "Giants acquire quarterback J.J. McCarthy from Vikings"
+    },
+    {
+      "created_at": 1790638791,
+      "first": false,
+      "id": 16328271100377266648,
+      "outlet_count": 2,
+      "title": "UAE urges diplomacy, stronger international action on Gaza and regional crises at UN"
+    },
+    {
+      "created_at": 1790633635,
+      "first": false,
+      "id": 10365073202848134034,
+      "outlet_count": 6,
+      "title": "Nvidia unveils security platform to stop AI agents from going rogue"
+    },
+    {
+      "created_at": 1790633635,
+      "first": true,
+      "id": 16085861509285035954,
+      "outlet_count": 2,
+      "title": "Democrat Rep. Kevin Mullin Pushes Bill to Redefine BB Guns as Firearms"
+    },
+    {
+      "created_at": 1790649504,
+      "first": true,
+      "id": 13072744713268953058,
+      "outlet_count": 2,
+      "title": "Boston Mayor Michelle Wu Pays Illegals $575 to Take Political Activism Class, U.S.-Born Residents Not Allowed"
+    },
+    {
+      "created_at": 1790633635,
+      "first": true,
+      "id": 10701196854035563241,
+      "outlet_count": 2,
+      "title": "AOC Suggests 'Tuition-Free Public Colleges' to 'Rein In Runaway Cost at Private Institutions'"
+    },
+    {
+      "created_at": 1790633635,
+      "first": true,
+      "id": 6346254032116773804,
+      "outlet_count": 2,
+      "title": "New York Magazine gets TORCHED for putting Elliot Page on the cover of its debut 'men's style' issue"
+    },
+    {
+      "created_at": 1790649504,
+      "first": true,
+      "id": 14431960754522997096,
+      "outlet_count": 1,
+      "title": "Mike Johnson Claims Opposition to Data Centers 'Coming from China'"
+    },
+    {
+      "created_at": 1790649504,
+      "first": true,
+      "id": 9326799708775418078,
+      "outlet_count": 1,
+      "title": "Trump Junks Biden’s Title IX Rules, Now Defines Sex by Biology"
+    },
+    {
+      "created_at": 1790649504,
+      "first": true,
+      "id": 4790482895172471158,
+      "outlet_count": 1,
+      "title": "CNN Data Shows MAGA Republicans Match Democrats in Midterm Voting Motivation"
+    },
+    {
+      "created_at": 1790649504,
+      "first": true,
+      "id": 3654704828684343937,
+      "outlet_count": 1,
+      "title": "Multimillionaire Democrat Rep. Susie Lee Collected $81K in Taxpayer-Funded D.C. Lodging Reimbursements"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 17392256395862650368,
+      "outlet_count": 1,
+      "title": "VIDEO: Trevor Lawrence's Mysterious Goal-Line Kneel Down Sparks Gambling Rumors"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 16423404354307810238,
+      "outlet_count": 1,
+      "title": "Talarico to Fundraise with Wall Street Financiers, Jeweler Who Called America a ‘Sh*thole’"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 14567913677485226461,
+      "outlet_count": 1,
+      "title": "Breitbart Business Digest: AI Divisions Emerge at the Fed"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 12241315931151118853,
+      "outlet_count": 1,
+      "title": "Inside North Carolina Democrat Roy Cooper's Culture of Corruption as Governor"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 11256027221995178422,
+      "outlet_count": 1,
+      "title": "Sen. Coons: Trump 'Catapulted Us into Instability and Violence in the Middle East'"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 10577758288444767307,
+      "outlet_count": 1,
+      "title": "El Salvador at the U.N.: No Country Should Accept Collapse as Its Fate"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 7538550621527404633,
+      "outlet_count": 1,
+      "title": "Kathy Griffin Says Ed Sheeran Should've Told Robert Kraft to 'Go F**k Yourself' over Macklemore"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 6299577356355121689,
+      "outlet_count": 1,
+      "title": "MTV VMAs Viewers Beg Organizers to 'Pull the Plug' on Award Show: 'Felt Like a Funeral'"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 5466438307254959748,
+      "outlet_count": 1,
+      "title": "Report: Kansas Democrat U.S. Senate Candidate Adam Hamilton Told His Congregation to 'Repent' of Eating Beef in the Big Cattle State"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 4803599459858611334,
+      "outlet_count": 1,
+      "title": "CNN's Erin Burnett to Moderate James Talarico's Town Hall as Network Sues over White House Access"
+    },
+    {
+      "created_at": 1790638791,
+      "first": true,
+      "id": 2296465940710542035,
+      "outlet_count": 1,
+      "title": "Abdul El-Sayed Benefiting From $15 Million Via 'Epstein Class' Donors"
+    },
+    {
+      "created_at": 1790633635,
+      "first": true,
+      "id": 17500833179995057176,
+      "outlet_count": 1,
+      "title": "Vandalism of Flock Cameras Continues in Toledo, Ohio"
+    },
+    {
+      "created_at": 1790633635,
+      "first": true,
+      "id": 17123602332893721258,
+      "outlet_count": 1,
+      "title": "Exclusive: Sen. Dave McCormick Says China, Russia Fueling U.S. Data Center Backlash"
+    },
+    {
+      "created_at": 1790633635,
+      "first": true,
+      "id": 17099984263499052695,
+      "outlet_count": 1,
+      "title": "Photos: Activists Reoccupy ICE Shooting Scene in Austin One Week Later"
+    }
+  ],
+  "window_days": 30
+}

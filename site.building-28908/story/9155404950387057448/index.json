@@ -1,0 +1,134 @@
+{
+  "claims": {
+    "globaltimes": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "globaltimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q970443",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "globaltimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q970443",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q50963"
+        },
+        "field": "owner",
+        "outlet_id": "globaltimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q970443",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Central Committee of the Chinese Communist Party"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_311#RfC:_Global_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_149#Global_times_as_in_Kennedy_tragedies",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_165#PRC's_Global_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_271#Chinese_news_sources",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_294#Global_Times",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_348#Global_Times_article_can't_be_used_even_if_it's_critical_of_Chinese_govt?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Global Times (Huanqiu Shibao)",
+          "status": "deprecated",
+          "summary": "The Global Times is a tabloid owned by the Chinese Communist Party. It was deprecated near-unanimously in a 2020 RfC which found that it publishes false or fabricated information, including pro-Chinese government propaganda and conspiracy theories. As with other Chinese news sites, the Global Times website may host announcements from government agencies not written by the tabloid. Authors are advi"
+        },
+        "field": "reliability",
+        "outlet_id": "globaltimes",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653952,
+    "expired": false,
+    "id": 9155404950387057448,
+    "item_count": 1,
+    "last_active_at": 1790653952,
+    "origin_item_id": 9155404950387057448,
+    "origin_outlet_id": "globaltimes",
+    "outlet_count": 1,
+    "primary_title": "Chinese expert criticizes Filipino FM's claim that Japan-Philippines delimitation 'nothing to do' with China, warns move serves ulterior purposes beyond bilateral talks",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9155404950387057448,
+        "joined_at": 1790653952,
+        "outlet_id": "globaltimes",
+        "published_at": 1781136000
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "globaltimes": "Global Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://globaltimes.cn/page/202606/1363326.shtml",
+          "cluster_id": 9155404950387057448,
+          "fetched_at": 1790653952,
+          "id": 9155404950387057448,
+          "joined_at": 1790653952,
+          "lang": "en",
+          "outlet_id": "globaltimes",
+          "published_at": 1781136000,
+          "summary": "",
+          "text_hash": 11738560174143879701,
+          "title": "Chinese expert criticizes Filipino FM's claim that Japan-Philippines delimitation 'nothing to do' with China, warns move serves ulterior purposes beyond bilateral talks"
+        }
+      ],
+      "outlet_id": "globaltimes"
+    }
+  ],
+  "withdrawals": []
+}

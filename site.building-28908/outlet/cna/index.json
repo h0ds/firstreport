@@ -1,0 +1,691 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "channelnewsasia.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.2256
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "cna",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.23 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "channelnewsasia.com",
+          "expires": "2027-02-23",
+          "last_changed": "2026-02-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cna",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/channelnewsasia.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-02-23"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1999-03-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1962634"
+        },
+        "field": "legal_form",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news broadcasting"
+      },
+      {
+        "data": {
+          "qid": "Q561068"
+        },
+        "field": "legal_form",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "specialty channel"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "channelnewsasia.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "cna",
+        "ref_url": "https://www.channelnewsasia.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "CNA"
+      },
+      {
+        "field": "name",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "CNA"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 42,
+          "origin_of": 2,
+          "shared_stories": 6,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "cna",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cna",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 33% of 6 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q1368796"
+        },
+        "field": "owner",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mediacorp"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 42,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "cna",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cna",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.5 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "channelnewsasia.com"
+        },
+        "field": "registrar",
+        "outlet_id": "cna",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/channelnewsasia.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "CSC Corporate Domains, Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_489#RfC:_Channel_NewsAsia_(CNA)_and_other_Mediacorp-affiliated_media"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CNA (Channel NewsAsia)",
+          "status": "generally_reliable",
+          "summary": "The 2025 RfC established a consensus that CNA, a Singaporean state-owned news channel, is a generally reliable source."
+        },
+        "field": "reliability",
+        "outlet_id": "cna",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 42,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "cna",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cna",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "channelnewsasia.com",
+          "final_url": "https://www.channelnewsasia.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "cna",
+        "ref_url": "https://www.channelnewsasia.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://www.channelnewsasia.com/about-us",
+          "contact": "https://www.channelnewsasia.com/contact-us",
+          "domain": "channelnewsasia.com",
+          "missing": [
+            "corrections",
+            "ethics",
+            "masthead"
+          ],
+          "privacy": "https://www.mediacorp.sg/privacy-policy"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "cna",
+        "ref_url": "https://www.channelnewsasia.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 42,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "cna",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cna",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://www.channelnewsasia.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q40238"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/CNA_(TV_network)"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 42,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 3
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "cna",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/cna",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "7% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 5,
+  "items": 106,
+  "outlet": {
+    "domains": [
+      "channelnewsasia.com"
+    ],
+    "id": "cna",
+    "name": "CNA"
+  },
+  "shared_stories": 17,
+  "stories": [
+    {
+      "created_at": 1790715370,
+      "first": true,
+      "id": 18145423920728228428,
+      "outlet_count": 4,
+      "title": "Man City guilty of all serious financial breach charges: Premier League"
+    },
+    {
+      "created_at": 1790715378,
+      "first": false,
+      "id": 6644257237448895193,
+      "outlet_count": 14,
+      "title": "Trump: Tech Leaders Signed Accord to 'Self-Police' AI Development"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 17314204335772072738,
+      "outlet_count": 7,
+      "title": "North Korea denies South's claim it was behind DMZ mine blasts"
+    },
+    {
+      "created_at": 1790725086,
+      "first": true,
+      "id": 12903030333417328386,
+      "outlet_count": 1,
+      "title": "I used to judge women for hiding their age – until my own age was used against me"
+    },
+    {
+      "created_at": 1790724265,
+      "first": true,
+      "id": 16461194989139088051,
+      "outlet_count": 1,
+      "title": "Jacob & Co’s new watch plays two melodies from The Godfather"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 18293615436391779908,
+      "outlet_count": 17,
+      "title": "New York prosecutors reopen investigation into alleged rape at Cornell University"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 13866602592389928610,
+      "outlet_count": 13,
+      "title": "Senate passes bipartisan Protect College Sports Act amid ‘chaos’ in industry"
+    },
+    {
+      "created_at": 1790720186,
+      "first": true,
+      "id": 12686555448787719209,
+      "outlet_count": 1,
+      "title": "From cameras to cars, India’s chip startups chase an edge in AI"
+    },
+    {
+      "created_at": 1790720186,
+      "first": true,
+      "id": 8904972370244297543,
+      "outlet_count": 1,
+      "title": "Commentary: Forget another big US-Iran deal. They need to start small"
+    },
+    {
+      "created_at": 1790720186,
+      "first": true,
+      "id": 7968832367102860788,
+      "outlet_count": 1,
+      "title": "Commentary: A meeting a day keeps the robots away"
+    },
+    {
+      "created_at": 1790720186,
+      "first": true,
+      "id": 7105848382408423835,
+      "outlet_count": 1,
+      "title": "‘Everything is clear now’: What Jokowi’s Indonesian Solidarity Party membership means for his family"
+    },
+    {
+      "created_at": 1790720186,
+      "first": true,
+      "id": 4968648398470140883,
+      "outlet_count": 1,
+      "title": "From serial collectors to reluctant recyclers: How Singapore’s beverage container return scheme is shifting habits"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 8522530705406292751,
+      "outlet_count": 4,
+      "title": "Saudi crown prince welcomes UAE vice president in Riyadh"
+    },
+    {
+      "created_at": 1790633634,
+      "first": false,
+      "id": 11230258509063452999,
+      "outlet_count": 18,
+      "title": "87-year-old woman whose eviction sparked protests in Spain is returning home"
+    },
+    {
+      "created_at": 1790716706,
+      "first": true,
+      "id": 9626912435306506082,
+      "outlet_count": 1,
+      "title": "Saudi Arabia resumes Yanbu oil loading after pipeline restart"
+    },
+    {
+      "created_at": 1790716706,
+      "first": true,
+      "id": 1379601611807495471,
+      "outlet_count": 1,
+      "title": "Lamine nets double as Spain win again and England beat 10-man Czechs"
+    },
+    {
+      "created_at": 1790682043,
+      "first": true,
+      "id": 17179960892066331142,
+      "outlet_count": 2,
+      "title": "Motor Racing-Alonso extends contract with Aston Martin for 2027 season"
+    },
+    {
+      "created_at": 1790715391,
+      "first": true,
+      "id": 18415446582568261807,
+      "outlet_count": 1,
+      "title": "Italy's Juventus to ask investors for up to €250 million"
+    },
+    {
+      "created_at": 1790715391,
+      "first": true,
+      "id": 17236304791385633857,
+      "outlet_count": 1,
+      "title": "Explainer-What is a public benefit corporation, the Anthropic legal structure?"
+    },
+    {
+      "created_at": 1790715391,
+      "first": true,
+      "id": 14019128708471115170,
+      "outlet_count": 1,
+      "title": "OpenAI takes on Meta with dots agent in enterprise AI push"
+    },
+    {
+      "created_at": 1790715391,
+      "first": true,
+      "id": 9562225389730256661,
+      "outlet_count": 1,
+      "title": "Israel PM says 'indications' enemies will try to attack ahead of elections"
+    },
+    {
+      "created_at": 1790665583,
+      "first": false,
+      "id": 6976649014365615021,
+      "outlet_count": 6,
+      "title": "Israel kills senior Hamas commander in Gaza strike"
+    },
+    {
+      "created_at": 1790715391,
+      "first": true,
+      "id": 6719800928727761499,
+      "outlet_count": 1,
+      "title": "Australian regulator to review banking sector AI use and customer impacts"
+    },
+    {
+      "created_at": 1790715391,
+      "first": true,
+      "id": 6243883782824551554,
+      "outlet_count": 1,
+      "title": "AI sector signed 'accord' with on technology standards, US House speaker says"
+    },
+    {
+      "created_at": 1790715391,
+      "first": true,
+      "id": 5152110483377919104,
+      "outlet_count": 1,
+      "title": "Exclusive-Anthropic says rogue AI agents pose uncertain legal risk for the company"
+    },
+    {
+      "created_at": 1790653941,
+      "first": true,
+      "id": 7341258804868091602,
+      "outlet_count": 4,
+      "title": "AI giant promises investors ‘existential risk to humanity’"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 4555465433342937664,
+      "outlet_count": 13,
+      "title": "Bangkok declares flood disaster as torrential rain inundates city"
+    },
+    {
+      "created_at": 1790664389,
+      "first": true,
+      "id": 4027847128741190405,
+      "outlet_count": 4,
+      "title": "FIFA accuses UEFA of 'misinformation campaign' in response to filing"
+    },
+    {
+      "created_at": 1790680065,
+      "first": true,
+      "id": 14050438910349608348,
+      "outlet_count": 1,
+      "title": "South Africa look to gather momentum in ODI series with World Cup looming"
+    },
+    {
+      "created_at": 1790670798,
+      "first": true,
+      "id": 13830576294076298500,
+      "outlet_count": 1,
+      "title": "Singapore's Loh Kean Yew set to face Thailand's Kunlavut in Asian Games badminton final"
+    },
+    {
+      "created_at": 1790679382,
+      "first": true,
+      "id": 2672972310063196724,
+      "outlet_count": 1,
+      "title": "Singapore Writers Festival 2026: Amitav Ghosh, Silvia Moreno-Garcia and Rachel Smythe among highlights"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 15460323824978722699,
+      "outlet_count": 1,
+      "title": "HSBC bolsters Hang Seng balance sheet with $1.4 billion loan transfer"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 13711281813746253640,
+      "outlet_count": 1,
+      "title": "French win in Belgium shows depth of talent available to new coach Zidane"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 8956520344774587529,
+      "outlet_count": 1,
+      "title": "Public transport fares to rise by 12 to 13 cents per ride for adult card users from Dec 26"
+    },
+    {
+      "created_at": 1790679060,
+      "first": false,
+      "id": 8038093350840254233,
+      "outlet_count": 2,
+      "title": "‘Gift from God’: Rain brings relief from Indonesia toxic haze"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 6590497569593573887,
+      "outlet_count": 1,
+      "title": "F1 rookie Lindblad wants to take his own path to the top"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 6408083079220451192,
+      "outlet_count": 1,
+      "title": "UPS signs exclusive deal with TikTok Shop for label-free returns"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 6153421299858964588,
+      "outlet_count": 1,
+      "title": "Turkey detains chief and six members of referee board in probe"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 6056606075601950499,
+      "outlet_count": 1,
+      "title": "Anthropic's $518 billion AI buildout hinges largely on deals that cannot be canceled, filing shows"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 6022730754390794505,
+      "outlet_count": 1,
+      "title": "Youth offending rate rises in Singapore, driven by jump in cheating offences"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 5205759495769825720,
+      "outlet_count": 1,
+      "title": "MAS appoints 5 asset managers with S$1.45 billion allocation to support Singapore stock market"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 4870524865908716331,
+      "outlet_count": 1,
+      "title": "National Museum of Singapore’s revamped Singapore History Gallery reopens on Oct 10"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 3813926260080951918,
+      "outlet_count": 1,
+      "title": "Aman's first Maldives resort and branded residences Amanolu set to open in 2028"
+    },
+    {
+      "created_at": 1790679060,
+      "first": false,
+      "id": 3535701983586420586,
+      "outlet_count": 2,
+      "title": "Snooker-Former world champion Dott jailed for historical sexual abuse"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 3061217920160514161,
+      "outlet_count": 1,
+      "title": "Nepal suspends search after 16 swept away by avalanche"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 1881455124051434441,
+      "outlet_count": 1,
+      "title": "‘I didn’t expect her to die’: Ex-Malaysia PM Mahathir says wife 'quite well' the night before death"
+    },
+    {
+      "created_at": 1790679060,
+      "first": true,
+      "id": 942584027801852749,
+      "outlet_count": 1,
+      "title": "Scrapping PSLE or DSA could create new pressures, send wrong signals: David Neo"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 879591048792657354,
+      "outlet_count": 9,
+      "title": "OpenAI agent hacks into an Australian government site"
+    },
+    {
+      "created_at": 1790659140,
+      "first": false,
+      "id": 6528856014325350471,
+      "outlet_count": 2,
+      "title": "Malaysian Minister Vows to Quit When Najib Begins House Arrest"
+    },
+    {
+      "created_at": 1790667834,
+      "first": true,
+      "id": 10611355635592318362,
+      "outlet_count": 1,
+      "title": "Pochettino laments 'period of deception' if Man City breaches true"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

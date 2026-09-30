@@ -1,0 +1,445 @@
+{
+  "claims": {
+    "dailymail": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "dailymail.co.uk",
+          "expires": "2028-06-16",
+          "last_changed": "2019-02-15",
+          "registrar": "Nom-IQ Limited t/a Com Laude",
+          "status": [
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailymail",
+        "ref_url": "https://rdap.nominet.uk/uk/domain/dailymail.co.uk",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-06-16"
+      },
+      {
+        "data": {
+          "domain": "dailymail.com",
+          "expires": "2027-12-24",
+          "last_changed": "2026-09-14",
+          "registrar": "Nom-iq Ltd. dba COM LAUDE",
+          "status": [
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "dailymail",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/dailymail.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-20"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1896-05-04"
+      },
+      {
+        "data": {
+          "qid": "Q667613"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Daily Mail and General Trust"
+      },
+      {
+        "data": {
+          "qid": "Q6273342"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q210534 (Daily Mail); also Q6735687 (MailOnline)",
+        "outlet_id": "dailymail",
+        "ref_url": "https://www.wikidata.org/wiki/Q210534",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Jonathan Harmsworth, 4th Viscount Rothermere"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_220#Daily_Mail_RfC",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_255#2nd_RfC:_The_Daily_Mail",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_299#(Infomercial_voice)_But_Wait!_There's_still_more!!_(News_about_The_Daily_Mail)",
+            "#cite_note-29"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Daily Mail (MailOnline)",
+          "status": "deprecated",
+          "summary": "In the 2017 RfC, the Daily Mail was the first source to be deprecated on Wikipedia, and the decision was challenged and reaffirmed in the 2019 RfC. There is consensus that the Daily Mail (including its online version, MailOnline) is generally unreliable, and its use as a reference is generally prohibited, especially when other sources exist that are more reliable. As a result, the Daily Mail shoul"
+        },
+        "field": "reliability",
+        "outlet_id": "dailymail",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Deprecated"
+      }
+    ],
+    "huffpost": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "huffpost.com",
+          "expires": "2028-03-10",
+          "last_changed": "2026-02-06",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "active"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "huffpost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/huffpost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-03-10"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2005-05-01"
+      },
+      {
+        "data": {
+          "qid": "Q5003490"
+        },
+        "field": "owner",
+        "outlet_id": "huffpost",
+        "ref_url": "https://www.wikidata.org/wiki/Q18049522",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "BuzzFeed"
+      },
+      {
+        "as_of": "2021",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-52"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost (excluding politics) (The Huffington Post)",
+          "status": "generally_reliable",
+          "summary": "A 2020 RfC found HuffPost staff writers fairly reliable for factual reporting on non-political topics, but notes that they may give prominence to topics that support their political bias and less prominence to, or omit, things that contradict it. HuffPost's reliability has increased since 2012; articles before 2012 are less reliable and should be treated with more caution. HuffPost uses clickbait "
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-54"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost contributors (The Huffington Post)",
+          "status": "generally_unreliable",
+          "summary": "Until 2018, the U.S. edition of HuffPost published content written by contributors with near-zero editorial oversight. These contributors generally did not have a reputation for fact-checking, and most editors consider them highly variable in quality. Editors show consensus for treating HuffPost contributor articles as self-published sources, unless the article was written by a subject-matter expe"
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
+            "#cite_note-53"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "HuffPost (politics) (The Huffington Post)",
+          "status": "no_consensus",
+          "summary": "In the 2020 RfC, there was no consensus on HuffPost staff writers' reliability for political topics. The community considers HuffPost openly biased on American politics. There is no consensus on its reliability for international politics. See also: HuffPost (excluding politics), HuffPost contributors."
+        },
+        "field": "reliability",
+        "outlet_id": "huffpost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "skynews": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "sky.com",
+          "expires": "2027-06-17",
+          "last_changed": "2019-08-05",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "skynews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/sky.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1988-03-31"
+      },
+      {
+        "field": "founded",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1989-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q918390"
+        },
+        "field": "owner",
+        "note": "3 Wikidata items match the domain; this is Q217228 (Sky News); also Q2033167 (Sky UK), Q843428 (Sky Replay)",
+        "outlet_id": "skynews",
+        "ref_url": "https://www.wikidata.org/wiki/Q217228",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Sky Group"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_205#Alleged_war_crimes_by_Russians_in_Syria",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_334#Sky_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_390#LBC_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_458#Sky_News_caught_manipulating_footage"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Sky News (UK)",
+          "status": "generally_reliable",
+          "summary": "Sky News (UK) is considered an ordinary WP:NEWSORG and is thus presumed generally reliable. Sky News UK is unaffiliated with Sky News Australia. Sky News UK has partial ownership of Sky News Arabia."
+        },
+        "field": "reliability",
+        "outlet_id": "skynews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.0021396875381469727,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7221397161483765
+    },
+    "created_at": 1790679060,
+    "expired": false,
+    "id": 16759023438131223296,
+    "item_count": 3,
+    "last_active_at": 1790722541,
+    "origin_item_id": 16759023438131223296,
+    "origin_outlet_id": "dailymail",
+    "outlet_count": 3,
+    "primary_title": "87-Year-Old Evicted From Her Home On A Stretcher Gets Offer To Move Back In",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16759023438131223296,
+        "joined_at": 1790679060,
+        "outlet_id": "dailymail",
+        "published_at": 1790672909
+      },
+      {
+        "item_id": 10183538637318955433,
+        "joined_at": 1790683512,
+        "outlet_id": "skynews",
+        "published_at": 1790673660
+      },
+      {
+        "item_id": 1876868236653657073,
+        "joined_at": 1790722541,
+        "outlet_id": "huffpost",
+        "published_at": 1790683666
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "huffpost",
+            "skynews"
+          ]
+        },
+        {
+          "label": "Deprecated",
+          "outlets": [
+            "dailymail"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "dailymail": "Daily Mail",
+    "huffpost": "HuffPost",
+    "skynews": "Sky News"
+  },
+  "outlets_24h": 3,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://dailymail.com/news/article-16168523/Spanish-pensioner-87-allowed-return-home-evicted-riot-cops-investment-brothers-pushed-rent-275-sparking-nationwide-fury.html",
+          "cluster_id": 16759023438131223296,
+          "fetched_at": 1790679060,
+          "id": 16759023438131223296,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "dailymail",
+          "published_at": 1790672909,
+          "summary": "Maricarmen Abascal was carried out of the Madrid flat where she had lived for 70 years on a stretcher on 23 September.",
+          "text_hash": 3179738572750712838,
+          "title": "Spanish pensioner, 87, is allowed to return home after she was evicted by riot cops after investment brothers pushed her rent up by 275%, sparking nationwide fury"
+        }
+      ],
+      "outlet_id": "dailymail"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://news.sky.com/story/woman-87-whose-eviction-sparked-protests-can-return-home-lawyer-says-13593156",
+          "cluster_id": 16759023438131223296,
+          "fetched_at": 1790683512,
+          "id": 10183538637318955433,
+          "joined_at": 1790683512,
+          "lang": "en",
+          "outlet_id": "skynews",
+          "published_at": 1790673660,
+          "summary": "Evicted 87-year-old Maricarmen Abascal can return to the apartment she has lived in for decades, her lawyer has said.",
+          "text_hash": 3984662964776860043,
+          "title": "Woman, 87, whose eviction sparked protests can return home, lawyer says"
+        }
+      ],
+      "outlet_id": "skynews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://huffpost.com/entry/spain-maricarmen-protest_n_6abb9314e4b075cb0a40e872",
+          "cluster_id": 16759023438131223296,
+          "fetched_at": 1790722541,
+          "id": 1876868236653657073,
+          "joined_at": 1790722541,
+          "lang": "en",
+          "outlet_id": "huffpost",
+          "published_at": 1790683666,
+          "summary": "Hundreds of people remained camped in one of Madrid’s main squares to protest Maricarmen Abascal‘s removal from her home of 70 years.",
+          "text_hash": 2306016475487530881,
+          "title": "87-Year-Old Evicted From Her Home On A Stretcher Gets Offer To Move Back In"
+        }
+      ],
+      "outlet_id": "huffpost"
+    }
+  ],
+  "withdrawals": []
+}

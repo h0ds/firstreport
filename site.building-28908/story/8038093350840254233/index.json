@@ -1,0 +1,268 @@
+{
+  "claims": {
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "cna": [
+      {
+        "data": {
+          "qid": "Q334"
+        },
+        "field": "country",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Singapore"
+      },
+      {
+        "data": {
+          "domain": "channelnewsasia.com",
+          "expires": "2027-02-23",
+          "last_changed": "2026-02-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "cna",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/channelnewsasia.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1999-02-23"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1999-03-01"
+      },
+      {
+        "data": {
+          "qid": "Q1368796"
+        },
+        "field": "owner",
+        "outlet_id": "cna",
+        "ref_url": "https://www.wikidata.org/wiki/Q40238",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Mediacorp"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_489#RfC:_Channel_NewsAsia_(CNA)_and_other_Mediacorp-affiliated_media"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "CNA (Channel NewsAsia)",
+          "status": "generally_reliable",
+          "summary": "The 2025 RfC established a consensus that CNA, a Singaporean state-owned news channel, is a generally reliable source."
+        },
+        "field": "reliability",
+        "outlet_id": "cna",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.1504884958267212,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.8704885244369507
+    },
+    "created_at": 1790679060,
+    "expired": false,
+    "id": 8038093350840254233,
+    "item_count": 2,
+    "last_active_at": 1790679060,
+    "origin_item_id": 16063504336861911549,
+    "origin_outlet_id": "arabnews",
+    "outlet_count": 2,
+    "primary_title": "‘Gift from God’: Rain brings relief from Indonesia toxic haze",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8038093350840254233,
+        "joined_at": 1790679060,
+        "outlet_id": "cna",
+        "published_at": 1790678220
+      },
+      {
+        "item_id": 16063504336861911549,
+        "joined_at": 1790679060,
+        "outlet_id": "arabnews",
+        "published_at": 1790677989
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "cna"
+          ]
+        },
+        {
+          "label": "No consensus",
+          "outlets": [
+            "arabnews"
+          ]
+        }
+      ],
+      "not_rated": [],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "arabnews": "Arab News",
+    "cna": "CNA"
+  },
+  "outlets_24h": 2,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/world/gift-from-god-rain-brings-relief-from-indonesia-toxic-haze-3003703",
+          "cluster_id": 8038093350840254233,
+          "fetched_at": 1790679060,
+          "id": 16063504336861911549,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790677989,
+          "summary": "The arrival of rain has provided much-needed relief to residents of Pontianak, Indonesia, who have been suffering from a toxic haze caused by widespread wildfires on Borneo island. The haze had disrupted daily activities and spread to neighboring countries.",
+          "text_hash": 13363388462397755717,
+          "title": "‘Gift from God’: Rain brings relief from Indonesia toxic haze"
+        }
+      ],
+      "outlet_id": "arabnews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://channelnewsasia.com/asia/indonesia-haze-rain-pontianak-wildfires-6418366",
+          "cluster_id": 8038093350840254233,
+          "fetched_at": 1790679060,
+          "id": 8038093350840254233,
+          "joined_at": 1790679060,
+          "lang": "en",
+          "outlet_id": "cna",
+          "published_at": 1790678220,
+          "summary": "The thick smog had limited outdoor activities in Pontianak, a city of about 700,000 people on Borneo island, with schools forced to shutter and thousands of respiratory cases recorded in the region since last month, according to officials.",
+          "text_hash": 11958230623514571085,
+          "title": "'Gift from God': Rain brings relief from Indonesia toxic haze"
+        }
+      ],
+      "outlet_id": "cna"
+    }
+  ],
+  "withdrawals": []
+}

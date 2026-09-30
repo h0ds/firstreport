@@ -1,0 +1,222 @@
+{
+  "claims": {
+    "foxnews": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "foxnews.com",
+          "expires": "2031-06-20",
+          "last_changed": "2022-09-20",
+          "registrar": "GoDaddy Corporate Domains, LLC",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "foxnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/foxnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-06-21"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1996-10-07"
+      },
+      {
+        "data": {
+          "qid": "Q5476713"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "21st Century Fox"
+      },
+      {
+        "data": {
+          "qid": "Q60238941"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Fox Corporation"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "foxnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q186068",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_73#Request_for_Comment_on_Fox_News_Channel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_303#RfC:_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_385#RFC:_Fox_News_(news):_politics_&_science",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_406#RfC:_downgrade_Fox_News_for_politics?",
+            "#cite_note-44"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (politics and science)",
+          "status": "generally_unreliable",
+          "summary": "There is consensus Fox News is generally unreliable for the reporting of politics, especially from November 2020 onwards. On the matter of science, and on the matter of pre-November 2020 politics, there is a consensus that the reliability of Fox News is unclear and that additional considerations apply to its use. As a result, Fox News is considered marginally reliable and generally does not qualif"
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_226#The_status_of_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_237#Is_Fox_News_a_WP:RS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_257#Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_261#Fox_News_redux",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_264#Fox_News_-_sources_for_future_discussion",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_276#Litmus_test_for_source_reliability_in_the_AmPol2_area",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_278#Suggestion:_comparing_Fox_News_real-time_coverage_of_the_impeachment_inquiry_with_other_outlets'",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Fox_News_and_COVID-19",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_449#Why_does_Fox_News_talk_shows_have_it's_own_section_in_the_list?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (talk shows)",
+          "status": "generally_unreliable",
+          "summary": "Fox News talk shows, including Hannity, Tucker Carlson Tonight, The Ingraham Angle, and Fox & Friends, should not be used for statements of fact but can sometimes be used for attributed opinions. See also: Fox News (news excluding politics and science), Fox News (politics and science)."
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_73#Request_for_Comment_on_Fox_News_Channel",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_303#RfC:_Fox_News",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_406#RfC:_downgrade_Fox_News_for_politics?",
+            "#cite_note-43"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Fox News [ aa ] (news excluding politics and science)",
+          "status": "no_consensus",
+          "summary": "Historically, there has been consensus that Fox News is generally reliable for news coverage on topics other than politics and science. However, many editors expressed concerns about the reliability of Fox News for any topic in a 2023 RFC. No formal consensus was reached on the matter, though. See also: Fox News (politics and science), Fox News (talk shows)."
+        },
+        "field": "reliability",
+        "outlet_id": "foxnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790633634,
+    "expired": false,
+    "id": 1258577318043421800,
+    "item_count": 1,
+    "last_active_at": 1790633634,
+    "origin_item_id": 1258577318043421800,
+    "origin_outlet_id": "foxnews",
+    "outlet_count": 1,
+    "primary_title": "Lukashenko reveals bizarre argument he and Putin have over who is the ‘bigger dictator’",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 1258577318043421800,
+        "joined_at": 1790633634,
+        "outlet_id": "foxnews",
+        "published_at": 1790128220
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "foxnews": "Fox News"
+  },
+  "outlets_24h": 0,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://foxnews.com/world/lukashenko-reveals-bizarre-argument-putin-bigger-dictator",
+          "cluster_id": 1258577318043421800,
+          "fetched_at": 1790633634,
+          "id": 1258577318043421800,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "foxnews",
+          "published_at": 1790128220,
+          "summary": "Belarusian President Alexander Lukashenko told a youth forum that he and Vladimir Putin regularly argue over who is the bigger dictator.",
+          "text_hash": 16476010023097011728,
+          "title": "Lukashenko reveals bizarre argument he and Putin have over who is the ‘bigger dictator’"
+        }
+      ],
+      "outlet_id": "foxnews"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,787 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "nypost.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.1813
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "nypost",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.18 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "pagesix.com",
+          "expires": "2027-09-12",
+          "last_changed": "2026-08-11",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/pagesix.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-13"
+      },
+      {
+        "data": {
+          "domain": "nypost.com",
+          "expires": "2027-09-28",
+          "last_changed": "2026-08-27",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nypost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-09-29"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1801-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q1110794"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "daily newspaper"
+      },
+      {
+        "data": {
+          "qid": "Q11032"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "newspaper"
+      },
+      {
+        "data": {
+          "qid": "Q106650967"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "tabloid newspaper"
+      },
+      {
+        "data": {
+          "qid": "Q35127"
+        },
+        "field": "legal_form",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "website"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "nypost.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "nypost",
+        "ref_url": "https://nypost.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "New York Post"
+      },
+      {
+        "field": "name",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New York Post"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 38,
+          "origin_of": 0,
+          "shared_stories": 8,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "nypost",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nypost",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 0% of 8 stories other outlets also carried"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q14289857"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corp"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 38,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "nypost",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nypost",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.4 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "nypost.com"
+        },
+        "field": "registrar",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/nypost.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "MarkMonitor Inc."
+      },
+      {
+        "data": {
+          "domain": "pagesix.com"
+        },
+        "field": "registrar",
+        "outlet_id": "nypost",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/pagesix.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "MarkMonitor Inc."
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_312#RFC:_New_York_Post_(nypost.com)",
+            "#cite_note-69"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six) (excluding entertainment)",
+          "status": "generally_unreliable",
+          "summary": "There is consensus the New York Post is generally unreliable for factual reporting, especially with regard to politics, particularly New York City politics. A tabloid newspaper, editors criticise its lack of concern for fact-checking or corrections, including examples of outright fabrication. Editors consider the New York Post more reliable before it changed ownership in 1976, and particularly unr"
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_436#RfC:_Entertainment_coverage_of_the_New_York_Post_(including_Decider_and_Page_Six)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_348#Using_a_Decider.com_interview",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_371#Decider.com_/_Jimmy_DiResta_/_Naomi_Wu",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_431#Using_Decider_/_Decider.com_for_interviews_and_reviews"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "New York Post (NY Post, New York Evening Post, Page Six, Decider) (entertainment)",
+          "status": "no_consensus",
+          "summary": "There is consensus that the New York Post (nypost.com) and its sub-publications Decider (decider.com) and Page Six are considered to be marginally reliable sources for entertainment coverage, including reviews, but should not be used for controversial statements related to living persons."
+        },
+        "field": "reliability",
+        "outlet_id": "nypost",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 38,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "nypost",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nypost",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "nypost.com",
+          "final_url": "https://nypost.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "nypost",
+        "ref_url": "https://nypost.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://nypost.com/2026/09/28/health/the-dangerous-assumption-people-make-about-aging/",
+          "contact": "https://nypost.com/contact/",
+          "domain": "nypost.com",
+          "ethics": "https://nypost.com/editorial-standards/",
+          "missing": [
+            "corrections",
+            "masthead"
+          ],
+          "privacy": "https://nypost.com/privacy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "nypost",
+        "ref_url": "https://nypost.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 38,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "nypost",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nypost",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://nypost.com"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "data": {
+          "candidates": [
+            "Q61710157"
+          ]
+        },
+        "field": "wikidata_id",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q211374"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "note": "2 Wikidata items match the domain; this is Q211374 (New York Post); also Q61710157 (Page Six)",
+        "outlet_id": "nypost",
+        "ref_url": "https://www.wikidata.org/wiki/Q211374",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/New_York_Post"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 38,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "nypost",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/nypost",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 1,
+  "items": 148,
+  "outlet": {
+    "domains": [
+      "nypost.com",
+      "pagesix.com"
+    ],
+    "id": "nypost",
+    "name": "New York Post"
+  },
+  "shared_stories": 24,
+  "stories": [
+    {
+      "created_at": 1790668361,
+      "first": false,
+      "id": 3846342846750738846,
+      "outlet_count": 3,
+      "title": "Federal Watchdog Reveals Vetting Errors in 40% of Biden's Afghan Migrants Resettled in U.S."
+    },
+    {
+      "created_at": 1790715378,
+      "first": false,
+      "id": 6644257237448895193,
+      "outlet_count": 14,
+      "title": "Trump: Tech Leaders Signed Accord to 'Self-Police' AI Development"
+    },
+    {
+      "created_at": 1790653938,
+      "first": false,
+      "id": 10680949531682007259,
+      "outlet_count": 7,
+      "title": "Caleb Flynn, former ‘American Idol’ singer, found guilty of wife’s murder"
+    },
+    {
+      "created_at": 1790724596,
+      "first": true,
+      "id": 16239723841664121585,
+      "outlet_count": 1,
+      "title": "Prince Harry and Meghan Markle’s plans for $14M Montecito mansion revealed after UK move"
+    },
+    {
+      "created_at": 1790724596,
+      "first": true,
+      "id": 11034620562646679598,
+      "outlet_count": 1,
+      "title": "Scientists identify new species of penguin in subantarctic waters — the first in over a century"
+    },
+    {
+      "created_at": 1790724596,
+      "first": true,
+      "id": 9993422553086054588,
+      "outlet_count": 1,
+      "title": "NYU professor Scott Galloway regrets ‘stupid’ decision to sell off stocks following Trump 2016 win: ‘Biggest investment mistake’"
+    },
+    {
+      "created_at": 1790724596,
+      "first": true,
+      "id": 7402232894165223311,
+      "outlet_count": 1,
+      "title": "Monster hurricane barrels toward US with ‘34 trillion gallons of rainfall’ — and what it means for California"
+    },
+    {
+      "created_at": 1790724301,
+      "first": true,
+      "id": 17832586779042696119,
+      "outlet_count": 1,
+      "title": "Ex-Council Speaker Christine Quinn may be out of politics — but she’s still ready to help NYC"
+    },
+    {
+      "created_at": 1790724301,
+      "first": true,
+      "id": 17085013801786807396,
+      "outlet_count": 1,
+      "title": "Don Mattingly explains decision that backfired in Phillies’ heartbreaking wild-card loss to Braves"
+    },
+    {
+      "created_at": 1790724301,
+      "first": true,
+      "id": 6632213732480206482,
+      "outlet_count": 1,
+      "title": "Andre Drummond feels custom-built to fill Knicks’ Mitchell Robinson void"
+    },
+    {
+      "created_at": 1790724301,
+      "first": true,
+      "id": 4126884943973365629,
+      "outlet_count": 1,
+      "title": "Lakers roll with changes to kick off Luka Doncic era: ‘A great first day’"
+    },
+    {
+      "created_at": 1790723627,
+      "first": true,
+      "id": 12197790411942780837,
+      "outlet_count": 1,
+      "title": "Former Connecticut housing authority exec charged with $16.2 million loan fraud"
+    },
+    {
+      "created_at": 1790723345,
+      "first": true,
+      "id": 16928900047401732749,
+      "outlet_count": 1,
+      "title": "Feds urged to crack down on fake passports, green cards along NYC’s Roosevelt Avenue"
+    },
+    {
+      "created_at": 1790723345,
+      "first": true,
+      "id": 15614457686519167052,
+      "outlet_count": 1,
+      "title": "Trader Joe’s, Welch’s slapped with lawsuits over ingredients lurking in ‘sugar-free’ foods"
+    },
+    {
+      "created_at": 1790723040,
+      "first": true,
+      "id": 16467135255742006852,
+      "outlet_count": 1,
+      "title": "49ers work out multiple players, including Jerry Rice’s son and former UCLA quarterback"
+    },
+    {
+      "created_at": 1790723040,
+      "first": true,
+      "id": 8968815468225251143,
+      "outlet_count": 1,
+      "title": "Hochul dodges weighing in on Mamdani’s antisemitism plan"
+    },
+    {
+      "created_at": 1790722759,
+      "first": true,
+      "id": 18314383115149408367,
+      "outlet_count": 1,
+      "title": "Iran publishes propaganda letter urging US voters to punish Trump in midterm elections"
+    },
+    {
+      "created_at": 1790722759,
+      "first": true,
+      "id": 8649093995537105040,
+      "outlet_count": 1,
+      "title": "NYC charity God’s Love We Deliver receives gift from Global Citizen Festival — after concert was canceled from storm"
+    },
+    {
+      "created_at": 1790722759,
+      "first": true,
+      "id": 2593592592009303773,
+      "outlet_count": 1,
+      "title": "Xavier Becerra mocked migrant kids as ‘little Juanitos’, ex-Biden official claims"
+    },
+    {
+      "created_at": 1790722476,
+      "first": true,
+      "id": 15118518192902377665,
+      "outlet_count": 1,
+      "title": "Yankees must use their biggest advantage in lefty-heavy series with Red Sox"
+    },
+    {
+      "created_at": 1790722107,
+      "first": true,
+      "id": 9728103830924094288,
+      "outlet_count": 1,
+      "title": "Joe Buck speaks out on simmering Troy Aikman-ESPN contract drama"
+    },
+    {
+      "created_at": 1790722107,
+      "first": true,
+      "id": 280320627331682902,
+      "outlet_count": 1,
+      "title": "Arvell Reese was EVERYWHERE in Giants win over Titans | Blue Rush"
+    },
+    {
+      "created_at": 1790715379,
+      "first": false,
+      "id": 7695855586285115353,
+      "outlet_count": 5,
+      "title": "Hegseth to Cut Pentagon Posts Held for Generals, Admirals"
+    },
+    {
+      "created_at": 1790721804,
+      "first": true,
+      "id": 13891843553220367396,
+      "outlet_count": 1,
+      "title": "Obese rat dies escaping NYC trash can — but locals laud sick scene as high art: ‘It’s sculpture’"
+    },
+    {
+      "created_at": 1790721804,
+      "first": true,
+      "id": 1686193640852523594,
+      "outlet_count": 1,
+      "title": "Ex-ESPN star Linda Cohn is back , with hotter takes than you’ve ever heard from her before"
+    },
+    {
+      "created_at": 1790721508,
+      "first": true,
+      "id": 16732847691102535827,
+      "outlet_count": 1,
+      "title": "Bruce Blakeman’s tax-slashing plan restores hope for New York"
+    },
+    {
+      "created_at": 1790721508,
+      "first": true,
+      "id": 16314061746781916847,
+      "outlet_count": 1,
+      "title": "NYC must rein in e-bikes now — and stop the carnage on our streets"
+    },
+    {
+      "created_at": 1790721508,
+      "first": true,
+      "id": 10908013100035130359,
+      "outlet_count": 1,
+      "title": "The Jets question that comes with Aaron Glenn’s deja vu"
+    },
+    {
+      "created_at": 1790721508,
+      "first": true,
+      "id": 8700752380091428846,
+      "outlet_count": 1,
+      "title": "Dodgers star Kiké Hernandez gets $45K custom necklace ahead of playoff run"
+    },
+    {
+      "created_at": 1790721184,
+      "first": true,
+      "id": 15381715428415123993,
+      "outlet_count": 1,
+      "title": "Night owls may have a particular late-in-life problem that’s bad for their health — and wallets"
+    },
+    {
+      "created_at": 1790721184,
+      "first": true,
+      "id": 14656454384516035971,
+      "outlet_count": 1,
+      "title": "Longtime NBA coach retires from JJ Redick’s staff as part of shakeups"
+    },
+    {
+      "created_at": 1790721184,
+      "first": true,
+      "id": 12241316642693750568,
+      "outlet_count": 1,
+      "title": "Media treats Mahmoud Khalil like a Nelson Mandela or MLK. He’s just a grifter"
+    },
+    {
+      "created_at": 1790721184,
+      "first": true,
+      "id": 8992619146363801924,
+      "outlet_count": 1,
+      "title": "Zoe Saldaña, Rosie Huntington-Whiteley and more stars shock in sheer lace at Saint Laurent fashion show"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 2931301599306692089,
+      "outlet_count": 8,
+      "title": "Tennessee to execute a woman for first time in 200 years after governor denies clemency"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 13866602592389928610,
+      "outlet_count": 13,
+      "title": "Senate passes bipartisan Protect College Sports Act amid ‘chaos’ in industry"
+    },
+    {
+      "created_at": 1790682645,
+      "first": false,
+      "id": 12263486972145751600,
+      "outlet_count": 6,
+      "title": "Iran's currency hits a new record low as war erodes the country's economic stability"
+    },
+    {
+      "created_at": 1790653931,
+      "first": false,
+      "id": 7660490768130103730,
+      "outlet_count": 3,
+      "title": "Mark Zuckerberg's Meta Launches 'Muse for Small Business' AI Agents"
+    },
+    {
+      "created_at": 1790660038,
+      "first": false,
+      "id": 4105122918329295150,
+      "outlet_count": 4,
+      "title": "Anthropic's IPO Prospectus Shows Sweeping AI Vision, Surging Costs: Report"
+    },
+    {
+      "created_at": 1790720496,
+      "first": true,
+      "id": 1184432841699792539,
+      "outlet_count": 1,
+      "title": "California takes over Yelp’s best new US restaurants — with LA landing #2"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 15949161486094845618,
+      "outlet_count": 1,
+      "title": "‘Racist Karen’ makes deranged court appearance after sick video of her abusing father and daughter"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 15941984564756722810,
+      "outlet_count": 1,
+      "title": "Foreign tourist numbers to the US are plunging — and travel chief says Trump can do 6 things to reverse the decline"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 13667310043727383880,
+      "outlet_count": 1,
+      "title": "NBA will select winning bid for Las Vegas expansion team ‘in near future’"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 11034307416564091182,
+      "outlet_count": 1,
+      "title": "Cubs vs. Padres Game 1 pick, predictions: Expect offensive explosion in Wild Card showdown"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 10652502907320843504,
+      "outlet_count": 1,
+      "title": "Nor’easter leaves Rockaway Beach looking like steep cliffs of Ireland: ‘Almost totally gone’"
+    },
+    {
+      "created_at": 1790665825,
+      "first": false,
+      "id": 9838628483592835776,
+      "outlet_count": 2,
+      "title": "Trump is proving that Iran CAN’T control the global oil supply — a win for the world"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 8788734479813915853,
+      "outlet_count": 1,
+      "title": "The White House proved today that embracing AI is a winning message"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 8660622523304538458,
+      "outlet_count": 1,
+      "title": "Former Auburn football staffer arrested for allegedly selling confidential information"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 8039412577643199775,
+      "outlet_count": 1,
+      "title": "NFL Week 3 betting trends: Buccaneers’ historic skid and biggest playoff odds movers"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 7899007271915684671,
+      "outlet_count": 1,
+      "title": "Charlize Theron pops up at champagne-soaked festival, and more stories from the column"
+    },
+    {
+      "created_at": 1790720196,
+      "first": true,
+      "id": 2417756316759752937,
+      "outlet_count": 1,
+      "title": "Video shows Presley Gerber’s heartbreaking final moments inside rehab hours before death"
+    }
+  ],
+  "story_pages": 3,
+  "window_days": 30
+}

@@ -1,0 +1,505 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "theintercept.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": -0.5133
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "theintercept",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "-0.51 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "theintercept.com",
+          "expires": "2027-10-01",
+          "last_changed": "2026-08-31",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "theintercept",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theintercept.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2009-10-01"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q18325436"
+        },
+        "field": "legal_form",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "501(c)(3) organization"
+      },
+      {
+        "data": {
+          "qid": "Q41298"
+        },
+        "field": "legal_form",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "magazine"
+      },
+      {
+        "data": {
+          "qid": "Q17232649"
+        },
+        "field": "legal_form",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "news website"
+      },
+      {
+        "data": {
+          "qid": "Q43229"
+        },
+        "field": "legal_form",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "organization"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "theintercept.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "theintercept",
+        "ref_url": "https://theintercept.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "The Intercept"
+      },
+      {
+        "field": "name",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "The Intercept"
+      }
+    ],
+    "owner": [
+      {
+        "data": {
+          "qid": "Q15730134"
+        },
+        "field": "owner",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "First Look Media"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "theintercept",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/theintercept",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.2 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "theintercept.com"
+        },
+        "field": "registrar",
+        "outlet_id": "theintercept",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theintercept.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Gandi SAS"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_218#The_Intercept_as_a_source",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_272#The_Intercept",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_302#The_Intercept_and_politics",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_315#The_Intercept_(non-staff_articles)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Intercept",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Intercept is generally reliable for news. Almost all editors consider The Intercept a biased source, so uses may need to be attributed. For science, editors prefer peer-reviewed journals over news sources like The Intercept."
+        },
+        "field": "reliability",
+        "outlet_id": "theintercept",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "theintercept",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/theintercept",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "theintercept.com",
+          "final_url": "https://theintercept.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "theintercept",
+        "ref_url": "https://theintercept.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://theintercept.com/about/",
+          "domain": "theintercept.com",
+          "masthead": "https://theintercept.com/2026/09/18/leavenworth-kansas-corecivic-prison-ice-staffing/",
+          "missing": [
+            "contact",
+            "corrections",
+            "ethics"
+          ],
+          "privacy": "https://theintercept.com/privacy-policy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "theintercept",
+        "ref_url": "https://theintercept.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, privacy, masthead pages from its home page; no contact, corrections, ethics link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "theintercept",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/theintercept",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://theintercept.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q15725297"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/The_Intercept"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 20,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "theintercept",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/theintercept",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 0,
+  "items": 23,
+  "outlet": {
+    "domains": [
+      "theintercept.com"
+    ],
+    "id": "theintercept",
+    "name": "The Intercept"
+  },
+  "shared_stories": 0,
+  "stories": [
+    {
+      "created_at": 1790715379,
+      "first": true,
+      "id": 14976639276164605450,
+      "outlet_count": 1,
+      "title": "Inside the Business of Trump’s Third-Country Deportations"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 15275379096882728622,
+      "outlet_count": 1,
+      "title": "The Intercept Sues Texas City Over Refusal to Release Police Records on Prairieland Protest"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 134323696131387440,
+      "outlet_count": 1,
+      "title": "Prison That Didn’t Report Sex Abuse Allegation Against Staffer to Reopen as ICE Camp"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 15332041892611342943,
+      "outlet_count": 1,
+      "title": "Congress Failed Again to Stop Trump’s Iran War. This Group Is Trying Through the Courts."
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 14905238506355398129,
+      "outlet_count": 1,
+      "title": "Flock Wants the Most Detailed Map of Its Surveillance Cameras Taken Offline"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 14825508599179467036,
+      "outlet_count": 1,
+      "title": "Pink Supported Macklemore’s Firing. Now Activists Want UNICEF to Cut Ties With Her."
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 14728224530262279903,
+      "outlet_count": 1,
+      "title": "Immigration Roulette: Husband Granted Asylum, Wife Locked Up Awaiting Deportation"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 14581064684947080381,
+      "outlet_count": 1,
+      "title": "Green Energy Is Coming for the Desert"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 14476968434300712895,
+      "outlet_count": 1,
+      "title": "Decision on Charging Renee Good and Alex Pretti’s Killers Looms Over Minneapolis DA Race"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 13829512487195136313,
+      "outlet_count": 1,
+      "title": "U.S. Has Suffered More Casualties In Iran Since the Conclusion of Operation Epic Fury"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 13823413899854352472,
+      "outlet_count": 1,
+      "title": "They Trained to Protect Immigrants From ICE. Now They’re Prepping to Defend the Midterm Elections."
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 12945063368901365646,
+      "outlet_count": 1,
+      "title": "As the Pentagon Expands Across the Pacific, Guam Offers a Warning"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 12481279940774429690,
+      "outlet_count": 1,
+      "title": "Exclusive: Feds Denied Ballistics Expert Access to Prairieland Defendant Who Got 100 Years in Prison"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 11095010975741522443,
+      "outlet_count": 1,
+      "title": "Lifestyles of the Rich & Famous War Profiteers"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 10994594518400550172,
+      "outlet_count": 1,
+      "title": "How a Small Kansas City Became a Critical Hub for Trump’s Deportation Regime Against Its Will"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 9833737230632499036,
+      "outlet_count": 1,
+      "title": "The Blueprint for Democrats to Win Back Voters"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 7940279932913625588,
+      "outlet_count": 1,
+      "title": "John Fetterman Is Fundraising on GOP Donor Email Lists"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 6588752153575291062,
+      "outlet_count": 1,
+      "title": "The Backlash to “NAZA” Shows How Little Israeli Citizenship Really Means"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 5857868874621098108,
+      "outlet_count": 1,
+      "title": "Another U.S. Soldier Is Dead as Iran War Casualties Rise"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 4306681718246295632,
+      "outlet_count": 1,
+      "title": "The “Satanic Panic” Made Her a True-Crime Obsession. The Truth Is More Haunting."
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 3286722263267238896,
+      "outlet_count": 1,
+      "title": "DoorDash Spent $1.4 Million Trying to Stop Mamdani From Becoming Mayor. Now We Know Why."
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 3210847232441568758,
+      "outlet_count": 1,
+      "title": "The Ellisons Could Make a Killing in Big Surveillance With the Paramount Merger"
+    },
+    {
+      "created_at": 1790653935,
+      "first": true,
+      "id": 1808741666153279039,
+      "outlet_count": 1,
+      "title": "AI Almost Started a U.S.–China War — and No One Seems to Care"
+    }
+  ],
+  "story_pages": 1,
+  "window_days": 30
+}

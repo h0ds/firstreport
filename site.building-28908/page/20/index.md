@@ -1,0 +1,54 @@
+# Stories, page 20 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [Price hikes to hit Japanese households starting next month](/story/15621425314450383270/) · 1 outlet · reach 1
+- [MAGA pundit's bizarre Ozempic tale dumbfounds CNN panel: 'Economy is like a fat person'](/story/7759141633548764989/) · 1 outlet · reach 1
+- [From forests to towns: What is behind Russia’s bear encounters?](/story/15608061131544526075/) · 1 outlet · reach 1
+- [Search for missing students leads to human remains, 17 suspects](/story/3236877073646032016/) · 1 outlet · reach 1
+- [Hegseth orders 'whole-of-government defense' to maintain election integrity against foreign threats](/story/2559220899696564922/) · 1 outlet · reach 1
+- [Kremlin comments on Estonia’s accusations, need for continued special military op](/story/928410524190276515/) · 1 outlet · reach 1
+- [Ireland lost to Israel](/story/9815769628576853461/) · 1 outlet · reach 1
+- [Malaysia begins sending back Rohingya refugees despite safety warnings](/story/14263650070409979055/) · 1 outlet · reach 1
+- [Hong Kong man returns to city after 26 years in Philippine prison for drug offences](/story/12666641661681079596/) · 1 outlet · reach 1
+- [Ireland's energy minister calls US ban on diesel exports unlikely](/story/2870982412583658483/) · 1 outlet · reach 1
+- [Spanish government agrees on eviction protections until 2030, curbs on property purchases by investment funds](/story/3167367124942422157/) · 1 outlet · reach 1
+- [The title-starved Yankees aren’t supposed to have this many questions](/story/13738361147778318253/) · 1 outlet · reach 1
+- [Thai cave rescue hero dies aged 44](/story/8121322049426877112/) · 1 outlet · reach 1
+- [6 EU member states call for cuts to bloc’s budget: Report](/story/464162787876182323/) · 1 outlet · reach 1
+- [Anadolu Atesi to take Troy on tour in Russia after Istanbul performance](/story/12650509706652680158/) · 1 outlet · reach 1
+- [Managing rainfall through technology, bricks could reduce flooding in Gulf region](/story/9283265475117901694/) · 1 outlet · reach 1
+- [DOJ charges 17 with stealing $1.3M in Social Security – including woman who kept dead mom in freezer](/story/14480116705751049659/) · 1 outlet · reach 1
+- [Smoke and mirrors? These big corporations are still shelling out for LGBT indoctrination](/story/5827350417037238391/) · 1 outlet · reach 1
+- ['Chivalry mode': Meet the new dating app that's for Christians only](/story/14008852814169839578/) · 1 outlet · reach 1
+- [We need accountability for federal employee purges made on false pretenses](/story/2500068483150467390/) · 1 outlet · reach 1
+- [Qatar’s Foreign Ministry warns of threat to global economy due to US-Iran conflict](/story/1568584260734017526/) · 1 outlet · reach 1
+- [Lavrov on Poland's Proposal on Patriot Missiles: Study Russia's Military Doctrine](/story/14601379206329449176/) · 1 outlet · reach 1
+- ['My God': Karoline Leavitt shamed after major math goof blows up 'lunatic' attack](/story/4281079664055995324/) · 1 outlet · reach 1
+- [MAGA schooled as Dem launches public war on sleeping Trump: 'Your facts are wrong'](/story/13081575667839073309/) · 1 outlet · reach 1
+- ['Dumb beyond belief': Trump insider predicts onslaught of subpoenas over new scandal](/story/17941731555240079028/) · 1 outlet · reach 1
+- [Live auctions are turning shopping into gambling](/story/8364597481023488745/) · 1 outlet · reach 1
+- [Smart ring maker Oura delays US IPO as fall market jitters deepen](/story/13256348797340834212/) · 1 outlet · reach 1
+- [Today in Supreme Court History: September 29, 2005](/story/15238537119377212132/) · 1 outlet · reach 1
+- [A Limited Supreme Court Win for Trump's Voter Database](/story/16389461623244713218/) · 1 outlet · reach 1
+- [Quebec Separatists Near Power With Plan for Vote on Breaking Up Canada](/story/4771033669079411364/) · 1 outlet · reach 1
+- [Opinion: Opinion | India Has A 'Lobbying' Problem In Washington, And It Has Come Back To Haunt It](/story/2846619247458000031/) · 1 outlet · reach 1
+- [Lebanese are watching Israel’s upcoming election, but few expect change](/story/8612507411299723515/) · 1 outlet · reach 1
+- [Palestine weekly: Israeli politicians vie to look toughest before election](/story/17358415999410053061/) · 1 outlet · reach 1
+- [‘Resign. You’re destroying the country’: Republican voter in key Ohio district slams Trump](/story/5915414140943247359/) · 1 outlet · reach 1
+- ['Dear Donald': Battleground district voters share their message to Trump](/story/6189339653567805740/) · 1 outlet · reach 1
+- ['Another driver lied over £60 parking ticket - it cost us our home and split us across 2 countries'](/story/8467261046320781304/) · 1 outlet · reach 1
+- ['I am not running for president,' Attorney General Todd Blanche says at Iowa State Fair](/story/11091692449468676511/) · 1 outlet · reach 1
+- [Historic Greek church in central Türkiye set to open to public soon](/story/4953159889192497184/) · 1 outlet · reach 1
+- [INTERVIEW – As Merz loses ground, could Germany see a 'chancellor swap'?](/story/17811055610993258795/) · 1 outlet · reach 1
+- [Rosatom CEO discussed extension of Armenian nuclear plant operation](/story/1416705862027725529/) · 1 outlet · reach 1
+- [Angela Rayner hints at a more radical Labour as she takes swipe at Nigel Farage over donations: 'Just imagine what he'd do for £70million!'](/story/18323651991543140679/) · 1 outlet · reach 1
+- [AI, robotic arms power Hong Kong public hospital laundry and meal centre](/story/4144679388773671173/) · 1 outlet · reach 1
+- [Pakistani envoy says work on Russian gas projects in country underway](/story/14599645156011851716/) · 1 outlet · reach 1
+- [Violence, Israeli settlement make life ‘intolerable’ for Palestinians in West Bank: Red Cross](/story/6299192479924820878/) · 1 outlet · reach 1
+- [Police fire tear gas at migrants on French beach](/story/403359952458811750/) · 1 outlet · reach 1
+- [New campaign disclosures reveal how much American political campaigns spend on AI tools](/story/832718455629040705/) · 1 outlet · reach 1
+- [Imams’ council condemns Melbourne Islamic preacher’s call to ‘take up arms’ against enemies](/story/3441484287523881423/) · 1 outlet · reach 1
+- [Japan's Premium Fruit Varieties Face Overseas IP Threat](/story/10358930259292362066/) · 1 outlet · reach 1
+- [British pensioner, 85, ‘beaten to death’ in rural France as suspects flee in his stolen car](/story/12262835692413857802/) · 1 outlet · reach 1
+- [Elderly disabled woman evicted after 71 years allowed to return home following protests](/story/14474612566720315441/) · 1 outlet · reach 1

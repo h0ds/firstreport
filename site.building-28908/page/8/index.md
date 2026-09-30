@@ -1,0 +1,54 @@
+# Stories, page 8 of 61
+
+Ordered by reach then recency; the full list is /index.md.
+
+- [‘A total dirtbag’: GOP senator mistakenly accuses Smith of perjury over NBA game](/story/8973659663785388228/) · 1 outlet · reach 1
+- [Florida Senate Nominee Nixon Draws Lines With DSA, Dems](/story/1180361926704683418/) · 1 outlet · reach 1
+- [Tech Leaders Agree AI Is Risky, Has to Be Safe](/story/7803252885963298794/) · 1 outlet · reach 1
+- [Ex-ESPN star Linda Cohn is back , with hotter takes than you’ve ever heard from her before](/story/1686193640852523594/) · 1 outlet · reach 1
+- [Obese rat dies escaping NYC trash can — but locals laud sick scene as high art: ‘It’s sculpture’](/story/13891843553220367396/) · 1 outlet · reach 1
+- [Twelve women have been killed in one part of South Africa since July. Here's what we know so far](/story/7035178624231398532/) · 1 outlet · reach 1
+- [Dodgers star Kiké Hernandez gets $45K custom necklace ahead of playoff run](/story/8700752380091428846/) · 1 outlet · reach 1
+- [The Jets question that comes with Aaron Glenn’s deja vu](/story/10908013100035130359/) · 1 outlet · reach 1
+- [NYC must rein in e-bikes now — and stop the carnage on our streets](/story/16314061746781916847/) · 1 outlet · reach 1
+- [Bruce Blakeman’s tax-slashing plan restores hope for New York](/story/16732847691102535827/) · 1 outlet · reach 1
+- [At UN, developing nations call for bigger say in shaping AI future](/story/5738979473323118593/) · 1 outlet · reach 1
+- [Diddy’s pampered life in prison: Massages, nude photos, Hennessy](/story/7106501477080242002/) · 1 outlet · reach 1
+- [Toddler brings loaded gun to Michigan daycare](/story/9474871895774289797/) · 1 outlet · reach 1
+- [RAF Fairford Does Not Add Up: U.K. Bails Terror Suspects as Trump Says He Would Not](/story/3249630829195059196/) · 1 outlet · reach 1
+- [Zoe Saldaña, Rosie Huntington-Whiteley and more stars shock in sheer lace at Saint Laurent fashion show](/story/8992619146363801924/) · 1 outlet · reach 1
+- [Media treats Mahmoud Khalil like a Nelson Mandela or MLK. He’s just a grifter](/story/12241316642693750568/) · 1 outlet · reach 1
+- [Longtime NBA coach retires from JJ Redick’s staff as part of shakeups](/story/14656454384516035971/) · 1 outlet · reach 1
+- [Night owls may have a particular late-in-life problem that’s bad for their health — and wallets](/story/15381715428415123993/) · 1 outlet · reach 1
+- [Trump's bid to escape slush fund penalties tossed out by panel with his own appointee](/story/13160993343573400474/) · 1 outlet · reach 1
+- [Sen. Paul: 'Too Soon' for 'Crazy' AI Regulation](/story/12168669219079489641/) · 1 outlet · reach 1
+- [Florida clears way for $100M surf park with artificial wave lagoon and beach far from ocean](/story/11006195988225645739/) · 1 outlet · reach 1
+- [Trump renames AI to ‘super intelligence’ and tells Americans they have no choice but to trust it](/story/17054031100176373998/) · 1 outlet · reach 1
+- [Manufacturing Hiring Picks Up, Openings Remain Strong, Quits Rise](/story/393237689739079573/) · 1 outlet · reach 1
+- [Montana AG Leads Coalition Against Maine's Firearm Waiting Period](/story/559440771644724083/) · 1 outlet · reach 1
+- [Cuba Holds Celebration of Its Neighborhood Spy Program in NYC](/story/6119482513910182803/) · 1 outlet · reach 1
+- [President Trump to Host Tech Titans for Lunch on AI Risks](/story/7826409686648180698/) · 1 outlet · reach 1
+- [Democrat Attorneys General and Paramount Team to Fight Sen. Cory Booker's Settlement Opposition](/story/8303927588787050198/) · 1 outlet · reach 1
+- [Exclusive: ICE Arrests Illegal Aliens Convicted of Murder, Child Sex Crimes, Rape](/story/8427634877829417062/) · 1 outlet · reach 1
+- [North Korea Celebrates Its Nukes at U.N. General Assembly](/story/12420881824347063977/) · 1 outlet · reach 1
+- [Florence Pugh, Adam Brody Call for a 'Free Palestine': 'Babies Are Still Dying'](/story/13747906559736074190/) · 1 outlet · reach 1
+- [Hot Mic – Female Reporters Heard Swooning over Kings Guard Ben Simmons: 'Lucky He's So Fine'](/story/14558674385873606725/) · 1 outlet · reach 1
+- [Nolte: Cornell University Gang Rape Story Looks Like Another Hoax](/story/14627849912288111655/) · 1 outlet · reach 1
+- [EXCLUSIVE: Abdul El-Sayed Called Laws Against Fentanyl Dealers ‘Draconian,’ Backed Supervised Drug Use Sites](/story/15528919444722229970/) · 1 outlet · reach 1
+- [Hayward: Xi Jinping’s Trip to Washington Yields Little Beyond Tariff Relief](/story/15785415021126518668/) · 1 outlet · reach 1
+- [Fans Blast USC Radio Broadcast Team for 'Embarrassing' Call of Illegal Hit on Dante Moore](/story/17065797247739644209/) · 1 outlet · reach 1
+- [Steve Moore: Instead of Banning Diesel Exports, Suspend Ethanol Requirements](/story/17502064160069813443/) · 1 outlet · reach 1
+- [In Britain, the Terror Question Remains the Same: War or Crime?](/story/11416589697332902339/) · 1 outlet · reach 1
+- [California takes over Yelp’s best new US restaurants — with LA landing #2](/story/1184432841699792539/) · 1 outlet · reach 1
+- [Anthropic CEO highlights AI’s benefits and risks after White House meeting](/story/3505082845254256043/) · 1 outlet · reach 1
+- [Judge panel signals possible contempt charges won't stop at Trump's 'sacrificial lamb'](/story/5022825423415422980/) · 1 outlet · reach 1
+- [EXCLUSIVE VIDEO: California Man Drives To Washington, DC To Advocate Against The Surveillance State](/story/9990627192340123016/) · 1 outlet · reach 1
+- [Iran warns regional states of Israel’s malicious intents following reports of Netanyahu UAE visit](/story/10171625965400392940/) · 1 outlet · reach 1
+- [Biles undecided about competing at 2028 LA Olympics](/story/3194384181279733495/) · 1 outlet · reach 1
+- ['Breakthrough Model of the Year' is transgender-identifying child of Naomi Watts](/story/17444062263067409196/) · 1 outlet · reach 1
+- [People with Type 2 diabetes lost up to 60 pounds on Lilly’s latest weight loss drug](/story/11814932021114792571/) · 1 outlet · reach 1
+- [Hochul has a record-breaking amount of campaign cash in final stretch of NYS election campaign](/story/18367400550689757/) · 1 outlet · reach 1
+- [Boeing Beats Northrop for Next Navy Jet Contract to Replace F-18](/story/38450887423748957/) · 1 outlet · reach 1
+- [Braden Schneider happy for chance to rectify his Rangers reputation — even with future uncertain](/story/820128536374767529/) · 1 outlet · reach 1
+- [Video shows Presley Gerber’s heartbreaking final moments inside rehab hours before death](/story/2417756316759752937/) · 1 outlet · reach 1
+- [IIF CEO on Rising Rates, Emerging Markets and Tariffs](/story/5580719812924862564/) · 1 outlet · reach 1

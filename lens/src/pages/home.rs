@@ -9,7 +9,7 @@ use serde_json::json;
 use super::Twins;
 use crate::derive::{cluster_facts, HOUR};
 use crate::input::Input;
-use crate::render::{cluster_card, datetime, esc, html, n, time_el, Page};
+use crate::render::{cluster_card, datetime, esc, html, n, Page};
 
 /// Stories per page of the story list; page 1 is `/`, then `/page/N/`.
 pub const PAGE_SIZE: usize = 50;
@@ -64,6 +64,15 @@ fn page_path(page: usize) -> String {
         "/".into()
     } else {
         format!("/page/{page}/")
+    }
+}
+
+/// "last 24 hours", or "last 7 days" for whole days past two.
+fn window_label(hours: i64) -> String {
+    if hours > 48 && hours % 24 == 0 {
+        format!("last {} days", hours / 24)
+    } else {
+        format!("last {hours} hours")
     }
 }
 
@@ -131,7 +140,7 @@ pub fn outlets_page(input: &Input) -> Twins {
         wide: false,
         head: "",
         body: &b,
-        status: &format!("outlets · built from an export at {}", datetime(now)),
+        status: &format!("Updated {}", datetime(now)),
     });
     let json = json!({"export_time": now, "outlets": input.outlets.values().collect::<Vec<_>>()});
     Twins { html: html_page, json, md }
@@ -145,10 +154,9 @@ pub fn story_page(input: &Input, window_hours: i64, page: usize) -> Twins {
     let pages = page_count(input, window_hours);
     let path = page_path(page);
     let mut b = format!(
-        "<h1>Stories</h1><p class=\"kg-muted\">Page {page} of {pages} · {} in the {} hours to {}, ordered by reach then recency. <a href=\"/about/#reach\">How reach is counted</a>.</p>",
-        n(recent.len() + single.len(), "story"),
-        window_hours,
-        time_el(now, now)
+        "<h1>Stories</h1><p class=\"kg-muted\">Page {page} of {pages} · {} stories · {} · ranked by <a class=\"kg-link-quiet\" href=\"/about/#reach\">reach</a></p>",
+        crate::render::thousands(recent.len() + single.len()),
+        window_label(window_hours)
     );
     b.push_str(&pager(page, pages, recent.len() + single.len()));
     b.push_str(&page_cards(input, &recent, &single, page));
@@ -167,7 +175,7 @@ pub fn story_page(input: &Input, window_hours: i64, page: usize) -> Twins {
         wide: false,
         head: "",
         body: &b,
-        status: &format!("built from an export at {}", datetime(now)),
+        status: &format!("Updated {}", datetime(now)),
     });
     let json = json!({
         "page": page, "pages": pages, "page_size": PAGE_SIZE, "export_time": now,
@@ -197,11 +205,10 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     let mut b = String::new();
     let _ = write!(
         b,
-        "<h1>Stories</h1><p class=\"kg-muted\">{} active in the {} hours to {}, from <a class=\"kg-link-quiet\" href=\"/outlets/\">{}</a> in the pool. Ordered by reach: independent reports in the window plus languages, then recency. <a href=\"/about/#reach\">How reach is counted</a>.</p>",
-        n(active, "story"),
-        window_hours,
-        time_el(now, now),
-        n(input.outlets.len(), "outlet")
+        "<h1>Stories</h1><p class=\"kg-muted\">{} stories from <a class=\"kg-link-quiet\" href=\"/outlets/\">{} outlets</a> · {} · ranked by <a class=\"kg-link-quiet\" href=\"/about/#reach\">reach</a></p>",
+        crate::render::thousands(active),
+        input.outlets.len(),
+        window_label(window_hours)
     );
     if active == 0 {
         b.push_str("<div class=\"empty\">No stories in the window. Run feed for a while, export, and build again.</div>");
@@ -273,7 +280,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         wide: false,
         head: &head,
         body: &b,
-        status: &format!("built from an export at {}", datetime(now)),
+        status: &format!("Updated {}", datetime(now)),
     });
     let page_json = json!({
         "window_hours": window_hours,

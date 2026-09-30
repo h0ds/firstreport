@@ -1,0 +1,100 @@
+{
+  "claims": {
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790682989,
+    "expired": false,
+    "id": 15621425314450383270,
+    "item_count": 1,
+    "last_active_at": 1790682989,
+    "origin_item_id": 15621425314450383270,
+    "origin_outlet_id": "japantimes",
+    "outlet_count": 1,
+    "primary_title": "Price hikes to hit Japanese households starting next month",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15621425314450383270,
+        "joined_at": 1790682989,
+        "outlet_id": "japantimes",
+        "published_at": 1790680560
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japantimes": "The Japan Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/business/2026/09/29/october-price-hikes/",
+          "cluster_id": 15621425314450383270,
+          "fetched_at": 1790682989,
+          "id": 15621425314450383270,
+          "joined_at": 1790682989,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790680560,
+          "summary": "Households will likely feel an increased financial burden, given that price hikes will also hit a wide range of food products.",
+          "text_hash": 12824484570332758405,
+          "title": "Price hikes to hit Japanese households starting next month"
+        }
+      ],
+      "outlet_id": "japantimes"
+    }
+  ],
+  "withdrawals": []
+}

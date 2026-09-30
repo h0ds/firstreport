@@ -1,0 +1,122 @@
+{
+  "claims": {
+    "france24": [
+      {
+        "data": {
+          "domain": "france24.com",
+          "expires": "2026-12-01",
+          "last_changed": "2026-04-21",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "france24",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/france24.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-12-01"
+      },
+      {
+        "data": {
+          "qid": "Q166180"
+        },
+        "field": "owner",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France 24"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790669195,
+    "expired": false,
+    "id": 13914677192649522008,
+    "item_count": 1,
+    "last_active_at": 1790669195,
+    "origin_item_id": 13914677192649522008,
+    "origin_outlet_id": "france24",
+    "outlet_count": 1,
+    "primary_title": "'Class sizes of more than 36 people': student protests continue in Paris and beyond",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 13914677192649522008,
+        "joined_at": 1790669195,
+        "outlet_id": "france24",
+        "published_at": 1790668783
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "france24": "France 24"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 13914677192649522008,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3772,
+      "snapshot_id": 17011684862465426163,
+      "ts": 1790679060
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://france24.com/en/video/20260929-class-sizes-of-more-than-36-people-student-protests-continue-in-paris-and-beyond-1",
+          "cluster_id": 13914677192649522008,
+          "fetched_at": 1790669195,
+          "id": 13914677192649522008,
+          "joined_at": 1790669195,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790668783,
+          "summary": "Teenagers in France have been blockading their schools and demonstrating since last week to protest a string of grievances. Standing in front of the Lycée Hélène Boucher, FRANCE 24 journalist Antonia Kerrigan said students there said there were \"class sizes of more than 36 people\". Click on the video for more.",
+          "text_hash": 8386420846480057150,
+          "title": "'Class sizes of more than 36 people': School protests continue in Paris and beyond"
+        }
+      ],
+      "outlet_id": "france24"
+    }
+  ],
+  "withdrawals": []
+}

@@ -1,0 +1,100 @@
+{
+  "claims": {
+    "japantimes": [
+      {
+        "data": {
+          "qid": "Q17"
+        },
+        "field": "country",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Japan"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "japantimes",
+        "ref_url": "https://www.wikidata.org/wiki/Q1190886",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1897-01-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790682989,
+    "expired": false,
+    "id": 3880901012769878928,
+    "item_count": 1,
+    "last_active_at": 1790682989,
+    "origin_item_id": 3880901012769878928,
+    "origin_outlet_id": "japantimes",
+    "outlet_count": 1,
+    "primary_title": "Japan’s new arctic research vessel set to arrive in December",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 3880901012769878928,
+        "joined_at": 1790682989,
+        "outlet_id": "japantimes",
+        "published_at": 1790681040
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "japantimes": "The Japan Times"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://japantimes.co.jp/news/2026/09/29/japan/japan-new-arctic-research-vessel/",
+          "cluster_id": 3880901012769878928,
+          "fetched_at": 1790682989,
+          "id": 3880901012769878928,
+          "joined_at": 1790682989,
+          "lang": "en",
+          "outlet_id": "japantimes",
+          "published_at": 1790681040,
+          "summary": "Mirai II will replace the 8,700-ton Mirai, which was decommissioned in December last year.",
+          "text_hash": 1237707553272370191,
+          "title": "Japan’s new arctic research vessel set to arrive in December"
+        }
+      ],
+      "outlet_id": "japantimes"
+    }
+  ],
+  "withdrawals": []
+}

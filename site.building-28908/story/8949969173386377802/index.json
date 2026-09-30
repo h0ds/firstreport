@@ -1,0 +1,127 @@
+{
+  "claims": {
+    "kyivindependent": [
+      {
+        "data": {
+          "qid": "Q212"
+        },
+        "field": "country",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Ukraine"
+      },
+      {
+        "data": {
+          "domain": "kyivindependent.com",
+          "expires": "2031-11-19",
+          "last_changed": "2025-11-23",
+          "registrar": "Instra Corporation Pty Ltd.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/kyivindependent.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2021-11-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-11-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790654763,
+    "expired": false,
+    "id": 8949969173386377802,
+    "item_count": 1,
+    "last_active_at": 1790654763,
+    "origin_item_id": 8949969173386377802,
+    "origin_outlet_id": "kyivindependent",
+    "outlet_count": 1,
+    "primary_title": "Ukraine's defense industry gets a second chance",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8949969173386377802,
+        "joined_at": 1790654763,
+        "outlet_id": "kyivindependent",
+        "published_at": 1790618360
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "kyivindependent": "The Kyiv Independent"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://kyivindependent.com/ukraines-defense-industry-gets-a-second-chance-2/",
+          "cluster_id": 8949969173386377802,
+          "fetched_at": 1790654763,
+          "id": 8949969173386377802,
+          "joined_at": 1790654763,
+          "lang": "en",
+          "outlet_id": "kyivindependent",
+          "published_at": 1790618360,
+          "summary": "In 1991, Ukraine inherited the second-largest defense industrial complex of the Soviet Union. It was so big that almost a third of the Soviet space industry sat on Ukrainian soil, and the system employed millions of people. Pivdenmash, a rocket and space technology juggernaut, built the most powerful intercontinental missiles",
+          "text_hash": 9446434049970351045,
+          "title": "Ukraine's defense industry gets a second chance"
+        }
+      ],
+      "outlet_id": "kyivindependent"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 8949969173386377802,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 4506,
+      "snapshot_id": 15323768833995399665,
+      "ts": 1790715385
+    }
+  ]
+}

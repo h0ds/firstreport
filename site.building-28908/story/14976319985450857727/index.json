@@ -1,0 +1,497 @@
+{
+  "claims": {
+    "anadolu": [
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (controversial topics, international politics) (AA)",
+          "status": "generally_unreliable",
+          "summary": "In the 2019 RfC, editors generally agreed that Anadolu Agency is generally unreliable for topics that are controversial or related to international politics."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_281#RfC:_Anadolu_Agency",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_376#Is_Anadolu_Agency_legit_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#RfC:_Anadolu_Agency"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Anadolu Agency (general topics) (AA)",
+          "status": "no_consensus",
+          "summary": "The 2019 RfC established no consensus on the reliability of Anadolu Agency. Well-established news outlets are normally considered reliable for statements of fact. However, Anadolu Agency is frequently described as a mouthpiece of the Turkish government that engages in propaganda, owing to its state-run status."
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "anadolu",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ],
+    "euronews": [
+      {
+        "data": {
+          "qid": "Q31"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Belgium"
+      },
+      {
+        "data": {
+          "qid": "Q142"
+        },
+        "field": "country",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France"
+      },
+      {
+        "data": {
+          "domain": "euronews.com",
+          "expires": "2027-04-25",
+          "last_changed": "2026-03-25",
+          "registrar": "Hogan Lovells International LLP",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "euronews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/euronews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-04-24"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1993-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q2720711"
+        },
+        "field": "owner",
+        "outlet_id": "euronews",
+        "ref_url": "https://www.wikidata.org/wiki/Q8478",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q2720711"
+      }
+    ],
+    "kyivindependent": [
+      {
+        "data": {
+          "qid": "Q212"
+        },
+        "field": "country",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Ukraine"
+      },
+      {
+        "data": {
+          "domain": "kyivindependent.com",
+          "expires": "2031-11-19",
+          "last_changed": "2025-11-23",
+          "registrar": "Instra Corporation Pty Ltd.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/kyivindependent.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2021-11-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-11-01"
+      }
+    ],
+    "scmp": [
+      {
+        "data": {
+          "qid": "Q148"
+        },
+        "field": "country",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "People's Republic of China"
+      },
+      {
+        "data": {
+          "domain": "scmp.com",
+          "expires": "2030-09-08",
+          "last_changed": "2022-09-11",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "scmp",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/scmp.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-09-09"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1903-11-06"
+      },
+      {
+        "data": {
+          "qid": "Q1359568"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Alibaba Group"
+      },
+      {
+        "data": {
+          "qid": "Q7389177"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Great Wall Pan Asia Holdings"
+      },
+      {
+        "data": {
+          "qid": "Q185278"
+        },
+        "field": "owner",
+        "outlet_id": "scmp",
+        "ref_url": "https://www.wikidata.org/wiki/Q1198574",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "News Corporation"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_319#RfC:_South_China_Morning_Post_(SCMP)",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_268#Minnie_Chan's_reports_on_the_Chinese_military",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_285#South_China_Morning_Post_reliability",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_309#South_China_Morning_Post_(and_Lin_Nguyen,_a_fabricated_writer)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "South China Morning Post (SCMP, Sunday Morning Post)",
+          "status": "generally_reliable",
+          "summary": "The South China Morning Post is widely considered to be the English-language newspaper of record in Hong Kong. In the 2020 RFC, there was consensus that the SCMP is generally reliable for non-political topics, with a rough consensus that additional considerations apply to the newspaper's coverage of certain topics. These include the Chinese Communist Party (CCP), the Chinese -directed Hong Kong go"
+        },
+        "field": "reliability",
+        "outlet_id": "scmp",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "tass": [
+      {
+        "data": {
+          "domain": "tass.com",
+          "expires": "2027-09-16",
+          "last_changed": "2026-09-15",
+          "registrar": "Regional Network Information Center, JSC dba RU-CENTER",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "tass",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/tass.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-09-17"
+      },
+      {
+        "as_of": "2022",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#RfC:_TASS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_378#RfC_on_TASS",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_370#Use_of_TASS_for_Ukranian_refugee_figures",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_377#TASS,_Interfax_(russian_version)_and_RIA_Novosti's_reliability_on_the_2022_Russian_invasion_of_Ukraine_(especially_on_alleged_attacks_in_Russia)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "TASS (ITAR-TASS, Telegraph Agency of the Soviet Union, Information Telegraph Agency of Russia)",
+          "status": "generally_unreliable",
+          "summary": "In a 2022 RfC, editors achieved a strong consensus that TASS is a biased source with respect to topics in which the Russian government may have an interest and that the source is generally unreliable for providing contentious facts in that context. Editors attained a rough consensus that TASS should not be deprecated at this time and a rough consensus that TASS is generally unreliable more broadly"
+        },
+        "field": "reliability",
+        "note": "matched by name only; verify the row is this outlet",
+        "outlet_id": "tass",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally unreliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.08898264169692993,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": 0.8089826703071594
+    },
+    "created_at": 1790653941,
+    "expired": false,
+    "id": 14976319985450857727,
+    "item_count": 5,
+    "last_active_at": 1790715385,
+    "origin_item_id": 14976319985450857727,
+    "origin_outlet_id": "scmp",
+    "outlet_count": 5,
+    "primary_title": "New Russian mobilisation: Putin signs decree adding 15,500 troops to army",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 14976319985450857727,
+        "joined_at": 1790653941,
+        "outlet_id": "scmp",
+        "published_at": 1790622508
+      },
+      {
+        "item_id": 438679043387567309,
+        "joined_at": 1790653944,
+        "outlet_id": "anadolu",
+        "published_at": 1790631619
+      },
+      {
+        "item_id": 12216644090589081420,
+        "joined_at": 1790653945,
+        "outlet_id": "tass",
+        "published_at": 1790629964
+      },
+      {
+        "item_id": 9157480795316976487,
+        "joined_at": 1790667411,
+        "outlet_id": "euronews",
+        "published_at": 1790666144
+      },
+      {
+        "item_id": 5461701879123865789,
+        "joined_at": 1790715385,
+        "outlet_id": "kyivindependent",
+        "published_at": 1790700331
+      }
+    ]
+  },
+  "coverage_by_label": [
+    {
+      "field": "reliability",
+      "labels": [
+        {
+          "label": "Generally reliable",
+          "outlets": [
+            "scmp"
+          ]
+        },
+        {
+          "label": "Generally unreliable",
+          "outlets": [
+            "anadolu",
+            "tass"
+          ]
+        }
+      ],
+      "not_rated": [
+        "euronews",
+        "kyivindependent"
+      ],
+      "source_id": "wikipedia_rsp"
+    }
+  ],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "anadolu": "Anadolu Agency",
+    "euronews": "Euronews",
+    "kyivindependent": "The Kyiv Independent",
+    "scmp": "South China Morning Post",
+    "tass": "TASS"
+  },
+  "outlets_24h": 5,
+  "outlets_6h": 1,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 9157480795316976487,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3734,
+      "snapshot_id": 10251419241293092034,
+      "ts": 1790670677
+    }
+  ],
+  "spark": [
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://scmp.com/news/world/russia-central-asia/article/3369112/putin-signs-decree-adding-15500-troops-russian-army",
+          "cluster_id": 14976319985450857727,
+          "fetched_at": 1790653941,
+          "id": 14976319985450857727,
+          "joined_at": 1790653941,
+          "lang": "en",
+          "outlet_id": "scmp",
+          "published_at": 1790622508,
+          "summary": "Russian President Vladimir Putin signed a decree on Monday boosting the size of the army by 15,500 troops in the fourth such order this year. Putin’s order comes as both Russia and Ukraine suffer mounting casualties in the more than 4½-year Ukraine war. The decree did not give a reason for the troop increase. “The authorised personnel strength of the Russian armed forces is to be set at 2,441,630 units, including 1,550,500 military personnel,” the decree said. Putin had previously signed...",
+          "text_hash": 6969052430282414274,
+          "title": "Putin orders 15,500 additional troops for Russian army"
+        }
+      ],
+      "outlet_id": "scmp"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://tass.com/defense/2194237",
+          "cluster_id": 14976319985450857727,
+          "fetched_at": 1790653945,
+          "id": 12216644090589081420,
+          "joined_at": 1790653945,
+          "lang": "en",
+          "outlet_id": "tass",
+          "published_at": 1790629964,
+          "summary": "The personnel ceiling of the Russian armed forces grew by 15,500 people compared to the previous decree",
+          "text_hash": 12840160420787335239,
+          "title": "Putin sets personnel ceiling of Russian armed forces at over 2.44 million"
+        }
+      ],
+      "outlet_id": "tass"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://aa.com.tr/en/world/putin-increases-authorized-strength-of-russian-armed-forces-to-244m-personnel/4072076",
+          "cluster_id": 14976319985450857727,
+          "fetched_at": 1790653944,
+          "id": 438679043387567309,
+          "joined_at": 1790653944,
+          "lang": "en",
+          "outlet_id": "anadolu",
+          "published_at": 1790631619,
+          "summary": "Total includes 1,550,500 active-duty military personnel, according to decree",
+          "text_hash": 7651948198982983399,
+          "title": "Putin increases authorized strength of Russian Armed Forces to 2.44M personnel"
+        }
+      ],
+      "outlet_id": "anadolu"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://euronews.com/2026/09/29/new-russian-mobilisation-putin-signs-decree-adding-15500-troops-to-army",
+          "cluster_id": 14976319985450857727,
+          "fetched_at": 1790667411,
+          "id": 9157480795316976487,
+          "joined_at": 1790667411,
+          "lang": "en",
+          "outlet_id": "euronews",
+          "published_at": 1790666144,
+          "summary": "The decree adds 15,500 troops, bringing the authorised military strength to 1.55 million, the fourth such increase since March. Zelenskyy said Moscow had \"already begun additional mobilisation\" and that North Korea was preparing to send a further 10,000 soldiers to Russia.",
+          "text_hash": 8084386347675789511,
+          "title": "Putin expands army for fourth time this year as war losses mount"
+        }
+      ],
+      "outlet_id": "euronews"
+    },
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://kyivindependent.com/putin-signs-latest-decree-increasing-russian-military-staff-in-wake-of-monster-military-budget-looming-mobilization/",
+          "cluster_id": 14976319985450857727,
+          "fetched_at": 1790715385,
+          "id": 5461701879123865789,
+          "joined_at": 1790715385,
+          "lang": "en",
+          "outlet_id": "kyivindependent",
+          "published_at": 1790700331,
+          "summary": "Compared to the most recent figure from July 2026, the decree increases total staff by only around 15,500, is the fourth such incremental raise announced this year.",
+          "text_hash": 6677981148611696149,
+          "title": "Putin signs latest decree increasing Russian military staff in wake of monster military budget, looming mobilization"
+        }
+      ],
+      "outlet_id": "kyivindependent"
+    }
+  ],
+  "withdrawals": []
+}

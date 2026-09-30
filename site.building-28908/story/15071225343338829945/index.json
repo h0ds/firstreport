@@ -1,0 +1,129 @@
+{
+  "claims": {
+    "motherjones": [
+      {
+        "data": {
+          "domain": "motherjones.com",
+          "expires": "2027-06-18",
+          "last_changed": "2025-04-19",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "motherjones",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/motherjones.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-06-19"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q851510 (Mother Jones); also Q55467943 (Foundation for National Progress)",
+        "outlet_id": "motherjones",
+        "ref_url": "https://www.wikidata.org/wiki/Q851510",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1976-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_132#[Mother_Jones_and_Rolling_Stone_articles_as_RS_sources_in_a_BLP_for_a_contentious_claim",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_149#Opinion_column_by_Stephanie_Mencimer_in_Mother_Jones",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_188#Buzzfeed,_Mother_Jones_for_BLP's.",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_229#Is_Mother_Jones_magazine_a_reliable_source_for_investigative_reporting?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_274#Does_this_Mother_Jones_article_accurately_summarize_the_arguments_made_by_the_PragerU_videos_it_cites?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Mother Jones (MoJo)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Mother Jones is generally reliable. Almost all editors consider Mother Jones a biased source, so its statements (particularly on political topics) may need to be attributed. Consider whether content from this publication constitutes due weight before citing it in an article."
+        },
+        "field": "reliability",
+        "outlet_id": "motherjones",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790679062,
+    "expired": false,
+    "id": 15071225343338829945,
+    "item_count": 1,
+    "last_active_at": 1790679062,
+    "origin_item_id": 15071225343338829945,
+    "origin_outlet_id": "motherjones",
+    "outlet_count": 1,
+    "primary_title": "The Education of Min Jin Lee",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15071225343338829945,
+        "joined_at": 1790679062,
+        "outlet_id": "motherjones",
+        "published_at": 1790676000
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "motherjones": "Mother Jones"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://motherjones.com/media/2026/09/min-jin-lee-american-hagwon-education/",
+          "cluster_id": 15071225343338829945,
+          "fetched_at": 1790679062,
+          "id": 15071225343338829945,
+          "joined_at": 1790679062,
+          "lang": "en",
+          "outlet_id": "motherjones",
+          "published_at": 1790676000,
+          "summary": "The first hint that I needn’t be so anxious to interview Min Jin Lee came as the bestselling author descended the creaky stairs of her five-story Harlem townhouse and pronounced my name. Not in the way my brain has articulated it for decades, smoothed over by an anglicized version that made it easy for teachers […]",
+          "text_hash": 9312967868759935539,
+          "title": "The Education of Min Jin Lee"
+        }
+      ],
+      "outlet_id": "motherjones"
+    }
+  ],
+  "withdrawals": []
+}

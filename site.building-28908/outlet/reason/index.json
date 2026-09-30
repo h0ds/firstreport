@@ -1,0 +1,678 @@
+{
+  "claims": {
+    "audience_partisanship": [
+      {
+        "as_of": "2017",
+        "data": {
+          "host": "reason.com",
+          "scale": {
+            "max": 1,
+            "max_means": "shared only by Republicans",
+            "min": -1,
+            "min_means": "shared only by Democrats"
+          },
+          "score": 0.3846
+        },
+        "field": "audience_partisanship",
+        "note": "Who shared the outlet's links on Twitter in 2017, among ~500,000 US accounts of known party; a measure of its audience, not of its content. Robertson et al. 2018, CC0.",
+        "outlet_id": "reason",
+        "ref_url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX",
+        "retrieved_at": 1790663606,
+        "source_id": "robertson2018",
+        "value": "+0.38 on −1 (shared by Democrats) to +1 (shared by Republicans)"
+      }
+    ],
+    "country": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      }
+    ],
+    "domain_registered": [
+      {
+        "data": {
+          "domain": "reason.com",
+          "expires": "2034-08-21",
+          "last_changed": "2024-08-21",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "reason",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/reason.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-22"
+      }
+    ],
+    "founded": [
+      {
+        "field": "founded",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1968-01-01"
+      }
+    ],
+    "legal_form": [
+      {
+        "data": {
+          "qid": "Q17558136"
+        },
+        "field": "legal_form",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "YouTube channel"
+      },
+      {
+        "data": {
+          "qid": "Q41298"
+        },
+        "field": "legal_form",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "magazine"
+      }
+    ],
+    "name": [
+      {
+        "data": {
+          "domain": "reason.com"
+        },
+        "field": "name",
+        "note": "og:site_name on the home page",
+        "outlet_id": "reason",
+        "ref_url": "https://reason.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "Reason Magazine"
+      },
+      {
+        "field": "name",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Reason"
+      }
+    ],
+    "origin_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 49,
+          "origin_of": 1,
+          "shared_stories": 2,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "origin_share",
+        "outlet_id": "reason",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/reason",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "first to 50% of 2 stories other outlets also carried"
+      }
+    ],
+    "posting_cadence": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 49,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "posting_cadence",
+        "outlet_id": "reason",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/reason",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0.5 items/day"
+      }
+    ],
+    "registrar": [
+      {
+        "data": {
+          "domain": "reason.com"
+        },
+        "field": "registrar",
+        "outlet_id": "reason",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/reason.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "Network Solutions, LLC"
+      }
+    ],
+    "reliability": [
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_200#Reason_Magazine_at_David_Lisak",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_291#Reason_Magazine_and_reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_352#Reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_500#Reason_(magazine)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Reason",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Reason is generally reliable for news and facts. Editors consider Reason to be a biased or opinionated source that primarily publishes commentary, analysis, and opinion articles. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "reason",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ],
+    "revision_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 49,
+          "revised": 0,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "revision_rate",
+        "outlet_id": "reason",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/reason",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items revised after publication"
+      }
+    ],
+    "site_https": [
+      {
+        "data": {
+          "domain": "reason.com",
+          "final_url": "https://reason.com/",
+          "http_redirects_to_https": true,
+          "http_status": 200,
+          "https": true,
+          "status": 200
+        },
+        "field": "site_https",
+        "outlet_id": "reason",
+        "ref_url": "https://reason.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "https; plain http redirects to it"
+      }
+    ],
+    "site_pages": [
+      {
+        "data": {
+          "about": "https://reason.com/about/",
+          "contact": "https://reason.com/contact-reason/",
+          "domain": "reason.com",
+          "masthead": "https://reason.com/people/reason-staff/",
+          "missing": [
+            "corrections",
+            "ethics"
+          ],
+          "privacy": "https://reason.com/privacy/"
+        },
+        "field": "site_pages",
+        "note": "Looked for in home-page links only; a page that exists but is not linked there counts as not found.",
+        "outlet_id": "reason",
+        "ref_url": "https://reason.com/",
+        "retrieved_at": 1790669037,
+        "source_id": "site",
+        "value": "links about, contact, privacy, masthead pages from its home page; no corrections, ethics link found"
+      }
+    ],
+    "syndication_share": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "copied_by_others": 0,
+          "copies": 0,
+          "items": 49,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01"
+        },
+        "field": "syndication_share",
+        "outlet_id": "reason",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/reason",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items carry text first published elsewhere; 0% were carried by others"
+      }
+    ],
+    "website": [
+      {
+        "field": "website",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://reason.com/"
+      }
+    ],
+    "wikidata_id": [
+      {
+        "field": "wikidata_id",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Q1454090"
+      }
+    ],
+    "wikipedia": [
+      {
+        "field": "wikipedia",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "https://en.wikipedia.org/wiki/Reason_(magazine)"
+      }
+    ],
+    "withdrawal_rate": [
+      {
+        "as_of": "2026-09-29",
+        "data": {
+          "items": 49,
+          "window_days": 90,
+          "window_end": "2026-09-29",
+          "window_start": "2026-07-01",
+          "withdrawn": 0
+        },
+        "field": "withdrawal_rate",
+        "outlet_id": "reason",
+        "ref_url": "http://127.0.0.1:8080/v1/outlets/reason",
+        "retrieved_at": 1790669448,
+        "source_id": "feed_behaviour",
+        "value": "0% of items withdrawn"
+      }
+    ]
+  },
+  "copied": 0,
+  "copies": 0,
+  "export_time": 1790725421,
+  "first_to": 2,
+  "items": 72,
+  "outlet": {
+    "domains": [
+      "reason.com"
+    ],
+    "id": "reason",
+    "name": "Reason"
+  },
+  "shared_stories": 5,
+  "stories": [
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 3801729074308448679,
+      "outlet_count": 2,
+      "title": "Beware the Rush to Judgment in the Cornell Rape Case"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 13866602592389928610,
+      "outlet_count": 13,
+      "title": "Senate passes bipartisan Protect College Sports Act amid ‘chaos’ in industry"
+    },
+    {
+      "created_at": 1790718167,
+      "first": true,
+      "id": 231436292852516509,
+      "outlet_count": 1,
+      "title": "Eleventh Circuit Upholds Restriction on Referring to \"Settlement\" of Trump v. IRS,"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 16833119831810483869,
+      "outlet_count": 1,
+      "title": "Lawyers Shouldn't Spit in Protesters' Faces (and Police Generally Shouldn't Kick in Doors Without Warrants)"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 15963116941983779300,
+      "outlet_count": 1,
+      "title": "Were the Nazis Socialist? Only in Part"
+    },
+    {
+      "created_at": 1790638791,
+      "first": false,
+      "id": 15880606247577160332,
+      "outlet_count": 2,
+      "title": "TikTok's $100 Million Settlement With Alabama Is No Win for the Public"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 15527752899374290943,
+      "outlet_count": 1,
+      "title": "The Rise of the Non-Celebrity Celebrity"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 14752541047968046031,
+      "outlet_count": 1,
+      "title": "Whatever Happened to Trump's Housing Affordability Executive Order?"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 10929381206126660414,
+      "outlet_count": 1,
+      "title": "Painting Graffiti on African Burial Ground National Monument Isn't Protected Speech or Religious Practice"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 9105006456615222665,
+      "outlet_count": 1,
+      "title": "The Turnout Race"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 7868700823747437332,
+      "outlet_count": 1,
+      "title": "X Litigation Forum Selection Clause Is Unenforceable, Court Rules"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 7621522377051866198,
+      "outlet_count": 1,
+      "title": "Problems with the New US Civil Rights Commission Report on Campus Antisemitism, Part I"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 7494383106240770084,
+      "outlet_count": 1,
+      "title": "The Way the FDA and DEA Ban Drugs Is Unaccountable and Arbitrary"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 6794584754068912582,
+      "outlet_count": 1,
+      "title": "The Supreme Court's two decades of constitutional change"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 5880133237227151428,
+      "outlet_count": 1,
+      "title": "Maybe the \"M\" in \"SMOD\" Actually Stands for \"Model\""
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 5631230513484315656,
+      "outlet_count": 1,
+      "title": "Kids Are Using NPR Podcast Comments as Secret Group Chats"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 1647245581301904849,
+      "outlet_count": 1,
+      "title": "Correcting the Stereotype About Libertarians Only Caring About 'Weed and Porn'"
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 470109026791181003,
+      "outlet_count": 1,
+      "title": "AI Facial Recognition Didn't Put This Tennessee Grandma in Jail for 6 Months. Bad Policing Did."
+    },
+    {
+      "created_at": 1790715383,
+      "first": true,
+      "id": 56349770715750818,
+      "outlet_count": 1,
+      "title": "Seattle's 'Surveillance Pricing' Ban Is a Solution Searching for a Problem"
+    },
+    {
+      "created_at": 1790681066,
+      "first": true,
+      "id": 16389461623244713218,
+      "outlet_count": 1,
+      "title": "A Limited Supreme Court Win for Trump's Voter Database"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15238537119377212132,
+      "outlet_count": 1,
+      "title": "Today in Supreme Court History: September 29, 2005"
+    },
+    {
+      "created_at": 1790653930,
+      "first": false,
+      "id": 18223236983752790663,
+      "outlet_count": 2,
+      "title": "Trump paying for political ads with taxpayer money?"
+    },
+    {
+      "created_at": 1790679061,
+      "first": true,
+      "id": 16184040353973442799,
+      "outlet_count": 1,
+      "title": "Brickbat: Evidence Is Overrated"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 4894854635682979054,
+      "outlet_count": 1,
+      "title": "Open Thread"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 10980737569429867374,
+      "outlet_count": 3,
+      "title": "May President Trump Exclude CNN from Air Force One? Very Likely Yes"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 16209928636502917128,
+      "outlet_count": 1,
+      "title": "As Police Misuse Flock Cameras, 2 Senators From Opposite Parties Demand More Oversight"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 16107897537162424708,
+      "outlet_count": 1,
+      "title": "Music Teacher's Defamation Lawsuit Against StopAntisemitism Thrown Out"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15985766070680508219,
+      "outlet_count": 1,
+      "title": "Brothzilla, or \"It's a Cruel Thing to Disrupt Your Estranged Sister's Expensive Destination Wedding\""
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15958813309455739998,
+      "outlet_count": 1,
+      "title": "Once Recession-Proof, D.C. Feels the Pain From Federal Workforce Reductions"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15895595088229803876,
+      "outlet_count": 1,
+      "title": "College Founded by 'Christian Nationalist' Pastor Claims Religious Discrimination by Zoning Officials"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15629226841183506495,
+      "outlet_count": 1,
+      "title": "Obama Claims Government Is 'Less Corrupt' and Women Are Better Leaders. There's a Problem With Both Ideas."
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 15401448671310687811,
+      "outlet_count": 1,
+      "title": "Hinojosa Hates the Culture War"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 14894125479598701524,
+      "outlet_count": 1,
+      "title": "The 5th Circuit Rejects Qualified Immunity for Cops Who Searched a Driver After a Bogus Traffic Stop"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 14072225788304119305,
+      "outlet_count": 1,
+      "title": "Border Agents Search Phones Without Warrants. This Case Asks the Supreme Court if That's Constitutional"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 13258733832801483411,
+      "outlet_count": 1,
+      "title": "Brickbat: Every Step You Take"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 12768497271136618031,
+      "outlet_count": 1,
+      "title": "Free Speech Unmuted: Can the President Kick Reporters out of the White House?"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 12703903969732785784,
+      "outlet_count": 1,
+      "title": "As Suncor Approaches, Justice Alito Recuses"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 12042221210540999175,
+      "outlet_count": 1,
+      "title": "When Making a Statutory Argument, It Helps To Read the Statute"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 11546732864361724007,
+      "outlet_count": 1,
+      "title": "No, Private Equity Isn't Ruining Your Sandwiches, Your Apartment, or Grandma's Nursing Home"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 11539245052862268845,
+      "outlet_count": 1,
+      "title": "A Few More Thoughts On The Missouri Ruling"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 11059137030718021713,
+      "outlet_count": 1,
+      "title": "Texas Court Refuses to Enforce Pakistan Court's Divorce Judgment, in $100M-Marital-Community-Asset Case"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 10911241215047147840,
+      "outlet_count": 1,
+      "title": "Police in Texas Totaled an Innocent Woman's Car. Why Did Houston Deny Her Claim for Compensation?"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 10777813735224111975,
+      "outlet_count": 1,
+      "title": "Federal Courts Are Running a Surplus Charging for Public Records"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 10237017697453059379,
+      "outlet_count": 1,
+      "title": "Archives: October 2026"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 9265005307147859082,
+      "outlet_count": 1,
+      "title": "You Can 'Recruit' a Minor for an Abortion in Tennessee"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 9039537868149211092,
+      "outlet_count": 1,
+      "title": "Today in Supreme Court History: September 26, 1986"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 9009185902192222429,
+      "outlet_count": 1,
+      "title": "Democrats Are Quietly Clashing Over U.S. Involvement in Saudi Arabia's War in Yemen"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 8978168746984836281,
+      "outlet_count": 1,
+      "title": "Lightning Strikes Thrice"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 8552912817574841797,
+      "outlet_count": 1,
+      "title": "Anthropic's Claims Over Its \"Supply Chain Risk\" Exclusion by Department of War Rejected"
+    },
+    {
+      "created_at": 1790653936,
+      "first": true,
+      "id": 8292908282262411952,
+      "outlet_count": 1,
+      "title": "ALJ Recommends Dismissing Administrative Charges Against Florida Teacher for Kirk-Related and Trump-Related Posts"
+    }
+  ],
+  "story_pages": 2,
+  "window_days": 30
+}

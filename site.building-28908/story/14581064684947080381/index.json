@@ -1,0 +1,149 @@
+{
+  "claims": {
+    "theintercept": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "theintercept.com",
+          "expires": "2027-10-01",
+          "last_changed": "2026-08-31",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "theintercept",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theintercept.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2009-10-01"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2014-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q15730134"
+        },
+        "field": "owner",
+        "outlet_id": "theintercept",
+        "ref_url": "https://www.wikidata.org/wiki/Q15725297",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "First Look Media"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_218#The_Intercept_as_a_source",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_272#The_Intercept",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_302#The_Intercept_and_politics",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_315#The_Intercept_(non-staff_articles)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Intercept",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Intercept is generally reliable for news. Almost all editors consider The Intercept a biased source, so uses may need to be attributed. For science, editors prefer peer-reviewed journals over news sources like The Intercept."
+        },
+        "field": "reliability",
+        "outlet_id": "theintercept",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653935,
+    "expired": false,
+    "id": 14581064684947080381,
+    "item_count": 1,
+    "last_active_at": 1790653935,
+    "origin_item_id": 14581064684947080381,
+    "origin_outlet_id": "theintercept",
+    "outlet_count": 1,
+    "primary_title": "Green Energy Is Coming for the Desert",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 14581064684947080381,
+        "joined_at": 1790653935,
+        "outlet_id": "theintercept",
+        "published_at": 1790274046
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "theintercept": "The Intercept"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theintercept.com/2026/09/24/solar-farms-mojave-desert-renewable-energy/",
+          "cluster_id": 14581064684947080381,
+          "fetched_at": 1790653935,
+          "id": 14581064684947080381,
+          "joined_at": 1790653935,
+          "lang": "en",
+          "outlet_id": "theintercept",
+          "published_at": 1790274046,
+          "summary": "Trump’s Bureau of Land Management is pushing to aggressively expand solar farms into the Mojave Desert, which advocates say would decimate its vast biodiversity. The post Green Energy Is Coming for the Desert appeared first on The Intercept .",
+          "text_hash": 14136402724430040090,
+          "title": "Green Energy Is Coming for the Desert"
+        }
+      ],
+      "outlet_id": "theintercept"
+    }
+  ],
+  "withdrawals": []
+}

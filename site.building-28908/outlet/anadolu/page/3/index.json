@@ -1,0 +1,115 @@
+{
+  "export_time": 1790725421,
+  "outlet": "anadolu",
+  "page": 3,
+  "page_size": 50,
+  "pages": 3,
+  "stories": [
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 14065440926354064549,
+      "outlet_count": 1,
+      "title": "Israeli military closures isolate Ramallah, strand Palestinians for hours"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 13314670830098931930,
+      "outlet_count": 1,
+      "title": "Saudi Arabia issues second all-clear for Najran after brief danger alert"
+    },
+    {
+      "created_at": 1790653941,
+      "first": false,
+      "id": 12872295433709012640,
+      "outlet_count": 2,
+      "title": "Pentagon awards RTX’s Raytheon $26.4 billion contract for AMRAAM missiles amid stockpile concerns"
+    },
+    {
+      "created_at": 1790653942,
+      "first": false,
+      "id": 11543199367220600448,
+      "outlet_count": 2,
+      "title": "Italy rebound in Turkiye as France win late in Belgium"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 10977884203829607657,
+      "outlet_count": 1,
+      "title": "Putin tightens Russia’s energy data secrecy to hinder Western sanctions"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 10943188710088636221,
+      "outlet_count": 1,
+      "title": "Gas pipeline blaze disrupts supplies to power stations in eastern Syria"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 10815218623705726829,
+      "outlet_count": 1,
+      "title": "Suspected UK airbase plot involved 'foreign actor': Top US diplomat"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 10536721049785001944,
+      "outlet_count": 1,
+      "title": "Honduras hit by protests over nationwide fuel price hike"
+    },
+    {
+      "created_at": 1790633633,
+      "first": false,
+      "id": 10121858657817306637,
+      "outlet_count": 2,
+      "title": "Yemen’s army says 476 Houthis killed or wounded in 356 operations over 24 hours"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 8210604655404332363,
+      "outlet_count": 1,
+      "title": "LeBron James dismisses retirement talk, says he's 'living in the moment'"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 7513793083548241922,
+      "outlet_count": 1,
+      "title": "North Korea warns UN of Japan’s ‘attempts at rearmament'"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 7232033930263095035,
+      "outlet_count": 1,
+      "title": "Türkiye, UAE discussed bilateral ties, regional challenges: Turkish foreign minister"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 3914565077800249778,
+      "outlet_count": 1,
+      "title": "Turkish diplomat appointed to senior UN posts"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 2819009795980407610,
+      "outlet_count": 1,
+      "title": "Nearly 16,000 displaced in 1 week in Yemen as insecurity persists: UN migration agency"
+    },
+    {
+      "created_at": 1790653944,
+      "first": true,
+      "id": 1393148785844281318,
+      "outlet_count": 1,
+      "title": "UAE calls for regional de-escalation, free passage through Strait of Hormuz"
+    }
+  ],
+  "window_days": 30
+}

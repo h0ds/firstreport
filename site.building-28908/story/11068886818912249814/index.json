@@ -1,0 +1,127 @@
+{
+  "claims": {
+    "kyivindependent": [
+      {
+        "data": {
+          "qid": "Q212"
+        },
+        "field": "country",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Ukraine"
+      },
+      {
+        "data": {
+          "domain": "kyivindependent.com",
+          "expires": "2031-11-19",
+          "last_changed": "2025-11-23",
+          "registrar": "Instra Corporation Pty Ltd.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/kyivindependent.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2021-11-19"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "kyivindependent",
+        "ref_url": "https://www.wikidata.org/wiki/Q111028947",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "2021-11-01"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790654763,
+    "expired": false,
+    "id": 11068886818912249814,
+    "item_count": 1,
+    "last_active_at": 1790654763,
+    "origin_item_id": 11068886818912249814,
+    "origin_outlet_id": "kyivindependent",
+    "outlet_count": 1,
+    "primary_title": "Over 70% of Ukrainians hold Zelensky responsible for corruption among his allies, poll shows",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 11068886818912249814,
+        "joined_at": 1790654763,
+        "outlet_id": "kyivindependent",
+        "published_at": 1790617500
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "kyivindependent": "The Kyiv Independent"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://kyivindependent.com/over-70-of-ukrainians-hold-zelensky-responsible-for-corruption-among-his-allies-poll-shows/",
+          "cluster_id": 11068886818912249814,
+          "fetched_at": 1790654763,
+          "id": 11068886818912249814,
+          "joined_at": 1790654763,
+          "lang": "en",
+          "outlet_id": "kyivindependent",
+          "published_at": 1790617500,
+          "summary": "When asked what concerned them most, 50% of Ukrainians cited corruption, while 40% cited Russia’s mass missile and drone attacks.",
+          "text_hash": 12331194832652512812,
+          "title": "Over 70% of Ukrainians hold Zelensky responsible for corruption among his allies, poll shows"
+        }
+      ],
+      "outlet_id": "kyivindependent"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 11068886818912249814,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3870,
+      "snapshot_id": 17519925336560000420,
+      "ts": 1790679061
+    }
+  ]
+}

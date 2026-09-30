@@ -1,0 +1,180 @@
+{
+  "claims": {
+    "arabnews": [
+      {
+        "data": {
+          "domain": "arabnews.com",
+          "expires": "2027-02-27",
+          "last_changed": "2026-01-02",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "arabnews",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/arabnews.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1996-02-26"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1975-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7427161"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Saudi Research and Media Group"
+      },
+      {
+        "data": {
+          "qid": "Q7855210"
+        },
+        "field": "owner",
+        "outlet_id": "arabnews",
+        "ref_url": "https://www.wikidata.org/wiki/Q623659",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Turki bin Salman Al Saud"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_289#Rfc:_Arab_news_is_a_reliable_source?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_5#ArabNews",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_260#World_atlas_+_Arab_news",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_305#Arab_News_on_Iran_International",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_324#Arab_News_reliable_on_the_People's_Mujahedin_of_Iran?",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_491#Arab_News_on_Middle_East_Eye"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Arab News",
+          "status": "no_consensus",
+          "summary": "There is consensus that Arab News is a usable source for topics unrelated to the Saudi Arabian government. As Arab News is closely associated with the Saudi Arabian government and is published in a country with low press freedom, editors consider Arab News biased and non-independent for Saudi Arabian politics, and recommend attribution for its coverage in this area. Some editors consider Arab News"
+        },
+        "field": "reliability",
+        "outlet_id": "arabnews",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.1397852897644043,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.8597853183746338
+    },
+    "created_at": 1790715392,
+    "expired": false,
+    "id": 8386805498379463014,
+    "item_count": 2,
+    "last_active_at": 1790718663,
+    "origin_item_id": 8386805498379463014,
+    "origin_outlet_id": "arabnews",
+    "outlet_count": 1,
+    "primary_title": "Saudi Arabia through as dramatic final group night leaves Oman-Iraq tie to be settled by lots",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 8386805498379463014,
+        "joined_at": 1790715392,
+        "outlet_id": "arabnews",
+        "published_at": 1790712275
+      },
+      {
+        "item_id": 2387191258242894600,
+        "joined_at": 1790718663,
+        "outlet_id": "arabnews",
+        "published_at": 1790712275
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "arabnews": "Arab News"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 1,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://arabnews.com/football/saudi-arabia-through-as-dramatic-final-group-night-leaves-oman-iraq-tie-to-be-settled-by-lots-3003788",
+          "cluster_id": 8386805498379463014,
+          "fetched_at": 1790715392,
+          "id": 8386805498379463014,
+          "joined_at": 1790715392,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790712275,
+          "summary": "RIYADH: A dramatic night concluded Group A of the 27th Arabian Gulf Cup on Tuesday. With 10 minutes remaining in both games, it appeared that Saudi Arabia and Iraq had made it through to the semi-finals. Fifteen minutes later, the region was plunged into confusion as fans waited to find out who would join Saudi Arabia in the semi-finals. In their third Gulf Cup meeting in four years, it was Saudi Arabia who triumphed over Iraq in a tense encounter. Saudi Arabia had already secured their place af",
+          "text_hash": 3633798510558081680,
+          "title": "Saudi Arabia through as dramatic final group night leaves Oman-Iraq tie to be settled by lots"
+        },
+        {
+          "canonical_url": "https://arabnews.com/football/saudis-through-to-gulf-cup-semis-but-oman-and-iraq-impossible-to-separate-after-dramatic-group-finale-3003788",
+          "cluster_id": 8386805498379463014,
+          "fetched_at": 1790718663,
+          "id": 2387191258242894600,
+          "joined_at": 1790718663,
+          "lang": "en",
+          "outlet_id": "arabnews",
+          "published_at": 1790712275,
+          "summary": "RIYADH: Group A of the 27th Arabian Gulf Cup concluded in dramatic fashion on Tuesday. With 10 minutes remaining in both games, it looked as though Iraq were destined to join the already-qualified Saudi Arabia in the semi-finals. The Green Falcons were leading by two goals against the Iraqis, but it seemed that both teams would progress because in the other game, Oman was locked in a 1-1 draw with already-eliminated Kuwait. Fifteen minutes later, however, nobody was quite sure who would be joi",
+          "text_hash": 1597620263089017360,
+          "title": "Saudis through to Gulf Cup semis but Oman and Iraq impossible to separate after dramatic group finale"
+        }
+      ],
+      "outlet_id": "arabnews"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 8386805498379463014,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 5559,
+      "snapshot_id": 12514543652960442341,
+      "ts": 1790718663
+    }
+  ]
+}

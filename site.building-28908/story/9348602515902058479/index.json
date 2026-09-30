@@ -1,0 +1,112 @@
+{
+  "claims": {
+    "france24": [
+      {
+        "data": {
+          "domain": "france24.com",
+          "expires": "2026-12-01",
+          "last_changed": "2026-04-21",
+          "registrar": "Gandi SAS",
+          "status": [
+            "client transfer prohibited",
+            "server delete prohibited",
+            "server transfer prohibited",
+            "server update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "france24",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/france24.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "2005-12-01"
+      },
+      {
+        "data": {
+          "qid": "Q166180"
+        },
+        "field": "owner",
+        "outlet_id": "france24",
+        "ref_url": "https://www.wikidata.org/wiki/Q30097304",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "France 24"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653939,
+    "expired": false,
+    "id": 9348602515902058479,
+    "item_count": 1,
+    "last_active_at": 1790653939,
+    "origin_item_id": 9348602515902058479,
+    "origin_outlet_id": "france24",
+    "outlet_count": 1,
+    "primary_title": "France braces for a day of strikes and protests over civil servants' pay",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 9348602515902058479,
+        "joined_at": 1790653939,
+        "outlet_id": "france24",
+        "published_at": 1790628129
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "france24": "France 24"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://france24.com/en/tv-shows/business/20260928-france-braces-for-a-day-of-strikes-and-protests-over-civil-servants-pay",
+          "cluster_id": 9348602515902058479,
+          "fetched_at": 1790653939,
+          "id": 9348602515902058479,
+          "joined_at": 1790653939,
+          "lang": "en",
+          "outlet_id": "france24",
+          "published_at": 1790628129,
+          "summary": "Trade unions in France have called on public sector workers - from train drivers to teachers to health workers and police officers - to stop working and protest at the government's plan to freeze the public sector's pay index, just days before the government is set to unveil its draft budget for 2027. Plus, as Paris Fashion Week kicks off, we speak with an expert on what the struggling luxury sector needs to do towards a more sustainable future.",
+          "text_hash": 10477906475669975728,
+          "title": "France braces for a day of strikes and protests over civil servants' pay"
+        }
+      ],
+      "outlet_id": "france24"
+    }
+  ],
+  "withdrawals": []
+}

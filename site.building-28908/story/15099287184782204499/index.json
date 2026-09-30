@@ -1,0 +1,110 @@
+{
+  "claims": {
+    "commondreams": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "commondreams",
+        "ref_url": "https://www.wikidata.org/wiki/Q5153336",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "commondreams.org",
+          "expires": "2027-05-14",
+          "last_changed": "2026-08-12",
+          "registrar": "Squarespace Domains II LLC",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "commondreams",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/commondreams.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-05-13"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 15099287184782204499,
+    "item_count": 1,
+    "last_active_at": 1790653936,
+    "origin_item_id": 15099287184782204499,
+    "origin_outlet_id": "commondreams",
+    "outlet_count": 1,
+    "primary_title": "45 Organizations Urge House Democratic Leadership to Call a Vote on Cuba War Powers Resolution",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 15099287184782204499,
+        "joined_at": 1790653936,
+        "outlet_id": "commondreams",
+        "published_at": 1789154058
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "commondreams": "Common Dreams"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://commondreams.org/newswire/45-organizations-urge-house-democratic-leadership-to-call-a-vote-on-cuba-war-powers-resolution",
+          "cluster_id": 15099287184782204499,
+          "fetched_at": 1790653936,
+          "id": 15099287184782204499,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "commondreams",
+          "published_at": 1789154058,
+          "summary": "A coalition of 45 faith, peace, labor, health, and political organizations is calling on House Minority Leader Hakeem Jeffries, and committee Ranking Members Gregory Meeks and Jim McGovern to immediately announce plans to call a vote on Rep. Nydia Velázquez’s Cuba War Powers Resolution ( H.Con.Res. 106 ). In a letter sent this week, the groups call on the House to vote to end the de facto US oil blockade on Cuba, which they argue amounts to hostilities that Congress has not authorized. \"Cuba is suffering…",
+          "text_hash": 13769162659206341685,
+          "title": "45 Organizations Urge House Democratic Leadership to Call a Vote on Cuba War Powers Resolution"
+        }
+      ],
+      "outlet_id": "commondreams"
+    }
+  ],
+  "withdrawals": []
+}

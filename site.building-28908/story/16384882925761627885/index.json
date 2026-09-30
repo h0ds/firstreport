@@ -1,0 +1,170 @@
+{
+  "claims": {
+    "npr": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "npr",
+        "ref_url": "https://www.wikidata.org/wiki/Q671510",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "npr.org",
+          "expires": "2027-12-12",
+          "last_changed": "2026-08-11",
+          "registrar": "MarkMonitor Inc.",
+          "status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "npr",
+        "ref_url": "https://rdap.publicinterestregistry.org/rdap/domain/npr.org",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1993-12-13"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "npr",
+        "ref_url": "https://www.wikidata.org/wiki/Q671510",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1970-02-26"
+      },
+      {
+        "as_of": "2024",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_139#NPR_reference_in_War_On_Women",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_149#NPR_religion_program_claim_from_Judy_Valente_about_membership_estimate_from_Christian_Science_church",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_292#NPR",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_322#Using_an_NPR_report_in_the_article_Misinformation_related_to_the_COVID-19_pandemic",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_448#Is_NPR_a_reliable_source?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "NPR (National Public Radio)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that NPR, an American public service broadcaster, is generally reliable for news and statements of fact. NPR's opinion pieces should only be used with attribution."
+        },
+        "field": "reliability",
+        "outlet_id": "npr",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.05155205726623535,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": 0.7715520858764648
+    },
+    "created_at": 1790633634,
+    "expired": false,
+    "id": 16384882925761627885,
+    "item_count": 2,
+    "last_active_at": 1790679061,
+    "origin_item_id": 16384882925761627885,
+    "origin_outlet_id": "npr",
+    "outlet_count": 1,
+    "primary_title": "Amid changing dynamics in the Middle East, Turkey seeks to emerge as a leader",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 16384882925761627885,
+        "joined_at": 1790633634,
+        "outlet_id": "npr",
+        "published_at": 1790510779
+      },
+      {
+        "item_id": 18159814735032878464,
+        "joined_at": 1790679061,
+        "outlet_id": "npr",
+        "published_at": 1790672400
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "npr": "NPR"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 18159814735032878464,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 4529,
+      "snapshot_id": 1807878665288830487,
+      "ts": 1790715389
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://npr.org/2026/09/27/nx-s1-5949210/amid-changing-dynamics-in-the-middle-east-turkey-seeks-to-emerge-as-a-leader",
+          "cluster_id": 16384882925761627885,
+          "fetched_at": 1790633634,
+          "id": 16384882925761627885,
+          "joined_at": 1790633634,
+          "lang": "en",
+          "outlet_id": "npr",
+          "published_at": 1790510779,
+          "summary": "Turkey's attempts at expanding its Middle East footprint has put it in a position of power, coming head-to-head with Israel.",
+          "text_hash": 12406015676937961770,
+          "title": "Amid changing dynamics in the Middle East, Turkey seeks to emerge as a leader"
+        },
+        {
+          "canonical_url": "https://npr.org/2026/09/29/nx-s1-5983685/turkey-influence",
+          "cluster_id": 16384882925761627885,
+          "fetched_at": 1790679061,
+          "id": 18159814735032878464,
+          "joined_at": 1790679061,
+          "lang": "en",
+          "outlet_id": "npr",
+          "published_at": 1790672400,
+          "summary": "Turkey's bid for regional influence comes as the Middle East has been hit by profound shocks that started with the Hamas-led 2023 attack on Israel and continue with the seven-month-old war on Iran.",
+          "text_hash": 16580361817184936959,
+          "title": "As the U.S. signals a smaller Middle East footprint, Turkey is ready to step in"
+        }
+      ],
+      "outlet_id": "npr"
+    }
+  ],
+  "withdrawals": []
+}

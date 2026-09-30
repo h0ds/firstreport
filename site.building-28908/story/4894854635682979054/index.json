@@ -1,0 +1,207 @@
+{
+  "claims": {
+    "reason": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "reason.com",
+          "expires": "2034-08-21",
+          "last_changed": "2024-08-21",
+          "registrar": "Network Solutions, LLC",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "reason",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/reason.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1997-08-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "reason",
+        "ref_url": "https://www.wikidata.org/wiki/Q1454090",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1968-01-01"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_200#Reason_Magazine_at_David_Lisak",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_291#Reason_Magazine_and_reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_352#Reason.com",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_500#Reason_(magazine)"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "Reason",
+          "status": "generally_reliable",
+          "summary": "There is consensus that Reason is generally reliable for news and facts. Editors consider Reason to be a biased or opinionated source that primarily publishes commentary, analysis, and opinion articles. Statements of opinion should be attributed and evaluated for due weight."
+        },
+        "field": "reliability",
+        "outlet_id": "reason",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": 0.2656821012496948,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 3,
+      "weakest_join": 0.9856821298599243
+    },
+    "created_at": 1790653936,
+    "expired": false,
+    "id": 4894854635682979054,
+    "item_count": 4,
+    "last_active_at": 1790667930,
+    "origin_item_id": 9634810432286416676,
+    "origin_outlet_id": "reason",
+    "outlet_count": 1,
+    "primary_title": "Open Thread",
+    "syndication": [
+      {
+        "first_outlet_id": "reason",
+        "item_ids": [
+          4894854635682979054,
+          13953711043382235864,
+          9634810432286416676,
+          8185177434791753650
+        ],
+        "spread_secs": 259200,
+        "text_hash": 2305878479268479110
+      }
+    ],
+    "timeline": [
+      {
+        "item_id": 4894854635682979054,
+        "joined_at": 1790653936,
+        "outlet_id": "reason",
+        "published_at": 1790578800
+      },
+      {
+        "item_id": 13953711043382235864,
+        "joined_at": 1790653936,
+        "outlet_id": "reason",
+        "published_at": 1790492400
+      },
+      {
+        "item_id": 9634810432286416676,
+        "joined_at": 1790653936,
+        "outlet_id": "reason",
+        "published_at": 1790406000
+      },
+      {
+        "item_id": 8185177434791753650,
+        "joined_at": 1790667930,
+        "outlet_id": "reason",
+        "published_at": 1790665200
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "reason": "Reason"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://reason.com/volokh/2026/09/26/open-thread-339/",
+          "cluster_id": 4894854635682979054,
+          "fetched_at": 1790653936,
+          "id": 9634810432286416676,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "reason",
+          "published_at": 1790406000,
+          "summary": "What’s on your mind?",
+          "text_hash": 2305878479268479110,
+          "title": "Open Thread"
+        },
+        {
+          "canonical_url": "https://reason.com/volokh/2026/09/27/open-thread-340/",
+          "cluster_id": 4894854635682979054,
+          "fetched_at": 1790653936,
+          "id": 13953711043382235864,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "reason",
+          "published_at": 1790492400,
+          "summary": "What’s on your mind?",
+          "text_hash": 2305878479268479110,
+          "title": "Open Thread"
+        },
+        {
+          "canonical_url": "https://reason.com/volokh/2026/09/28/open-thread-341/",
+          "cluster_id": 4894854635682979054,
+          "fetched_at": 1790653936,
+          "id": 4894854635682979054,
+          "joined_at": 1790653936,
+          "lang": "en",
+          "outlet_id": "reason",
+          "published_at": 1790578800,
+          "summary": "What’s on your mind?",
+          "text_hash": 2305878479268479110,
+          "title": "Open Thread"
+        },
+        {
+          "canonical_url": "https://reason.com/volokh/2026/09/29/open-thread-342/",
+          "cluster_id": 4894854635682979054,
+          "fetched_at": 1790667930,
+          "id": 8185177434791753650,
+          "joined_at": 1790667930,
+          "lang": "en",
+          "outlet_id": "reason",
+          "published_at": 1790665200,
+          "summary": "What’s on your mind?",
+          "text_hash": 2305878479268479110,
+          "title": "Open Thread"
+        }
+      ],
+      "outlet_id": "reason"
+    }
+  ],
+  "withdrawals": []
+}

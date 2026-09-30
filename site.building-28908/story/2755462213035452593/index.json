@@ -1,0 +1,145 @@
+{
+  "claims": {
+    "nzherald": [
+      {
+        "data": {
+          "qid": "Q664"
+        },
+        "field": "country",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New Zealand"
+      },
+      {
+        "field": "founded",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1863-01-01"
+      },
+      {
+        "data": {
+          "qid": "Q7759231"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "New Zealand Media and Entertainment"
+      },
+      {
+        "data": {
+          "qid": "Q115613014"
+        },
+        "field": "owner",
+        "note": "2 Wikidata items match the domain; this is Q1199207 (The New Zealand Herald); also Q137925634 (NZ Herald)",
+        "outlet_id": "nzherald",
+        "ref_url": "https://www.wikidata.org/wiki/Q1199207",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Wilson & Horton"
+      },
+      {
+        "as_of": "2023",
+        "data": {
+          "discussions": [
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_350#Reliability_of_The_New_Zealand_Herald",
+            "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_418#New_Zealand_Herald,_Whanganui_Chronicle,_opinion_piece?"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The New Zealand Herald (NZ Herald)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The New Zealand Herald is generally reliable."
+        },
+        "field": "reliability",
+        "outlet_id": "nzherald",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653942,
+    "expired": false,
+    "id": 2755462213035452593,
+    "item_count": 1,
+    "last_active_at": 1790653942,
+    "origin_item_id": 2755462213035452593,
+    "origin_outlet_id": "nzherald",
+    "outlet_count": 1,
+    "primary_title": "Some Republicans issue a new call on Donald Trump’s war with Iran: End it now",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 2755462213035452593,
+        "joined_at": 1790653942,
+        "outlet_id": "nzherald",
+        "published_at": 1790552834
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "nzherald": "The New Zealand Herald"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://nzherald.co.nz/world/some-republicans-issue-a-new-call-on-donald-trumps-war-with-iran-end-it-now/premium/ETK6AOC2MJF57GSXEPOEFS7ITU/",
+          "cluster_id": 2755462213035452593,
+          "fetched_at": 1790653942,
+          "id": 2755462213035452593,
+          "joined_at": 1790653942,
+          "lang": "en",
+          "outlet_id": "nzherald",
+          "published_at": 1790552834,
+          "summary": "New York Times: Soaring prices are clobbering the Maga faithful.",
+          "text_hash": 14962054499033118151,
+          "title": "Some Republicans issue a new call on Donald Trump’s war with Iran: End it now"
+        }
+      ],
+      "outlet_id": "nzherald"
+    }
+  ],
+  "withdrawals": []
+}

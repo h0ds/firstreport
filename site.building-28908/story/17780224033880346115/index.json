@@ -1,0 +1,187 @@
+{
+  "claims": {
+    "guardian": [
+      {
+        "data": {
+          "qid": "Q145"
+        },
+        "field": "country",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United Kingdom"
+      },
+      {
+        "data": {
+          "domain": "theguardian.com",
+          "expires": "2027-07-05",
+          "last_changed": "2026-07-05",
+          "registrar": "GoDaddy.com, LLC",
+          "status": [
+            "client delete prohibited",
+            "client renew prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "guardian",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/theguardian.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1994-07-06"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1821-05-05"
+      },
+      {
+        "data": {
+          "qid": "Q2665980"
+        },
+        "field": "owner",
+        "outlet_id": "guardian",
+        "ref_url": "https://www.wikidata.org/wiki/Q11148",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "Guardian Media Group"
+      },
+      {
+        "as_of": "2025",
+        "data": {
+          "discussions": [
+            "#cite_note-48"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)",
+          "status": "generally_reliable",
+          "summary": "There is consensus that The Guardian is generally reliable. The Guardian's op-eds should be handled with WP:RSOPINION. Some editors believe The Guardian is biased or opinionated for politics. See also: The Guardian blogs. Guardian Media sold The Observer to Tortoise Media with effect from 22 April 2025."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      },
+      {
+        "as_of": "2020",
+        "data": {
+          "discussions": [
+            "#cite_note-49"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Guardian blogs",
+          "status": "no_consensus",
+          "summary": "Most editors say that The Guardian blogs should be treated as newspaper blogs or opinion pieces due to reduced editorial oversight. Check the bottom of the article for a \"blogposts\" tag to determine whether the page is a blog post or a non-blog article. See also: The Guardian."
+        },
+        "field": "reliability",
+        "outlet_id": "guardian",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "No consensus"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790667673,
+    "expired": false,
+    "id": 17780224033880346115,
+    "item_count": 1,
+    "last_active_at": 1790667673,
+    "origin_item_id": 17780224033880346115,
+    "origin_outlet_id": "guardian",
+    "outlet_count": 1,
+    "primary_title": "Former ABC broadcaster Margaret Throsby recovering in hospital after being hit by ebike",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 17780224033880346115,
+        "joined_at": 1790667673,
+        "outlet_id": "guardian",
+        "published_at": 1790666484
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "guardian": "The Guardian"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [
+    {
+      "cluster_id": null,
+      "item_id": 17780224033880346115,
+      "kind": "revised",
+      "merged_into": null,
+      "seq": 3674,
+      "snapshot_id": 1173157514186328567,
+      "ts": 1790669718
+    }
+  ],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://theguardian.com/media/2026/sep/29/margaret-throsby-ebike-former-abc-broadcaster-ntwnfb",
+          "cluster_id": 17780224033880346115,
+          "fetched_at": 1790667673,
+          "id": 17780224033880346115,
+          "joined_at": 1790667673,
+          "lang": "en",
+          "outlet_id": "guardian",
+          "published_at": 1790666484,
+          "summary": "The 84-year-old underwent surgery after a collision with two teenagers on an electric ‘fat bike’ in the Illawarra Follow our Australia news live blog for latest updates Get our breaking news email , free app or daily news podcast Former ABC broadcaster Margaret Throsby is recovering in hospital after she was struck by an electric “fat bike” while walking on a shared path in the Illawarra, south of Sydney last week. Her daughter, musician and author Holly Throsby, said the 84-year-old required surgery after…",
+          "text_hash": 2657709675472293409,
+          "title": "Former ABC broadcaster Margaret Throsby recovering in hospital after being hit by ebike"
+        }
+      ],
+      "outlet_id": "guardian"
+    }
+  ],
+  "withdrawals": [
+    {
+      "cluster_id": null,
+      "item_id": 17780224033880346115,
+      "kind": "withdrawn",
+      "merged_into": null,
+      "seq": 3777,
+      "snapshot_id": 14614480373335041781,
+      "ts": 1790679060
+    }
+  ]
+}

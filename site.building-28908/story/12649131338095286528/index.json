@@ -1,0 +1,135 @@
+{
+  "claims": {
+    "thehill": [
+      {
+        "data": {
+          "qid": "Q30"
+        },
+        "field": "country",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "United States"
+      },
+      {
+        "data": {
+          "domain": "thehill.com",
+          "expires": "2027-04-23",
+          "last_changed": "2026-04-19",
+          "registrar": "CSC Corporate Domains, Inc.",
+          "status": [
+            "client transfer prohibited"
+          ]
+        },
+        "field": "domain_registered",
+        "outlet_id": "thehill",
+        "ref_url": "https://rdap.verisign.com/com/v1/domain/thehill.com",
+        "retrieved_at": 1790668896,
+        "source_id": "rdap",
+        "value": "1995-04-22"
+      },
+      {
+        "field": "founded",
+        "outlet_id": "thehill",
+        "ref_url": "https://www.wikidata.org/wiki/Q7739683",
+        "retrieved_at": 1790661446,
+        "source_id": "wikidata",
+        "value": "1994-01-01"
+      },
+      {
+        "as_of": "2019",
+        "data": {
+          "discussions": [
+            "#cite_note-51"
+          ],
+          "scale": "wikipedia_rsp",
+          "scope": "The Hill",
+          "status": "generally_reliable",
+          "summary": "The Hill is considered generally reliable for American politics. The publication's opinion pieces should be handled with the appropriate guideline. The publication's contributor pieces, labeled in their bylines, receive minimal editorial oversight and should be treated as equivalent to self-published sources. Some editors have expressed concerns about the reliability of Rising, a talk show produce"
+        },
+        "field": "reliability",
+        "outlet_id": "thehill",
+        "ref_url": "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources",
+        "retrieved_at": 1790668896,
+        "source_id": "wikipedia_rsp",
+        "value": "Generally reliable"
+      }
+    ]
+  },
+  "cluster": {
+    "confidence": {
+      "join_margin": null,
+      "join_threshold": 0.7200000286102295,
+      "languages": [
+        "en"
+      ],
+      "merged": false,
+      "unscored": 1,
+      "weakest_join": null
+    },
+    "created_at": 1790653930,
+    "expired": false,
+    "id": 12649131338095286528,
+    "item_count": 1,
+    "last_active_at": 1790653930,
+    "origin_item_id": 12649131338095286528,
+    "origin_outlet_id": "thehill",
+    "outlet_count": 1,
+    "primary_title": "Khanna says third Trump impeachment would be about ‘setting a standard’",
+    "syndication": [],
+    "timeline": [
+      {
+        "item_id": 12649131338095286528,
+        "joined_at": 1790653930,
+        "outlet_id": "thehill",
+        "published_at": 1790535935
+      }
+    ]
+  },
+  "coverage_by_label": [],
+  "export_time": 1790725421,
+  "outlet_names": {
+    "thehill": "The Hill"
+  },
+  "outlets_24h": 1,
+  "outlets_6h": 0,
+  "revisions": [],
+  "spark": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "timeline": [
+    {
+      "copied": false,
+      "copy_of": null,
+      "items": [
+        {
+          "canonical_url": "https://thehill.com/homenews/house/6113743-khanna-trump-third-impeachment/",
+          "cluster_id": 12649131338095286528,
+          "fetched_at": 1790653930,
+          "id": 12649131338095286528,
+          "joined_at": 1790653930,
+          "lang": "en",
+          "outlet_id": "thehill",
+          "published_at": 1790535935,
+          "summary": "Rep. Ro Khanna (D-Calif.) on Sunday said a third attempt to impeach President Trump if Democrats take control of Congress in November would be about “setting a standard” of accountability. Khanna appeared on NBC News’s “Meet the Press” when he told host Kristen Welker that impeaching Trump, who he said has become “in my view,…",
+          "text_hash": 877147990930375190,
+          "title": "Khanna says third Trump impeachment would be about ‘setting a standard’"
+        }
+      ],
+      "outlet_id": "thehill"
+    }
+  ],
+  "withdrawals": []
+}
