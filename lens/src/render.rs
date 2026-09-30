@@ -797,20 +797,20 @@ fn claim_card_with(input: &Input, c: &Claim, full: bool) -> String {
         esc(&c.outlet_id),
         esc(&c.field),
         esc(&c.source_id),
-        esc(&c.value)
+        if c.field == "site_pages" { site_pages_value(get) } else { esc(&c.value) }
     );
     if let Some(scope) = get("scope")
         .and_then(|v| v.as_str())
-        .filter(|x| *x != c.value)
+        .filter(|x| *x != c.value && *x != input.outlet_name(&c.outlet_id))
     {
         let _ = write!(s, "<div class=\"scope\">{}</div>", esc(scope));
     }
     let _ = write!(
         s,
-        "<div class=\"kg-provenance\"><a href=\"{}\" rel=\"noopener\">{}</a><span class=\"sep\">·</span><span class=\"kg-tag\">{}</span><span class=\"sep\">·</span><span>retrieved <time datetime=\"{}\">{}</time></span>",
+        "<div class=\"kg-provenance\"><a href=\"{}\" rel=\"noopener\" title=\"Licence: {}\">{}</a><span class=\"sep\">·</span><span>retrieved <time datetime=\"{}\">{}</time></span>",
         esc(&c.ref_url),
-        esc(sname),
         esc(licence),
+        esc(sname),
         date(c.retrieved_at),
         date(c.retrieved_at)
     );
@@ -841,52 +841,57 @@ fn claim_card_with(input: &Input, c: &Claim, full: bool) -> String {
             );
         }
         if let Some(sum) = get("summary").and_then(|v| v.as_str()) {
-            let _ = write!(s, "<div class=\"note\">{}</div>", esc(sum));
-        }
-        if c.field == "site_pages" {
-            let links: Vec<String> = [
-                "about",
-                "contact",
-                "privacy",
-                "corrections",
-                "ethics",
-                "masthead",
-            ]
-            .iter()
-            .filter_map(|k| get(k).and_then(|v| v.as_str()).map(|u| (k, u)))
-            .map(|(k, u)| format!("<a href=\"{}\" rel=\"noopener\">{k}</a>", esc(u)))
-            .collect();
-            let _ = write!(
-                s,
-                "<div class=\"note\">{}</div>",
-                if links.is_empty() {
-                    "none linked".to_string()
-                } else {
-                    links.join(" · ")
-                }
-            );
+            let _ = write!(s, "<div class=\"note\">{}</div>", esc(whole_sentences(sum)));
         }
         if let Some(note) = &c.note {
             let _ = write!(s, "<div class=\"note\">Note: {}</div>", esc(note));
         }
-        if let Some(disc) = get("discussions").and_then(|v| v.as_array()) {
-            let links: Vec<String> = disc
-                .iter()
-                .filter_map(|u| u.as_str())
-                .enumerate()
-                .map(|(i, u)| format!("<a href=\"{}\" rel=\"noopener\">{}</a>", esc(u), i + 1))
-                .collect();
-            if !links.is_empty() {
-                let _ = write!(
-                    s,
-                    "<div class=\"note\">Discussions: {}</div>",
-                    links.join(" ")
-                );
-            }
-        }
     }
     s.push_str("</article>");
     s
+}
+
+/// A summary cut off by its source ends at its last full sentence.
+pub fn whole_sentences(s: &str) -> &str {
+    let t = s.trim_end();
+    if t.ends_with(['.', '!', '?', '"', ')']) {
+        return t;
+    }
+    match t.rfind(". ") {
+        Some(i) => &t[..=i],
+        None => t,
+    }
+}
+
+/// "Links to about, contact and privacy pages. No corrections, ethics or
+/// masthead page." with each found page linked.
+fn site_pages_value<'a>(get: impl Fn(&str) -> Option<&'a serde_json::Value>) -> String {
+    const KINDS: [&str; 6] = ["about", "contact", "privacy", "corrections", "ethics", "masthead"];
+    let (found, missing): (Vec<&str>, Vec<&str>) = KINDS.iter().copied().partition(|k| get(k).and_then(|v| v.as_str()).is_some());
+    let list = |xs: Vec<String>| match xs.len() {
+        0 => String::new(),
+        1 => xs[0].clone(),
+        n => format!("{} and {}", xs[..n - 1].join(", "), xs[n - 1]),
+    };
+    let links = found
+        .iter()
+        .map(|k| format!("<a href=\"{}\" rel=\"noopener\">{k}</a>", esc(get(k).and_then(|v| v.as_str()).unwrap_or_default())))
+        .collect();
+    let mut out = String::new();
+    if !found.is_empty() {
+        out.push_str(&format!("Links to {} {}.", list(links), if found.len() == 1 { "page" } else { "pages" }));
+    }
+    if !missing.is_empty() {
+        let or = |xs: Vec<String>| match xs.len() {
+            1 => xs[0].clone(),
+            n => format!("{} or {}", xs[..n - 1].join(", "), xs[n - 1]),
+        };
+        if !out.is_empty() {
+            out.push(' ');
+        }
+        out.push_str(&format!("No {} page.", or(missing.iter().map(|k| k.to_string()).collect())));
+    }
+    out
 }
 
 /// Markdown form of the provenance line, same order.
@@ -1243,17 +1248,16 @@ mod tests {
         let src = h
             .find("Wikipedia: Reliable sources/Perennial sources")
             .unwrap();
-        let lic = h.find("CC-BY-SA-4.0").unwrap();
+        assert!(h.contains("title=\"Licence: CC-BY-SA-4.0\""), "licence on hover");
         let ret = h.find("retrieved <time").unwrap();
         let asof = h.find("as of 2025-03").unwrap();
         let status = h.find("kg-status").unwrap();
-        assert!(
-            src < lic && lic < ret && ret < asof && asof < status,
-            "fixed order"
-        );
+        assert!(src < ret && ret < asof && asof < status, "fixed order");
+        assert_eq!(whole_sentences("One. Two cut of"), "One.");
+        assert_eq!(whole_sentences("Whole."), "Whole.");
         assert!(h.contains("stale, "), "30-day source retrieved long ago");
         assert!(h.contains("<div class=\"scope\">Wire (wire.example)</div>"));
-        assert!(h.contains("Discussions: <a href="));
+        assert!(!h.contains("Discussions:"), "discussion links stay in the twins");
         let md = claim_md(&i, rel);
         assert!(md.starts_with("**Generally reliable**\nWire (wire.example)\nSource: [Wikipedia: Reliable sources/Perennial sources](https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources#Wire) · licence CC-BY-SA-4.0 · retrieved 2025-06-15 · as of 2025-03 · stale, "), "{md}");
         let cad = i.claims["wire"]

@@ -35,16 +35,29 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     let mut b = String::new();
     let _ = write!(
         b,
-        "<h1 data-id=\"{}\">{}</h1>{}<p class=\"kg-muted\">{}{}{} · every value below is a source's, never ours</p>",
+        "<h1 data-id=\"{}\">{}</h1>{}<p class=\"kg-muted\">{}</p>",
         esc(&o.id),
         esc(name),
         {
             let f = crate::render::outlet_flags(input, &o.id);
             if f.is_empty() { f } else { format!("<p class=\"kg-flags\">{f}</p>") }
         },
-        esc(&o.domains.join(", ")),
-        if o.domains.is_empty() { "" } else { " · " },
-        n(claims.len(), "claim")
+        {
+            // The domain, then Wikipedia and Wikidata as links rather than rows.
+            let mut bits: Vec<String> = o
+                .domains
+                .iter()
+                .map(|d| format!("<a class=\"kg-link-quiet\" href=\"https://{0}/\" rel=\"noopener\">{0}</a>", esc(d)))
+                .collect();
+            let find = |f: &str| claims.iter().find(|c| c.field == f).map(|c| c.value.clone());
+            if let Some(w) = find("wikipedia") {
+                bits.push(format!("<a class=\"kg-link-quiet\" href=\"{}\" rel=\"noopener\">Wikipedia</a>", esc(&w)));
+            }
+            if let Some(q) = find("wikidata_id") {
+                bits.push(format!("<a class=\"kg-link-quiet\" href=\"https://www.wikidata.org/wiki/{}\" rel=\"noopener\">Wikidata</a>", esc(&q)));
+            }
+            bits.join(" · ")
+        }
     );
     if groups.is_empty() {
         b.push_str(
@@ -57,6 +70,14 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     // a note repeated across fields is shown the first time only.
     let mut seen_notes = std::collections::HashSet::new();
     for (field, cs) in &groups {
+        // Rows a reader gets nothing from: the website and Wikipedia links
+        // are in the header, and HTTPS shows only when a site lacks it.
+        // The JSON and Markdown twins keep every claim.
+        if matches!(*field, "website" | "registrar" | "wikipedia" | "wikidata_id")
+            || (*field == "site_https" && cs.iter().all(|c| c.value.starts_with("https")))
+        {
+            continue;
+        }
         let _ = write!(
             b,
             "<section class=\"kg-field\" data-field=\"{}\"><div class=\"fname\">{}</div><div>",
@@ -340,8 +361,10 @@ mod tests {
         assert!(t.html.contains("<h1 data-id=\"wire\">Wire</h1>"));
         let rel = t.html.find("<div class=\"fname\">Reliability</div>").unwrap();
         let owner = t.html.find("<div class=\"fname\">Owner</div>").unwrap();
-        let qid = t.html.find("<div class=\"fname\">Wikidata</div>").unwrap();
-        assert!(rel < owner && owner < qid, "shared field order");
+        assert!(rel < owner, "shared field order");
+        assert!(!t.html.contains("<div class=\"fname\">Wikidata</div>"), "Wikidata is a header link, not a row");
+        assert!(t.html.contains("href=\"https://www.wikidata.org/wiki/Q130879\" rel=\"noopener\">Wikidata</a>"));
+        assert!(t.md.contains("Q130879"), "the Markdown twin keeps every claim");
         assert!(t
             .html
             .contains("First to 30 of the 31 stories other outlets also carried"));
