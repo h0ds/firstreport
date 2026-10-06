@@ -13,6 +13,7 @@ INFRA-PLAN.md
 # kagami site builds
 /site-build/
 /site/
+/site.building-*/
 
 # feed exports for ledger feed_behaviour imports
 /export/
