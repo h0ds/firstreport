@@ -1,6 +1,6 @@
 # reply
 
-Kagami pillar 4: a social media account people mention to ask where a
+Truth Decay pillar 4: a social media account people mention to ask where a
 story came from. Answers with sourced provenance and propagation from
 `feed` and `ledger`, never a verdict. The plan is in `docs/plan.md`.
 
@@ -97,7 +97,7 @@ Three templates say what the observer found about a mention's subject:
 how many accounts posted the link within the burst window, how many of
 those posts carry the same wording, and how many of the accounts with a
 known signup date were created within the cohort span, always beside
-the same share over every account Kagami has seen. Each cites the
+the same share over every account Truth Decay has seen. Each cites the
 observation on the public log. They render only when an observation
 exists for that subject, and they never post without a person.
 
@@ -113,7 +113,7 @@ parameters, and a simhash of the text. Sightings go to
 `data/sightings/<day>.ndjson` and are pruned after `--retain` days
 (default 90). The salt is a long random string that never changes and
 never leaves the machine; without it the hashes cannot be tied to
-accounts, and Kagami holds no mapping either. Handles and account ids
+accounts, and Truth Decay holds no mapping either. Handles and account ids
 are never written.
 
 The four signals then run over the retained window, so the cohort

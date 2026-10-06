@@ -26,7 +26,7 @@ pyftsubset Inter-Variable.ttf --unicodes="U+0000-00FF,U+0100-024F,U+2000-206F,U+
 ```
 
 Noto Serif JP / Noto Sans JP are loaded on demand only on pages that need
-the `鏡` glyph or Japanese UI; they are not part of this bundle.
+Japanese UI; they are not part of this bundle.
 
 The debug page in `feed` does not load a web font for body text; system sans
 is fine there.

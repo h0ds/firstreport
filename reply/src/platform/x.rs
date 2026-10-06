@@ -55,7 +55,7 @@ impl X {
             refresh_token: std::env::var(REFRESH_TOKEN_ENV).unwrap_or_default(),
         });
         let client = reqwest::Client::builder()
-            .user_agent(concat!("kagami-reply/", env!("CARGO_PKG_VERSION")))
+            .user_agent(concat!("truthdecay-reply/", env!("CARGO_PKG_VERSION")))
             .timeout(std::time::Duration::from_secs(30))
             .build()
             .map_err(|e| e.to_string())?;

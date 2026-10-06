@@ -1,6 +1,6 @@
 # feed
 
-Kagami pillar 1: ingest headlines from many outlets, cluster them into
+Truth Decay pillar 1: ingest headlines from many outlets, cluster them into
 stories, record how each story spread. The full plan is in `docs/plan.md`.
 
 ```

@@ -1,6 +1,6 @@
 [package]
 name = "ledger"
-description = "Kagami pillar 2: sourced facts about outlets, never a score"
+description = "Truth Decay pillar 2: sourced facts about outlets, never a score"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

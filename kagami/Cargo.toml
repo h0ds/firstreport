@@ -1,6 +1,6 @@
 [package]
 name = "kagami"
-description = "Runs the Kagami tools together: feed and ledger as one command, and the export-then-build step that makes the site"
+description = "Runs the Truth Decay tools together: feed and ledger as one command, and the export-then-build step that makes the site"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

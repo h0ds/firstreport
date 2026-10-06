@@ -4,7 +4,7 @@
 //! of another outlet's (syndication), and how often it is first to a
 //! story other outlets also carry.
 //!
-//! These are Kagami's own observations, so there is no licence to
+//! These are Truth Decay's own observations, so there is no licence to
 //! honour and nothing to scrape; they are also the easiest claims to
 //! misread, so every one carries the window, the counts and the
 //! denominator it was computed from, and outlets with too few items in

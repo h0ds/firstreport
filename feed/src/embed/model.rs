@@ -19,7 +19,7 @@ pub fn init_runtime(lib: &Path) -> Result<(), String> {
     RUNTIME
         .get_or_init(|| {
             let env = ort::init_from(lib).map_err(|e| format!("loading {}: {e}", lib.display()))?;
-            env.with_name("kagami-feed").commit();
+            env.with_name("truthdecay-feed").commit();
             Ok(())
         })
         .clone()

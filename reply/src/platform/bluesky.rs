@@ -30,7 +30,7 @@ impl Bluesky {
     /// `password` is an app password, read from `REPLY_BSKY_PASSWORD` by the caller.
     pub fn new(pds: &str, handle: &str, password: &str) -> Result<Self, String> {
         let client = reqwest::Client::builder()
-            .user_agent(concat!("kagami-reply/", env!("CARGO_PKG_VERSION")))
+            .user_agent(concat!("truthdecay-reply/", env!("CARGO_PKG_VERSION")))
             .timeout(std::time::Duration::from_secs(30))
             .build()
             .map_err(|e| e.to_string())?;

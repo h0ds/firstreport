@@ -11,17 +11,17 @@ pub const ROBOTS_TXT: &str = "User-agent: *\nAllow: /\n";
 
 pub fn llms_txt() -> String {
     format!(
-        "# Kagami feed
+        "# Truth Decay feed
 
 > Headlines from a fixed set of news outlets, clustered into stories, with the
 > record of how each story spread: which outlet published first, who joined
 > when, which items are the same text syndicated rather than independently
-> written, and how each item's text changed after publication. Kagami attaches
+> written, and how each item's text changed after publication. Truth Decay attaches
 > no rating, lean or quality signal to any outlet or story, and never will.
 
 Contract version {CONTRACT_VERSION}; object shapes are in feed/docs/data-contract.md. Times are
 unix seconds UTC. Ids are unsigned 64-bit; read them as strings if your
-language lacks u64. Outlet ids are shared with Kagami ledger, which holds the
+language lacks u64. Outlet ids are shared with Truth Decay ledger, which holds the
 sourced facts about each outlet.
 
 ## Routes
@@ -36,7 +36,7 @@ sourced facts about each outlet.
 - `GET /v1/events?after_seq=` - the cluster event log, a cursor for followers
 - `GET /v1/snapshots`, `GET /v1/snapshots/{{id}}/body` - the raw feed fetches
 - `GET /v1/outlets` and `GET /v1/outlets/{{id}}` - outlets with `ledger` and `ledger_lookup` links to the sourced facts about them
-- `GET /v1/feeds?filter=` - the poller's per-feed state; `health` on each row is Kagami judging its own pipe (a feed quarantined for a day with the one-sentence reason, or flagged `timestamps_unreliable`), never the outlet
+- `GET /v1/feeds?filter=` - the poller's per-feed state; `health` on each row is Truth Decay judging its own pipe (a feed quarantined for a day with the one-sentence reason, or flagged `timestamps_unreliable`), never the outlet
 - `GET /v1/stats`
 - `GET /v1/openapi.json` - OpenAPI 3.1 description of all of the above
 - `GET /debug` - the same data as a page for people
@@ -47,10 +47,10 @@ sourced facts about each outlet.
 - A cluster is a claim that these items are about the same story, made by a
   similarity threshold, not by a person. Treat membership as evidence.
 - `origin_outlet_id` is the earliest published member as the feeds reported
-  it. Feeds lie about times; `joined_at` is what Kagami saw.
+  it. Feeds lie about times; `joined_at` is what Truth Decay saw.
 - Syndication groups mean the same copy, not the same story.
 - Nothing here says whether an outlet is reliable. For sourced facts about an
-  outlet, ask Kagami ledger by the same outlet id.
+  outlet, ask Truth Decay ledger by the same outlet id.
 "
     )
 }
@@ -106,7 +106,7 @@ pub fn cluster_markdown(
     if !c.syndication.is_empty() {
         md.push_str(&format!(" · {} syndication groups", c.syndication.len()));
     }
-    md.push_str("\n\nMembership is by text similarity, not by a person; treat it as evidence. No outlet here carries a rating. Sourced facts about each outlet are in Kagami ledger under the same id.\n\n## Items in the order they joined\n\n");
+    md.push_str("\n\nMembership is by text similarity, not by a person; treat it as evidence. No outlet here carries a rating. Sourced facts about each outlet are in Truth Decay ledger under the same id.\n\n## Items in the order they joined\n\n");
     let by_id: HashMap<u64, &Item> = items.iter().map(|i| (i.id, i)).collect();
     for (k, j) in c.timeline.iter().enumerate() {
         let Some(it) = by_id.get(&j.item_id) else {

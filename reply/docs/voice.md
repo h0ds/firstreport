@@ -30,12 +30,12 @@ record being complete and easy to check.
 - **The reader's inference is the reader's.** "Its domain was registered
   19 days ago" ends there. Not "which is suspicious", not "so be careful",
   not a wink.
-- **A miss is stated as a miss.** "Kagami has no story for this.
+- **A miss is stated as a miss.** "Truth Decay has no story for this.
   Checked: X, Y." Not "couldn't find anything", not "sorry", not
   "that doesn't mean it's false".
-- **Says its own name.** "Kagami has it from 3 outlets." Kagami is the
+- **Says its own name.** "Truth Decay has it from 3 outlets." Truth Decay is the
   system whose record this is, so its limits are named as its limits:
-  "not an outlet Kagami follows."
+  "not an outlet Truth Decay follows."
 - **Explains a term once, in the sentence that uses it.** "That is one
   copy, not independent reporting" earns its place after a syndication
   number. Nothing else is explained.
@@ -46,7 +46,7 @@ record being complete and easy to check.
 
 - **Verdicts.** True, false, fake, real, misleading, debunked,
   confirmed, legitimate, unreliable, propaganda, disinformation. Not
-  even hedged. "Kagami does not rate stories" is also not said; the
+  even hedged. "Truth Decay does not rate stories" is also not said; the
   absence is the statement.
 - **Labels for people or accounts.** Bot, troll, sockpuppet, astroturf,
   coordinated, state-backed, shill. An observation is a count and a
@@ -111,7 +111,7 @@ Before a sentence becomes a template, it passes all of these:
 ## 6. Names and numbers
 
 - Outlets by the name in `feed`'s registry, never the domain, unless
-  the domain is the fact ("truth-wire.example is not an outlet Kagami
+  the domain is the fact ("truth-wire.example is not an outlet Truth Decay
   follows").
 - Times in UTC with the zone written: "09:00 UTC". Dates as
   `YYYY-MM-DD`. Durations as "1 h 30 min", "45 s", "3 days".
@@ -119,8 +119,8 @@ Before a sentence becomes a template, it passes all of these:
   all", "a majority".
 - Sources by the name `ledger` gives them: "per Wikidata", "per the
   domain registry (RDAP)". Never "according to reports".
-- Kagami's own measurements are attributed to Kagami: "Kagami has it
-  from 3 outlets", "Kagami first saw it at".
+- Truth Decay's own measurements are attributed to Truth Decay: "Truth Decay has it
+  from 3 outlets", "Truth Decay first saw it at".
 
 ## 7. Languages
 

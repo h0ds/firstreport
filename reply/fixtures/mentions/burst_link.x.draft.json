@@ -11,16 +11,16 @@
     "trailer"
   ],
   "sentences": [
-    "truth-wire.example is not an outlet Kagami follows.",
-    "Kagami has no story for this. Checked: item by canonical url https://truth-wire.example/breaking/999, outlet by host truth-wire.example.",
+    "truth-wire.example is not an outlet Truth Decay follows.",
+    "Truth Decay has no story for this. Checked: item by canonical url https://truth-wire.example/breaking/999, outlet by host truth-wire.example.",
     "41 accounts posted this link within 10 min.",
     "38 of those 43 posts carry the same wording.",
-    "28 of the 39 accounts with a known signup date were created within 14 days of each other; across every account Kagami has seen, that share is 21%.",
+    "28 of the 39 accounts with a known signup date were created within 14 days of each other; across every account Truth Decay has seen, that share is 21%.",
     "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aivan%2Fapp.bsky.feed.post%2F8e5"
   ],
   "posts": [
-    "truth-wire.example is not an outlet Kagami follows. Kagami has no story for this. Checked: item by canonical url https://truth-wire.example/breaking/999, outlet by host truth-wire.example. 41 accounts posted this link within 10 min. 38 of those 43 posts carry the same wording.",
-    "28 of the 39 accounts with a known signup date were created within 14 days of each other; across every account Kagami has seen, that share is 21%. Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aivan%2Fapp.bsky.feed.post%2F8e5"
+    "truth-wire.example is not an outlet Truth Decay follows. Truth Decay has no story for this. Checked: item by canonical url https://truth-wire.example/breaking/999, outlet by host truth-wire.example. 41 accounts posted this link within 10 min. 38 of those 43 posts carry the same wording.",
+    "28 of the 39 accounts with a known signup date were created within 14 days of each other; across every account Truth Decay has seen, that share is 21%. Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Aivan%2Fapp.bsky.feed.post%2F8e5"
   ],
   "max_chars": 280,
   "lang": "en",

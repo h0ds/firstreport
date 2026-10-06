@@ -17,7 +17,7 @@ use crate::store::FeedOutlet;
 pub const SOURCE_ID: &str = "wikidata";
 pub const ENDPOINT: &str = "https://query.wikidata.org/sparql";
 pub const USER_AGENT: &str = concat!(
-    "kagami-ledger/",
+    "truthdecay-ledger/",
     env!("CARGO_PKG_VERSION"),
     " (+https://github.com/h0ds/kagami)"
 );

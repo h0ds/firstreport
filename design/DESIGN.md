@@ -1,6 +1,6 @@
-# Kagami — Design Aesthetics
+# Truth Decay — Design Aesthetics
 
-Visual language for the Kagami project and its tools (`feed`, `ledger`, `lens`). This document governs anything a person looks at: the debug page, the lookup page, the frontend, the README badges, the docs site. It also governs what a machine reads (§11): Kagami exists to counter disinformation campaigns that are increasingly run by bots, and its answer is to make sourced, provenance-carrying data as cheap for an agent to consume as it is for a person.
+Visual language for the Truth Decay project and its tools (`feed`, `ledger`, `lens`). This document governs anything a person looks at: the debug page, the lookup page, the frontend, the README badges, the docs site. It also governs what a machine reads (§11): Truth Decay exists to counter disinformation campaigns that are increasingly run by bots, and its answer is to make sourced, provenance-carrying data as cheap for an agent to consume as it is for a person.
 
 ---
 
@@ -84,7 +84,7 @@ Three families, all open source (SIL OFL), all self-hosted. All available on Goo
 
 High-contrast, slightly condensed, sharp terminals. Reads as editorial and contemporary rather than bookish. Excellent at large sizes; the italic is especially good and is the wordmark's default style.
 
-- Wordmark: `Kagami` set in Instrument Serif **Italic**, tracking −0.01em, `--kg-text`. Optionally followed by the kanji `鏡` in Noto Serif JP at 60% of the Latin cap height, `--kg-text-muted`.
+- Wordmark: `Truth Decay` set in Instrument Serif **Italic**, tracking −0.01em, `--kg-text`. No mark beside it.
 - Page titles and H1: Instrument Serif Regular, 40–56px, line-height 1.05, tracking −0.02em.
 - H2: Instrument Serif Regular, 28–32px, line-height 1.15.
 - Never below 24px. It is a display face; at small sizes it loses its edge.
@@ -117,7 +117,7 @@ Fallback: `"JetBrains Mono", "SF Mono", Menlo, Consolas, monospace`.
 
 ### Japanese
 
-For the `鏡` glyph and any Japanese UI: **Noto Serif JP** paired with Instrument Serif, **Noto Sans JP** paired with Inter. Load the JP families only on pages that need them; they are large.
+For Japanese UI (headlines from Japanese outlets): **Noto Serif JP** paired with Instrument Serif, **Noto Sans JP** paired with Inter. Load the JP families only on pages that need them; they are large.
 
 ### Type scale
 
@@ -288,7 +288,7 @@ step since it was first seen. Spec:
 ---
 
 **Label bar** (coverage by a named source's labels, the honest form of a left/centre/right bar)
-- One bar per source and field, headed "<source> on <field>" with the source's licence tag. It is that source's map of the outlets in the story, never Kagami's.
+- One bar per source and field, headed "<source> on <field>" with the source's licence tag. It is that source's map of the outlets in the story, never Truth Decay's.
 - Segments in the source's own scale order (AllSides: Left, Lean Left, Center, Lean Right, Right; Wikipedia's perennial list: Generally reliable, No consensus, Generally unreliable, Deprecated, Blacklisted), width proportional to the number of outlets, the label text and count on every segment. Greys of different weight, darkest first; never a hue per side.
 - Outlets the source does not label are the last segment, drawn empty and dashed, "not rated by <source>". They are never dropped, and they are never distributed across the others.
 - Shown only when the source labels at least two of the outlets in the story; a bar with one labelled outlet is a point, not a distribution.
@@ -300,15 +300,15 @@ step since it was first seen. Spec:
 - **Own reports against copies** on a card, when a story has copies: a 32×4px bar, dark for outlets that wrote their own report, light for outlets whose every item was another outlet's text, and the counts in words ("18 own reports · 5 copies"). It replaces "N syndication groups". Languages as "in N languages" when more than one.
 - **Timeline track** on the story page: outlet icons along a hairline by when each published, origin ringed, overlapping icons stacked into 20px lanes, the start time and "Nh later" at the ends; a grey dot for an outlet with no icon. The ordered list below stays the record; the track is its picture.
 - **Country spread** on a card: "in N countries" in the metadata when the outlets span more than one, from ledger's Wikidata country claims, the countries on hover. Words, not flags or a map.
-- It says what it measures: who shared an outlet's links, not what the outlet or the story says. Never bucketed into Left/Right words by Kagami, never coloured red or blue.
+- It says what it measures: who shared an outlet's links, not what the outlet or the story says. Never bucketed into Left/Right words by Truth Decay, never coloured red or blue.
 - Unknown is shown, never hidden or averaged in: outlets the source does not score are hollow dashed dots in their own group after R, named on hover and in the aria-label, and counted in the text ("3 of 5 scored · 2 unknown"). A story with no scored outlet says "political lean unknown for N outlets" in place of the strip.
 
 ## 6. Wordmark & mark
 
-- Wordmark: `Kagami` in Instrument Serif Italic, `--kg-text`. Minimum height 20px.
+- Wordmark: `Truth Decay` in Instrument Serif Italic, `--kg-text`. Minimum height 20px.
 - Mark (for favicon, avatars): a hairline circle, 1.5px `--kg-text`, bisected by a single vertical line offset 10% left of centre — a mirror's edge, in profile. Blue variant for active/selected contexts. Keep it geometric; no reflections, no gradients, no eyes.
 - Clear space: the cap height of the wordmark on all sides.
-- Sub-tool lockups: `Kagami` in serif, then a thin vertical rule, then the tool name in Inter 500 lowercase: **Kagami** │ feed.
+- Sub-tool lockups: `Truth Decay` in serif, then a thin vertical rule, then the tool name in Inter 500 lowercase: **Truth Decay** │ feed.
 - Lockup sizes are fixed, not scaled from one number: wordmark 28px (`h2`), kanji 17px, tool name 13px (`ui`) at weight 500, `s3` either side of the rule. The lockup is the same size on every screen.
 
 ---
@@ -352,9 +352,9 @@ step since it was first seen. Spec:
 
 Every page any tool serves is a view of the same mirror, so they share:
 
-- **Chrome.** The lockup top left (`Kagami` │ tool), one health or count line top right, a hairline under the header. No navigation bar; each tool is one page deep and links to the others' pages by URL.
+- **Chrome.** The lockup top left (`Truth Decay` │ tool), one health or count line top right, a hairline under the header. No navigation bar; each tool is one page deep and links to the others' pages by URL.
 - **Objects.** The cluster card and the claim card are the two objects. A story is always a cluster card; a fact is always a claim card with its provenance line. `lens` composes them; it does not invent a third.
-- **Outlets.** Shown by their own icon and name (the outlet badge: 16px icon with a hairline edge, `s1`, the name; no box), never with a colour, badge or icon that carries a rating. The icon is the outlet's own mark in its own colours, fetched once by `feed icons` and served from the site itself so a reader's browser asks no third party. Kagami never adds a colour per outlet (no brand-colour fills or borders): the icons already carry each brand's colour, and a palette of 90 hues would read as sorting outlets. A story card carries a row of its outlets' icons, origin first. An outlet without an icon gets its first letter on a light 16px tile, so every badge has the same square and the origin ring and AllSides border always sit on it, never around a name. Icon to name is `s2`. The origin outlet of a story gets the **origin ring**, and that is the only distinction:
+- **Outlets.** Shown by their own icon and name (the outlet badge: 16px icon with a hairline edge, `s1`, the name; no box), never with a colour, badge or icon that carries a rating. The icon is the outlet's own mark in its own colours, fetched once by `feed icons` and served from the site itself so a reader's browser asks no third party. Truth Decay never adds a colour per outlet (no brand-colour fills or borders): the icons already carry each brand's colour, and a palette of 90 hues would read as sorting outlets. A story card carries a row of its outlets' icons, origin first. An outlet without an icon gets its first letter on a light 16px tile, so every badge has the same square and the origin ring and AllSides border always sit on it, never around a name. Icon to name is `s2`. The origin outlet of a story gets the **origin ring**, and that is the only distinction:
   - a 1.5px `--kg-text` ring, 1.5px clear of the edge, around the outlet's icon (`.kg-origin`); where a surface shows no icons, the same ring around the outlet's name (`.kg-origin-name`);
   - near-black, not blue: blue means "act here", and the ring is a fact, not an action;
   - the word "first" is not written beside it. The ring carries "first to publish" as its accessible name (visually hidden text, `.kg-sr`), and the JSON and Markdown twins keep the word, since no fact lives only in a mark (§11).
@@ -364,14 +364,14 @@ Every page any tool serves is a view of the same mirror, so they share:
 
 ## 11. Machine readers
 
-Agents and bots are first-class readers, not scrapers to tolerate. Disinformation is spread by automation; the counter is sourced data that automation can pick up with provenance attached, so that a bot quoting Kagami carries the source, licence and date along whether it means to or not.
+Agents and bots are first-class readers, not scrapers to tolerate. Disinformation is spread by automation; the counter is sourced data that automation can pick up with provenance attached, so that a bot quoting Truth Decay carries the source, licence and date along whether it means to or not.
 
 - **Every page has a data twin.** Any HTML page is a rendering of a JSON route, linked from its `<head>` with `<link rel="alternate" type="application/json">`. Nothing is shown to a person that a machine cannot get from the API.
 - **Negotiate, don't guess.** Data routes answer `Accept: text/markdown` with a Markdown rendering that keeps every provenance line, so a language model reading the page gets the same facts in the same order as a person. JSON remains the default.
-- **Announce yourself.** Every server serves `/llms.txt` describing what it is, the routes, the contract version and the rules of use, `/v1/openapi.json` describing every route and object so a tool-using agent can call it without guessing, and `/robots.txt` that allows everything. The rules of use are the project's: quote the source, not Kagami; carry the licence; never turn claims into a score.
+- **Announce yourself.** Every server serves `/llms.txt` describing what it is, the routes, the contract version and the rules of use, `/v1/openapi.json` describing every route and object so a tool-using agent can call it without guessing, and `/robots.txt` that allows everything. The rules of use are the project's: quote the source, not Truth Decay; carry the licence; never turn claims into a score.
 - **Stable addresses.** Outlet ids, item ids and cluster ids are the contract; a URL that worked keeps working. Ids are also in the page as `data-id` so an agent driving a browser can read them without parsing prose.
 - **Plain structure.** Semantic HTML (`article`, `header`, `time`), text labels for every status, `aria-label` on charts giving the numbers. No fact lives only in colour, an icon or a sparkline.
-- **Provenance is not optional in any format.** Markdown, JSON, HTML and export all carry source, licence, retrieved date and ref URL on each claim. A format that drops them is not a Kagami format.
+- **Provenance is not optional in any format.** Markdown, JSON, HTML and export all carry source, licence, retrieved date and ref URL on each claim. A format that drops them is not a Truth Decay format.
 
 ## 12. Implementation notes
 

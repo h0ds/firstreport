@@ -1,4 +1,4 @@
-# Kagami 鏡
+# Truth Decay
 
 An open-source news comparison site, built as a disinformation-analysis
 network: where did a story originate, how fast did it spread, who amplified it,
@@ -24,7 +24,7 @@ project rules that apply to every pillar. `docs/local-runbook.md` lists
 everything that has not yet run outside the sandbox it was built in, with
 the commands to do it. `docs/steward.md` is the design for judging the
 data pipe, our own algorithms and our own conduct, and never the outlets.
-`docs/algorithms.md` is the public register of every rule Kagami runs to
+`docs/algorithms.md` is the public register of every rule Truth Decay runs to
 group, order, hold or flag anything; a rule not in it does not run.
 
 ## Visual layer
@@ -36,7 +36,7 @@ site, the `feed` debug page and the `ledger` lookup page are its consumers.
 
 ## For publishers
 
-Kagami reads feeds and news sitemaps, keeps headline, link, summary
+Truth Decay reads feeds and news sitemaps, keeps headline, link, summary
 and time, never fetches article pages, honours robots.txt and
 Crawl-delay on every request, and names this repository in its
 User-Agent. `docs/publisher-rules.md` states exactly what is fetched
@@ -44,7 +44,7 @@ and the rules the fetcher enforces.
 
 ## For agents and bots
 
-Kagami is built to be read by machines as easily as by people, because
+Truth Decay is built to be read by machines as easily as by people, because
 the disinformation it documents is spread by machines. Every server
 publishes `/llms.txt` describing itself and its rules of use, allows
 everything in `/robots.txt`, serves JSON by default, and answers

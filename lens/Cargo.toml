@@ -1,6 +1,6 @@
 [package]
 name = "lens"
-description = "Kagami pillar 3: a static site over feed and ledger exports, arranging and never judging"
+description = "Truth Decay pillar 3: a static site over feed and ledger exports, arranging and never judging"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

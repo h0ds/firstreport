@@ -1,10 +1,10 @@
 # ledger
 
-Kagami pillar 2: sourced facts about outlets, keyed by the outlet ids in
+Truth Decay pillar 2: sourced facts about outlets, keyed by the outlet ids in
 `feed`'s `config/outlets.toml`. Who owns an outlet, where it is, when it
 was founded, and how third parties rate it, each claim naming its
 source, the source's licence and when it was retrieved. Sources that
-disagree are shown side by side. There is no Kagami score and no field
+disagree are shown side by side. There is no Truth Decay score and no field
 for one; `ledger check` rejects any. The plan is in `docs/plan.md`.
 
 ```

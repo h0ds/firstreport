@@ -220,7 +220,7 @@ fn outlets_table(input: &Input, rows: &[(&str, Vec<&Item>)]) -> String {
         .collect::<Vec<_>>()
         .join(", ");
     format!(
-        "<h2>About the outlets</h2><p class=\"kg-muted\">From Kagami ledger{}. Hover a fact for its source and date; each outlet's page has the full record.</p><ul class=\"kg-outlet-facts\">{body}</ul>",
+        "<h2>About the outlets</h2><p class=\"kg-muted\">From Truth Decay ledger{}. Hover a fact for its source and date; each outlet's page has the full record.</p><ul class=\"kg-outlet-facts\">{body}</ul>",
         if sources.is_empty() { String::new() } else { format!(": {sources}") }
     )
 }
@@ -310,7 +310,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
     ));
     b.push_str("<h2>Timeline</h2>");
     b.push_str(&track(input, c, &rows, t0));
-    b.push_str("<p class=\"kg-muted\">Each outlet once, in the order it published, with its first headline. Hover a time for when it was published and when Kagami picked it up.</p><ol class=\"timeline\">");
+    b.push_str("<p class=\"kg-muted\">Each outlet once, in the order it published, with its first headline. Hover a time for when it was published and when Truth Decay picked it up.</p><ol class=\"timeline\">");
     let mut last_pickup: Option<i64> = None;
     for (k, (outlet, items)) in rows.iter().enumerate() {
         let first = &items[0];
@@ -635,7 +635,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             );
         }
     }
-    md.push_str("\n## Method\n\nKagami feed's own judgement of this story, as counts.\n\n");
+    md.push_str("\n## Method\n\nTruth Decay feed's own judgement of this story, as counts.\n\n");
     // Every line, including the ones the HTML leaves out as noise.
     for l in &method_lines(c) {
         let _ = writeln!(md, "- {l}");
@@ -682,7 +682,7 @@ mod tests {
         let i = fixture_input();
         let c = &i.clusters[&1001];
         let t = story(&i, c);
-        assert!(t.html.contains("<title>Story 1001 · Kagami</title>"));
+        assert!(t.html.contains("<title>Story 1001 · Truth Decay</title>"));
         let wire = t
             .html
             .find("<li class=\"first\" data-outlet=\"wire\">")

@@ -128,7 +128,7 @@ pub fn spec() -> Value {
     json!({
         "openapi": "3.1.0",
         "info": {
-            "title": "Kagami ledger",
+            "title": "Truth Decay ledger",
             "version": format!("contract-{CONTRACT_VERSION}"),
             "summary": "Sourced facts about news outlets. Never a score.",
             "description": "Every value is a source's, with its licence, retrieval date and the page that states it. Sources that disagree are listed side by side, never merged. Claims from observed sources (domain registry, site checks, feed behaviour) are measurements with their window and counts attached. Rules of use are in /llms.txt.",

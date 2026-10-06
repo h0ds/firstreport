@@ -39,7 +39,7 @@ impl Sighting {
 }
 
 /// `platform + account id + salt` through SipHash; the salt never leaves
-/// the machine, so nobody, including Kagami, can go from hash to handle
+/// the machine, so nobody, including Truth Decay, can go from hash to handle
 /// without it.
 pub fn account_hash(platform: &str, account_id: &str, salt: &str) -> String {
     let mut h = std::collections::hash_map::DefaultHasher::new();

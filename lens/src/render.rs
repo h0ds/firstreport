@@ -145,7 +145,7 @@ pub fn html(p: &Page) -> String {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title} · Kagami</title>
+<title>{title} · Truth Decay</title>
 <meta name="description" content="{description}">
 <link rel="stylesheet" href="/tokens.css">
 <link rel="stylesheet" href="/lens.css">
@@ -156,11 +156,11 @@ pub fn html(p: &Page) -> String {
 <body>
 <main{wide}>
 <header class="chrome">
-  <span class="kg-lockup"><a class="kg-wordmark" href="/">Kagami<span class="kanji">鏡</span></a></span>
+  <span class="kg-lockup"><a class="kg-wordmark" href="/">Truth Decay</a></span>
   <span class="kg-muted">{status}</span>
 </header>
 {body}
-<footer class="kg-muted">Every number on this page is a count from Kagami feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · <a href="/outlets/">Outlets</a> · <a href="/about/">About</a> · Machine readers: <a href="{path}index.json">JSON</a> · <a href="{path}index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a></footer>
+<footer class="kg-muted">Every number on this page is a count from Truth Decay feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · <a href="/outlets/">Outlets</a> · <a href="/about/">About</a> · Machine readers: <a href="{path}index.json">JSON</a> · <a href="{path}index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a></footer>
 </main>
 </body>
 </html>
@@ -1391,8 +1391,8 @@ mod tests {
         assert!(page.contains(
             "<link rel=\"alternate\" type=\"text/markdown\" href=\"/story/1001/index.md\""
         ));
-        assert!(page.contains("<title>T · Kagami</title>"));
-        assert!(page.contains("Kagami<span class=\"kanji\">鏡</span></a></span>"));
+        assert!(page.contains("<title>T · Truth Decay</title>"));
+        assert!(page.contains("Truth Decay</a></span>"));
     }
 
     // ---- design conformance (design/DESIGN.md §3, §4, §5, §12)

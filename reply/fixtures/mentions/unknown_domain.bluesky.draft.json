@@ -8,12 +8,12 @@
     "trailer"
   ],
   "sentences": [
-    "truth-wire.example is not an outlet Kagami follows.",
-    "Kagami has no story for this. Checked: item by canonical url https://truth-wire.example/breaking/999, outlet by host truth-wire.example.",
+    "truth-wire.example is not an outlet Truth Decay follows.",
+    "Truth Decay has no story for this. Checked: item by canonical url https://truth-wire.example/breaking/999, outlet by host truth-wire.example.",
     "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Adave%2Fapp.bsky.feed.post%2F5b2"
   ],
   "posts": [
-    "truth-wire.example is not an outlet Kagami follows. Kagami has no story for this. Checked: item by canonical url https://truth-wire.example/breaking/999, outlet by host truth-wire.example.",
+    "truth-wire.example is not an outlet Truth Decay follows. Truth Decay has no story for this. Checked: item by canonical url https://truth-wire.example/breaking/999, outlet by host truth-wire.example.",
     "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Adave%2Fapp.bsky.feed.post%2F5b2"
   ],
   "max_chars": 300,

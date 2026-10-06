@@ -10,8 +10,8 @@ pub const PAGE: &str = r##"<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kagami feed network</title>
-<meta name="description" content="Every feed Kagami polls: which are online, which are failing and why, which the steward is holding, and when each was last fetched.">
+<title>Truth Decay feed network</title>
+<meta name="description" content="Every feed Truth Decay polls: which are online, which are failing and why, which the steward is holding, and when each was last fetched.">
 <link rel="alternate" type="application/json" href="/v1/feeds" title="Feeds (JSON)">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this server">
 <style>
@@ -80,7 +80,7 @@ td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 <body>
 <main>
 <header>
-  <span class="lockup"><span class="wordmark">Kagami<span class="kanji">鏡</span></span><span class="rule"></span><span class="tool">feed</span></span>
+  <span class="lockup"><span class="wordmark">Truth Decay</span><span class="rule"></span><span class="tool">feed</span></span>
   <span class="muted quiet"><span id="updated">loading</span><a class="back" href="/debug">clusters</a></span>
 </header>
 <div class="stats" id="stats"></div>
@@ -116,7 +116,7 @@ function status(f, now){
   if (!f.last_fetch_at) return {k: 'idle', label: 'waiting', rank: 5};
   if (!f.last_ok_at || now - f.last_ok_at > 86400) return {k: 'warn', label: 'stale', rank: 4};
   // Steward flag (docs/steward.md §2 rule 4): the feed works, but its
-  // claimed publish times are days off; pick-up times are what Kagami saw.
+  // claimed publish times are days off; pick-up times are what Truth Decay saw.
   if (f.health && f.health.timestamps_unreliable) return {k: 'ok', label: 'online', rank: 6, note: 'timestamps unreliable: claimed publish times are days from pick-up; the timeline shows both.'};
   return {k: 'ok', label: 'online', rank: 6};
 }

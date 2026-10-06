@@ -1,6 +1,6 @@
 # Steward: judging our own pipe, never the publishers
 
-Kagami's standing rests on two things: that it never characterises an
+Truth Decay's standing rests on two things: that it never characterises an
 outlet itself, and that what it does record is reliable. The first is
 rule 6 in `feed/docs/plan.md`. The second needs an internal layer that
 judges the quality of the data pipe, the behaviour of our own
@@ -18,11 +18,11 @@ judges **outlets**. Concretely:
   failures. The outlet's other feeds, its items already recorded, and
   its place in the pool are untouched, and the reason is shown.
 - A story can carry how sure the clustering was, because that is a
-  fact about Kagami's method.
+  fact about Truth Decay's method.
 - A ledger import can be held for review when it would change too
   much at once, because that is a fact about the importer or the
   source's page, not about the outlet.
-- Kagami can throttle or stop fetching a host, because that is our
+- Truth Decay can throttle or stop fetching a host, because that is our
   conduct.
 
 Nothing the steward decides is ever an input to how an outlet is

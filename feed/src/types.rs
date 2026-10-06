@@ -77,7 +77,7 @@ pub struct Join {
 }
 
 /// How sure the method was (docs/steward.md §3, docs/algorithms.md §1):
-/// facts about Kagami's clustering, never about an outlet.
+/// facts about Truth Decay's clustering, never about an outlet.
 #[derive(Debug, Clone, Default, PartialEq, Serialize, Deserialize, JsonSchema)]
 pub struct Confidence {
     /// The join threshold in force when the cluster was assembled.

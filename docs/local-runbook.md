@@ -248,7 +248,7 @@ could not read the current terms.
   Dataverse, imported with `ledger import robertson2018 --write`. A measure
   of who shares an outlet's links, recorded as `audience_partisanship`.
 - **Not usable as sources**: Media Bias/Fact Check (RapidAPI terms exclude
-  redistribution, and Kagami's exports redistribute; a direct commercial
+  redistribution, and Truth Decay's exports redistribute; a direct commercial
   licence would be needed), Ad Fontes Media (free licence covers the chart
   image for teaching, not the per-outlet data), Bakshy et al. 2015 (download
   terms forbid sharing).

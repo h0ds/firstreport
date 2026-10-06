@@ -121,7 +121,7 @@ a JSON file, itself a machine-readable listing.
 
 ### 3.5 About `/about/`
 
-What Kagami is, what each number means, what `lens` does not do, the
+What Truth Decay is, what each number means, what `lens` does not do, the
 list of sources with licences (from `ledger`'s registry), the contract
 version, and the rules of use for machine readers. Generated, so it is
 never out of date with the data.
@@ -206,7 +206,7 @@ for `sitemap.xml` and JSON-LD; pages use relative links.
 Two objects, from `design/DESIGN.md` §5: the cluster card and the
 claim card with its provenance line. `lens` adds three layouts, not
 three objects: the timeline list, the label table, and the outlet
-story list. The chrome is the shared lockup, `Kagami` │ lens. Fonts as
+story list. The chrome is the shared lockup, `Truth Decay` │ lens. Fonts as
 in `design/fonts/README.md`, self-hosted; until they are fetched the
 fallbacks apply.
 

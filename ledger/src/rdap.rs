@@ -20,7 +20,7 @@ use crate::store::FeedOutlet;
 pub const SOURCE_ID: &str = "rdap";
 pub const REDIRECTOR: &str = "https://rdap.org/domain/";
 pub const USER_AGENT: &str = concat!(
-    "kagami-ledger/",
+    "truthdecay-ledger/",
     env!("CARGO_PKG_VERSION"),
     " (+https://github.com/h0ds/kagami)"
 );

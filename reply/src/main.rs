@@ -1,4 +1,4 @@
-//! `reply`: Kagami pillar 4. See `docs/plan.md`. R0 is offline: contract,
+//! `reply`: Truth Decay pillar 4. See `docs/plan.md`. R0 is offline: contract,
 //! templates, `render` and `check`.
 
 mod api;
@@ -538,7 +538,7 @@ mod tests {
         assert_eq!(entries.len(), 1, "{entries:?}");
         assert_eq!(entries[0].status, "pending");
         assert!(entries[0].draft.posts[0]
-            .contains("truth-wire.example is not an outlet Kagami follows"));
+            .contains("truth-wire.example is not an outlet Truth Decay follows"));
         assert!(mentions.iter().all(|m| q.seen(&m.id)));
 
         listen(

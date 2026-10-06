@@ -1,4 +1,4 @@
-# Taking Kagami live
+# Taking Truth Decay live
 
 The plan for putting the public site (`lens`) on the internet and keeping
 `feed` and `ledger` running behind it, as cheaply and as fast as the
@@ -117,7 +117,7 @@ within a week.
 behaviour facts cite feed's API as their source. The public site must
 cite something public. Give feed-behaviour claims `ref_url` =
 `https://<domain>/outlet/<id>/`, or leave `ref_url` empty for sources
-where Kagami is itself the source, and have lens render "Kagami feed" as
+where Truth Decay is itself the source, and have lens render "Truth Decay feed" as
 text instead of a link. Also make `lens check` fail on any link to
 `127.0.0.1` or `localhost`, so this can't come back.
 
@@ -127,7 +127,7 @@ text instead of a link. Also make `lens check` fail on any link to
   an R2 binding for the archive, and `not_found_handling` routing misses
   to the Worker.
 - `deploy/worker.js`: the archive fallback (§4.1).
-- `deploy/systemd/`: `kagami-feed.service`, `kagami-site.service` and
+- `deploy/systemd/`: `truthdecay-feed.service`, `kagami-site.service` and
   `.timer` (every 10 min), `kagami-daily.service` and `.timer` (archive,
   prune, ledger refresh), and `litestream.service`.
 - `deploy/litestream.yml`: `data/feed.db` to R2, `sync-interval: 1m`, so
@@ -166,7 +166,7 @@ text instead of a link. Also make `lens check` fail on any link to
 
 | Job | When | What |
 |---|---|---|
-| `kagami-feed` | always | `feed run`; restarts on failure. |
+| `truthdecay-feed` | always | `feed run`; restarts on failure. |
 | `kagami-site` | every 10 min | `git pull` (ledger data and code), then `kagami site`, then `wrangler deploy`. Pings healthchecks.io only on success, so a failed build or deploy alerts within 30 minutes. |
 | `kagami-daily` | 03:00 UTC | Archive stories leaving the window to R2; `feed prune --embeddings`; snapshot retention (30 days on the box, older days shipped to R2 per `INFRA-PLAN.md` §5); `ledger refresh --write` for sources that are due. |
 | `litestream` | always | Continuous `feed.db` replication to R2. |

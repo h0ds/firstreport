@@ -40,14 +40,14 @@ pub enum SourceKind {
     Database,
     Community,
     Rating,
-    /// Measured by Kagami itself from what outlets publish.
+    /// Measured by Truth Decay itself from what outlets publish.
     Observed,
     /// A law or official act, such as a sanctions regulation.
     Legal,
 }
 
 /// A source of claims: a database, a community process, a rater, or
-/// Kagami's own observation.
+/// Truth Decay's own observation.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize, JsonSchema)]
 #[serde(deny_unknown_fields)]
 pub struct Source {
@@ -83,12 +83,12 @@ pub fn is_stale(c: &Claim, source: &Source, now: i64) -> bool {
     source.refresh_days > 0 && age_days(c, now) > source.refresh_days as i64
 }
 
-/// One fact about one outlet as one source states it. Never Kagami's
+/// One fact about one outlet as one source states it. Never Truth Decay's
 /// own wording, never a score.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize, JsonSchema)]
 #[serde(deny_unknown_fields)]
 pub struct Claim {
-    /// Kagami outlet id, shared with feed.
+    /// Truth Decay outlet id, shared with feed.
     pub outlet_id: String,
     /// What the claim is about: owner, country, founded, bias,
     /// reliability, domain_registered, site_https, posting_cadence, …
@@ -103,7 +103,7 @@ pub struct Claim {
     pub source_id: String,
     /// The page that states this.
     pub ref_url: String,
-    /// Unix seconds when Kagami read it.
+    /// Unix seconds when Truth Decay read it.
     pub retrieved_at: i64,
     /// Date the source says the fact holds, if it says.
     #[serde(default, skip_serializing_if = "Option::is_none")]

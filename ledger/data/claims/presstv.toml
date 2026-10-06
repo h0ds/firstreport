@@ -229,7 +229,7 @@ source_id = "state_media_monitor"
 ref_url = "https://statemediamonitor.com/2026/06/islamic-republic-of-iran-broadcasting-irib/"
 retrieved_at = 1790722329
 as_of = "2026"
-note = "SMM's entry for Islamic Republic of Iran Broadcasting (IRIB), which runs this outlet; State Media Monitor's category, not Kagami's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
+note = "SMM's entry for Islamic Republic of Iran Broadcasting (IRIB), which runs this outlet; State Media Monitor's category, not Truth Decay's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
 
 [claim.data]
 code = "SC"

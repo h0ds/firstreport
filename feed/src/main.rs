@@ -1,4 +1,4 @@
-//! `feed`: Kagami pillar 1. See `docs/plan.md`.
+//! `feed`: Truth Decay pillar 1. See `docs/plan.md`.
 
 mod api;
 mod bloom;

@@ -94,7 +94,7 @@ pub fn claim(outlet_id: &str, url: &str, via: Option<&str>, code: &str, name: &s
         retrieved_at,
         as_of: Some("2026".into()),
         note: Some(format!(
-            "{whose}State Media Monitor's category, not Kagami's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
+            "{whose}State Media Monitor's category, not Truth Decay's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
         )),
     }
 }

@@ -2,7 +2,7 @@
 //! Whether it serves HTTPS and moves plain HTTP there, and whether its
 //! home page links the pages a reader uses to hold it to account:
 //! about, contact, privacy, corrections, ethics or standards, masthead
-//! or staff. Observed by Kagami, one request or two per domain, each
+//! or staff. Observed by Truth Decay, one request or two per domain, each
 //! claim naming the page it was read from.
 //!
 //! Absence is recorded as absence ("no corrections page linked from
@@ -235,7 +235,7 @@ pub fn claims(outlet_id: &str, obs: &Observation, retrieved_at: i64) -> Vec<Clai
 }
 
 /// Whether robots.txt lets our token (or everyone) fetch the home page:
-/// the group for `kagami-ledger`, else `*`; a `Disallow: /` in it means
+/// the group for `truthdecay-ledger`, else `*`; a `Disallow: /` in it means
 /// no. A small reading of RFC 9309 for the one path we request.
 pub fn robots_allows_home(robots_txt: &str) -> bool {
     type Group = (Vec<String>, Vec<(bool, String)>);
@@ -270,7 +270,7 @@ pub fn robots_allows_home(robots_txt: &str) -> bool {
         .iter()
         .find(|g| {
             g.0.iter()
-                .any(|a| a != "*" && "kagami-ledger".starts_with(a.as_str()))
+                .any(|a| a != "*" && "truthdecay-ledger".starts_with(a.as_str()))
         })
         .or_else(|| groups.iter().find(|g| g.0.iter().any(|a| a == "*")));
     let Some((_, rules)) = group else { return true };
@@ -421,12 +421,12 @@ mod tests {
         assert!(!robots_allows_home("User-agent: *\nDisallow: /\n"));
         assert!(
             robots_allows_home(
-                "User-agent: *\nDisallow: /\n\nUser-agent: kagami-ledger\nDisallow: /private\n"
+                "User-agent: *\nDisallow: /\n\nUser-agent: truthdecay-ledger\nDisallow: /private\n"
             ),
             "our own group wins"
         );
         assert!(!robots_allows_home(
-            "User-agent: kagami-ledger\nDisallow: /\n\nUser-agent: *\nDisallow:\n"
+            "User-agent: truthdecay-ledger\nDisallow: /\n\nUser-agent: *\nDisallow:\n"
         ));
         assert!(
             robots_allows_home("User-agent: *\nDisallow: /\nAllow: /\n"),

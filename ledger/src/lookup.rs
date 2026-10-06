@@ -9,7 +9,7 @@ pub const PAGE: &str = r##"<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kagami ledger lookup</title>
+<title>Truth Decay ledger lookup</title>
 <meta name="description" content="Sourced facts about news outlets, each with its source, licence and date. Never a score.">
 <link rel="alternate" type="application/json" href="/v1/outlets" title="Outlets with claims (JSON)">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this server">
@@ -70,7 +70,7 @@ input[type=search]:focus,input[type=number]:focus,select:focus{outline:2px solid
 <body>
 <main>
 <header>
-  <span class="lockup"><span class="wordmark">Kagami<span class="kanji">鏡</span></span><span class="rule"></span><span class="tool">ledger</span></span>
+  <span class="lockup"><span class="wordmark">Truth Decay</span><span class="rule"></span><span class="tool">ledger</span></span>
   <span class="muted" id="counts"></span>
 </header>
 <input id="q" type="search" placeholder="Outlet name, id or domain" autocomplete="off" autofocus>
