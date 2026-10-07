@@ -210,8 +210,7 @@ account: see `deploy/README.md`.)*
 
 - [ ] §4.1–4.3 done; `lens check` passes, including the new localhost check.
 - [ ] Lighthouse on the front page and a story page: performance ≥ 95, accessibility ≥ 95.
-- [ ] `/about/` names every source with its licence, including AllSides' required attribution sentence once its data is in.
-- [ ] **AllSides is licensed for non-commercial use only**: no ads, paid tiers or data sales without their written consent. Robertson et al. is CC0; Wikipedia is CC BY-SA (attribution is already on every claim).
+- [ ] `/about/` names every source with its licence. Robertson et al. is CC0; State Media Monitor is CC BY 4.0; Wikipedia is CC BY-SA (attribution is already on every claim).
 - [ ] No cookies and no third-party requests. Optional: Cloudflare Web Analytics, which is cookieless and free.
 - [ ] A contact address for outlets and readers, for corrections and opt-outs (`config/opt-out.toml` is already honoured).
 - [ ] `robots.txt`, `sitemap.xml` and `llms.txt` point at the real domain (`lens build --base-url https://<domain>`).

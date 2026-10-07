@@ -19,8 +19,7 @@ pub enum Command {
         write: bool,
         /// Write past the change guard (docs/steward.md §4).
         force: bool,
-        /// A local file for sources supplied as files (allsides; optional
-        /// for robertson2018, which is otherwise downloaded).
+        /// A local file for robertson2018, which is otherwise downloaded.
         file: Option<PathBuf>,
     },
 }
@@ -55,7 +54,6 @@ commands:
                                      source's claims is held in data/review/ unless --force
                                      sources: wikidata, wikipedia_rsp, rdap,
                                      feed_behaviour (needs --feed-export; --window default 90),
-                                     allsides (--file: the CSV or JSON AllSides supplies),
                                      robertson2018 (downloaded from Dataverse, or --file),
                                      state_media_monitor (the reviewed entries in statemedia.rs)
 ";

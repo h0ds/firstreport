@@ -27,7 +27,7 @@ source; `ledger check` validates the lot.
 
 ```
 Source {
-  id:       string    // "wikidata", "wikipedia_rsp", "allsides"
+  id:       string    // "wikidata", "wikipedia_rsp", "robertson2018"
   name:     string
   url:      string
   licence:  string    // SPDX id or a short name: "CC0-1.0", "CC-BY-SA-4.0", "proprietary"
@@ -54,7 +54,7 @@ Outlet view (API) {
 ```
 
 There is no numeric aggregate anywhere in the contract. A `bias` claim
-from AllSides is AllSides's label on AllSides's scale; a `reliability`
+from a rater is that rater's label on that rater's scale; a `reliability`
 claim from Wikipedia's perennial sources list is that list's verdict
 with a link to the discussion. Consumers weigh them; `ledger` doesn't.
 
@@ -71,7 +71,7 @@ with a link to the discussion. Consumers weigh them; `ledger` doesn't.
 | `legal_form` | company, public broadcaster, nonprofit, state media… | wikidata |
 | `website` | official website | wikidata |
 | `wikipedia` | English article URL | wikidata |
-| `bias` | a rater's political-lean label, on that rater's scale | allsides, others |
+| `bias` | a rater's political-lean label, on that rater's scale | reserved; no rater imported |
 | `audience_partisanship` | who shares the outlet's links, on the rater's numeric scale; a measure of audience, not content | robertson2018 |
 | `reliability` | a rater's or community's reliability verdict | wikipedia_rsp, others |
 | `domain_registered` | registration date of a registrable domain, per registry | rdap |
@@ -102,8 +102,8 @@ schema change.
 2. **Wikipedia: Reliable sources/Perennial sources** (CC BY-SA 4.0).
    Community consensus on reliability for several hundred outlets, each
    verdict linked to its discussions. Second importer.
-3. **AllSides** (chart is CC BY-NC-ND; per-rating reuse to be confirmed
-   before import). Left/right bias labels with published methodology.
+3. **Lean raters** (AllSides and the like): dropped for now; their terms
+   restrict reuse and the site works without a lean label per outlet.
 4. **Ad Fontes, MBFC, NewsGuard** (proprietary). Only via their APIs
    under their terms, if ever. Not scraped.
 5. **Domain registries via RDAP** (public registration data). Facts we
@@ -198,9 +198,8 @@ GET /llms.txt, /robots.txt            for machine readers (design §11)
 - **L2e** Site checks importer: HTTPS behaviour and accountability-page links from the home page. Done, parser tested against a recorded page; not yet run live.
 - **L2f** Steward guards (`docs/steward.md` S3): the change guard with
   review files and `--force`, and the conflict list in `check`. Done.
-- **L3** AllSides, once terms are confirmed; a `licence` gate in `check`
-  refuses to serve claims from a source whose terms field says
-  `no-redistribution`.
+- **L3** A `licence` gate in `check` refuses to serve claims from a
+  source whose terms field says `no-redistribution`.
 
 ## 9. Open questions
 

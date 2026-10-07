@@ -200,16 +200,8 @@ pub fn outlet_link(input: &Input, id: &str) -> String {
 /// rating), or nothing when `feed icons` found none. `origin` adds the
 /// origin ring.
 pub fn outlet_icon(input: &Input, id: &str, origin: bool) -> Option<String> {
-    let lean = allsides_label(input, id);
-    let classes = format!(
-        "{}{}",
-        if origin { " kg-origin" } else { "" },
-        lean.map(|l| format!(" lean-{}", lean_slug(l)))
-            .unwrap_or_default()
-    );
-    let title = lean
-        .map(|l| format!(" title=\"AllSides: {l}\""))
-        .unwrap_or_default();
+    let classes = if origin { " kg-origin" } else { "" };
+    let title = "";
     // No icon: the outlet's first letter on a light tile, the same size,
     // so rows line up and the origin ring always sits on a square.
     let Some(file) = input
@@ -234,23 +226,6 @@ pub fn outlet_icon(input: &Input, id: &str, origin: bool) -> Option<String> {
         "<img class=\"kg-icon{classes}\" src=\"/icons/{}\" alt=\"\" width=\"16\" height=\"16\" decoding=\"async\"{title}>",
         esc(&file)
     ))
-}
-
-/// The outlet's AllSides label (Left … Right), if AllSides rates it.
-/// Only AllSides drives colour on outlets (a rating of the outlet's
-/// content, by a named rater); audience measures never do.
-pub fn allsides_label<'a>(input: &'a Input, id: &str) -> Option<&'a str> {
-    input
-        .claims
-        .get(id)?
-        .iter()
-        .find(|c| c.source_id == "allsides" && c.field == "bias")
-        .map(|c| c.value.as_str())
-}
-
-/// CSS slug for an AllSides label: left, lean-left, center, lean-right, right.
-pub fn lean_slug(label: &str) -> String {
-    label.to_ascii_lowercase().replace(' ', "-")
 }
 
 /// Designations that travel with an outlet's name, each a named
@@ -547,72 +522,10 @@ pub fn story_countries(input: &Input, outlets: &[&str]) -> Vec<(String, usize)> 
     v
 }
 
-/// The label bar in one line for a card: thin grey segments in the
-/// source's order and the counts as text. Same data and rules as the
-/// story page's bar (at least two outlets rated), without the legend.
-pub fn label_bar_compact(input: &Input, bar: &LabelBar) -> String {
-    // AllSides' five labels fold into Left / Center / Right, as percentages
-    // of the rated outlets; unrated outlets are counted beside the bar.
-    let count = |labels: &[&str]| -> Vec<String> {
-        bar.segments
-            .iter()
-            .filter(|(l, _)| labels.contains(&l.as_str()))
-            .flat_map(|(_, ids)| ids.clone())
-            .collect()
-    };
-    let parts = [
-        ("left", "Left", count(&["Left", "Lean Left"])),
-        ("center", "Center", count(&["Center"])),
-        ("right", "Right", count(&["Lean Right", "Right"])),
-    ];
-    let rated: usize = parts.iter().map(|(_, _, v)| v.len()).sum();
-    if rated == 0 {
-        return String::new();
-    }
-    let mut segs = String::new();
-    for (slug, word, ids) in &parts {
-        if ids.is_empty() {
-            continue;
-        }
-        let pct = (ids.len() as f64 / rated as f64 * 100.0).round() as usize;
-        let _ = write!(
-            segs,
-            "<span class=\"seg {slug}\" style=\"flex: {}\" title=\"{word}: {}\"><span class=\"t\">{word} {pct}%</span></span>",
-            ids.len(),
-            esc(&ids.iter().map(|id| input.outlet_name(id)).collect::<Vec<_>>().join(", "))
-        );
-    }
-    let summary = parts
-        .iter()
-        .filter(|(_, _, v)| !v.is_empty())
-        .map(|(_, w, v)| {
-            format!(
-                "{w} {}%",
-                (v.len() as f64 / rated as f64 * 100.0).round() as usize
-            )
-        })
-        .collect::<Vec<_>>()
-        .join(", ");
-    format!(
-        "<span class=\"kg-coverage\" data-source=\"{}\" data-field=\"{}\"><span class=\"bar\" role=\"img\" aria-label=\"AllSides on {} rated outlets: {}{}\">{segs}</span><span class=\"lbl\">{}AllSides</span></span>",
-        esc(&bar.source_id),
-        esc(&bar.field),
-        rated,
-        esc(&summary),
-        if bar.unrated.is_empty() { String::new() } else { format!("; {} not rated", bar.unrated.len()) },
-        if bar.unrated.is_empty() { String::new() } else { format!("{} not rated · ", bar.unrated.len()) }
-    )
-}
-
-/// The lean line under a card: AllSides' labels when at least two
-/// outlets are rated, and the audience strip when at least two are scored.
+/// The lean line under a card: the audience strip, when at least two
+/// outlets are scored.
 pub fn lean_line(input: &Input, c: &Cluster) -> String {
-    let ids = story_outlets(c);
-    let bar = label_bar(input, &ids, "allsides", "bias")
-        .map(|b| label_bar_compact(input, &b))
-        .unwrap_or_default();
-    let strip = audience_strip(input, &ids, false);
-    format!("{bar}{strip}")
+    audience_strip(input, &story_outlets(c), false)
 }
 
 /// Largest value across a page's sparklines: the shared y scale (design §5).
@@ -1063,7 +976,6 @@ pub fn label_order(source_id: &str, field: &str) -> Option<&'static [&'static st
             "Deprecated",
             "Blacklisted",
         ]),
-        ("allsides", "bias") => Some(&["Left", "Lean Left", "Center", "Lean Right", "Right"]),
         _ => None,
     }
 }
@@ -1521,41 +1433,6 @@ mod tests {
         );
         assert!(outlet_badge(&i, "flagged").contains("kg-flag state"));
         i.claims.get_mut("wire").unwrap().clear();
-        // AllSides: no bar with fewer than two rated outlets.
-        i.sources.insert(
-            "allsides".into(),
-            crate::input::Source {
-                id: "allsides".into(),
-                name: "AllSides Media Bias Ratings".into(),
-                licence: "CC-BY-NC-4.0".into(),
-                ..Default::default()
-            },
-        );
-        i.claims
-            .entry("wire".into())
-            .or_default()
-            .push(claim("wire", "bias", "Center", "allsides", None));
-        assert!(label_bar(&i, &["wire", "gazette"], "allsides", "bias").is_none());
-        i.claims.entry("gazette".into()).or_default().push(claim(
-            "gazette",
-            "bias",
-            "Lean Right",
-            "allsides",
-            None,
-        ));
-        let bar = label_bar(&i, &["wire", "gazette", "blog"], "allsides", "bias").unwrap();
-        let compact = label_bar_compact(&i, &bar);
-        assert!(
-            compact.contains("Center 50%")
-                && compact.contains("Right 50%")
-                && !compact.contains("Left "),
-            "{compact}"
-        );
-        assert!(compact.contains("1 not rated") && compact.contains("AllSides"));
-        // Only AllSides colours an outlet, and only a rated one.
-        assert_eq!(allsides_label(&i, "gazette"), Some("Lean Right"));
-        assert_eq!(allsides_label(&i, "blog"), None);
-        assert_eq!(lean_slug("Lean Right"), "lean-right");
     }
 
     #[test]

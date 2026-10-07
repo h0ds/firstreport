@@ -49,16 +49,6 @@ notes = "How often the outlet posts, how often it edits or removes items, how mu
 refresh_days = 7
 
 [[source]]
-id = "allsides"
-name = "AllSides Media Bias Ratings"
-url = "https://www.allsides.com/media-bias/ratings"
-licence = "CC-BY-NC-4.0"
-kind = "rating"
-notes = "AllSides' rating of each outlet from Left to Right, using their own method. Non-commercial use only. Attribution: \"AllSides Media Bias Ratings™ by AllSides.com are licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.\" AllSides sends the data on request (admin@allsides.com); import it with `ledger import allsides --file <file>`."
-# Supplied as a file, so not on a refresh schedule: re-import when AllSides sends a new one.
-refresh_days = 0
-
-[[source]]
 id = "robertson2018"
 name = "Partisan audience bias scores (Robertson et al. 2018)"
 url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX"

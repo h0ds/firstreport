@@ -63,12 +63,11 @@ Semantic colours are for **system status only** — never for characterizing con
 
 Left-right placement is drawn red for left and blue for right, as news comparison sites commonly draw it (the project owner's call, taken knowing that red means right in the US and left in much of Europe; the labels are always written out, so the colour never stands alone).
 
-- **Outlet colour comes from AllSides only**: an outlet AllSides rates carries its label as a 2px border on its icon (origin ring outside it), with "AllSides: Lean Left" on hover. Outlets AllSides does not rate carry no border. Audience measures (Robertson et al.) never colour an outlet; they colour only the positions on their own strip.
+- **Outlets themselves are never coloured.** The lean colours appear only on the audience strip's track and dots (Robertson et al.), where a named source's number puts them.
 - **Designations** beside an outlet's name, each a named source's words, the source on hover:
   - **State** (outlined grey): State Media Monitor files the outlet, or the group running it, as State-Controlled (SC) or Captured Public (CaPu). Its independent public categories (IP, ISF, ISM, ISFM: BBC, NHK, ABC, CBC, France 24) carry no tag; they show only on the outlet page.
   - **Sanctioned** or **Deprecated** (solid near-black), one at most: the EU suspended its broadcasting as propaganda (Regulation 833/2014 as amended), or Wikipedia's perennial sources list deprecates it. Sanctioned wins when both apply.
   - Never red or a status colour; the words carry it.
-- **Coverage bar** (card): Left / Center / Right as percentages of the rated outlets in the story, red / white / blue, "N not rated · AllSides" beside it; AllSides' five labels fold into three (Lean Left with Left, Lean Right with Right). Shown when AllSides rates at least two outlets in the story. The story page keeps the full five-label bar in the same colours.
 
 ### Dark mode
 
@@ -289,11 +288,10 @@ step since it was first seen. Spec:
 
 **Label bar** (coverage by a named source's labels, the honest form of a left/centre/right bar)
 - One bar per source and field, headed "<source> on <field>" with the source's licence tag. It is that source's map of the outlets in the story, never First Report's.
-- Segments in the source's own scale order (AllSides: Left, Lean Left, Center, Lean Right, Right; Wikipedia's perennial list: Generally reliable, No consensus, Generally unreliable, Deprecated, Blacklisted), width proportional to the number of outlets, the label text and count on every segment. Greys of different weight, darkest first; never a hue per side.
+- Segments in the source's own scale order (Wikipedia's perennial list: Generally reliable, No consensus, Generally unreliable, Deprecated, Blacklisted), width proportional to the number of outlets, the label text and count on every segment. Greys of different weight, darkest first; never a hue per side.
 - Outlets the source does not label are the last segment, drawn empty and dashed, "not rated by <source>". They are never dropped, and they are never distributed across the others.
 - Shown only when the source labels at least two of the outlets in the story; a bar with one labelled outlet is a point, not a distribution.
 - A legend beneath lists the outlets under each label, by name, alphabetically.
-- On a story card the bar is compact: 8px tall, 120px wide, the counts as text beside it ("3 Left · 2 Center (AllSides)"), no legend. Same threshold: two rated outlets or no bar.
 
 **Audience strip** (a numeric scale: Robertson et al. 2018's audience partisanship)
 - A track from -1 to +1 in the five lean colours with a centre mark, "L" and "R" at the ends, one dot per scored outlet coloured by its fifth of the scale. The source measures US audiences (links shared by Democrats vs Republicans); labelled left/right, with the hover and legend saying it is US sharing data, since it is that even for outlets elsewhere. On a card it is dots only, beside the sparkline on the card's one picture row; the list's legend line names the source once and the hover title gives the counts. On the story page it is 240px with "N of M scored · K unknown (Robertson et al. 2018)" beside it.
@@ -354,7 +352,7 @@ Every page any tool serves is a view of the same mirror, so they share:
 
 - **Chrome.** The lockup top left (`First Report` │ tool), one health or count line top right, a hairline under the header. No navigation bar; each tool is one page deep and links to the others' pages by URL.
 - **Objects.** The cluster card and the claim card are the two objects. A story is always a cluster card; a fact is always a claim card with its provenance line. `lens` composes them; it does not invent a third.
-- **Outlets.** Shown by their own icon and name (the outlet badge: 16px icon with a hairline edge, `s1`, the name; no box), never with a colour, badge or icon that carries a rating. The icon is the outlet's own mark in its own colours, fetched once by `feed icons` and served from the site itself so a reader's browser asks no third party. First Report never adds a colour per outlet (no brand-colour fills or borders): the icons already carry each brand's colour, and a palette of 90 hues would read as sorting outlets. A story card carries a row of its outlets' icons, origin first. An outlet without an icon gets its first letter on a light 16px tile, so every badge has the same square and the origin ring and AllSides border always sit on it, never around a name. Icon to name is `s2`. The origin outlet of a story gets the **origin ring**, and that is the only distinction:
+- **Outlets.** Shown by their own icon and name (the outlet badge: 16px icon with a hairline edge, `s1`, the name; no box), never with a colour, badge or icon that carries a rating. The icon is the outlet's own mark in its own colours, fetched once by `feed icons` and served from the site itself so a reader's browser asks no third party. First Report never adds a colour per outlet (no brand-colour fills or borders): the icons already carry each brand's colour, and a palette of 90 hues would read as sorting outlets. A story card carries a row of its outlets' icons, origin first. An outlet without an icon gets its first letter on a light 16px tile, so every badge has the same square and the origin ring always sits on it, never around a name. Icon to name is `s2`. The origin outlet of a story gets the **origin ring**, and that is the only distinction:
   - a 1.5px `--kg-text` ring, 1.5px clear of the edge, around the outlet's icon (`.kg-origin`); where a surface shows no icons, the same ring around the outlet's name (`.kg-origin-name`);
   - near-black, not blue: blue means "act here", and the ring is a fact, not an action;
   - the word "first" is not written beside it. The ring carries "first to publish" as its accessible name (visually hidden text, `.kg-sr`), and the JSON and Markdown twins keep the word, since no fact lives only in a mark (§11).

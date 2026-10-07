@@ -92,7 +92,7 @@ The cluster card, then:
   before and after text.
 - **Coverage by source label.** For each `ledger` field that a source
   provides for enough of the outlets present (reliability from
-  Wikipedia's perennial list, bias from AllSides if its terms allow),
+  Wikipedia's perennial list),
   a table of that source's labels against the outlets in the story,
   headed with the source's name and licence. Outlets the source has no
   label for are listed as "not rated by <source>". This is the
@@ -225,8 +225,7 @@ fallbacks apply.
   runbook.
 - **N3** Coverage by source label. The label bar is built and shows
   Wikipedia's reliability verdicts on any story where the list labels
-  at least two outlets; AllSides bias slots into the same bar once its
-  terms are settled. Merged-cluster stubs done: an absorbed id keeps
+  at least two outlets. Merged-cluster stubs done: an absorbed id keeps
   its address with a canonical link and refresh to the survivor.
 - **N4** Live mode, only if the daily cadence is a problem in
   practice.
@@ -257,7 +256,7 @@ be judged, not to be built.
   marker follows `feed`'s origin (published time). If live data shows
   feeds lying badly, the story page should say when the two disagree
   by more than an hour rather than pick a side.
-- **Blindspot without lean labels.** Until AllSides is settled the
+- **Blindspot without lean labels.** The
   label table has one source, Wikipedia's reliability list, which
   covers a few hundred outlets. Whether a one-source table is useful
   or misleading is a judgement to make on real pages.

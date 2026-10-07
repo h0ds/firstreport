@@ -32,8 +32,9 @@ Run from `ledger/` so `data/` resolves; or pass `--data`.
 
 Current sources: Wikidata (CC0), Wikipedia's perennial sources list
 (CC BY-SA 4.0; one `reliability` claim per matching row, the list's own
-five-step status with scope, discussions and summary), AllSides (gated
-until reuse terms are confirmed).
+five-step status with scope, discussions and summary), domain registries,
+the outlet's own site, feed behaviour, Robertson et al. 2018, State Media
+Monitor and EU sanctions.
 
 ## API (v1, read-only)
 

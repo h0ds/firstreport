@@ -302,7 +302,7 @@ mod tests {
         let l = ledger_with(vec![
             claim("a", "country", "wikidata", "UK"),
             claim("a", "owner", "wikidata", "X"),
-            claim("a", "bias", "allsides", "Center"), // other source, ignored
+            claim("a", "bias", "altrater", "Center"), // other source, ignored
             claim("b", "country", "wikidata", "US"),
             claim("c", "country", "wikidata", "FR"), // not in the run, ignored
         ]);
@@ -368,7 +368,7 @@ mod tests {
         let d = tmp();
         let l = ledger_with(vec![
             claim("a", "country", "wikidata", "UK"),
-            claim("a", "bias", "allsides", "Center"),
+            claim("a", "bias", "altrater", "Center"),
         ]);
         let batch = vec![(
             "a".to_string(),
@@ -379,7 +379,7 @@ mod tests {
         let written = store::load(&d).unwrap_or_default();
         let a = &written.claims["a"];
         assert!(
-            a.iter().any(|c| c.source_id == "allsides"),
+            a.iter().any(|c| c.source_id == "altrater"),
             "other sources kept"
         );
         assert!(a.iter().any(|c| c.value == "United Kingdom"));
@@ -390,7 +390,7 @@ mod tests {
     #[test]
     fn conflicts_are_fields_where_sources_differ() {
         let l = ledger_with(vec![
-            claim("a", "bias", "allsides", "Center"),
+            claim("a", "bias", "altrater", "Center"),
             claim("a", "bias", "mbfc", "Left-Center"),
             claim("a", "country", "wikidata", "UK"),
             claim("a", "country", "rdap", "UK"), // agree: no conflict
@@ -406,7 +406,7 @@ mod tests {
         assert_eq!(
             c[0].values,
             vec![
-                ("allsides".to_string(), "Center".to_string()),
+                ("altrater".to_string(), "Center".to_string()),
                 ("mbfc".to_string(), "Left-Center".to_string())
             ]
         );

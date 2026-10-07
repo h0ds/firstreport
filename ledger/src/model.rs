@@ -181,9 +181,12 @@ pub fn validate_claim(
         ))),
         _ => {}
     }
-    if !(c.ref_url.starts_with("https://") || c.ref_url.starts_with("http://")) {
+    // A URL, or a page on the public site for First Report's own
+    // observations (site-relative, so it holds wherever the site lives).
+    let site_relative = c.ref_url.starts_with('/') && !c.ref_url.starts_with("//");
+    if !(c.ref_url.starts_with("https://") || c.ref_url.starts_with("http://") || site_relative) {
         out.push(Finding::Error(format!(
-            "{at}: ref_url must be a URL, got {:?}",
+            "{at}: ref_url must be a URL or a site path, got {:?}",
             c.ref_url
         )));
     }

@@ -413,7 +413,7 @@ mod tests {
         assert_eq!(i.items.len(), 95);
         assert_eq!(i.clusters.len(), 61);
         assert!(i.events.windows(2).all(|w| w[0].seq <= w[1].seq));
-        assert_eq!(i.sources.len(), 5);
+        assert_eq!(i.sources.len(), 4);
         assert_eq!(i.claims["wire"].len(), 11);
         assert_eq!(i.claims["gazette"].len(), 8);
         assert!(i.export_time > 0);

@@ -56,4 +56,4 @@ N2. Front page with the spreading-now list, story, outlet, search and
 about pages, all with twins, plus `llms.txt`, `robots.txt` and
 `sitemap.xml`; `check` verifies links, twins and the sitemap. Verified
 offline end to end; not yet built from live data. N3 (coverage by a
-named source's labels) waits on the AllSides terms and on live data.
+named source's labels) shows Wikipedia's reliability list.

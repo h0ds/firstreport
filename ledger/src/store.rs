@@ -252,7 +252,7 @@ mod tests {
             "bbc",
             vec![
                 claim("bbc", "country", "wikidata", "United Kingdom"),
-                claim("bbc", "bias", "allsides", "Center"),
+                claim("bbc", "bias", "altrater", "Center"),
             ],
         )
         .unwrap();
@@ -272,7 +272,7 @@ mod tests {
         );
         assert_eq!(merged.len(), 3);
         assert!(
-            merged.iter().any(|c| c.source_id == "allsides"),
+            merged.iter().any(|c| c.source_id == "altrater"),
             "other sources kept"
         );
         assert!(
@@ -283,7 +283,7 @@ mod tests {
         let findings = check(&l, Some(&["bbc".into()]));
         assert!(findings
             .iter()
-            .any(|f| f.to_string().contains("unknown source \"allsides\"")));
+            .any(|f| f.to_string().contains("unknown source \"altrater\"")));
         let _ = std::fs::remove_dir_all(&d);
     }
 

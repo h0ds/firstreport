@@ -240,14 +240,6 @@ serif.
 These are decisions, not commands, and the sites were blocked so I
 could not read the current terms.
 
-- **AllSides** (`allsides.com/media-bias/ratings`): confirmed. AllSides'
-  terms of use (October 2025) license the ratings CC BY-NC 4.0: free for
-  research or noncommercial use with attribution; commercial use (ads, paid
-  tiers, selling data) needs AllSides' written consent. The site blocks
-  automated access, so do not scrape it: email admin@allsides.com asking
-  for the ratings as CSV or JSON, then
-  `ledger import allsides --file <file> --write`. The `allsides` source
-  entry carries the licence and the required attribution text.
 - **Robertson et al. 2018** partisan audience scores: CC0 on Harvard
   Dataverse, imported with `ledger import robertson2018 --write`. A measure
   of who shares an outlet's links, recorded as `audience_partisanship`.

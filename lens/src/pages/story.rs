@@ -16,8 +16,7 @@ use crate::render::{
 };
 
 /// Source and field pairs that can draw a label bar, in display order.
-/// AllSides bias joins once its terms are confirmed (ledger plan §4).
-const LABEL_SOURCES: &[(&str, &str)] = &[("wikipedia_rsp", "reliability"), ("allsides", "bias")];
+const LABEL_SOURCES: &[(&str, &str)] = &[("wikipedia_rsp", "reliability")];
 
 /// Fields shown per outlet on a story page, in this order.
 const OUTLET_FIELDS: &[&str] = &[
@@ -793,7 +792,6 @@ mod tests {
         assert!(!one.html.contains("kg-labelbar"));
         assert!(one.json["coverage_by_label"].as_array().unwrap().is_empty());
         // bias from a source that forbids redistribution never reaches lens
-        assert!(!t.html.contains("data-source=\"allsides\""));
     }
 
     #[test]

@@ -23,7 +23,7 @@ const WHAT: &[(&str, &str)] = &[
 ];
 
 const NOT: &[&str] = &[
-    "First Report has no score or rating of its own. Lean colours come from AllSides, and the State, Sanctioned and Deprecated tags each come from a named source, shown on hover.",
+    "First Report has no score or rating of its own. The State, Sanctioned and Deprecated tags each come from a named source, shown on hover.",
     "It doesn't summarise stories. Headlines are the outlets' own.",
     "It only reads feeds, never full article pages. The raw fetches are kept.",
     "It doesn't filter outlets by quality. Every feed in the pool is treated the same.",
@@ -137,11 +137,11 @@ mod tests {
             t.html
                 .matches("<article class=\"kg-claim\" data-source=")
                 .count(),
-            5
+            4
         );
         assert!(t.html.contains("CC-BY-SA-4.0"));
         assert!(t.html.contains("no score or rating of its own"));
-        assert_eq!(t.json["sources"].as_array().unwrap().len(), 5);
+        assert_eq!(t.json["sources"].as_array().unwrap().len(), 4);
         assert!(t.md.contains("- **Wikidata** (database) · licence CC0-1.0"));
     }
 }
