@@ -41,10 +41,10 @@ pub fn sitemap(pages: &[String], base_url: &str, export_time: i64) -> String {
     s
 }
 
-/// Where the self-hosted woff2 files live: `KAGAMI_FONTS`, else the
+/// Where the self-hosted woff2 files live: `FIRSTREPORT_FONTS`, else the
 /// checkout's `design/fonts/` (populated by `design/fonts/fetch.sh`).
 fn fonts_dir() -> PathBuf {
-    std::env::var_os("KAGAMI_FONTS")
+    std::env::var_os("FIRSTREPORT_FONTS")
         .map(PathBuf::from)
         .unwrap_or_else(|| Path::new(env!("CARGO_MANIFEST_DIR")).join("../design/fonts"))
 }
@@ -217,7 +217,7 @@ mod tests {
     fn builds_every_story_with_its_twins() {
         let i = fixture_input();
         let out = std::env::temp_dir().join(format!("lens-site-{}", std::process::id()));
-        let (n, m) = write_site(&i, &out, 24, "https://kagami.example").unwrap();
+        let (n, m) = write_site(&i, &out, 24, "https://firstreport.example").unwrap();
         assert_eq!((n, m), (63, 3), "61 stories and two merge stubs");
         assert!(out.join("story/900/index.html").exists());
         assert!(std::fs::read_to_string(out.join("story/900/index.json"))
@@ -243,7 +243,7 @@ mod tests {
             );
         }
         // a rebuild replaces, never accumulates
-        let again = write_site(&i, &out, 24, "https://kagami.example").unwrap();
+        let again = write_site(&i, &out, 24, "https://firstreport.example").unwrap();
         assert_eq!(again, (n, m));
         let r = crate::check::run(&out).unwrap();
         assert!(r.problems.is_empty(), "{:?}", r.problems);
@@ -281,7 +281,7 @@ mod tests {
             since_days: Some(14),
         };
         let out = std::env::temp_dir().join(format!("lens-bounded-{}", std::process::id()));
-        let (n, _) = write_site(&i, &out, 24, "https://kagami.example").unwrap();
+        let (n, _) = write_site(&i, &out, 24, "https://firstreport.example").unwrap();
         let with_page = i.clusters.values().filter(|c| i.has_page(c)).count();
         let without = i.clusters.values().filter(|c| !i.has_page(c)).count();
         assert!(with_page > 0 && without > 0, "{with_page} {without}");

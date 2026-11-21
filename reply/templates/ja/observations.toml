@@ -13,5 +13,5 @@ cite = "observation:syndicated_text:{d.obs.syndicated_text.subject}"
 
 [cohort]
 needs = ["d.obs.cohort.count", "d.obs.cohort.denominator", "d.obs.cohort.span_days", "d.obs.cohort.baseline_pct", "d.obs.cohort.subject"]
-text = "作成日が分かる{d.obs.cohort.denominator}アカウントのうち{d.obs.cohort.count}は互いに{d.obs.cohort.span_days}日以内に作成されたが、Truth Decayが見た全アカウントではこの割合は{d.obs.cohort.baseline_pct}である。"
+text = "作成日が分かる{d.obs.cohort.denominator}アカウントのうち{d.obs.cohort.count}は互いに{d.obs.cohort.span_days}日以内に作成されたが、First Reportが見た全アカウントではこの割合は{d.obs.cohort.baseline_pct}である。"
 cite = "observation:cohort:{d.obs.cohort.subject}"

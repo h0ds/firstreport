@@ -55,7 +55,7 @@ impl X {
             refresh_token: std::env::var(REFRESH_TOKEN_ENV).unwrap_or_default(),
         });
         let client = reqwest::Client::builder()
-            .user_agent(concat!("truthdecay-reply/", env!("CARGO_PKG_VERSION")))
+            .user_agent(concat!("firstreport-reply/", env!("CARGO_PKG_VERSION")))
             .timeout(std::time::Duration::from_secs(30))
             .build()
             .map_err(|e| e.to_string())?;
@@ -467,7 +467,7 @@ mod tests {
         assert_eq!(linked.thread.as_ref().unwrap().root_id, "1001");
 
         let under = &ms[1];
-        assert_eq!(under.text, "@kagami prove it");
+        assert_eq!(under.text, "@firstreport prove it");
         let parent = under.parent.as_ref().unwrap();
         assert_eq!(parent.id, "990");
         assert_eq!(parent.urls, vec!["https://truth-wire.example/x"]);

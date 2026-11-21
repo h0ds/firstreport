@@ -1,6 +1,6 @@
-# Algorithms: every rule Truth Decay runs, stated in public
+# Algorithms: every rule First Report runs, stated in public
 
-Truth Decay has no editors and no hidden model of what matters. Everything
+First Report has no editors and no hidden model of what matters. Everything
 that orders, groups, holds or flags is a rule over counts, and every
 such rule is written here, in the about page, and next to the number
 it produces. This file is the register. A rule that is not in it does
@@ -38,15 +38,15 @@ syndication group more than once.
 ## 3. Who was first: origin
 
 Where: `feed`, shown on every story. The origin outlet is the member
-with the earliest claimed publish time; `joined_at` is when Truth Decay
+with the earliest claimed publish time; `joined_at` is when First Report
 saw it, shown beside it because feeds lie about times. A feed the
 steward flags `timestamps_unreliable` (§5) keeps its claimed time on
-the page and the flag beside it; Truth Decay does not correct it.
+the page and the flag beside it; First Report does not correct it.
 
 ## 4. Front page order: reach
 
 Where: `lens`, front page and its JSON twin. This is the one place
-Truth Decay says one story matters more than another, so the rule is the
+First Report says one story matters more than another, so the rule is the
 strictest. A story's **reach** over the page's window (24 hours by
 default; the JSON twin states the window it used) is:
 
@@ -92,7 +92,7 @@ at `/v1/feeds?filter=quarantined`. No rule reads the outlet.
 
 Where: `feed`, the shared fetch client, `docs/publisher-rules.md`.
 Before any request: the host is not on the opt-out list (nor a
-subdomain of one), robots.txt allows the path, the host and Truth Decay as
+subdomain of one), robots.txt allows the path, the host and First Report as
 a whole are under their hourly request budgets (a request over budget
 waits), and the host's Crawl-delay has passed. The snapshot archive
 stays under `snapshots.max_bytes` by dropping whole days, oldest first.
@@ -110,7 +110,7 @@ alphabetically or by join time and never ordered by any of these.
 
 Where: `lens` story page. For a ledger source whose labels cover at
 least two of the story's outlets, the outlets are grouped under that
-source's own labels, headed with the source and licence. Truth Decay adds
+source's own labels, headed with the source and licence. First Report adds
 no label, merges no sources, and orders the groups as the source
 publishes them.
 

@@ -1,4 +1,4 @@
-//! `feed`: Truth Decay pillar 1. See `docs/plan.md`.
+//! `feed`: First Report pillar 1. See `docs/plan.md`.
 
 mod api;
 mod bloom;

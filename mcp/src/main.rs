@@ -1,4 +1,4 @@
-//! `kagami-mcp`: a Model Context Protocol server over `feed` and
+//! `firstreport-mcp`: a Model Context Protocol server over `feed` and
 //! `ledger`, so an agent can ask where a story came from and what is
 //! on record about an outlet, and get the same sourced answer a person
 //! gets from the site.
@@ -8,8 +8,8 @@
 //! nothing is written, nothing is fetched from anywhere else, and no
 //! tool returns a verdict the APIs do not (`feed/docs/plan.md` rules).
 //!
-//!   KAGAMI_FEED_URL     default http://127.0.0.1:8080
-//!   KAGAMI_LEDGER_URL   default http://127.0.0.1:8081
+//!   FIRSTREPORT_FEED_URL     default http://127.0.0.1:8080
+//!   FIRSTREPORT_LEDGER_URL   default http://127.0.0.1:8081
 
 mod tools;
 
@@ -41,8 +41,8 @@ struct Http {
 impl Backend for Http {
     async fn get(&self, call: &Call) -> Result<String, String> {
         let (base, name, start) = match call.service {
-            Service::Feed => (&self.feed, "feed", "kagami run"),
-            Service::Ledger => (&self.ledger, "ledger", "kagami run"),
+            Service::Feed => (&self.feed, "feed", "firstreport run"),
+            Service::Ledger => (&self.ledger, "ledger", "firstreport run"),
         };
         let url = format!("{}{}", base.trim_end_matches('/'), call.path);
         let mut req = self.client.get(&url).query(&call.query);
@@ -101,7 +101,7 @@ pub async fn handle(msg: &Value, backend: &impl Backend) -> Option<Value> {
                 json!({
                     "protocolVersion": version,
                     "capabilities": {"tools": {}},
-                    "serverInfo": {"name": "kagami", "version": env!("CARGO_PKG_VERSION")},
+                    "serverInfo": {"name": "firstreport", "version": env!("CARGO_PKG_VERSION")},
                     "instructions": INSTRUCTIONS,
                 }),
             )
@@ -134,21 +134,21 @@ pub async fn handle(msg: &Value, backend: &impl Backend) -> Option<Value> {
 async fn main() {
     if std::env::args().nth(1).is_some() {
         eprintln!(
-            "usage: kagami-mcp   (no arguments; speaks MCP over stdin and stdout)\n\n\
-             KAGAMI_FEED_URL     default http://127.0.0.1:8080\n\
-             KAGAMI_LEDGER_URL   default http://127.0.0.1:8081"
+            "usage: firstreport-mcp   (no arguments; speaks MCP over stdin and stdout)\n\n\
+             FIRSTREPORT_FEED_URL     default http://127.0.0.1:8080\n\
+             FIRSTREPORT_LEDGER_URL   default http://127.0.0.1:8081"
         );
         std::process::exit(2);
     }
     let env = |k: &str, d: &str| std::env::var(k).unwrap_or_else(|_| d.to_string());
     let backend = Http {
         client: reqwest::Client::builder()
-            .user_agent(concat!("kagami-mcp/", env!("CARGO_PKG_VERSION")))
+            .user_agent(concat!("firstreport-mcp/", env!("CARGO_PKG_VERSION")))
             .timeout(std::time::Duration::from_secs(30))
             .build()
             .expect("http client"),
-        feed: env("KAGAMI_FEED_URL", "http://127.0.0.1:8080"),
-        ledger: env("KAGAMI_LEDGER_URL", "http://127.0.0.1:8081"),
+        feed: env("FIRSTREPORT_FEED_URL", "http://127.0.0.1:8080"),
+        ledger: env("FIRSTREPORT_LEDGER_URL", "http://127.0.0.1:8081"),
     };
     let mut lines = BufReader::new(tokio::io::stdin()).lines();
     let mut out = tokio::io::stdout();
@@ -196,7 +196,7 @@ mod tests {
         .await
         .unwrap();
         assert_eq!(r["result"]["protocolVersion"], "2025-03-26");
-        assert_eq!(r["result"]["serverInfo"]["name"], "kagami");
+        assert_eq!(r["result"]["serverInfo"]["name"], "firstreport");
         let r = ask(json!({"jsonrpc": "2.0", "id": 2, "method": "initialize",
             "params": {"protocolVersion": "1999-01-01"}}))
         .await

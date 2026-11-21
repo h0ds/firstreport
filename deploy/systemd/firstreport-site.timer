@@ -1,5 +1,5 @@
 [Unit]
-Description=Rebuild and deploy the Kagami site every 10 minutes
+Description=Rebuild and deploy the First Report site every 10 minutes
 
 [Timer]
 OnBootSec=2min

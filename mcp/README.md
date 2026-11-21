@@ -1,6 +1,6 @@
 # mcp
 
-`kagami-mcp` is a [Model Context Protocol](https://modelcontextprotocol.io)
+`firstreport-mcp` is a [Model Context Protocol](https://modelcontextprotocol.io)
 server over `feed` and `ledger`. An agent that has it can ask where a
 story came from and what is on record about an outlet, and gets the
 same sourced answer a person gets from the site: every fact with its
@@ -21,21 +21,21 @@ APIs; it fetches nothing else.
 
 ## Use
 
-Start the two servers (`kagami run`), then point a client at the binary.
+Start the two servers (`firstreport run`), then point a client at the binary.
 For Claude Code:
 
 ```
-claude mcp add kagami -- /path/to/target/release/kagami-mcp
+claude mcp add firstreport -- /path/to/target/release/firstreport-mcp
 ```
 
 For a client configured by JSON:
 
 ```json
-{ "mcpServers": { "kagami": { "command": "/path/to/target/release/kagami-mcp" } } }
+{ "mcpServers": { "firstreport": { "command": "/path/to/target/release/firstreport-mcp" } } }
 ```
 
-`KAGAMI_FEED_URL` (default `http://127.0.0.1:8080`) and
-`KAGAMI_LEDGER_URL` (default `http://127.0.0.1:8081`) say where the
+`FIRSTREPORT_FEED_URL` (default `http://127.0.0.1:8080`) and
+`FIRSTREPORT_LEDGER_URL` (default `http://127.0.0.1:8081`) say where the
 servers are.
 
 ## Status

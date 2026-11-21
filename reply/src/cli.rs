@@ -264,7 +264,8 @@ mod tests {
                 render: true
             }
         );
-        let a = p("--platform bluesky --handle kagami.test --interval 5 listen --once").unwrap();
+        let a =
+            p("--platform bluesky --handle firstreport.test --interval 5 listen --once").unwrap();
         assert_eq!(
             a.command,
             Command::Listen {
@@ -273,7 +274,10 @@ mod tests {
             }
         );
         assert_eq!(a.pds_or_default("bluesky"), "https://bsky.social");
-        assert_eq!((a.handle.as_str(), a.interval_secs), ("kagami.test", 5));
+        assert_eq!(
+            (a.handle.as_str(), a.interval_secs),
+            ("firstreport.test", 5)
+        );
         let a = p("listen").unwrap();
         assert_eq!(a.platform, "x");
         assert_eq!(a.pds_or_default("x"), "https://api.x.com");

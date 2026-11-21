@@ -8,11 +8,11 @@ files implement its §4.4, §5 and §6.
 | `wrangler.jsonc` | The Cloudflare Worker: the built site as static assets, the archive bucket bound as `ARCHIVE`. |
 | `worker.js` | Runs only when a request matches no file. Serves an archived story page from R2, else the site's 404. |
 | `worker.test.mjs` | `node deploy/worker.test.mjs`; CI runs it. |
-| `bin/site.sh` | Every 10 minutes: pull, rebuild if the code changed, `kagami site`, `wrangler deploy`, ping the health check. |
+| `bin/site.sh` | Every 10 minutes: pull, rebuild if the code changed, `firstreport site`, `wrangler deploy`, ping the health check. |
 | `bin/daily.sh` | Daily: copy live story pages to the archive, prune feed's store. |
-| `systemd/` | `kagami-feed` (always on), `kagami-site` and `kagami-daily` (timers), `kagami-litestream` (database backup). |
+| `systemd/` | `firstreport-feed` (always on), `firstreport-site` and `firstreport-daily` (timers), `firstreport-litestream` (database backup). |
 | `litestream.yml` | `feed.db` to R2, once a minute. |
-| `env.example` | The settings and secrets the jobs read, to copy to `/etc/kagami/env`. |
+| `env.example` | The settings and secrets the jobs read, to copy to `/etc/firstreport/env`. |
 | `setup.sh` | First-boot setup of the box. Safe to run again. |
 
 ## Status
@@ -30,9 +30,9 @@ the first real run, in this order:
 
 ## Before the first deploy
 
-- Create the R2 bucket `kagami-archive`, or change the name in
+- Create the R2 bucket `firstreport-archive`, or change the name in
   `wrangler.jsonc`, `litestream.yml` and `env.example` together.
 - Set the Worker's `name` and the bucket to whatever the project ends
   up being called.
 - The site job needs `--base-url`; it refuses to run without
-  `KAGAMI_BASE_URL`.
+  `FIRSTREPORT_BASE_URL`.

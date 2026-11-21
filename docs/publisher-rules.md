@@ -1,6 +1,6 @@
-# What Truth Decay takes from publishers, and the rules it follows
+# What First Report takes from publishers, and the rules it follows
 
-Truth Decay reads what publishers put out for machines to read: feeds and
+First Report reads what publishers put out for machines to read: feeds and
 news sitemaps. It keeps headline, link, summary when the feed carries
 one, and time. It never fetches article pages, never stores article
 text, and never republishes anything but a headline with a link back.
@@ -31,15 +31,15 @@ These are code, not policy; the tests in `feed/src/fetch/` check them.
   entry carries the reason and the date, and entries are only added by
   hand.
 - **robots.txt is honoured** (RFC 9309). The group addressed to
-  `truthdecay-feed` wins, else `*`. A disallowed path is never requested;
+  `firstreport-feed` wins, else `*`. A disallowed path is never requested;
   a feed under a disallowed path fails with that reason in `/v1/feeds`
   and is retried only when the rule changes, checked daily.
 - **Crawl-delay is honoured**, capped at two minutes, as the spacing
   between any two requests to the host.
 - **We identify ourselves.** The User-Agent is
-  `truthdecay-feed/<version> (+https://github.com/h0ds/kagami)`. Hosts that
+  `firstreport-feed/<version> (+https://github.com/h0ds/kagami)`. Hosts that
   reject anything not browser-shaped get the `Mozilla/5.0 (compatible;
-  truthdecay-feed/…)` form, which still names the project and links here.
+  firstreport-feed/…)` form, which still names the project and links here.
 - **Conditional requests.** ETag and Last-Modified are sent; a 304 costs
   the publisher nothing. Intervals adapt: an unchanged feed is polled
   less often, and a feed that changes at most every fifteen minutes by
@@ -53,7 +53,7 @@ These are code, not policy; the tests in `feed/src/fetch/` check them.
 - **Permanent moves are followed and remembered**, so a publisher who
   moves a feed is not polled at the old address.
 - **No article fetching.** Nothing under a feed or sitemap entry's link
-  is requested by `feed`. The one page request Truth Decay makes to a
+  is requested by `feed`. The one page request First Report makes to a
   publisher is the monthly home-page check, and it too honours
   robots.txt.
 
@@ -65,7 +65,7 @@ These are code, not policy; the tests in `feed/src/fetch/` check them.
   issue becomes a line in `feed/config/opt-out.toml`, which is checked
   before anything else.
 - Terms of use that restrict automated access are read in that light:
-  a feed exists to be polled and a sitemap to be crawled, and Truth Decay
+  a feed exists to be polled and a sitemap to be crawled, and First Report
   requests nothing else. Where a publisher's terms say otherwise for
   those files, the entry is dropped. This is the project's reading, not
   legal advice.
@@ -78,7 +78,7 @@ These are code, not policy; the tests in `feed/src/fetch/` check them.
 - **Reuters** publishes no feed. Its Google News sitemap is fetched as
   reuters.com/robots.txt allows. Reuters' terms restrict automated use
   of its content; the sitemap is the file it publishes for exactly this
-  kind of reading, and Truth Decay keeps headline, link and time from it and
+  kind of reading, and First Report keeps headline, link and time from it and
   nothing more.
 - **Associated Press** blocks feed readers on apnews.com; the entry is
   a third-party mirror and is labelled as such in the config.

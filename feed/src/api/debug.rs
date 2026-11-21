@@ -10,7 +10,7 @@ pub const PAGE: &str = r##"<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Truth Decay feed debug</title>
+<title>First Report feed debug</title>
 <meta name="description" content="Stories forming from news feeds: which outlet published first, who joined when, what was syndicated. No outlet is rated.">
 <link rel="alternate" type="application/json" href="/v1/clusters" title="Clusters (JSON)">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this server">
@@ -95,7 +95,7 @@ input[type=search]:focus,input[type=number]:focus,select:focus{outline:2px solid
 <body>
 <main>
 <header>
-  <span class="lockup"><span class="wordmark">Truth Decay</span><span class="rule"></span><span class="tool">feed</span></span>
+  <span class="lockup"><span class="wordmark">First Report</span><span class="rule"></span><span class="tool">feed</span></span>
   <span id="health" class="status ok"><span>connecting</span></span>
 </header>
 <div class="stats" id="stats"></div>
@@ -256,7 +256,7 @@ const outletStack = c => {
 // its headline so framings can be compared side by side. Later rewrites from
 // the same outlet sit underneath.
 const link = i => /^https?:/.test(i.canonical_url) ? `<a href="${esc(i.canonical_url)}" target="_blank" rel="noopener">${esc(i.title)}</a>` : esc(i.title);
-// Ordered by when Truth Decay saw each item join (matches the backend's origin outlet).
+// Ordered by when First Report saw each item join (matches the backend's origin outlet).
 const at = i => i.joined_at ?? i.fetched_at ?? i.published_at;
 const compare = c => {
   const by = new Map();

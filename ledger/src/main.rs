@@ -1,4 +1,4 @@
-//! `ledger`: Truth Decay pillar 2. See `docs/plan.md`.
+//! `ledger`: First Report pillar 2. See `docs/plan.md`.
 
 mod agents;
 mod api;
@@ -529,7 +529,7 @@ async fn import_ratings(
         Some(p) => std::fs::read_to_string(p).map_err(|e| format!("{}: {e}", p.display()))?,
         None if source_id == ratings::ROBERTSON => ratings::fetch_robertson(&rdap::client()?).await?,
         None => {
-            return Err("allsides needs --file <csv or json>: AllSides supplies the ratings as a file on request (admin@allsides.com); Truth Decay does not scrape their site".into())
+            return Err("allsides needs --file <csv or json>: AllSides supplies the ratings as a file on request (admin@allsides.com); First Report does not scrape their site".into())
         }
     };
     let mut per_outlet: std::collections::BTreeMap<String, Vec<model::Claim>> = Default::default();

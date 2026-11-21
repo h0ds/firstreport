@@ -125,7 +125,7 @@ fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usi
 pub fn outlets_page(input: &Input) -> Twins {
     let now = input.export_time;
     let mut b = format!(
-        "<h1>Outlets</h1><p class=\"kg-muted\">{} in the pool. Each outlet's page has what Truth Decay ledger records about it, with sources.</p><ul class=\"stories\">",
+        "<h1>Outlets</h1><p class=\"kg-muted\">{} in the pool. Each outlet's page has what First Report ledger records about it, with sources.</p><ul class=\"stories\">",
         n(input.outlets.len(), "outlet")
     );
     let mut md = format!(
@@ -157,7 +157,7 @@ pub fn outlets_page(input: &Input) -> Twins {
     let html_page = html(&Page {
         title: "Outlets",
         description:
-            "Every news outlet in Truth Decay's pool, with its domains. No outlet is rated.",
+            "Every news outlet in First Report's pool, with its domains. No outlet is rated.",
         path: "/outlets/",
         wide: false,
         head: "",

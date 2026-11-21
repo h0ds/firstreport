@@ -12,7 +12,7 @@ use crate::facts::{get, text};
 use crate::model::{FactSet, Mention, Names, OutletFacts, Post, Subject};
 
 /// Fewer words than this and a mention's text is a summons, not a claim
-/// worth matching ("@kagami prove it").
+/// worth matching ("@firstreport prove it").
 const MIN_TEXT_WORDS: usize = 5;
 
 /// What the mention is about. Links win over text; the mention's own
@@ -132,7 +132,7 @@ fn words(s: &str) -> usize {
 }
 
 /// The language the bot was summoned in: the mention's own words first;
-/// when those are too short to tell ("@kagami prove it" is under the
+/// when those are too short to tell ("@firstreport prove it" is under the
 /// detector's floor) but are a known summons, English; else the quoted or
 /// parent post; else unknown, which the composer treats as English.
 pub fn language(m: &Mention) -> Option<String> {
@@ -285,14 +285,14 @@ mod tests {
             text: "see https://x.example/a.".into(),
             urls: vec![],
         };
-        let s = subject(&mention("@kagami prove it", &[], Some(p.clone())));
+        let s = subject(&mention("@firstreport prove it", &[], Some(p.clone())));
         assert_eq!(
             (s.urls.as_slice(), s.from.as_str()),
             (&["https://x.example/a".to_string()][..], "parent")
         );
 
         let s = subject(&mention(
-            "@kagami https://y.example/b",
+            "@firstreport https://y.example/b",
             &[],
             Some(p.clone()),
         ));
@@ -300,7 +300,7 @@ mod tests {
         assert_eq!(s.urls, vec!["https://y.example/b"]);
 
         let s = subject(&mention(
-            "@kagami \"Central bank holds rates, signals cuts\" source??",
+            "@firstreport \"Central bank holds rates, signals cuts\" source??",
             &[],
             None,
         ));
@@ -314,10 +314,10 @@ mod tests {
             text: "The bank held rates and hinted at cuts".into(),
             urls: vec![],
         };
-        let s = subject(&mention("@kagami is this real", &[], Some(long)));
+        let s = subject(&mention("@firstreport is this real", &[], Some(long)));
         assert_eq!((s.from.as_str(), s.text.is_some()), ("parent", true));
 
-        let s = subject(&mention("@kagami thoughts?", &[], None));
+        let s = subject(&mention("@firstreport thoughts?", &[], None));
         assert!(s.urls.is_empty() && s.text.is_none());
     }
 
@@ -332,16 +332,16 @@ mod tests {
         };
         let ja = "この記事は完全に間違っている。出典をよく見てほしい、どこから出た話なのか";
         assert_eq!(
-            language(&mention("@kagami prove it", &[], p(ja))).as_deref(),
+            language(&mention("@firstreport prove it", &[], p(ja))).as_deref(),
             Some("en")
         );
         assert_eq!(
-            language(&mention("@kagami これは本当？", &[], None)).as_deref(),
+            language(&mention("@firstreport これは本当？", &[], None)).as_deref(),
             Some("ja")
         );
         assert_eq!(
             language(&mention(
-                "@kagami この話はどこから出てきたのか、本当のことなのか教えてほしい",
+                "@firstreport この話はどこから出てきたのか、本当のことなのか教えてほしい",
                 &[],
                 None
             ))
@@ -349,10 +349,10 @@ mod tests {
             Some("ja")
         );
         assert_eq!(
-            language(&mention("@kagami ?", &[], p(ja))).as_deref(),
+            language(&mention("@firstreport ?", &[], p(ja))).as_deref(),
             Some("ja")
         );
-        assert_eq!(language(&mention("@kagami ?", &[], None)), None);
+        assert_eq!(language(&mention("@firstreport ?", &[], None)), None);
     }
 
     #[tokio::test]
@@ -377,7 +377,7 @@ mod tests {
             json!([{"id": "wikidata", "name": "Wikidata"}]),
         );
         let m = mention(
-            "@kagami https://x.example/a and https://x.example/b",
+            "@firstreport https://x.example/a and https://x.example/b",
             &[],
             None,
         );
@@ -407,7 +407,7 @@ mod tests {
         let fs = resolve(
             &api,
             &urls,
-            &mention("@kagami https://x.example/a", &[], None),
+            &mention("@firstreport https://x.example/a", &[], None),
         )
         .await
         .unwrap();
@@ -423,7 +423,7 @@ mod tests {
         assert!(resolve(&api, &urls, &m).await.is_err());
 
         // Nothing to look up.
-        let fs = resolve(&api, &urls, &mention("@kagami thoughts?", &[], None))
+        let fs = resolve(&api, &urls, &mention("@firstreport thoughts?", &[], None))
             .await
             .unwrap();
         assert!(fs.lookup.is_none());

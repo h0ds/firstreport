@@ -78,7 +78,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     );
     if groups.is_empty() {
         b.push_str(
-            "<div class=\"empty\">No claims yet. Truth Decay ledger has not assessed this outlet.</div>",
+            "<div class=\"empty\">No claims yet. First Report ledger has not assessed this outlet.</div>",
         );
     }
     // Fields as rows: the name on the left, its claims on the right
@@ -141,7 +141,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     }
     let _ = write!(
         b,
-        "<h2>Stories</h2><p class=\"kg-muted\">In the {window_days} days to {}: {}, in {}. First to {} of the {} other outlets also carried. {} of its items carried text first published elsewhere; {} were carried by others. Counts from Truth Decay feed, not a rating.</p>",
+        "<h2>Stories</h2><p class=\"kg-muted\">In the {window_days} days to {}: {}, in {}. First to {} of the {} other outlets also carried. {} of its items carried text first published elsewhere; {} were carried by others. Counts from First Report feed, not a rating.</p>",
         crate::render::day_el(input.export_time, input.export_time),
         n(facts.items as usize, "item"),
         n(facts.clusters.len(), "story"),
@@ -180,7 +180,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         })
     );
     let description = format!(
-        "{}: {} from Truth Decay ledger, each with its source, and its stories in Truth Decay feed.",
+        "{}: {} from First Report ledger, each with its source, and its stories in First Report feed.",
         name,
         n(claims.len(), "sourced claim")
     );
@@ -213,7 +213,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     let mut md = format!("# {name}\n\n");
     let _ = writeln!(
         md,
-        "Outlet id `{}`{}. {}. Every value below is a source's, never Truth Decay's; sources that disagree are listed side by side.",
+        "Outlet id `{}`{}. {}. Every value below is a source's, never First Report's; sources that disagree are listed side by side.",
         o.id,
         if o.domains.is_empty() { String::new() } else { format!(", {}", o.domains.join(", ")) },
         n(claims.len(), "claim")

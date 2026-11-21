@@ -8,14 +8,14 @@
 # work out which stories are "leaving".
 set -euo pipefail
 
-: "${KAGAMI_HOME:=/home/kagami/kagami}"
-: "${KAGAMI_ARCHIVE:=r2:kagami-archive}"
-cd "$KAGAMI_HOME"
+: "${FIRSTREPORT_HOME:=/home/firstreport/firstreport}"
+: "${FIRSTREPORT_ARCHIVE:=r2:firstreport-archive}"
+cd "$FIRSTREPORT_HOME"
 
 if [ -d site/story ]; then
   # --checksum: every build rewrites the files, so times always differ;
   # only pages whose content changed are uploaded.
-  rclone copy --checksum --transfers 16 site/story "$KAGAMI_ARCHIVE/story"
+  rclone copy --checksum --transfers 16 site/story "$FIRSTREPORT_ARCHIVE/story"
 fi
 
 (cd feed && ../target/release/feed prune --embeddings)

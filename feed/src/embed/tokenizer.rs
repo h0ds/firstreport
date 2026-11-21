@@ -291,7 +291,7 @@ mod tests {
             ["hello", ",", "world", "!"]
         );
         assert_eq!(basic_tokenize("  café  naïve "), ["cafe", "naive"]);
-        assert_eq!(basic_tokenize("鏡 kagami"), ["鏡", "kagami"]);
+        assert_eq!(basic_tokenize("鏡 firstreport"), ["鏡", "firstreport"]);
         assert_eq!(basic_tokenize("don't"), ["don", "'", "t"]);
         assert_eq!(basic_tokenize("a\u{0}b"), ["ab"]);
     }

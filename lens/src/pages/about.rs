@@ -1,4 +1,4 @@
-//! `/about/` (plan §3.5): what Truth Decay is, what each number means, what
+//! `/about/` (plan §3.5): what First Report is, what each number means, what
 //! lens does not do, the sources with their licences, and the rules of
 //! use. Generated from the source registry so it cannot go stale.
 
@@ -23,7 +23,7 @@ const WHAT: &[(&str, &str)] = &[
 ];
 
 const NOT: &[&str] = &[
-    "Truth Decay has no score or rating of its own. Lean colours come from AllSides, and the State, Sanctioned and Deprecated tags each come from a named source, shown on hover.",
+    "First Report has no score or rating of its own. Lean colours come from AllSides, and the State, Sanctioned and Deprecated tags each come from a named source, shown on hover.",
     "It doesn't summarise stories. Headlines are the outlets' own.",
     "It only reads feeds, never full article pages. The raw fetches are kept.",
     "It doesn't filter outlets by quality. Every feed in the pool is treated the same.",
@@ -31,7 +31,7 @@ const NOT: &[&str] = &[
 
 pub fn about(input: &Input) -> Twins {
     let mut b = String::new();
-    b.push_str("<h1>About</h1><p>Truth Decay tracks how news stories spread: who published first, who followed, what was copied and what was changed later. It also collects facts about each outlet, with sources.</p>");
+    b.push_str("<h1>About</h1><p>First Report tracks how news stories spread: who published first, who followed, what was copied and what was changed later. It also collects facts about each outlet, with sources.</p>");
     b.push_str("<p>The site is built from two parts: feed, which reads outlets' feeds and groups headlines into stories, and ledger, which stores facts about outlets. Each page shows when it was last built.</p>");
     b.push_str("<h2>What the numbers mean</h2>");
     for (k, v) in WHAT {
@@ -43,7 +43,7 @@ pub fn about(input: &Input) -> Twins {
             esc(v)
         );
     }
-    b.push_str("<h2>What Truth Decay doesn't do</h2><ul>");
+    b.push_str("<h2>What First Report doesn't do</h2><ul>");
     for x in NOT {
         let _ = write!(b, "<li>{}</li>", esc(x));
     }
@@ -65,14 +65,14 @@ pub fn about(input: &Input) -> Twins {
     b.push_str("<h2>For machine readers</h2><p>Every page has <code>index.json</code> and <code>index.md</code> beside it with with the same content. <a href=\"/llms.txt\">/llms.txt</a> states the rules of use; <a href=\"/sitemap.xml\">/sitemap.xml</a> lists every page; <a href=\"/search/index.json\">/search/index.json</a> is the index of outlets and stories. Please cite the original source and keep its licence. Don't turn these facts into a score.</p>");
     let _ = write!(
         b,
-        "<p class=\"kg-muted\">Built from an export at {} covering {} in the pool and {} with claims. Truth Decay is open source: <a href=\"https://github.com/h0ds/kagami\" rel=\"noopener\">github.com/h0ds/kagami</a>.</p>",
+        "<p class=\"kg-muted\">Built from an export at {} covering {} in the pool and {} with claims. First Report is open source: <a href=\"https://github.com/h0ds/kagami\" rel=\"noopener\">github.com/h0ds/kagami</a>.</p>",
         datetime(input.export_time),
         n(input.outlets.len(), "outlet"),
         n(input.claims.len(), "outlet")
     );
     let page_html = html(&Page {
         title: "About",
-        description: "What Truth Decay is, what the numbers mean, and where the data comes from.",
+        description: "What First Report is, what the numbers mean, and where the data comes from.",
         path: "/about/",
         wide: false,
         head: "",
@@ -88,11 +88,11 @@ pub fn about(input: &Input) -> Twins {
         "outlets_with_claims": input.claims.len(),
         "repository": "https://github.com/h0ds/kagami",
     });
-    let mut md = String::from("# About\n\nTruth Decay tracks how news stories spread: who published first, who followed, what was copied and what was changed later. It also collects facts about each outlet, with sources.\n\n## What the numbers mean\n\n");
+    let mut md = String::from("# About\n\nFirst Report tracks how news stories spread: who published first, who followed, what was copied and what was changed later. It also collects facts about each outlet, with sources.\n\n## What the numbers mean\n\n");
     for (k, v) in WHAT {
         let _ = writeln!(md, "- **{k}**: {v}");
     }
-    md.push_str("\n## What Truth Decay doesn't do\n\n");
+    md.push_str("\n## What First Report doesn't do\n\n");
     for x in NOT {
         let _ = writeln!(md, "- {x}");
     }

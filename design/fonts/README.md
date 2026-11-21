@@ -10,7 +10,7 @@ sh design/fonts/fetch.sh
 
 which downloads from a pinned google/fonts commit, subsets and writes all
 four files (about 164 KB together; budget 200 KB). `lens build` copies them
-into the site's `fonts/`; set `KAGAMI_FONTS` to use another directory.
+into the site's `fonts/`; set `FIRSTREPORT_FONTS` to use another directory.
 
 | Family | Files | Source |
 |---|---|---|

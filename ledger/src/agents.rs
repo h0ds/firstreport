@@ -9,15 +9,15 @@ pub const ROBOTS_TXT: &str = "User-agent: *\nAllow: /\n";
 
 pub fn llms_txt() -> String {
     format!(
-        "# Truth Decay ledger
+        "# First Report ledger
 
 > Sourced facts about news outlets: who owns them, where they are, when they
 > were founded, what third parties say about their bias and reliability, and
-> what Truth Decay itself observes about their domains, sites and feeds. Every
-> value is a source's, never Truth Decay's, and every claim carries its source,
+> what First Report itself observes about their domains, sites and feeds. Every
+> value is a source's, never First Report's, and every claim carries its source,
 > licence, retrieval date and the page that states it. There is no score.
 
-Contract version {CONTRACT_VERSION}. Outlet ids are the same as in Truth Decay feed.
+Contract version {CONTRACT_VERSION}. Outlet ids are the same as in First Report feed.
 
 ## Routes
 
@@ -32,7 +32,7 @@ Contract version {CONTRACT_VERSION}. Outlet ids are the same as in Truth Decay f
 
 ## Rules of use
 
-- Quote the source, not Truth Decay: a claim is what its source says, and the `ref_url` is the page that says it.
+- Quote the source, not First Report: a claim is what its source says, and the `ref_url` is the page that says it.
 - Carry the licence: each source's terms are in `/v1/sources` and on every claim.
 - Sources that disagree are listed side by side. Do not average them, rank them, or turn them into a score.
 - Claims from the `observed` sources (domain registry, site checks, feed behaviour) are measurements with their window and counts attached. They describe what an outlet does, not whether that is good.
@@ -121,7 +121,7 @@ pub fn outlet_markdown(
     let mut md = String::new();
     md.push_str(&format!("# {}\n\n", name.unwrap_or(id)));
     md.push_str(&format!(
-        "Outlet id `{id}`. {} claims, {stale} past their source's refresh interval. Every value below is a source's, never Truth Decay's; sources that disagree are listed side by side.\n",
+        "Outlet id `{id}`. {} claims, {stale} past their source's refresh interval. Every value below is a source's, never First Report's; sources that disagree are listed side by side.\n",
         claims.len()
     ));
     for f in fields {

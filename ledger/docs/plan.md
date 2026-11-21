@@ -3,7 +3,7 @@
 Pillar 2. `ledger` holds what is known about each outlet: who owns it,
 where it is, when it was founded, how third parties rate its bias and
 reliability. It is keyed by the outlet ids in `feed`'s `outlets.toml`,
-which is the only thing the two share. It never emits a Truth Decay score.
+which is the only thing the two share. It never emits a First Report score.
 
 The project rules in `feed/docs/plan.md` §1 apply. The one that matters
 most here is rule 6, restated for this layer:
@@ -84,7 +84,7 @@ with a link to the discussion. Consumers weigh them; `ledger` doesn't.
 | `site_https` | whether the site serves HTTPS and moves plain HTTP to it | site |
 | `site_pages` | which accountability pages the home page links: about, contact, privacy, corrections, ethics, masthead | site |
 
-The `feed_behaviour` fields are measurements Truth Decay makes itself. Each
+The `feed_behaviour` fields are measurements First Report makes itself. Each
 claim carries the window, the counts and the denominator, and no
 outlet with fewer than ten items in the window gets one. They describe
 what a feed does, not whether that is good: a wire service is meant to
@@ -111,11 +111,11 @@ schema change.
    domains was registered, by which registrar, with what status. A
    three-month-old domain is a different thing from one from 1995, and
    the ledger says which without judging.
-6. **Feed behaviour** (Truth Decay's own measurement, from `feed`'s export).
+6. **Feed behaviour** (First Report's own measurement, from `feed`'s export).
    Cadence, revision and withdrawal rates, syndication in both
    directions, origin share. No network; refresh weekly from a fresh
    export.
-7. **The outlet's own site** (Truth Decay's own observation). HTTPS, and
+7. **The outlet's own site** (First Report's own observation). HTTPS, and
    whether the home page links about, contact, privacy, corrections,
    ethics and masthead pages. Two requests per domain, monthly.
    Absence means "not linked from the home page", and the claim says

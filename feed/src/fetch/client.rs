@@ -19,7 +19,7 @@ use reqwest::header::{
 use tokio::sync::Semaphore;
 
 pub const USER_AGENT: &str = concat!(
-    "truthdecay-feed/",
+    "firstreport-feed/",
     env!("CARGO_PKG_VERSION"),
     " (+https://github.com/h0ds/kagami)"
 );
@@ -27,7 +27,7 @@ pub const USER_AGENT: &str = concat!(
 /// identifies us and links to the project, but passes naive filters that
 /// reject anything not starting with `Mozilla`.
 pub const COMPAT_USER_AGENT: &str = concat!(
-    "Mozilla/5.0 (compatible; truthdecay-feed/",
+    "Mozilla/5.0 (compatible; firstreport-feed/",
     env!("CARGO_PKG_VERSION"),
     "; +https://github.com/h0ds/kagami)"
 );
@@ -46,7 +46,7 @@ pub const MAX_CRAWL_DELAY: Duration = Duration::from_secs(120);
 /// The window the request budgets (docs/steward.md §5) are counted over.
 pub const BUDGET_WINDOW: Duration = Duration::from_secs(3600);
 
-/// Request budgets: how many feed requests a host, and Truth Decay as a
+/// Request budgets: how many feed requests a host, and First Report as a
 /// whole, may be sent per window. A request over budget waits for the
 /// oldest one in the window to age out. 0 means no budget.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -552,8 +552,8 @@ mod tests {
 
     #[test]
     fn user_agents_identify_the_project() {
-        assert!(USER_AGENT.starts_with("truthdecay-feed/"));
-        assert!(COMPAT_USER_AGENT.starts_with("Mozilla/5.0 (compatible; truthdecay-feed/"));
+        assert!(USER_AGENT.starts_with("firstreport-feed/"));
+        assert!(COMPAT_USER_AGENT.starts_with("Mozilla/5.0 (compatible; firstreport-feed/"));
         assert!(COMPAT_USER_AGENT.contains("github.com/h0ds/kagami"));
     }
 }

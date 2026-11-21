@@ -27,7 +27,7 @@ cite = "feed:cluster:{lookup.cluster.id}"
 [spread_small]
 needs = ["d.outlet_count", "d.outlets_word", "d.carried_by", "lookup.cluster.id"]
 when = "d.outlet_count < 5"
-text = "Truth Decay has it from {d.outlet_count} {d.outlets_word}: {d.carried_by}."
+text = "First Report has it from {d.outlet_count} {d.outlets_word}: {d.carried_by}."
 cite = "feed:cluster:{lookup.cluster.id}"
 
 [syndication]

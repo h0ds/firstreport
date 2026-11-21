@@ -322,7 +322,7 @@ impl Default for Syndication {
 #[serde(default, deny_unknown_fields)]
 pub struct Api {
     pub bind: String,
-    /// Base URL of the Truth Decay ledger that holds sourced facts about the
+    /// Base URL of the First Report ledger that holds sourced facts about the
     /// same outlet ids. Empty disables the links.
     pub ledger_url: String,
 }

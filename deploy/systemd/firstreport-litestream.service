@@ -4,9 +4,9 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-User=kagami
-EnvironmentFile=/etc/kagami/env
-ExecStart=/usr/bin/litestream replicate -config /home/kagami/kagami/deploy/litestream.yml
+User=firstreport
+EnvironmentFile=/etc/firstreport/env
+ExecStart=/usr/bin/litestream replicate -config /home/firstreport/firstreport/deploy/litestream.yml
 Restart=on-failure
 RestartSec=10
 

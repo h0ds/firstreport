@@ -4,7 +4,7 @@
     "platform": "bluesky",
     "author": "dave.example",
     "at": 1704300000,
-    "text": "@kagami prove it",
+    "text": "@firstreport prove it",
     "urls": [],
     "parent": {
       "id": "at://did:plc:eve/app.bsky.feed.post/5b1",

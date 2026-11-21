@@ -15,7 +15,7 @@ pub const PAGE_URL: &str =
 pub const RENDER_URL: &str =
     "https://en.wikipedia.org/w/index.php?title=Wikipedia:Reliable_sources/Perennial_sources&action=render";
 pub const USER_AGENT: &str = concat!(
-    "truthdecay-ledger/",
+    "firstreport-ledger/",
     env!("CARGO_PKG_VERSION"),
     " (+https://github.com/h0ds/kagami)"
 );

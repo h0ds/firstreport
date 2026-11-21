@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <!-- Truth Decay mark: a hairline circle bisected by a vertical line offset 10% left of centre. -->
+  <!-- First Report mark: a hairline circle bisected by a vertical line offset 10% left of centre. -->
   <circle cx="16" cy="16" r="14" fill="none" stroke="#0F172A" stroke-width="1.5"/>
   <line x1="14.4" y1="2.75" x2="14.4" y2="29.25" stroke="#0F172A" stroke-width="1.5"/>
 </svg>

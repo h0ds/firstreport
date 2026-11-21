@@ -1,6 +1,6 @@
 # Wire
 
-Outlet id `wire`, wire.example. 11 claims. Every value below is a source's, never Truth Decay's; sources that disagree are listed side by side.
+Outlet id `wire`, wire.example. 11 claims. Every value below is a source's, never First Report's; sources that disagree are listed side by side.
 
 ## Reliability
 
@@ -27,31 +27,31 @@ Source: [Wikidata](https://www.wikidata.org/wiki/Q130879) · licence CC0-1.0 · 
 ## Posting cadence
 
 **2.0 items/day**
-Source: Truth Decay feed (observed behaviour) · licence CC0-1.0 · retrieved 2025-09-22 · as of 2025-09-22 · retrieved today
+Source: First Report feed (observed behaviour) · licence CC0-1.0 · retrieved 2025-09-22 · as of 2025-09-22 · retrieved today
 Measured over 30 days to 2025-09-22, 61 items. A measurement, not a verdict.
 
 ## First to shared stories
 
 **first to 97% of 31 stories other outlets also carried**
-Source: Truth Decay feed (observed behaviour) · licence CC0-1.0 · retrieved 2025-09-22 · as of 2025-09-22 · retrieved today
+Source: First Report feed (observed behaviour) · licence CC0-1.0 · retrieved 2025-09-22 · as of 2025-09-22 · retrieved today
 Measured over 30 days to 2025-09-22, 61 items. A measurement, not a verdict.
 
 ## Syndication
 
 **0% of items carry text first published elsewhere; 49% were carried by others**
-Source: Truth Decay feed (observed behaviour) · licence CC0-1.0 · retrieved 2025-09-22 · as of 2025-09-22 · retrieved today
+Source: First Report feed (observed behaviour) · licence CC0-1.0 · retrieved 2025-09-22 · as of 2025-09-22 · retrieved today
 Measured over 30 days to 2025-09-22, 61 items. A measurement, not a verdict.
 
 ## Revisions
 
 **16% of items revised after publication**
-Source: Truth Decay feed (observed behaviour) · licence CC0-1.0 · retrieved 2025-09-22 · as of 2025-09-22 · retrieved today
+Source: First Report feed (observed behaviour) · licence CC0-1.0 · retrieved 2025-09-22 · as of 2025-09-22 · retrieved today
 Measured over 30 days to 2025-09-22, 61 items. A measurement, not a verdict.
 
 ## Withdrawals
 
 **2% of items withdrawn**
-Source: Truth Decay feed (observed behaviour) · licence CC0-1.0 · retrieved 2025-09-22 · as of 2025-09-22 · retrieved today
+Source: First Report feed (observed behaviour) · licence CC0-1.0 · retrieved 2025-09-22 · as of 2025-09-22 · retrieved today
 Measured over 30 days to 2025-09-22, 61 items. A measurement, not a verdict.
 
 ## Wikipedia

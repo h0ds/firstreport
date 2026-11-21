@@ -23,7 +23,7 @@ Wikipedia: Reliable sources/Perennial sources on reliability (licence CC-BY-SA-4
 
 ## Method
 
-Truth Decay feed's own judgement of this story, as counts.
+First Report feed's own judgement of this story, as counts.
 
 - Clustering confidence was not recorded in this export.
 

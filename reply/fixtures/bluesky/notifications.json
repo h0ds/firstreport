@@ -11,7 +11,7 @@
       "indexedAt": "2024-01-01T12:30:00.000Z",
       "record": {
         "$type": "app.bsky.feed.post",
-        "text": "@kagami.test is this real?",
+        "text": "@firstreport.test is this real?",
         "createdAt": "2024-01-01T12:29:58.000Z",
         "reply": { "root": { "uri": "at://did:plc:x/app.bsky.feed.post/r0", "cid": "r" },
                    "parent": { "uri": "at://did:plc:x/app.bsky.feed.post/missing", "cid": "m" } },
@@ -36,7 +36,7 @@
       "indexedAt": "2024-01-01T11:05:00.000Z",
       "record": {
         "$type": "app.bsky.feed.post",
-        "text": "@kagami.test prove it",
+        "text": "@firstreport.test prove it",
         "createdAt": "2024-01-01T11:04:59.000Z",
         "reply": { "root": { "uri": "at://did:plc:carol/app.bsky.feed.post/p1", "cid": "p" },
                    "parent": { "uri": "at://did:plc:carol/app.bsky.feed.post/p1", "cid": "p" } }
@@ -51,11 +51,11 @@
       "indexedAt": "2024-01-01T10:00:01.000Z",
       "record": {
         "$type": "app.bsky.feed.post",
-        "text": "@kagami.test source for this? example.com/story",
+        "text": "@firstreport.test source for this? example.com/story",
         "createdAt": "2024-01-01T10:00:00.000Z",
         "facets": [
           { "index": { "byteStart": 0, "byteEnd": 12 },
-            "features": [ { "$type": "app.bsky.richtext.facet#mention", "did": "did:plc:kagami" } ] },
+            "features": [ { "$type": "app.bsky.richtext.facet#mention", "did": "did:plc:firstreport" } ] },
           { "index": { "byteStart": 30, "byteEnd": 47 },
             "features": [ { "$type": "app.bsky.richtext.facet#link", "uri": "https://www.example.com/story?utm_source=x" } ] }
         ]

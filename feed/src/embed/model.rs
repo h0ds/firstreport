@@ -19,7 +19,7 @@ pub fn init_runtime(lib: &Path) -> Result<(), String> {
     RUNTIME
         .get_or_init(|| {
             let env = ort::init_from(lib).map_err(|e| format!("loading {}: {e}", lib.display()))?;
-            env.with_name("truthdecay-feed").commit();
+            env.with_name("firstreport-feed").commit();
             Ok(())
         })
         .clone()
@@ -215,11 +215,11 @@ mod tests {
     }
 
     /// Runs only when an ONNX Runtime library is available, e.g.
-    /// `KAGAMI_ORT_LIB=/path/libonnxruntime.so cargo test`.
+    /// `FIRSTREPORT_ORT_LIB=/path/libonnxruntime.so cargo test`.
     #[test]
     fn tiny_model_end_to_end() {
-        let Ok(lib) = std::env::var("KAGAMI_ORT_LIB") else {
-            eprintln!("KAGAMI_ORT_LIB unset; skipping");
+        let Ok(lib) = std::env::var("FIRSTREPORT_ORT_LIB") else {
+            eprintln!("FIRSTREPORT_ORT_LIB unset; skipping");
             return;
         };
         let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("fixtures/models");

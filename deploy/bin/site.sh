@@ -4,10 +4,10 @@
 # success, so a failure alerts by silence (docs/deploy.md 6).
 set -euo pipefail
 
-: "${KAGAMI_HOME:=/home/kagami/kagami}"
-: "${KAGAMI_BASE_URL:?set KAGAMI_BASE_URL in /etc/kagami/env}"
-: "${KAGAMI_PAGES_SINCE:=14}"
-cd "$KAGAMI_HOME"
+: "${FIRSTREPORT_HOME:=/home/firstreport/firstreport}"
+: "${FIRSTREPORT_BASE_URL:?set FIRSTREPORT_BASE_URL in /etc/firstreport/env}"
+: "${FIRSTREPORT_PAGES_SINCE:=14}"
+cd "$FIRSTREPORT_HOME"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 git pull --ff-only --quiet
@@ -21,10 +21,10 @@ if [ -z "$built" ] || ! git diff --quiet "$built" "$head" -- Cargo.toml Cargo.lo
   echo "$head" > "$built_file"
 fi
 
-./target/release/kagami site \
-  --base-url "$KAGAMI_BASE_URL" \
+./target/release/firstreport site \
+  --base-url "$FIRSTREPORT_BASE_URL" \
   --multi-outlet-pages \
-  --pages-since "$KAGAMI_PAGES_SINCE"
+  --pages-since "$FIRSTREPORT_PAGES_SINCE"
 
 (cd deploy && npx --yes wrangler deploy)
 

@@ -1,10 +1,10 @@
-//! `kagami`: the one command. The pillars stay separate binaries with
+//! `firstreport`: the one command. The pillars stay separate binaries with
 //! separate contracts; this drives them from a checkout so "runs
 //! locally" is true for someone who is not us.
 //!
-//!   kagami run    feed run + ledger serve, until Ctrl-C
-//!   kagami site   feed export → ledger export → lens build → lens check
-//!   kagami doctor what is and is not in place
+//!   firstreport run    feed run + ledger serve, until Ctrl-C
+//!   firstreport site   feed export → ledger export → lens build → lens check
+//!   firstreport doctor what is and is not in place
 //!
 //! Sibling binaries are found next to this one (a cargo target dir or
 //! an install prefix); each runs with its own crate directory as the
@@ -16,7 +16,7 @@ use std::process::Stdio;
 use tokio::process::{Child, Command};
 
 const USAGE: &str = "\
-usage: kagami [--root <checkout>] <command>
+usage: firstreport [--root <checkout>] <command>
 
 commands:
   run                   start feed (poll, cluster, API on :8080) and ledger (API on :8081); Ctrl-C stops both
@@ -194,7 +194,7 @@ fn spawn(t: &Tool, args: &[String]) -> Result<Child, String> {
 }
 
 async fn run_step(t: &Tool, args: &[String]) -> Result<(), String> {
-    eprintln!("kagami: {} {}", t.name, args.join(" "));
+    eprintln!("firstreport: {} {}", t.name, args.join(" "));
     let status = spawn(t, args)?
         .wait()
         .await
@@ -215,10 +215,10 @@ async fn run(root: &Path) -> Result<(), String> {
     let mut children = Vec::new();
     for (name, args) in plan_run() {
         let t = tool(&ts, name);
-        eprintln!("kagami: {} {}", t.name, args.join(" "));
+        eprintln!("firstreport: {} {}", t.name, args.join(" "));
         children.push((name, spawn(t, &args)?));
     }
-    eprintln!("kagami: feed on http://127.0.0.1:8080/debug, ledger on http://127.0.0.1:8081/lookup; Ctrl-C stops both");
+    eprintln!("firstreport: feed on http://127.0.0.1:8080/debug, ledger on http://127.0.0.1:8081/lookup; Ctrl-C stops both");
     let result = tokio::select! {
         _ = tokio::signal::ctrl_c() => Ok(()),
         r = wait_any(&mut children) => r,
@@ -227,7 +227,7 @@ async fn run(root: &Path) -> Result<(), String> {
         if c.try_wait().ok().flatten().is_none() {
             let _ = c.start_kill();
             let _ = c.wait().await;
-            eprintln!("kagami: stopped {name}");
+            eprintln!("firstreport: stopped {name}");
         }
     }
     result
@@ -400,7 +400,7 @@ fn doctor(root: &Path) -> Result<(), String> {
         }
     }
     if missing == 0 {
-        println!("everything in place: kagami run, then kagami site");
+        println!("everything in place: firstreport run, then firstreport site");
         Ok(())
     } else {
         Err(format!("{missing} missing"))
@@ -422,7 +422,7 @@ async fn main() {
         Cmd::Doctor => doctor(&args.root),
     };
     if let Err(e) = r {
-        eprintln!("kagami: {e}");
+        eprintln!("firstreport: {e}");
         std::process::exit(1);
     }
 }
@@ -432,7 +432,7 @@ mod tests {
     use super::*;
 
     fn argv(s: &str) -> Vec<String> {
-        std::iter::once("kagami")
+        std::iter::once("firstreport")
             .chain(s.split_whitespace())
             .map(String::from)
             .collect()

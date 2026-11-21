@@ -1,4 +1,4 @@
-//! `reply`: Truth Decay pillar 4. See `docs/plan.md`. R0 is offline: contract,
+//! `reply`: First Report pillar 4. See `docs/plan.md`. R0 is offline: contract,
 //! templates, `render` and `check`.
 
 mod api;
@@ -492,9 +492,10 @@ mod tests {
         let root = Path::new(env!("CARGO_MANIFEST_DIR"));
         let set = template::load(&root.join("templates")).unwrap();
         let layout = set.layout("bluesky").unwrap().clone();
-        let mut args =
-            cli::parse(["reply", "--handle", "kagami.test", "listen", "--once"].map(String::from))
-                .unwrap();
+        let mut args = cli::parse(
+            ["reply", "--handle", "firstreport.test", "listen", "--once"].map(String::from),
+        )
+        .unwrap();
         args.data = std::env::temp_dir().join(format!("kg-reply-listen-{}", std::process::id()));
         let _ = std::fs::remove_dir_all(&args.data);
 
@@ -538,7 +539,7 @@ mod tests {
         assert_eq!(entries.len(), 1, "{entries:?}");
         assert_eq!(entries[0].status, "pending");
         assert!(entries[0].draft.posts[0]
-            .contains("truth-wire.example is not an outlet Truth Decay follows"));
+            .contains("truth-wire.example is not an outlet First Report follows"));
         assert!(mentions.iter().all(|m| q.seen(&m.id)));
 
         listen(

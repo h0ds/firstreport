@@ -191,7 +191,7 @@ source_id = "state_media_monitor"
 ref_url = "https://statemediamonitor.com/2026/08/peoples-daily/"
 retrieved_at = 1790722327
 as_of = "2026"
-note = "SMM's entry for People's Daily, which runs this outlet; State Media Monitor's category, not Truth Decay's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
+note = "SMM's entry for People's Daily, which runs this outlet; State Media Monitor's category, not First Report's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
 
 [claim.data]
 code = "CaPu"

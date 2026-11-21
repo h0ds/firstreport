@@ -1,5 +1,5 @@
 [Unit]
-Description=Kagami daily job at 03:00 UTC
+Description=First Report daily job at 03:00 UTC
 
 [Timer]
 OnCalendar=*-*-* 03:00:00 UTC

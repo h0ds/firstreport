@@ -12,12 +12,12 @@
   "sentences": [
     "First published by Wire Agency at 2024-01-01 05:00 UTC.",
     "This link is BBC's copy, published later.",
-    "Truth Decay has it from 2 outlets: Wire Agency and BBC.",
+    "First Report has it from 2 outlets: Wire Agency and BBC.",
     "100% of those items carry the same text, first seen at Wire Agency; that is one copy, not independent reporting.",
     "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Acarol%2Fapp.bsky.feed.post%2F4a1"
   ],
   "posts": [
-    "First published by Wire Agency at 2024-01-01 05:00 UTC. This link is BBC's copy, published later. Truth Decay has it from 2 outlets: Wire Agency and BBC. 100% of those items carry the same text, first seen at Wire Agency; that is one copy, not independent reporting.",
+    "First published by Wire Agency at 2024-01-01 05:00 UTC. This link is BBC's copy, published later. First Report has it from 2 outlets: Wire Agency and BBC. 100% of those items carry the same text, first seen at Wire Agency; that is one copy, not independent reporting.",
     "Every fact above links its source; full record: http://127.0.0.1:8082/v1/log/at%3A%2F%2Fdid%3Aplc%3Acarol%2Fapp.bsky.feed.post%2F4a1"
   ],
   "max_chars": 300,

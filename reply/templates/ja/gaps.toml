@@ -10,7 +10,7 @@ cite = "feed:cluster:{lookup.cluster.id}"
 [no_story]
 needs = ["d.checked"]
 when = "lookup.matched == none"
-text = "Truth Decayにはこれに該当する記事がない。確認した範囲：{d.checked}。"
+text = "First Reportにはこれに該当する記事がない。確認した範囲：{d.checked}。"
 cite = "reply:lookup:{mention.id}"
 
 [nothing_to_check]

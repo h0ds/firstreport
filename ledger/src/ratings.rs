@@ -1,5 +1,5 @@
 //! Lean ratings from outside raters (plan §4), each on its own scale and
-//! each named as the source's, never Truth Decay's.
+//! each named as the source's, never First Report's.
 //!
 //! - `allsides`: AllSides Media Bias Ratings™ (CC BY-NC 4.0, confirmed in
 //!   AllSides' terms of use, October 2025). AllSides blocks automated
@@ -196,7 +196,7 @@ pub fn allsides_claim(outlet_id: &str, row: &AllSidesRow, retrieved_at: i64) -> 
         ref_url: row.page.clone().unwrap_or_else(|| ALLSIDES_RATINGS_URL.into()),
         retrieved_at,
         as_of: None,
-        note: Some("AllSides Media Bias Ratings™ by AllSides.com, licensed CC BY-NC 4.0; AllSides' label on AllSides' scale, not Truth Decay's.".into()),
+        note: Some("AllSides Media Bias Ratings™ by AllSides.com, licensed CC BY-NC 4.0; AllSides' label on AllSides' scale, not First Report's.".into()),
     }
 }
 

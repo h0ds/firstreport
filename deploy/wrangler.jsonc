@@ -1,8 +1,8 @@
-// The public site: static files from `kagami site`, plus a small Worker
+// The public site: static files from `firstreport site`, plus a small Worker
 // that answers only when a file is missing, by looking in the archive
 // bucket. See docs/deploy.md.
 {
-  "name": "kagami-site",
+  "name": "firstreport-site",
   "main": "worker.js",
   "compatibility_date": "2026-09-01",
   "assets": {
@@ -12,6 +12,6 @@
     "not_found_handling": "404-page"
   },
   "r2_buckets": [
-    { "binding": "ARCHIVE", "bucket_name": "kagami-archive" }
+    { "binding": "ARCHIVE", "bucket_name": "firstreport-archive" }
   ]
 }

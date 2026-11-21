@@ -1,5 +1,5 @@
 [package]
-name = "kagami-mcp"
+name = "firstreport-mcp"
 description = "A Model Context Protocol server over feed and ledger: provenance for agents, read-only, every answer with its sources"
 version.workspace = true
 edition.workspace = true
@@ -7,7 +7,7 @@ license.workspace = true
 repository.workspace = true
 
 [[bin]]
-name = "kagami-mcp"
+name = "firstreport-mcp"
 path = "src/main.rs"
 
 [dependencies]

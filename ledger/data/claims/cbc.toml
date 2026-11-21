@@ -122,7 +122,7 @@ source_id = "state_media_monitor"
 ref_url = "https://statemediamonitor.com/2026/06/canadian-broadcasting-corporation-radio-canada-cbc/"
 retrieved_at = 1790722341
 as_of = "2026"
-note = "State Media Monitor's category, not Truth Decay's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
+note = "State Media Monitor's category, not First Report's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
 
 [claim.data]
 code = "ISF"
