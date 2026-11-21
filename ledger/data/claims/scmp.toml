@@ -89,7 +89,7 @@ field = "name"
 value = "South China Morning Post"
 source_id = "site"
 ref_url = "https://www.scmp.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -185,7 +185,7 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2020"
 
 [claim.data]
@@ -222,7 +222,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.scmp.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "scmp.com"
@@ -235,22 +235,22 @@ status = 200
 [[claim]]
 outlet_id = "scmp"
 field = "site_pages"
-value = "none of the usual accountability pages linked from its home page"
+value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
 source_id = "site"
 ref_url = "https://www.scmp.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
+about = "https://www.scmp.com/video/world/3375256/south-koreas-toughest-exam-gets-even-stricter-amid-worries-about-ai-cheating?module=scmp_shorts&pgtype=homepage"
+contact = "https://www.scmp.com/contact-us?module=footer&pgtype=homepage"
 domain = "scmp.com"
+ethics = "https://www.scmp.com/policies-and-standards?module=footer&pgtype=homepage"
 missing = [
-    "about",
-    "contact",
-    "privacy",
     "corrections",
-    "ethics",
     "masthead",
 ]
+privacy = "https://www.scmp.com/privacy-policy?module=footer&pgtype=homepage"
 
 [[claim]]
 outlet_id = "scmp"

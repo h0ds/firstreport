@@ -84,7 +84,7 @@ field = "name"
 value = "The Globe and Mail"
 source_id = "site"
 ref_url = "https://www.theglobeandmail.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -147,7 +147,7 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2021"
 
 [claim.data]
@@ -179,7 +179,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.theglobeandmail.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "theglobeandmail.com"
@@ -195,13 +195,13 @@ field = "site_pages"
 value = "links about, privacy, ethics, masthead pages from its home page; no contact, corrections link found"
 source_id = "site"
 ref_url = "https://www.theglobeandmail.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://www.theglobeandmail.com/sports/article-arizona-state-hockey-players-send-letter-to-school-president-about/"
+about = "https://www.theglobeandmail.com/business/careers/article-stop-beating-yourself-up-productivity-is-about-more-than-personal/"
 domain = "theglobeandmail.com"
-ethics = "https://www.theglobeandmail.com/opinion/article-canadian-medical-association-cultural-safety-code-of-ethics-indigenous/"
+ethics = "https://www.theglobeandmail.com/standards-editor/?intcmp=footer"
 masthead = "https://theglobeleadershipinstitute.com/"
 missing = [
     "contact",

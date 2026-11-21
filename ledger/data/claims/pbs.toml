@@ -146,7 +146,7 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2016"
 
 [claim.data]
@@ -184,7 +184,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.pbs.org/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "pbs.org"
@@ -200,7 +200,7 @@ field = "site_pages"
 value = "links about, ethics pages from its home page; no contact, privacy, corrections, masthead link found"
 source_id = "site"
 ref_url = "https://www.pbs.org/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]

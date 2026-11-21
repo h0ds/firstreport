@@ -23,7 +23,7 @@ field = "name"
 value = "本と雑誌のニュースサイト／リテラ"
 source_id = "site"
 ref_url = "https://lite-ra.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -77,7 +77,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://lite-ra.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "lite-ra.com"
@@ -93,7 +93,7 @@ field = "site_pages"
 value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
 source_id = "site"
 ref_url = "https://lite-ra.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]

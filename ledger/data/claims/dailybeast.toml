@@ -77,7 +77,7 @@ field = "name"
 value = "The Daily Beast"
 source_id = "site"
 ref_url = "https://www.thedailybeast.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -119,7 +119,7 @@ field = "reliability"
 value = "No consensus"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2023"
 
 [claim.data]
@@ -142,7 +142,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.thedailybeast.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "thedailybeast.com"
@@ -158,14 +158,14 @@ field = "site_pages"
 value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
 source_id = "site"
 ref_url = "https://www.thedailybeast.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://www.thedailybeast.com/this-moment-shows-trumps-bubble-is-about-to-burst-political-guru/"
+about = "https://www.thedailybeast.com/company/about"
 contact = "https://www.thedailybeast.com/company/contact-us"
 domain = "thedailybeast.com"
-ethics = "https://www.thedailybeast.com/company/code-of-ethics/"
+ethics = "https://www.thedailybeast.com/company/code-of-ethics"
 missing = [
     "corrections",
     "masthead",

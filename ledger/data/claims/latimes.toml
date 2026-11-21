@@ -102,7 +102,7 @@ field = "name"
 value = "Los Angeles Times"
 source_id = "site"
 ref_url = "https://www.latimes.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -176,7 +176,7 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2023"
 
 [claim.data]
@@ -218,7 +218,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.latimes.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "latimes.com"
@@ -231,22 +231,22 @@ status = 200
 [[claim]]
 outlet_id = "latimes"
 field = "site_pages"
-value = "links about, privacy pages from its home page; no contact, corrections, ethics, masthead link found"
+value = "links about, privacy, masthead pages from its home page; no contact, corrections, ethics link found"
 source_id = "site"
 ref_url = "https://www.latimes.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
 about = "https://www.latimes.com/about"
 domain = "latimes.com"
+masthead = "https://www.latimes.com/world-nation/story/2026-11-19/texas-execution-took-over-hour-as-staff-struggled-to-find-vein"
 missing = [
     "contact",
     "corrections",
     "ethics",
-    "masthead",
 ]
-privacy = "https://www.latimes.com/entertainment-arts/story/2026-09-28/teresa-giudice-asks-for-privacy-for-daughter-milania-guidice"
+privacy = "https://www.latimes.com/privacy-policy"
 
 [[claim]]
 outlet_id = "latimes"

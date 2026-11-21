@@ -114,7 +114,7 @@ field = "reliability"
 value = "Deprecated"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2021"
 
 [claim.data]
@@ -153,7 +153,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.globaltimes.cn/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "globaltimes.cn"
@@ -169,7 +169,7 @@ field = "site_pages"
 value = "none of the usual accountability pages linked from its home page"
 source_id = "site"
 ref_url = "https://www.globaltimes.cn/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]

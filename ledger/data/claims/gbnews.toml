@@ -64,7 +64,7 @@ field = "name"
 value = "GB News"
 source_id = "site"
 ref_url = "https://www.gbnews.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -138,7 +138,7 @@ field = "reliability"
 value = "Generally unreliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2025"
 
 [claim.data]
@@ -178,7 +178,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.gbnews.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "gbnews.com"
@@ -194,19 +194,19 @@ field = "site_pages"
 value = "links about, privacy, masthead pages from its home page; no contact, corrections, ethics link found"
 source_id = "site"
 ref_url = "https://www.gbnews.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://www.gbnews.com/about-us/contact-us"
+about = "https://www.gbnews.com/about-us/our-editorial-charter"
 domain = "gbnews.com"
-masthead = "https://www.gbnews.com/news/world/oktoberfest-staff-campaign-far-right-hate-speech"
+masthead = "https://www.gbnews.com/news/us/it-s-not-working-death-row-killer-screams-as-staff-struggle-to-carry-out-lethal-injection"
 missing = [
     "contact",
     "corrections",
     "ethics",
 ]
-privacy = "https://www.gbnews.com/tech/privacy/"
+privacy = "https://www.gbnews.com/terms/privacy-policy"
 
 [[claim]]
 outlet_id = "gbnews"

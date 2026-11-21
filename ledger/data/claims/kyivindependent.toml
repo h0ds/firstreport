@@ -64,7 +64,7 @@ field = "name"
 value = "The Kyiv Independent"
 source_id = "site"
 ref_url = "https://kyivindependent.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -143,7 +143,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://kyivindependent.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "kyivindependent.com"
@@ -159,14 +159,14 @@ field = "site_pages"
 value = "links about, contact, privacy, masthead pages from its home page; no corrections, ethics link found"
 source_id = "site"
 ref_url = "https://kyivindependent.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
 about = "https://kyivindependent.com/about/"
 contact = "https://kyivindependent.com/contacts/"
 domain = "kyivindependent.com"
-masthead = "https://kyivindependent.com/general-staff-russia-has-lost-1-532-500-troops-in-ukraine-since-feb-24-2022/"
+masthead = "https://kyivindependent.com/general-staff-russia-has-lost-1-634-860-troops-in-ukraine-since-feb-24-2022/"
 missing = [
     "corrections",
     "ethics",

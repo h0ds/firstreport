@@ -106,7 +106,7 @@ field = "name"
 value = "The Intercept"
 source_id = "site"
 ref_url = "https://theintercept.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -163,7 +163,7 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2020"
 
 [claim.data]
@@ -200,7 +200,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://theintercept.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "theintercept.com"
@@ -213,20 +213,20 @@ status = 200
 [[claim]]
 outlet_id = "theintercept"
 field = "site_pages"
-value = "links about, privacy, masthead pages from its home page; no contact, corrections, ethics link found"
+value = "links about, privacy pages from its home page; no contact, corrections, ethics, masthead link found"
 source_id = "site"
 ref_url = "https://theintercept.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
 about = "https://theintercept.com/about/"
 domain = "theintercept.com"
-masthead = "https://theintercept.com/2026/09/18/leavenworth-kansas-corecivic-prison-ice-staffing/"
 missing = [
     "contact",
     "corrections",
     "ethics",
+    "masthead",
 ]
 privacy = "https://theintercept.com/privacy-policy/"
 

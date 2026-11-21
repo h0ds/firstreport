@@ -82,18 +82,6 @@ qid = "Q17232649"
 outlet_id = "axios"
 field = "name"
 value = "Axios"
-source_id = "site"
-ref_url = "https://www.axios.com/"
-retrieved_at = 1790669037
-note = "og:site_name on the home page"
-
-[claim.data]
-domain = "axios.com"
-
-[[claim]]
-outlet_id = "axios"
-field = "name"
-value = "Axios"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q28230873"
 retrieved_at = 1790661446
@@ -158,7 +146,7 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2020"
 
 [claim.data]
@@ -190,38 +178,18 @@ window_start = "2026-07-01"
 [[claim]]
 outlet_id = "axios"
 field = "site_https"
-value = "https; plain http redirects to it"
+value = "https not served (status 403)"
 source_id = "site"
 ref_url = "https://www.axios.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "axios.com"
 final_url = "https://www.axios.com/"
 http_redirects_to_https = true
-http_status = 200
-https = true
-status = 200
-
-[[claim]]
-outlet_id = "axios"
-field = "site_pages"
-value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
-source_id = "site"
-ref_url = "https://www.axios.com/"
-retrieved_at = 1790669037
-note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
-
-[claim.data]
-about = "https://www.axios.com/about"
-contact = "https://www.axios.com/contact"
-domain = "axios.com"
-missing = [
-    "corrections",
-    "ethics",
-    "masthead",
-]
-privacy = "https://www.axios.com/legal"
+http_status = 403
+https = false
+status = 403
 
 [[claim]]
 outlet_id = "axios"

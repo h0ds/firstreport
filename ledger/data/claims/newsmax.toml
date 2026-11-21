@@ -83,7 +83,7 @@ field = "name"
 value = "Newsmax"
 source_id = "site"
 ref_url = "https://www.newsmax.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -147,7 +147,7 @@ field = "reliability"
 value = "Deprecated"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2022"
 note = "matched by name only; verify the row is this outlet"
 
@@ -185,7 +185,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.newsmax.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "newsmax.com"
@@ -198,19 +198,19 @@ status = 200
 [[claim]]
 outlet_id = "newsmax"
 field = "site_pages"
-value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
 source_id = "site"
 ref_url = "https://www.newsmax.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://www.newsmax.com/newsmax-tv/john-zogby-democrats-dsa/2026/09/28/id/1270910/"
+about = "https://www.newsmax.com/politics/jd-vance-abdul-el-sayed-meeting/2026/11/20/id/1277083/"
 contact = "https://www.newsmax.com/contact/"
 domain = "newsmax.com"
-ethics = "https://www.newsmax.com/politics/us-fuel-economy-standards-gas-powered-vehicles/2026/09/28/id/1270908/"
 missing = [
     "corrections",
+    "ethics",
     "masthead",
 ]
 privacy = "https://www.newsmax.com/privacystatement/"

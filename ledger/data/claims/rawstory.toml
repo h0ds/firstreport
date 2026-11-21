@@ -59,7 +59,7 @@ field = "name"
 value = "Raw Story"
 source_id = "site"
 ref_url = "https://www.rawstory.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -122,7 +122,7 @@ field = "reliability"
 value = "Generally unreliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2021"
 
 [claim.data]
@@ -161,7 +161,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.rawstory.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "rawstory.com"
@@ -174,21 +174,19 @@ status = 200
 [[claim]]
 outlet_id = "rawstory"
 field = "site_pages"
-value = "links about, privacy, ethics, masthead pages from its home page; no contact, corrections link found"
+value = "links about, contact, privacy, corrections, ethics pages from its home page; no masthead link found"
 source_id = "site"
 ref_url = "https://www.rawstory.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
 about = "https://www.rawstory.com/st/About_Us_Raw_Story"
+contact = "https://www.rawstory.com/contact-u/"
+corrections = "https://www.rawstory.com/st/corrections-policy"
 domain = "rawstory.com"
 ethics = "https://www.rawstory.com/st/ethics-policy"
-masthead = "https://www.rawstory.com/raw-investigates/white-house-staff-quits/"
-missing = [
-    "contact",
-    "corrections",
-]
+missing = ["masthead"]
 privacy = "https://www.rawstory.com/privacy-policy/"
 
 [[claim]]

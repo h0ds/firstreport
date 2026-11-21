@@ -103,7 +103,7 @@ field = "name"
 value = "Sputnik International"
 source_id = "site"
 ref_url = "https://sputnikglobe.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -214,7 +214,7 @@ field = "reliability"
 value = "Deprecated"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2022"
 
 [claim.data]
@@ -229,7 +229,7 @@ discussions = [
 scale = "wikipedia_rsp"
 scope = "Sputnik"
 status = "deprecated"
-summary = "There is consensus that Sputnik is an unreliable source that publishes false or fabricated information, and should be deprecated as in the 2017 RfC of the Daily Mail. Sputnik is considered a Russian propaganda outlet that engages in bias and disinformation, [ 25 ] a significant proportion of editors endorse that view, with some editors considering it less reliable than Breitbart News. See also: RI"
+summary = "There is consensus that Sputnik is an unreliable source that publishes false or fabricated information, and should be deprecated as in the 2017 RfC of the Daily Mail. Sputnik is considered a Russian propaganda outlet that engages in bias and disinformation, [ 26 ] a significant proportion of editors endorse that view, with some editors considering it less reliable than Breitbart News. See also: RI"
 
 [[claim]]
 outlet_id = "sputnik"
@@ -263,7 +263,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://sputnikglobe.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "sputnikglobe.com"
@@ -279,11 +279,11 @@ field = "site_pages"
 value = "links about, privacy pages from its home page; no contact, corrections, ethics, masthead link found"
 source_id = "site"
 ref_url = "https://sputnikglobe.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://sputnikglobe.com/20260925/what-xi-trump-dinner-guest-list-said-about-true-balance-of-power-between-china-us-1124789460.html"
+about = "https://sputnikglobe.com/docs/index.html"
 domain = "sputnikglobe.com"
 missing = [
     "contact",
@@ -291,7 +291,7 @@ missing = [
     "ethics",
     "masthead",
 ]
-privacy = "https://www.iubenda.com/privacy-policy/25986213/cookie-policy"
+privacy = "https://sputnikglobe.com/docs/privacy_policy.html#without-identification"
 
 [[claim]]
 outlet_id = "sputnik"

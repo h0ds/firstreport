@@ -95,7 +95,7 @@ field = "name"
 value = "euronews"
 source_id = "site"
 ref_url = "https://www.euronews.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -196,7 +196,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.euronews.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "euronews.com"
@@ -212,11 +212,11 @@ field = "site_pages"
 value = "links about, contact, privacy pages from its home page; no corrections, ethics, masthead link found"
 source_id = "site"
 ref_url = "https://www.euronews.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://www.euronews.com/2026/09/24/the-eu-wants-to-protect-children-online-what-about-everyone-else"
+about = "https://www.euronews.com/2026/11/20/what-do-we-know-about-rwanda-return-hubs-and-how-effective-will-they-be"
 contact = "https://www.euronews.com/contact"
 domain = "euronews.com"
 missing = [

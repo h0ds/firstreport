@@ -147,13 +147,13 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2024"
 
 [claim.data]
 discussions = [
     "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_244#RfC:_Wound_characteristics_of_military-style_rifles",
-    "#cite_note-70",
+    "#cite_note-71",
 ]
 scale = "wikipedia_rsp"
 scope = "The New York Times (NYT)"
@@ -182,7 +182,7 @@ field = "site_https"
 value = "https not served (status 403)"
 source_id = "site"
 ref_url = "https://www.nytimes.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "nytimes.com"

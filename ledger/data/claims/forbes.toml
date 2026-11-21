@@ -102,18 +102,6 @@ qid = "Q35127"
 outlet_id = "forbes"
 field = "name"
 value = "Forbes"
-source_id = "site"
-ref_url = "https://www.forbes.com/"
-retrieved_at = 1790669037
-note = "og:site_name on the home page"
-
-[claim.data]
-domain = "forbes.com"
-
-[[claim]]
-outlet_id = "forbes"
-field = "name"
-value = "Forbes"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q25161472"
 retrieved_at = 1790661446
@@ -148,13 +136,13 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2026"
 
 [claim.data]
 discussions = [
     "https://en.wikipedia.org/wiki/Special:GoToComment/c-Bearian-20260217185000-Forbes",
-    "#cite_note-40",
+    "#cite_note-41",
 ]
 scale = "wikipedia_rsp"
 scope = "Forbes.com (pre–5 August 2010) and Forbes (print issue)"
@@ -167,7 +155,7 @@ field = "reliability"
 value = "Generally unreliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2026"
 note = "matched by domain listed in the row"
 
@@ -175,12 +163,12 @@ note = "matched by domain listed in the row"
 discussions = [
     "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_337#RFC_Forbes_Advisor",
     "https://en.wikipedia.org/wiki/Special:GoToComment/c-Bearian-20260217185000-Forbes",
-    "#cite_note-41",
+    "#cite_note-42",
 ]
 scale = "wikipedia_rsp"
 scope = "Forbes.com non-staff authored articles"
 status = "generally_unreliable"
-summary = 'Most articles on Forbes.com are written by non-staff authors, mainly by Forbes "Contributors", "Senior Contributors" or "Brand Contributors", has minimal editorial oversight, and such articles are considered generally unreliable. Other varieties of non-staff authored articles include those created by "Subscribers", "Forbes Councils" and "Forbes Advisors". There is consensus that non-staff authored'
+summary = 'Most articles on Forbes.com are written by non-staff authors, mainly by Forbes "Contributors", "Senior Contributors" or "Brand Contributors", with minimal editorial oversight, and such articles are considered generally unreliable. Other varieties of non-staff authored articles include those created by "Subscribers", "Forbes Councils" and "Forbes Advisors". There is consensus that non-staff authore'
 
 [[claim]]
 outlet_id = "forbes"
@@ -188,14 +176,14 @@ field = "reliability"
 value = "No consensus"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2026"
 note = "matched by domain listed in the row"
 
 [claim.data]
 discussions = [
     "https://en.wikipedia.org/wiki/Special:GoToComment/c-Bearian-20260217185000-Forbes",
-    "#cite_note-39",
+    "#cite_note-40",
 ]
 scale = "wikipedia_rsp"
 scope = "Forbes.com (5 August 2010 – present)"
@@ -205,38 +193,18 @@ summary = "Forbes.com articles published after 5 August 2010 include ones writte
 [[claim]]
 outlet_id = "forbes"
 field = "site_https"
-value = "https; plain http redirects to it"
+value = "https not served (status 403)"
 source_id = "site"
-ref_url = "https://www.forbes.com/"
-retrieved_at = 1790669037
+ref_url = "https://forbes.com/"
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "forbes.com"
-final_url = "https://www.forbes.com/"
-http_redirects_to_https = true
-http_status = 200
-https = true
-status = 200
-
-[[claim]]
-outlet_id = "forbes"
-field = "site_pages"
-value = "links contact, privacy, ethics, masthead pages from its home page; no about, corrections link found"
-source_id = "site"
-ref_url = "https://www.forbes.com/"
-retrieved_at = 1790669037
-note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
-
-[claim.data]
-contact = "https://www.forbes.com/contact/"
-domain = "forbes.com"
-ethics = "https://www.forbes.com/sites/forbesstaff/article/forbes-editorial-values-and-standards/"
-masthead = "https://www.forbes.com/sites/forbesstaff/article/tips-and-confidential-sources/"
-missing = [
-    "about",
-    "corrections",
-]
-privacy = "https://www.forbes.com/fdc/privacy.html"
+final_url = "https://forbes.com/"
+http_redirects_to_https = false
+http_status = 403
+https = false
+status = 403
 
 [[claim]]
 outlet_id = "forbes"

@@ -51,18 +51,6 @@ qid = "Q17232649"
 [[claim]]
 outlet_id = "ap"
 field = "name"
-value = "AP News"
-source_id = "site"
-ref_url = "https://apnews.com/"
-retrieved_at = 1790669037
-note = "og:site_name on the home page"
-
-[claim.data]
-domain = "apnews.com"
-
-[[claim]]
-outlet_id = "ap"
-field = "name"
 value = "APNews.com"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q138330477"
@@ -100,7 +88,7 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2024"
 note = "matched by name only; verify the row is this outlet"
 
@@ -130,38 +118,18 @@ window_start = "2026-07-01"
 [[claim]]
 outlet_id = "ap"
 field = "site_https"
-value = "https; plain http redirects to it"
+value = "https not served (status 403)"
 source_id = "site"
 ref_url = "https://apnews.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "apnews.com"
 final_url = "https://apnews.com/"
 http_redirects_to_https = true
-http_status = 200
-https = true
-status = 200
-
-[[claim]]
-outlet_id = "ap"
-field = "site_pages"
-value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
-source_id = "site"
-ref_url = "https://apnews.com/"
-retrieved_at = 1790669037
-note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
-
-[claim.data]
-about = "https://apnews.com/purpose"
-contact = "https://apnews.com/contact-us"
-domain = "apnews.com"
-ethics = "https://apnews.com/projects/news-values-and-principles/"
-missing = [
-    "corrections",
-    "masthead",
-]
-privacy = "https://apnews.com/privacystatement"
+http_status = 403
+https = false
+status = 403
 
 [[claim]]
 outlet_id = "ap"

@@ -130,11 +130,11 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2024"
 
 [claim.data]
-discussions = ["#cite_note-92"]
+discussions = ["#cite_note-93"]
 scale = "wikipedia_rsp"
 scope = "The Washington Post (The Post, WaPo, TWP)"
 status = "generally_reliable"

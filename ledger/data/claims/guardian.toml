@@ -162,11 +162,11 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2025"
 
 [claim.data]
-discussions = ["#cite_note-48"]
+discussions = ["#cite_note-49"]
 scale = "wikipedia_rsp"
 scope = "The Guardian (TheGuardian.com, The Manchester Guardian, The Guardian Weekly, The Observer)"
 status = "generally_reliable"
@@ -178,11 +178,11 @@ field = "reliability"
 value = "No consensus"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2020"
 
 [claim.data]
-discussions = ["#cite_note-49"]
+discussions = ["#cite_note-50"]
 scale = "wikipedia_rsp"
 scope = "The Guardian blogs"
 status = "no_consensus"
@@ -210,7 +210,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.theguardian.com/international"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "theguardian.com"
@@ -226,7 +226,7 @@ field = "site_pages"
 value = "links about, contact, privacy, corrections pages from its home page; no ethics, masthead link found"
 source_id = "site"
 ref_url = "https://www.theguardian.com/international"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
@@ -238,7 +238,7 @@ missing = [
     "ethics",
     "masthead",
 ]
-privacy = "https://www.theguardian.com/global-development/2026/sep/28/i-sleep-with-all-my-clothes-on-to-protect-my-privacy-a-glimpse-into-life-inside-a-child-prison-in-france"
+privacy = "https://www.theguardian.com/info/privacy"
 
 [[claim]]
 outlet_id = "guardian"

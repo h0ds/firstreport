@@ -117,7 +117,7 @@ field = "site_https"
 value = "https not served (status 404)"
 source_id = "site"
 ref_url = "https://tbs.co.jp/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "tbs.co.jp"

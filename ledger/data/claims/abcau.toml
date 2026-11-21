@@ -199,7 +199,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.abc.net.au/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "abc.net.au"
@@ -212,19 +212,21 @@ status = 200
 [[claim]]
 outlet_id = "abcau"
 field = "site_pages"
-value = "links about, contact, privacy, corrections, ethics pages from its home page; no masthead link found"
+value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
 source_id = "site"
 ref_url = "https://www.abc.net.au/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://www.abc.net.au/about/accessibility-statement/103700726"
+about = "https://www.abc.net.au/news/2026-11-20/cricket-cards-who-has-said-what-about-sandpapergate/107376348"
 contact = "https://www.abc.net.au/news/contact"
-corrections = "https://www.abc.net.au/news/2026-09-27/multi-generation-bond-market-correction/107191114"
 domain = "abc.net.au"
 ethics = "https://www.abc.net.au/religion"
-missing = ["masthead"]
+missing = [
+    "corrections",
+    "masthead",
+]
 privacy = "https://help.abc.net.au/hc/en-us/articles/360001511015"
 
 [[claim]]

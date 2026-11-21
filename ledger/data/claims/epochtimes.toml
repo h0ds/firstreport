@@ -89,7 +89,7 @@ field = "name"
 value = "The Epoch Times"
 source_id = "site"
 ref_url = "https://www.theepochtimes.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -131,7 +131,7 @@ field = "reliability"
 value = "Deprecated"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2022"
 
 [claim.data]
@@ -157,7 +157,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.theepochtimes.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "theepochtimes.com"
@@ -170,20 +170,19 @@ status = 200
 [[claim]]
 outlet_id = "epochtimes"
 field = "site_pages"
-value = "links about, contact, privacy, corrections, ethics, masthead pages from its home page"
+value = "links about, contact, privacy, corrections, masthead pages from its home page; no ethics link found"
 source_id = "site"
 ref_url = "https://www.theepochtimes.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://www.theepochtimes.com/epochtv/us-china-to-lower-tariffs-on-60-billion-worth-of-goods-trump-not-serious-about-arming-china-newsham-6095963"
+about = "https://www.theepochtimes.com/health/what-a-woman-who-lived-to-106-can-teach-us-about-growing-older-6102225"
 contact = "https://www.theepochtimes.com/contact-us"
-corrections = "https://www.theepochtimes.com/corrections"
+corrections = "https://www.theepochtimes.com/business/nasdaq-erases-2026-gain-dow-jones-sp-500-slip-into-correction-6127714"
 domain = "theepochtimes.com"
-ethics = "https://www.theepochtimes.com/us/trump-says-new-fuel-economy-standards-approved-ending-biden-ev-mandate-6095559"
-masthead = "https://www.theepochtimes.com/bright/leadership"
-missing = []
+masthead = "https://www.theepochtimes.com/epochtv/live-now-secretary-kennedy-cms-leadership-announce-the-first-awardees-for-the-maha-enhancing-lifestyle-model-6127148"
+missing = ["ethics"]
 privacy = "https://www.theepochtimes.com/privacy-notice"
 
 [[claim]]

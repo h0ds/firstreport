@@ -108,7 +108,7 @@ field = "reliability"
 value = "Deprecated"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2019"
 
 [claim.data]
@@ -134,7 +134,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://dailycaller.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "dailycaller.com"
@@ -147,22 +147,20 @@ status = 200
 [[claim]]
 outlet_id = "dailycaller"
 field = "site_pages"
-value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+value = "links about, contact, privacy, ethics, masthead pages from its home page; no corrections link found"
 source_id = "site"
 ref_url = "https://dailycaller.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://dailycaller.com/about-us"
+about = "https://dailycaller.com/2026/11/19/goa-exec-testifies-about-atfs-14-billion-record-registry"
 contact = "https://dailycaller.com/contact"
 domain = "dailycaller.com"
-ethics = "https://dailycaller.com/2026/09/28/trump-fuel-economy-standards-ev-mandate-duffy-nhtsa-steve-milloy-jason-isaac"
-missing = [
-    "corrections",
-    "masthead",
-]
-privacy = "https://dailycaller.com/footer/privacy-policy"
+ethics = "https://dailycaller.com/journalistic-and-ethical-standards/"
+masthead = "https://dailycaller.com/2026/11/19/mike-huckabee-jewish-leadership-conference-speech-america-birthplace-jerusalem"
+missing = ["corrections"]
+privacy = "https://dailycaller.com/2026/11/20/signal-artificial-intelligence-agents-messages-privacy"
 
 [[claim]]
 outlet_id = "dailycaller"

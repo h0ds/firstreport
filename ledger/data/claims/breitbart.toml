@@ -89,7 +89,7 @@ field = "name"
 value = "Breitbart"
 source_id = "site"
 ref_url = "https://www.breitbart.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -163,7 +163,7 @@ field = "reliability"
 value = "Blacklisted"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2023"
 
 [claim.data]
@@ -199,7 +199,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.breitbart.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "breitbart.com"
@@ -212,19 +212,20 @@ status = 200
 [[claim]]
 outlet_id = "breitbart"
 field = "site_pages"
-value = "links about, contact, privacy, ethics, masthead pages from its home page; no corrections link found"
+value = "links about, contact, privacy, corrections, ethics, masthead pages from its home page"
 source_id = "site"
 ref_url = "https://www.breitbart.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
 about = "https://media.breitbart.com/media/2019/11/about-breitbart-news.pdf"
 contact = "https://www.breitbart.com/contact-us/"
+corrections = "https://www.breitbart.com/economy/2026/11/20/stocks-plunge-as-ai-selloff-pushes-sp-500-and-dow-into-correction/"
 domain = "breitbart.com"
 ethics = "https://www.breitbart.com/editorial-guidelines/"
-masthead = "https://www.breitbart.com/masthead/"
-missing = ["corrections"]
+masthead = "https://www.breitbart.com/politics/2026/11/20/chief-of-staff-stephen-miller-says-rest-of-trumps-term-will-be-greatest-2-years-in-american-history/"
+missing = []
 privacy = "https://www.breitbart.com/privacy-policy/"
 
 [[claim]]

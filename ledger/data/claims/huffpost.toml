@@ -84,7 +84,7 @@ field = "name"
 value = "HuffPost"
 source_id = "site"
 ref_url = "https://www.huffpost.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -169,13 +169,13 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2021"
 
 [claim.data]
 discussions = [
     "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
-    "#cite_note-52",
+    "#cite_note-53",
 ]
 scale = "wikipedia_rsp"
 scope = "HuffPost (excluding politics) (The Huffington Post)"
@@ -188,13 +188,13 @@ field = "reliability"
 value = "Generally unreliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2020"
 
 [claim.data]
 discussions = [
     "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
-    "#cite_note-54",
+    "#cite_note-55",
 ]
 scale = "wikipedia_rsp"
 scope = "HuffPost contributors (The Huffington Post)"
@@ -207,13 +207,13 @@ field = "reliability"
 value = "No consensus"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2024"
 
 [claim.data]
 discussions = [
     "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_313#RFC:_HuffPost",
-    "#cite_note-53",
+    "#cite_note-54",
 ]
 scale = "wikipedia_rsp"
 scope = "HuffPost (politics) (The Huffington Post)"
@@ -242,7 +242,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.huffpost.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "huffpost.com"
@@ -255,20 +255,20 @@ status = 200
 [[claim]]
 outlet_id = "huffpost"
 field = "site_pages"
-value = "links about, contact, privacy, masthead pages from its home page; no corrections, ethics link found"
+value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
 source_id = "site"
 ref_url = "https://www.huffpost.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://www.huffpost.com/entry/what-the-length-width-and-color-of-your-tie-says-about-you-in-2026_l_6a98270ce4b087cf7f00a50d?origin=home-life-unit"
+about = "https://www.huffpost.com/entry/cats-dogs-funny-posts-tweets-2026-11-14-20_n_6afc6517e4b02da00c01dccf?origin=home-whats-happening-unit"
 contact = "https://www.huffpost.com/static/contact-us"
 domain = "huffpost.com"
-masthead = "https://www.huffpost.com/entry/trump-obama-women-leadership_n_6aba9fbfe4b075cb0a403a74?origin=home-latest-news-unit"
+ethics = "https://www.huffpost.com/entry/neighbor-elder-care-decline-health-ethics_n_6afcbfa0e4b02da00c032665?origin=home-huffpost-personal-unit"
 missing = [
     "corrections",
-    "ethics",
+    "masthead",
 ]
 privacy = "https://www.huffpost.com/static/privacy-policy"
 

@@ -97,6 +97,18 @@ qid = "Q1002697"
 [[claim]]
 outlet_id = "telegraph"
 field = "name"
+value = "The Telegraph"
+source_id = "site"
+ref_url = "https://www.telegraph.co.uk/"
+retrieved_at = 1795256826
+note = "og:site_name on the home page"
+
+[claim.data]
+domain = "telegraph.co.uk"
+
+[[claim]]
+outlet_id = "telegraph"
+field = "name"
 value = "The Daily Telegraph"
 source_id = "wikidata"
 ref_url = "https://www.wikidata.org/wiki/Q192621"
@@ -147,18 +159,18 @@ field = "reliability"
 value = "Generally reliable"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2026"
 
 [claim.data]
 discussions = [
     "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Noticeboard/Archive_392#RfC:_The_Telegraph",
-    "#cite_note-30",
+    "#cite_note-31",
 ]
 scale = "wikipedia_rsp"
 scope = "The Daily Telegraph (UK) (excluding transgender topics) (The Telegraph, The Sunday Telegraph)"
 status = "generally_reliable"
-summary = "There is consensus that The Daily Telegraph (also known as The Telegraph) is generally reliable. Some editors believe that The Daily Telegraph is biased or opinionated for politics. Unrelated to The Daily Telegraph (Sydney)."
+summary = "There is consensus that The Daily Telegraph (also known as The Telegraph) is generally reliable. Some editors believe that The Daily Telegraph is biased or opinionated for politics. It is unrelated to The Daily Telegraph (Sydney)."
 
 [[claim]]
 outlet_id = "telegraph"
@@ -166,7 +178,7 @@ field = "reliability"
 value = "No consensus"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2025"
 
 [claim.data]
@@ -199,18 +211,38 @@ window_start = "2026-07-01"
 [[claim]]
 outlet_id = "telegraph"
 field = "site_https"
-value = "https not served (status 402)"
+value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.telegraph.co.uk/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "telegraph.co.uk"
 final_url = "https://www.telegraph.co.uk/"
 http_redirects_to_https = true
-http_status = 402
-https = false
-status = 402
+http_status = 200
+https = true
+status = 200
+
+[[claim]]
+outlet_id = "telegraph"
+field = "site_pages"
+value = "links about, contact, corrections, masthead pages from its home page; no privacy, ethics link found"
+source_id = "site"
+ref_url = "https://www.telegraph.co.uk/"
+retrieved_at = 1795256826
+note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
+
+[claim.data]
+about = "https://www.telegraph.co.uk/about-us/work-at-the-telegraph/"
+contact = "https://www.telegraph.co.uk/contact-us/"
+corrections = "https://www.telegraph.co.uk/news/0/telegraph-corrections-and-clarifications/"
+domain = "telegraph.co.uk"
+masthead = "https://www.telegraph.co.uk/us/news/2026/11/20/texas-execution-hour-staff-struggled-vein/"
+missing = [
+    "privacy",
+    "ethics",
+]
 
 [[claim]]
 outlet_id = "telegraph"

@@ -88,7 +88,7 @@ field = "name"
 value = "Indiatimes"
 source_id = "site"
 ref_url = "https://www.indiatimes.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "og:site_name on the home page"
 
 [claim.data]
@@ -188,7 +188,7 @@ field = "reliability"
 value = "No consensus"
 source_id = "wikipedia_rsp"
 ref_url = "https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources"
-retrieved_at = 1790668896
+retrieved_at = 1795257285
 as_of = "2025"
 
 [claim.data]
@@ -229,7 +229,7 @@ field = "site_https"
 value = "https; plain http redirects to it"
 source_id = "site"
 ref_url = "https://www.indiatimes.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 
 [claim.data]
 domain = "indiatimes.com"
@@ -242,21 +242,19 @@ status = 200
 [[claim]]
 outlet_id = "timesofindia"
 field = "site_pages"
-value = "links about, contact, privacy, ethics pages from its home page; no corrections, masthead link found"
+value = "links about, contact, privacy, ethics, masthead pages from its home page; no corrections link found"
 source_id = "site"
 ref_url = "https://www.indiatimes.com/"
-retrieved_at = 1790669037
+retrieved_at = 1795256826
 note = "Looked for in home-page links only; a page that exists but is not linked there counts as not found."
 
 [claim.data]
-about = "https://www.indiatimes.com/trending/who-is-scott-kretzschmar-cornell-chi-phi-member-faces-police-officer-claims-as-rumours-about-his-mothers-law-enforcement-ties-spark-shock/articleshow/134549780.html"
+about = "https://www.indiatimes.com/trending/the-remarried-empress-season-1-episodes-7-8-recap-ending-explained-is-heinrey-marrying-krista-and-what-does-navier-find-about-sovieshu/articleshow/136003225.html"
 contact = "https://www.indiatimes.com/contactus"
 domain = "indiatimes.com"
 ethics = "https://www.indiatimes.com/editorial-policy"
-missing = [
-    "corrections",
-    "masthead",
-]
+masthead = "https://www.indiatimes.com/trending/pee-on-your-brain-jensen-huang-accused-of-threatening-nvidia-staff-and-humiliating-top-executives/articleshow/136035489.html"
+missing = ["corrections"]
 privacy = "https://www.indiatimes.com/privacy-policy"
 
 [[claim]]
