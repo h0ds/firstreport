@@ -117,3 +117,19 @@ footer a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
   .stories .n { margin-left: 0; white-space: normal; }
   .timeline li { grid-template-columns: 1fr; gap: var(--kg-s1); }
 }
+
+/* Wide screens (design §4). Story cards fill the 1200px column as a grid,
+   as many 320px-or-wider columns as fit; one column on phones. Headings
+   and notes inside the list span the whole row. */
+.kg-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); column-gap: var(--kg-s6); }
+.kg-cards > h2, .kg-cards > p { grid-column: 1 / -1; }
+/* The outlet list: two columns of rows where there is room */
+.stories.cols { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(480px, 100%), 1fr)); column-gap: var(--kg-s6); }
+/* Front page from 1100px: the card grid, with "Spreading now" in a 320px
+   side column on the right; below that it stacks above the list. */
+@media (min-width: 1100px) {
+  .front.side { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: var(--kg-s7); align-items: start; }
+  .front.side > .panel { grid-column: 2; grid-row: 1; margin-top: 0; }
+  .front.side > .list { grid-column: 1; grid-row: 1; }
+  .front.side > .list > h2:first-child { margin-top: 0; }
+}

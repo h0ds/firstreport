@@ -187,6 +187,8 @@ Rules:
 
 **Breakpoints.** Two, content-driven: at `max-width: 720px` the side gutter drops to `s4`, H1 to 28/32 and `display` to 40/44; two-column rows (timeline, story list counts) stack. Nothing else changes; the same page, narrower.
 
+**Wide screens.** Lists of story cards (the front page and `/page/N/`) use the 1200px column. The cards sit in a grid of as many columns as fit at 320px or wider, `s6` apart, so a 1200px column holds three, a column beside a side panel two, and a phone one. The cards keep their hairline and `s4` padding; headings and notes inside the list span the whole row. From `min-width: 1100px` the front page puts "Spreading now" in a 320px side column to the right of the cards, `s7` from them; below that it stacks above the list as before. The outlet list goes to two columns of rows where each gets 480px. Story and outlet pages stay at 720px: they are read top to bottom.
+
 **Touch.** Anything clickable on its own (not inline in a sentence) has at least a 32px hit area, from padding, not from a larger font.
 - Corner radius: **4px** on inputs and buttons, **6px** on cards, **0** on tables and rules. Nothing rounder — pill shapes read as consumer app, not instrument.
 - Borders are 1px `--kg-line`. No drop shadows except a single `0 1px 2px rgba(15,23,42,0.06)` on floating elements (menus, popovers).

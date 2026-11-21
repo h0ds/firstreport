@@ -91,7 +91,7 @@ fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usi
     );
     let start = (page.max(1) - 1) * PAGE_SIZE;
     // The card's pictures, explained once rather than on every card.
-    let mut b = String::from("<p class=\"kg-muted kg-legend\"><span class=\"key spark\"></span>outlets carrying the story over its first day <span class=\"sep\">·</span> <span class=\"key lean\"><i class=\"k1\"></i><i class=\"k3\"></i><i class=\"k5\"></i></span>where each outlet's audience leans, left to right, from US sharing data (<a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a>); hollow dots are outlets it does not score</p>");
+    let mut b = String::from("<p class=\"kg-muted kg-legend\"><span class=\"key spark\"></span>outlets carrying the story over its first day <span class=\"sep\">·</span> <span class=\"key lean\"><i class=\"k1\"></i><i class=\"k3\"></i><i class=\"k5\"></i></span>where each outlet's audience leans, left to right, from US sharing data (<a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a>); hollow dots are outlets it does not score</p><div class=\"kg-cards\">");
     for (k, (c, f)) in recent
         .iter()
         .chain(single.iter())
@@ -117,6 +117,7 @@ fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usi
             Some(f),
         ));
     }
+    b.push_str("</div>");
     b
 }
 
@@ -125,7 +126,7 @@ fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usi
 pub fn outlets_page(input: &Input) -> Twins {
     let now = input.export_time;
     let mut b = format!(
-        "<h1>Outlets</h1><p class=\"kg-muted\">{} in the pool. Each outlet's page has what First Report ledger records about it, with sources.</p><ul class=\"stories\">",
+        "<h1>Outlets</h1><p class=\"kg-muted\">{} in the pool. Each outlet's page has what First Report ledger records about it, with sources.</p><ul class=\"stories cols\">",
         n(input.outlets.len(), "outlet")
     );
     let mut md = format!(
@@ -159,7 +160,7 @@ pub fn outlets_page(input: &Input) -> Twins {
         description:
             "Every news outlet in First Report's pool, with its domains. No outlet is rated.",
         path: "/outlets/",
-        wide: false,
+        wide: true,
         head: "",
         body: &b,
         status: &format!("Updated {}", datetime(now)),
@@ -198,7 +199,7 @@ pub fn story_page(input: &Input, window_hours: i64, page: usize) -> Twins {
         title: &title,
         description: "Stories forming across news outlets, ordered by reach. No outlet is rated.",
         path: &path,
-        wide: false,
+        wide: true,
         head: "",
         body: &b,
         status: &format!("Updated {}", datetime(now)),
@@ -268,6 +269,13 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     if same_as_top {
         spreading.clear();
     }
+    // Wide screens: "Spreading now" is a side column beside the card grid;
+    // narrower, it stacks above the list as before (design §4).
+    b.push_str(if spreading.is_empty() {
+        "<div class=\"front\">"
+    } else {
+        "<div class=\"front side\">"
+    });
     if !spreading.is_empty() {
         b.push_str("<section class=\"panel\"><h2>Spreading now</h2><p class=\"kg-muted\">Outlets that joined in the last six hours.</p><ul class=\"stories\">");
         for (c, f) in &spreading {
@@ -282,11 +290,16 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
                 crate::render::origin_link(input, &c.origin_outlet_id)
             );
         }
-        b.push_str("</ul></section><h2>All stories in the window</h2>");
+        b.push_str("</ul></section>");
+    }
+    b.push_str("<div class=\"list\">");
+    if !spreading.is_empty() {
+        b.push_str("<h2>All stories in the window</h2>");
     }
     b.push_str(&pager(1, pages, active));
     b.push_str(&page_cards(input, &recent, &single, 1));
     b.push_str(&pager(1, pages, active));
+    b.push_str("</div></div>");
     let head = format!(
         "<script type=\"application/ld+json\">{}</script>\n",
         json!({
@@ -309,7 +322,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         title: "Stories",
         description: "Stories forming across news outlets: who published first, who joined when, what was copied. No outlet is rated.",
         path: "/",
-        wide: false,
+        wide: true,
         head: &head,
         body: &b,
         status: &format!("Updated {}", datetime(now)),
