@@ -1214,6 +1214,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "kagami-mcp"
+version = "0.1.0"
+dependencies = [
+ "reqwest",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
 name = "lazy_static"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
