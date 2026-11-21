@@ -204,12 +204,19 @@ pub fn outlet_icon(input: &Input, id: &str, origin: bool) -> Option<String> {
     let classes = format!(
         "{}{}",
         if origin { " kg-origin" } else { "" },
-        lean.map(|l| format!(" lean-{}", lean_slug(l))).unwrap_or_default()
+        lean.map(|l| format!(" lean-{}", lean_slug(l)))
+            .unwrap_or_default()
     );
-    let title = lean.map(|l| format!(" title=\"AllSides: {l}\"")).unwrap_or_default();
+    let title = lean
+        .map(|l| format!(" title=\"AllSides: {l}\""))
+        .unwrap_or_default();
     // No icon: the outlet's first letter on a light tile, the same size,
     // so rows line up and the origin ring always sits on a square.
-    let Some(file) = input.icons.get(id).and_then(|p| p.file_name()?.to_str().map(str::to_string)) else {
+    let Some(file) = input
+        .icons
+        .get(id)
+        .and_then(|p| p.file_name()?.to_str().map(str::to_string))
+    else {
         let name = input.outlet_name(id);
         let letter = name
             .trim_start_matches("unknown:")
@@ -252,8 +259,14 @@ pub fn lean_slug(label: &str) -> String {
 /// strongest propaganda designation: "Sanctioned" (EU suspension) over
 /// "Deprecated" (Wikipedia RSP). The source and its words are on hover.
 pub fn outlet_flags(input: &Input, id: &str) -> String {
-    let Some(claims) = input.claims.get(id) else { return String::new() };
-    let find = |src: &str, field: &str| claims.iter().find(|c| c.source_id == src && c.field == field);
+    let Some(claims) = input.claims.get(id) else {
+        return String::new();
+    };
+    let find = |src: &str, field: &str| {
+        claims
+            .iter()
+            .find(|c| c.source_id == src && c.field == field)
+    };
     let mut s = String::new();
     if let Some(c) = find("state_media_monitor", "state_media") {
         if c.value.ends_with("(SC)") || c.value.ends_with("(CaPu)") {
@@ -269,10 +282,19 @@ pub fn outlet_flags(input: &Input, id: &str) -> String {
         .or_else(|| {
             find("wikipedia_rsp", "reliability")
                 .filter(|c| c.value == "Deprecated")
-                .map(|_| ("Deprecated", "Wikipedia: deprecated as a source".to_string()))
+                .map(|_| {
+                    (
+                        "Deprecated",
+                        "Wikipedia: deprecated as a source".to_string(),
+                    )
+                })
         });
     if let Some((label, title)) = flag {
-        let _ = write!(s, "<abbr class=\"kg-flag warn\" title=\"{}\">{label}</abbr>", esc(&title));
+        let _ = write!(
+            s,
+            "<abbr class=\"kg-flag warn\" title=\"{}\">{label}</abbr>",
+            esc(&title)
+        );
     }
     s
 }
@@ -320,8 +342,12 @@ pub fn outlet_stack(input: &Input, c: &Cluster, max: usize) -> String {
         .iter()
         .take(max)
         .filter_map(|id| {
-            outlet_icon(input, id, *id == c.origin_outlet_id)
-                .map(|img| img.replace("<img ", &format!("<img title=\"{}\" ", esc(input.outlet_name(id)))))
+            outlet_icon(input, id, *id == c.origin_outlet_id).map(|img| {
+                img.replace(
+                    "<img ",
+                    &format!("<img title=\"{}\" ", esc(input.outlet_name(id))),
+                )
+            })
         })
         .collect();
     if shown.is_empty() {
@@ -331,7 +357,11 @@ pub fn outlet_stack(input: &Input, c: &Cluster, max: usize) -> String {
     format!(
         "<span class=\"kg-stack\" aria-hidden=\"true\">{}{}</span>",
         shown.join(""),
-        if more > 0 { format!("<span class=\"more\">+{more}</span>") } else { String::new() }
+        if more > 0 {
+            format!("<span class=\"more\">+{more}</span>")
+        } else {
+            String::new()
+        }
     )
 }
 
@@ -355,7 +385,6 @@ fn audience_score(input: &Input, id: &str) -> Option<f64> {
     })
 }
 
-
 /// Where the outlets in a story sit on Robertson et al.'s audience scale,
 /// -1 (links shared by Democrats) to +1 (by Republicans): one grey dot per
 /// scored outlet on a hairline with a centre mark (design §5, lean strip).
@@ -371,7 +400,12 @@ pub fn audience_strip(input: &Input, outlets: &[&str], large: bool) -> String {
         .copied()
         .filter(|id| audience_score(input, id).is_none())
         .collect();
-    let names = |ids: &[&str]| ids.iter().map(|id| input.outlet_name(id)).collect::<Vec<_>>().join(", ");
+    let names = |ids: &[&str]| {
+        ids.iter()
+            .map(|id| input.outlet_name(id))
+            .collect::<Vec<_>>()
+            .join(", ")
+    };
     if outlets.is_empty() {
         return String::new();
     }
@@ -551,7 +585,12 @@ pub fn label_bar_compact(input: &Input, bar: &LabelBar) -> String {
     let summary = parts
         .iter()
         .filter(|(_, _, v)| !v.is_empty())
-        .map(|(_, w, v)| format!("{w} {}%", (v.len() as f64 / rated as f64 * 100.0).round() as usize))
+        .map(|(_, w, v)| {
+            format!(
+                "{w} {}%",
+                (v.len() as f64 / rated as f64 * 100.0).round() as usize
+            )
+        })
         .collect::<Vec<_>>()
         .join(", ");
     format!(
@@ -689,7 +728,11 @@ pub fn cluster_card(
             );
         }
         if f.languages > 1 {
-            let _ = write!(s, "<span class=\"sep\">·</span><span>in {} languages</span>", f.languages);
+            let _ = write!(
+                s,
+                "<span class=\"sep\">·</span><span>in {} languages</span>",
+                f.languages
+            );
         }
     }
     // How far across the world: the outlets' countries (Wikidata), when
@@ -699,14 +742,22 @@ pub fn cluster_card(
         let _ = write!(
             s,
             "<span class=\"sep\">·</span><span title=\"{}\">in {} countries</span>",
-            esc(&countries.iter().map(|(k, v)| format!("{k} {v}")).collect::<Vec<_>>().join(", ")),
+            esc(&countries
+                .iter()
+                .map(|(k, v)| format!("{k} {v}"))
+                .collect::<Vec<_>>()
+                .join(", ")),
             countries.len()
         );
     }
     s.push_str("</div>");
     // One row of pictures: spread over the first day, then where the
     // outlets' audiences sit (design §5).
-    let visuals = format!("{}{}", spark(spark_points, scale_max, large), lean_line(input, c));
+    let visuals = format!(
+        "{}{}",
+        spark(spark_points, scale_max, large),
+        lean_line(input, c)
+    );
     if !visuals.is_empty() {
         let _ = write!(s, "<div class=\"kg-visuals\">{visuals}</div>");
     }
@@ -807,10 +858,21 @@ fn claim_card_with(input: &Input, c: &Claim, full: bool) -> String {
     }
     let _ = write!(
         s,
-        "<div class=\"kg-provenance\"><a href=\"{}\" rel=\"noopener\" title=\"Licence: {}\">{}</a><span class=\"sep\">·</span><span>retrieved <time datetime=\"{}\">{}</time></span>",
-        esc(&c.ref_url),
-        esc(licence),
-        esc(sname),
+        "<div class=\"kg-provenance\">{}<span class=\"sep\">·</span><span>retrieved <time datetime=\"{}\">{}</time></span>",
+        if is_local(&c.ref_url) {
+            format!(
+                "<span title=\"Licence: {}\">{}</span>",
+                esc(licence),
+                esc(sname)
+            )
+        } else {
+            format!(
+                "<a href=\"{}\" rel=\"noopener\" title=\"Licence: {}\">{}</a>",
+                esc(&c.ref_url),
+                esc(licence),
+                esc(sname)
+            )
+        },
         date(c.retrieved_at),
         date(c.retrieved_at)
     );
@@ -866,8 +928,18 @@ pub fn whole_sentences(s: &str) -> &str {
 /// "Links to about, contact and privacy pages. No corrections, ethics or
 /// masthead page." with each found page linked.
 fn site_pages_value<'a>(get: impl Fn(&str) -> Option<&'a serde_json::Value>) -> String {
-    const KINDS: [&str; 6] = ["about", "contact", "privacy", "corrections", "ethics", "masthead"];
-    let (found, missing): (Vec<&str>, Vec<&str>) = KINDS.iter().copied().partition(|k| get(k).and_then(|v| v.as_str()).is_some());
+    const KINDS: [&str; 6] = [
+        "about",
+        "contact",
+        "privacy",
+        "corrections",
+        "ethics",
+        "masthead",
+    ];
+    let (found, missing): (Vec<&str>, Vec<&str>) = KINDS
+        .iter()
+        .copied()
+        .partition(|k| get(k).and_then(|v| v.as_str()).is_some());
     let list = |xs: Vec<String>| match xs.len() {
         0 => String::new(),
         1 => xs[0].clone(),
@@ -875,11 +947,20 @@ fn site_pages_value<'a>(get: impl Fn(&str) -> Option<&'a serde_json::Value>) -> 
     };
     let links = found
         .iter()
-        .map(|k| format!("<a href=\"{}\" rel=\"noopener\">{k}</a>", esc(get(k).and_then(|v| v.as_str()).unwrap_or_default())))
+        .map(|k| {
+            format!(
+                "<a href=\"{}\" rel=\"noopener\">{k}</a>",
+                esc(get(k).and_then(|v| v.as_str()).unwrap_or_default())
+            )
+        })
         .collect();
     let mut out = String::new();
     if !found.is_empty() {
-        out.push_str(&format!("Links to {} {}.", list(links), if found.len() == 1 { "page" } else { "pages" }));
+        out.push_str(&format!(
+            "Links to {} {}.",
+            list(links),
+            if found.len() == 1 { "page" } else { "pages" }
+        ));
     }
     if !missing.is_empty() {
         let or = |xs: Vec<String>| match xs.len() {
@@ -889,7 +970,10 @@ fn site_pages_value<'a>(get: impl Fn(&str) -> Option<&'a serde_json::Value>) -> 
         if !out.is_empty() {
             out.push(' ');
         }
-        out.push_str(&format!("No {} page.", or(missing.iter().map(|k| k.to_string()).collect())));
+        out.push_str(&format!(
+            "No {} page.",
+            or(missing.iter().map(|k| k.to_string()).collect())
+        ));
     }
     out
 }
@@ -912,12 +996,20 @@ pub fn claim_md(input: &Input, c: &Claim) -> String {
         md.push_str(scope);
         md.push('\n');
     }
-    let _ = write!(
-        md,
-        "Source: [{sname}]({}) · licence {licence} · retrieved {}",
-        c.ref_url,
-        date(c.retrieved_at)
-    );
+    if is_local(&c.ref_url) {
+        let _ = write!(
+            md,
+            "Source: {sname} · licence {licence} · retrieved {}",
+            date(c.retrieved_at)
+        );
+    } else {
+        let _ = write!(
+            md,
+            "Source: [{sname}]({}) · licence {licence} · retrieved {}",
+            c.ref_url,
+            date(c.retrieved_at)
+        );
+    }
     if let Some(a) = &c.as_of {
         let _ = write!(md, " · as of {a}");
     }
@@ -1156,7 +1248,7 @@ pub fn thousands(n: usize) -> String {
     let d = n.to_string();
     let mut out = String::new();
     for (k, ch) in d.chars().enumerate() {
-        if k > 0 && (d.len() - k) % 3 == 0 {
+        if k > 0 && (d.len() - k).is_multiple_of(3) {
             out.push(',');
         }
         out.push(ch);
@@ -1168,15 +1260,29 @@ pub fn thousands(n: usize) -> String {
 /// links, page numbers in mono with the current one underlined like a tab,
 /// "51–100 of 2,219" in words, and a hairline rail with a blue segment
 /// showing where this page sits in the whole list.
-pub fn pager(page: usize, pages: usize, total: usize, per: usize, label: &str, page_path: &dyn Fn(usize) -> String) -> String {
+pub fn pager(
+    page: usize,
+    pages: usize,
+    total: usize,
+    per: usize,
+    label: &str,
+    page_path: &dyn Fn(usize) -> String,
+) -> String {
     if pages <= 1 {
         return String::new();
     }
     let first = (page - 1) * per + 1;
     let last_item = (page * per).min(total);
-    let mut s = format!("<nav class=\"pager\" aria-label=\"{}\"><div class=\"row\">", esc(label));
+    let mut s = format!(
+        "<nav class=\"pager\" aria-label=\"{}\"><div class=\"row\">",
+        esc(label)
+    );
     if page > 1 {
-        let _ = write!(s, "<a class=\"step\" rel=\"prev\" href=\"{}\">← Newer</a>", page_path(page - 1));
+        let _ = write!(
+            s,
+            "<a class=\"step\" rel=\"prev\" href=\"{}\">← Newer</a>",
+            page_path(page - 1)
+        );
     } else {
         s.push_str("<span class=\"step off\">← Newer</span>");
     }
@@ -1197,7 +1303,11 @@ pub fn pager(page: usize, pages: usize, total: usize, per: usize, label: &str, p
     }
     s.push_str("</span>");
     if page < pages {
-        let _ = write!(s, "<a class=\"step\" rel=\"next\" href=\"{}\">Older →</a>", page_path(page + 1));
+        let _ = write!(
+            s,
+            "<a class=\"step\" rel=\"next\" href=\"{}\">Older →</a>",
+            page_path(page + 1)
+        );
     } else {
         s.push_str("<span class=\"step off\">Older →</span>");
     }
@@ -1213,10 +1323,33 @@ pub fn pager(page: usize, pages: usize, total: usize, per: usize, label: &str, p
     s
 }
 
-/// Cluster cards for one page of the list, with the "Single reports"
+/// A reference that points at this machine: feed-behaviour claims cite
+/// feed's own API on loopback. A public page names the source as text
+/// instead of linking somewhere no reader can reach (`docs/deploy.md` §4.3).
+pub fn is_local(url: &str) -> bool {
+    let rest = url
+        .strip_prefix("http://")
+        .or_else(|| url.strip_prefix("https://"))
+        .unwrap_or(url);
+    let host = rest.split(['/', ':', '?', '#']).next().unwrap_or("");
+    host.eq_ignore_ascii_case("localhost")
+        || host.starts_with("127.")
+        || host == "0.0.0.0"
+        || rest.starts_with("[::1]")
+}
 
 #[cfg(test)]
 mod tests {
+    #[test]
+    fn loopback_references_are_local() {
+        assert!(is_local("http://127.0.0.1:8080/v1/feeds"));
+        assert!(is_local("http://localhost/x"));
+        assert!(is_local("http://[::1]:8080/x"));
+        assert!(!is_local("https://localhost.example/x"));
+        assert!(!is_local("https://www.wikidata.org/wiki/Q1"));
+        assert!(!is_local(""));
+    }
+
     use super::*;
     use crate::input::fixture_input;
 
@@ -1248,7 +1381,10 @@ mod tests {
         let src = h
             .find("Wikipedia: Reliable sources/Perennial sources")
             .unwrap();
-        assert!(h.contains("title=\"Licence: CC-BY-SA-4.0\""), "licence on hover");
+        assert!(
+            h.contains("title=\"Licence: CC-BY-SA-4.0\""),
+            "licence on hover"
+        );
         let ret = h.find("retrieved <time").unwrap();
         let asof = h.find("as of 2025-03").unwrap();
         let status = h.find("kg-status").unwrap();
@@ -1257,7 +1393,10 @@ mod tests {
         assert_eq!(whole_sentences("Whole."), "Whole.");
         assert!(h.contains("stale, "), "30-day source retrieved long ago");
         assert!(h.contains("<div class=\"scope\">Wire (wire.example)</div>"));
-        assert!(!h.contains("Discussions:"), "discussion links stay in the twins");
+        assert!(
+            !h.contains("Discussions:"),
+            "discussion links stay in the twins"
+        );
         let md = claim_md(&i, rel);
         assert!(md.starts_with("**Generally reliable**\nWire (wire.example)\nSource: [Wikipedia: Reliable sources/Perennial sources](https://en.wikipedia.org/wiki/Wikipedia:Reliable_sources/Perennial_sources#Wire) · licence CC-BY-SA-4.0 · retrieved 2025-06-15 · as of 2025-03 · stale, "), "{md}");
         let cad = i.claims["wire"]
@@ -1283,19 +1422,28 @@ mod tests {
     #[test]
     fn lean_visuals_need_two_outlets_and_name_their_source() {
         let mut i = fixture_input();
-        let claim = |id: &str, field: &str, value: &str, src: &str, data: Option<serde_json::Value>| crate::input::Claim {
-            outlet_id: id.into(),
-            field: field.into(),
-            value: value.into(),
-            data: data.map(|d| serde_json::from_value(d).unwrap()),
-            source_id: src.into(),
-            ref_url: "https://x".into(),
-            retrieved_at: 0,
-            as_of: None,
-            note: None,
-        };
+        let claim =
+            |id: &str, field: &str, value: &str, src: &str, data: Option<serde_json::Value>| {
+                crate::input::Claim {
+                    outlet_id: id.into(),
+                    field: field.into(),
+                    value: value.into(),
+                    data: data.map(|d| serde_json::from_value(d).unwrap()),
+                    source_id: src.into(),
+                    ref_url: "https://x".into(),
+                    retrieved_at: 0,
+                    as_of: None,
+                    note: None,
+                }
+            };
         for (id, score) in [("wire", -0.5), ("gazette", 0.5)] {
-            i.claims.entry(id.into()).or_default().push(claim(id, "audience_partisanship", "x", "robertson2018", Some(serde_json::json!({"score": score}))));
+            i.claims.entry(id.into()).or_default().push(claim(
+                id,
+                "audience_partisanship",
+                "x",
+                "robertson2018",
+                Some(serde_json::json!({"score": score})),
+            ));
         }
         // Nothing scored: said, not hidden.
         let none = audience_strip(&i, &["blog"], false);
@@ -1304,34 +1452,105 @@ mod tests {
         // One scored outlet still draws, beside its unknowns.
         let one = audience_strip(&i, &["wire", "blog"], false);
         assert!(one.contains("data-unknown=\"1\"") && one.contains("class=\"unknown\""));
-        assert!(!one.contains("class=\"lbl\""), "cards carry dots, not text; the legend names the source");
+        assert!(
+            !one.contains("class=\"lbl\""),
+            "cards carry dots, not text; the legend names the source"
+        );
         assert!(audience_strip(&i, &["wire", "blog"], true).contains("1 of 2 scored · <span"));
         let two = audience_strip(&i, &["wire", "gazette", "blog"], false);
-        assert!(two.contains("2 of 3 scored") && two.contains("Robertson et al. 2018"), "in the hover title");
-        assert!(two.contains("unknown: Blog"), "unknown outlets are named in the aria-label");
+        assert!(
+            two.contains("2 of 3 scored") && two.contains("Robertson et al. 2018"),
+            "in the hover title"
+        );
+        assert!(
+            two.contains("unknown: Blog"),
+            "unknown outlets are named in the aria-label"
+        );
         // -0.5 and +0.5 sit a quarter in from each end of the 120px strip.
-        assert!(two.contains("cx=\"32.0\"") && two.contains("cx=\"88.0\""), "{two}");
-        assert!(!two.contains("fill=") && !two.contains("stroke=") && !two.contains("style="), "colours come from the grey tokens only");
+        assert!(
+            two.contains("cx=\"32.0\"") && two.contains("cx=\"88.0\""),
+            "{two}"
+        );
+        assert!(
+            !two.contains("fill=") && !two.contains("stroke=") && !two.contains("style="),
+            "colours come from the grey tokens only"
+        );
         // Designations: State only for SC / CaPu; Sanctioned beats Deprecated.
-        i.claims.entry("wire".into()).or_default().push(claim("wire", "state_media", "Independent Public (IP)", "state_media_monitor", None));
-        assert_eq!(outlet_flags(&i, "wire"), "", "independent public media carry no tag");
-        i.claims.entry("flagged".into()).or_default().push(claim("flagged", "state_media", "State-Controlled (SC)", "state_media_monitor", None));
-        i.claims.entry("flagged".into()).or_default().push(claim("flagged", "reliability", "Deprecated", "wikipedia_rsp", None));
+        i.claims.entry("wire".into()).or_default().push(claim(
+            "wire",
+            "state_media",
+            "Independent Public (IP)",
+            "state_media_monitor",
+            None,
+        ));
+        assert_eq!(
+            outlet_flags(&i, "wire"),
+            "",
+            "independent public media carry no tag"
+        );
+        i.claims.entry("flagged".into()).or_default().push(claim(
+            "flagged",
+            "state_media",
+            "State-Controlled (SC)",
+            "state_media_monitor",
+            None,
+        ));
+        i.claims.entry("flagged".into()).or_default().push(claim(
+            "flagged",
+            "reliability",
+            "Deprecated",
+            "wikipedia_rsp",
+            None,
+        ));
         let f = outlet_flags(&i, "flagged");
-        assert!(f.contains(">State</abbr>") && f.contains(">Deprecated</abbr>"), "{f}");
-        i.claims.entry("flagged".into()).or_default().push(claim("flagged", "sanctioned", "Broadcasting suspended in the EU", "eu_sanctions", None));
+        assert!(
+            f.contains(">State</abbr>") && f.contains(">Deprecated</abbr>"),
+            "{f}"
+        );
+        i.claims.entry("flagged".into()).or_default().push(claim(
+            "flagged",
+            "sanctioned",
+            "Broadcasting suspended in the EU",
+            "eu_sanctions",
+            None,
+        ));
         let f = outlet_flags(&i, "flagged");
-        assert!(f.contains(">Sanctioned</abbr>") && !f.contains("Deprecated"), "one dark tag at most: {f}");
+        assert!(
+            f.contains(">Sanctioned</abbr>") && !f.contains("Deprecated"),
+            "one dark tag at most: {f}"
+        );
         assert!(outlet_badge(&i, "flagged").contains("kg-flag state"));
         i.claims.get_mut("wire").unwrap().clear();
         // AllSides: no bar with fewer than two rated outlets.
-        i.sources.insert("allsides".into(), crate::input::Source { id: "allsides".into(), name: "AllSides Media Bias Ratings".into(), licence: "CC-BY-NC-4.0".into(), ..Default::default() });
-        i.claims.entry("wire".into()).or_default().push(claim("wire", "bias", "Center", "allsides", None));
+        i.sources.insert(
+            "allsides".into(),
+            crate::input::Source {
+                id: "allsides".into(),
+                name: "AllSides Media Bias Ratings".into(),
+                licence: "CC-BY-NC-4.0".into(),
+                ..Default::default()
+            },
+        );
+        i.claims
+            .entry("wire".into())
+            .or_default()
+            .push(claim("wire", "bias", "Center", "allsides", None));
         assert!(label_bar(&i, &["wire", "gazette"], "allsides", "bias").is_none());
-        i.claims.entry("gazette".into()).or_default().push(claim("gazette", "bias", "Lean Right", "allsides", None));
+        i.claims.entry("gazette".into()).or_default().push(claim(
+            "gazette",
+            "bias",
+            "Lean Right",
+            "allsides",
+            None,
+        ));
         let bar = label_bar(&i, &["wire", "gazette", "blog"], "allsides", "bias").unwrap();
         let compact = label_bar_compact(&i, &bar);
-        assert!(compact.contains("Center 50%") && compact.contains("Right 50%") && !compact.contains("Left "), "{compact}");
+        assert!(
+            compact.contains("Center 50%")
+                && compact.contains("Right 50%")
+                && !compact.contains("Left "),
+            "{compact}"
+        );
         assert!(compact.contains("1 not rated") && compact.contains("AllSides"));
         // Only AllSides colours an outlet, and only a rated one.
         assert_eq!(allsides_label(&i, "gazette"), Some("Lean Right"));
@@ -1375,7 +1594,10 @@ mod tests {
             "no curve when nothing moved after the first bucket"
         );
         assert!(!flat.contains("kg-spark-n"), "no bare count beside nothing");
-        assert!(!h.contains("syndication group"), "copies are said as own reports against copies");
+        assert!(
+            !h.contains("syndication group"),
+            "copies are said as own reports against copies"
+        );
         let page = html(&Page {
             title: "T",
             description: "D",

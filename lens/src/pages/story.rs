@@ -11,8 +11,8 @@ use super::Twins;
 use crate::derive::{cluster_facts, ClusterFacts};
 use crate::input::{Cluster, Input, Item};
 use crate::render::{
-    claim_md, cluster_card, datetime, delta, esc, field_label, grouped_claims,
-    html, iso, n, outlet_link, time_el, Page,
+    claim_md, cluster_card, datetime, delta, esc, field_label, grouped_claims, html, iso, n,
+    outlet_link, time_el, Page,
 };
 
 /// Source and field pairs that can draw a label bar, in display order.
@@ -72,7 +72,10 @@ fn track(input: &Input, c: &Cluster, rows: &[(&str, Vec<&Item>)], t0: i64) -> St
     if rows.len() < 2 {
         return String::new();
     }
-    let times: Vec<i64> = rows.iter().map(|(_, v)| v.first().map(|i| when(i)).unwrap_or(t0)).collect();
+    let times: Vec<i64> = rows
+        .iter()
+        .map(|(_, v)| v.first().map(|i| when(i)).unwrap_or(t0))
+        .collect();
     let end = times.iter().copied().max().unwrap_or(t0);
     let span = (end - t0).max(60);
     // Lanes: an icon goes in the first lane whose last icon is far enough
@@ -96,11 +99,18 @@ fn track(input: &Input, c: &Cluster, rows: &[(&str, Vec<&Item>)], t0: i64) -> St
             }
         };
         let origin = *outlet == c.origin_outlet_id;
-        let mark = crate::render::outlet_icon(input, outlet, origin)
-            .unwrap_or_else(|| format!("<span class=\"dot{}\"></span>", if origin { " kg-origin" } else { "" }));
+        let mark = crate::render::outlet_icon(input, outlet, origin).unwrap_or_else(|| {
+            format!(
+                "<span class=\"dot{}\"></span>",
+                if origin { " kg-origin" } else { "" }
+            )
+        });
         let has_page = input.outlets.contains_key(*outlet) || input.claims.contains_key(*outlet);
         let (open, close) = if has_page {
-            (format!("<a class=\"pt\" href=\"/outlet/{}/\"", esc(outlet)), "</a>")
+            (
+                format!("<a class=\"pt\" href=\"/outlet/{}/\"", esc(outlet)),
+                "</a>",
+            )
         } else {
             ("<span class=\"pt\"".to_string(), "</span>")
         };
@@ -109,7 +119,11 @@ fn track(input: &Input, c: &Cluster, rows: &[(&str, Vec<&Item>)], t0: i64) -> St
             "{open} style=\"left: {x:.2}%; top: {}px\" title=\"{} · {}\">{mark}{close}",
             lane * 20,
             esc(input.outlet_name(outlet)),
-            if times[k] == t0 { "first".to_string() } else { delta(times[k] - t0) },
+            if times[k] == t0 {
+                "first".to_string()
+            } else {
+                delta(times[k] - t0)
+            },
         );
     }
     let height = lanes.len() * 20;
@@ -127,10 +141,11 @@ fn track(input: &Input, c: &Cluster, rows: &[(&str, Vec<&Item>)], t0: i64) -> St
 /// ("1982-01-01") read as the year.
 fn short_value(c: &crate::input::Claim) -> String {
     let v = c.value.trim();
-    if matches!(c.field.as_str(), "founded" | "domain_registered") && v.len() >= 4 {
-        if v.ends_with("-01-01") || c.field == "domain_registered" {
-            return v[..4].to_string();
-        }
+    if matches!(c.field.as_str(), "founded" | "domain_registered")
+        && v.len() >= 4
+        && (v.ends_with("-01-01") || c.field == "domain_registered")
+    {
+        return v[..4].to_string();
     }
     v.to_string()
 }
@@ -147,7 +162,11 @@ fn outlets_table(input: &Input, rows: &[(&str, Vec<&Item>)]) -> String {
         let claims: Vec<&crate::input::Claim> = input
             .claims
             .get(*outlet)
-            .map(|v| v.iter().filter(|c| OUTLET_FIELDS.contains(&c.field.as_str())).collect())
+            .map(|v| {
+                v.iter()
+                    .filter(|c| OUTLET_FIELDS.contains(&c.field.as_str()))
+                    .collect()
+            })
             .unwrap_or_default();
         let mut facts: Vec<String> = Vec::new();
         for field in OUTLET_FIELDS {
@@ -183,8 +202,18 @@ fn outlets_table(input: &Input, rows: &[(&str, Vec<&Item>)]) -> String {
                         src.map(|s| s.name.as_str()).unwrap_or(&c.source_id),
                         src.map(|s| s.licence.as_str()).unwrap_or(""),
                         crate::render::date(c.retrieved_at),
-                        c.as_of.as_ref().map(|a| format!(" · as of {a}")).unwrap_or_default()
+                        c.as_of
+                            .as_ref()
+                            .map(|a| format!(" · as of {a}"))
+                            .unwrap_or_default()
                     );
+                    if crate::render::is_local(&c.ref_url) {
+                        return format!(
+                            "<span class=\"fact\" title=\"{}\">{}</span>",
+                            esc(&title),
+                            esc(v)
+                        );
+                    }
                     format!(
                         "<a class=\"fact\" href=\"{}\" rel=\"noopener\" title=\"{}\">{}</a>",
                         esc(&c.ref_url),
@@ -193,7 +222,10 @@ fn outlets_table(input: &Input, rows: &[(&str, Vec<&Item>)]) -> String {
                     )
                 })
                 .collect();
-            facts.push(format!("<span data-field=\"{field}\">{label}{}</span>", shown.join(", ")));
+            facts.push(format!(
+                "<span data-field=\"{field}\">{label}{}</span>",
+                shown.join(", ")
+            ));
         }
         let _ = write!(
             body,
@@ -320,8 +352,16 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         // line of their own on every row.
         let when_title = format!(
             "{}{} · picked up {}",
-            if k == 0 { "first".to_string() } else { format!("{} after the first outlet", delta(when(first) - t0)) },
-            if first.published_at > 0 { format!(" · published {}", datetime(first.published_at)) } else { String::new() },
+            if k == 0 {
+                "first".to_string()
+            } else {
+                format!("{} after the first outlet", delta(when(first) - t0))
+            },
+            if first.published_at > 0 {
+                format!(" · published {}", datetime(first.published_at))
+            } else {
+                String::new()
+            },
             datetime(at)
         );
         let _ = write!(
@@ -454,7 +494,9 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
     for l in &method {
         let _ = write!(b, "<li>{}</li>", esc(l));
     }
-    b.push_str("</ul><p class=\"kg-muted\"><a href=\"/about/#story\">What a story is</a></p></details>");
+    b.push_str(
+        "</ul><p class=\"kg-muted\"><a href=\"/about/#story\">What a story is</a></p></details>",
+    );
 
     b.push_str(&outlets_table(input, &rows));
 
@@ -487,10 +529,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         wide: false,
         head: &head,
         body: &b,
-        status: &format!(
-            "Updated {}",
-            datetime(input.export_time)
-        ),
+        status: &format!("Updated {}", datetime(input.export_time)),
     });
 
     // ---- JSON: the cluster, the derived facts, the items, the claims shown.
@@ -764,7 +803,9 @@ mod tests {
         let mut c = i.clusters[&1001].clone();
         // The fixture export predates confidence: said, not zeroed.
         let t = story(&i, &c);
-        assert!(t.html.contains("<summary>How this story was grouped</summary>"));
+        assert!(t
+            .html
+            .contains("<summary>How this story was grouped</summary>"));
         assert!(t.html.contains("not recorded in this export"));
         assert!(t.md.contains("## Method"));
         assert!(t.json["cluster"].get("confidence").is_none());
@@ -779,8 +820,14 @@ mod tests {
         });
         let t = story(&i, &c);
         assert!(t.html.contains("Weakest join 0.74, 0.02 above the threshold; one borderline join holds this story together."));
-        assert!(!t.html.contains("without a recorded similarity"), "not reader information");
-        assert!(t.md.contains("1 member without a recorded similarity"), "kept for machines");
+        assert!(
+            !t.html.contains("without a recorded similarity"),
+            "not reader information"
+        );
+        assert!(
+            t.md.contains("1 member without a recorded similarity"),
+            "kept for machines"
+        );
         assert!(t.html.contains("Formed by merging"));
         assert!(t.html.contains("2 languages: en, ja."));
         assert!(
@@ -825,8 +872,14 @@ mod tests {
             "offset from the origin's published time: {}",
             t.html
         );
-        assert!(!t.html.contains("class=\"times\""), "times are the hover, not a line per row");
-        assert!(t.html.contains("title=\"first · published "), "published and picked-up times in the time column's title");
+        assert!(
+            !t.html.contains("class=\"times\""),
+            "times are the hover, not a line per row"
+        );
+        assert!(
+            t.html.contains("title=\"first · published "),
+            "published and picked-up times in the time column's title"
+        );
         assert!(
             t.md.contains("- first · **Gazette**") && t.md.contains("- +9.0h · **Wire**"),
             "{}",

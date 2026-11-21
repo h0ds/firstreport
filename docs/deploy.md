@@ -100,7 +100,7 @@ within a week.
 
 ### 4.2 Lighter pages
 
-- **The front page is 615 KB of HTML**, mostly because its JSON-LD lists
+- *(Done: JSON-LD now lists only the page's own stories.)* **The front page was 615 KB of HTML**, mostly because its JSON-LD lists
   every story in the export, not the 50 on the page. Limit JSON-LD to the
   page's own stories. Expected result: under 100 KB, about 15 KB after
   Brotli.
@@ -113,7 +113,10 @@ within a week.
 
 ### 4.3 No localhost in public pages
 
-377 links in 80 built pages point at `http://127.0.0.1:8080`: feed
+*(Done in lens: a loopback `ref_url` is rendered as the source's name
+without a link, and `lens check` fails on any link to this machine.)*
+
+377 links in 80 built pages pointed at `http://127.0.0.1:8080`: feed
 behaviour facts cite feed's API as their source. The public site must
 cite something public. Give feed-behaviour claims `ref_url` =
 `https://<domain>/outlet/<id>/`, or leave `ref_url` empty for sources
