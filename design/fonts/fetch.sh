@@ -18,8 +18,11 @@ trap 'rm -rf "$TMP"' EXIT
 # Latin, Latin Extended-A/B, general punctuation, arrows, minus, euro, trademark.
 UNICODES="U+0000-00FF,U+0100-024F,U+2000-206F,U+2190-2193,U+2212,U+20AC,U+2122"
 
+# Ubuntu's python3-fonttools has the module but not the pyftsubset command.
+if command -v pyftsubset >/dev/null; then PYFTSUBSET=pyftsubset; else PYFTSUBSET="python3 -m fontTools.subset"; fi
+
 subset() { # <in.ttf> <out.woff2> <features>
-  pyftsubset "$1" --unicodes="$UNICODES" --layout-features="$3" \
+  $PYFTSUBSET "$1" --unicodes="$UNICODES" --layout-features="$3" \
     --flavor=woff2 --no-hinting --desubroutinize --output-file="$2"
   echo "  $(basename "$2"): $(wc -c < "$2" | tr -d ' ') bytes"
 }
