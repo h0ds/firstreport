@@ -277,9 +277,11 @@ pub fn read(feed_export: &Path, ledger_export: &Path) -> Result<Input, String> {
 /// then a subdomain of one, ignoring `www.`.
 fn outlet_for_host(outlets: &BTreeMap<String, Outlet>, host: &str) -> Option<String> {
     let host = host.trim_start_matches("www.");
-    let exact = outlets
-        .values()
-        .find(|o| o.domains.iter().any(|d| d.trim_start_matches("www.") == host));
+    let exact = outlets.values().find(|o| {
+        o.domains
+            .iter()
+            .any(|d| d.trim_start_matches("www.") == host)
+    });
     exact
         .or_else(|| {
             outlets.values().find(|o| {
@@ -401,11 +403,24 @@ mod tests {
         let mut outlets = BTreeMap::new();
         outlets.insert(
             "abcnews".to_string(),
-            Outlet { id: "abcnews".into(), name: "ABC News".into(), domains: vec!["abcnews.go.com".into(), "abcnews.com".into()] },
+            Outlet {
+                id: "abcnews".into(),
+                name: "ABC News".into(),
+                domains: vec!["abcnews.go.com".into(), "abcnews.com".into()],
+            },
         );
-        assert_eq!(outlet_for_host(&outlets, "abcnews.com").as_deref(), Some("abcnews"));
-        assert_eq!(outlet_for_host(&outlets, "www.abcnews.com").as_deref(), Some("abcnews"));
-        assert_eq!(outlet_for_host(&outlets, "video.abcnews.com").as_deref(), Some("abcnews"));
+        assert_eq!(
+            outlet_for_host(&outlets, "abcnews.com").as_deref(),
+            Some("abcnews")
+        );
+        assert_eq!(
+            outlet_for_host(&outlets, "www.abcnews.com").as_deref(),
+            Some("abcnews")
+        );
+        assert_eq!(
+            outlet_for_host(&outlets, "video.abcnews.com").as_deref(),
+            Some("abcnews")
+        );
         assert_eq!(outlet_for_host(&outlets, "notabcnews.com"), None);
     }
 }

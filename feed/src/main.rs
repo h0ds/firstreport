@@ -208,7 +208,10 @@ async fn run(
         let r = parse::outlet::Resolver::from_config(&outlets);
         let n = store::reattribute_unknown(&store::open(&cfg.store.path)?, |h| r.resolve(h))?;
         if n > 0 {
-            info!(items = n, "re-attributed items whose host is now in the outlet registry");
+            info!(
+                items = n,
+                "re-attributed items whose host is now in the outlet registry"
+            );
         }
     }
     let configured_feeds: Arc<std::collections::HashSet<String>> =

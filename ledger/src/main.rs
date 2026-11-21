@@ -231,9 +231,19 @@ async fn run(args: cli::Args) -> Result<(), Box<dyn std::error::Error>> {
                 site::SOURCE_ID => import_site(&args.data_dir, &ledger, &outlets, mode).await,
                 behaviour::SOURCE_ID => import_behaviour(&args, &ledger, &outlets, mode),
                 ratings::ALLSIDES | ratings::ROBERTSON => {
-                    import_ratings(&args.data_dir, &ledger, &outlets, source_id, file.as_deref(), mode).await
+                    import_ratings(
+                        &args.data_dir,
+                        &ledger,
+                        &outlets,
+                        source_id,
+                        file.as_deref(),
+                        mode,
+                    )
+                    .await
                 }
-                statemedia::SOURCE_ID => import_statemedia(&args.data_dir, &ledger, &outlets, mode).await,
+                statemedia::SOURCE_ID => {
+                    import_statemedia(&args.data_dir, &ledger, &outlets, mode).await
+                }
                 _ => import_perennial(&args.data_dir, &ledger, &outlets, mode).await,
             }
         }
@@ -462,7 +472,12 @@ async fn import_statemedia(
             continue;
         }
         tokio::time::sleep(std::time::Duration::from_secs(1)).await;
-        let page = match client.get(*url).send().await.and_then(|r| r.error_for_status()) {
+        let page = match client
+            .get(*url)
+            .send()
+            .await
+            .and_then(|r| r.error_for_status())
+        {
             Ok(r) => r.text().await?,
             Err(e) => {
                 error!(outlet = %id, %url, "fetch failed: {e}");
@@ -481,7 +496,14 @@ async fn import_statemedia(
         }
     }
     if mode.writes() {
-        report_commit(guard::commit_source(data_dir, ledger, statemedia::SOURCE_ID, batch, mode.force(), now_secs())?);
+        report_commit(guard::commit_source(
+            data_dir,
+            ledger,
+            statemedia::SOURCE_ID,
+            batch,
+            mode.force(),
+            now_secs(),
+        )?);
     } else {
         println!("# re-run with --write to store these claims");
     }
@@ -528,7 +550,10 @@ async fn import_ratings(
                 scores.get(&h).map(|s| (h, *s))
             });
             if let Some((host, score)) = hit {
-                per_outlet.insert(o.id.clone(), vec![ratings::robertson_claim(&o.id, &host, score, now)]);
+                per_outlet.insert(
+                    o.id.clone(),
+                    vec![ratings::robertson_claim(&o.id, &host, score, now)],
+                );
             }
         }
     }
@@ -557,11 +582,25 @@ async fn import_ratings(
     }
     let matched = if mode.writes() { batch.len() } else { total };
     if mode.writes() {
-        report_commit(guard::commit_source(data_dir, ledger, source_id, batch, mode.force(), now_secs())?);
+        report_commit(guard::commit_source(
+            data_dir,
+            ledger,
+            source_id,
+            batch,
+            mode.force(),
+            now_secs(),
+        )?);
     } else {
         println!("# re-run with --write to store these claims");
     }
-    info!(source = source_id, matched, claims = total, outlets = outlets.len(), written = mode.writes(), "ratings import done");
+    info!(
+        source = source_id,
+        matched,
+        claims = total,
+        outlets = outlets.len(),
+        written = mode.writes(),
+        "ratings import done"
+    );
     Ok(())
 }
 

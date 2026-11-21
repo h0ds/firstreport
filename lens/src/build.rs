@@ -106,8 +106,16 @@ pub fn write_site(
         &crate::pages::search::search(input, window_hours),
     )?;
     write_twins(&tmp.join("about"), &crate::pages::about::about(input))?;
-    write_twins(&tmp.join("outlets"), &crate::pages::home::outlets_page(input))?;
-    let mut pages: Vec<String> = vec!["/".into(), "/search/".into(), "/about/".into(), "/outlets/".into()];
+    write_twins(
+        &tmp.join("outlets"),
+        &crate::pages::home::outlets_page(input),
+    )?;
+    let mut pages: Vec<String> = vec![
+        "/".into(),
+        "/search/".into(),
+        "/about/".into(),
+        "/outlets/".into(),
+    ];
     // The story list, 50 per page: page 1 is `/`, the rest `/page/N/`.
     for p in 2..=crate::pages::home::page_count(input, window_hours) {
         write_twins(
@@ -160,7 +168,10 @@ pub fn write_site(
         pages.push(format!("/outlet/{id}/"));
         for p in 2..=crate::pages::outlet::story_pages(&f) {
             let t = crate::pages::outlet::stories_page(input, &o, &f, OUTLET_WINDOW_DAYS, p);
-            write_twins(&tmp.join("outlet").join(id).join("page").join(p.to_string()), &t)?;
+            write_twins(
+                &tmp.join("outlet").join(id).join("page").join(p.to_string()),
+                &t,
+            )?;
             pages.push(format!("/outlet/{id}/page/{p}/"));
         }
         m += 1;

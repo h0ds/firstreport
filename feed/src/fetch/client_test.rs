@@ -333,6 +333,9 @@ async fn no_connection_is_unreachable_an_answer_is_not() {
     assert!(e.is_unreachable(), "refused connect is unreachable: {e}");
 
     let (base, _) = serve();
-    let e = c.fetch(&format!("{base}/missing"), None, None).await.unwrap_err();
+    let e = c
+        .fetch(&format!("{base}/missing"), None, None)
+        .await
+        .unwrap_err();
     assert!(!e.is_unreachable(), "a 404 is an answer: {e}");
 }

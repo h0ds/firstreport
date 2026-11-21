@@ -186,7 +186,10 @@ Disallow: /
         let r = parse(SAMPLE);
         assert_eq!(r.groups.len(), 3);
         // our own group wins over *
-        assert!(!r.check("truthdecay-feed", "/arc/outboundfeeds/rss/").allowed);
+        assert!(
+            !r.check("truthdecay-feed", "/arc/outboundfeeds/rss/")
+                .allowed
+        );
         assert!(
             r.check(
                 "truthdecay-feed",

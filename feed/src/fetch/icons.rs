@@ -53,13 +53,19 @@ pub fn candidates(html: &str, base: &Url) -> Vec<Url> {
             .split_whitespace()
             .filter_map(|s| s.split(['x', 'X']).next()?.parse::<i64>().ok())
             .max()
-            .unwrap_or(if touch { 180 } else if svg { 256 } else { 16 });
+            .unwrap_or(if touch {
+                180
+            } else if svg {
+                256
+            } else {
+                16
+            });
         let score = if touch { 10_000 + size } else { size };
         if !found.iter().any(|(_, u)| u == &url) {
             found.push((score, url));
         }
     }
-    found.sort_by(|a, b| b.0.cmp(&a.0));
+    found.sort_by_key(|f| std::cmp::Reverse(f.0));
     let mut out: Vec<Url> = found.into_iter().map(|(_, u)| u).collect();
     if let Ok(ico) = base.join("/favicon.ico") {
         if !out.contains(&ico) {
@@ -161,10 +167,19 @@ mod tests {
             <link rel="apple-touch-icon" href="/touch.png">
             <link rel="stylesheet" href="/s.css">
             </head><body><link rel="icon" href="/ignored-in-body.png"></body></html>"#;
-        let got: Vec<String> = candidates(html, &base).iter().map(|u| u.path().to_string()).collect();
-        assert_eq!(got, ["/touch.png", "/fav-32.png", "/fav-16.png", "/favicon.ico"]);
+        let got: Vec<String> = candidates(html, &base)
+            .iter()
+            .map(|u| u.path().to_string())
+            .collect();
+        assert_eq!(
+            got,
+            ["/touch.png", "/fav-32.png", "/fav-16.png", "/favicon.ico"]
+        );
         // Nothing advertised: the conventional path only.
-        let bare: Vec<String> = candidates("<html></html>", &base).iter().map(|u| u.to_string()).collect();
+        let bare: Vec<String> = candidates("<html></html>", &base)
+            .iter()
+            .map(|u| u.to_string())
+            .collect();
         assert_eq!(bare, ["https://news.example/favicon.ico"]);
     }
 
@@ -172,7 +187,10 @@ mod tests {
     fn images_are_judged_by_their_bytes() {
         assert_eq!(sniff(b"\x89PNG\r\n\x1a\nrest"), Some("png"));
         assert_eq!(sniff(&[0, 0, 1, 0, 1, 0]), Some("ico"));
-        assert_eq!(sniff(b"<svg xmlns='http://www.w3.org/2000/svg'></svg>"), Some("svg"));
+        assert_eq!(
+            sniff(b"<svg xmlns='http://www.w3.org/2000/svg'></svg>"),
+            Some("svg")
+        );
         assert_eq!(sniff(b"<?xml version='1.0'?><svg></svg>"), Some("svg"));
         assert_eq!(sniff(b"<!doctype html><title>404</title>"), None);
     }
