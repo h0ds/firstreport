@@ -152,12 +152,14 @@ pub fn html(p: &Page) -> String {
 <link rel="alternate" type="application/json" href="{path}index.json" title="This page as JSON">
 <link rel="alternate" type="text/markdown" href="{path}index.md" title="This page as Markdown">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this site">
+<script src="/age.js" defer></script>
 {head}</head>
 <body>
 <main{wide}>
 <header class="chrome">
   <span class="kg-lockup"><a class="kg-wordmark" href="/">First Report</a></span>
-  <span class="kg-muted">{status}</span>
+  <nav class="kg-nav" aria-label="Site">{nav}</nav>
+  {status}
 </header>
 {body}
 <footer class="kg-muted">Every number on this page is a count from First Report feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · <a href="/outlets/">Outlets</a> · <a href="/about/">About</a> · Machine readers: <a href="{path}index.json">JSON</a> · <a href="{path}index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a></footer>
@@ -172,8 +174,60 @@ pub fn html(p: &Page) -> String {
         wide = if p.wide { " class=\"wide\"" } else { "" },
         status = p.status,
         body = p.body,
+        nav = nav(p.path),
     )
 }
+
+/// The site's four sections, the current one marked (design §5, header).
+fn nav(path: &str) -> String {
+    let here = |href: &str| match href {
+        "/" => path == "/" || path.starts_with("/page/") || path.starts_with("/story/"),
+        _ => path.starts_with(href) || (href == "/outlets/" && path.starts_with("/outlet/")),
+    };
+    [
+        ("/", "Stories"),
+        ("/outlets/", "Outlets"),
+        ("/search/", "Search"),
+        ("/about/", "About"),
+    ]
+    .iter()
+    .map(|(href, label)| {
+        format!(
+            "<a href=\"{href}\"{}>{label}</a>",
+            if here(href) {
+                " aria-current=\"page\""
+            } else {
+                ""
+            }
+        )
+    })
+    .collect()
+}
+
+/// The header's data stamp: when the export was taken, as a `<time>`.
+/// `/age.js` rewrites it as an age ("52 days ago") and colours the dot,
+/// amber once the data is more than a day old; without the script the
+/// date stays (design §5, header).
+pub fn updated(ts: i64) -> String {
+    format!(
+        "<span class=\"kg-updated\">Updated <time datetime=\"{}\" title=\"{}\">{} {}, {} UTC</time></span>",
+        iso(ts),
+        esc(&datetime(ts)),
+        day_month(ts, ts),
+        &date(ts)[..4],
+        hhmm(ts)
+    )
+}
+
+/// The age script `/age.js` (a file, for the Content-Security-Policy).
+pub const AGE_JS: &str = r#"for (const t of document.querySelectorAll('.kg-updated time')) {
+  const ms = Date.now() - Date.parse(t.dateTime);
+  if (!(ms >= 0)) continue;
+  const m = Math.floor(ms / 60000), h = Math.floor(ms / 3600000), d = Math.floor(ms / 86400000);
+  t.textContent = m < 1 ? 'just now' : m < 60 ? m + ' min ago' : h < 48 ? h + ' h ago' : d + ' days ago';
+  t.closest('.kg-updated').classList.add(ms > 86400000 ? 'stale' : 'fresh');
+}
+"#;
 
 pub fn outlet_link(input: &Input, id: &str) -> String {
     // Only registry outlets and outlets ledger knows get a page (build.rs).

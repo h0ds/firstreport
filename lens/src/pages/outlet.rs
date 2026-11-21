@@ -76,11 +76,79 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
             bits.join(" · ")
         }
     );
+    // At a glance (design §5, outlet page): a few fields' first values as
+    // tiles, each linking to its row with the sources. Only fields the
+    // outlet has; the label is the source's, never First Report's verdict.
+    let mut glance = String::new();
+    for (field, label) in [
+        ("reliability", "Reliability"),
+        ("state_media", "State media"),
+        ("sanctioned", "Sanctions"),
+        ("country", "Country"),
+        ("founded", "Founded"),
+        ("owner", "Owner"),
+        ("posting_cadence", "Posts"),
+    ] {
+        let Some(c) = claims.iter().find(|c| c.field == field) else {
+            continue;
+        };
+        // Wikidata's year-precision dates ("1927-01-01") read as the year.
+        let value = if field == "founded" && c.value.len() == 10 && c.value.ends_with("-01-01") {
+            c.value[..4].to_string()
+        } else {
+            c.value.clone()
+        };
+        let _ = write!(
+            glance,
+            "<a class=\"tile\" href=\"#f-{field}\"><span class=\"k\">{label}</span><span class=\"v\">{}</span></a>",
+            esc(&value)
+        );
+    }
+    let _ = write!(
+        glance,
+        "<a class=\"tile\" href=\"#stories\"><span class=\"k\">Stories</span><span class=\"v\">{} in {window_days} days</span></a>",
+        crate::render::thousands(facts.clusters.len())
+    );
+    let _ = write!(
+        b,
+        "<nav class=\"kg-glance\" aria-label=\"At a glance\">{glance}</nav>"
+    );
+    b.push_str("<div class=\"kg-outlet-page\"><div class=\"facts\">");
     if groups.is_empty() {
         b.push_str(
             "<div class=\"empty\">No claims yet. First Report ledger has not assessed this outlet.</div>",
         );
     }
+    // The rows in four groups, each under its own heading, so twenty
+    // fields read as a few questions rather than one long list.
+    const SECTIONS: [(&str, &str); 4] = [
+        (
+            "What sources say",
+            "Labels from other organisations, each with its source and date.",
+        ),
+        (
+            "Who runs it",
+            "Ownership, legal form and origin, from Wikidata and other public records.",
+        ),
+        (
+            "The website",
+            "The domain and the site, from registry records and First Report's own checks.",
+        ),
+        (
+            "How it publishes",
+            "Counts from First Report feed: measurements, not verdicts.",
+        ),
+    ];
+    let section = |f: &str| match f {
+        "owner" | "parent" | "legal_form" | "country" | "founded" | "name" => 1,
+        "website" | "domain_registered" | "registrar" | "site_https" | "site_pages" => 2,
+        "posting_cadence" | "origin_share" | "syndication_share" | "revision_rate"
+        | "withdrawal_rate" => 3,
+        _ => 0,
+    };
+    let mut html_groups = groups.clone();
+    html_groups.sort_by_key(|(f, _)| section(f));
+    let mut open_section: Option<usize> = None;
     // Fields as rows: the name on the left, its claims on the right
     // (design §5, dense claims), not a heading per field.
     // Values from one source with the same provenance share a block, and
@@ -97,9 +165,18 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         {
             continue;
         }
+        let sec = section(field);
+        if open_section != Some(sec) {
+            open_section = Some(sec);
+            let _ = write!(
+                b,
+                "<h2>{}</h2><p class=\"kg-muted\">{}</p>",
+                SECTIONS[sec].0, SECTIONS[sec].1
+            );
+        }
         let _ = write!(
             b,
-            "<section class=\"kg-field\" data-field=\"{}\"><div class=\"fname\">{}</div><div>",
+            "<section class=\"kg-field\" id=\"f-{0}\" data-field=\"{0}\"><div class=\"fname\">{1}</div><div>",
             esc(field),
             esc(&field_label(field))
         );
@@ -139,6 +216,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         }
         b.push_str("</div></section>");
     }
+    b.push_str("</div><aside class=\"side\" id=\"stories\">");
     let _ = write!(
         b,
         "<h2>Stories</h2><p class=\"kg-muted\">In the {window_days} days to {}: {}, in {}. First to {} of the {} other outlets also carried. {} of its items carried text first published elsewhere; {} were carried by others. Counts from First Report feed, not a rating.</p>",
@@ -155,6 +233,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     } else {
         b.push_str(&stories_block(input, o, facts, 1));
     }
+    b.push_str("</aside></div>");
 
     let get = |field: &str| {
         claims
@@ -188,10 +267,10 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         title: name,
         description: &description,
         path: &path,
-        wide: false,
+        wide: true,
         head: &head,
         body: &b,
-        status: &format!("Updated {}", datetime(input.export_time)),
+        status: &crate::render::updated(input.export_time),
     });
 
     // ---- JSON
@@ -378,7 +457,7 @@ pub fn stories_page(
         wide: false,
         head: "",
         body: &b,
-        status: &format!("Updated {}", datetime(input.export_time)),
+        status: &crate::render::updated(input.export_time),
     });
     let json = json!({
         "outlet": o.id, "page": page, "pages": pages, "page_size": STORIES_PER_PAGE,
@@ -413,6 +492,20 @@ mod tests {
         let facts = outlet_facts(&i, 90 * DAY);
         let t = outlet(&i, &i.outlets["wire"], &facts["wire"], 90);
         assert!(t.html.contains("<h1 data-id=\"wire\">Wire</h1>"));
+        // At a glance tiles link to their rows; rows sit under group headings;
+        // the header marks Outlets and carries the data stamp.
+        assert!(t
+            .html
+            .contains("<a class=\"tile\" href=\"#f-reliability\">"));
+        assert!(t.html.contains("id=\"f-reliability\""));
+        assert!(t.html.contains("<h2>What sources say</h2>"));
+        assert!(t.html.contains("<h2>How it publishes</h2>"));
+        assert!(t
+            .html
+            .contains("<a href=\"/outlets/\" aria-current=\"page\">Outlets</a>"));
+        assert!(t
+            .html
+            .contains("<span class=\"kg-updated\">Updated <time datetime=\""));
         let rel = t
             .html
             .find("<div class=\"fname\">Reliability</div>")

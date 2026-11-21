@@ -71,7 +71,7 @@ pub fn search(input: &Input, window_hours: i64) -> Twins {
         wide: false,
         head: "",
         body: &b,
-        status: &format!("Updated {}", datetime(input.export_time)),
+        status: &crate::render::updated(input.export_time),
     });
     let mut md = format!(
         "# Search\n\nThe search index is `/search/index.json`: {} with id, name, domains and claim count; {} from the {} hours to {} with id, title, outlet count and creation time. Query it however you like; the page matches by substring and ranks exact, prefix, then contains, nothing more.\n\n## Outlets\n\n",

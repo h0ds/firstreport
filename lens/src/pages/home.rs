@@ -163,7 +163,7 @@ pub fn outlets_page(input: &Input) -> Twins {
         wide: true,
         head: "",
         body: &b,
-        status: &format!("Updated {}", datetime(now)),
+        status: &crate::render::updated(now),
     });
     let json = json!({"export_time": now, "outlets": input.outlets.values().collect::<Vec<_>>()});
     Twins {
@@ -202,7 +202,7 @@ pub fn story_page(input: &Input, window_hours: i64, page: usize) -> Twins {
         wide: true,
         head: "",
         body: &b,
-        status: &format!("Updated {}", datetime(now)),
+        status: &crate::render::updated(now),
     });
     let json = json!({
         "page": page, "pages": pages, "page_size": PAGE_SIZE, "export_time": now,
@@ -325,7 +325,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         wide: true,
         head: &head,
         body: &b,
-        status: &format!("Updated {}", datetime(now)),
+        status: &crate::render::updated(now),
     });
     let page_json = json!({
         "window_hours": window_hours,

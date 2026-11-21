@@ -77,7 +77,7 @@ pub fn about(input: &Input) -> Twins {
         wide: false,
         head: "",
         body: &b,
-        status: &format!("Updated {}", datetime(input.export_time)),
+        status: &crate::render::updated(input.export_time),
     });
     let page_json = json!({
         "what": WHAT.iter().map(|(k, v)| json!({"term": k, "meaning": v})).collect::<Vec<_>>(),

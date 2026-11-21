@@ -10,7 +10,7 @@ use serde_json::json;
 
 use super::Twins;
 use crate::input::Input;
-use crate::render::{datetime, esc, html, Page};
+use crate::render::{esc, html, Page};
 
 /// Absorbed cluster id → final survivor, from the event log. A survivor
 /// that was itself absorbed later is followed to the end; a cycle or a
@@ -61,7 +61,7 @@ pub fn stub(input: &Input, absorbed: u64, survivor: u64) -> Twins {
         wide: false,
         head: &head,
         body: &body,
-        status: &format!("Updated {}", datetime(input.export_time)),
+        status: &crate::render::updated(input.export_time),
     });
     Twins {
         html: page_html,

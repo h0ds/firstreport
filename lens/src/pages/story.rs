@@ -611,7 +611,7 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         wide: false,
         head: &head,
         body: &b,
-        status: &format!("Updated {}", datetime(input.export_time)),
+        status: &crate::render::updated(input.export_time),
     });
 
     // ---- JSON: the cluster, the derived facts, the items, the claims shown.

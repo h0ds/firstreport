@@ -122,6 +122,7 @@ pub fn write_site(
     std::fs::write(tmp.join("_headers"), HEADERS).map_err(|e| e.to_string())?;
     std::fs::write(tmp.join("search.js"), crate::pages::search::SCRIPT)
         .map_err(|e| e.to_string())?;
+    std::fs::write(tmp.join("age.js"), crate::render::AGE_JS).map_err(|e| e.to_string())?;
     write_twins(&tmp, &crate::pages::home::home(input, window_hours))?;
     write_twins(
         &tmp.join("search"),

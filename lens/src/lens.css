@@ -6,6 +6,19 @@ main { max-width: var(--kg-measure); overflow-wrap: break-word; margin: 0 auto; 
 main.wide { max-width: var(--kg-measure-wide); }
 header.chrome { display: flex; align-items: baseline; justify-content: space-between; gap: var(--kg-s4); flex-wrap: wrap; padding-bottom: var(--kg-s4); margin-bottom: var(--kg-s6); border-bottom: 1px solid var(--kg-line); }
 header.chrome .kg-wordmark:hover { color: var(--kg-text); text-decoration: none; }
+/* header (design §5): wordmark, the four sections, then the data stamp
+   pushed right. The current section is underlined like a pager tab. */
+header.chrome { align-items: center; justify-content: flex-start; column-gap: var(--kg-s5); row-gap: var(--kg-s2); }
+.kg-nav { display: flex; gap: var(--kg-s4); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); }
+.kg-nav a { color: var(--kg-text-secondary); font-weight: 500; padding: var(--kg-s1) 0; border-bottom: 2px solid transparent; }
+.kg-nav a:hover { color: var(--kg-blue); text-decoration: none; }
+.kg-nav a[aria-current] { color: var(--kg-text); border-bottom-color: var(--kg-blue); }
+.kg-updated { margin-left: auto; display: inline-flex; align-items: center; gap: var(--kg-s2); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); white-space: nowrap; }
+.kg-updated::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--kg-line-strong); }
+.kg-updated.fresh::before { background: var(--kg-ok); }
+.kg-updated.stale::before { background: var(--kg-warn); }
+.kg-updated time { color: var(--kg-text-secondary); font-variant-numeric: tabular-nums; }
+.kg-updated.stale time { color: var(--kg-warn); }
 
 /* headings: more space above than below (§4) */
 h1 { margin: 0 0 var(--kg-s2); }
@@ -158,4 +171,21 @@ footer a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
   .front.side > .panel { grid-column: 2; grid-row: 1; margin-top: 0; }
   .front.side > .list { grid-column: 1; grid-row: 1; }
   .front.side > .list > h2:first-child { margin-top: 0; }
+}
+
+/* Outlet page (design §5). At a glance: tiles of a few first values, each
+   a link to its row; then the field rows in four headed groups, with the
+   outlet's stories in a 380px side column from 1100px. */
+.kg-glance { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(140px, 100%), 1fr)); gap: var(--kg-s2); margin: var(--kg-s5) 0 var(--kg-s2); }
+.kg-glance .tile { display: flex; flex-direction: column; gap: var(--kg-s1); padding: var(--kg-s2) var(--kg-s3); border: 1px solid var(--kg-line); border-radius: var(--kg-radius-card); background: var(--kg-bg-subtle); color: var(--kg-text); min-width: 0; }
+.kg-glance .tile:hover { border-color: var(--kg-blue-soft); text-decoration: none; }
+.kg-glance .k { font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); }
+.kg-glance .v { font-weight: 600; font-size: var(--kg-fs-ui); line-height: var(--kg-lh-ui); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow-wrap: anywhere; }
+.kg-outlet-page .side .stories li { flex-wrap: wrap; }
+.kg-field { scroll-margin-top: var(--kg-s5); }
+@media (min-width: 1100px) {
+  .kg-outlet-page { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: var(--kg-s7); align-items: start; }
+  .kg-outlet-page .side .stories li { flex-direction: column; align-items: flex-start; gap: var(--kg-s1); }
+  .kg-outlet-page .side .stories .n { margin-left: 0; }
+  .kg-outlet-page .side .pager .pages { display: none; }
 }
