@@ -398,3 +398,77 @@ outlet = "fnn"
 url = "https://www.reuters.com/arc/outboundfeeds/news-sitemap/?outputType=xml"
 outlet = "reuters"
 interval_secs = 900
+
+# Added 2026-11-21; see the matching outlets.toml block.
+
+[[feed]]
+url = "https://www.nrk.no/toppsaker.rss"
+outlet = "nrk"
+
+[[feed]]
+url = "https://www.dr.dk/nyheder/service/feeds/senestenyt"
+outlet = "dr"
+
+[[feed]]
+url = "https://www.svt.se/nyheter/rss.xml"
+outlet = "svt"
+
+[[feed]]
+url = "https://www.spiegel.de/schlagzeilen/index.rss"
+outlet = "spiegel"
+
+[[feed]]
+url = "https://www.tagesschau.de/xml/rss2/"
+outlet = "tagesschau"
+
+[[feed]]
+url = "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"
+outlet = "elpais"
+
+[[feed]]
+url = "https://www.infobae.com/arc/outboundfeeds/rss/"
+outlet = "infobae"
+
+[[feed]]
+url = "https://www.eluniversal.com.mx/arc/outboundfeeds/rss/?outputType=xml"
+outlet = "eluniversal"
+
+[[feed]]
+url = "https://en.hespress.com/feed"
+outlet = "hespress"
+
+[[feed]]
+url = "https://punchng.com/feed/"
+outlet = "punch"
+
+[[feed]]
+url = "https://www.premiumtimesng.com/feed"
+outlet = "premiumtimes"
+
+[[feed]]
+url = "https://en.yna.co.kr/RSS/news.xml"
+outlet = "yonhap"
+
+[[feed]]
+url = "https://www.dawn.com/feeds/home"
+outlet = "dawn"
+
+[[feed]]
+url = "https://gulfnews.com/feed"
+outlet = "gulfnews"
+
+[[feed]]
+url = "https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml"
+outlet = "thenational"
+
+[[feed]]
+url = "https://www.cnbc.com/id/100003114/device/rss/rss.html"
+outlet = "cnbc"
+
+[[feed]]
+url = "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml"
+outlet = "hindustantimes"
+
+[[feed]]
+url = "https://indianexpress.com/feed/"
+outlet = "indianexpress"

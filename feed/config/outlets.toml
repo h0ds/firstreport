@@ -491,3 +491,115 @@ domains = ["reuters.com"]
 id = "ekstrabladet"
 name = "Ekstra Bladet"
 domains = ["ekstrabladet.dk", "eb.dk"]
+
+# Added 2026-11-21 to cover regions the pool lacked (Nordics, Europe,
+# Latin America, Africa, Korea, Pakistan, the Gulf, India). Each feed was
+# fetched and states no restriction on its use in the feed itself.
+
+[[outlet]]
+id = "nrk"
+name = "NRK"
+domains = ["nrk.no"]
+
+[[outlet]]
+id = "dr"
+name = "DR"
+domains = ["dr.dk"]
+
+[[outlet]]
+id = "svt"
+name = "SVT"
+domains = ["svt.se"]
+
+[[outlet]]
+id = "spiegel"
+name = "Der Spiegel"
+domains = ["spiegel.de"]
+
+[[outlet]]
+id = "tagesschau"
+name = "tagesschau"
+domains = ["tagesschau.de"]
+
+[[outlet]]
+id = "elpais"
+name = "El País"
+domains = ["elpais.com"]
+
+[[outlet]]
+id = "infobae"
+name = "Infobae"
+domains = ["infobae.com"]
+
+[[outlet]]
+id = "eluniversal"
+name = "El Universal"
+domains = ["eluniversal.com.mx"]
+
+[[outlet]]
+id = "hespress"
+name = "Hespress"
+domains = ["hespress.com", "en.hespress.com"]
+
+[[outlet]]
+id = "punch"
+name = "The Punch"
+domains = ["punchng.com"]
+
+[[outlet]]
+id = "premiumtimes"
+name = "Premium Times"
+domains = ["premiumtimesng.com"]
+
+[[outlet]]
+id = "yonhap"
+name = "Yonhap"
+domains = ["yna.co.kr", "en.yna.co.kr"]
+
+[[outlet]]
+id = "dawn"
+name = "Dawn"
+domains = ["dawn.com"]
+
+[[outlet]]
+id = "gulfnews"
+name = "Gulf News"
+domains = ["gulfnews.com"]
+
+[[outlet]]
+id = "thenational"
+name = "The National"
+domains = ["thenationalnews.com"]
+
+[[outlet]]
+id = "cnbc"
+name = "CNBC"
+domains = ["cnbc.com"]
+
+[[outlet]]
+id = "hindustantimes"
+name = "Hindustan Times"
+domains = ["hindustantimes.com"]
+
+[[outlet]]
+id = "indianexpress"
+name = "The Indian Express"
+domains = ["indianexpress.com"]
+
+# Registered without a feed: its RSS terms reserve the feeds for strictly personal, non-collective use (checked 2026-11-21).
+[[outlet]]
+id = "lemonde"
+name = "Le Monde"
+domains = ["lemonde.fr"]
+
+# Registered without a feed: its feeds are marked for personal use only (checked 2026-11-21).
+[[outlet]]
+id = "ansa"
+name = "ANSA"
+domains = ["ansa.it"]
+
+# Registered without a feed: its feed points to RSS terms not yet reviewed (checked 2026-11-21).
+[[outlet]]
+id = "yle"
+name = "Yle"
+domains = ["yle.fi"]
