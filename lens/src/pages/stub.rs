@@ -61,10 +61,7 @@ pub fn stub(input: &Input, absorbed: u64, survivor: u64) -> Twins {
         wide: false,
         head: &head,
         body: &body,
-        status: &format!(
-            "Updated {}",
-            datetime(input.export_time)
-        ),
+        status: &format!("Updated {}", datetime(input.export_time)),
     });
     Twins {
         html: page_html,

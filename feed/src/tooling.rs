@@ -258,7 +258,9 @@ pub async fn icons(
             kept += 1;
             continue;
         }
-        let Some(domain) = o.domains.first() else { continue };
+        let Some(domain) = o.domains.first() else {
+            continue;
+        };
         match icons::fetch_one(&client, domain).await {
             Ok((bytes, ext)) => {
                 if let Some(old) = icons::existing(dir, &o.id) {
@@ -274,7 +276,10 @@ pub async fn icons(
             }
         }
     }
-    println!("# {got} fetched, {kept} already present, {missing} without an icon; in {}", dir.display());
+    println!(
+        "# {got} fetched, {kept} already present, {missing} without an icon; in {}",
+        dir.display()
+    );
     Ok(())
 }
 

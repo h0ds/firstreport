@@ -40,18 +40,35 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         esc(name),
         {
             let f = crate::render::outlet_flags(input, &o.id);
-            if f.is_empty() { f } else { format!("<p class=\"kg-flags\">{f}</p>") }
+            if f.is_empty() {
+                f
+            } else {
+                format!("<p class=\"kg-flags\">{f}</p>")
+            }
         },
         {
             // The domain, then Wikipedia and Wikidata as links rather than rows.
             let mut bits: Vec<String> = o
                 .domains
                 .iter()
-                .map(|d| format!("<a class=\"kg-link-quiet\" href=\"https://{0}/\" rel=\"noopener\">{0}</a>", esc(d)))
+                .map(|d| {
+                    format!(
+                        "<a class=\"kg-link-quiet\" href=\"https://{0}/\" rel=\"noopener\">{0}</a>",
+                        esc(d)
+                    )
+                })
                 .collect();
-            let find = |f: &str| claims.iter().find(|c| c.field == f).map(|c| c.value.clone());
+            let find = |f: &str| {
+                claims
+                    .iter()
+                    .find(|c| c.field == f)
+                    .map(|c| c.value.clone())
+            };
             if let Some(w) = find("wikipedia") {
-                bits.push(format!("<a class=\"kg-link-quiet\" href=\"{}\" rel=\"noopener\">Wikipedia</a>", esc(&w)));
+                bits.push(format!(
+                    "<a class=\"kg-link-quiet\" href=\"{}\" rel=\"noopener\">Wikipedia</a>",
+                    esc(&w)
+                ));
             }
             if let Some(q) = find("wikidata_id") {
                 bits.push(format!("<a class=\"kg-link-quiet\" href=\"https://www.wikidata.org/wiki/{}\" rel=\"noopener\">Wikidata</a>", esc(&q)));
@@ -61,7 +78,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     );
     if groups.is_empty() {
         b.push_str(
-            "<div class=\"empty\">No claims yet. Truth Decay ledger has not assessed this outlet.</div>",
+            "<div class=\"empty\">No claims yet. First Report ledger has not assessed this outlet.</div>",
         );
     }
     // Fields as rows: the name on the left, its claims on the right
@@ -73,8 +90,10 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         // Rows a reader gets nothing from: the website and Wikipedia links
         // are in the header, and HTTPS shows only when a site lacks it.
         // The JSON and Markdown twins keep every claim.
-        if matches!(*field, "website" | "registrar" | "wikipedia" | "wikidata_id")
-            || (*field == "site_https" && cs.iter().all(|c| c.value.starts_with("https")))
+        if matches!(
+            *field,
+            "website" | "registrar" | "wikipedia" | "wikidata_id"
+        ) || (*field == "site_https" && cs.iter().all(|c| c.value.starts_with("https")))
         {
             continue;
         }
@@ -122,7 +141,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     }
     let _ = write!(
         b,
-        "<h2>Stories</h2><p class=\"kg-muted\">In the {window_days} days to {}: {}, in {}. First to {} of the {} other outlets also carried. {} of its items carried text first published elsewhere; {} were carried by others. Counts from Truth Decay feed, not a rating.</p>",
+        "<h2>Stories</h2><p class=\"kg-muted\">In the {window_days} days to {}: {}, in {}. First to {} of the {} other outlets also carried. {} of its items carried text first published elsewhere; {} were carried by others. Counts from First Report feed, not a rating.</p>",
         crate::render::day_el(input.export_time, input.export_time),
         n(facts.items as usize, "item"),
         n(facts.clusters.len(), "story"),
@@ -161,7 +180,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         })
     );
     let description = format!(
-        "{}: {} from Truth Decay ledger, each with its source, and its stories in Truth Decay feed.",
+        "{}: {} from First Report ledger, each with its source, and its stories in First Report feed.",
         name,
         n(claims.len(), "sourced claim")
     );
@@ -172,10 +191,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
         wide: false,
         head: &head,
         body: &b,
-        status: &format!(
-            "Updated {}",
-            datetime(input.export_time)
-        ),
+        status: &format!("Updated {}", datetime(input.export_time)),
     });
 
     // ---- JSON
@@ -197,7 +213,7 @@ pub fn outlet(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64) 
     let mut md = format!("# {name}\n\n");
     let _ = writeln!(
         md,
-        "Outlet id `{}`{}. {}. Every value below is a source's, never Truth Decay's; sources that disagree are listed side by side.",
+        "Outlet id `{}`{}. {}. Every value below is a source's, never First Report's; sources that disagree are listed side by side.",
         o.id,
         if o.domains.is_empty() { String::new() } else { format!(", {}", o.domains.join(", ")) },
         n(claims.len(), "claim")
@@ -247,26 +263,41 @@ fn stories_path(o: &Outlet, page: usize) -> String {
     }
 }
 
-fn page_ids<'a>(facts: &'a OutletFacts, page: usize) -> impl Iterator<Item = &'a u64> {
-    facts.clusters.iter().skip((page - 1) * STORIES_PER_PAGE).take(STORIES_PER_PAGE)
+fn page_ids(facts: &OutletFacts, page: usize) -> impl Iterator<Item = &u64> {
+    facts
+        .clusters
+        .iter()
+        .skip((page - 1) * STORIES_PER_PAGE)
+        .take(STORIES_PER_PAGE)
 }
 
 /// One page of the outlet's stories between two pagers.
 fn stories_block(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) -> String {
     let pages = story_pages(facts);
     let path = |p: usize| stories_path(o, p);
-    let pager = crate::render::pager(page, pages, facts.clusters.len(), STORIES_PER_PAGE, "Story pages", &path);
+    let pager = crate::render::pager(
+        page,
+        pages,
+        facts.clusters.len(),
+        STORIES_PER_PAGE,
+        "Story pages",
+        &path,
+    );
     let mut b = pager.clone();
     b.push_str("<ul class=\"stories\">");
     for id in page_ids(facts, page) {
         let c = &input.clusters[id];
         let _ = write!(
             b,
-            "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a>{}<span class=\"n kg-muted\">{} · {}</span></li>",
+            "<li data-id=\"{}\"><a {}>{}</a>{}<span class=\"n kg-muted\">{} · {}</span></li>",
             c.id,
-            c.id,
+            input.story_href(c),
             esc(&c.primary_title),
-            if c.origin_outlet_id == o.id && c.outlet_count > 1 { " <span class=\"kg-tag\">first</span>" } else { "" },
+            if c.origin_outlet_id == o.id && c.outlet_count > 1 {
+                " <span class=\"kg-tag\">first</span>"
+            } else {
+                ""
+            },
             n(c.outlet_count as usize, "outlet"),
             time_el(c.created_at, input.export_time)
         );
@@ -276,7 +307,12 @@ fn stories_block(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) ->
     b
 }
 
-fn stories_json(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) -> Vec<serde_json::Value> {
+fn stories_json(
+    input: &Input,
+    o: &Outlet,
+    facts: &OutletFacts,
+    page: usize,
+) -> Vec<serde_json::Value> {
     page_ids(facts, page)
         .map(|id| {
             let c = &input.clusters[id];
@@ -291,9 +327,9 @@ fn stories_md(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) -> St
         let c = &input.clusters[id];
         let _ = writeln!(
             md,
-            "- [{}](/story/{}/) · {}{} · {}",
+            "- [{}]({}) · {}{} · {}",
             c.primary_title,
-            c.id,
+            input.story_url(c),
             n(c.outlet_count as usize, "outlet"),
             if c.origin_outlet_id == o.id && c.outlet_count > 1 {
                 " · first"
@@ -305,14 +341,24 @@ fn stories_md(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) -> St
     }
     let pages = story_pages(facts);
     if pages > 1 {
-        let _ = writeln!(md, "
-Page {page} of {pages}; next: {}", stories_path(o, (page + 1).min(pages)));
+        let _ = writeln!(
+            md,
+            "
+Page {page} of {pages}; next: {}",
+            stories_path(o, (page + 1).min(pages))
+        );
     }
     md
 }
 
 /// Page `page` (2 or more) of an outlet's stories, at `/outlet/<id>/page/N/`.
-pub fn stories_page(input: &Input, o: &Outlet, facts: &OutletFacts, window_days: i64, page: usize) -> Twins {
+pub fn stories_page(
+    input: &Input,
+    o: &Outlet,
+    facts: &OutletFacts,
+    window_days: i64,
+    page: usize,
+) -> Twins {
     let name = input.outlet_name(&o.id);
     let pages = story_pages(facts);
     let path = stories_path(o, page);
@@ -339,12 +385,20 @@ pub fn stories_page(input: &Input, o: &Outlet, facts: &OutletFacts, window_days:
         "window_days": window_days, "export_time": input.export_time,
         "stories": stories_json(input, o, facts, page),
     });
-    let md = format!("# {title}
+    let md = format!(
+        "# {title}
 
 Page {page} of {pages}. Outlet: /outlet/{}/
 
-{}", o.id, stories_md(input, o, facts, page));
-    Twins { html: page_html, json, md }
+{}",
+        o.id,
+        stories_md(input, o, facts, page)
+    );
+    Twins {
+        html: page_html,
+        json,
+        md,
+    }
 }
 
 #[cfg(test)]
@@ -359,12 +413,23 @@ mod tests {
         let facts = outlet_facts(&i, 90 * DAY);
         let t = outlet(&i, &i.outlets["wire"], &facts["wire"], 90);
         assert!(t.html.contains("<h1 data-id=\"wire\">Wire</h1>"));
-        let rel = t.html.find("<div class=\"fname\">Reliability</div>").unwrap();
+        let rel = t
+            .html
+            .find("<div class=\"fname\">Reliability</div>")
+            .unwrap();
         let owner = t.html.find("<div class=\"fname\">Owner</div>").unwrap();
         assert!(rel < owner, "shared field order");
-        assert!(!t.html.contains("<div class=\"fname\">Wikidata</div>"), "Wikidata is a header link, not a row");
-        assert!(t.html.contains("href=\"https://www.wikidata.org/wiki/Q130879\" rel=\"noopener\">Wikidata</a>"));
-        assert!(t.md.contains("Q130879"), "the Markdown twin keeps every claim");
+        assert!(
+            !t.html.contains("<div class=\"fname\">Wikidata</div>"),
+            "Wikidata is a header link, not a row"
+        );
+        assert!(t.html.contains(
+            "href=\"https://www.wikidata.org/wiki/Q130879\" rel=\"noopener\">Wikidata</a>"
+        ));
+        assert!(
+            t.md.contains("Q130879"),
+            "the Markdown twin keeps every claim"
+        );
         assert!(t
             .html
             .contains("First to 30 of the 31 stories other outlets also carried"));
@@ -379,9 +444,14 @@ mod tests {
         assert!(t.html.contains("https://www.wikidata.org/wiki/Q130879"));
         assert!(!t.html.contains("Rating"));
         assert_eq!(t.json["first_to"], 30);
-        assert_eq!(t.json["stories"].as_array().unwrap().len(), STORIES_PER_PAGE);
+        assert_eq!(
+            t.json["stories"].as_array().unwrap().len(),
+            STORIES_PER_PAGE
+        );
         assert_eq!(t.json["story_pages"], 2);
-        assert!(t.html.contains("<a class=\"step\" rel=\"next\" href=\"/outlet/wire/page/2/\">Older →</a>"));
+        assert!(t
+            .html
+            .contains("<a class=\"step\" rel=\"next\" href=\"/outlet/wire/page/2/\">Older →</a>"));
         let p2 = stories_page(&i, &i.outlets["wire"], &facts["wire"], 90, 2);
         assert_eq!(p2.json["stories"].as_array().unwrap().len(), 11);
         assert!(p2.html.contains("aria-current=\"page\">2</span>"));

@@ -6,7 +6,7 @@
 //! when they do, the publisher has said no and that is the answer.
 //!
 //! Group selection follows the RFC: the group whose `User-agent` token
-//! is a case-insensitive prefix of ours (`truthdecay-feed`) wins, else the
+//! is a case-insensitive prefix of ours (`firstreport-feed`) wins, else the
 //! `*` group, else everything is allowed. Within a group the longest
 //! matching rule wins and `Allow` beats `Disallow` at equal length.
 //! `*` and `$` in rule paths are honoured.
@@ -31,7 +31,7 @@ pub struct Decision {
 }
 
 /// Our token as it appears before the version in the User-Agent.
-pub const OUR_TOKEN: &str = "truthdecay-feed";
+pub const OUR_TOKEN: &str = "firstreport-feed";
 
 pub fn parse(text: &str) -> Robots {
     let mut groups: Vec<Group> = Vec::new();
@@ -172,7 +172,7 @@ Disallow: /search
 Allow: /search/feed.xml
 Crawl-delay: 2
 
-User-agent: truthdecay-feed
+User-agent: firstreport-feed
 User-agent: other-bot
 Disallow: /arc/outboundfeeds/
 Allow: /arc/outboundfeeds/news-sitemap/
@@ -186,16 +186,19 @@ Disallow: /
         let r = parse(SAMPLE);
         assert_eq!(r.groups.len(), 3);
         // our own group wins over *
-        assert!(!r.check("truthdecay-feed", "/arc/outboundfeeds/rss/").allowed);
+        assert!(
+            !r.check("firstreport-feed", "/arc/outboundfeeds/rss/")
+                .allowed
+        );
         assert!(
             r.check(
-                "truthdecay-feed",
+                "firstreport-feed",
                 "/arc/outboundfeeds/news-sitemap/?outputType=xml"
             )
             .allowed,
             "longer Allow wins"
         );
-        assert_eq!(r.check("truthdecay-feed", "/").crawl_delay, None);
+        assert_eq!(r.check("firstreport-feed", "/").crawl_delay, None);
         // an unknown bot gets the * group
         let d = r.check("somebody-else", "/search/feed.xml");
         assert!(d.allowed && d.crawl_delay == Some(2));
@@ -204,11 +207,11 @@ Disallow: /
         assert!(r.check("somebody-else", "/rss.xml").allowed);
         assert!(!r.check("badbot", "/anything").allowed);
         // no groups at all: everything allowed
-        assert!(parse("").check("truthdecay-feed", "/x").allowed);
+        assert!(parse("").check("firstreport-feed", "/x").allowed);
         // an empty Disallow allows everything
         assert!(
             parse("User-agent: *\nDisallow:\n")
-                .check("truthdecay-feed", "/x")
+                .check("firstreport-feed", "/x")
                 .allowed
         );
     }
@@ -224,14 +227,14 @@ Disallow: /
         assert!(!matches("/feed$", "/feeds"));
         assert!(matches("/", "/anything"));
         let r = parse("User-agent: *\nDisallow: /*?utm_\n");
-        assert!(!r.check("truthdecay-feed", "/x?utm_source=a").allowed);
-        assert!(r.check("truthdecay-feed", "/x?q=a").allowed);
+        assert!(!r.check("firstreport-feed", "/x?utm_source=a").allowed);
+        assert!(r.check("firstreport-feed", "/x?q=a").allowed);
     }
 
     #[test]
     fn allow_beats_disallow_at_equal_length_and_delay_is_ceiled() {
         let r = parse("User-agent: *\nDisallow: /p\nAllow: /p\nCrawl-delay: 0.5\n");
-        let d = r.check("truthdecay-feed", "/p/x");
+        let d = r.check("firstreport-feed", "/p/x");
         assert!(d.allowed);
         assert_eq!(d.crawl_delay, Some(1));
     }

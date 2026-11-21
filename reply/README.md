@@ -1,6 +1,6 @@
 # reply
 
-Truth Decay pillar 4: a social media account people mention to ask where a
+First Report pillar 4: a social media account people mention to ask where a
 story came from. Answers with sourced provenance and propagation from
 `feed` and `ledger`, never a verdict. The plan is in `docs/plan.md`.
 
@@ -12,7 +12,7 @@ cargo run -- resolve mention.json                    # ask a running feed and le
 cargo run -- resolve mention.json --render           # ...and the draft it renders to
 REPLY_X_ACCESS_TOKEN=... cargo run -- listen         # dry run on X: mentions in, drafts to data/queue/
 REPLY_X_ACCESS_TOKEN=... cargo run -- --autonomous-after 50 listen   # ...posting alone what has earned it
-REPLY_BSKY_PASSWORD=... cargo run -- --platform bluesky --handle kagami.example listen   # same, on Bluesky
+REPLY_BSKY_PASSWORD=... cargo run -- --platform bluesky --handle firstreport.example listen   # same, on Bluesky
 cargo run -- queue                                   # print the queued drafts
 cargo run -- serve                                   # review page and public log on 127.0.0.1:8082
 REPLY_X_ACCESS_TOKEN=... cargo run -- serve          # ...with posting to X on approval
@@ -97,7 +97,7 @@ Three templates say what the observer found about a mention's subject:
 how many accounts posted the link within the burst window, how many of
 those posts carry the same wording, and how many of the accounts with a
 known signup date were created within the cohort span, always beside
-the same share over every account Truth Decay has seen. Each cites the
+the same share over every account First Report has seen. Each cites the
 observation on the public log. They render only when an observation
 exists for that subject, and they never post without a person.
 
@@ -113,7 +113,7 @@ parameters, and a simhash of the text. Sightings go to
 `data/sightings/<day>.ndjson` and are pruned after `--retain` days
 (default 90). The salt is a long random string that never changes and
 never leaves the machine; without it the hashes cannot be tied to
-accounts, and Truth Decay holds no mapping either. Handles and account ids
+accounts, and First Report holds no mapping either. Handles and account ids
 are never written.
 
 The four signals then run over the retained window, so the cohort

@@ -4,13 +4,13 @@
 [outlet_unseen]
 needs = ["d.outlet_name", "lookup.outlet.id"]
 when = "lookup.matched == outlet"
-text = "Truth Decayは{d.outlet_name}を追跡しているが、このリンクはフィードで確認していない。"
+text = "First Reportは{d.outlet_name}を追跡しているが、このリンクはフィードで確認していない。"
 cite = "feed:outlet:{lookup.outlet.id}"
 
 [not_followed]
 needs = ["lookup.host"]
 when = "lookup.matched == none"
-text = "{lookup.host}はTruth Decayが追跡している媒体ではない。"
+text = "{lookup.host}はFirst Reportが追跡している媒体ではない。"
 cite = "reply:lookup:{mention.id}"
 
 [domain_age]

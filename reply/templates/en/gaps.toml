@@ -10,7 +10,7 @@ cite = "feed:cluster:{lookup.cluster.id}"
 [no_story]
 needs = ["d.checked"]
 when = "lookup.matched == none"
-text = "Truth Decay has no story for this. Checked: {d.checked}."
+text = "First Report has no story for this. Checked: {d.checked}."
 cite = "reply:lookup:{mention.id}"
 
 [nothing_to_check]

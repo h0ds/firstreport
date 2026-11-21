@@ -33,7 +33,7 @@ WORDS = [
     "central", "bank", "hold", "rate", "interest", "inflation", "market",
     "flood", "storm", "rain", "river", "city", "police", "court", "vote",
     "election", "minister", "president", "war", "peace", "talks", "deal",
-    "hello", "world", "news", "kagami", "un",
+    "hello", "world", "news", "firstreport", "un",
     ",", ".", "!", "?", "'", "-", ":",
 ]
 PIECES = ["##s", "##ed", "##ing", "##aff", "##ord", "##able", "##er", "##ly"]
@@ -72,7 +72,7 @@ inits = [
     numpy_helper.from_array(np.array([-1], dtype=np.int64), "axis_last"),
 ]
 graph = helper.make_graph(nodes, "tiny", inputs, [output], inits)
-model = helper.make_model(graph, opset_imports=[helper.make_opsetid("", 13)], producer_name="kagami")
+model = helper.make_model(graph, opset_imports=[helper.make_opsetid("", 13)], producer_name="firstreport")
 model.ir_version = 8
 onnx.checker.check_model(model)
 onnx.save(model, HERE / "tiny.onnx")

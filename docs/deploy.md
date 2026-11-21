@@ -1,4 +1,4 @@
-# Taking Truth Decay live
+# Taking First Report live
 
 The plan for putting the public site (`lens`) on the internet and keeping
 `feed` and `ledger` running behind it, as cheaply and as fast as the
@@ -12,7 +12,7 @@ prices and limits checked in September 2026.
   outlets' ───▶ │ feed run (systemd)        ledger (data in git)          │
   RSS feeds     │   SQLite + snapshots        claims/*.toml               │
                 │        │                        │                       │
-                │        └──── every 10 min: kagami site ─────────────────┤
+                │        └──── every 10 min: firstreport site ─────────────────┤
                 │               (export → lens build → lens check)        │
                 │                         │ wrangler deploy (changed      │
                 └─────────────────────────┼─ files only) ─────────────────┘
@@ -82,6 +82,15 @@ the export. With 96 feeds that's about 4,700 stories a day, or 14,000
 files a day, which would pass even the paid plan's 100,000-file limit
 within a week.
 
+All three are built. Items 1 and 2 are flags, off by default: `firstreport
+site --multi-outlet-pages --pages-since 14` (or the same on `lens
+build`); `deploy/bin/site.sh` passes them. Item 3 is `deploy/worker.js`
+and `deploy/bin/daily.sh`, done more simply than described below: the
+daily job copies every live story page to R2, uploading only those
+whose content changed, so the last copy of a story is its final page
+and nothing has to work out which stories are leaving. Do not use the
+window on a public site without the daily job running.
+
 1. **Story pages only for stories more than one outlet carried.** 92% of
    stories (2,357 of 2,567 on the day this was measured) are single
    reports. Their card links straight to the outlet's article; they gain a
@@ -100,7 +109,7 @@ within a week.
 
 ### 4.2 Lighter pages
 
-- **The front page is 615 KB of HTML**, mostly because its JSON-LD lists
+- *(Done: JSON-LD now lists only the page's own stories.)* **The front page was 615 KB of HTML**, mostly because its JSON-LD lists
   every story in the export, not the 50 on the page. Limit JSON-LD to the
   page's own stories. Expected result: under 100 KB, about 15 KB after
   Brotli.
@@ -113,22 +122,34 @@ within a week.
 
 ### 4.3 No localhost in public pages
 
-377 links in 80 built pages point at `http://127.0.0.1:8080`: feed
+*(Done in lens: a loopback `ref_url` is rendered as the source's name
+without a link, and `lens check` fails on any link to this machine.)*
+
+377 links in 80 built pages pointed at `http://127.0.0.1:8080`: feed
 behaviour facts cite feed's API as their source. The public site must
 cite something public. Give feed-behaviour claims `ref_url` =
 `https://<domain>/outlet/<id>/`, or leave `ref_url` empty for sources
-where Truth Decay is itself the source, and have lens render "Truth Decay feed" as
+where First Report is itself the source, and have lens render "First Report feed" as
 text instead of a link. Also make `lens check` fail on any link to
 `127.0.0.1` or `localhost`, so this can't come back.
 
 ### 4.4 Deploy config in the repo
 
+*(Written, in `deploy/`, with these differences: units are named
+`firstreport-*`; the daily job does not yet ship old snapshots to R2 or open
+the ledger-refresh pull request. `lens` writes `_headers` with the
+font and icon cache rules, a Content-Security-Policy that allows only
+the site's own files, and two more security headers; the search script
+is a file of its own so the policy can forbid inline scripts. Hashed
+CSS names and font preloads are not done. None of `deploy/` has run against a real server or Cloudflare
+account: see `deploy/README.md`.)*
+
 - `deploy/wrangler.jsonc`: a Worker with `assets.directory = "../site"`,
   an R2 binding for the archive, and `not_found_handling` routing misses
   to the Worker.
 - `deploy/worker.js`: the archive fallback (§4.1).
-- `deploy/systemd/`: `truthdecay-feed.service`, `kagami-site.service` and
-  `.timer` (every 10 min), `kagami-daily.service` and `.timer` (archive,
+- `deploy/systemd/`: `firstreport-feed.service`, `firstreport-site.service` and
+  `.timer` (every 10 min), `firstreport-daily.service` and `.timer` (archive,
   prune, ledger refresh), and `litestream.service`.
 - `deploy/litestream.yml`: `data/feed.db` to R2, `sync-interval: 1m`, so
   writes stay around 45,000 a month.
@@ -139,7 +160,7 @@ text instead of a link. Also make `lens check` fail on any link to
 1. **Accounts:**
    - Hetzner Cloud, with an SSH key.
    - Cloudflare, with the domain on Cloudflare DNS and an R2 bucket
-     `kagami-archive`.
+     `firstreport-archive`.
    - An API token scoped to Workers and R2 only.
    - Tailscale.
    - healthchecks.io.
@@ -148,34 +169,34 @@ text instead of a link. Also make `lens check` fail on any link to
    - A Hetzner firewall allowing **no inbound traffic at all**; SSH over Tailscale only.
    - `unattended-upgrades` on.
 3. **`deploy/setup.sh` does the rest:**
-   - Creates a `kagami` user.
+   - Creates a `firstreport` user.
    - Installs Rust (stable) and Node LTS (for wrangler).
    - Clones the repo with a read-only deploy key.
    - Builds with `cargo build --release`.
    - Runs `feed fetch-model` (arm64) and `design/fonts/fetch.sh`.
    - Runs `feed icons`.
    - Installs the systemd units and `litestream`.
-   - Writes secrets to `/etc/kagami/env` (mode 600): the Cloudflare token and healthcheck ping URLs.
+   - Writes secrets to `/etc/firstreport/env` (mode 600): the Cloudflare token and healthcheck ping URLs.
 4. **Seed the data:**
    - Copy the current `data/` from the laptop if you want to keep today's history; otherwise let it start fresh.
    - Ledger data comes from git.
-5. **First deploy by hand:** `kagami site`, then `wrangler deploy`, then
+5. **First deploy by hand:** `firstreport site`, then `wrangler deploy`, then
    check the `*.workers.dev` URL, then attach the custom domain.
 
 ## 6. Running it
 
 | Job | When | What |
 |---|---|---|
-| `truthdecay-feed` | always | `feed run`; restarts on failure. |
-| `kagami-site` | every 10 min | `git pull` (ledger data and code), then `kagami site`, then `wrangler deploy`. Pings healthchecks.io only on success, so a failed build or deploy alerts within 30 minutes. |
-| `kagami-daily` | 03:00 UTC | Archive stories leaving the window to R2; `feed prune --embeddings`; snapshot retention (30 days on the box, older days shipped to R2 per `INFRA-PLAN.md` §5); `ledger refresh --write` for sources that are due. |
+| `firstreport-feed` | always | `feed run`; restarts on failure. |
+| `firstreport-site` | every 10 min | `git pull` (ledger data and code), then `firstreport site`, then `wrangler deploy`. Pings healthchecks.io only on success, so a failed build or deploy alerts within 30 minutes. |
+| `firstreport-daily` | 03:00 UTC | Archive stories leaving the window to R2; `feed prune --embeddings`; snapshot retention (30 days on the box, older days shipped to R2 per `INFRA-PLAN.md` §5); `ledger refresh --write` for sources that are due. |
 | `litestream` | always | Continuous `feed.db` replication to R2. |
 
 - **Ledger stays reviewed in git.** The daily refresh writes to a branch,
   `ledger-refresh/<date>`, and opens a pull request with `gh`. The live
   site uses `main`, so a surprising import (the change guard already holds
   large ones) is reviewed before it's published.
-- **Updating code:** merge to `main`. The next `kagami-site` run pulls
+- **Updating code:** merge to `main`. The next `firstreport-site` run pulls
   it, but only rebuilds binaries when `Cargo.lock` or `src/` changed
   (about 2 minutes on the CAX11).
 - **Alerts** (healthchecks.io, free):

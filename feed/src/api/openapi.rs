@@ -119,7 +119,7 @@ fn operation(path: &str) -> Value {
                 "responses": ok(json!({"type": "array", "items": {"$ref": "#/components/schemas/Outlet"}}))}})
         }
         "/v1/outlets/{id}" => {
-            json!({"get": {"operationId": "getOutlet", "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}, "description": "Outlet id, shared with Truth Decay ledger."}],
+            json!({"get": {"operationId": "getOutlet", "parameters": [{"name": "id", "in": "path", "required": true, "schema": {"type": "string"}, "description": "Outlet id, shared with First Report ledger."}],
                 "responses": ok_or_404(json!({"$ref": "#/components/schemas/Outlet"}))}})
         }
         "/v1/stats" => json!({"get": {"operationId": "stats",
@@ -215,10 +215,10 @@ pub fn spec() -> Value {
     json!({
         "openapi": "3.1.0",
         "info": {
-            "title": "Truth Decay feed",
+            "title": "First Report feed",
             "version": format!("contract-{CONTRACT_VERSION}"),
             "summary": "Headlines clustered into stories, with the record of how each spread. No outlet is rated.",
-            "description": "A cluster is a claim that its items are about the same story, made by a similarity threshold, not a person; treat membership as evidence. origin_outlet_id is the earliest published member as the feeds reported it; feeds lie about times, joined_at is what Truth Decay saw. Syndication groups mean the same copy, not the same story. Sourced facts about each outlet are in Truth Decay ledger under the same outlet id; see the ledger links on outlets. Rules of use are in /llms.txt; object shapes in feed/docs/data-contract.md."
+            "description": "A cluster is a claim that its items are about the same story, made by a similarity threshold, not a person; treat membership as evidence. origin_outlet_id is the earliest published member as the feeds reported it; feeds lie about times, joined_at is what First Report saw. Syndication groups mean the same copy, not the same story. Sourced facts about each outlet are in First Report ledger under the same outlet id; see the ledger links on outlets. Rules of use are in /llms.txt; object shapes in feed/docs/data-contract.md."
         },
         "servers": [{"url": "/"}],
         "paths": paths(),

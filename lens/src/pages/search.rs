@@ -10,8 +10,9 @@ use super::Twins;
 use crate::input::Input;
 use crate::render::{datetime, html, n, Page};
 
-const SCRIPT: &str = r#"<script>
-const $ = s => document.querySelector(s);
+/// `/search.js`: a file of its own, so the site's Content-Security-Policy
+/// can forbid inline scripts (`docs/deploy.md` §4.2).
+pub const SCRIPT: &str = r#"const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const n = (k, w) => `${k} ${w}${k === 1 ? '' : (w.endsWith('y') ? 'ies' : 's')}`.replace(/ys$/, 'ies');
 let idx = null;
@@ -25,14 +26,14 @@ async function search(q) {
   const outlets = d.outlets.map(o => ({o, s: Math.max(score(q, o.id), score(q, o.name), ...o.domains.map(x => score(q, x)))})).filter(x => x.s).sort((a, b) => b.s - a.s || a.o.name.localeCompare(b.o.name)).slice(0, 20);
   const stories = d.stories.map(c => ({c, s: score(q, c.title)})).filter(x => x.s).sort((a, b) => b.s - a.s || b.c.created_at - a.c.created_at).slice(0, 50);
   $('#outlets').innerHTML = (outlets.length ? '<h2>Outlets</h2><ul class="stories">' + outlets.map(({o}) => `<li><a href="/outlet/${esc(o.id)}/" data-outlet="${esc(o.id)}">${esc(o.name || o.id)}</a><span class="kg-muted">${esc(o.domains.join(', '))}</span><span class="n kg-muted">${o.claims ? n(o.claims, 'claim') : 'not assessed yet'}</span></li>`).join('') + '</ul>' : '');
-  $('#stories').innerHTML = (stories.length ? '<h2>Stories</h2><ul class="stories">' + stories.map(({c}) => `<li data-id="${c.id}"><a href="/story/${c.id}/">${esc(c.title)}</a><span class="n kg-muted">${n(c.outlet_count, 'outlet')} · ${esc(c.created)}</span></li>`).join('') + '</ul>' : '');
+  $('#stories').innerHTML = (stories.length ? '<h2>Stories</h2><ul class="stories">' + stories.map(({c}) => `<li data-id="${c.id}"><a href="${esc(c.url)}"${c.url.startsWith('/') ? '' : ' rel="noopener"'}>${esc(c.title)}</a><span class="n kg-muted">${n(c.outlet_count, 'outlet')} · ${esc(c.created)}</span></li>`).join('') + '</ul>' : '');
   if (!outlets.length && !stories.length) $('#stories').innerHTML = '<div class="empty">Nothing in the index matches that.</div>';
 }
 let t;
 $('#q').addEventListener('input', e => { clearTimeout(t); t = setTimeout(() => search(e.target.value), 120); });
 const q0 = new URLSearchParams(location.search).get('q');
 if (q0) { $('#q').value = q0; search(q0); }
-</script>"#;
+"#;
 
 pub fn search(input: &Input, window_hours: i64) -> Twins {
     let since = input.export_time - window_hours * crate::derive::HOUR;
@@ -50,14 +51,14 @@ pub fn search(input: &Input, window_hours: i64) -> Twins {
             "claims": input.claims.get(&o.id).map(|v| v.len()).unwrap_or(0),
         })).collect::<Vec<_>>(),
         "stories": stories.iter().map(|c| json!({
-            "id": c.id, "title": c.primary_title, "outlet_count": c.outlet_count,
+            "id": c.id, "url": input.story_url(c), "title": c.primary_title, "outlet_count": c.outlet_count,
             "created_at": c.created_at, "created": datetime(c.created_at),
         })).collect::<Vec<_>>(),
     });
     let mut b = String::new();
     let _ = write!(
         b,
-        "<h1>Search</h1><p class=\"kg-muted\">{} and {} from the {} hours to {}. Matches by name, id, domain or title; nothing is ranked beyond that.</p><input id=\"q\" class=\"kg-input wide\" type=\"search\" placeholder=\"Outlet name, id or domain; story title\" autocomplete=\"off\" autofocus><noscript><p class=\"kg-muted\">Search runs in the browser over <a href=\"/search/index.json\">index.json</a>; without scripts, read that file or the <a href=\"/\">front page</a>.</p></noscript><div id=\"outlets\"></div><div id=\"stories\"></div>{SCRIPT}",
+        "<h1>Search</h1><p class=\"kg-muted\">{} and {} from the {} hours to {}. Matches by name, id, domain or title; nothing is ranked beyond that.</p><input id=\"q\" class=\"kg-input wide\" type=\"search\" placeholder=\"Outlet name, id or domain; story title\" autocomplete=\"off\" autofocus><noscript><p class=\"kg-muted\">Search runs in the browser over <a href=\"/search/index.json\">index.json</a>; without scripts, read that file or the <a href=\"/\">front page</a>.</p></noscript><div id=\"outlets\"></div><div id=\"stories\"></div><script src=\"/search.js\" defer></script>",
         n(input.outlets.len(), "outlet"),
         n(stories.len(), "story"),
         window_hours,
@@ -70,10 +71,7 @@ pub fn search(input: &Input, window_hours: i64) -> Twins {
         wide: false,
         head: "",
         body: &b,
-        status: &format!(
-            "Updated {}",
-            datetime(input.export_time)
-        ),
+        status: &format!("Updated {}", datetime(input.export_time)),
     });
     let mut md = format!(
         "# Search\n\nThe search index is `/search/index.json`: {} with id, name, domains and claim count; {} from the {} hours to {} with id, title, outlet count and creation time. Query it however you like; the page matches by substring and ranks exact, prefix, then contains, nothing more.\n\n## Outlets\n\n",
@@ -108,7 +106,12 @@ mod tests {
         let i = fixture_input();
         let t = search(&i, 24 * 90);
         assert!(t.html.contains("id=\"q\""));
-        assert!(t.html.contains("fetch('/search/index.json')"));
+        // The script is a file, so the page carries no inline script.
+        assert!(t
+            .html
+            .contains("<script src=\"/search.js\" defer></script>"));
+        assert!(!t.html.contains("<script>"));
+        assert!(SCRIPT.contains("fetch('/search/index.json')"));
         assert_eq!(t.json["outlets"].as_array().unwrap().len(), 3);
         assert_eq!(t.json["stories"].as_array().unwrap().len(), 61);
         assert_eq!(t.json["stories"][0]["id"], 1060, "newest first");

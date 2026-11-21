@@ -228,7 +228,7 @@ pub async fn run(
 }
 
 pub fn default_scratch() -> PathBuf {
-    std::env::temp_dir().join(format!("kagami-replay-{}", std::process::id()))
+    std::env::temp_dir().join(format!("firstreport-replay-{}", std::process::id()))
 }
 
 #[cfg(test)]
@@ -238,7 +238,7 @@ mod tests {
 
     /// Determinism guarantee: the recorded fixtures produce exactly the
     /// clusters in `fixtures/expected/clusters.json`, using the hash
-    /// embedder so no model is needed. Set `KAGAMI_UPDATE_EXPECTED=1` to
+    /// embedder so no model is needed. Set `FIRSTREPORT_UPDATE_EXPECTED=1` to
     /// regenerate after an intentional change.
     #[tokio::test]
     async fn fixtures_match_golden_clusters() {
@@ -251,7 +251,7 @@ mod tests {
         let got = run(cfg, &root.join("replay"), &scratch).await.unwrap();
         let _ = std::fs::remove_dir_all(&scratch);
         let expected_path = root.join("expected/clusters.json");
-        if std::env::var("KAGAMI_UPDATE_EXPECTED").is_ok() {
+        if std::env::var("FIRSTREPORT_UPDATE_EXPECTED").is_ok() {
             std::fs::write(&expected_path, serde_json::to_string_pretty(&got).unwrap()).unwrap();
         }
         let want: ReplayResult =

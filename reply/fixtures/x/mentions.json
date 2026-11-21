@@ -5,7 +5,7 @@
       "author_id": "u3",
       "conversation_id": "900",
       "created_at": "2024-01-01T12:30:00.000Z",
-      "text": "@kagami is this real? https://t.co/quote",
+      "text": "@firstreport is this real? https://t.co/quote",
       "entities": { "urls": [ { "url": "https://t.co/quote", "expanded_url": "https://x.com/carol/status/995" } ] },
       "referenced_tweets": [ { "type": "quoted", "id": "995" }, { "type": "replied_to", "id": "900" } ]
     },
@@ -14,7 +14,7 @@
       "author_id": "u2",
       "conversation_id": "990",
       "created_at": "2024-01-01T11:05:00.000Z",
-      "text": "@kagami prove it",
+      "text": "@firstreport prove it",
       "referenced_tweets": [ { "type": "replied_to", "id": "990" } ]
     },
     {
@@ -22,7 +22,7 @@
       "author_id": "u1",
       "conversation_id": "1001",
       "created_at": "2024-01-01T10:00:00.000Z",
-      "text": "@kagami source for this? https://t.co/abc",
+      "text": "@firstreport source for this? https://t.co/abc",
       "entities": { "urls": [ { "url": "https://t.co/abc", "expanded_url": "https://www.example.com/story?utm_source=x", "unwound_url": "https://www.example.com/story?utm_source=x" } ] }
     }
   ],

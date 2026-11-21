@@ -1,5 +1,6 @@
 //! `lens check`: every internal link in every page resolves to a file
-//! in the site, and every page has its JSON and Markdown twins.
+//! in the site, every page has its JSON and Markdown twins, and no page
+//! links to this machine (`docs/deploy.md` §4.3).
 
 use std::path::{Path, PathBuf};
 
@@ -61,6 +62,28 @@ fn internal_links(html: &str) -> Vec<String> {
     out
 }
 
+/// Targets of `href="…"` and `src="…"` that point at this machine.
+fn local_links(html: &str) -> Vec<String> {
+    let html = &without_scripts(html);
+    let mut out = Vec::new();
+    for attr in ["href=\"", "src=\""] {
+        let mut from = 0;
+        while let Some(p) = html[from..].find(attr) {
+            let start = from + p + attr.len();
+            let end = html[start..]
+                .find('"')
+                .map(|e| start + e)
+                .unwrap_or(html.len());
+            let target = &html[start..end];
+            if target.contains("://") && crate::render::is_local(target) {
+                out.push(target.to_string());
+            }
+            from = end;
+        }
+    }
+    out
+}
+
 fn resolves(site: &Path, target: &str) -> bool {
     let rel = target.trim_start_matches('/');
     let p = site.join(rel);
@@ -105,6 +128,11 @@ pub fn run(site: &Path) -> Result<Report, String> {
         }
         let html =
             std::fs::read_to_string(&page).map_err(|e| format!("{}: {e}", page.display()))?;
+        for target in local_links(&html) {
+            r.problems.push(format!(
+                "/{shown}/ links to {target}, which only this machine can reach"
+            ));
+        }
         for target in internal_links(&html) {
             r.links += 1;
             if !resolves(site, &target) {
@@ -132,6 +160,12 @@ mod tests {
         )
         .iter()
         .all(|l| l == "/x/"));
+        assert_eq!(
+            local_links(
+                "<a href=\"http://127.0.0.1:8080/v1/feeds\">a</a><a href=\"https://example.org/\">b</a><a href=\"/x/\">c</a>"
+            ),
+            vec!["http://127.0.0.1:8080/v1/feeds"]
+        );
         let site = std::env::temp_dir().join(format!("lens-check-{}", std::process::id()));
         std::fs::create_dir_all(site.join("story/1")).unwrap();
         std::fs::write(site.join("story/1/index.html"), "<a href=\"/story/2/\">").unwrap();

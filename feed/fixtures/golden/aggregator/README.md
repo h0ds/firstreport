@@ -9,7 +9,7 @@ a public scraper of that aggregator, scraped in August 2025.
 What is here:
 
 - `extract.py` regenerates the two data files from a local checkout of
-  that repository. The raw scrape is not included in Truth Decay and its
+  that repository. The raw scrape is not included in First Report and its
   scraper is not used or recommended.
 - `aggregator-pairs.tsv` for `feed eval --pairs`: outlet headline plus a
   short snippet on each side, labelled 1 when a news aggregator put both under

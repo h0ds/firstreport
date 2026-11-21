@@ -24,18 +24,62 @@ pub const FIELD: &str = "state_media";
 /// the outlet in each case, checked September 2026).
 pub const ENTRIES: &[(&str, &str, Option<&str>)] = &[
     ("rt", "https://statemediamonitor.com/2026/09/rt/", None),
-    ("sputnik", "https://statemediamonitor.com/2026/09/rossiya-segodnya/", Some("Rossiya Segodnya")),
+    (
+        "sputnik",
+        "https://statemediamonitor.com/2026/09/rossiya-segodnya/",
+        Some("Rossiya Segodnya"),
+    ),
     ("tass", "https://statemediamonitor.com/2026/09/tass/", None),
-    ("cgtn", "https://statemediamonitor.com/2026/08/china-media-group/", Some("China Media Group")),
-    ("globaltimes", "https://statemediamonitor.com/2026/08/peoples-daily/", Some("People's Daily")),
-    ("presstv", "https://statemediamonitor.com/2026/06/islamic-republic-of-iran-broadcasting-irib/", Some("Islamic Republic of Iran Broadcasting (IRIB)")),
-    ("anadolu", "https://statemediamonitor.com/2025/09/anadolu-agency/", None),
-    ("aljazeera", "https://statemediamonitor.com/2026/06/al-jazeera-media-network-ajmn/", Some("Al Jazeera Media Network")),
-    ("nhk", "https://statemediamonitor.com/2026/08/japan-broadcasting-corporation-nhk/", None),
-    ("bbc", "https://statemediamonitor.com/2026/09/british-broadcasting-corporation-bbc/", None),
-    ("france24", "https://statemediamonitor.com/2026/09/france-medias-monde-fmm/", Some("France Médias Monde")),
-    ("abcau", "https://statemediamonitor.com/2026/06/australian-broadcasting-corporation-abc/", None),
-    ("cbc", "https://statemediamonitor.com/2026/06/canadian-broadcasting-corporation-radio-canada-cbc/", None),
+    (
+        "cgtn",
+        "https://statemediamonitor.com/2026/08/china-media-group/",
+        Some("China Media Group"),
+    ),
+    (
+        "globaltimes",
+        "https://statemediamonitor.com/2026/08/peoples-daily/",
+        Some("People's Daily"),
+    ),
+    (
+        "presstv",
+        "https://statemediamonitor.com/2026/06/islamic-republic-of-iran-broadcasting-irib/",
+        Some("Islamic Republic of Iran Broadcasting (IRIB)"),
+    ),
+    (
+        "anadolu",
+        "https://statemediamonitor.com/2025/09/anadolu-agency/",
+        None,
+    ),
+    (
+        "aljazeera",
+        "https://statemediamonitor.com/2026/06/al-jazeera-media-network-ajmn/",
+        Some("Al Jazeera Media Network"),
+    ),
+    (
+        "nhk",
+        "https://statemediamonitor.com/2026/08/japan-broadcasting-corporation-nhk/",
+        None,
+    ),
+    (
+        "bbc",
+        "https://statemediamonitor.com/2026/09/british-broadcasting-corporation-bbc/",
+        None,
+    ),
+    (
+        "france24",
+        "https://statemediamonitor.com/2026/09/france-medias-monde-fmm/",
+        Some("France Médias Monde"),
+    ),
+    (
+        "abcau",
+        "https://statemediamonitor.com/2026/06/australian-broadcasting-corporation-abc/",
+        None,
+    ),
+    (
+        "cbc",
+        "https://statemediamonitor.com/2026/06/canadian-broadcasting-corporation-radio-canada-cbc/",
+        None,
+    ),
 ];
 
 /// SMM's codes and names, in their own words.
@@ -68,7 +112,10 @@ pub fn parse_category(page: &str) -> Option<(&'static str, &'static str)> {
         for (i, _) in lower.match_indices(anchor) {
             let end = (i + 100).min(text.len());
             let window = text.get(i..end).unwrap_or_default();
-            let found = window.split('(').skip(1).find_map(|s| category(s.split(')').next()?));
+            let found = window
+                .split('(')
+                .skip(1)
+                .find_map(|s| category(s.split(')').next()?));
             if let Some(c) = found {
                 return Some(c);
             }
@@ -77,13 +124,22 @@ pub fn parse_category(page: &str) -> Option<(&'static str, &'static str)> {
     None
 }
 
-pub fn claim(outlet_id: &str, url: &str, via: Option<&str>, code: &str, name: &str, retrieved_at: i64) -> Claim {
+pub fn claim(
+    outlet_id: &str,
+    url: &str,
+    via: Option<&str>,
+    code: &str,
+    name: &str,
+    retrieved_at: i64,
+) -> Claim {
     let mut data = BTreeMap::new();
     data.insert("code".into(), json!(code));
     if let Some(v) = via {
         data.insert("entity".into(), json!(v));
     }
-    let whose = via.map(|v| format!("SMM's entry for {v}, which runs this outlet; ")).unwrap_or_default();
+    let whose = via
+        .map(|v| format!("SMM's entry for {v}, which runs this outlet; "))
+        .unwrap_or_default();
     Claim {
         outlet_id: outlet_id.into(),
         field: FIELD.into(),
@@ -94,7 +150,7 @@ pub fn claim(outlet_id: &str, url: &str, via: Option<&str>, code: &str, name: &s
         retrieved_at,
         as_of: Some("2026".into()),
         note: Some(format!(
-            "{whose}State Media Monitor's category, not Truth Decay's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
+            "{whose}State Media Monitor's category, not First Report's. Dragomir, M. (2025), State Media Monitor Global Dataset, MJRC, CC BY 4.0."
         )),
     }
 }
@@ -110,14 +166,30 @@ mod tests {
         let old = "<p>State Media Matrix</p><p>Typology</p><p>State-Controlled (SC)</p>";
         assert_eq!(parse_category(old), Some(("SC", "State-Controlled")));
         let isf = "<p>Trajectory 2022 to 2026 ISF throughout. 2026 typology: Independent State-Funded (ISF)</p>";
-        assert_eq!(parse_category(isf), Some(("ISF", "Independent State-Funded")));
+        assert_eq!(
+            parse_category(isf),
+            Some(("ISF", "Independent State-Funded"))
+        );
         assert_eq!(parse_category("<p>no category here (XYZ)</p>"), None);
     }
 
     #[test]
     fn claim_names_the_parent_entity() {
-        let c = claim("cgtn", "https://statemediamonitor.com/x/", Some("China Media Group"), "SC", "State-Controlled", 1);
-        assert_eq!((c.field.as_str(), c.value.as_str()), (FIELD, "State-Controlled (SC)"));
-        assert!(c.note.unwrap().starts_with("SMM's entry for China Media Group"));
+        let c = claim(
+            "cgtn",
+            "https://statemediamonitor.com/x/",
+            Some("China Media Group"),
+            "SC",
+            "State-Controlled",
+            1,
+        );
+        assert_eq!(
+            (c.field.as_str(), c.value.as_str()),
+            (FIELD, "State-Controlled (SC)")
+        );
+        assert!(c
+            .note
+            .unwrap()
+            .starts_with("SMM's entry for China Media Group"));
     }
 }

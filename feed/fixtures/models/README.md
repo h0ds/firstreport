@@ -7,4 +7,4 @@ embedder can be tested offline without the real weights. `tiny-table.npy`
 is the lookup table it was built from. Regenerate with `python make_tiny.py`
 (needs the `onnx`, `onnxruntime` and `numpy` wheels) if the signature or
 vocab changes. The ONNX tests run only with
-`KAGAMI_ORT_LIB=<path to the runtime library> cargo test`.
+`FIRSTREPORT_ORT_LIB=<path to the runtime library> cargo test`.

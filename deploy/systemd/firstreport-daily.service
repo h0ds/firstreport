@@ -1,0 +1,11 @@
+[Unit]
+Description=First Report daily: archive story pages, prune the store
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=firstreport
+EnvironmentFile=/etc/firstreport/env
+ExecStart=/home/firstreport/firstreport/deploy/bin/daily.sh
+TimeoutStartSec=2h

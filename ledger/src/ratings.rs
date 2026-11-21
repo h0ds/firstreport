@@ -1,5 +1,5 @@
 //! Lean ratings from outside raters (plan §4), each on its own scale and
-//! each named as the source's, never Truth Decay's.
+//! each named as the source's, never First Report's.
 //!
 //! - `allsides`: AllSides Media Bias Ratings™ (CC BY-NC 4.0, confirmed in
 //!   AllSides' terms of use, October 2025). AllSides blocks automated
@@ -34,7 +34,11 @@ pub fn host_of(s: &str) -> Option<String> {
     if s.is_empty() {
         return None;
     }
-    let with_scheme = if s.contains("://") { s } else { format!("https://{s}") };
+    let with_scheme = if s.contains("://") {
+        s
+    } else {
+        format!("https://{s}")
+    };
     let host = url::Url::parse(&with_scheme).ok()?.host_str()?.to_string();
     Some(host.trim_start_matches("www.").to_string())
 }
@@ -42,14 +46,21 @@ pub fn host_of(s: &str) -> Option<String> {
 /// The registry outlet whose domain is `host`, or of which `host` is a
 /// subdomain.
 pub fn outlet_for<'a>(outlets: &'a [FeedOutlet], host: &str) -> Option<&'a FeedOutlet> {
-    let bare = |d: &str| d.trim().to_ascii_lowercase().trim_start_matches("www.").to_string();
+    let bare = |d: &str| {
+        d.trim()
+            .to_ascii_lowercase()
+            .trim_start_matches("www.")
+            .to_string()
+    };
     outlets
         .iter()
         .find(|o| o.domains.iter().any(|d| bare(d) == host))
         .or_else(|| {
-            outlets
-                .iter()
-                .find(|o| o.domains.iter().any(|d| host.ends_with(&format!(".{}", bare(d)))))
+            outlets.iter().find(|o| {
+                o.domains
+                    .iter()
+                    .any(|d| host.ends_with(&format!(".{}", bare(d))))
+            })
         })
 }
 
@@ -99,7 +110,9 @@ pub struct AllSidesRow {
 /// one whose values are AllSides labels, the host column the one whose
 /// values are domains or outlet URLs (not allsides.com pages).
 pub fn parse_allsides(text: &str) -> Result<Vec<AllSidesRow>, String> {
-    let records: Vec<Vec<String>> = if text.trim_start().starts_with('[') || text.trim_start().starts_with('{') {
+    let records: Vec<Vec<String>> = if text.trim_start().starts_with('[')
+        || text.trim_start().starts_with('{')
+    {
         let v: serde_json::Value = serde_json::from_str(text).map_err(|e| format!("json: {e}"))?;
         let arr = match &v {
             serde_json::Value::Array(a) => a.clone(),
@@ -113,12 +126,20 @@ pub fn parse_allsides(text: &str) -> Result<Vec<AllSidesRow>, String> {
             .filter_map(|r| r.as_object())
             .map(|o| {
                 o.values()
-                    .map(|x| x.as_str().map(str::to_string).unwrap_or_else(|| x.to_string()))
+                    .map(|x| {
+                        x.as_str()
+                            .map(str::to_string)
+                            .unwrap_or_else(|| x.to_string())
+                    })
                     .collect()
             })
             .collect()
     } else {
-        text.lines().skip(1).filter(|l| !l.trim().is_empty()).map(split_csv_line).collect()
+        text.lines()
+            .skip(1)
+            .filter(|l| !l.trim().is_empty())
+            .map(split_csv_line)
+            .collect()
     };
     let mut out = Vec::new();
     for r in records {
@@ -127,7 +148,9 @@ pub fn parse_allsides(text: &str) -> Result<Vec<AllSidesRow>, String> {
         };
         let page = r
             .iter()
-            .find(|v| v.contains("allsides.com/news-source") || v.contains("allsides.com/media-bias"))
+            .find(|v| {
+                v.contains("allsides.com/news-source") || v.contains("allsides.com/media-bias")
+            })
             .cloned();
         let host = r.iter().find_map(|v| {
             let looks = v.contains('.') && !v.contains(' ') && !v.contains("allsides.com");
@@ -136,10 +159,20 @@ pub fn parse_allsides(text: &str) -> Result<Vec<AllSidesRow>, String> {
         let Some(host) = host else { continue };
         let name = r
             .iter()
-            .find(|v| !v.is_empty() && allsides_label(v).is_none() && !v.contains('.') && !v.contains("://"))
+            .find(|v| {
+                !v.is_empty()
+                    && allsides_label(v).is_none()
+                    && !v.contains('.')
+                    && !v.contains("://")
+            })
             .cloned()
             .unwrap_or_default();
-        out.push(AllSidesRow { host, label, name, page });
+        out.push(AllSidesRow {
+            host,
+            label,
+            name,
+            page,
+        });
     }
     if out.is_empty() {
         return Err("no rows with an AllSides label and a domain or URL".into());
@@ -163,7 +196,7 @@ pub fn allsides_claim(outlet_id: &str, row: &AllSidesRow, retrieved_at: i64) -> 
         ref_url: row.page.clone().unwrap_or_else(|| ALLSIDES_RATINGS_URL.into()),
         retrieved_at,
         as_of: None,
-        note: Some("AllSides Media Bias Ratings™ by AllSides.com, licensed CC BY-NC 4.0; AllSides' label on AllSides' scale, not Truth Decay's.".into()),
+        note: Some("AllSides Media Bias Ratings™ by AllSides.com, licensed CC BY-NC 4.0; AllSides' label on AllSides' scale, not First Report's.".into()),
     }
 }
 
@@ -173,12 +206,20 @@ pub fn allsides_claim(outlet_id: &str, row: &AllSidesRow, retrieved_at: i64) -> 
 pub fn parse_robertson(text: &str) -> Result<BTreeMap<String, f64>, String> {
     let mut lines = text.lines();
     let header = split_csv_line(lines.next().ok_or("empty file")?);
-    let di = header.iter().position(|h| h == "domain").ok_or("no domain column")?;
-    let si = header.iter().position(|h| h == "score").ok_or("no score column")?;
+    let di = header
+        .iter()
+        .position(|h| h == "domain")
+        .ok_or("no domain column")?;
+    let si = header
+        .iter()
+        .position(|h| h == "score")
+        .ok_or("no score column")?;
     let mut out = BTreeMap::new();
     for l in lines {
         let r = split_csv_line(l);
-        let (Some(d), Some(s)) = (r.get(di), r.get(si)) else { continue };
+        let (Some(d), Some(s)) = (r.get(di), r.get(si)) else {
+            continue;
+        };
         if let (Some(h), Ok(v)) = (host_of(d), s.parse::<f64>()) {
             out.insert(h, v);
         }
@@ -215,12 +256,15 @@ pub async fn fetch_robertson(client: &reqwest::Client) -> Result<String, String>
         .text()
         .await
         .map_err(|e| e.to_string())?;
-    let meta: serde_json::Value = serde_json::from_str(&meta).map_err(|e| format!("dataverse: {e}"))?;
+    let meta: serde_json::Value =
+        serde_json::from_str(&meta).map_err(|e| format!("dataverse: {e}"))?;
     let id = meta["data"]["latestVersion"]["files"][0]["dataFile"]["id"]
         .as_i64()
         .ok_or("dataverse: no file id")?;
     client
-        .get(format!("https://dataverse.harvard.edu/api/access/datafile/{id}"))
+        .get(format!(
+            "https://dataverse.harvard.edu/api/access/datafile/{id}"
+        ))
         .send()
         .await
         .map_err(|e| e.to_string())?
@@ -235,8 +279,16 @@ mod tests {
 
     fn outlets() -> Vec<FeedOutlet> {
         vec![
-            FeedOutlet { id: "bbc".into(), name: "BBC".into(), domains: vec!["bbc.co.uk".into(), "bbc.com".into()] },
-            FeedOutlet { id: "fox".into(), name: "Fox News".into(), domains: vec!["foxnews.com".into()] },
+            FeedOutlet {
+                id: "bbc".into(),
+                name: "BBC".into(),
+                domains: vec!["bbc.co.uk".into(), "bbc.com".into()],
+            },
+            FeedOutlet {
+                id: "fox".into(),
+                name: "Fox News".into(),
+                domains: vec!["foxnews.com".into()],
+            },
         ]
     }
 
@@ -245,20 +297,35 @@ mod tests {
         let csv = "news_source,rating,url,allsides_page\n\"BBC News\",center,https://www.bbc.com/news,https://www.allsides.com/news-sources/bbc-news-media-bias\nFox News (Online),Right,foxnews.com,\nSomething,not a rating,x.com,\n";
         let rows = parse_allsides(csv).unwrap();
         assert_eq!(rows.len(), 2);
-        assert_eq!((rows[0].host.as_str(), rows[0].label), ("bbc.com", "Center"));
-        assert_eq!(rows[0].page.as_deref(), Some("https://www.allsides.com/news-sources/bbc-news-media-bias"));
-        assert_eq!((rows[1].host.as_str(), rows[1].label), ("foxnews.com", "Right"));
+        assert_eq!(
+            (rows[0].host.as_str(), rows[0].label),
+            ("bbc.com", "Center")
+        );
+        assert_eq!(
+            rows[0].page.as_deref(),
+            Some("https://www.allsides.com/news-sources/bbc-news-media-bias")
+        );
+        assert_eq!(
+            (rows[1].host.as_str(), rows[1].label),
+            ("foxnews.com", "Right")
+        );
         let o = outlets();
         assert_eq!(outlet_for(&o, &rows[0].host).unwrap().id, "bbc");
         let c = allsides_claim("bbc", &rows[0], 1);
-        assert_eq!((c.field.as_str(), c.value.as_str(), c.source_id.as_str()), ("bias", "Center", "allsides"));
+        assert_eq!(
+            (c.field.as_str(), c.value.as_str(), c.source_id.as_str()),
+            ("bias", "Center", "allsides")
+        );
     }
 
     #[test]
     fn allsides_json_and_label_spellings() {
         let json = r#"{"allsides_media_bias_ratings":[{"name":"Fox News","bias_rating":"lean-right","site_url":"https://foxnews.com"}]}"#;
         let rows = parse_allsides(json).unwrap();
-        assert_eq!((rows[0].host.as_str(), rows[0].label), ("foxnews.com", "Lean Right"));
+        assert_eq!(
+            (rows[0].host.as_str(), rows[0].label),
+            ("foxnews.com", "Lean Right")
+        );
         assert_eq!(allsides_label("Lean Left"), Some("Lean Left"));
         assert_eq!(allsides_label("Mixed"), None);
     }

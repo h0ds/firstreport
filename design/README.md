@@ -1,6 +1,6 @@
 # design — the visual layer
 
-Everything a person looks at across Truth Decay's tools lives here as the source of
+Everything a person looks at across First Report's tools lives here as the source of
 truth. Tools copy `tokens.css` into their own tree (project rule: bespoke, no
 shared runtime dependency) and are checked against `preview.html`.
 

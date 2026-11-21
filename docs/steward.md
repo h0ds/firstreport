@@ -1,6 +1,6 @@
 # Steward: judging our own pipe, never the publishers
 
-Truth Decay's standing rests on two things: that it never characterises an
+First Report's standing rests on two things: that it never characterises an
 outlet itself, and that what it does record is reliable. The first is
 rule 6 in `feed/docs/plan.md`. The second needs an internal layer that
 judges the quality of the data pipe, the behaviour of our own
@@ -18,11 +18,11 @@ judges **outlets**. Concretely:
   failures. The outlet's other feeds, its items already recorded, and
   its place in the pool are untouched, and the reason is shown.
 - A story can carry how sure the clustering was, because that is a
-  fact about Truth Decay's method.
+  fact about First Report's method.
 - A ledger import can be held for review when it would change too
   much at once, because that is a fact about the importer or the
   source's page, not about the outlet.
-- Truth Decay can throttle or stop fetching a host, because that is our
+- First Report can throttle or stop fetching a host, because that is our
   conduct.
 
 Nothing the steward decides is ever an input to how an outlet is
@@ -31,7 +31,7 @@ feed", "the algorithm" or "we", it does not belong here.
 
 Every decision is a rule over counts, stated in one sentence, tested on
 recorded fixtures, and visible where it applies: `/v1/feeds`, the
-story's JSON and Markdown twins, `ledger check`, `kagami doctor`.
+story's JSON and Markdown twins, `ledger check`, `firstreport doctor`.
 Nothing learned, nothing hidden, nothing silent.
 
 ## 2. Feed health
@@ -134,7 +134,7 @@ Done: request budgets in the shared client (`poll.per_host_requests_per_hour`,
 default 240, and `poll.global_requests_per_hour`, default 20,000; a
 request over budget waits and `/v1/stats` counts `budget_waits`); the
 snapshot disk budget (`snapshots.max_bytes`, whole days dropped oldest
-first by prune and the nightly job, `kagami doctor` reports the
+first by prune and the nightly job, `firstreport doctor` reports the
 archive's size); and `feed/config/opt-out.toml`, checked before any
 request by the poller, discovery and `feeds --fix`, subdomains
 included, each entry with its reason and date.

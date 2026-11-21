@@ -1,0 +1,16 @@
+[package]
+name = "firstreport-mcp"
+description = "A Model Context Protocol server over feed and ledger: provenance for agents, read-only, every answer with its sources"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "firstreport-mcp"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1", features = ["rt", "macros", "io-std", "io-util"] }
+serde_json = "1"
+reqwest = { version = "0.13", default-features = false, features = ["rustls", "gzip", "system-proxy", "query"] }

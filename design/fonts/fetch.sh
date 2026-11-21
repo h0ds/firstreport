@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# Download, subset and write the three Truth Decay font families as woff2
+# Download, subset and write the three First Report font families as woff2
 # into this directory. Needs curl and fonttools with brotli:
 #
 #   pip install fonttools brotli

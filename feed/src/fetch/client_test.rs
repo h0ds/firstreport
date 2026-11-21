@@ -74,7 +74,7 @@ fn serve() -> (String, Arc<AtomicUsize>) {
                     &mut s,
                     "200 OK",
                     &[],
-                    "User-agent: truthdecay-feed\nDisallow: /private\nCrawl-delay: 1\n\nUser-agent: *\nDisallow: /\n",
+                    "User-agent: firstreport-feed\nDisallow: /private\nCrawl-delay: 1\n\nUser-agent: *\nDisallow: /\n",
                 ),
                 "/private" => respond(&mut s, "200 OK", &[], RSS),
                 "/feed" => respond(&mut s, "200 OK", &[("ETag", "\"v1\"")], RSS),
@@ -109,7 +109,7 @@ fn serve() -> (String, Arc<AtomicUsize>) {
                     "",
                 ),
                 "/down" => respond(&mut s, "503 Service Unavailable", &[], ""),
-                "/picky" if req.ua.starts_with("mozilla/5.0 (compatible; truthdecay-feed/") => {
+                "/picky" if req.ua.starts_with("mozilla/5.0 (compatible; firstreport-feed/") => {
                     respond(&mut s, "200 OK", &[], RSS)
                 }
                 "/picky" => respond(&mut s, "403 Forbidden", &[], ""),
@@ -333,6 +333,9 @@ async fn no_connection_is_unreachable_an_answer_is_not() {
     assert!(e.is_unreachable(), "refused connect is unreachable: {e}");
 
     let (base, _) = serve();
-    let e = c.fetch(&format!("{base}/missing"), None, None).await.unwrap_err();
+    let e = c
+        .fetch(&format!("{base}/missing"), None, None)
+        .await
+        .unwrap_err();
     assert!(!e.is_unreachable(), "a 404 is an answer: {e}");
 }

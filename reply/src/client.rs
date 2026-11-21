@@ -18,7 +18,7 @@ pub struct Http {
 impl Http {
     pub fn new() -> Result<Self, String> {
         let client = reqwest::Client::builder()
-            .user_agent(concat!("truthdecay-reply/", env!("CARGO_PKG_VERSION")))
+            .user_agent(concat!("firstreport-reply/", env!("CARGO_PKG_VERSION")))
             .timeout(std::time::Duration::from_secs(20))
             .build()
             .map_err(|e| e.to_string())?;

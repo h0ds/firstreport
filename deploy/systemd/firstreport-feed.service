@@ -1,0 +1,19 @@
+[Unit]
+Description=First Report feed: poll, cluster, record
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=firstreport
+WorkingDirectory=/home/firstreport/firstreport/feed
+Environment=RUST_LOG=feed=info
+ExecStart=/home/firstreport/firstreport/target/release/feed run
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/home/firstreport/firstreport/feed
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

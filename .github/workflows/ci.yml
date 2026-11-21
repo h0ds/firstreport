@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: 0
+
+jobs:
+  test:
+    name: test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Rust
+        run: rustup toolchain install stable --profile minimal --component rustfmt,clippy && rustup default stable
+      - uses: Swatinem/rust-cache@v2
+      # Every test runs offline against recorded fixtures; --locked fails
+      # the build if Cargo.lock is out of date.
+      - name: Format
+        if: runner.os == 'Linux'
+        run: cargo fmt --all --check
+      - name: Lint
+        if: runner.os == 'Linux'
+        run: cargo clippy --workspace --all-targets --locked -- -D warnings
+      - name: Build
+        run: cargo build --workspace --all-targets --locked
+      - name: Test
+        run: cargo test --workspace --locked
+      - name: Archive worker
+        if: runner.os == 'Linux'
+        run: node deploy/worker.test.mjs

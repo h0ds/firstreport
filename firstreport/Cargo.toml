@@ -1,13 +1,13 @@
 [package]
-name = "kagami"
-description = "Runs the Truth Decay tools together: feed and ledger as one command, and the export-then-build step that makes the site"
+name = "firstreport"
+description = "Runs the First Report tools together: feed and ledger as one command, and the export-then-build step that makes the site"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
 
 [[bin]]
-name = "kagami"
+name = "firstreport"
 path = "src/main.rs"
 
 [dependencies]

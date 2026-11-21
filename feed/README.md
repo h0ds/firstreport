@@ -1,6 +1,6 @@
 # feed
 
-Truth Decay pillar 1: ingest headlines from many outlets, cluster them into
+First Report pillar 1: ingest headlines from many outlets, cluster them into
 stories, record how each story spread. The full plan is in `docs/plan.md`.
 
 ```
@@ -193,7 +193,7 @@ clock driving expiry, then prints the resulting clusters as JSON. The
 test `replay::fixtures_match_golden_clusters` diffs that output against
 `fixtures/expected/clusters.json` using the `hash` embedding backend, so
 determinism is checked in CI without a model. After an intentional
-change, regenerate with `KAGAMI_UPDATE_EXPECTED=1 cargo test`.
+change, regenerate with `FIRSTREPORT_UPDATE_EXPECTED=1 cargo test`.
 
 The `hash` backend (`embed.backend = "hash"`) is a lexical feature-hashing
 stand-in for the model. It is for replay and tests, not production

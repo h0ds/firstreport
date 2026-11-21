@@ -1,10 +1,10 @@
-//! `kagami`: the one command. The pillars stay separate binaries with
+//! `firstreport`: the one command. The pillars stay separate binaries with
 //! separate contracts; this drives them from a checkout so "runs
 //! locally" is true for someone who is not us.
 //!
-//!   kagami run    feed run + ledger serve, until Ctrl-C
-//!   kagami site   feed export → ledger export → lens build → lens check
-//!   kagami doctor what is and is not in place
+//!   firstreport run    feed run + ledger serve, until Ctrl-C
+//!   firstreport site   feed export → ledger export → lens build → lens check
+//!   firstreport doctor what is and is not in place
 //!
 //! Sibling binaries are found next to this one (a cargo target dir or
 //! an install prefix); each runs with its own crate directory as the
@@ -16,18 +16,23 @@ use std::process::Stdio;
 use tokio::process::{Child, Command};
 
 const USAGE: &str = "\
-usage: kagami [--root <checkout>] <command>
+usage: firstreport [--root <checkout>] <command>
 
 commands:
   run                   start feed (poll, cluster, API on :8080) and ledger (API on :8081); Ctrl-C stops both
   site [--out <dir>]    export feed and ledger, build the lens site (default <root>/site), check it
+       [--base-url <url>] [--multi-outlet-pages] [--pages-since <days>]   passed on to lens build
   doctor                report which binaries, configs, models and data are present
 ";
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 enum Cmd {
     Run,
-    Site { out: PathBuf },
+    Site {
+        out: PathBuf,
+        /// Flags handed to `lens build` unchanged.
+        lens_args: Vec<String>,
+    },
     Doctor,
 }
 
@@ -61,6 +66,18 @@ fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Args, String> {
             out: flag("--out")
                 .map(PathBuf::from)
                 .unwrap_or_else(|| root.join("site")),
+            lens_args: {
+                let mut v = Vec::new();
+                if rest.iter().any(|x| x == "--multi-outlet-pages") {
+                    v.push("--multi-outlet-pages".to_string());
+                }
+                for name in ["--base-url", "--pages-since"] {
+                    if let Some(val) = flag(name) {
+                        v.extend([name.to_string(), val]);
+                    }
+                }
+                v
+            },
         },
         "doctor" => Cmd::Doctor,
         other => return Err(format!("unknown command {other:?}\n\n{USAGE}")),
@@ -109,7 +126,7 @@ fn plan_run() -> Vec<(&'static str, Vec<String>)> {
     ]
 }
 
-fn plan_site(work: &Path, out: &Path) -> Vec<(&'static str, Vec<String>)> {
+fn plan_site(work: &Path, out: &Path, lens_args: &[String]) -> Vec<(&'static str, Vec<String>)> {
     let feed_export = work.join("feed");
     let ledger_export = work.join("ledger");
     let s = |p: &Path| p.to_string_lossy().to_string();
@@ -144,7 +161,10 @@ fn plan_site(work: &Path, out: &Path) -> Vec<(&'static str, Vec<String>)> {
                 s(&ledger_export),
                 "--out".into(),
                 s(out),
-            ],
+            ]
+            .into_iter()
+            .chain(lens_args.iter().cloned())
+            .collect(),
         ),
         ("lens", vec!["check".into(), "--out".into(), s(out)]),
     ]
@@ -174,7 +194,7 @@ fn spawn(t: &Tool, args: &[String]) -> Result<Child, String> {
 }
 
 async fn run_step(t: &Tool, args: &[String]) -> Result<(), String> {
-    eprintln!("kagami: {} {}", t.name, args.join(" "));
+    eprintln!("firstreport: {} {}", t.name, args.join(" "));
     let status = spawn(t, args)?
         .wait()
         .await
@@ -195,10 +215,10 @@ async fn run(root: &Path) -> Result<(), String> {
     let mut children = Vec::new();
     for (name, args) in plan_run() {
         let t = tool(&ts, name);
-        eprintln!("kagami: {} {}", t.name, args.join(" "));
+        eprintln!("firstreport: {} {}", t.name, args.join(" "));
         children.push((name, spawn(t, &args)?));
     }
-    eprintln!("kagami: feed on http://127.0.0.1:8080/debug, ledger on http://127.0.0.1:8081/lookup; Ctrl-C stops both");
+    eprintln!("firstreport: feed on http://127.0.0.1:8080/debug, ledger on http://127.0.0.1:8081/lookup; Ctrl-C stops both");
     let result = tokio::select! {
         _ = tokio::signal::ctrl_c() => Ok(()),
         r = wait_any(&mut children) => r,
@@ -207,7 +227,7 @@ async fn run(root: &Path) -> Result<(), String> {
         if c.try_wait().ok().flatten().is_none() {
             let _ = c.start_kill();
             let _ = c.wait().await;
-            eprintln!("kagami: stopped {name}");
+            eprintln!("firstreport: stopped {name}");
         }
     }
     result
@@ -225,7 +245,7 @@ async fn wait_any(children: &mut [(&'static str, Child)]) -> Result<(), String> 
     }
 }
 
-async fn site(root: &Path, out: &Path) -> Result<(), String> {
+async fn site(root: &Path, out: &Path, lens_args: &[String]) -> Result<(), String> {
     let ts = tools(root)?;
     let work = root.join("site-build");
     std::fs::create_dir_all(&work).map_err(|e| format!("{}: {e}", work.display()))?;
@@ -243,7 +263,7 @@ async fn site(root: &Path, out: &Path) -> Result<(), String> {
             .map_err(|e| e.to_string())?
             .join(work)
     };
-    for (name, args) in plan_site(&work, &out) {
+    for (name, args) in plan_site(&work, &out, lens_args) {
         run_step(tool(&ts, name), &args).await?;
     }
     println!("site built at {}", out.display());
@@ -380,7 +400,7 @@ fn doctor(root: &Path) -> Result<(), String> {
         }
     }
     if missing == 0 {
-        println!("everything in place: kagami run, then kagami site");
+        println!("everything in place: firstreport run, then firstreport site");
         Ok(())
     } else {
         Err(format!("{missing} missing"))
@@ -398,11 +418,11 @@ async fn main() {
     };
     let r = match args.cmd {
         Cmd::Run => run(&args.root).await,
-        Cmd::Site { out } => site(&args.root, &out).await,
+        Cmd::Site { out, lens_args } => site(&args.root, &out, &lens_args).await,
         Cmd::Doctor => doctor(&args.root),
     };
     if let Err(e) = r {
-        eprintln!("kagami: {e}");
+        eprintln!("firstreport: {e}");
         std::process::exit(1);
     }
 }
@@ -412,7 +432,7 @@ mod tests {
     use super::*;
 
     fn argv(s: &str) -> Vec<String> {
-        std::iter::once("kagami")
+        std::iter::once("firstreport")
             .chain(s.split_whitespace())
             .map(String::from)
             .collect()
@@ -426,16 +446,31 @@ mod tests {
         assert_eq!(
             a.cmd,
             Cmd::Site {
-                out: PathBuf::from("/x/site")
+                out: PathBuf::from("/x/site"),
+                lens_args: vec![]
             }
         );
         assert_eq!(
-            parse(argv("site --out s")).unwrap().cmd,
-            Cmd::Site { out: "s".into() }
+            parse(argv("site --out s --pages-since 14 --multi-outlet-pages"))
+                .unwrap()
+                .cmd,
+            Cmd::Site {
+                out: "s".into(),
+                lens_args: vec![
+                    "--multi-outlet-pages".into(),
+                    "--pages-since".into(),
+                    "14".into()
+                ]
+            }
         );
         assert!(parse(argv("nope")).is_err());
         assert!(parse(argv("")).is_err());
-        let p = plan_site(Path::new("/w"), Path::new("/o"));
+        let p = plan_site(
+            Path::new("/w"),
+            Path::new("/o"),
+            &["--multi-outlet-pages".into()],
+        );
+        assert_eq!(p[2].1.last().unwrap(), "--multi-outlet-pages");
         assert_eq!(p.len(), 4);
         assert_eq!(p[0].0, "feed");
         // Built with Path::join, so the separator is the platform's.

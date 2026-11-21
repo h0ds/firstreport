@@ -58,7 +58,7 @@ hamming_threshold = 3
 
 [api]
 bind = "127.0.0.1:8080"
-ledger_url = "http://127.0.0.1:8081"   # Truth Decay ledger, for links from outlets to their sourced facts; "" disables
+ledger_url = "http://127.0.0.1:8081"   # First Report ledger, for links from outlets to their sourced facts; "" disables
 
 [export]
 nightly = false                  # daily export into out_dir/<yyyy-mm-dd> plus snapshot retention

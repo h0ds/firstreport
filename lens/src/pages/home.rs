@@ -107,7 +107,15 @@ fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usi
                 n(single.len(), "story")
             );
         }
-        b.push_str(&cluster_card(input, c, &f.spark, scale, false, false, Some(f)));
+        b.push_str(&cluster_card(
+            input,
+            c,
+            &f.spark,
+            scale,
+            false,
+            false,
+            Some(f),
+        ));
     }
     b
 }
@@ -117,10 +125,13 @@ fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usi
 pub fn outlets_page(input: &Input) -> Twins {
     let now = input.export_time;
     let mut b = format!(
-        "<h1>Outlets</h1><p class=\"kg-muted\">{} in the pool. Each outlet's page has what Truth Decay ledger records about it, with sources.</p><ul class=\"stories\">",
+        "<h1>Outlets</h1><p class=\"kg-muted\">{} in the pool. Each outlet's page has what First Report ledger records about it, with sources.</p><ul class=\"stories\">",
         n(input.outlets.len(), "outlet")
     );
-    let mut md = format!("# Outlets\n\n{} in the pool.\n\n", n(input.outlets.len(), "outlet"));
+    let mut md = format!(
+        "# Outlets\n\n{} in the pool.\n\n",
+        n(input.outlets.len(), "outlet")
+    );
     for o in input.outlets.values() {
         let claims = input.claims.get(&o.id).map(|v| v.len()).unwrap_or(0);
         let _ = write!(
@@ -128,14 +139,25 @@ pub fn outlets_page(input: &Input) -> Twins {
             "<li>{}<span class=\"kg-muted\">{}</span><span class=\"n kg-muted\">{}</span></li>",
             crate::render::outlet_badge(input, &o.id),
             esc(&o.domains.join(", ")),
-            if claims == 0 { "not assessed yet".to_string() } else { n(claims, "fact") }
+            if claims == 0 {
+                "not assessed yet".to_string()
+            } else {
+                n(claims, "fact")
+            }
         );
-        let _ = writeln!(md, "- [{}](/outlet/{}/) · {}", input.outlet_name(&o.id), o.id, o.domains.join(", "));
+        let _ = writeln!(
+            md,
+            "- [{}](/outlet/{}/) · {}",
+            input.outlet_name(&o.id),
+            o.id,
+            o.domains.join(", ")
+        );
     }
     b.push_str("</ul>");
     let html_page = html(&Page {
         title: "Outlets",
-        description: "Every news outlet in Truth Decay's pool, with its domains. No outlet is rated.",
+        description:
+            "Every news outlet in First Report's pool, with its domains. No outlet is rated.",
         path: "/outlets/",
         wide: false,
         head: "",
@@ -143,7 +165,11 @@ pub fn outlets_page(input: &Input) -> Twins {
         status: &format!("Updated {}", datetime(now)),
     });
     let json = json!({"export_time": now, "outlets": input.outlets.values().collect::<Vec<_>>()});
-    Twins { html: html_page, json, md }
+    Twins {
+        html: html_page,
+        json,
+        md,
+    }
 }
 
 /// Page `page` (2 or more) of the story list, at `/page/N/`. Its twins
@@ -179,21 +205,25 @@ pub fn story_page(input: &Input, window_hours: i64, page: usize) -> Twins {
     });
     let json = json!({
         "page": page, "pages": pages, "page_size": PAGE_SIZE, "export_time": now,
-        "stories": ids.iter().map(|(c, f)| json!({"id": c.id, "title": c.primary_title, "outlet_count": c.outlet_count, "reach": f.reach, "reports": f.reports})).collect::<Vec<_>>(),
+        "stories": ids.iter().map(|(c, f)| json!({"id": c.id, "url": input.story_url(c), "title": c.primary_title, "outlet_count": c.outlet_count, "reach": f.reach, "reports": f.reports})).collect::<Vec<_>>(),
         "full_list": "/index.json",
     });
     let mut md = format!("# Stories, page {page} of {pages}\n\nOrdered by reach then recency; the full list is /index.md.\n\n");
     for (c, f) in &ids {
         let _ = writeln!(
             md,
-            "- [{}](/story/{}/) · {} · reach {}",
+            "- [{}]({}) · {} · reach {}",
             c.primary_title,
-            c.id,
+            input.story_url(c),
             n(c.outlet_count as usize, "outlet"),
             f.reach
         );
     }
-    Twins { html: html_page, json, md }
+    Twins {
+        html: html_page,
+        json,
+        md,
+    }
 }
 
 pub fn home(input: &Input, window_hours: i64) -> Twins {
@@ -244,9 +274,9 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
             let _ = write!(
                 b,
                 // Headline, then its chip and first outlet on the line below.
-                "<li class=\"spread\" data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\"><span class=\"kg-count\">{} in 6 h</span><span class=\"sep\">·</span>{}</span></li>",
+                "<li class=\"spread\" data-id=\"{}\"><a {}>{}</a><span class=\"n kg-muted\"><span class=\"kg-count\">{} in 6 h</span><span class=\"sep\">·</span>{}</span></li>",
                 c.id,
-                c.id,
+                input.story_href(c),
                 esc(&c.primary_title),
                 n(f.outlets_6h as usize, "outlet"),
                 crate::render::origin_link(input, &c.origin_outlet_id)
@@ -265,10 +295,12 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
             "name": "Stories",
             "description": "Stories forming across news outlets, ordered by reach: independent reports in the window plus languages. No outlet is rated.",
             "numberOfItems": active,
-            "itemListElement": recent.iter().chain(single.iter()).enumerate().map(|(k, (c, _))| json!({
+            // Only the stories on this page: listing the whole export made
+            // the front page several hundred kilobytes (`docs/deploy.md` §4.2).
+            "itemListElement": recent.iter().chain(single.iter()).take(PAGE_SIZE).enumerate().map(|(k, (c, _))| json!({
                 "@type": "ListItem",
                 "position": k + 1,
-                "url": format!("/story/{}/", c.id),
+                "url": input.story_url(c),
                 "name": c.primary_title,
             })).collect::<Vec<_>>()
         })
@@ -313,9 +345,9 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         for (c, f) in &spreading {
             let _ = writeln!(
                 md,
-                "- [{}](/story/{}/) · {} in 6 h{} · first: {}",
+                "- [{}]({}) · {} in 6 h{} · first: {}",
                 c.primary_title,
-                c.id,
+                input.story_url(c),
                 n(f.outlets_6h as usize, "outlet"),
                 if c.outlet_count != f.outlets_6h {
                     format!(" · {} in all", n(c.outlet_count as usize, "outlet"))
@@ -330,9 +362,9 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     let md_line = |md: &mut String, c: &crate::input::Cluster, f: &crate::derive::ClusterFacts| {
         let _ = writeln!(
             md,
-            "- [{}](/story/{}/) · {} · {} · first: {} · reach {}: {}, {}",
+            "- [{}]({}) · {} · {} · first: {} · reach {}: {}, {}",
             c.primary_title,
-            c.id,
+            input.story_url(c),
             n(c.outlet_count as usize, "outlet"),
             n(c.item_count as usize, "item"),
             input.outlet_name(&c.origin_outlet_id),
@@ -371,10 +403,19 @@ mod tests {
         let i = fixture_input();
         let t = home(&i, 24);
         assert!(t.html.contains("<h1>Stories</h1>"));
-        assert!(t.html.contains("href=\"/outlets/\""), "the front page links the outlet list");
-        assert!(!t.html.contains("<h2>Outlets</h2>"), "the list is its own page");
+        assert!(
+            t.html.contains("href=\"/outlets/\""),
+            "the front page links the outlet list"
+        );
+        assert!(
+            !t.html.contains("<h2>Outlets</h2>"),
+            "the list is its own page"
+        );
         let o = outlets_page(&i);
-        assert!(o.html.contains("/outlet/blog/"), "unassessed outlets are listed");
+        assert!(
+            o.html.contains("/outlet/blog/"),
+            "unassessed outlets are listed"
+        );
         assert!(o.html.contains("not assessed yet"));
         let all = home(&i, 24 * 90);
         let stories = all.json["stories"].as_array().unwrap();
@@ -441,12 +482,23 @@ mod tests {
         let pages = page_count(&i, 24 * 60);
         assert!(pages >= 2, "fixture has more than one page: {pages}");
         let home_page = home(&i, 24 * 60);
-        assert_eq!(home_page.html.matches("class=\"kg-cluster").count(), PAGE_SIZE);
-        assert!(home_page.html.contains("<a class=\"step\" rel=\"next\" href=\"/page/2/\">Older →</a>"));
-        assert!(home_page.html.contains(&format!("<span class=\"range\">1–{PAGE_SIZE} of ")));
+        assert_eq!(
+            home_page.html.matches("class=\"kg-cluster").count(),
+            PAGE_SIZE
+        );
+        assert!(home_page
+            .html
+            .contains("<a class=\"step\" rel=\"next\" href=\"/page/2/\">Older →</a>"));
+        assert!(home_page
+            .html
+            .contains(&format!("<span class=\"range\">1–{PAGE_SIZE} of ")));
         let last = story_page(&i, 24 * 60, pages);
-        assert!(last.html.contains("<span class=\"step off\">Older →</span>"));
-        assert!(last.html.contains(&format!("aria-current=\"page\">{pages}</span>")));
+        assert!(last
+            .html
+            .contains("<span class=\"step off\">Older →</span>"));
+        assert!(last
+            .html
+            .contains(&format!("aria-current=\"page\">{pages}</span>")));
         assert_eq!(last.json["page"], pages);
         // The machine twin of page 1 keeps the whole list.
         let all = home_page.json["stories"].as_array().unwrap().len()

@@ -221,15 +221,19 @@ a weekly schedule; it re-imports only sources that are due.
 
 ## 6. Fonts
 
-`design/fonts/` holds only a README. It mentions a `fetch.sh` that was
-never written because the GitHub releases it would download from were
-blocked. Fetch the three families by hand from the sources in that
-README (Instrument Serif, Inter, JetBrains Mono, all OFL), subset them
-with the `pyftsubset` line given there, and drop the `.woff2` files in
-`design/fonts/` (gitignored). Then open `design/preview.html` and
-confirm Instrument Serif renders the wordmark; until then the serif
-falls back to the system serif. Writing the script once the URLs are
-confirmed is a five-minute follow-up.
+`design/fonts/fetch.sh` downloads the three families (Instrument
+Serif, Inter, JetBrains Mono, all OFL) from a pinned google/fonts
+commit, subsets them and writes the four `.woff2` files into
+`design/fonts/` (gitignored), about 164 KB together:
+
+```
+pip install fonttools brotli
+sh design/fonts/fetch.sh
+```
+
+Then open `design/preview.html` and confirm Instrument Serif renders
+the wordmark; without the files the serif falls back to the system
+serif.
 
 ## 7. Terms to confirm before importing
 
@@ -248,7 +252,7 @@ could not read the current terms.
   Dataverse, imported with `ledger import robertson2018 --write`. A measure
   of who shares an outlet's links, recorded as `audience_partisanship`.
 - **Not usable as sources**: Media Bias/Fact Check (RapidAPI terms exclude
-  redistribution, and Truth Decay's exports redistribute; a direct commercial
+  redistribution, and First Report's exports redistribute; a direct commercial
   licence would be needed), Ad Fontes Media (free licence covers the chart
   image for teaching, not the per-outlet data), Bakshy et al. 2015 (download
   terms forbid sharing).

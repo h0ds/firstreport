@@ -1,0 +1,11 @@
+[Unit]
+Description=First Report site: build, check, deploy
+After=network-online.target firstreport-feed.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=firstreport
+EnvironmentFile=/etc/firstreport/env
+ExecStart=/home/firstreport/firstreport/deploy/bin/site.sh
+TimeoutStartSec=20min

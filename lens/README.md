@@ -1,6 +1,6 @@
 # lens
 
-Pillar 3 of Truth Decay: a static site generated from `feed` and `ledger`
+Pillar 3 of First Report: a static site generated from `feed` and `ledger`
 exports. It arranges what the other two record and adds nothing: no
 score, no lean colour, no summary in its own voice. Plan and page
 definitions in `docs/plan.md`.

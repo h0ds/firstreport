@@ -1,4 +1,4 @@
-/* Truth Decay design tokens. Source of truth: design/DESIGN.md.
+/* First Report design tokens. Source of truth: design/DESIGN.md.
    Each tool copies this file; no shared runtime dependency. */
 
 :root {
@@ -257,7 +257,7 @@ hr { border: 0; border-top: 1px solid var(--kg-line); margin: var(--kg-s6) 0; }
 .kg-count { display: inline-block; padding: 0 var(--kg-s2); border-radius: var(--kg-radius-input); background: var(--kg-blue-soft); color: var(--kg-blue-ink); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 /* outlet badge (§10): the outlet's own icon, then its name. No box; the
-   icon carries the outlet's colours, Truth Decay adds none. */
+   icon carries the outlet's colours, First Report adds none. */
 .kg-outlet { display: inline-flex; align-items: center; gap: var(--kg-s2); white-space: nowrap; vertical-align: middle; }
 /* an outlet with no icon: its first letter on a light 16px tile */
 .kg-icon.kg-letter { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); font-weight: 600; color: var(--kg-text-secondary); background: var(--kg-bg-subtle); }

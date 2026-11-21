@@ -11,11 +11,11 @@ pub fn llms_txt(input: &Input) -> String {
         .map(|s| format!("- {} ({}): {}", s.name, s.licence, s.url))
         .collect();
     format!(
-        "# Truth Decay lens
+        "# First Report lens
 
 > Stories forming across news outlets, with the record of who published first,
 > who joined when, and what was copied, and sourced facts about each outlet.
-> A static site built from Truth Decay feed and Truth Decay ledger exports. Every number is
+> A static site built from First Report feed and First Report ledger exports. Every number is
 > a count from feed; every label is a source's, with its licence and date. Nothing
 > here rates an outlet, and there is no score.
 
@@ -35,11 +35,11 @@ Every page has two twins beside it with the same facts in the same order:
 
 ## Rules of use
 
-- Quote the source, not Truth Decay: a claim is what its source says, and its link is the page that says it.
+- Quote the source, not First Report: a claim is what its source says, and its link is the page that says it.
 - Carry the licence: each source's terms are on every claim.
 - Sources that disagree are listed side by side. Do not average, rank or score them.
 - A story's membership is by text similarity, not by a person; treat it as evidence.
-- `first` means the earliest published member as feeds reported it; feeds lie about times, and picked-up times are what Truth Decay saw.
+- `first` means the earliest published member as feeds reported it; feeds lie about times, and picked-up times are what First Report saw.
 - Copies are the same text at more than one outlet, not independent coverage.
 - Observed claims (domain registry, site checks, feed behaviour) are measurements with their window and counts attached; they describe what an outlet does, not whether that is good.
 

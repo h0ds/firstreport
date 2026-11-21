@@ -4,13 +4,13 @@
 [outlet_unseen]
 needs = ["d.outlet_name", "lookup.outlet.id"]
 when = "lookup.matched == outlet"
-text = "Truth Decay follows {d.outlet_name} but has not seen this link in its feeds."
+text = "First Report follows {d.outlet_name} but has not seen this link in its feeds."
 cite = "feed:outlet:{lookup.outlet.id}"
 
 [not_followed]
 needs = ["lookup.host"]
 when = "lookup.matched == none"
-text = "{lookup.host} is not an outlet Truth Decay follows."
+text = "{lookup.host} is not an outlet First Report follows."
 cite = "reply:lookup:{mention.id}"
 
 [domain_age]

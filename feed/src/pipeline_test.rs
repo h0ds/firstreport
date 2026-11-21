@@ -609,7 +609,7 @@ async fn fixture_through_store_and_api() {
     assert_eq!(v["process"]["items_held"], 3);
 
     // Embedder: only when an ONNX Runtime library is available.
-    if let Ok(lib) = std::env::var("KAGAMI_ORT_LIB") {
+    if let Ok(lib) = std::env::var("FIRSTREPORT_ORT_LIB") {
         let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("fixtures/models");
         let mut ecfg = Config::default();
         ecfg.embed.runtime_lib = lib.into();
@@ -666,7 +666,7 @@ async fn fixture_through_store_and_api() {
         );
         assert!(v["process"]["embed_latency"]["samples"].as_u64().unwrap() >= 1);
     } else {
-        eprintln!("KAGAMI_ORT_LIB unset; embedder stage skipped");
+        eprintln!("FIRSTREPORT_ORT_LIB unset; embedder stage skipped");
     }
 
     drop(writer);

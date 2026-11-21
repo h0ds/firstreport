@@ -295,11 +295,11 @@ async fn llms_txt() -> Response {
     (
         [(header::CONTENT_TYPE, "text/plain; charset=utf-8")],
         format!(
-            "# Truth Decay reply
+            "# First Report reply
 
 > The public log of a social media account that answers \"prove it\" with
 > where a story came from, how it spread and who carried it, every
-> sentence linked to a Truth Decay feed record or ledger claim. It never says
+> sentence linked to a First Report feed record or ledger claim. It never says
 > true or false, and never labels an account.
 
 Contract version {CONTRACT_VERSION}. Times are unix seconds UTC.
@@ -340,7 +340,7 @@ const PAGE: &str = r##"<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Truth Decay reply review</title>
+<title>First Report reply review</title>
 <meta name="description" content="Drafted replies waiting for a person. Every sentence links its source; a reviewer keeps or drops sentences and posts or declines.">
 <link rel="alternate" type="application/json" href="/v1/log" title="Public log (JSON)">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="How to read this server">
@@ -404,7 +404,7 @@ button:disabled{opacity:.5;cursor:default}
 <body>
 <main>
 <header>
-  <span class="lockup"><span class="wordmark">Truth Decay</span><span class="rule"></span><span class="tool">reply</span></span>
+  <span class="lockup"><span class="wordmark">First Report</span><span class="rule"></span><span class="tool">reply</span></span>
   <span class="muted" id="counts"></span>
 </header>
 <h2>Waiting for a person</h2>

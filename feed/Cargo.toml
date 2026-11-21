@@ -1,6 +1,6 @@
 [package]
 name = "feed"
-description = "Truth Decay pillar 1: aggregation and story clustering"
+description = "First Report pillar 1: aggregation and story clustering"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

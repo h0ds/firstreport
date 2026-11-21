@@ -10,7 +10,7 @@ design/fonts/*.woff2
 # local planning notes, never committed
 INFRA-PLAN.md
 
-# kagami site builds
+# firstreport site builds
 /site-build/
 /site/
 /site.building-*/

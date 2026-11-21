@@ -1,6 +1,6 @@
 # reply — Social Answer Layer
 
-Pillar 4. `reply` is Truth Decay on social media: an account people mention
+Pillar 4. `reply` is First Report on social media: an account people mention
 with "is this real?" or "prove it", which answers from `feed` and
 `ledger` with where a story came from, how it spread, who carried it,
 and what is known about the outlets, every sentence linked to its
@@ -37,7 +37,7 @@ binaries. The people who need the answer are on the platform where
 the claim is spreading, at the moment it spreads. `reply` puts the
 answer there.
 
-People will mention the bot to win arguments. They will write "@kagami
+People will mention the bot to win arguments. They will write "@firstreport
 prove it" under a post they think is a lie, and under a post they
 think is true. That is the use case, not a misuse. The goal is to be
 worth summoning: to give both sides the same provenance, fast enough
@@ -220,16 +220,16 @@ An adapter implements `listen() -> Stream<Mention | Sighting>` and
   exact item match is `confidence: 1.0`.
 - A URL `feed` has never seen is itself a fact: the domain is checked
   against the outlet registry and, if unknown, an RDAP lookup gives the
-  registration date, which the reply states. "Not an outlet Truth Decay
+  registration date, which the reply states. "Not an outlet First Report
   follows; domain registered 2026-09-04" is a useful answer.
 - Text without a link is embedded with the same MiniLM model `feed`
   uses and matched to the nearest active cluster. The reply names the
   matched headline and the cosine score in plain words ("closest story
-  Truth Decay has, 0.71 similar") so the reader can reject the match.
+  First Report has, 0.71 similar") so the reader can reject the match.
 - Below `match.min_confidence` the reply says no story matched, and
   says what it did check.
 - The parent post is the subject when the mention has no link and no
-  text of its own beyond the summons ("@kagami prove it").
+  text of its own beyond the summons ("@firstreport prove it").
 
 ## 7. Coordination signals
 
@@ -281,7 +281,7 @@ text   = "Domain registered {domain_registered} per {registrar_source}."
 cite   = "ledger:{outlet_id}:domain_registered"
 
 [no_match]
-text   = "Truth Decay has no story for this. Checked {checked}."
+text   = "First Report has no story for this. Checked {checked}."
 cite   = "reply:lookup:{mention_id}"
 ```
 
@@ -405,7 +405,7 @@ cites. Anything else belongs in a template change.
 [ledger]  url = "http://127.0.0.1:8081"
 
 [platform.bluesky]
-handle = "kagami.example"
+handle = "firstreport.example"
 # credentials from the environment, never from this file
 
 [match]
@@ -501,7 +501,7 @@ salt_env = "REPLY_SALT"
   The counter is the baseline in every cohort sentence and the log link
   in every reply. Whether that is enough is an open question that only
   running it answers.
-- **Salt and subpoenas.** Salted hashes mean Truth Decay cannot name
+- **Salt and subpoenas.** Salted hashes mean First Report cannot name
   accounts. Whether the salt should rotate, making old sightings
   unlinkable even with the salt, is a retention decision to make before R4.
 - **Who runs the account.** The code is open and anyone can run their
