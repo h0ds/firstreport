@@ -81,6 +81,13 @@ fn pager(page: usize, pages: usize, total: usize) -> String {
     crate::render::pager(page, pages, total, PAGE_SIZE, "Story pages", &page_path)
 }
 
+/// How to read a card: the sparkline and the lean dots, explained once in a
+/// collapsed note beside the list's heading line rather than above the cards
+/// (design §5, story list).
+pub fn card_key() -> &'static str {
+    "<details class=\"kg-key\"><summary>How to read a card</summary><p class=\"kg-legend\"><span class=\"key spark\"></span>outlets carrying the story over its first day <span class=\"sep\">·</span> <span class=\"key lean\"><i class=\"k1\"></i><i class=\"k3\"></i><i class=\"k5\"></i></span>where each outlet's audience leans, left to right, from US sharing data (<a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a>); hollow dots are outlets it does not score</p></details>"
+}
+
 /// heading where that part of the list begins (or continues).
 fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usize) -> String {
     let scale = crate::render::spark_scale(
@@ -90,8 +97,7 @@ fn page_cards(input: &Input, recent: &Ranked<'_>, single: &Ranked<'_>, page: usi
             .map(|(_, f)| f.spark.as_slice()),
     );
     let start = (page.max(1) - 1) * PAGE_SIZE;
-    // The card's pictures, explained once rather than on every card.
-    let mut b = String::from("<p class=\"kg-muted kg-legend\"><span class=\"key spark\"></span>outlets carrying the story over its first day <span class=\"sep\">·</span> <span class=\"key lean\"><i class=\"k1\"></i><i class=\"k3\"></i><i class=\"k5\"></i></span>where each outlet's audience leans, left to right, from US sharing data (<a class=\"kg-link-quiet\" href=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/QAN5VX\" rel=\"noopener\">Robertson et al. 2018</a>); hollow dots are outlets it does not score</p><div class=\"kg-cards\">");
+    let mut b = String::from("<div class=\"kg-cards\">");
     for (k, (c, f)) in recent
         .iter()
         .chain(single.iter())
@@ -185,7 +191,7 @@ pub fn story_page(input: &Input, window_hours: i64, page: usize) -> Twins {
         crate::render::thousands(recent.len() + single.len()),
         window_label(window_hours)
     );
-    b.push_str(&pager(page, pages, recent.len() + single.len()));
+    b.push_str(card_key());
     b.push_str(&page_cards(input, &recent, &single, page));
     b.push_str(&pager(page, pages, recent.len() + single.len()));
     let ids: Vec<_> = recent
@@ -241,6 +247,9 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         input.outlets.len(),
         window_label(window_hours)
     );
+    if active > 0 {
+        b.push_str(card_key());
+    }
     if active == 0 {
         b.push_str("<div class=\"empty\">No stories in the window. Run feed for a while, export, and build again.</div>");
     }
@@ -296,7 +305,6 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     if !spreading.is_empty() {
         b.push_str("<h2>All stories in the window</h2>");
     }
-    b.push_str(&pager(1, pages, active));
     b.push_str(&page_cards(input, &recent, &single, 1));
     b.push_str(&pager(1, pages, active));
     b.push_str("</div></div>");

@@ -350,7 +350,7 @@ fn page_ids(facts: &OutletFacts, page: usize) -> impl Iterator<Item = &u64> {
         .take(STORIES_PER_PAGE)
 }
 
-/// One page of the outlet's stories between two pagers.
+/// One page of the outlet's stories, its pager below.
 fn stories_block(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) -> String {
     let pages = story_pages(facts);
     let path = |p: usize| stories_path(o, p);
@@ -362,8 +362,7 @@ fn stories_block(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) ->
         "Story pages",
         &path,
     );
-    let mut b = pager.clone();
-    b.push_str("<ul class=\"stories\">");
+    let mut b = String::from("<ul class=\"stories\">");
     for id in page_ids(facts, page) {
         let c = &input.clusters[id];
         let _ = write!(

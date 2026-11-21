@@ -215,3 +215,10 @@ footer a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
   .kg-search-results #outlets { grid-column: 2; grid-row: 1; }
   .kg-search-results #stories { grid-column: 1; grid-row: 1; }
 }
+
+/* How to read a card (design §5): a collapsed note under the list's
+   heading line, not a legend above the first card. */
+.kg-key { margin: 0 0 var(--kg-s3); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); }
+.kg-key summary { cursor: pointer; width: max-content; max-width: 100%; }
+.kg-key summary:hover { color: var(--kg-blue); }
+.kg-key .kg-legend { margin: var(--kg-s2) 0 0; max-width: var(--kg-measure); }
