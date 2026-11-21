@@ -23,20 +23,44 @@ main > p a:hover, main > ul:not(.stories) a:hover { text-decoration-color: curre
 
 .sep { color: var(--kg-line-strong); }
 
-/* timeline: one outlet per row, time column then content */
-.timeline { list-style: none; margin: 0; padding: 0; }
-.timeline li { display: grid; grid-template-columns: var(--kg-s8) 1fr; gap: var(--kg-s3); padding: var(--kg-s2) 0; border-top: 1px solid var(--kg-line); }
-.timeline .when { font-family: var(--kg-font-mono); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-body); color: var(--kg-text-secondary); }
-.timeline li.first .when { color: var(--kg-blue); }
-.timeline .outlet { font-weight: 600; color: var(--kg-text); margin-right: var(--kg-s2); }
+/* timeline: one outlet per row on a rail (design §5). The time column
+   gives the delay after the first report with the clock time under it;
+   a dot on the rail marks each outlet, the first one filled blue. Day
+   changes and pauses of six hours or more are rows of their own. */
+.timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; top: var(--kg-s3); bottom: var(--kg-s3); left: calc(var(--kg-s8) + 12px); border-left: 1px solid var(--kg-line-strong); }
+.timeline > li { display: grid; grid-template-columns: var(--kg-s8) minmax(0, 1fr); gap: var(--kg-s5); padding: var(--kg-s2) 0; position: relative; }
+.timeline > li:not(.day):not(.gap)::before { content: ""; position: absolute; left: calc(var(--kg-s8) + 9px); top: 14px; width: 7px; height: 7px; border-radius: 50%; background: var(--kg-bg); border: 1px solid var(--kg-text-muted); box-sizing: border-box; }
+.timeline > li.first::before { background: var(--kg-blue); border-color: var(--kg-blue); }
+.timeline .when { font-family: var(--kg-font-mono); font-size: var(--kg-fs-ui); line-height: var(--kg-lh-body); color: var(--kg-text-secondary); text-align: right; font-variant-numeric: tabular-nums; }
+.timeline .when .clock { display: block; font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); }
+.timeline li.first .when { color: var(--kg-blue); font-weight: 600; }
+.timeline .who { display: flex; align-items: center; flex-wrap: wrap; gap: var(--kg-s2); }
+.timeline .outlet { font-weight: 600; color: var(--kg-text); }
 .timeline .outlet a { color: inherit; }
 .timeline .outlet a:hover { color: var(--kg-blue); }
-.timeline .hl { color: var(--kg-text); }
+.timeline .hl { display: block; overflow-wrap: anywhere; color: var(--kg-text); margin-top: var(--kg-s1); }
 .timeline .hl a { color: inherit; }
 .timeline .hl a:hover { color: var(--kg-blue); }
-.timeline .alt, .timeline .times { display: block; font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); margin-top: var(--kg-s1); }
-.timeline .alt a { color: inherit; text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
-.timeline .alt a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+.timeline .times { display: block; font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); margin-top: var(--kg-s1); }
+.timeline details.alt { margin-top: var(--kg-s1); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-muted); }
+.timeline details.alt summary { cursor: pointer; }
+.timeline details.alt summary:hover { color: var(--kg-blue); }
+.timeline details.alt ul { margin: var(--kg-s1) 0 0; padding-left: var(--kg-s4); }
+.timeline details.alt li + li { margin-top: var(--kg-s1); }
+.timeline details.alt a { color: var(--kg-text-secondary); text-decoration-line: underline; text-decoration-color: var(--kg-line-strong); }
+.timeline details.alt a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
+/* day divider and pause: text in the content column, on the rail's side */
+.timeline > li.day, .timeline > li.gap { padding: var(--kg-s3) 0 var(--kg-s1); }
+.timeline > li.day span, .timeline > li.gap span { grid-column: 2; font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); }
+.timeline > li.day span { color: var(--kg-text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.timeline > li.gap span { color: var(--kg-text-muted); font-style: italic; }
+
+/* the track's axis: round ticks, each a faint line up through the lanes */
+.kg-track .axis { position: relative; }
+.kg-track .grid { position: absolute; top: 0; bottom: 0; border-left: 1px dashed var(--kg-line); }
+.kg-track .tick { position: absolute; transform: translateX(-50%); font-family: var(--kg-font-mono); font-variant-numeric: tabular-nums; }
+.kg-track .tick::before { content: ""; position: absolute; left: 50%; top: -6px; height: 4px; border-left: 1px solid var(--kg-line-strong); }
 
 .copy { font-family: var(--kg-font-mono); font-size: var(--kg-fs-small); line-height: var(--kg-lh-small); color: var(--kg-text-secondary); }
 
@@ -115,7 +139,6 @@ footer a:hover { color: var(--kg-blue); text-decoration-color: currentColor; }
   main { padding: var(--kg-s5) var(--kg-s4) var(--kg-s8); }
   .stories li { flex-wrap: wrap; }
   .stories .n { margin-left: 0; white-space: normal; }
-  .timeline li { grid-template-columns: 1fr; gap: var(--kg-s1); }
 }
 
 /* Wide screens (design §4). Story cards fill the 1200px column as a grid,

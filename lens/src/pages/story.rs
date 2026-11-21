@@ -8,7 +8,7 @@ use std::fmt::Write as _;
 use serde_json::json;
 
 use super::Twins;
-use crate::derive::{cluster_facts, ClusterFacts};
+use crate::derive::{cluster_facts, ClusterFacts, DAY};
 use crate::input::{Cluster, Input, Item};
 use crate::render::{
     claim_md, cluster_card, datetime, delta, esc, field_label, grouped_claims, html, iso, n,
@@ -115,7 +115,7 @@ fn track(input: &Input, c: &Cluster, rows: &[(&str, Vec<&Item>)], t0: i64) -> St
         };
         let _ = write!(
             pts,
-            "{open} style=\"left: {x:.2}%; top: {}px\" title=\"{} · {}\">{mark}{close}",
+            "{open} style=\"left: {x:.2}%; bottom: {}px\" title=\"{} · {}\">{mark}{close}",
             lane * 20,
             esc(input.outlet_name(outlet)),
             if times[k] == t0 {
@@ -126,8 +126,50 @@ fn track(input: &Input, c: &Cluster, rows: &[(&str, Vec<&Item>)], t0: i64) -> St
         );
     }
     let height = lanes.len() * 20;
+    // Ticks at a round step, at most six of them, each a faint line up
+    // through the lanes and a label under the axis. None too near the end,
+    // whose own label says the whole spread.
+    const STEPS: [i64; 9] = [
+        900,
+        3600,
+        2 * 3600,
+        3 * 3600,
+        6 * 3600,
+        12 * 3600,
+        DAY,
+        2 * DAY,
+        7 * DAY,
+    ];
+    let step = STEPS
+        .iter()
+        .copied()
+        .find(|s| span / s <= 6)
+        .unwrap_or(7 * DAY);
+    let (mut grid, mut ticks) = (String::new(), String::new());
+    let mut t = step;
+    while (t as f64) < span as f64 * 0.88 {
+        let x = t as f64 / span as f64 * 100.0;
+        if x < 30.0 {
+            // too close to the start label to read on a phone
+            t += step;
+            continue;
+        }
+        let label = if t % DAY == 0 {
+            format!("+{}d", t / DAY)
+        } else if t % 3600 == 0 {
+            format!("+{}h", t / 3600)
+        } else {
+            format!("+{}m", t / 60)
+        };
+        let _ = write!(grid, "<span class=\"grid\" style=\"left: {x:.2}%\"></span>");
+        let _ = write!(
+            ticks,
+            "<span class=\"tick\" style=\"left: {x:.2}%\">{label}</span>"
+        );
+        t += step;
+    }
     format!(
-        "<div class=\"kg-track\" role=\"img\" aria-label=\"{} outlets over {}, in order: {}\"><div class=\"lanes\" style=\"height: {height}px\">{pts}</div><div class=\"axis\"><span>{}</span><span>{} later</span></div></div>",
+        "<div class=\"kg-track\" role=\"img\" aria-label=\"{} outlets over {}, in order: {}\"><div class=\"lanes\" style=\"height: {height}px\">{grid}{pts}</div><div class=\"axis\"><span>{}</span>{ticks}<span>{} later</span></div></div>",
         rows.len(),
         delta(span).trim_start_matches('+'),
         esc(&rows.iter().map(|(o, _)| input.outlet_name(o)).collect::<Vec<_>>().join(", ")),
@@ -341,10 +383,34 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
     ));
     b.push_str("<h2>Timeline</h2>");
     b.push_str(&track(input, c, &rows, t0));
-    b.push_str("<p class=\"kg-muted\">Each outlet once, in the order it published, with its first headline. Hover a time for when it was published and when First Report picked it up.</p><ol class=\"timeline\">");
+    b.push_str("<p class=\"kg-muted\">Each outlet once, in the order it published, with its first headline. The time is how long after the first report; the clock under it is when it was published (UTC). Hover a time for when First Report picked it up.</p><ol class=\"timeline\">");
     let mut last_pickup: Option<i64> = None;
+    let mut prev: Option<i64> = None;
     for (k, (outlet, items)) in rows.iter().enumerate() {
         let first = &items[0];
+        let t = when(first);
+        // A divider where the calendar day changes, and a marked pause
+        // where no new outlet joined for six hours or more.
+        if let Some(p) = prev {
+            if t - p >= 6 * 3600 {
+                let _ = write!(
+                    b,
+                    "<li class=\"gap\"><span>{} with no new outlet</span></li>",
+                    delta(t - p).trim_start_matches('+')
+                );
+            }
+        }
+        if prev
+            .map(|p| crate::render::date(p) != crate::render::date(t))
+            .unwrap_or(true)
+        {
+            let _ = write!(
+                b,
+                "<li class=\"day\"><span>{}</span></li>",
+                crate::render::day_el(t, input.export_time)
+            );
+        }
+        prev = Some(prev.map_or(t, |p| p.max(t)));
         let at = first.joined_at.unwrap_or(first.fetched_at);
         let _ = last_pickup.replace(at);
         // Published and picked-up times are the time column's hover, not a
@@ -365,11 +431,12 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
         );
         let _ = write!(
             b,
-            "<li{} data-outlet=\"{}\"><span class=\"when\" title=\"{}\">{}</span><div><span class=\"outlet\">{}</span>{}",
+            "<li{} data-outlet=\"{}\"><span class=\"when\" title=\"{}\">{}<span class=\"clock\">{}</span></span><div><div class=\"who\"><span class=\"outlet\">{}</span>{}</div>",
             if k == 0 { " class=\"first\"" } else { "" },
             esc(outlet),
             esc(&when_title),
-            delta(when(first) - t0),
+            if k == 0 { "first".to_string() } else { delta(t - t0) },
+            crate::render::hhmm(t),
             if k == 0 { crate::render::origin_link(input, outlet) } else { crate::render::outlet_badge(input, outlet) },
             match f.copies_of.get(&first.id) {
                 Some(src) => format!(
@@ -387,13 +454,29 @@ pub fn story(input: &Input, c: &Cluster) -> Twins {
             esc(&first.canonical_url),
             esc(&first.title)
         );
-        for alt in items.iter().skip(1).filter(|i| i.title != first.title) {
+        let alts: Vec<_> = items
+            .iter()
+            .skip(1)
+            .filter(|i| i.title != first.title)
+            .collect();
+        if !alts.is_empty() {
+            // Later headlines from the same outlet, folded: they are its
+            // follow-ups, not more outlets joining.
             let _ = write!(
                 b,
-                "<span class=\"alt\">also: <a href=\"{}\" rel=\"noopener\">{}</a></span>",
-                esc(&alt.canonical_url),
-                esc(&alt.title)
+                "<details class=\"alt\"><summary>{} from {} later</summary><ul>",
+                n(alts.len(), "more headline"),
+                esc(input.outlet_name(outlet))
             );
+            for alt in alts {
+                let _ = write!(
+                    b,
+                    "<li><a href=\"{}\" rel=\"noopener\">{}</a></li>",
+                    esc(&alt.canonical_url),
+                    esc(&alt.title)
+                );
+            }
+            b.push_str("</ul></details>");
         }
         b.push_str("</div></li>");
     }
@@ -745,6 +828,14 @@ mod tests {
         );
         assert_eq!(t.json["cluster"]["id"], 1001);
         assert_eq!(t.json["timeline"][1]["copy_of"], "wire");
+        // The list opens on a day divider; the origin reads "first" with
+        // its clock time under it.
+        let tl = &t.html[t.html.find("<ol class=\"timeline\">").unwrap()..];
+        assert!(
+            tl.starts_with("<ol class=\"timeline\"><li class=\"day\">"),
+            "{tl}"
+        );
+        assert!(tl.contains("first<span class=\"clock\">"), "{tl}");
         assert!(t.md.starts_with("# Story 1001\n"));
         assert!(t
             .md
