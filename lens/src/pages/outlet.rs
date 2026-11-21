@@ -289,11 +289,15 @@ fn stories_block(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) ->
         let c = &input.clusters[id];
         let _ = write!(
             b,
-            "<li data-id=\"{}\"><a href=\"/story/{}/\">{}</a>{}<span class=\"n kg-muted\">{} · {}</span></li>",
+            "<li data-id=\"{}\"><a {}>{}</a>{}<span class=\"n kg-muted\">{} · {}</span></li>",
             c.id,
-            c.id,
+            input.story_href(c),
             esc(&c.primary_title),
-            if c.origin_outlet_id == o.id && c.outlet_count > 1 { " <span class=\"kg-tag\">first</span>" } else { "" },
+            if c.origin_outlet_id == o.id && c.outlet_count > 1 {
+                " <span class=\"kg-tag\">first</span>"
+            } else {
+                ""
+            },
             n(c.outlet_count as usize, "outlet"),
             time_el(c.created_at, input.export_time)
         );
@@ -323,9 +327,9 @@ fn stories_md(input: &Input, o: &Outlet, facts: &OutletFacts, page: usize) -> St
         let c = &input.clusters[id];
         let _ = writeln!(
             md,
-            "- [{}](/story/{}/) · {}{} · {}",
+            "- [{}]({}) · {}{} · {}",
             c.primary_title,
-            c.id,
+            input.story_url(c),
             n(c.outlet_count as usize, "outlet"),
             if c.origin_outlet_id == o.id && c.outlet_count > 1 {
                 " · first"

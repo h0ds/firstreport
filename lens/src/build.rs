@@ -126,7 +126,7 @@ pub fn write_site(
     }
     let mut n = 0;
     for c in input.clusters.values() {
-        if c.timeline.is_empty() {
+        if !input.has_page(c) {
             continue;
         }
         let t = crate::pages::story::story(input, c);
@@ -137,11 +137,9 @@ pub fn write_site(
     // Absorbed clusters keep their address as a stub to the survivor.
     let mut stubs = 0;
     for (absorbed, survivor) in crate::pages::stub::merges(input) {
-        let has_page = input
-            .clusters
-            .get(&absorbed)
-            .is_some_and(|c| !c.timeline.is_empty());
-        if has_page || !input.clusters.contains_key(&survivor) {
+        let has_page = |id: &u64| input.clusters.get(id).is_some_and(|c| input.has_page(c));
+        // A stub needs a page to point at.
+        if has_page(&absorbed) || !has_page(&survivor) {
             continue;
         }
         let t = crate::pages::stub::stub(input, absorbed, survivor);
@@ -247,6 +245,35 @@ mod tests {
             let (got, want) = (got.replace("\r\n", "\n"), want.replace("\r\n", "\n"));
             assert_eq!(got, want, "{name} differs from the golden copy");
         }
+        std::fs::remove_dir_all(&out).unwrap();
+    }
+
+    /// With the launch page policy, single reports and stories outside
+    /// the window have no page, are still listed, and no link dangles.
+    #[test]
+    fn bounded_pages_leave_no_dangling_links() {
+        let mut i = fixture_input();
+        i.pages = crate::input::Pages {
+            multi_outlet_only: true,
+            since_days: Some(14),
+        };
+        let out = std::env::temp_dir().join(format!("lens-bounded-{}", std::process::id()));
+        let (n, _) = write_site(&i, &out, 24, "https://kagami.example").unwrap();
+        let with_page = i.clusters.values().filter(|c| i.has_page(c)).count();
+        let without = i.clusters.values().filter(|c| !i.has_page(c)).count();
+        assert!(with_page > 0 && without > 0, "{with_page} {without}");
+        assert!(n >= with_page && n < i.clusters.len());
+        for c in i.clusters.values() {
+            let page = out.join("story").join(c.id.to_string()).join("index.html");
+            if i.has_page(c) {
+                assert!(page.exists(), "story {} should have a page", c.id);
+                assert!(c.outlet_count > 1);
+            } else if !c.timeline.is_empty() {
+                assert!(!i.story_url(c).starts_with("/story/"));
+            }
+        }
+        let r = crate::check::run(&out).unwrap();
+        assert!(r.problems.is_empty(), "{:?}", r.problems);
         std::fs::remove_dir_all(&out).unwrap();
     }
 }

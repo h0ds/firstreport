@@ -198,6 +198,19 @@ pub struct Input {
     /// Outlet id → icon file in the feed export's `icons/` (`feed icons`).
     /// Copied into the site as `/icons/<file name>`; empty when none.
     pub icons: BTreeMap<String, std::path::PathBuf>,
+    /// Which stories get a page of their own; set by `lens build` flags.
+    pub pages: Pages,
+}
+
+/// Which stories get a `/story/<id>/` page (`docs/deploy.md` §4.1). The
+/// default gives every story one. A story without a page is still
+/// listed everywhere; its links go to the first outlet's article.
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq)]
+pub struct Pages {
+    /// Only stories more than one outlet carried.
+    pub multi_outlet_only: bool,
+    /// Only stories active in this many days before the export.
+    pub since_days: Option<i64>,
 }
 
 fn read_ndjson<T: serde::de::DeserializeOwned>(path: &Path) -> Result<Vec<T>, String> {
@@ -241,6 +254,7 @@ pub fn read(feed_export: &Path, ledger_export: &Path) -> Result<Input, String> {
         claims: BTreeMap::new(),
         export_time,
         icons: BTreeMap::new(),
+        pages: Pages::default(),
     };
     if let Ok(entries) = std::fs::read_dir(feed_export.join("icons")) {
         for p in entries.flatten().map(|e| e.path()) {
@@ -326,6 +340,47 @@ fn attribute_unknown(input: &mut Input) {
 }
 
 impl Input {
+    /// Whether this story has a `/story/<id>/` page in this build.
+    pub fn has_page(&self, c: &Cluster) -> bool {
+        !c.timeline.is_empty()
+            && !(self.pages.multi_outlet_only && c.outlet_count < 2)
+            && self
+                .pages
+                .since_days
+                .is_none_or(|d| c.last_active_at >= self.export_time - d * 86_400)
+    }
+
+    /// Where a link to this story goes: its page when it has one,
+    /// otherwise the first outlet's article, otherwise that outlet's page.
+    pub fn story_url(&self, c: &Cluster) -> String {
+        if self.has_page(c) {
+            return format!("/story/{}/", c.id);
+        }
+        let article = self
+            .items
+            .get(&c.origin_item_id)
+            .or_else(|| c.timeline.first().and_then(|j| self.items.get(&j.item_id)))
+            .map(|i| i.canonical_url.as_str())
+            .filter(|u| u.starts_with("https://") || u.starts_with("http://"));
+        match article {
+            Some(u) => u.to_string(),
+            None if self.outlets.contains_key(&c.origin_outlet_id) => {
+                format!("/outlet/{}/", c.origin_outlet_id)
+            }
+            None => "/".to_string(),
+        }
+    }
+
+    /// `href="…"`, with `rel="noopener"` when the story link leaves the site.
+    pub fn story_href(&self, c: &Cluster) -> String {
+        let u = self.story_url(c);
+        let rel = if u.starts_with('/') {
+            ""
+        } else {
+            " rel=\"noopener\""
+        };
+        format!("href=\"{}\"{rel}", crate::render::esc(&u))
+    }
     /// Display name for an outlet id, falling back to the id.
     pub fn outlet_name<'a>(&'a self, id: &'a str) -> &'a str {
         self.outlets

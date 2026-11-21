@@ -695,11 +695,11 @@ pub fn cluster_card(
     let mut s = String::new();
     let _ = write!(
         s,
-        "<article class=\"kg-cluster{}\" data-id=\"{}\"{}><p class=\"title\"><a href=\"/story/{}/\">{}</a></p><div class=\"meta kg-muted\">",
+        "<article class=\"kg-cluster{}\" data-id=\"{}\"{}><p class=\"title\"><a {}>{}</a></p><div class=\"meta kg-muted\">",
         if enter { " kg-enter" } else { "" },
         c.id,
         reach.map(|f| format!(" data-reach=\"{}\"", f.reach)).unwrap_or_default(),
-        c.id,
+        input.story_href(c),
         esc(&c.primary_title)
     );
     let _ = write!(

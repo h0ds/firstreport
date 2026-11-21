@@ -205,16 +205,16 @@ pub fn story_page(input: &Input, window_hours: i64, page: usize) -> Twins {
     });
     let json = json!({
         "page": page, "pages": pages, "page_size": PAGE_SIZE, "export_time": now,
-        "stories": ids.iter().map(|(c, f)| json!({"id": c.id, "title": c.primary_title, "outlet_count": c.outlet_count, "reach": f.reach, "reports": f.reports})).collect::<Vec<_>>(),
+        "stories": ids.iter().map(|(c, f)| json!({"id": c.id, "url": input.story_url(c), "title": c.primary_title, "outlet_count": c.outlet_count, "reach": f.reach, "reports": f.reports})).collect::<Vec<_>>(),
         "full_list": "/index.json",
     });
     let mut md = format!("# Stories, page {page} of {pages}\n\nOrdered by reach then recency; the full list is /index.md.\n\n");
     for (c, f) in &ids {
         let _ = writeln!(
             md,
-            "- [{}](/story/{}/) · {} · reach {}",
+            "- [{}]({}) · {} · reach {}",
             c.primary_title,
-            c.id,
+            input.story_url(c),
             n(c.outlet_count as usize, "outlet"),
             f.reach
         );
@@ -274,9 +274,9 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
             let _ = write!(
                 b,
                 // Headline, then its chip and first outlet on the line below.
-                "<li class=\"spread\" data-id=\"{}\"><a href=\"/story/{}/\">{}</a><span class=\"n kg-muted\"><span class=\"kg-count\">{} in 6 h</span><span class=\"sep\">·</span>{}</span></li>",
+                "<li class=\"spread\" data-id=\"{}\"><a {}>{}</a><span class=\"n kg-muted\"><span class=\"kg-count\">{} in 6 h</span><span class=\"sep\">·</span>{}</span></li>",
                 c.id,
-                c.id,
+                input.story_href(c),
                 esc(&c.primary_title),
                 n(f.outlets_6h as usize, "outlet"),
                 crate::render::origin_link(input, &c.origin_outlet_id)
@@ -300,7 +300,7 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
             "itemListElement": recent.iter().chain(single.iter()).take(PAGE_SIZE).enumerate().map(|(k, (c, _))| json!({
                 "@type": "ListItem",
                 "position": k + 1,
-                "url": format!("/story/{}/", c.id),
+                "url": input.story_url(c),
                 "name": c.primary_title,
             })).collect::<Vec<_>>()
         })
@@ -345,9 +345,9 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
         for (c, f) in &spreading {
             let _ = writeln!(
                 md,
-                "- [{}](/story/{}/) · {} in 6 h{} · first: {}",
+                "- [{}]({}) · {} in 6 h{} · first: {}",
                 c.primary_title,
-                c.id,
+                input.story_url(c),
                 n(f.outlets_6h as usize, "outlet"),
                 if c.outlet_count != f.outlets_6h {
                     format!(" · {} in all", n(c.outlet_count as usize, "outlet"))
@@ -362,9 +362,9 @@ pub fn home(input: &Input, window_hours: i64) -> Twins {
     let md_line = |md: &mut String, c: &crate::input::Cluster, f: &crate::derive::ClusterFacts| {
         let _ = writeln!(
             md,
-            "- [{}](/story/{}/) · {} · {} · first: {} · reach {}: {}, {}",
+            "- [{}]({}) · {} · {} · first: {} · reach {}: {}, {}",
             c.primary_title,
-            c.id,
+            input.story_url(c),
             n(c.outlet_count as usize, "outlet"),
             n(c.item_count as usize, "item"),
             input.outlet_name(&c.origin_outlet_id),

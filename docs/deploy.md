@@ -82,6 +82,11 @@ the export. With 96 feeds that's about 4,700 stories a day, or 14,000
 files a day, which would pass even the paid plan's 100,000-file limit
 within a week.
 
+Items 1 and 2 are built and off by default: `kagami site
+--multi-outlet-pages --pages-since 14` (or the same flags on `lens
+build`). Do not turn on the window on a public site until the archive
+in item 3 exists, or old story URLs stop working.
+
 1. **Story pages only for stories more than one outlet carried.** 92% of
    stories (2,357 of 2,567 on the day this was measured) are single
    reports. Their card links straight to the outlet's article; they gain a

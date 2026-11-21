@@ -11,6 +11,7 @@ pub enum Command {
         out: PathBuf,
         window_hours: i64,
         base_url: String,
+        pages: crate::input::Pages,
     },
     /// Serve a built site for local review.
     Serve { out: PathBuf, bind: String },
@@ -23,6 +24,8 @@ usage: lens <command>
 
 commands:
   build --feed-export <dir> --ledger-export <dir> --out <dir> [--window <hours>] [--base-url <url>]
+        [--multi-outlet-pages]           story pages only for stories more than one outlet carried
+        [--pages-since <days>]           story pages only for stories active in the last <days> days
   serve --out <dir> [--bind <addr>]      static file server, default 127.0.0.1:8082
   check --out <dir>                      links resolve, twins present
 ";
@@ -52,6 +55,19 @@ pub fn parse<I: IntoIterator<Item = String>>(argv: I) -> Result<Command, String>
                 None => 24,
             },
             base_url: flag("--base-url").unwrap_or_default(),
+            pages: crate::input::Pages {
+                multi_outlet_only: rest.iter().any(|x| x == "--multi-outlet-pages"),
+                since_days: match flag("--pages-since") {
+                    Some(v) => Some(
+                        v.trim_end_matches('d')
+                            .parse()
+                            .ok()
+                            .filter(|d: &i64| *d > 0)
+                            .ok_or("--pages-since needs a positive number of days")?,
+                    ),
+                    None => None,
+                },
+            },
         }),
         "serve" => Ok(Command::Serve {
             out: need("--out")?.into(),
@@ -88,9 +104,28 @@ mod tests {
                 ledger_export: "l".into(),
                 out: "o".into(),
                 window_hours: 48,
-                base_url: String::new()
+                base_url: String::new(),
+                pages: Default::default(),
             }
         );
+        match parse(argv(
+            "build --feed-export f --ledger-export l --out o --multi-outlet-pages --pages-since 14d",
+        ))
+        .unwrap()
+        {
+            Command::Build { pages, .. } => assert_eq!(
+                pages,
+                crate::input::Pages {
+                    multi_outlet_only: true,
+                    since_days: Some(14)
+                }
+            ),
+            other => panic!("{other:?}"),
+        }
+        assert!(parse(argv(
+            "build --feed-export f --ledger-export l --out o --pages-since soon"
+        ))
+        .is_err());
         assert!(parse(argv("build --out o")).is_err());
         assert!(parse(argv(
             "build --feed-export f --ledger-export l --out o --window 0"

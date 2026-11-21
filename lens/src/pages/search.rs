@@ -25,7 +25,7 @@ async function search(q) {
   const outlets = d.outlets.map(o => ({o, s: Math.max(score(q, o.id), score(q, o.name), ...o.domains.map(x => score(q, x)))})).filter(x => x.s).sort((a, b) => b.s - a.s || a.o.name.localeCompare(b.o.name)).slice(0, 20);
   const stories = d.stories.map(c => ({c, s: score(q, c.title)})).filter(x => x.s).sort((a, b) => b.s - a.s || b.c.created_at - a.c.created_at).slice(0, 50);
   $('#outlets').innerHTML = (outlets.length ? '<h2>Outlets</h2><ul class="stories">' + outlets.map(({o}) => `<li><a href="/outlet/${esc(o.id)}/" data-outlet="${esc(o.id)}">${esc(o.name || o.id)}</a><span class="kg-muted">${esc(o.domains.join(', '))}</span><span class="n kg-muted">${o.claims ? n(o.claims, 'claim') : 'not assessed yet'}</span></li>`).join('') + '</ul>' : '');
-  $('#stories').innerHTML = (stories.length ? '<h2>Stories</h2><ul class="stories">' + stories.map(({c}) => `<li data-id="${c.id}"><a href="/story/${c.id}/">${esc(c.title)}</a><span class="n kg-muted">${n(c.outlet_count, 'outlet')} · ${esc(c.created)}</span></li>`).join('') + '</ul>' : '');
+  $('#stories').innerHTML = (stories.length ? '<h2>Stories</h2><ul class="stories">' + stories.map(({c}) => `<li data-id="${c.id}"><a href="${esc(c.url)}"${c.url.startsWith('/') ? '' : ' rel="noopener"'}>${esc(c.title)}</a><span class="n kg-muted">${n(c.outlet_count, 'outlet')} · ${esc(c.created)}</span></li>`).join('') + '</ul>' : '');
   if (!outlets.length && !stories.length) $('#stories').innerHTML = '<div class="empty">Nothing in the index matches that.</div>';
 }
 let t;
@@ -50,7 +50,7 @@ pub fn search(input: &Input, window_hours: i64) -> Twins {
             "claims": input.claims.get(&o.id).map(|v| v.len()).unwrap_or(0),
         })).collect::<Vec<_>>(),
         "stories": stories.iter().map(|c| json!({
-            "id": c.id, "title": c.primary_title, "outlet_count": c.outlet_count,
+            "id": c.id, "url": input.story_url(c), "title": c.primary_title, "outlet_count": c.outlet_count,
             "created_at": c.created_at, "created": datetime(c.created_at),
         })).collect::<Vec<_>>(),
     });
