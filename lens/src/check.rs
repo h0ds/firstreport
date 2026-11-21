@@ -85,6 +85,9 @@ fn local_links(html: &str) -> Vec<String> {
 }
 
 fn resolves(site: &Path, target: &str) -> bool {
+    // A query or fragment names a state of the page, not another file:
+    // `/search/?q=bbc` is the search page.
+    let target = target.split(['?', '#']).next().unwrap_or(target);
     let rel = target.trim_start_matches('/');
     let p = site.join(rel);
     if target.ends_with('/') || rel.is_empty() {
