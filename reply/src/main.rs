@@ -457,7 +457,8 @@ pub fn check_fixture(
             continue;
         }
         match std::fs::read_to_string(&golden) {
-            Ok(g) if g == rendered => {}
+            // Line endings are git's business (a Windows checkout has CRLF).
+            Ok(g) if g.replace("\r\n", "\n") == rendered => {}
             Ok(_) => msgs.push(format!(
                 "{}: draft differs from golden; run `reply check --update` and review the diff",
                 golden.display()
