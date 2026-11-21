@@ -221,15 +221,19 @@ a weekly schedule; it re-imports only sources that are due.
 
 ## 6. Fonts
 
-`design/fonts/` holds only a README. It mentions a `fetch.sh` that was
-never written because the GitHub releases it would download from were
-blocked. Fetch the three families by hand from the sources in that
-README (Instrument Serif, Inter, JetBrains Mono, all OFL), subset them
-with the `pyftsubset` line given there, and drop the `.woff2` files in
-`design/fonts/` (gitignored). Then open `design/preview.html` and
-confirm Instrument Serif renders the wordmark; until then the serif
-falls back to the system serif. Writing the script once the URLs are
-confirmed is a five-minute follow-up.
+`design/fonts/fetch.sh` downloads the three families (Instrument
+Serif, Inter, JetBrains Mono, all OFL) from a pinned google/fonts
+commit, subsets them and writes the four `.woff2` files into
+`design/fonts/` (gitignored), about 164 KB together:
+
+```
+pip install fonttools brotli
+sh design/fonts/fetch.sh
+```
+
+Then open `design/preview.html` and confirm Instrument Serif renders
+the wordmark; without the files the serif falls back to the system
+serif.
 
 ## 7. Terms to confirm before importing
 

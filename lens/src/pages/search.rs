@@ -10,8 +10,9 @@ use super::Twins;
 use crate::input::Input;
 use crate::render::{datetime, html, n, Page};
 
-const SCRIPT: &str = r#"<script>
-const $ = s => document.querySelector(s);
+/// `/search.js`: a file of its own, so the site's Content-Security-Policy
+/// can forbid inline scripts (`docs/deploy.md` §4.2).
+pub const SCRIPT: &str = r#"const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const n = (k, w) => `${k} ${w}${k === 1 ? '' : (w.endsWith('y') ? 'ies' : 's')}`.replace(/ys$/, 'ies');
 let idx = null;
@@ -32,7 +33,7 @@ let t;
 $('#q').addEventListener('input', e => { clearTimeout(t); t = setTimeout(() => search(e.target.value), 120); });
 const q0 = new URLSearchParams(location.search).get('q');
 if (q0) { $('#q').value = q0; search(q0); }
-</script>"#;
+"#;
 
 pub fn search(input: &Input, window_hours: i64) -> Twins {
     let since = input.export_time - window_hours * crate::derive::HOUR;
@@ -57,7 +58,7 @@ pub fn search(input: &Input, window_hours: i64) -> Twins {
     let mut b = String::new();
     let _ = write!(
         b,
-        "<h1>Search</h1><p class=\"kg-muted\">{} and {} from the {} hours to {}. Matches by name, id, domain or title; nothing is ranked beyond that.</p><input id=\"q\" class=\"kg-input wide\" type=\"search\" placeholder=\"Outlet name, id or domain; story title\" autocomplete=\"off\" autofocus><noscript><p class=\"kg-muted\">Search runs in the browser over <a href=\"/search/index.json\">index.json</a>; without scripts, read that file or the <a href=\"/\">front page</a>.</p></noscript><div id=\"outlets\"></div><div id=\"stories\"></div>{SCRIPT}",
+        "<h1>Search</h1><p class=\"kg-muted\">{} and {} from the {} hours to {}. Matches by name, id, domain or title; nothing is ranked beyond that.</p><input id=\"q\" class=\"kg-input wide\" type=\"search\" placeholder=\"Outlet name, id or domain; story title\" autocomplete=\"off\" autofocus><noscript><p class=\"kg-muted\">Search runs in the browser over <a href=\"/search/index.json\">index.json</a>; without scripts, read that file or the <a href=\"/\">front page</a>.</p></noscript><div id=\"outlets\"></div><div id=\"stories\"></div><script src=\"/search.js\" defer></script>",
         n(input.outlets.len(), "outlet"),
         n(stories.len(), "story"),
         window_hours,
@@ -105,7 +106,12 @@ mod tests {
         let i = fixture_input();
         let t = search(&i, 24 * 90);
         assert!(t.html.contains("id=\"q\""));
-        assert!(t.html.contains("fetch('/search/index.json')"));
+        // The script is a file, so the page carries no inline script.
+        assert!(t
+            .html
+            .contains("<script src=\"/search.js\" defer></script>"));
+        assert!(!t.html.contains("<script>"));
+        assert!(SCRIPT.contains("fetch('/search/index.json')"));
         assert_eq!(t.json["outlets"].as_array().unwrap().len(), 3);
         assert_eq!(t.json["stories"].as_array().unwrap().len(), 61);
         assert_eq!(t.json["stories"][0]["id"], 1060, "newest first");

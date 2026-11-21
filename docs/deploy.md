@@ -137,11 +137,11 @@ text instead of a link. Also make `lens check` fail on any link to
 
 *(Written, in `deploy/`, with these differences: units are named
 `kagami-*`; the daily job does not yet ship old snapshots to R2 or open
-the ledger-refresh pull request; `setup.sh` does not fetch fonts,
-because `design/fonts/fetch.sh` does not exist yet. `lens` writes
-`_headers` with the font and icon cache rules and two security headers;
-hashed CSS names, the Content-Security-Policy and font preloads are not
-done. None of `deploy/` has run against a real server or Cloudflare
+the ledger-refresh pull request. `lens` writes `_headers` with the
+font and icon cache rules, a Content-Security-Policy that allows only
+the site's own files, and two more security headers; the search script
+is a file of its own so the policy can forbid inline scripts. Hashed
+CSS names and font preloads are not done. None of `deploy/` has run against a real server or Cloudflare
 account: see `deploy/README.md`.)*
 
 - `deploy/wrangler.jsonc`: a Worker with `assets.directory = "../site"`,

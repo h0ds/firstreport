@@ -16,7 +16,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 apt-get update -q
-apt-get install -y -q build-essential pkg-config git curl ca-certificates rclone unattended-upgrades nodejs npm
+apt-get install -y -q build-essential pkg-config git curl ca-certificates rclone unattended-upgrades nodejs npm python3-fonttools python3-brotli
 
 if ! command -v litestream >/dev/null; then
   echo "litestream is not installed: install the .deb for this machine from its releases page, then run this again" >&2
@@ -30,6 +30,7 @@ as_kagami 'command -v cargo >/dev/null || curl --proto "=https" --tlsv1.2 -sSf h
 [ -d "$KAGAMI_HOME/.git" ] || as_kagami "git clone '$REPO_URL' '$KAGAMI_HOME'"
 as_kagami "cd '$KAGAMI_HOME' && cargo build --release --locked && git rev-parse HEAD > target/.built-rev"
 as_kagami "cd '$KAGAMI_HOME/feed' && ../target/release/feed fetch-model"
+ls "$KAGAMI_HOME"/design/fonts/*.woff2 >/dev/null 2>&1 || as_kagami "cd '$KAGAMI_HOME' && sh design/fonts/fetch.sh"
 
 install -d -m 700 /etc/kagami
 if [ ! -f /etc/kagami/env ]; then

@@ -69,11 +69,14 @@ fn copy_fonts(site: &Path) -> Result<usize, String> {
 }
 
 /// Response headers for hosts that read a `_headers` file (Cloudflare,
-/// Netlify); ignored elsewhere (`docs/deploy.md` §4.2). Font files never
+/// Netlify); ignored elsewhere (`docs/deploy.md` §4.2). The policy lets a
+/// page load only this site's own files; styles may be inline because
+/// charts set sizes in `style` attributes. Font files never
 /// change under a name; icons may, so they get a day. Pages and CSS
 /// keep the host's default, which revalidates, so a rebuild shows at once.
 const HEADERS: &str = "\
 /*
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
@@ -117,6 +120,8 @@ pub fn write_site(
         .map_err(|e| e.to_string())?;
     std::fs::write(tmp.join("robots.txt"), crate::llms::ROBOTS_TXT).map_err(|e| e.to_string())?;
     std::fs::write(tmp.join("_headers"), HEADERS).map_err(|e| e.to_string())?;
+    std::fs::write(tmp.join("search.js"), crate::pages::search::SCRIPT)
+        .map_err(|e| e.to_string())?;
     write_twins(&tmp, &crate::pages::home::home(input, window_hours))?;
     write_twins(
         &tmp.join("search"),
