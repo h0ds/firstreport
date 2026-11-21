@@ -41,7 +41,7 @@ prices and limits checked in September 2026.
 | The site | Cloudflare Workers static assets, free plan | **$0**: static requests are free and unlimited; 20,000 files per deploy |
 | Archive | Cloudflare R2 | **$0** within the free 10 GB, 1M writes, 10M reads a month |
 | Database backup | Litestream to R2 | **$0** (same free tier) |
-| Domain | Cloudflare Registrar, at cost | ~**$10/yr** for a `.org` |
+| Domain | Cloudflare Registrar, at cost | `firstreport.cc`, at cost |
 | Monitoring | healthchecks.io free plan | **$0** |
 | TLS, CDN, compression, DDoS | Cloudflare | **$0** |
 | **Total** | | **about $10 a year** (the domain), while hoard-alpha has room |

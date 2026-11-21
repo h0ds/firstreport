@@ -20,7 +20,8 @@ files implement its §4.4, §5 and §6.
 Live since 2026-11-21. The box is `hoard-alpha` (Ubuntu 24.04, x86_64,
 on Tailscale), shared with other work; First Report runs there as the
 `firstreport` user. The site is at
-https://firstreport-site.updogjp.workers.dev until a domain is chosen.
+https://firstreport.cc (registered 2026-11-21 with Cloudflare Registrar;
+Always Use HTTPS is on). The workers.dev address still answers.
 
 | Piece | State |
 |---|---|
