@@ -41,3 +41,6 @@ jobs:
         run: cargo build --workspace --all-targets --locked
       - name: Test
         run: cargo test --workspace --locked
+      - name: Archive worker
+        if: runner.os == 'Linux'
+        run: node deploy/worker.test.mjs

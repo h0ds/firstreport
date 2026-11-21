@@ -1,0 +1,19 @@
+[Unit]
+Description=Kagami feed: poll, cluster, record
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=kagami
+WorkingDirectory=/home/kagami/kagami/feed
+Environment=RUST_LOG=feed=info
+ExecStart=/home/kagami/kagami/target/release/feed run
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/home/kagami/kagami/feed
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

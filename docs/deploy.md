@@ -82,10 +82,14 @@ the export. With 96 feeds that's about 4,700 stories a day, or 14,000
 files a day, which would pass even the paid plan's 100,000-file limit
 within a week.
 
-Items 1 and 2 are built and off by default: `kagami site
---multi-outlet-pages --pages-since 14` (or the same flags on `lens
-build`). Do not turn on the window on a public site until the archive
-in item 3 exists, or old story URLs stop working.
+All three are built. Items 1 and 2 are flags, off by default: `kagami
+site --multi-outlet-pages --pages-since 14` (or the same on `lens
+build`); `deploy/bin/site.sh` passes them. Item 3 is `deploy/worker.js`
+and `deploy/bin/daily.sh`, done more simply than described below: the
+daily job copies every live story page to R2, uploading only those
+whose content changed, so the last copy of a story is its final page
+and nothing has to work out which stories are leaving. Do not use the
+window on a public site without the daily job running.
 
 1. **Story pages only for stories more than one outlet carried.** 92% of
    stories (2,357 of 2,567 on the day this was measured) are single
@@ -130,6 +134,15 @@ text instead of a link. Also make `lens check` fail on any link to
 `127.0.0.1` or `localhost`, so this can't come back.
 
 ### 4.4 Deploy config in the repo
+
+*(Written, in `deploy/`, with these differences: units are named
+`kagami-*`; the daily job does not yet ship old snapshots to R2 or open
+the ledger-refresh pull request; `setup.sh` does not fetch fonts,
+because `design/fonts/fetch.sh` does not exist yet. `lens` writes
+`_headers` with the font and icon cache rules and two security headers;
+hashed CSS names, the Content-Security-Policy and font preloads are not
+done. None of `deploy/` has run against a real server or Cloudflare
+account: see `deploy/README.md`.)*
 
 - `deploy/wrangler.jsonc`: a Worker with `assets.directory = "../site"`,
   an R2 binding for the archive, and `not_found_handling` routing misses

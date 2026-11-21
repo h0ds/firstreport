@@ -1,0 +1,12 @@
+# Continuous replication of feed's database to R2 (docs/deploy.md 6).
+# LITESTREAM_ACCESS_KEY_ID, LITESTREAM_SECRET_ACCESS_KEY and
+# R2_ENDPOINT come from /etc/kagami/env.
+dbs:
+  - path: /home/kagami/kagami/feed/data/feed.db
+    replicas:
+      - type: s3
+        bucket: kagami-archive
+        path: backup/feed.db
+        endpoint: ${R2_ENDPOINT}
+        region: auto
+        sync-interval: 1m

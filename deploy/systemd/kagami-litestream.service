@@ -1,0 +1,14 @@
+[Unit]
+Description=Litestream: replicate feed.db to R2
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=kagami
+EnvironmentFile=/etc/kagami/env
+ExecStart=/usr/bin/litestream replicate -config /home/kagami/kagami/deploy/litestream.yml
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

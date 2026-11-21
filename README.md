@@ -18,6 +18,7 @@ order, and one command over them:
 | [`lens/`](lens/) | 3 | Static site generated from `feed` and `ledger` exports: stories, outlets, coverage by a named source's labels. |
 | [`reply/`](reply/) | 4 | A social account that answers "prove it" with sourced provenance from `feed` and `ledger`, never a verdict. |
 | [`kagami/`](kagami/) | | One command over the pillars: `run`, `site`, `doctor`. |
+| [`mcp/`](mcp/) | | A Model Context Protocol server over `feed` and `ledger`, so an agent can ask for provenance directly. |
 
 Each pillar has its plan under `<tool>/docs/plan.md`; `feed`'s carries the
 project rules that apply to every pillar. `docs/local-runbook.md` lists
@@ -53,6 +54,10 @@ every source, licence and date. Each server also serves an OpenAPI 3.1
 document at `/v1/openapi.json`, with schemas generated from its types,
 so a tool-using agent can call it correctly the first time. Every page
 for people links its JSON twin from `<head>`. `design/DESIGN.md` §11 has the rules.
+
+[`deploy/`](deploy/) holds what puts the site on the internet: the
+Cloudflare Worker config, the archive Worker, systemd units and the
+setup script. `docs/deploy.md` is the plan they implement.
 
 ## Getting started
 

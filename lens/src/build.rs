@@ -68,6 +68,22 @@ fn copy_fonts(site: &Path) -> Result<usize, String> {
     Ok(n)
 }
 
+/// Response headers for hosts that read a `_headers` file (Cloudflare,
+/// Netlify); ignored elsewhere (`docs/deploy.md` §4.2). Font files never
+/// change under a name; icons may, so they get a day. Pages and CSS
+/// keep the host's default, which revalidates, so a rebuild shows at once.
+const HEADERS: &str = "\
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/icons/*
+  Cache-Control: public, max-age=86400
+";
+
 /// Returns the number of story and outlet pages written.
 pub fn write_site(
     input: &Input,
@@ -100,6 +116,7 @@ pub fn write_site(
     std::fs::write(tmp.join("llms.txt"), crate::llms::llms_txt(input))
         .map_err(|e| e.to_string())?;
     std::fs::write(tmp.join("robots.txt"), crate::llms::ROBOTS_TXT).map_err(|e| e.to_string())?;
+    std::fs::write(tmp.join("_headers"), HEADERS).map_err(|e| e.to_string())?;
     write_twins(&tmp, &crate::pages::home::home(input, window_hours))?;
     write_twins(
         &tmp.join("search"),
@@ -206,6 +223,7 @@ mod tests {
             out.join("index.html").exists()
                 && out.join("llms.txt").exists()
                 && out.join("robots.txt").exists()
+                && out.join("_headers").exists()
         );
         assert!(
             out.join("outlet/blog/index.md").exists(),

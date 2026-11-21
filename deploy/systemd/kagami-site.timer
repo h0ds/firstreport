@@ -1,0 +1,9 @@
+[Unit]
+Description=Rebuild and deploy the Kagami site every 10 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitInactiveSec=10min
+
+[Install]
+WantedBy=timers.target
