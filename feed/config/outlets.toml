@@ -483,3 +483,11 @@ domains = ["fnn.jp"]
 id = "reuters"
 name = "Reuters"
 domains = ["reuters.com"]
+
+# Registered without a feed: its RSS terms allow private use only, not
+# public news overviews (checked 2026-11-21). Links to it are credited to
+# it and ledger can hold facts about it; feed collects none of its items.
+[[outlet]]
+id = "ekstrabladet"
+name = "Ekstra Bladet"
+domains = ["ekstrabladet.dk", "eb.dk"]
