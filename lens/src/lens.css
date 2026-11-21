@@ -2,7 +2,7 @@
    layouts, no new objects: the timeline list, the label table, the
    outlet story list. Sizes, line heights and spacing come only from
    tokens (design/DESIGN.md §3, §4); the lens tests reject raw values. */
-main { max-width: var(--kg-measure); margin: 0 auto; padding: var(--kg-s6) var(--kg-s5) var(--kg-s9); }
+main { max-width: var(--kg-measure); overflow-wrap: break-word; margin: 0 auto; padding: var(--kg-s6) var(--kg-s5) var(--kg-s9); }
 main.wide { max-width: var(--kg-measure-wide); }
 header.chrome { display: flex; align-items: baseline; justify-content: space-between; gap: var(--kg-s4); flex-wrap: wrap; padding-bottom: var(--kg-s4); margin-bottom: var(--kg-s6); border-bottom: 1px solid var(--kg-line); }
 header.chrome .kg-wordmark:hover { color: var(--kg-text); text-decoration: none; }
@@ -78,6 +78,9 @@ main > p a:hover, main > ul:not(.stories) a:hover { text-decoration-color: curre
 h3 a { color: inherit; }
 h3 a:hover { color: var(--kg-blue); }
 
+/* a tag never pushes the page wider than a phone */
+main .kg-tag { max-width: 100%; white-space: normal; }
+.kg-provenance > * { min-width: 0; overflow-wrap: anywhere; }
 .kg-input.wide, input.wide { width: 100%; box-sizing: border-box; }
 .empty { color: var(--kg-text-muted); padding: var(--kg-s5) 0; }
 
