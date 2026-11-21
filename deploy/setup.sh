@@ -30,6 +30,8 @@ as_firstreport 'command -v cargo >/dev/null || curl --proto "=https" --tlsv1.2 -
 [ -d "$FIRSTREPORT_HOME/.git" ] || as_firstreport "git clone '$REPO_URL' '$FIRSTREPORT_HOME'"
 as_firstreport "cd '$FIRSTREPORT_HOME' && cargo build --release --locked && git rev-parse HEAD > target/.built-rev"
 as_firstreport "cd '$FIRSTREPORT_HOME/feed' && ../target/release/feed fetch-model"
+# Outlet icons for the site; without them every badge is a letter tile.
+as_firstreport "cd '$FIRSTREPORT_HOME/feed' && ../target/release/feed icons"
 ls "$FIRSTREPORT_HOME"/design/fonts/*.woff2 >/dev/null 2>&1 || as_firstreport "cd '$FIRSTREPORT_HOME' && sh design/fonts/fetch.sh"
 
 install -d -m 700 /etc/firstreport

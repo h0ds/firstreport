@@ -19,6 +19,8 @@ if [ -d site/story ]; then
 fi
 
 (cd feed && ../target/release/feed prune --embeddings)
+# Icons for outlets added since; ones already fetched are skipped.
+(cd feed && ../target/release/feed icons) || echo "feed icons failed; site keeps the icons it has" >&2
 
 if [ -n "${HC_DAILY_URL:-}" ]; then
   curl -fsS -m 10 --retry 3 -o /dev/null "$HC_DAILY_URL"
