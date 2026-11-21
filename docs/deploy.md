@@ -8,7 +8,7 @@ prices and limits checked in September 2026.
 ## 1. Shape
 
 ```
-                ┌──────────────── Hetzner CAX11 (one box) ────────────────┐
+                ┌───────────────── hoard-alpha (one box) ─────────────────┐
   outlets' ───▶ │ feed run (systemd)        ledger (data in git)          │
   RSS feeds     │   SQLite + snapshots        claims/*.toml               │
                 │        │                        │                       │
@@ -37,14 +37,14 @@ prices and limits checked in September 2026.
 
 | Item | Service | Cost |
 |---|---|---|
-| The box | Hetzner CAX11: 2 ARM vCPU, 4 GB, 40 GB NVMe, 20 TB traffic | €5.99/mo + €0.50 IPv4 = **€6.49/mo** |
+| The box | hoard-alpha, an existing server shared with other work: 4 vCPU x86_64, 7.6 GB, 75 GB disk. Planned before as a Hetzner CAX11 (€6.49/mo) | **$0** extra |
 | The site | Cloudflare Workers static assets, free plan | **$0**: static requests are free and unlimited; 20,000 files per deploy |
 | Archive | Cloudflare R2 | **$0** within the free 10 GB, 1M writes, 10M reads a month |
 | Database backup | Litestream to R2 | **$0** (same free tier) |
 | Domain | Cloudflare Registrar, at cost | ~**$10/yr** for a `.org` |
 | Monitoring | healthchecks.io free plan | **$0** |
 | TLS, CDN, compression, DDoS | Cloudflare | **$0** |
-| **Total** | | **≈ €6.50/mo + $10/yr, about $90 a year** |
+| **Total** | | **about $10 a year** (the domain), while hoard-alpha has room |
 
 The only upgrade on the horizon is Workers Paid at **$5/mo**, if the live
 site needs more than 20,000 files. §4.1 keeps it under.
@@ -63,7 +63,10 @@ closed laptop stops the rebuilds, though the published site stays up.
 - **Workers static assets over Pages**: same price, but Workers can run a
   small script when a file is missing, which is how the R2 archive (§4.1)
   keeps old URLs working without a separate server.
-- **Hetzner ARM** is the cheapest reliable always-on box with enough RAM
+- **hoard-alpha** was already running, idle, on Tailscale, with room
+  to spare, so it took the box's job (deploy/README.md has its state).
+  The plan before it, kept for a move:
+  **Hetzner ARM** is the cheapest reliable always-on box with enough RAM
   for the ONNX model (~500 MB steady), and its 20 TB of traffic covers
   feed polling many times over. The `fetch-model` command already picks
   the ARM runtime and model.

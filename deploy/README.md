@@ -17,22 +17,36 @@ files implement its §4.4, §5 and §6.
 
 ## Status
 
-Nothing here has run against a real server or a Cloudflare account. The
-Worker's logic is tested with stand-ins for R2 and the asset store; the
-shell scripts are syntax-checked only. Expect to fix small things on
-the first real run, in this order:
+Live since 2026-11-21. The box is `hoard-alpha` (Ubuntu 24.04, x86_64,
+on Tailscale), shared with other work; First Report runs there as the
+`firstreport` user. The site is at
+https://firstreport-site.updogjp.workers.dev until a domain is chosen.
 
-1. `wrangler deploy` by hand from a laptop, against `*.workers.dev`.
-   This proves `wrangler.jsonc` and the Worker.
-2. `bin/daily.sh` by hand, then request a story URL that is in the
-   bucket but not in the site.
-3. `setup.sh` on a fresh box.
+| Piece | State |
+|---|---|
+| `wrangler deploy` from a laptop | done |
+| R2 bucket `firstreport-archive` | created |
+| `firstreport-feed` | running |
+| `firstreport-site` timer | running; first run deployed from the box |
+| `firstreport-daily` timer, `firstreport-litestream` | not started: they need the R2 keys in `/etc/firstreport/env` |
+| Archive round trip (`bin/daily.sh`, then a story URL only in the bucket) | not tried |
 
-## Before the first deploy
+## What the first setup ran into
 
-- Create the R2 bucket `firstreport-archive`, or change the name in
-  `wrangler.jsonc`, `litestream.yml` and `env.example` together.
-- Set the Worker's `name` and the bucket to whatever the project ends
-  up being called.
-- The site job needs `--base-url`; it refuses to run without
-  `FIRSTREPORT_BASE_URL`.
+- **onnxruntime moved.** `github.com/microsoft/onnxruntime` returns 404,
+  so `feed fetch-model` fails to download the runtime. On hoard-alpha
+  `models/libonnxruntime.so` came from Microsoft's NuGet package
+  `Microsoft.ML.OnnxRuntime` 1.27.1
+  (`runtimes/linux-x64/native/libonnxruntime.so`). `fetch-model` still
+  points at GitHub.
+- **Node.** Ubuntu's `nodejs` is 18; wrangler 4 runs on the NodeSource
+  build of Node 22 installed on the box.
+- **pyftsubset.** Ubuntu's `python3-fonttools` has no `pyftsubset`
+  command; `design/fonts/fetch.sh` now falls back to
+  `python3 -m fontTools.subset`.
+- **Repository access.** The repository is private; the box reads it
+  with a read-only deploy key (`hoard-alpha (read-only)`) held by the
+  `firstreport` user.
+- **Tokens.** The Workers token and the R2 token are both limited to
+  hoard-alpha's two addresses, 62.238.106.245 and 2a01:4f9:c01d:bd2::1.
+  A new box needs new tokens or a changed filter.
