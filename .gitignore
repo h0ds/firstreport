@@ -20,3 +20,4 @@ INFRA-PLAN.md
 
 # ledger change-guard review files are read locally, then applied or discarded (docs/steward.md §4)
 ledger/data/review/
+.wrangler/

@@ -11,6 +11,11 @@
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
   },
+  // The deploy token needs Workers Routes, Zone Read and DNS Edit on this
+  // zone for wrangler to keep the custom domain attached.
+  "routes": [
+    { "pattern": "firstreport.cc", "custom_domain": true }
+  ],
   "r2_buckets": [
     { "binding": "ARCHIVE", "bucket_name": "firstreport-archive" }
   ]
