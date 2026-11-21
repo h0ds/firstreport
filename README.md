@@ -106,3 +106,9 @@ runbook's job; `kagami doctor` reports what is still missing.
   `reply/docs/plan.md` §16.
 - **kagami** runs `feed` and `ledger` together, builds and checks the
   site, and reports what is in place.
+
+## Licence
+
+The code is licensed under either of [Apache License 2.0](LICENSE-APACHE)
+or [MIT](LICENSE-MIT), at your option. Outlet facts in `ledger/data/` keep
+the licence of the source each one names.
