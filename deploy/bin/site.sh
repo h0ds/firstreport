@@ -16,7 +16,7 @@ git pull --ff-only --quiet
 built_file=target/.built-rev
 built=$(cat "$built_file" 2>/dev/null || true)
 head=$(git rev-parse HEAD)
-if [ -z "$built" ] || ! git diff --quiet "$built" "$head" -- Cargo.toml Cargo.lock '*/Cargo.toml' '*/src' design/tokens.css; then
+if [ -z "$built" ] || ! git diff --quiet "$built" "$head" -- Cargo.toml Cargo.lock '*/Cargo.toml' '*/src/*' design/tokens.css; then
   cargo build --release --locked
   echo "$head" > "$built_file"
 fi
