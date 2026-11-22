@@ -33,7 +33,7 @@ refresh_days = 180
 [[source]]
 id = "site"
 name = "Outlet home page"
-url = "https://github.com/h0ds/kagami/tree/main/ledger"
+url = "https://github.com/h0ds/firstreport/tree/main/ledger"
 licence = "First Report observation"
 kind = "observed"
 notes = "Whether the outlet's site uses HTTPS, and which pages (about, contact, corrections, ethics, staff) its home page links to. A missing page means it isn't linked from the home page, not that it doesn't exist."
@@ -42,7 +42,7 @@ refresh_days = 30
 [[source]]
 id = "feed_behaviour"
 name = "First Report feed behaviour"
-url = "https://github.com/h0ds/kagami/tree/main/feed"
+url = "https://github.com/h0ds/firstreport/tree/main/feed"
 licence = "First Report observation"
 kind = "observed"
 notes = "How often the outlet posts, how often it edits or removes items, how much it copies and how often it's first. Outlets with fewer than ten items in the window are left out."

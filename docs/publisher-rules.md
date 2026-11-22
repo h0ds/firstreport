@@ -37,7 +37,7 @@ These are code, not policy; the tests in `feed/src/fetch/` check them.
 - **Crawl-delay is honoured**, capped at two minutes, as the spacing
   between any two requests to the host.
 - **We identify ourselves.** The User-Agent is
-  `firstreport-feed/<version> (+https://github.com/h0ds/kagami)`. Hosts that
+  `firstreport-feed/<version> (+https://github.com/h0ds/firstreport)`. Hosts that
   reject anything not browser-shaped get the `Mozilla/5.0 (compatible;
   firstreport-feed/…)` form, which still names the project and links here.
 - **Conditional requests.** ETag and Last-Modified are sent; a 304 costs

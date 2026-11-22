@@ -17,7 +17,7 @@ pub const RENDER_URL: &str =
 pub const USER_AGENT: &str = concat!(
     "firstreport-ledger/",
     env!("CARGO_PKG_VERSION"),
-    " (+https://github.com/h0ds/kagami)"
+    " (+https://github.com/h0ds/firstreport)"
 );
 
 /// The list's own status legend, in its own order.

@@ -3,10 +3,10 @@
 # Ubuntu 24.04; safe to run again. It installs and builds, and stops
 # short of starting anything until /etc/firstreport/env has been filled in.
 #
-#   sudo REPO_URL=https://github.com/h0ds/kagami.git bash setup.sh
+#   sudo REPO_URL=https://github.com/h0ds/firstreport.git bash setup.sh
 set -euo pipefail
 
-: "${REPO_URL:=https://github.com/h0ds/kagami.git}"
+: "${REPO_URL:=https://github.com/h0ds/firstreport.git}"
 FIRSTREPORT_USER=firstreport
 FIRSTREPORT_HOME=/home/$FIRSTREPORT_USER/firstreport
 

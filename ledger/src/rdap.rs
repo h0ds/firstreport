@@ -22,7 +22,7 @@ pub const REDIRECTOR: &str = "https://rdap.org/domain/";
 pub const USER_AGENT: &str = concat!(
     "firstreport-ledger/",
     env!("CARGO_PKG_VERSION"),
-    " (+https://github.com/h0ds/kagami)"
+    " (+https://github.com/h0ds/firstreport)"
 );
 
 /// The registrable domain of a host: `news.bbc.co.uk` → `bbc.co.uk`,

@@ -162,7 +162,7 @@ pub fn html(p: &Page) -> String {
   {status}
 </header>
 {body}
-<footer class="kg-muted">Every number on this page is a count from First Report feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · <a href="/outlets/">Outlets</a> · <a href="/about/">About</a> · Machine readers: <a href="{path}index.json">JSON</a> · <a href="{path}index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a></footer>
+<footer class="kg-muted">Every number on this page is a count from First Report feed; every label is a source's, with its licence and date. Nothing here rates an outlet. <a href="/search/">Search</a> · <a href="/outlets/">Outlets</a> · <a href="/about/">About</a> · Machine readers: <a href="{path}index.json">JSON</a> · <a href="{path}index.md">Markdown</a> · <a href="/llms.txt">llms.txt</a> · <a href="https://github.com/h0ds/firstreport" rel="noopener">Source on GitHub</a></footer>
 </main>
 </body>
 </html>

@@ -6,7 +6,7 @@ members = ["feed", "ledger", "lens", "firstreport", "reply", "mcp"]
 version = "0.1.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/h0ds/kagami"
+repository = "https://github.com/h0ds/firstreport"
 
 [profile.release]
 lto = "thin"

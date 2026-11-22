@@ -65,7 +65,7 @@ pub fn about(input: &Input) -> Twins {
     b.push_str("<h2>For machine readers</h2><p>Every page has <code>index.json</code> and <code>index.md</code> beside it with with the same content. <a href=\"/llms.txt\">/llms.txt</a> states the rules of use; <a href=\"/sitemap.xml\">/sitemap.xml</a> lists every page; <a href=\"/search/index.json\">/search/index.json</a> is the index of outlets and stories. Please cite the original source and keep its licence. Don't turn these facts into a score.</p>");
     let _ = write!(
         b,
-        "<p class=\"kg-muted\">Built from an export at {} covering {} in the pool and {} with claims. First Report is open source: <a href=\"https://github.com/h0ds/kagami\" rel=\"noopener\">github.com/h0ds/kagami</a>.</p>",
+        "<p class=\"kg-muted\">Built from an export at {} covering {} in the pool and {} with claims. First Report is open source: <a href=\"https://github.com/h0ds/firstreport\" rel=\"noopener\">github.com/h0ds/firstreport</a>.</p>",
         datetime(input.export_time),
         n(input.outlets.len(), "outlet"),
         n(input.claims.len(), "outlet")
@@ -86,7 +86,7 @@ pub fn about(input: &Input) -> Twins {
         "export_time": input.export_time,
         "outlets": input.outlets.len(),
         "outlets_with_claims": input.claims.len(),
-        "repository": "https://github.com/h0ds/kagami",
+        "repository": "https://github.com/h0ds/firstreport",
     });
     let mut md = String::from("# About\n\nFirst Report tracks how news stories spread: who published first, who followed, what was copied and what was changed later. It also collects facts about each outlet, with sources.\n\n## What the numbers mean\n\n");
     for (k, v) in WHAT {
@@ -114,7 +114,7 @@ pub fn about(input: &Input) -> Twins {
     }
     let _ = write!(
         md,
-        "\n## For machine readers\n\nEvery page has `index.json` and `index.md` beside it. `/llms.txt` states the rules of use; `/sitemap.xml` lists every page; `/search/index.json` is the index. Please cite the original source and keep its licence. Don't turn these facts into a score.\n\nBuilt from an export at {}. Source: https://github.com/h0ds/kagami\n",
+        "\n## For machine readers\n\nEvery page has `index.json` and `index.md` beside it. `/llms.txt` states the rules of use; `/sitemap.xml` lists every page; `/search/index.json` is the index. Please cite the original source and keep its licence. Don't turn these facts into a score.\n\nBuilt from an export at {}. Source: https://github.com/h0ds/firstreport\n",
         datetime(input.export_time)
     );
     Twins {

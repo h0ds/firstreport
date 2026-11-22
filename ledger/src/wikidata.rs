@@ -19,7 +19,7 @@ pub const ENDPOINT: &str = "https://query.wikidata.org/sparql";
 pub const USER_AGENT: &str = concat!(
     "firstreport-ledger/",
     env!("CARGO_PKG_VERSION"),
-    " (+https://github.com/h0ds/kagami)"
+    " (+https://github.com/h0ds/firstreport)"
 );
 
 /// Wikidata items that are not the outlet even when they share its domain.

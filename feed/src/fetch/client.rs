@@ -21,7 +21,7 @@ use tokio::sync::Semaphore;
 pub const USER_AGENT: &str = concat!(
     "firstreport-feed/",
     env!("CARGO_PKG_VERSION"),
-    " (+https://github.com/h0ds/kagami)"
+    " (+https://github.com/h0ds/firstreport)"
 );
 /// The `Mozilla/5.0 (compatible; …)` form that crawlers use: still
 /// identifies us and links to the project, but passes naive filters that
@@ -29,7 +29,7 @@ pub const USER_AGENT: &str = concat!(
 pub const COMPAT_USER_AGENT: &str = concat!(
     "Mozilla/5.0 (compatible; firstreport-feed/",
     env!("CARGO_PKG_VERSION"),
-    "; +https://github.com/h0ds/kagami)"
+    "; +https://github.com/h0ds/firstreport)"
 );
 pub const MAX_BODY_BYTES: usize = 8 * 1024 * 1024;
 pub const TIMEOUT: Duration = Duration::from_secs(30);
@@ -554,6 +554,6 @@ mod tests {
     fn user_agents_identify_the_project() {
         assert!(USER_AGENT.starts_with("firstreport-feed/"));
         assert!(COMPAT_USER_AGENT.starts_with("Mozilla/5.0 (compatible; firstreport-feed/"));
-        assert!(COMPAT_USER_AGENT.contains("github.com/h0ds/kagami"));
+        assert!(COMPAT_USER_AGENT.contains("github.com/h0ds/firstreport"));
     }
 }
