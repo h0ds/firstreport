@@ -1,0 +1,45 @@
+# Icon files for outlets whose home page `feed icons` cannot read (bot
+# blocks, robots.txt on the home page, timeouts). Each URL is on the
+# outlet's own domain or CDN and is fetched with the same client rules as
+# everything else; it is used only when the home-page lookup finds nothing.
+# Found 2026-11-22. UPI refuses every request, so it has no entry.
+
+[[icon]]
+outlet = "nytimes"
+url = "https://static01.nyt.com/images/icons/ios-ipad-144x144.png"
+
+[[icon]]
+outlet = "washingtonpost"
+url = "https://www.washingtonpost.com/favicon.ico"
+
+[[icon]]
+outlet = "wsj"
+url = "https://s.wsj.net/media/wsj_apple-touch-icon-180x180.png"
+
+[[icon]]
+outlet = "usnews"
+url = "https://www.usnews.com/favicon.ico"
+
+[[icon]]
+outlet = "dailymail"
+url = "https://scripts.dailymail.co.uk/static/icons/180.png"
+
+[[icon]]
+outlet = "skynews"
+url = "https://news.sky.com/resources/apple-touch-icon.png"
+
+[[icon]]
+outlet = "cbc"
+url = "https://www.cbc.ca/favicon.ico"
+
+[[icon]]
+outlet = "ndtv"
+url = "https://www.ndtv.com/favicon.ico"
+
+[[icon]]
+outlet = "reuters"
+url = "https://www.reuters.com/favicon.ico"
+
+[[icon]]
+outlet = "eluniversal"
+url = "https://www.eluniversal.com.mx/favicon.ico"

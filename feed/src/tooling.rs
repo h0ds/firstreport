@@ -252,6 +252,7 @@ pub async fn icons(
     use crate::fetch::icons;
     std::fs::create_dir_all(dir)?;
     let client = Client::new(8, 2)?.with_opt_outs(crate::fetch::opt_out::load(config_dir)?);
+    let known = icons::known_urls(config_dir)?;
     let (mut got, mut kept, mut missing) = (0, 0, 0);
     for o in &outlets.outlets {
         if !refresh && icons::existing(dir, &o.id).is_some() {
@@ -261,7 +262,13 @@ pub async fn icons(
         let Some(domain) = o.domains.first() else {
             continue;
         };
-        match icons::fetch_one(&client, domain).await {
+        let mut got_icon = icons::fetch_one(&client, domain).await;
+        if let (Err(e), Some(url)) = (&got_icon, known.get(&o.id)) {
+            got_icon = icons::fetch_url(&client, url)
+                .await
+                .map_err(|e2| format!("{e}; then {e2}"));
+        }
+        match got_icon {
             Ok((bytes, ext)) => {
                 if let Some(old) = icons::existing(dir, &o.id) {
                     let _ = std::fs::remove_file(old);

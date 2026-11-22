@@ -104,6 +104,42 @@ pub fn existing(dir: &Path, outlet_id: &str) -> Option<std::path::PathBuf> {
         .find(|p| p.is_file())
 }
 
+/// Icon URLs from `config/icons.toml`, by outlet id, for outlets whose
+/// home page cannot be read. A missing file means none.
+pub fn known_urls(config_dir: &Path) -> Result<std::collections::HashMap<String, String>, String> {
+    #[derive(serde::Deserialize)]
+    struct File {
+        #[serde(default)]
+        icon: Vec<Entry>,
+    }
+    #[derive(serde::Deserialize)]
+    struct Entry {
+        outlet: String,
+        url: String,
+    }
+    let path = config_dir.join("icons.toml");
+    let Ok(text) = std::fs::read_to_string(&path) else {
+        return Ok(Default::default());
+    };
+    let f: File = toml::from_str(&text).map_err(|e| format!("{}: {e}", path.display()))?;
+    Ok(f.icon.into_iter().map(|e| (e.outlet, e.url)).collect())
+}
+
+/// Fetch an icon from a known URL, judged by its bytes like any other.
+pub async fn fetch_url(client: &Client, url: &str) -> Result<(Vec<u8>, &'static str), String> {
+    let f = client
+        .fetch(url, None, None)
+        .await
+        .map_err(|e| format!("{url}: {e}"))?;
+    let b = f.body.ok_or_else(|| format!("{url}: empty"))?;
+    if b.len() > MAX_ICON_BYTES {
+        return Err(format!("{url}: {} bytes, over the cap", b.len()));
+    }
+    sniff(&b)
+        .map(|ext| (b.to_vec(), ext))
+        .ok_or_else(|| format!("{url}: not an image"))
+}
+
 /// Fetch one outlet's icon: its home page, then the advertised icons in
 /// order until one is an image. Returns the extension written.
 pub async fn fetch_one(client: &Client, domain: &str) -> Result<(Vec<u8>, &'static str), String> {
